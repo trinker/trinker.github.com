@@ -2,24 +2,19 @@
 # For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink: /:categories/:year/:month/:day/:title 
 
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-exclude: ["Rmd", "trinker.github.com.Rproj", "index_old.md", ".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
+exclude: ["Rmd", ".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 auto: true
 pygments: true
 
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : trinker
-tagline: Site Tagline
-author : 
+title : Trinker's R Blog
+tagline: Experiments & Experiences in R
+author :
   name : Tyler Rinker
-  email : tyler.rinker@gmail.com
+  email : tyler.inker@gmail.com
   github : trinker
-  twitter : Tyler Rinker
-
-name: trinker
-url: http://trinker.github.com
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
