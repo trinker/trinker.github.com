@@ -3,19 +3,23 @@
 permalink: /:categories/:year/:month/:day/:title 
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
+exclude: ["Rmd", "trinker.github.com.Rproj", "index_old.md", ".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 auto: true
 pygments: true
 
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Jekyll Bootstrap
+title : trinker
 tagline: Site Tagline
-author :
+author : 
   name : Tyler Rinker
   email : tyler.rinker@gmail.com
   github : trinker
   twitter : Tyler Rinker
+
+name: trinker
+url: http://trinker.github.com
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
