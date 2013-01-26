@@ -44,6 +44,37 @@
 <p><img src="https://dl.dropbox.com/u/61803503/qdapicon.png" alt="qdapicon"/><br/>
 qdap (Quantitative Discourse Analysis Package) is an R package designed to assist in quantitative discourse analysis.  The package stands as a bridge between qualitative transcripts of dialogue and statistical analysis and visualization.</p>
 
+<h2>Installation</h2>
+
+<p>Currently there isn&#39;t a release on <a href="http://cran.r-project.org/">CRAN</a>.</p>
+
+<p>You can, however, download the <a href="https://github.com/trinker/qdap/zipball/master">zip ball</a> or <a href="https://github.com/trinker/qdap/tarball/master">tar ball</a>, decompress and run <code>R CMD INSTALL</code> on it, or use the <strong>devtools</strong> package to install the development version:</p>
+
+<pre><code class="r"># install.packages(&quot;devtools&quot;)
+
+library(devtools)
+install_github(&quot;qdap&quot;, &quot;trinker&quot;)
+</code></pre>
+
+<p>Note: Windows users need <a href="http://www.murdoch-sutherland.com/Rtools/">Rtools</a> and <a href="http://CRAN.R-project.org/package=devtools">devtools</a> to install this way.</p>
+
+<p>Additionally, Windows users currently must install <code>XML</code> and <code>RCurl</code> before installing qdap.  Use the following short script:</p>
+
+<pre><code class="r">URL &lt;- &quot;http://www.stats.ox.ac.uk/pub/RWin/bin/windows/contrib/2.15/&quot;
+install.packages(&quot;XML&quot;, contriburl = URL)
+install.packages(&quot;RCurl&quot;, contriburl = URL)
+</code></pre>
+
+<p>Note: Mac users must install <code>openNLP</code> before attempting to install <code>qdap</code></p>
+
+<pre><code class="r">install.packages(&quot;openNLP&quot;, type = &quot;source&quot;)
+</code></pre>
+
+<h2>Help</h2>
+
+<p>For a variety of qdap help files and videos <a href="https://github.com/trinker/qdap/wiki">click here</a>.<br/>
+For the package pdf help manual <a href="https://dl.dropbox.com/u/61803503/qdap.pdf">click here</a>.</p>
+
 
     <h2>Help topics</h2>
 
@@ -53,13 +84,13 @@ qdap (Quantitative Discourse Analysis Package) is an R package designed to assis
     <ul class="index">
         
       <li>
-        <code><a href="abbreviations.html">abbreviations</a></code><br />Small Abbrreviations Data Set</li>
+        <code><a href="abbreviations.html">abbreviations</a></code><br />Small Abbreviations Data Set</li>
             
       <li>
         <code><a href="action.verbs.html">action.verbs</a></code><br />Action Word List</li>
             
       <li>
-        <code><a href="adjacency_matrix.html">adjacency_matrix</a></code><br />Takes a Matrix and Generates an Adjacency Matrix</li>
+        <code><a href="adjacency_matrix.html">adjacency_matrix</a></code>(adjmat)<br />Takes a Matrix and Generates an Adjacency Matrix</li>
             
       <li>
         <code><a href="adverb.html">adverb</a></code><br />Adverb Word List</li>
@@ -68,11 +99,7 @@ qdap (Quantitative Discourse Analysis Package) is an R package designed to assis
         <code><a href="all_words.html">all_words</a></code><br />Searches Text Column for Words</li>
             
       <li>
-        <code><a href="Readability.html">automated_readability_index</a></code><br />Readability Measures</li>
-
-      <li>
-        <code><a href="Readability.html">coleman_liau</a></code>(coleman_liau, flesch_kincaid, fry, linsear_write, SMOG)<br />Readability Measures</li>
-          
+        <code><a href="Readability.html">automated_readability_index</a></code>(coleman_liau, flesch_kincaid, fry, linsear_write, SMOG)<br />Readability Measures</li>
             
       <li>
         <code><a href="bag.o.words.html">bag.o.words</a></code>(breaker, word.split)<br />Bag of Words</li>
@@ -441,7 +468,7 @@ qdap (Quantitative Discourse Analysis Package) is an R package designed to assis
         <code><a href="replace_abbreviation.html">replace_abbreviation</a></code><br />Replace Abbreviations</li>
             
       <li>
-        <code><a href="replace_contraction.html">replace_contraction</a></code><br />Replace COntractions</li>
+        <code><a href="replace_contraction.html">replace_contraction</a></code><br />Replace Contractions</li>
             
       <li>
         <code><a href="replace_number.html">replace_number</a></code><br />Replace Numbers With Text Representation</li>
