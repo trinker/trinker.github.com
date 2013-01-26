@@ -1,0 +1,204 @@
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+flickr <- function(file, 
+    tags = "", description = "", 
+    public = TRUE) {
+    out <- system(paste("flickr_upload --tag=\"", 
+        tags, " \" --description=\"", 
+        description, "\"", 
+        " --public ", as.integer(public), 
+        file), intern = TRUE)
+    gsub(".*ids=(\\d+)", 
+        "\\1", out[3])
+}
+
+.flickr.url = function(x) {
+    file = paste(x, collapse = ".")
+    if (opts_knit$get("upload")) {
+        flickr(file)
+    } else file
+}
+
+hook_plot_flickr = function(x, 
+    options) {
+    sprintf("[flickr]%s[/flickr]", 
+        .flickr.url(x))
+}
+
+render_wordpress <- function() {
+    render_gfm()
+    options(width = 30)
+    opts_knit$set(upload = TRUE)
+    output = function(x, 
+        options) paste("[ code]\n", 
+        x, "[ /code]\n", 
+        sep = "")
+    warning = function(x, 
+        options) paste("[ code]\n", 
+        x, "[ /code]\n", 
+        sep = "")
+    message = function(x, 
+        options) paste("[ code]\n", 
+        x, "[ /code]\n", 
+        sep = "")
+    inline = function(x, 
+        options) paste("<pre>", 
+        x, "</pre>", sep = "")
+    error = function(x, 
+        options) paste("[ code]\n", 
+        x, "[ /code]\n", 
+        sep = "")
+    source = function(x, 
+        options) paste("[ code lang='r']\n", 
+        x, "[ /code]\n", 
+        sep = "")
+    knit_hooks$set(output = output, 
+        warning = warning, 
+        message = message, 
+        inline = inline, 
+        error = error, 
+        source = source, 
+        plot = hook_plot_flickr)
+}
+```
+Gradient Word Clouds
+========================================================
+
+I like word clouds because they are visually appealing and provide a ton of information in a small space.  Ever since I saw Drew Conway's post [(LINK)](http://www.drewconway.com/zia/?p=2624) I have been looking for ways to improve word clouds.  One of the nice feature's of Drew's post was that he colored the words according to the gradient.  Unfortunately, Drew's cloud lacks some of the aesthetic wow factor that Ian Fellow's `wordcloud` package is known for.
+
+This post is going to show you how to color words with a gradient based on degree of usage between two individuals.  For me it's going to help me learn the following things:
+
+1. How to use `knitr` + markdown to make a blog post (I've been using `knitr` for reproducible latex/beamer reports.
+2. How to use gradients in base (i.e. outside of `ggplot2` that I've come to depend on).
+3. How to make a gradient color bar in base.
+
+Installing and Loading qdap and wordcloud
+-------------------------
+First you'll need some packages to get started.  I'm using my own beta package `qdap` plus Fellow's `wordcloud` packages.  If you download `qdap` `wordcloud` is part of the install.  For the legend we'll be using the `plotrix` package.
+
+```{r, message=FALSE, eval=FALSE}
+# install.packages("devtools")   
+library(devtools)    
+install_github("qdap", "trinker")   
+library(wordcloud); library(qdap); library(plotrix)
+```
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+# install.packages("devtools")   
+#library(devtools)    
+#install_github("qdap", "trinker")   
+library(wordcloud); library(qdap); library(plotrix)
+```
+
+Reading in data
+-------------------------
+Now we'll need some data.  I happen to have presidential debate data (debate # 1) left over that we can still mine.
+```{r, message=FALSE, comment=NA}
+# download transcript of the debate to working directory
+url_dl(pres.deb1.docx)   
+
+# load multiple files with read transcript and assign to working directory
+dat1 <- read.transcript("pres.deb1.docx", c("person", "dialogue"))
+
+# qprep for quick cleaning
+dat1$dialogue <- qprep(dat1$dialogue)
+
+#view a truncated version of the data (see also htruncdf)
+left.just(htruncdf(dat1, 10, 45))
+```
+
+Setting Up the Data
+-------------------------
+1. Make a word frequency matrix 
+2. Remove Lehrer's words
+3. Scale the word usage
+4. Create a binned fill variable
+```{r, message=FALSE, results='hide'}
+word.freq <- with(dat1, wfdf(dialogue, person))[, -2]
+csums <- colSums(word.freq[, -1])
+conv.fact <- csums[2]/csums[1]
+word.freq$ROMNEY2 <- word.freq[, "ROMNEY"] * conv.fact
+#colSums(word.freq[, -1])
+word.freq[, "total"] <- rowSums(word.freq[, -1])
+word.freq$continum <- with(word.freq, ROMNEY2-OBAMA)
+word.freq <- word.freq[word.freq$total != 0,] #remove Leher only words
+MAX <- max(word.freq$continum[!is.infinite(word.freq$continum)])
+word.freq$continum <- ifelse(is.infinite(word.freq$continum), MAX, word.freq$continum)
+conv.fact2 <- abs(range(word.freq$continum ))
+conv.fact2 <- max(conv.fact2)/min(conv.fact2)
+word.freq$continum <- ifelse(word.freq$continum > 0, word.freq$continum * conv.fact2, word.freq$continum)
+cuts <- c(-50, -25, -15, -10, -5, -2.5, -1.5, -1, -.5, -.25)
+cuts <- sort(c(cuts, 0, abs(cuts)))
+word.freq$fill.var <- cut(word.freq$continum, breaks=cuts )
+head(word.freq, 10)
+```
+
+```{r, echo=FALSE, comment=NA}
+head(word.freq, 10)
+```
+
+Convert the Binned Variable to Colors
+-------------------------
+I was not sure how to produce gradients outside of `ggplot2` and so I asked on stackoverflow.com and received a terrific and simple answer [(LINK)](http://stackoverflow.com/questions/13353213/gradient-of-n-colors-ranging-from-color-1-and-color-2#comment18225943_13353213).  Now we'll create a color column based on the fill.var using `qdap`'s `lookup` that uses an environment to recode.
+
+```{r, message=FALSE, comment=NA}
+colfunc <- colorRampPalette(c("red", "blue"))
+word.freq$colors <- lookup(word.freq$fill.var, levels(word.freq$fill.var), 
+    rev(colfunc(length(levels(word.freq$fill.var)))))
+head(word.freq, 10)
+```
+
+Plot the Word Cloud and Gradient Legend
+-------------------------    
+Now that we have color gradients let's use `wordcloud` to plot and `plotrix`'s `color.legend` to make a legend.
+```{r, message=FALSE, eval=FALSE}
+par(mar=c(7,1,1,1))
+wordcloud(word.freq$Words, word.freq$total, colors = word.freq$colors, 
+    min.freq = 1, ordered.colors = TRUE, random.order = FALSE, rot.per=0, 
+    scale = c(5, .7))
+# Add legend
+COLS <- colfunc(length(levels(word.freq$fill.var)))
+color.legend(.025, .025, .25, .04, qcv(Romney,Obama), COLS)
+```
+
+
+```{r Word Cloud, fig.height=10, fig.width=10, echo=FALSE}
+par(mar=c(7,1,1,1))
+wordcloud(word.freq$Words, word.freq$total, colors = word.freq$colors, 
+    min.freq = 1, ordered.colors = TRUE, random.order = FALSE, rot.per=0, 
+    scale = c(5, .7))
+# Add legend
+COLS <- colfunc(length(levels(word.freq$fill.var)))
+color.legend(.025, .025, .25, .04, qcv(Romney,Obama), COLS)
+# oplot(gradcloud, ,1000, 1000)
+#dev.off()
+#shell.exec('C:/Users/trinker/Dropbox/Public/gradcloud.png')
+#DB()
+#writeClipboard('https://dl.dropbox.com/u/61803503/gradcloud.png')
+```
+
+Concluding Thoughts
+-------------------------
+Alright, this is my first knitr generated blog post.  Very easy.  I regret not having tried it earlier :(
+
+I accomplished my goal of making a gradient word cloud and a gradient legend.  The actual word cloud really isn't that informative because there's too many words and too many colors.  In some situations this approach may be useful but in this one I don't like it.  Secondly, I used the blue to red theme because it plays to the political parties but in this visualization better contrasting colors would be more appropriate.  Overall I don't feel I was successful in presenting information better than Drew Conway's post.
+
+### What the Reader Can Take Away from the Post
+
+1. Using wordcloud's user defined color feature
+2. Using qdap's `lookup` to recode
+3. Creating gradients in base (easy)
+4. Creating the accompanying gradient legend
+
+*For a .txt version of this script* [-click here-](https://dl.dropbox.com/u/61803503/gradient_wordcloud.txt)
+
+*Addendum:   
+To make a knitr output upload to wordpress.com I found help from* [http://www.carlboettiger.info](http://www.carlboettiger.info/2012/02/28/knitr-with-flickr-and-wordpress.html)
+
+
+
+
+
+
+
+
+

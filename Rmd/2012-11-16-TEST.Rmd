@@ -1,0 +1,28 @@
+---
+layout: post
+title: "Gradient-Word-Clouds"
+description: ""
+category: Blah
+tags: [blah]
+---
+{% include JB/setup %}
+
+TEST
+========================================================
+```{r, message=FALSE, eval=FALSE}  
+library(ggplot2)
+```
+
+TEST blog
+
+#pic:
+##pic
+
+```{r Word_Cloud, fig.height=10, fig.width=10, echo=FALSE}
+ggplot(PlantGrowth, aes(x=group, y=weight)) + geom_boxplot()
+```
+
+
+
+
+
