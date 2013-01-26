@@ -1,1 +1,1 @@
-The actual site is located at [trinker.github.com](trinker.github.com)
+The actual site is located at [trinker.github.com](http://trinker.github.com)
