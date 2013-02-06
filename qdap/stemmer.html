@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>stemmer. qdap 0.1.0</title>
+<title>stemmer. qdap 0.2.1</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.1.0</a>
+      <a class="brand" href="#">qdap 0.2.1</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,27 +40,32 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>stemmer(text.var, rm.bracket = TRUE, capitalize = TRUE, warn = TRUE, ...)
+    <pre><span class="functioncall"><a href='stemmer.html'>stemmer</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="argument">rm.bracket</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">capitalize</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">warn</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">char.keep</span> <span class="argument">=</span> <span class="string">"~~"</span><span class="keyword">,</span>
+  <span class="symbol">...</span><span class="keyword">)</span>
 
-stem.words(...)
+<span class="functioncall"><a href='stemmer.html'>stem.words</a></span><span class="keyword">(</span><span class="symbol">...</span><span class="keyword">)</span>
 
-stem2df(dataframe, text.var, stem.name = NULL, ...)</pre>
+<span class="functioncall"><a href='stemmer.html'>stem2df</a></span><span class="keyword">(</span><span class="symbol">dataframe</span><span class="keyword">,</span> <span class="symbol">text.var</span><span class="keyword">,</span> <span class="argument">stem.name</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">)</span></pre>
     
     <h2>Arguments</h2>
     <dl>
       <dt>text.var</dt>
-      <dd>The text variable.  In <code>stemmer</code>
-  this is a vector text string. For <code>stem2df</code> this is
-  a character vector of length one naming the text column.</dd>
+      <dd>The text variable.  In
+  <code>stemmer</code> this is a vector text string.
+  For <code>stem2df</code> this is a character
+  vector of length one naming the text column.</dd>
       <dt>rm.bracket</dt>
       <dd>logical.  If TRUE brackets are removed
   from the text.</dd>
       <dt>capitalize</dt>
       <dd>logical.  If TRUE selected terms are
-  capitalized</dd>
+  capitalized.</dd>
       <dt>warn</dt>
       <dd>logical.  If TRUE warns about rows not ending
   with standard qdap punctuation endmarks.</dd>
+      <dt>char.keep</dt>
+      <dd>A character vector of symbols that
+  should be kept withing sentences.</dd>
       <dt>...</dt>
       <dd>Various:  <em><code>stemmer</code> - Other
   arguments passed to <code>capitalizer</code></em> 
@@ -78,11 +83,11 @@ stem2df(dataframe, text.var, stem.name = NULL, ...)</pre>
     <div class="Value">
       <h2>Value</h2>
       
-      <p><code>stemmer </code> - returns a character vector with stemmed
+      <p><code>stemmer</code> - returns a character vector with stemmed
   text.</p>
   
-      <p><code>stem.words</code> - returns a dataframe with a character
-  vector with.</p>
+      <p><code>stem.words</code> - returns a vector of individually
+  stemmed words.</p>
   
       <p><code>stem2df</code> - returns a dataframe with a character
   vector with stemmed text.</p>
@@ -102,10 +107,7 @@ stem2df(dataframe, text.var, stem.name = NULL, ...)</pre>
   added..</p>
   
     </div>
-    
-    <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # #stemmer EXAMPLE:# stemmer(DATA$state)# stemmer(raj$dialogue)# # #stem.words EXAMPLE:# stem.words(doggies, jumping, swims)# # #stem2df EXAMPLE:# stem2df(DATA, "state", "new")# ## <strong>End(Not run)</strong></div></pre>
-  </div>
+      </div>
   <div class="span4">
     <!-- <ul>
       <li>stem.words</li><li>stem2df</li><li>stemmer</li>

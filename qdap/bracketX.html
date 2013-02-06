@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>bracketX. qdap 0.1.0</title>
+<title>bracketX. qdap 0.2.1</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="
   Martin Morgan and Tyler Rinker &lt;tyler.rinker@gmail.com&gt;.
@@ -22,7 +22,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.1.0</a>
+      <a class="brand" href="#">qdap 0.2.1</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -42,13 +42,13 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>bracketX(text.var, bracket = "all", missing = NULL, names = FALSE)
+    <pre><span class="functioncall"><a href='bracketX.html'>bracketX</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="argument">bracket</span> <span class="argument">=</span> <span class="string">"all"</span><span class="keyword">,</span> <span class="argument">missing</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">names</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">)</span>
 
-bracketXtract(text.var, bracket = "all", with = FALSE, merge = TRUE)
+<span class="functioncall"><a href='bracketX.html'>bracketXtract</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="argument">bracket</span> <span class="argument">=</span> <span class="string">"all"</span><span class="keyword">,</span> <span class="argument">with</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">merge</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">)</span>
 
-genX(text.var, left, right, missing = NULL, names = FALSE)
+<span class="functioncall"><a href='bracketX.html'>genX</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="symbol">left</span><span class="keyword">,</span> <span class="symbol">right</span><span class="keyword">,</span> <span class="argument">missing</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">names</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">)</span>
 
-genXtract(text.var, left, right, with = FALSE, merge = TRUE)</pre>
+<span class="functioncall"><a href='bracketX.html'>genXtract</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="symbol">left</span><span class="keyword">,</span> <span class="symbol">right</span><span class="keyword">,</span> <span class="argument">with</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">merge</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">)</span></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -106,10 +106,10 @@ genXtract(text.var, left, right, with = FALSE, merge = TRUE)</pre>
       <p><code>bracketXtract</code> - Apply bracket extraction to
   character vectors.</p>
   
-      <p><code>genX</code> - Apply general chunk extraction to character
+      <p><code>genX</code> - Apply general chunk removal to character
   vectors.</p>
   
-      <p><code>genXtract</code> - Apply general chunk removal to
+      <p><code>genXtract</code> - Apply general chunk extraction to
   character vectors.</p>
   
     </div>
@@ -131,10 +131,7 @@ genXtract(text.var, left, right, with = FALSE, merge = TRUE)</pre>
       <p><a href = 'http://stackoverflow.com/questions/8621066/remove-text-inside-brackets-parens-and-or-braces'>http://stackoverflow.com/questions/8621066/remove-text-inside-brackets-parens-and-or-braces</a></p>
   
     </div>
-    
-    <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # examp <- structure(list(person = structure(c(1L, 2L, 1L, 3L),#     .Label = c("bob", "greg", "sue"), class = "factor"), text =#     c("I love chicken [unintelligible]!",#     "Me too! (laughter) It's so good.[interrupting]",#     "Yep it's awesome {reading}.", "Agreed. {is so much fun}")), .Names =#     c("person", "text"), row.names = c(NA, -4L), class = "data.frame")# # examp# bracketX(examp$text, "square")# bracketX(examp$text, "curly")# bracketX(examp$text, c("square", "round"))# bracketX(examp$text)# # examp# bracketXtract(examp$text, "square")# bracketXtract(examp$text, "curly")# bracketXtract(examp$text, c("square", "round"))# bracketXtract(examp$text, c("square", "round"), merge = FALSE)# bracketXtract(examp$text)# bracketXtract(examp$text, with = TRUE)# # paste2(bracketXtract(examp$text, "curly"), " ")# # x <- c("Where is the /big dog#?", "I think he's @arunning@b with /little cat#.")# genXtract(x, c("/", "@a"), c("#", "@b"))# x <- c("Where is the L1big dogL2?", "I think he's 98running99 with L1little catL2.")# genXtract(x, c("L1", 98), c("L2", 99))# # DATA$state# genX(DATA$state, c("is", "we"), c("too", "on"))# ## <strong>End(Not run)</strong></div></pre>
-  </div>
+      </div>
   <div class="span4">
     <!-- <ul>
       <li>bracketX</li><li>bracketXtract</li><li>genX</li><li>genXtract</li>

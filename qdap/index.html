@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>Index. qdap 0.1.0</title>
+<title>Index. qdap 0.2.1</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="Tyler Rinker">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.1.0</a>
+      <a class="brand" href="#">qdap 0.2.1</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -44,9 +44,7 @@
 <p><img src="https://dl.dropbox.com/u/61803503/qdapicon.png" alt="qdapicon"/><br/>
 qdap (Quantitative Discourse Analysis Package) is an R package designed to assist in quantitative discourse analysis.  The package stands as a bridge between qualitative transcripts of dialogue and statistical analysis and visualization.</p>
 
-
-    <h2>Help topics</h2>
-
+<p>Download the development version <a href="https://github.com/trinker/qdap/">here</a> 
     <h3></h3>
     
     
@@ -72,6 +70,9 @@ qdap (Quantitative Discourse Analysis Package) is an R package designed to assis
             
       <li>
         <code><a href="bag.o.words.html">bag.o.words</a></code>(breaker, word.split)<br />Bag of Words</li>
+            
+      <li>
+        <code><a href="bivar_gradcloud.html">bivar_gradcloud</a></code><br />Bi-variate Gradient Word Cloud</li>
             
       <li>
         <code><a href="blank2NA.html">blank2NA</a></code><br />Replace Blanks in Data Frame</li>
@@ -107,7 +108,7 @@ qdap (Quantitative Discourse Analysis Package) is an R package designed to assis
         <code><a href="cm_combine.dummy.html">cm_combine.dummy</a></code><br />Find Co-occurrence Between Codes</li>
             
       <li>
-        <code><a href="cm_df.fill.html">cm_df.fill</a></code><br />Range Coding of a Code Matrix</li>
+        <code><a href="cm_df.fill.html">cm_df.fill</a></code><br />Range Coding</li>
             
       <li>
         <code><a href="cm_df.temp.html">cm_df.temp</a></code><br />Break Transcript Dialogue into Blank Code Matrix</li>
@@ -188,10 +189,10 @@ qdap (Quantitative Discourse Analysis Package) is an R package designed to assis
         <code><a href="emoticon.html">emoticon</a></code><br />Emoticons Data Set</li>
             
       <li>
-        <code><a href="end_mark.html">end_mark</a></code><br />Sentence End marks</li>
+        <code><a href="end_inc.html">end_inc</a></code><br />Test for Incomplete Sentences</li>
             
       <li>
-        <code><a href="endf.html">endf</a></code><br />Test for Incomplete Sentences</li>
+        <code><a href="end_mark.html">end_mark</a></code><br />Sentence End marks</li>
             
       <li>
         <code><a href="env.syl.html">env.syl</a></code><br />Syllable Lookup Environment</li>
@@ -221,7 +222,7 @@ qdap (Quantitative Discourse Analysis Package) is an R package designed to assis
         <code><a href="hash.html">hash</a></code><br />Hash/Dictionary Lookup</li>
             
       <li>
-        <code><a href="data_viewing.html">htruncdf</a></code>(qview, truncdf)<br />Dataframe Viewing</li>
+        <code><a href="data_viewing.html">htruncdf</a></code>(ltruncdf, qview, truncdf)<br />Dataframe Viewing</li>
             
       <li>
         <code><a href="imperative.html">imperative</a></code><br />Intuitively Remark Sentences as Imperative</li>
@@ -252,9 +253,6 @@ qdap (Quantitative Discourse Analysis Package) is an R package designed to assis
             
       <li>
         <code><a href="multicsv.html">mcsv_r</a></code>(mcsv_w)<br />Read/Write Multiple csv Files at a Time</li>
-            
-      <li>
-        <code><a href="merge_all.html">merge_all</a></code><br />Merge Multiple Data Sets</li>
             
       <li>
         <code><a href="mraja1.html">mraja1</a></code><br />Romeo and Juliet: Act 1 Dialogue Merged with Demographics</li>
@@ -452,7 +450,7 @@ qdap (Quantitative Discourse Analysis Package) is an R package designed to assis
         <code><a href="rm_row.html">rm_row</a></code>(rm_empty_row)<br />Remove Rows That Contain Markers</li>
             
       <li>
-        <code><a href="scrubber.html">scrubber</a></code><br />Use to clean text variables when importing a new data set.</li>
+        <code><a href="scrubber.html">scrubber</a></code><br />Clean Imported Text</li>
             
       <li>
         <code><a href="Search.html">Search</a></code><br />Search Columns of a Data Frame</li>
@@ -552,7 +550,7 @@ qdap (Quantitative Discourse Analysis Package) is an R package designed to assis
     <h2>Dependencies</h2>
     <ul>
       <li><strong>Depends</strong>: gdata, ggplot2, grid, scales</li>
-      <li><strong>Imports</strong>: gridExtra, chron, RColorBrewer, igraph, tm, wordcloud, venneuler, openNLPmodels.en, Snowball, gplots, gridExtra, gdata, openNLP, XML, RCurl, reshape2, parallel</li>
+      <li><strong>Imports</strong>: gridExtra, chron, grDevices, RColorBrewer, igraph, tm, wordcloud, venneuler, openNLPmodels.en, Snowball, gplots, gridExtra, openNLP, plotrix, XML, RCurl, reshape2, parallel</li>
       <li><strong>Suggests</strong>: plyr, koRpus</li>
       <li><strong>Extends</strong>: </li>
     </ul>

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>termco. qdap 0.1.0</title>
+<title>termco. qdap 0.2.1</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.1.0</a>
+      <a class="brand" href="#">qdap 0.2.1</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,18 +40,18 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>termco(text.var, grouping.var = NULL, match.list, short.term = TRUE, ignore.case = TRUE, 
-  elim.old = TRUE, percent = TRUE, digits = 2, apostrophe.remove = FALSE, char.keep = NULL, 
-      digit.remove = NULL, zero.replace = 0, ...)
+    <pre><span class="functioncall"><a href='termco.html'>termco</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="argument">grouping.var</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="symbol">match.list</span><span class="keyword">,</span> <span class="argument">short.term</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">ignore.case</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span>
+  <span class="argument">elim.old</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">percent</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">digits</span> <span class="argument">=</span> <span class="number">2</span><span class="keyword">,</span> <span class="argument">apostrophe.remove</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">char.keep</span> <span class="argument">=</span> NULL<span class="keyword">,</span>
+      <span class="argument">digit.remove</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">zero.replace</span> <span class="argument">=</span> <span class="number">0</span><span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">)</span>
 
-termco.d(text.var, grouping.var = NULL, match.string, short.term = FALSE, ignore.case = TRUE, 
-      zero.replace = 0, percent = TRUE, digits = 2, apostrophe.remove = FALSE, char.keep = NULL, 
-      digit.remove = TRUE, ...)
+<span class="functioncall"><a href='termco.html'>termco.d</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="argument">grouping.var</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="symbol">match.string</span><span class="keyword">,</span> <span class="argument">short.term</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">ignore.case</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span>
+      <span class="argument">zero.replace</span> <span class="argument">=</span> <span class="number">0</span><span class="keyword">,</span> <span class="argument">percent</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">digits</span> <span class="argument">=</span> <span class="number">2</span><span class="keyword">,</span> <span class="argument">apostrophe.remove</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">char.keep</span> <span class="argument">=</span> NULL<span class="keyword">,</span>
+      <span class="argument">digit.remove</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">)</span>
 
-term.match(text.var, terms, return.list = TRUE, apostrophe.remove = FALSE)
+<span class="functioncall"><a href='termco.html'>term.match</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="symbol">terms</span><span class="keyword">,</span> <span class="argument">return.list</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">apostrophe.remove</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">)</span>
 
-termco2mat(dataframe, drop.wc = TRUE, short.term = TRUE, rm.zerocol = FALSE, no.quote = TRUE, 
-      transform = TRUE, trim.terms = TRUE)</pre>
+<span class="functioncall"><a href='termco.html'>termco2mat</a></span><span class="keyword">(</span><span class="symbol">dataframe</span><span class="keyword">,</span> <span class="argument">drop.wc</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">short.term</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">rm.zerocol</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">no.quote</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span>
+      <span class="argument">transform</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">trim.terms</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">)</span></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -84,7 +84,7 @@ termco2mat(dataframe, drop.wc = TRUE, short.term = TRUE, rm.zerocol = FALSE, no.
   apostrophes from the text before examining.</dd>
       <dt>char.keep</dt>
       <dd>A character vector of symbol character
-  (i.e. punctuation) that strip should keep.  The default
+  (i.e., punctuation) that strip should keep.  The default
   is to strip everything except apostrophes.
   <code>termco</code> attempts to auto detect
   characters to keep based on the elements in
@@ -102,8 +102,8 @@ termco2mat(dataframe, drop.wc = TRUE, short.term = TRUE, rm.zerocol = FALSE, no.
       <dd>A vector of terms to search for.
   When using inside of <code>term.match</code> the term(s) must
   be words or partial words but do not have to be when
-  using <code>termco.d</code> (i.e. they can be phrases, symbols
-  etc.).</dd>
+  using <code>termco.d</code> (i.e., they can be
+  phrases, symbols etc.).</dd>
       <dt>terms</dt>
       <dd>The terms to search for in the
   <code>text.var</code>.  Similar to <code>match.list</code> but these
@@ -162,8 +162,9 @@ termco2mat(dataframe, drop.wc = TRUE, short.term = TRUE, rm.zerocol = FALSE, no.
       <p><code>termco</code> - Search a transcript by any number of
   grouping variables for categories (themes) of grouped
   root terms.  While there are other termco functions in
-  the termco family (i.e. <code>termco.d</code>) <code>termco</code> is
-  a wrapper for general use.</p>
+  the termco family (e.g., <code>termco.d</code>)
+  <code>termco</code> is a more powerful and flexible wrapper
+  intended for general use.</p>
   
       <p><code>termco.d</code> - Search a transcript by any number of
   grouping variables for root terms.</p>
@@ -172,8 +173,8 @@ termco2mat(dataframe, drop.wc = TRUE, short.term = TRUE, rm.zerocol = FALSE, no.
   exactly match term(s).</p>
   
       <p><code>termco2mat</code> - Convert a termco dataframe to a
-  matrix for use with visualization functions (e.g.
-  heatmap2 of the gplots package).</p>
+  matrix for use with visualization functions (e.g.,
+  <code><a href='http://www.inside-r.org/r-doc/gplots/heatmap.2'>heatmap.2</a></code>).</p>
   
     </div>
 
@@ -187,8 +188,8 @@ termco2mat(dataframe, drop.wc = TRUE, short.term = TRUE, rm.zerocol = FALSE, no.
   "ready".  If you want to search for just the word "read"
   you'd supply a vector of c(" read ", " reads", "
   reading", " reader").  To search for non character
-  arguments (i.e. numbers and symbols) additional arguments
-  from strip must be passed.</p>
+  arguments (i.e., numbers and symbols) additional
+  arguments from strip must be passed.</p>
   
     </div>
 
@@ -198,14 +199,11 @@ termco2mat(dataframe, drop.wc = TRUE, short.term = TRUE, rm.zerocol = FALSE, no.
       <p>Percentages are calculated as a ratio of counts of
   <code>match.list</code> elements to word counts.  Word counts
   do not contain symbols or digits.  Using symbols, digits
-  or small segments of full words (e.g. "to") could total
+  or small segments of full words (e.g., "to") could total
   more than 100%.</p>
   
     </div>
-    
-    <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # #termco examples:# # # General form for match.list# ## # ml <- list(# #     cat1 = c(),# #     cat2 = c(),# #     catn = c()# # )# # ml <- list(#     cat1 = c(" the ", " a ", " an "),#     cat2 = c(" I'" ),#     "good",#     the = c("the", " the ", " the", "the")# )# # (dat <- with(raj.act.1,  termco(dialogue, person, ml)))# names(dat)# dat$rnp  #useful for presenting in tables# dat$raw  #prop and raw are useful for performing calculations# dat$prop# (dat <- with(raj.act.1, termco(dialogue, person, ml,#     short.term = FALSE, elim.old=FALSE)))# # (dat2 <- data.frame(dialogue=c("@bryan is bryan good @br",#     "indeed", "@ brian"), person=qcv(A, B, A)))# # ml <- list(wrds=c("bryan", "indeed"), "@", bryan=c("bryan", "@ br", "@br"))# # with(dat2, termco(dialogue, person, match.list=ml))# # with(dat2, termco(dialogue, person, match.list=ml, percent = FALSE))# # DATA$state[1] <- "12 4 rgfr  r0ffrg0"# termco(DATA$state, DATA$person, '0', digit.remove=FALSE)# DATA <- qdap::DATA# # #Using with term.match and exclude# exclude(term.match(DATA$state, qcv(th), FALSE), "truth")# termco(DATA$state, DATA$person, exclude(term.match(DATA$state, qcv(th),#     FALSE), "truth"))# MTCH.LST <- exclude(term.match(DATA$state, qcv(th, i)), qcv(truth, stinks))# termco(DATA$state, DATA$person, MTCH.LST)# # syns <- synonyms("doubt")# syns[1]# termco(DATA$state, DATA$person, unlist(syns[1]))# synonyms("doubt", FALSE)# termco(DATA$state, DATA$person, list(doubt = synonyms("doubt", FALSE)))# termco(DATA$state, DATA$person, syns)# # #termco.d examples:# term.match(DATA$state, qcv(i, the))# termco.d(DATA$state, DATA$person, c(" the", " i'"))# termco.d(DATA$state, DATA$person, c(" the", " i'"), ignore.case=FALSE)# termco.d(DATA$state, DATA$person, c(" the ", " i'"))# # # termco2mat example:# MTCH.LST <- exclude(term.match(DATA$state, qcv(a, i)), qcv(is, it, am, shall))# termco_obj <- termco(DATA$state, DATA$person, MTCH.LST)# termco2mat(termco_obj)# plot(termco_obj)# plot(termco_obj, label = TRUE)# plot(termco_obj, label = TRUE, text.color = "red")# plot(termco_obj, label = TRUE, text.color="red", lab.digits=3)# ## <strong>End(Not run)</strong></div></pre>
-  </div>
+      </div>
   <div class="span4">
     <!-- <ul>
       <li>term.match</li><li>termco</li><li>termco.d</li><li>termco2mat</li>

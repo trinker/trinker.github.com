@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>cm_time.temp. qdap 0.1.0</title>
+<title>cm_time.temp. qdap 0.2.1</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.1.0</a>
+      <a class="brand" href="#">qdap 0.2.1</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,7 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>cm_time.temp(codes, start = ":00", end = NULL, file = NULL)</pre>
+    <pre><span class="functioncall"><a href='cm_time.temp.html'>cm_time.temp</a></span><span class="keyword">(</span><span class="symbol">codes</span><span class="keyword">,</span> <span class="argument">start</span> <span class="argument">=</span> <span class="string">":00"</span><span class="keyword">,</span> <span class="argument">end</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">file</span> <span class="argument">=</span> NULL<span class="keyword">)</span></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -54,7 +54,7 @@
   indicating end time.</dd>
       <dt>file</dt>
       <dd>A connection, or a character string naming
-  the file to print to (.txt is recommended).</dd>
+  the file to print to (.txt or .doc is recommended).</dd>
     </dl>
     
     <div class="Description">
@@ -73,10 +73,7 @@
   Oaks, CA: SAGE Publications.</p>
   
     </div>
-    
-    <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # cm_time.temp(qcv(AA, BB, CC), ":30", "7:40", file = "foo.txt")# # delete("foo.txt")# x <- list(#     transcript_time_span = qcv(terms='00:00 - 1:12:00'),#     A = qcv(terms='2.40:3.00, 5.01, 6.52:7.00, 9.00'),#     B = qcv(terms='2.40, 3.01:3.02, 5.01, 6.52:7.00, 9.00, 1.12.00:1.19.01'),#     C = qcv(terms='2.40:3.00, 5.01, 6.52:7.00, 9.00, 17.01')# )# cm_time2long(x)# cm_time.temp(qcv(AA, BB, CC))# ## <strong>End(Not run)</strong></div></pre>
-  </div>
+      </div>
   <div class="span4">
     <!-- <ul>
       <li>cm_time.temp</li>

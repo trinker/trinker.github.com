@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>mcsv_r. qdap 0.1.0</title>
+<title>mcsv_r. qdap 0.2.1</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.1.0</a>
+      <a class="brand" href="#">qdap 0.2.1</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,9 +40,9 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>mcsv_r(files, a.names = NULL, l.name = NULL, list = TRUE)
+    <pre><span class="functioncall"><a href='multicsv.html'>mcsv_r</a></span><span class="keyword">(</span><span class="symbol">files</span><span class="keyword">,</span> <span class="argument">a.names</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">l.name</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">list</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">pos</span> <span class="argument">=</span> <span class="number">1</span><span class="keyword">,</span> <span class="argument">envir</span> <span class="argument">=</span> <span class="functioncall"><a href='http://www.inside-r.org/r-doc/base/as.environment'>as.environment</a></span><span class="keyword">(</span><span class="symbol">pos</span><span class="keyword">)</span><span class="keyword">)</span>
 
-mcsv_w(..., dir = NULL, open = FALSE)</pre>
+<span class="functioncall"><a href='multicsv.html'>mcsv_w</a></span><span class="keyword">(</span><span class="symbol">...</span><span class="keyword">,</span> <span class="argument">dir</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">open</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">)</span></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -60,6 +60,11 @@ mcsv_w(..., dir = NULL, open = FALSE)</pre>
       <dt>list</dt>
       <dd>A character vector of length one to name the
   list being read in. Default is <code>"L1"</code>.</dd>
+      <dt>pos</dt>
+      <dd>where to do the removal. By default, uses the
+  current environment.</dd>
+      <dt>envir</dt>
+      <dd>the environment to use.</dd>
       <dt>...</dt>
       <dd>data.frame object(s) to write to a file</dd>
       <dt>dir</dt>
@@ -67,7 +72,7 @@ mcsv_w(..., dir = NULL, open = FALSE)</pre>
   will be created in the working directory with the data
   and time stamp as the folder name.</dd>
       <dt>open</dt>
-      <dd>logical.  If TURE opens the directory upon
+      <dd>logical.  If TRUE opens the directory upon
   completion.</dd>
     </dl>
     
@@ -103,15 +108,12 @@ mcsv_w(..., dir = NULL, open = FALSE)</pre>
     <div class="Note">
       <h2>Note</h2>
       
-      <p><code>mcsv_r</code> is useful for reading in multiple csv files
-  from <code>cm_csv.temp</code> for interaction with
-  <code>cm_range2long</code>.</p>
+      <p><code>mcsv_r</code> is useful for reading in
+  multiple csv files from <code>cm_df.temp</code>
+  for interaction with <code>cm_range2long</code>.</p>
   
     </div>
-    
-    <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # #mcsv_r EXAMPLE:# mtcarsb <- mtcars; CO2b <- CO2# a <- mcsv_w(mtcarsb, CO2b, dir="foo")# a# rm("mtcarsb", "CO2b")  # gone from .GlobalEnv# (nms <- dir(a))# mcsv_r(paste(a, nms, sep="/"))# mtcarsb; CO2b# rm("mtcarsb", "CO2b")  # gone from .GlobalEnv# mcsv_r(paste(a, nms, sep="/"), paste0("foo.dat", 1:2))# foo.dat1; foo.dat2# rm("foo.dat1", "foo.dat2")  # gone from .GlobalEnv# delete("foo")# # #mcsv_w EXAMPLE:# a <- mcsv_w(mtcars, CO2, dir="foo")# a# delete("foo")# ## <strong>End(Not run)</strong></div></pre>
-  </div>
+      </div>
   <div class="span4">
     <!-- <ul>
       <li>mcsv_r</li><li>mcsv_w</li>
@@ -123,7 +125,8 @@ mcsv_w(..., dir = NULL, open = FALSE)</pre>
     <h2>See also</h2>
     
   <code>cm_range2long</code>,
-  <code>cm_df.temp</code>
+  <code>cm_df.temp</code>,
+  <code><a href='http://www.inside-r.org/r-doc/base/assign'>assign</a></code>
 
         
   </div>

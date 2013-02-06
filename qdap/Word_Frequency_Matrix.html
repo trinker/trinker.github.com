@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>wfm. qdap 0.1.0</title>
+<title>wfm. qdap 0.2.1</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.1.0</a>
+      <a class="brand" href="#">qdap 0.2.1</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,15 +40,15 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>wfm(text.var = NULL, grouping.var = NULL, wfdf = NULL, output = "raw", stopwords = NULL, 
-  digits = 2, char2space = "~~", ...)
+    <pre><span class="functioncall"><a href='Word_Frequency_Matrix.html'>wfm</a></span><span class="keyword">(</span><span class="argument">text.var</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">grouping.var</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">wfdf</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">output</span> <span class="argument">=</span> <span class="string">"raw"</span><span class="keyword">,</span> <span class="argument">stopwords</span> <span class="argument">=</span> NULL<span class="keyword">,</span>
+  <span class="argument">digits</span> <span class="argument">=</span> <span class="number">2</span><span class="keyword">,</span> <span class="argument">char2space</span> <span class="argument">=</span> <span class="string">"~~"</span><span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">)</span>
 
-wfdf(text.var, grouping.var = NULL, stopwords = NULL, margins = FALSE, output = "raw", 
-      digits = 2, char2space = "~~", ...)
+<span class="functioncall"><a href='Word_Frequency_Matrix.html'>wfdf</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="argument">grouping.var</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">stopwords</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">margins</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">output</span> <span class="argument">=</span> <span class="string">"raw"</span><span class="keyword">,</span>
+      <span class="argument">digits</span> <span class="argument">=</span> <span class="number">2</span><span class="keyword">,</span> <span class="argument">char2space</span> <span class="argument">=</span> <span class="string">"~~"</span><span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">)</span>
 
-wfm.expanded(text.var, grouping.var = NULL, ...)
+<span class="functioncall"><a href='Word_Frequency_Matrix.html'>wfm.expanded</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="argument">grouping.var</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">)</span>
 
-wf.combine(wf.obj, word.lists, matrix = FALSE)</pre>
+<span class="functioncall"><a href='Word_Frequency_Matrix.html'>wf.combine</a></span><span class="keyword">(</span><span class="symbol">wf.obj</span><span class="keyword">,</span> <span class="symbol">word.lists</span><span class="keyword">,</span> <span class="argument">matrix</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">)</span></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -63,7 +63,8 @@ wf.combine(wf.obj, word.lists, matrix = FALSE)</pre>
       <dd>A word frequency data frame given instead of
   raw text.var and optional grouping.var. Basically
   converts a word frequency dataframe (wfdf) to a word
-  frequency matrix (<code>wfm</code>).  Default is NULL.</dd>
+  frequency matrix (<code>wfm</code>).  Default is
+  NULL.</dd>
       <dt>output</dt>
       <dd>Output type (either <code>"proportion"</code> or
   <code>"percent"</code>).</dd>
@@ -86,7 +87,8 @@ wf.combine(wf.obj, word.lists, matrix = FALSE)</pre>
   pass to <code>wf.combine</code></dd>
       <dt>matrix</dt>
       <dd>logical.  If TRUE returns the output as a
-  <code>wfm</code> rather than a <code>wfdf</code> object</dd>
+  <code>wfm</code> rather than a
+  <code>wfdf</code> object.</dd>
       <dt>char2space</dt>
       <dd>A vector of characters to be turned
   into spaces.  If <code>char.keep</code> is NULL,
@@ -109,7 +111,8 @@ wf.combine(wf.obj, word.lists, matrix = FALSE)</pre>
   
       <p><code>wf.combine</code> - returns a word frequency matrix
   (<code>wfm</code>) or dataframe (<code>wfdf</code>) with counts for
-  the combined word.lists merged and remaining terms(else).</p>
+  the combined word.lists merged and remaining terms
+  (<code>else</code>).</p>
   
     </div>
 
@@ -126,7 +129,7 @@ wf.combine(wf.obj, word.lists, matrix = FALSE)</pre>
   have multiple rows for each word.</p>
   
       <p><code>wf.combine</code> - Combines words (rows) of a word
-  frequency data frame (<code>wfdf</code>) together.</p>
+  frequency dataframe (<code>wfdf</code>) together.</p>
   
     </div>
 
@@ -139,10 +142,7 @@ wf.combine(wf.obj, word.lists, matrix = FALSE)</pre>
   keeping proper names as a single unit.</p>
   
     </div>
-    
-    <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # #word frequency matrix (wfm) example:# with(DATA, wfm(state, list(sex, adult)))# dat <- with(DATA, wfm(state, person))# # #insert double tilde ("~~") to keep dual words (i.e. first last name)# alts <- c(" fun", "I ")# state2 <- mgsub(alts, gsub("\\s", "~~", alts), DATA$state)# with(DATA, wfm(state2, list(sex, adult)))# # #word frequency dataframe (wfdf) example:# with(DATA, wfdf(state, list(sex, adult)))# with(DATA, wfdf(state, person))# # #inset double tilde ("~~") to keep dual words (e.i. first last name)# alts <- c(" fun", "I ")# state2 <- mgsub(alts, gsub("\\s", "~~", alts), DATA$state)# with(DATA, wfdf(state2, list(sex, adult)))# # #wfm.expanded example:# z <- wfm(DATA$state, DATA$person)# wfm.expanded(z)# wfm.expanded(DATA$state, DATA$person)# wfm.expanded(DATA$state, list(DATA$sex, DATA$adult))# # #wf.combine example:# #raw no margins (will work)# x <- wfm(DATA$state, DATA$person)# # #raw with margin (will work)# y <- wfdf(DATA$state, DATA$person, margins = TRUE)# # #proportion (will not work)# z <- wfdf(DATA$state, DATA$person, output = "proportion")# # WL1 <- c(y[, 1])# WL2 <- list(c("read", "the", "a"), c("you", "your", "you're"))# WL3 <- list(bob = c("read", "the", "a"), yous = c("you", "your", "you're"))# WL4 <- list(bob = c("read", "the", "a"), yous = c("a", "you", "your", "your're"))# WL5 <- list(yous = c("you", "your", "your're"))# WL6 <- list(c("you", "your", "your're"))  #no name so will be called words 1# WL7 <- c("you", "your", "your're")# # wf.combine(z, WL2) #Won't work not a raw frequency matrix# wf.combine(x, WL2) #Works (raw and no margins)# wf.combine(y, WL2) #Works (raw with margins)# wf.combine(y, c("you", "your", "your're"))# wf.combine(y, WL1)# wf.combine(y, WL3)# wf.combine(y, WL4) #Error b/c there's overlapping words in the word lists# wf.combine(y, WL5)# wf.combine(y, WL6)# wf.combine(y, WL7)# # worlis <- c("you", "it", "it's", "no", "not", "we")# y <- wfdf(DATA$state, list(DATA$sex, DATA$adult), margins = TRUE)# z <- wf.combine(y, worlis, matrix = TRUE)# # chisq.test(z)# chisq.test(wfm(wfdf = y))# ## <strong>End(Not run)</strong></div></pre>
-  </div>
+      </div>
   <div class="span4">
     <!-- <ul>
       <li>wf.combine</li><li>wfdf</li><li>wfm</li><li>wfm.expanded</li>

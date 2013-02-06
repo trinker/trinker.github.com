@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>cm_df.fill. qdap 0.1.0</title>
+<title>cm_df.fill. qdap 0.2.1</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.1.0</a>
+      <a class="brand" href="#">qdap 0.2.1</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -35,12 +35,12 @@
         
       </header>
       
-      <h1>Range Coding of a Code Matrix</h1>
+      <h1>Range Coding</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>cm_df.fill(dataframe, ranges, value = 1, text.var = NULL, code.vars = NULL, transform = FALSE)</pre>
+    <pre><span class="functioncall"><a href='cm_df.fill.html'>cm_df.fill</a></span><span class="keyword">(</span><span class="symbol">dataframe</span><span class="keyword">,</span> <span class="symbol">ranges</span><span class="keyword">,</span> <span class="argument">value</span> <span class="argument">=</span> <span class="number">1</span><span class="keyword">,</span> <span class="argument">text.var</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">code.vars</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">transform</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">)</span></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -76,6 +76,22 @@
   
     </div>
 
+    <div class="Details">
+      <h2>Details</h2>
+      
+      <p>After ranging coding transcripts via
+  (<code><a href='cm_df.temp.html'>cm_df.temp</a></code>) or the blank code matrix via
+  (<code><a href='cm_df.transcript.html'>cm_df.transcript</a></code>),<code>cm_df.fill</code> is
+  used to create a matrix of what codes occurred at what
+  words (a filled code matrix).  A list of range codes
+  (word number spans) is fed to <code>cm_df.fill</code>.  A
+  single number indicates a single word with that coding
+  scheme whereas the colon is used as a separator that
+  indicates the range of words from x to y are that
+  particular code.</p>
+  
+    </div>
+
     <div class="References">
       <h2>References</h2>
       
@@ -84,10 +100,7 @@
   Oaks, CA: SAGE Publications.</p>
   
     </div>
-    
-    <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # codes <- qcv(dc, sf, wes, pol, rejk, lk, azx, mmm)# X <- cm_df.temp(DATA, "state", codes)# # #recommended structure# cds1 <- list(#      dc=c(1:3, 5),#      sf=c(4, 6:9, 11),#      wes=0,#      pol=0,#      rejk=0,#      lk=0,#      azx=1:30,#      mmm=5# )# cm_df.fill(X, cds1)# # #recommended structure# cds2 <- list(#     sf=c(4, 6:9, 11),#     dc=c(1:3, 5),#     azx=1:30,#     mmm=5# )# cm_df.fill(X, cds2)# ## <strong>End(Not run)</strong></div></pre>
-  </div>
+      </div>
   <div class="span4">
     <!-- <ul>
       <li>cm_df.fill</li>
@@ -98,7 +111,8 @@
       
     <h2>See also</h2>
     
-  <code><a href='cm_df.temp.html'>cm_df.temp</a></code>, <code><a href='cm_df2long.html'>cm_df2long</a></code>
+  <code><a href='cm_df.temp.html'>cm_df.temp</a></code>, <code><a href='cm_df.transcript.html'>cm_df.transcript</a></code>,
+  <code><a href='cm_df2long.html'>cm_df2long</a></code>
 
         
   </div>

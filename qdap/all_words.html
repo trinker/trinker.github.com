@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>all_words. qdap 0.1.0</title>
+<title>all_words. qdap 0.2.1</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.1.0</a>
+      <a class="brand" href="#">qdap 0.2.1</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,7 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>all_words(text.var, begins.with = NULL, contains = NULL, alphabetical = TRUE)</pre>
+    <pre><span class="functioncall"><a href='all_words.html'>all_words</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="argument">begins.with</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">contains</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">alphabetical</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">)</span></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -55,8 +55,8 @@
   Default is NULL. Use this if searching for a word
   containing the word chunk.</dd>
       <dt>alphabetical</dt>
-      <dd>logical.  If True orders rows
-  alphabetically, if false orders the rows by frequency.</dd>
+      <dd>logical.  If TRUE orders rows
+  alphabetically, if FALSE orders the rows by frequency.</dd>
     </dl>
     
     <div class="Value">
@@ -79,16 +79,13 @@
     <div class="Note">
       <h2>Note</h2>
       
-      <p>Can not provide both <code>begins.with</code> and
+      <p>Cannot provide both <code>begins.with</code> and
   <code>contains</code> arguments at once.  If both begins.with
-  and contains are NULL all.words returns a frequency count
-  for all words.</p>
+  and contains are NULL <code>all_words</code>
+  returns a frequency count for all words.</p>
   
     </div>
-    
-    <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # x1 <- all_words(raj$dialogue, begins.with="re")# head(x1)# x2 <- all_words(raj$dialogue, "q")# head(x2)# all_words(raj$dialogue, contains="conc")# x3 <- all_words(raj$dialogue)# head(x3)# ## <strong>End(Not run)</strong></div></pre>
-  </div>
+      </div>
   <div class="span4">
     <!-- <ul>
       <li>all_words</li>

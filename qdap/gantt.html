@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>gantt. qdap 0.1.0</title>
+<title>gantt. qdap 0.2.1</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="
   DigEmAll (&lt;a href = 'stackoverflow.com'&gt;stackoverflow.com&lt;/a&gt;) and Tyler Rinker
@@ -23,7 +23,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.1.0</a>
+      <a class="brand" href="#">qdap 0.2.1</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -43,8 +43,8 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>gantt(text.var, grouping.var, plot = TRUE, units = "words", sums = FALSE, plot.colors = NULL, 
-  box.color = NULL, col.sep = "_")</pre>
+    <pre><span class="functioncall"><a href='gantt.html'>gantt</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="symbol">grouping.var</span><span class="keyword">,</span> <span class="argument">plot</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">units</span> <span class="argument">=</span> <span class="string">"words"</span><span class="keyword">,</span> <span class="argument">sums</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">plot.colors</span> <span class="argument">=</span> NULL<span class="keyword">,</span>
+  <span class="argument">box.color</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">col.sep</span> <span class="argument">=</span> <span class="string">"_"</span><span class="keyword">)</span></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -93,7 +93,7 @@
       <h2>Description</h2>
       
       <p>Generates start and end times of supplied text selections
-  (i.e. text selections are determined by any number of
+  (i.e., text selections are determined by any number of
   grouping variables).</p>
   
     </div>
@@ -101,9 +101,10 @@
     <div class="Note">
       <h2>Note</h2>
       
-      <p>For repeated measures data output use <code>gantt_rep</code>;
-  for a convenient wrapper that takes text and generates
-  plots use <code>gantt_plot</code>; and for a flexible gantt
+      <p>For repeated measures data output use
+  <code>gantt_rep</code>; for a convenient wrapper
+  that takes text and generates plots use
+  <code>gantt_plot</code>; and for a flexible gantt
   plot that words with code matrix functions (cm) use
   <code>gantt_wrap</code>.</p>
   
@@ -116,10 +117,7 @@
   tool of management. New York, Ronald Press.</p>
   
     </div>
-    
-    <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # gantt(DATA$state, DATA$person)# gantt(DATA$state, DATA$person, sums = TRUE)# gantt(DATA$state, list(DATA$sex, DATA$adult))# gantt(mraja1$dialogue, mraja1$person) #hard to see without box color# gantt(mraja1$dialogue, mraja1$sex)# gantt(mraja1$dialogue, mraja1$person, box.col = "black")# gantt(mraja1$dialogue, list(mraja1$fam.aff, mraja1$sex), plot.colors = NULL)# gantt(mraja1$dialogue, list(mraja1$fam.aff, mraja1$sex), plot.colors = "black")# gantt(mraja1$dialogue, list(mraja1$fam.aff, mraja1$sex), plot = FALSE)# gantt(mraja1$dialogue, mraja1$person, units = "characters", box.color = "black")# gantt(mraja1$dialogue, list(mraja1$fam.aff, mraja1$sex), units = "characters")# with(mraja1, gantt(dialogue, list(fam.aff, sex, died),#    units = "characters", sums = TRUE))# gantt(mraja1$dialogue, mraja1$person, units = "syllables",#    box.color = "black", sums = TRUE)# gantt(mraja1$dialogue, list(mraja1$fam.aff, mraja1$sex), units = "syllables")# # (dat <- gantt(mraja1$dialogue, list(mraja1$fam.aff, mraja1$sex), units = "sentences",#      plot.colors = 'black', sums = TRUE, col.sep = "_")$gantt.df)# gantt_wrap(dat, fam.aff_sex, title = "Gantt Plot")# ## <strong>End(Not run)</strong></div></pre>
-  </div>
+      </div>
   <div class="span4">
     <!-- <ul>
       <li>gantt</li>

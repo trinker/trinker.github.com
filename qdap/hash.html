@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>hash. qdap 0.1.0</title>
+<title>hash. qdap 0.2.1</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="
   Bryan Goodrich and Tyler Rinker &lt;tyler.rinker@gmail.com&gt;.
@@ -22,7 +22,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.1.0</a>
+      <a class="brand" href="#">qdap 0.2.1</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -42,7 +42,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>hash(x, mode.out = "numeric")</pre>
+    <pre><span class="functioncall"><a href='hash.html'>hash</a></span><span class="keyword">(</span><span class="symbol">x</span><span class="keyword">,</span> <span class="argument">mode.out</span> <span class="argument">=</span> <span class="string">"numeric"</span><span class="keyword">)</span></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -50,7 +50,7 @@
       <dd>A two column dataframe.</dd>
       <dt>mode.out</dt>
       <dd>The type of output (column 2) expected
-  (e.g. <code>"character"</code>, <code>"numeric"</code>, etc.)</dd>
+  (e.g., <code>"character"</code>, <code>"numeric"</code>, etc.)</dd>
     </dl>
     
     <div class="Value">
@@ -75,10 +75,7 @@
       <p><a href = 'http://www.talkstats.com/showthread.php/22754-Create-a-fast-dictionary'>http://www.talkstats.com/showthread.php/22754-Create-a-fast-dictionary</a></p>
   
     </div>
-    
-    <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # (DF <- aggregate(mpg~as.character(carb), mtcars, mean))# new.hash <- hash(DF)  #numeric outcome# sapply(as.character(mtcars$carb), function(x) {#     if(exists(x, envir = new.hash)) {#         get(x, envir = new.hash)#     } else {#         NA#     }# })# # new.hash <- hash(DF, "character") #character outcome# sapply(as.character(mtcars$carb), function(x) {#     if(exists(x, envir = new.hash)) {#         get(x, envir = new.hash)#     } else {#         NA#     }# })# ## <strong>End(Not run)</strong></div></pre>
-  </div>
+      </div>
   <div class="span4">
     <!-- <ul>
       <li>hash</li>

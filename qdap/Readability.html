@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>automated_readability_index. qdap 0.1.0</title>
+<title>automated_readability_index. qdap 0.2.1</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.1.0</a>
+      <a class="brand" href="#">qdap 0.2.1</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,18 +40,18 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>automated_readability_index(text.var, grouping.var = NULL, rm.incomplete = FALSE, 
-  ...)
+    <pre><span class="functioncall"><a href='Readability.html'>automated_readability_index</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="argument">grouping.var</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">rm.incomplete</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span>
+  <span class="symbol">...</span><span class="keyword">)</span>
 
-coleman_liau(text.var, grouping.var = NULL, rm.incomplete = FALSE, ...)
+<span class="functioncall"><a href='Readability.html'>coleman_liau</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="argument">grouping.var</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">rm.incomplete</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">)</span>
 
-SMOG(text.var, grouping.var = NULL, output = "valid", rm.incomplete = FALSE, ...)
+<span class="functioncall"><a href='Readability.html'>SMOG</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="argument">grouping.var</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">output</span> <span class="argument">=</span> <span class="string">"valid"</span><span class="keyword">,</span> <span class="argument">rm.incomplete</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">)</span>
 
-flesch_kincaid(text.var, grouping.var = NULL, rm.incomplete = FALSE, ...)
+<span class="functioncall"><a href='Readability.html'>flesch_kincaid</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="argument">grouping.var</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">rm.incomplete</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">)</span>
 
-fry(text.var, grouping.var = NULL, labels = "automatic", rm.incomplete = FALSE, ...)
+<span class="functioncall"><a href='Readability.html'>fry</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="argument">grouping.var</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">labels</span> <span class="argument">=</span> <span class="string">"automatic"</span><span class="keyword">,</span> <span class="argument">rm.incomplete</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">)</span>
 
-linsear_write(text.var, grouping.var = NULL, rm.incomplete = FALSE, ...)</pre>
+<span class="functioncall"><a href='Readability.html'>linsear_write</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="argument">grouping.var</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">rm.incomplete</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">)</span></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -59,14 +59,15 @@ linsear_write(text.var, grouping.var = NULL, rm.incomplete = FALSE, ...)</pre>
       <dd>The text variable.</dd>
       <dt>grouping.var</dt>
       <dd>The grouping variables.  Default NULL
-  generates one word list for all text.  Also takes a
-  single grouping variable or a list of 1 or more grouping
+  generates one output for all text.  Also takes a single
+  grouping variable or a list of 1 or more grouping
   variables.</dd>
       <dt>rm.incomplete</dt>
       <dd>logical.  If TRUE removes incomplete
   sentences from the analysis.</dd>
       <dt>...</dt>
-      <dd>Other arguments passed to <code>endf</code>.</dd>
+      <dd>Other arguments passed to
+  <code>end_inc</code>.</dd>
       <dt>output</dt>
       <dd>A character vector character string
   indicating output type. One of "valid" (default and
@@ -83,7 +84,9 @@ linsear_write(text.var, grouping.var = NULL, rm.incomplete = FALSE, ...)</pre>
       
       <p>Returns a dataframe with selected readability statistic
   by grouping variable(s).  The <code>frey</code> function
-  returns a graphic representation of the readability.</p>
+  returns a graphic representation of the readability as
+  well as a list of two dataframe: 1) <code>SENTENCES_USED</code>
+  and 2) <code>SENTENCE_AVERAGES</code>.</p>
   
     </div>
 
@@ -111,10 +114,10 @@ linsear_write(text.var, grouping.var = NULL, rm.incomplete = FALSE, ...)</pre>
   
     </div>
 
-    <div class="Note">
-      <h2>Note</h2>
+    <div class="Warning">
+      <h2>Warning</h2>
       
-      <p>Many of the indices (e.g. Automated Readability Index)
+      <p>Many of the indices (e.g., Automated Readability Index)
   are derived from word difficulty (letters per word) and
   sentence difficulty (words per sentence).  If you have
   not run the sentSplit function on your data the results
@@ -144,10 +147,7 @@ linsear_write(text.var, grouping.var = NULL, rm.incomplete = FALSE, ...)</pre>
   University of Cincinnati, Cincinnati, Ohio.</p>
   
     </div>
-    
-    <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # with(rajSPLIT, automated_readability_index(dialogue, list(person, act)))# with(rajSPLIT, automated_readability_index(dialogue, list(sex, fam.aff)))# # with(rajSPLIT, coleman_liau(dialogue, list(person, act)))# with(rajSPLIT, coleman_liau(dialogue, list(sex, fam.aff)))# # with(rajSPLIT, SMOG(dialogue, list(person, act)))# with(rajSPLIT, SMOG(dialogue, list(sex, fam.aff)))# # with(rajSPLIT, flesch_kincaid(dialogue, list(person, act)))# with(rajSPLIT, flesch_kincaid(dialogue, list(sex, fam.aff)))# # (x <- with(rajSPLIT, fry(dialogue, list(sex, fam.aff))))# names(x)# with(rajSPLIT, fry(dialogue, list(sex, fam.aff), labels = "click"))# # with(rajSPLIT, linsear_write(dialogue, list(person, act)))# with(rajSPLIT, linsear_write(dialogue, list(sex, fam.aff)))# ## <strong>End(Not run)</strong></div></pre>
-  </div>
+      </div>
   <div class="span4">
     <!-- <ul>
       <li>automated_readability_index</li><li>coleman_liau</li><li>flesch_kincaid</li><li>fry</li><li>linsear_write</li><li>SMOG</li>

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>stopwords. qdap 0.1.0</title>
+<title>stopwords. qdap 0.2.1</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.1.0</a>
+      <a class="brand" href="#">qdap 0.2.1</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,9 +40,9 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>stopwords(textString, stopwords = Top25Words, unlist = FALSE, separate = TRUE, strip = FALSE, 
-  unique = FALSE, char.keep = NULL, names = FALSE, ignore.case = TRUE, apostrophe.remove = FALSE, 
-      ...)</pre>
+    <pre><span class="functioncall"><a href='stopwords.html'>stopwords</a></span><span class="keyword">(</span><span class="symbol">textString</span><span class="keyword">,</span> <span class="argument">stopwords</span> <span class="argument">=</span> <span class="symbol">Top25Words</span><span class="keyword">,</span> <span class="argument">unlist</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">separate</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">strip</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span>
+  <span class="argument">unique</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">char.keep</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">names</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">ignore.case</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">apostrophe.remove</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span>
+      <span class="symbol">...</span><span class="keyword">)</span></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -62,11 +62,11 @@
       <dd>logical.  If TRUE separates sentences
   into words. If FALSE retains sentences.</dd>
       <dt>strip</dt>
-      <dd>logical.  IF TURE strips the text of all
+      <dd>logical.  IF TRUE strips the text of all
   punctuation except apostrophes.</dd>
       <dt>unique</dt>
       <dd>logical.  If TRUE keeps only unique words
-  (if unlist is TURE) or sentences (if unlist is FALSE).
+  (if unlist is TRUE) or sentences (if unlist is FALSE).
   General use intended for when unlist is TRUE.</dd>
       <dt>char.keep</dt>
       <dd>If strip is TRUE this argument provides
@@ -102,10 +102,7 @@
       <p>Transcript apply the removal of stopwords.</p>
   
     </div>
-    
-    <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # stopwords(DATA$state)# stopwords(DATA$state, tm::stopwords("english"))# stopwords(DATA$state, Top200Words)# stopwords(DATA$state, Top200Words, strip = TRUE)# stopwords(DATA$state, Top200Words, separate = FALSE)# stopwords(DATA$state, Top200Words, separate = FALSE, ignore.case = FALSE)# stopwords(DATA$state, Top200Words, unlist = TRUE)# stopwords(DATA$state, Top200Words, unlist = TRUE, strip=TRUE)# stopwords(DATA$state, Top200Words, unlist = TRUE, unique = TRUE)# ## <strong>End(Not run)</strong></div></pre>
-  </div>
+      </div>
   <div class="span4">
     <!-- <ul>
       <li>stopwords</li>

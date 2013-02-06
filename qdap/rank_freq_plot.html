@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>rank_freq_mplot. qdap 0.1.0</title>
+<title>rank_freq_mplot. qdap 0.2.1</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.1.0</a>
+      <a class="brand" href="#">qdap 0.2.1</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,12 +40,12 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>rank_freq_mplot(text.var, grouping.var = NULL, ncol = 4, jitter = 0.2, log.freq = TRUE, 
-  log.rank = TRUE, hap.col = "red", dis.col = "blue", alpha = 1, shape = 1, title = "Rank-Frequency Plot", 
-      digits = 2, plot = TRUE)
+    <pre><span class="functioncall"><a href='rank_freq_plot.html'>rank_freq_mplot</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="argument">grouping.var</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">ncol</span> <span class="argument">=</span> <span class="number">4</span><span class="keyword">,</span> <span class="argument">jitter</span> <span class="argument">=</span> <span class="number">0.2</span><span class="keyword">,</span> <span class="argument">log.freq</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span>
+  <span class="argument">log.rank</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">hap.col</span> <span class="argument">=</span> <span class="string">"red"</span><span class="keyword">,</span> <span class="argument">dis.col</span> <span class="argument">=</span> <span class="string">"blue"</span><span class="keyword">,</span> <span class="argument">alpha</span> <span class="argument">=</span> <span class="number">1</span><span class="keyword">,</span> <span class="argument">shape</span> <span class="argument">=</span> <span class="number">1</span><span class="keyword">,</span> <span class="argument">title</span> <span class="argument">=</span> <span class="string">"Rank-Frequency Plot"</span><span class="keyword">,</span>
+      <span class="argument">digits</span> <span class="argument">=</span> <span class="number">2</span><span class="keyword">,</span> <span class="argument">plot</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">)</span>
 
-rank_freq_plot(words, frequencies, plot = TRUE, title.ext = NULL, jitter.ammount = 0.1, 
-      log.scale = TRUE, hap.col = "red", dis.col = "blue")</pre>
+<span class="functioncall"><a href='rank_freq_plot.html'>rank_freq_plot</a></span><span class="keyword">(</span><span class="symbol">words</span><span class="keyword">,</span> <span class="symbol">frequencies</span><span class="keyword">,</span> <span class="argument">plot</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">title.ext</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">jitter.ammount</span> <span class="argument">=</span> <span class="number">0.1</span><span class="keyword">,</span>
+      <span class="argument">log.scale</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">hap.col</span> <span class="argument">=</span> <span class="string">"red"</span><span class="keyword">,</span> <span class="argument">dis.col</span> <span class="argument">=</span> <span class="string">"blue"</span><span class="keyword">)</span></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -63,10 +63,10 @@ rank_freq_plot(words, frequencies, plot = TRUE, title.ext = NULL, jitter.ammount
       <dd>Amount of horizontal jitter to add to the
   points.</dd>
       <dt>log.freq</dt>
-      <dd>logical.  If TURE plots the frequencies
+      <dd>logical.  If TRUE plots the frequencies
   in the natural log scale.</dd>
       <dt>log.rank</dt>
-      <dd>logical.  If TURE plots the ranks in the
+      <dd>logical.  If TRUE plots the ranks in the
   natural log scale.</dd>
       <dt>hap.col</dt>
       <dd>Color of the hapax legomenon points.</dd>
@@ -107,8 +107,8 @@ rank_freq_plot(words, frequencies, plot = TRUE, title.ext = NULL, jitter.ammount
       
       <p>Returns a rank-frequency plot and a list of three
   dataframes: WORD_COUNTSThe word frequencies
-  supplied to <code>rank_freq_plot</code> or created by
-  <code>rank_freq_mplot</code>.
+  supplied to <code>rank_freq_plot</code> or created
+  by <code>rank_freq_mplot</code>.
   RANK_AND_FREQUENCY_STATSA dataframe of rank and
   frequencies for the words used in the text.
   LEGOMENA_STATSA dataframe displaying the percent
@@ -135,10 +135,7 @@ rank_freq_plot(words, frequencies, plot = TRUE, title.ext = NULL, jitter.ammount
   p. 1.</p>
   
     </div>
-    
-    <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # #rank_freq_mplot EXAMPLES:# rank_freq_mplot(DATA$state, DATA$person, ncol = 2, jitter = 0)# rank_freq_mplot(mraja1spl$dialogue, mraja1spl$person, ncol = 5,#     hap.col = "purple")# rank_freq_mplot(mraja1spl$dialogue, mraja1spl$person, ncol = 5,#     log.freq = FALSE, log.rank = FALSE, jitter = .6)# rank_freq_mplot(raj$dialogue, jitter = .5, alpha = 1/15)# rank_freq_mplot(raj$dialogue, jitter = .5, shape = 19, alpha = 1/15)# # #rank_freq_plot EXAMPLES:# mod <- with(mraja1spl , word_list(dialogue, person, cut.n = 10,#     cap.list=unique(mraja1spl$person)))# rank_freq_plot(mod$fwl$Romeo$WORD, mod$fwl$Romeo$FREQ, title.ext = 'Romeo')# rank_freq_plot(mod$fwl$Romeo$WORD, mod$fwl$Romeo$FREQ, plot = FALSE)# rank_freq_plot(mod$fwl$Romeo$WORD, mod$fwl$Romeo$FREQ, title.ext = 'Romeo',#     jitter.ammount = 0.15, hap.col = "darkgreen", dis.col = "purple")# rank_freq_plot(mod$fwl$Romeo$WORD, mod$fwl$Romeo$FREQ, title.ext = 'Romeo',#     jitter.ammount = 0.5, log.scale=FALSE)# lapply(seq_along(mod$fwl), function(i){#     dev.new()#     rank_freq_plot(mod$fwl[[i]]$WORD, mod$fwl[[i]]$FREQ,#         title.ext = names(mod$fwl)[i], jitter.ammount = 0.5, log.scale=FALSE)# })# ## <strong>End(Not run)</strong></div></pre>
-  </div>
+      </div>
   <div class="span4">
     <!-- <ul>
       <li>rank_freq_mplot</li><li>rank_freq_plot</li>

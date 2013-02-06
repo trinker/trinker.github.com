@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>potential_NA. qdap 0.1.0</title>
+<title>potential_NA. qdap 0.2.1</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.1.0</a>
+      <a class="brand" href="#">qdap 0.2.1</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,7 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>potential_NA(text.var, n = 3)</pre>
+    <pre><span class="functioncall"><a href='potential_NA.html'>potential_NA</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="argument">n</span> <span class="argument">=</span> <span class="number">3</span><span class="keyword">)</span></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -62,16 +62,13 @@
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Search for potential missing values (i.e. sentences that
+      <p>Search for potential missing values (i.e., sentences that
   are merely a punctuation mark) and optionally replace
   with missing value (<code>NA</code>). Useful in the initial
   cleaning process.</p>
   
     </div>
-    
-    <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # DATA$state[c(3, 7)] <- "."# potential_NA(DATA$state, 20)# potential_NA(DATA$state)# # USE TO SELCTIVELY REPLACE CELLS WITH MISSING VALUES# DATA$state[potential_NA(DATA$state, 20)$row[-c(3)]] <- NA# DATA# DATA <- qdap::DATA# ## <strong>End(Not run)</strong></div></pre>
-  </div>
+      </div>
   <div class="span4">
     <!-- <ul>
       <li>potential_NA</li>

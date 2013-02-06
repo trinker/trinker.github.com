@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>text2color. qdap 0.1.0</title>
+<title>text2color. qdap 0.2.1</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.1.0</a>
+      <a class="brand" href="#">qdap 0.2.1</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,7 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>text2color(words, recode.words, colors)</pre>
+    <pre><span class="functioncall"><a href='text2color.html'>text2color</a></span><span class="keyword">(</span><span class="symbol">words</span><span class="keyword">,</span> <span class="symbol">recode.words</span><span class="keyword">,</span> <span class="symbol">colors</span><span class="keyword">)</span></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -69,10 +69,7 @@
       <p>A dictionary lookup that maps words to colors.</p>
   
     </div>
-    
-    <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # set.seed(10)# x <- data.frame(X1 = sample(Top25Words[1:10], 20, TRUE))# text2color(x$X1, qcv(the, and, is), qcv(red, green, blue)) #blue was recycled# text2color(x$X1, qcv(the, and, is), qcv(red, green, blue, white))# x$X2 <- text2color(x$X1, list(qcv(the, and, is), "that"), qcv(red, green,#     white))# x# ## <strong>End(Not run)</strong></div></pre>
-  </div>
+      </div>
   <div class="span4">
     <!-- <ul>
       <li>text2color</li>

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>formality. qdap 0.1.0</title>
+<title>formality. qdap 0.2.1</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.1.0</a>
+      <a class="brand" href="#">qdap 0.2.1</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,21 +40,22 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>formality(text.var, grouping.var = NULL, sort.by.formality = TRUE, digits = 2, ...)</pre>
+    <pre><span class="functioncall"><a href='formality.html'>formality</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="argument">grouping.var</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">sort.by.formality</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">digits</span> <span class="argument">=</span> <span class="number">2</span><span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">)</span></pre>
     
     <h2>Arguments</h2>
     <dl>
       <dt>text.var</dt>
       <dd>The text variable (or an object from
-  <code>pos</code>,<code>pos.by</code> or <code>formality</code>.  Passing
-  the later three object will greatly reduce run time.</dd>
+  <code>pos</code>, <code>pos.by</code> or
+  <code>formality</code>.  Passing the later three
+  object will greatly reduce run time.</dd>
       <dt>grouping.var</dt>
       <dd>The grouping variables.  Default NULL
   generates formality score for all text.  Also takes a
   single grouping variable or a list of 1 or more grouping
   variables.</dd>
       <dt>sort.by.formality</dt>
-      <dd>logical.  If TURE orders the
+      <dd>logical.  If TRUE orders the
   results by formality score.</dd>
       <dt>digits</dt>
       <dd>The number of digits displayed.</dd>
@@ -109,14 +110,14 @@
   
     </div>
 
-    <div class="Note">
-      <h2>Note</h2>
+    <div class="Warning">
+      <h2>Warning</h2>
       
-      <p>Heylighen & Dewaele(2002) say "At present, a sample would
-  probably need to contain a few hundred words for the
-  measure to be minimally reliable. For single sentences,
-  the F-value should only be computed for purposes of
-  illustration".</p>
+      <p>Heylighen & Dewaele(2002) state, "At present, a sample
+  would probably need to contain a few hundred words for
+  the measure to be minimally reliable. For single
+  sentences, the F-value should only be computed for
+  purposes of illustration".</p>
   
     </div>
 
@@ -129,10 +130,7 @@
   (3), 293-340.</p>
   
     </div>
-    
-    <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # with(DATA, formality(state, person))# (x1 <- with(DATA, formality(state, list(sex, adult))))# plot(x1)# plot(x1, short.names = TRUE)# data(rajPOS) #A data set consisting of a pos list object# x2 <- with(raj, formality(rajPOS, act))# plot(x2)# x3 <- with(raj, formality(rajPOS, person))# plot(x3, bar.colors="Dark2")# plot(x3, bar.colors=c("Dark2", "Set1"))# x4 <- with(raj, formality(rajPOS, list(person, act)))# plot(x4, bar.colors=c("Dark2", "Set1"))# # rajDEM <- key_merge(raj, raj.demographics) #merge demographics with transcript.# x5 <- with(rajDEM, formality(rajPOS, sex))# plot(x5, bar.colors="RdBu")# x6 <- with(rajDEM, formality(rajPOS, list(fam.aff, sex)))# plot(x6, bar.colors="RdBu")# x7 <- with(rajDEM, formality(rajPOS, list(died, fam.aff)))# plot(x7, bar.colors="RdBu",  point.cex=2, point.pch = 3)# x8 <- raj.form <- with(rajDEM, formality(rajPOS, list(died, sex)))# plot(x8, bar.colors="RdBu",  point.cex=2, point.pch = "|")# # names(raj.form)# colsplit2df(raj.form$formality)# # #pass an object from pos or pos.by# with(raj, formality(x8 , list(act, person)))# ## <strong>End(Not run)</strong></div></pre>
-  </div>
+      </div>
   <div class="span4">
     <!-- <ul>
       <li>formality</li>

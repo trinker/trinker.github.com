@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>adjacency_matrix. qdap 0.1.0</title>
+<title>adjacency_matrix. qdap 0.2.1</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.1.0</a>
+      <a class="brand" href="#">qdap 0.2.1</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,22 +40,29 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>adjacency_matrix(matrix.obj)
+    <pre><span class="functioncall"><a href='adjacency_matrix.html'>adjacency_matrix</a></span><span class="keyword">(</span><span class="symbol">matrix.obj</span><span class="keyword">)</span>
 
-adjmat(matrix.obj)</pre>
+<span class="functioncall"><a href='adjacency_matrix.html'>adjmat</a></span><span class="keyword">(</span><span class="symbol">matrix.obj</span><span class="keyword">)</span></pre>
     
     <h2>Arguments</h2>
     <dl>
       <dt>matrix.obj</dt>
       <dd>A matrix object, preferably, of the
-  class "termco" or generated from <code>termco</code>,
-  <code>termco.d</code> or <code>termco.c</code>.</dd>
+  class "termco" generated from <code>termco</code>,
+  <code>termco.d</code> or
+  <code>termco.c</code>.</dd>
     </dl>
     
     <div class="Value">
       <h2>Value</h2>
       
-      <p>Returns an adjacency matrix.</p>
+      <p>Returns list: booleanA boolean matrix
+  adjacencyAn adjacency matrix.  Diagonals are the
+  total (sum) number of occurrences a variable had
+  sharedAn adjacency matrix with no diagonal and
+  the upper triangle replaced with NA sumThe
+  diagonal of the adjacency matrix; the total (sum) number
+  of occurrences a variable had</p>
   
     </div>
 
@@ -67,31 +74,13 @@ adjmat(matrix.obj)</pre>
   <a href = 'http://igraph.sourceforge.net/'>igraph</a> package.</p>
   
     </div>
-    
-    <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>wordLIST <- c(" montague", " capulet", " court", " marry")
-raj.termco <- with(raj.act.1, termco(dialogue, person,
-    wordLIST, ignore.case = TRUE))
-raj.adjmat <- adjmat(raj.termco)
-names(raj.adjmat)  #see what's available from the adjacency_matrix object
-</div>
-<div class='output'>[1] "boolean"   "adjacency" "shared"    "sum"      
-</div>
-<div class='input'>library(igraph)
-g <- graph.adjacency(raj.adjmat$adjacency, weighted=TRUE, mode ="undirected")
-g <- simplify(g)
-V(g)$label <- V(g)$name
-V(g)$degree <- degree(g)
-plot(g, layout=layout.auto(g))
-</div>
-<p><img src='adjacency_matrix-4.png' alt='' width='400' height='400' /></p></pre>
-  </div>
+      </div>
   <div class="span4">
     <!-- <ul>
       <li>adjacency_matrix</li><li>adjmat</li>
     </ul>
     <ul>
-      <li>adjacency</li><li>matrix</li>
+      <li>adjacency-matrix,</li><li>boolean-matrix</li>
     </ul> -->
       
     <h2>See also</h2>

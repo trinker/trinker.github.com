@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>polarity. qdap 0.1.0</title>
+<title>polarity. qdap 0.2.1</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.1.0</a>
+      <a class="brand" href="#">qdap 0.2.1</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,9 +40,9 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>polarity(text.var, grouping.var = NULL, positive.list = positive.words, negative.list = negative.words, 
-  negation.list = negation.words, amplification.list = increase.amplification.words, 
-      rm.incomplete = FALSE, digits = 3, ...)</pre>
+    <pre><span class="functioncall"><a href='polarity.html'>polarity</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="argument">grouping.var</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">positive.list</span> <span class="argument">=</span> <span class="symbol">positive.words</span><span class="keyword">,</span> <span class="argument">negative.list</span> <span class="argument">=</span> <span class="symbol">negative.words</span><span class="keyword">,</span>
+  <span class="argument">negation.list</span> <span class="argument">=</span> <span class="symbol">negation.words</span><span class="keyword">,</span> <span class="argument">amplification.list</span> <span class="argument">=</span> <span class="symbol">increase.amplification.words</span><span class="keyword">,</span>
+      <span class="argument">rm.incomplete</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">digits</span> <span class="argument">=</span> <span class="number">3</span><span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">)</span></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -74,7 +74,8 @@
       <dd>Integer; number of decimal places to round
   when printing.</dd>
       <dt>...</dt>
-      <dd>Other arguments supplied to <code>endf</code>.</dd>
+      <dd>Other arguments supplied to
+  <code>end_inc</code>.</dd>
     </dl>
     
     <div class="Value">
@@ -178,10 +179,7 @@
       <p><a href = 'http://www.slideshare.net/jeffreybreen/r-by-example-mining-twitter-for'>http://www.slideshare.net/jeffreybreen/r-by-example-mining-twitter-for</a></p>
   
     </div>
-    
-    <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # (poldat <- with(DATA, polarity(state, person)))# with(DATA, polarity(state, list(sex, adult)))# names(poldat)# poldat$all# poldat$group# poldat2 <- with(mraja1spl, polarity(dialogue, list(sex, fam.aff, died)))# colsplit2df(poldat2$group)# plot(poldat)# # (poldat2 <- with(rajSPLIT, polarity(dialogue, person)))# poldat2[["group"]][, "OL"] <- outlier.labeler(poldat2[["group"]][, "ave.polarity"])# poldat2[["all"]][, "OL"] <- outlier.labeler(poldat2[["all"]][, "polarity"])# head(poldat2[["group"]], 10)# truncdf(poldat2[["all"]], 20)# plot(poldat2)# plot(poldat2, nrow=4)# ## <strong>End(Not run)</strong></div></pre>
-  </div>
+      </div>
   <div class="span4">
     <!-- <ul>
       <li>polarity</li>

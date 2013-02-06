@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>cm_df.transcript. qdap 0.1.0</title>
+<title>cm_df.transcript. qdap 0.2.1</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="
   DWin, Gavin Simpson and Tyler Rinker
@@ -23,7 +23,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.1.0</a>
+      <a class="brand" href="#">qdap 0.2.1</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -43,7 +43,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>cm_df.transcript(text.var, grouping.var, file = NULL, indent = 4, width = 70, ...)</pre>
+    <pre><span class="functioncall"><a href='cm_df.transcript.html'>cm_df.transcript</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="symbol">grouping.var</span><span class="keyword">,</span> <span class="argument">file</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">indent</span> <span class="argument">=</span> <span class="number">4</span><span class="keyword">,</span> <span class="argument">width</span> <span class="argument">=</span> <span class="number">70</span><span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">)</span></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -56,7 +56,7 @@
   variables.</dd>
       <dt>file</dt>
       <dd>A connection, or a character string naming
-  the file to print to (e.g. .doc, .txt).</dd>
+  the file to print to (e.g., .doc, .txt).</dd>
       <dt>indent</dt>
       <dd>Number of spaces to indent.</dd>
       <dt>width</dt>
@@ -71,9 +71,10 @@
       <h2>Value</h2>
       
       <p>Returns a transcript by grouping variable with word
-  number above each word.  This makes use with cm_df2long
-  transfer/usage easier because the researcher has coded on
-  a transcript with the numeric word index already.</p>
+  number above each word.  This makes use with
+  <code>cm_df2long</code> transfer/usage easier
+  because the researcher has coded on a transcript with the
+  numeric word index already.</p>
   
     </div>
 
@@ -81,7 +82,9 @@
       <h2>Description</h2>
       
       <p>Output a transcript with word number/index above for easy
-  input back into qdap after coding.</p>
+  input back into
+  <a href = 'http://trinker.github.com/qdap/'>qdap after
+  coding.</a></p>
   
     </div>
 
@@ -89,14 +92,12 @@
       <h2>Note</h2>
       
       <p>It is recommended that the researcher actually codes on
-  the output from this file.  If a file already exists
+  the output from this file.  The codes can then be
+  transferred to via a list.  If a file already exists
   <code>cm_df.transcript</code> will append to that file.</p>
   
     </div>
-    
-    <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # with(DATA, cm_df.transcript(state, person))# with(DATA, cm_df.transcript(state, list(sex, adult)))# #use it with nested variables just to keep track of demographic info# with(DATA, cm_df.transcript(state, list(person, sex, adult)))# # #use double tilde "~~" to keep word group as one word# DATA$state <- mgsub("be certain", "be~~certain", DATA$state, fixed = TRUE)# with(DATA, cm_df.transcript(state, person))# DATA <- qdap::DATA# # with(mraja1spl, cm_df.transcript(dialogue, list(person)))# with(mraja1spl, cm_df.transcript(dialogue, list(sex, fam.aff, died)))# with(mraja1spl, cm_df.transcript(dialogue, list(person), file="foo.doc"))# # delete("foo.doc")   #delete the file just created# ## <strong>End(Not run)</strong></div></pre>
-  </div>
+      </div>
   <div class="span4">
     <!-- <ul>
       <li>cm_df.transcript</li>

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>cm_time2long. qdap 0.1.0</title>
+<title>cm_time2long. qdap 0.2.1</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.1.0</a>
+      <a class="brand" href="#">qdap 0.2.1</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,7 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>cm_time2long(..., v.name = "variable", list.var = TRUE, start.end = FALSE, debug = TRUE)</pre>
+    <pre><span class="functioncall"><a href='cm_time2long.html'>cm_time2long</a></span><span class="keyword">(</span><span class="symbol">...</span><span class="keyword">,</span> <span class="argument">v.name</span> <span class="argument">=</span> <span class="string">"variable"</span><span class="keyword">,</span> <span class="argument">list.var</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">start.end</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">debug</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">)</span></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -56,17 +56,18 @@
   <code>cm_t2l</code>.</dd>
       <dt>start.end</dt>
       <dd>logical. If TRUE outputs stop and end
-  times for each <code>cm_time.temp</code> list object.</dd>
+  times for each <code>cm_time.temp</code> list
+  object.</dd>
       <dt>debug</dt>
       <dd>logical. If TRUE debugging mode is on.
-  <code>cm_time2long</code> will return possible errors in time
-  span inputs.</dd>
+  <code>cm_time2long</code> will return possible
+  errors in time span inputs.</dd>
     </dl>
     
     <div class="Value">
       <h2>Value</h2>
       
-      <p>Generates a data frame of start and end times for each
+      <p>Generates a dataframe of start and end times for each
   code.</p>
   
     </div>
@@ -75,8 +76,8 @@
       <h2>Description</h2>
       
       <p>Transforms the range coding structure(s) from
-  cm_time.temp (in list format) into a data frame of start
-  and end times in long format.</p>
+  <code>cm_time.temp</code> (in list format) into a
+  data frame of start and end times in long format.</p>
   
     </div>
 
@@ -88,16 +89,13 @@
   Oaks, CA: SAGE Publications.</p>
   
     </div>
-    
-    <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # x <- list(#     transcript_time_span = qcv(00:00 - 1:12:00),#     A = qcv(terms = "2.40:3.00, 5.01, 6.02:7.00, 9.00"),#     B = qcv(terms = "2.40, 3.01:3.02, 5.01, 6.02:7.00, 9.00, 1.12.00:1.19.01"),#     C = qcv(terms = "2.40:3.00, 5.01, 6.02:7.00, 9.00, 17.01")# )# dat <- cm_time2long(x)# gantt_wrap(dat, "code", border.color = "black", border.size = 5)# ## <strong>End(Not run)</strong></div></pre>
-  </div>
+      </div>
   <div class="span4">
     <!-- <ul>
       <li>cm_time2long</li>
     </ul>
     <ul>
-      <li>coding,</li><li>span</li><li>time</li>
+      <li>coding,</li><li>time-span</li>
     </ul> -->
       
     <h2>See also</h2>

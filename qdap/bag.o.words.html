@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>bag.o.words. qdap 0.1.0</title>
+<title>bag.o.words. qdap 0.2.1</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.1.0</a>
+      <a class="brand" href="#">qdap 0.2.1</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,11 +40,11 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>bag.o.words(text.var, apostrophe.remove = FALSE, ...)
+    <pre><span class="functioncall"><a href='bag.o.words.html'>bag.o.words</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="argument">apostrophe.remove</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">)</span>
 
-breaker(text.var)
+<span class="functioncall"><a href='bag.o.words.html'>breaker</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">)</span>
 
-word.split(text.var)</pre>
+<span class="functioncall"><a href='bag.o.words.html'>word.split</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">)</span></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -64,7 +64,7 @@ word.split(text.var)</pre>
       <p>Returns a vector of striped words.</p>
   
       <p><code>breaker</code> - returns a vector of striped words and
-  qdap recognized endmarks (i.e. <code>".", "!", "?", "*",
+  qdap recognized endmarks (i.e., <code>".", "!", "?", "*",
   "-"</code>).</p>
   
     </div>
@@ -80,13 +80,10 @@ word.split(text.var)</pre>
   
       <p><code>word.split</code> - Reduces a text column to a list of
   vectors of bag of words and qdap recognized end marks
-  (i.e. <code>".", "!", "?", "*", "-"</code>).</p>
+  (i.e., <code>".", "!", "?", "*", "-"</code>).</p>
   
     </div>
-    
-    <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # bag.o.words(DATA$state)# by(DATA$state, DATA$person, bag.o.words)# lapply(DATA$state,  bag.o.words)# bag.o.words("I'm going home!", apostrophe.remove = FALSE)# # DATA# breaker(DATA$state)# by(DATA$state, DATA$person, breaker)# lapply(DATA$state,  breaker)# # word.split(c(NA, DATA$state))# ## <strong>End(Not run)</strong></div></pre>
-  </div>
+      </div>
   <div class="span4">
     <!-- <ul>
       <li>bag.o.words</li><li>breaker</li><li>word.split</li>

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>word_associate. qdap 0.1.0</title>
+<title>word_associate. qdap 0.2.1</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.1.0</a>
+      <a class="brand" href="#">qdap 0.2.1</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,15 +40,15 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>word_associate(text.var, grouping.var = NULL, match.string, text.unit = "sentence", 
-  extra.terms = NULL, target.exclude = NULL, stopwords = NULL, network.plot = FALSE, 
-      wordcloud = FALSE, cloud.colors = c("black", "gray55"), title.color = "blue", 
-      nw.label.cex = 0.8, title.padj = -4.5, nw.label.colors = NULL, nw.layout = NULL, 
-      nw.edge.color = "gray90", nw.label.proportional = TRUE, nw.title.padj = NULL, 
-      nw.title.location = NULL, title.font = NULL, title.cex = NULL, nw.edge.curved = TRUE, 
-      cloud.legend = NULL, cloud.legend.cex = 0.8, cloud.legend.location = c(-0.03, 
-          1.03), nw.legend = NULL, nw.legend.cex = 0.8, nw.legend.location = c(-1.54, 
-          1.41), legend.override = FALSE, char2space = "~~", ...)</pre>
+    <pre><span class="functioncall"><a href='word_associate.html'>word_associate</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="argument">grouping.var</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="symbol">match.string</span><span class="keyword">,</span> <span class="argument">text.unit</span> <span class="argument">=</span> <span class="string">"sentence"</span><span class="keyword">,</span>
+  <span class="argument">extra.terms</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">target.exclude</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">stopwords</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">network.plot</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span>
+      <span class="argument">wordcloud</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">cloud.colors</span> <span class="argument">=</span> <span class="functioncall"><a href='http://www.inside-r.org/r-doc/base/c'>c</a></span><span class="keyword">(</span><span class="string">"black"</span><span class="keyword">,</span> <span class="string">"gray55"</span><span class="keyword">)</span><span class="keyword">,</span> <span class="argument">title.color</span> <span class="argument">=</span> <span class="string">"blue"</span><span class="keyword">,</span>
+      <span class="argument">nw.label.cex</span> <span class="argument">=</span> <span class="number">0.8</span><span class="keyword">,</span> <span class="argument">title.padj</span> <span class="argument">=</span> -<span class="number">4.5</span><span class="keyword">,</span> <span class="argument">nw.label.colors</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">nw.layout</span> <span class="argument">=</span> NULL<span class="keyword">,</span>
+      <span class="argument">nw.edge.color</span> <span class="argument">=</span> <span class="string">"gray90"</span><span class="keyword">,</span> <span class="argument">nw.label.proportional</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">nw.title.padj</span> <span class="argument">=</span> NULL<span class="keyword">,</span>
+      <span class="argument">nw.title.location</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">title.font</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">title.cex</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">nw.edge.curved</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span>
+      <span class="argument">cloud.legend</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">cloud.legend.cex</span> <span class="argument">=</span> <span class="number">0.8</span><span class="keyword">,</span> <span class="argument">cloud.legend.location</span> <span class="argument">=</span> <span class="functioncall"><a href='http://www.inside-r.org/r-doc/base/c'>c</a></span><span class="keyword">(</span>-<span class="number">0.03</span><span class="keyword">,</span>
+          <span class="number">1.03</span><span class="keyword">)</span><span class="keyword">,</span> <span class="argument">nw.legend</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">nw.legend.cex</span> <span class="argument">=</span> <span class="number">0.8</span><span class="keyword">,</span> <span class="argument">nw.legend.location</span> <span class="argument">=</span> <span class="functioncall"><a href='http://www.inside-r.org/r-doc/base/c'>c</a></span><span class="keyword">(</span>-<span class="number">1.54</span><span class="keyword">,</span>
+          <span class="number">1.41</span><span class="keyword">)</span><span class="keyword">,</span> <span class="argument">legend.override</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">char2space</span> <span class="argument">=</span> <span class="string">"~~"</span><span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">)</span></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -205,10 +205,7 @@
   and/or wordcloud.</p>
   
     </div>
-    
-    <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # ms <- c(" I", "you")# et <- c(" it", " no")# word_associate(DATA2$state, DATA2$person, match.string = ms,#     wordcloud = TRUE,  proportional = TRUE,#     network.plot = TRUE,  nw.label.proportional = TRUE, extra.terms = et,#     cloud.legend =c("A", "B", "C", "D"),#     title.color = "blue", cloud.colors = c("red", "blue", "purple", "gray70"))# # #======================================# #Note: You don't have to name the vectors in the lists but I do for clarity# ms <- list(#     list1 = c(" I ", " you"),#     list2 = c(" wh")# )# # et <- list(#     B = c(" the", " on"),#     C = c(" it", " no")# )# # word_associate(DATA2$state, DATA2$person, match.string = ms,#     wordcloud = TRUE,  proportional = TRUE,#     network.plot = TRUE,  nw.label.proportional = TRUE, extra.terms = et,#     cloud.legend =c("A", "B", "C", "D"),#     title.color = "blue", cloud.colors = c("red", "blue", "purple", "gray70"))# # word_associate(DATA2$state, list(DATA2$day, DATA2$person), match.string = ms)# # #======================================# m <- list(#     A1 = c("you", "in"), #list 1#     A2 = c(" wh")        #list 2# )# # n <- list(#     B = c(" the", " on"),#     C = c(" it", " no")# )# # word_associate(DATA2$state, list(DATA2$day, DATA2$person), match.string = m)# word_associate(raj.act.1$dialogue, list(raj.act.1$person), match.string = m)# (out <- with(mraja1spl, word_associate(dialogue, list(fam.aff, sex), match.string = m)))# names(out)# lapply(out$dialogue, htruncdf, n = 20, w = 20)# out$cap.f# # #======================================# DATA2$state2 <- space_fill(DATA2$state, c("is fun", "too fun"))# # ms <- list(#     list1 = c(" I ", " you", "is fun", "too fun"),#     list2 = c(" wh")# )# # et <- list(#     B = c(" the", " on"),#     C = c(" it", " no")# )# # word_associate(DATA2$state2, DATA2$person, match.string = ms,#     wordcloud = TRUE,  proportional = TRUE,#     network.plot = TRUE,  nw.label.proportional = TRUE, extra.terms = et,#     cloud.legend =c("A", "B", "C", "D"),#     title.color = "blue", cloud.colors = c("red", "blue", "purple", "gray70"))# # DATA2 <- qdap::DATA2# ## <strong>End(Not run)</strong></div></pre>
-  </div>
+      </div>
   <div class="span4">
     <!-- <ul>
       <li>word_associate</li>

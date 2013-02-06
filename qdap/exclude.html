@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>exclude. qdap 0.1.0</title>
+<title>exclude. qdap 0.2.1</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.1.0</a>
+      <a class="brand" href="#">qdap 0.2.1</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,7 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>exclude(word.list, ...)</pre>
+    <pre><span class="functioncall"><a href='exclude.html'>exclude</a></span><span class="keyword">(</span><span class="symbol">word.list</span><span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">)</span></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -64,10 +64,7 @@
       <p>Quickly exclude words from a word list</p>
   
     </div>
-    
-    <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # Top25Words# exclude(Top25Words, qcv(the, of, and))# exclude(Top25Words, "the", "of", "an")# exclude(1:10, 3, 4)# exclude(1:10, 3:4)# # #Using with term.match and termco# exclude(term.match(DATA$state, qcv(th), FALSE), "truth")# termco(DATA$state, DATA$person, exclude(term.match(DATA$state, qcv(th),#     FALSE), "truth"))# MTCH.LST <- exclude(term.match(DATA$state, qcv(th, i)), qcv(truth, stinks))# termco(DATA$state, DATA$person, MTCH.LST)# ## <strong>End(Not run)</strong></div></pre>
-  </div>
+      </div>
   <div class="span4">
     <!-- <ul>
       <li>exclude</li>

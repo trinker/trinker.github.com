@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>word_diff_list. qdap 0.1.0</title>
+<title>word_diff_list. qdap 0.2.1</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.1.0</a>
+      <a class="brand" href="#">qdap 0.2.1</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,8 +40,8 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>word_diff_list(text.var, grouping.var, vs.all = FALSE, vs.all.cut = 1, stopwords = NULL, 
-  alphabetical = FALSE, digits = 2)</pre>
+    <pre><span class="functioncall"><a href='word_diff_list.html'>word_diff_list</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="symbol">grouping.var</span><span class="keyword">,</span> <span class="argument">vs.all</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">vs.all.cut</span> <span class="argument">=</span> <span class="number">1</span><span class="keyword">,</span> <span class="argument">stopwords</span> <span class="argument">=</span> NULL<span class="keyword">,</span>
+  <span class="argument">alphabetical</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">digits</span> <span class="argument">=</span> <span class="number">2</span><span class="keyword">)</span></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -54,7 +54,7 @@
       <dt>vs.all</dt>
       <dd>logical. If TRUE looks at each grouping
   variable against all others ("a" vs. all comparison).  If
-  FALSE looks at each "a" vs. "b", comparison (e.g. for
+  FALSE looks at each "a" vs. "b", comparison (e.g., for
   groups "a", "b", and "c"; "a" vs. "b", "a" vs. "c" and
   "b" vs. "c" will be considered).</dd>
       <dt>vs.all.cut</dt>
@@ -92,10 +92,7 @@
   combinations or "a" vs. all others.</p>
   
     </div>
-    
-    <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # with(DATA, word_diff_list(text.var = state, grouping.var = list(sex, adult)))# with(DATA, word_diff_list(state, person))# with(DATA, word_diff_list(state, grouping.var = list(sex, adult),#     vs.all=TRUE, vs.all.cut=2))# # with(mraja1, word_diff_list(text.var = dialogue,#     grouping.var = list(mraja1$sex, mraja1$fam.aff)))# word_diff_list(mraja1$dialogue, mraja1$person)# word_diff_list(mraja1$dialogue, mraja1$fam.aff, stopwords = Top25Words)# word_diff_list(mraja1$dialogue, mraja1$fam.aff, vs.all=TRUE, vs.all.cut=2)# ## <strong>End(Not run)</strong></div></pre>
-  </div>
+      </div>
   <div class="span4">
     <!-- <ul>
       <li>word_diff_list</li>

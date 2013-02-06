@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>gantt_plot. qdap 0.1.0</title>
+<title>gantt_plot. qdap 0.2.1</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.1.0</a>
+      <a class="brand" href="#">qdap 0.2.1</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,8 +40,8 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>gantt_plot(text.var, grouping.var, rm.var = NULL, fill.var = NULL, xlab = "duration (in words)", 
-  units = "words", col.sep = "_", ...)</pre>
+    <pre><span class="functioncall"><a href='gantt_plot.html'>gantt_plot</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="symbol">grouping.var</span><span class="keyword">,</span> <span class="argument">rm.var</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">fill.var</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">xlab</span> <span class="argument">=</span> <span class="string">"duration (in words)"</span><span class="keyword">,</span>
+  <span class="argument">units</span> <span class="argument">=</span> <span class="string">"words"</span><span class="keyword">,</span> <span class="argument">col.sep</span> <span class="argument">=</span> <span class="string">"_"</span><span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">)</span></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -79,19 +79,21 @@
     <div class="Description">
       <h2>Description</h2>
       
-      <p>A convenience function that wraps <code>gantt</code>,
-  <code>gantt_rm</code> and <code>gantt_wrap</code> into a single
-  plotting function.</p>
+      <p>A convenience function that wraps
+  <code>gantt</code>, <code>gantt_rep</code>
+  and <code>gantt_wrap</code> into a single plotting
+  function.</p>
   
     </div>
 
     <div class="Note">
       <h2>Note</h2>
       
-      <p>For non repeated measures data/plotting use <code>gantt</code>;
-  for repeated measures data output use <code>gantt_rep</code>;
-  and for a flexible gantt plot that words with code matrix
-  functions (cm) use <code>gantt_wrap</code>.</p>
+      <p>For non repeated measures data/plotting use
+  <code>gantt</code>; for repeated measures data
+  output use <code>gantt_rep</code>; and for a
+  flexible gantt plot that words with code matrix functions
+  (cm) use <code>gantt_wrap</code>.</p>
   
     </div>
 
@@ -102,10 +104,7 @@
   tool of management. New York, Ronald Press.</p>
   
     </div>
-    
-    <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # with(rajSPLIT, gantt_plot(text.var = dialogue, grouping.var = person, size=4))# with(rajSPLIT, gantt_plot(text.var = dialogue, grouping.var =#     list(fam.aff, sex), rm.var  = act,#     title = "Romeo and Juliet's dialogue"))# with(rajSPLIT, gantt_plot(dialogue, list(fam.aff, sex), act, transform=T))# rajSPLIT2 <- rajSPLIT# rajSPLIT2$newb <- as.factor(sample(LETTERS[1:2], nrow(rajSPLIT2),#     replace=TRUE))# z <- with(rajSPLIT2, gantt_plot(dialogue, list(fam.aff, sex),#     list(act, newb), size = 4))# # library(ggplot2); library(scales); library(RColorBrewer); library(grid)# z + theme(panel.margin = unit(1, "lines")) + scale_colour_grey()# z + scale_colour_brewer(palette="Dark2")# ## <strong>End(Not run)</strong></div></pre>
-  </div>
+      </div>
   <div class="span4">
     <!-- <ul>
       <li>gantt_plot</li>
@@ -116,8 +115,8 @@
       
     <h2>See also</h2>
     
-  <code>gantt</code> <code>gantt_rep</code>,
-  <code>gantt_wrap</code>,
+  <code>gantt</code>, <code>gantt_rep</code>,
+  <code>gantt_wrap</code>
 
         
   </div>

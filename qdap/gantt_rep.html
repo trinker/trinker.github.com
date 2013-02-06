@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>gantt_rep. qdap 0.1.0</title>
+<title>gantt_rep. qdap 0.2.1</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.1.0</a>
+      <a class="brand" href="#">qdap 0.2.1</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,7 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>gantt_rep(rm.var, text.var, grouping.var, units = "words", col.sep = "_")</pre>
+    <pre><span class="functioncall"><a href='gantt_rep.html'>gantt_rep</a></span><span class="keyword">(</span><span class="symbol">rm.var</span><span class="keyword">,</span> <span class="symbol">text.var</span><span class="keyword">,</span> <span class="symbol">grouping.var</span><span class="keyword">,</span> <span class="argument">units</span> <span class="argument">=</span> <span class="string">"words"</span><span class="keyword">,</span> <span class="argument">col.sep</span> <span class="argument">=</span> <span class="string">"_"</span><span class="keyword">)</span></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -82,9 +82,10 @@
     <div class="Note">
       <h2>Note</h2>
       
-      <p>For non repeated measures data/plotting use <code>gantt</code>;
-  for a convenient wrapper that takes text and generates
-  plots use <code>gantt_plot</code>; and for a flexible gantt
+      <p>For non repeated measures data/plotting use
+  <code>gantt</code>; for a convenient wrapper that
+  takes text and generates plots use
+  <code>gantt_plot</code>; and for a flexible gantt
   plot that words with code matrix functions (cm) use
   <code>gantt_wrap</code>.</p>
   
@@ -97,10 +98,7 @@
   tool of management. New York, Ronald Press.</p>
   
     </div>
-    
-    <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # (dat3 <- with(rajSPLIT, gantt_rep(act, dialogue, list(fam.aff, sex),#     units = "words", col.sep = "_")))# gantt_wrap(dat3, fam.aff_sex, facet.vars = "act",#     title = "Repeated Measures Gantt Plot",#     minor.line.freq = 25, major.line.freq = 100)# ## <strong>End(Not run)</strong></div></pre>
-  </div>
+      </div>
   <div class="span4">
     <!-- <ul>
       <li>gantt_rep</li>

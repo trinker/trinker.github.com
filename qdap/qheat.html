@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>qheat. qdap 0.1.0</title>
+<title>qheat. qdap 0.2.1</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.1.0</a>
+      <a class="brand" href="#">qdap 0.2.1</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,9 +40,9 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>qheat(mat, low = "white", high = "darkblue", values = FALSE, digits = 1, text.size = 3, 
-  text.color = "grey40", xaxis.col = "black", yaxis.col = "black", order.by = NULL, 
-      grid = "white", by.column = TRUE, auto.size = FALSE, mat2 = NULL)</pre>
+    <pre><span class="functioncall"><a href='qheat.html'>qheat</a></span><span class="keyword">(</span><span class="symbol">mat</span><span class="keyword">,</span> <span class="argument">low</span> <span class="argument">=</span> <span class="string">"white"</span><span class="keyword">,</span> <span class="argument">high</span> <span class="argument">=</span> <span class="string">"darkblue"</span><span class="keyword">,</span> <span class="argument">values</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">digits</span> <span class="argument">=</span> <span class="number">1</span><span class="keyword">,</span> <span class="argument">text.size</span> <span class="argument">=</span> <span class="number">3</span><span class="keyword">,</span>
+  <span class="argument">text.color</span> <span class="argument">=</span> <span class="string">"grey40"</span><span class="keyword">,</span> <span class="argument">xaxis.col</span> <span class="argument">=</span> <span class="string">"black"</span><span class="keyword">,</span> <span class="argument">yaxis.col</span> <span class="argument">=</span> <span class="string">"black"</span><span class="keyword">,</span> <span class="argument">order.by</span> <span class="argument">=</span> NULL<span class="keyword">,</span>
+      <span class="argument">grid</span> <span class="argument">=</span> <span class="string">"white"</span><span class="keyword">,</span> <span class="argument">by.column</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">auto.size</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">mat2</span> <span class="argument">=</span> NULL<span class="keyword">)</span></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -114,15 +114,12 @@
     <div class="Note">
       <h2>Note</h2>
       
-      <p><code>qheat</code> is a fast way of working with data formats
-  produced by qdap.  The function isn't designed to be
-  extended beyond exploratory qdap usage.</p>
+      <p><code>qheat</code> is a fast way of working with
+  data formats produced by qdap.  The function isn't
+  designed to be extended beyond exploratory qdap usage.</p>
   
     </div>
-    
-    <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## <strong>Not run</strong>: #  dat <- sentSplit(DATA, "state")# (ws.ob <- with(dat, word_stats(state, list(sex, adult), tot=tot)))# qheat(ws.ob)# qheat(ws.ob, order.by = "sptot",#     xaxis.col = c("red", "black", "green", "blue"))# qheat(ws.ob, order.by = "sptot")# qheat(ws.ob, order.by = "-sptot")# qheat(ws.ob, values = TRUE)# qheat(ws.ob, values = TRUE, text.color = "red")# qheat(ws.ob, "yellow", "red", grid = FALSE)# # dat1 <- data.frame(G=LETTERS[1:5], matrix(rnorm(20), ncol = 4))# dat2 <- data.frame(matrix(LETTERS[1:25], ncol=5))# qheat(dat1, values=TRUE)# qheat(dat1, values=TRUE, mat2=dat2)# ## <strong>End(Not run)</strong></div></pre>
-  </div>
+      </div>
   <div class="span4">
     <!-- <ul>
       <li>qheat</li>
