@@ -92,7 +92,10 @@
   combinations or "a" vs. all others.</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # out1 <- with(DATA, word_diff_list(text.var = state,#     grouping.var = list(sex, adult)))# lapply(unlist(out1, recursive = FALSE), head, n=3)# # out2 <- with(DATA, word_diff_list(state, person))# lapply(unlist(out2, recursive = FALSE), head, n=3)# # out3 <- with(DATA, word_diff_list(state, grouping.var = list(sex, adult),#     vs.all=TRUE, vs.all.cut=2))# # # out4 <- with(mraja1, word_diff_list(text.var = dialogue,#     grouping.var = list(mraja1$sex, mraja1$fam.aff)))# # # out5 <- word_diff_list(mraja1$dialogue, mraja1$person)# # out6 <- word_diff_list(mraja1$dialogue, mraja1$fam.aff, stopwords = Top25Words)# # out7 <- word_diff_list(mraja1$dialogue, mraja1$fam.aff, vs.all=TRUE, vs.all.cut=2)# lapply(out7, head, n=3)# ## <strong>End(Not run)</strong></div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>word_diff_list</li>

@@ -72,7 +72,10 @@
   lookups.</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # lookup(mtcars$carb, sort(unique(mtcars$carb)),#     c('one', 'two', 'three', 'four', 'six', 'eight'))# lookup(mtcars$carb, sort(unique(mtcars$carb)),#     seq(10, 60, by=10))# # lookup(1:5, data.frame(1:4, 11:14))# lookup(LETTERS[1:5], data.frame(LETTERS[1:5], 100:104))# # key <- data.frame(x=1:2, y=c("A", "B"))# big.vec <- sample(1:2, 3000000, T)# out <- lookup(big.vec, key)# out[1:20]# ## <strong>End(Not run)</strong></div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>lookup</li>

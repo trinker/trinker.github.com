@@ -130,7 +130,10 @@
   (3), 293-340.</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # with(DATA, formality(state, person))# (x1 <- with(DATA, formality(state, list(sex, adult))))# plot(x1)# plot(x1, short.names = TRUE)# data(rajPOS) #A data set consisting of a pos list object# x2 <- with(raj, formality(rajPOS, act))# plot(x2)# x3 <- with(raj, formality(rajPOS, person))# plot(x3, bar.colors="Dark2")# plot(x3, bar.colors=c("Dark2", "Set1"))# x4 <- with(raj, formality(rajPOS, list(person, act)))# plot(x4, bar.colors=c("Dark2", "Set1"))# # rajDEM <- key_merge(raj, raj.demographics) #merge demographics with transcript.# x5 <- with(rajDEM, formality(rajPOS, sex))# plot(x5, bar.colors="RdBu")# x6 <- with(rajDEM, formality(rajPOS, list(fam.aff, sex)))# plot(x6, bar.colors="RdBu")# x7 <- with(rajDEM, formality(rajPOS, list(died, fam.aff)))# plot(x7, bar.colors="RdBu",  point.cex=2, point.pch = 3)# x8 <- with(rajDEM, formality(rajPOS, list(died, sex)))# plot(x8, bar.colors="RdBu",  point.cex=2, point.pch = "|")# # names(x8)# colsplit2df(x8$formality)# # #pass an object from pos or pos.by# ltruncdf(with(raj, formality(x8 , list(act, person))), 6, 4)# ## <strong>End(Not run)</strong></div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>formality</li>

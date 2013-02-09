@@ -42,9 +42,39 @@
 <h1></h1>
 
 <p><img src="https://dl.dropbox.com/u/61803503/qdapicon.png" alt="qdapicon"/><br/>
-qdap (Quantitative Discourse Analysis Package) is an R package designed to assist in quantitative discourse analysis.  The package stands as a bridge between qualitative transcripts of dialogue and statistical analysis and visualization.</p>
+<a href="http://trinker.github.com/qdap/">qdap</a> (Quantitative Discourse Analysis Package) is an R package designed to assist in quantitative discourse analysis.  The package stands as a bridge between qualitative transcripts of dialogue and statistical analysis and visualization.</p>
 
-<p>Download the development version <a href="https://github.com/trinker/qdap/">here</a> 
+<h2>Installation</h2>
+
+<p>To download the development version of qdap:</p>
+
+<p>Download the <a href="https://github.com/trinker/qdap/zipball/master">zip ball</a> or <a href="https://github.com/trinker/qdap/tarball/master">tar ball</a>, decompress and run <code>R CMD INSTALL</code> on it, or use the <strong>devtools</strong> package to install the development version:</p>
+
+<pre><code class="r"># install.packages(&quot;devtools&quot;)
+
+library(devtools)
+install_github(&quot;qdap&quot;, &quot;trinker&quot;)
+</code></pre>
+
+<p><strong>Note</strong>: Windows users need <a href="http://www.murdoch-sutherland.com/Rtools/">Rtools</a> and <a href="http://CRAN.R-project.org/package=devtools">devtools</a> to install this way.</p>
+
+<p>Additionally, Windows users currently must install <code>RCurl</code> before installing qdap development version.  Use the following short script:</p>
+
+<pre><code class="r">URL &lt;- &quot;http://www.stats.ox.ac.uk/pub/RWin/bin/windows/contrib/2.15/&quot;
+install.packages(&quot;RCurl&quot;, contriburl = URL)
+</code></pre>
+
+<p><strong>Note</strong>: Mac users must install <code>openNLP</code> before attempting to install <code>qdap</code></p>
+
+<pre><code class="r">install.packages(&quot;openNLP&quot;, type = &quot;source&quot;)
+</code></pre>
+
+<h2>Help</h2>
+
+<p>The qdap web page: <a href="http://trinker.github.com/qdap/">trinker.github.com/qdap</a>  [improvements to come]<br/>
+For a variety of qdap help files and videos <a href="https://github.com/trinker/qdap/wiki">click here</a>.<br/>
+For the package pdf help manual <a href="https://dl.dropbox.com/u/61803503/qdap.pdf">click here</a>.</p>
+
 
     <h2>Help topics</h2>
 
@@ -101,7 +131,7 @@ qdap (Quantitative Discourse Analysis Package) is an R package designed to assis
             
             
       <li>
-        <code><a href="multigsub.html">multigsub</a></code><br />Multiple gsub</li>
+        <code><a href="multigsub.html">multigsub</a></code> <code><a href="file_handling.html">mgsub</a></code><br />Multiple gsub</li>
             
       <li>
         <code><a href="potential_NA.html">potential_NA</a></code><br />Search for Potential Missing Values</li>
@@ -168,10 +198,7 @@ qdap (Quantitative Discourse Analysis Package) is an R package designed to assis
             
             
       <li>
-        <code><a href="justification.html">left.just</a></code><br />Text Justification</li>
-      <li>
-        <code><a href="justification.html">right.just</a></code><br />Text Justification</li>
-            
+        <code><a href="justification.html">left.just</a></code> <code><a href="file_handling.html">right.just</a></code><br />Text Justification</li>
             
       <li>
         <code><a href="strWrap.html">strWrap</a></code><br />Wrap Character Strings to Format Paragraphs</li>
@@ -184,7 +211,7 @@ qdap (Quantitative Discourse Analysis Package) is an R package designed to assis
     <ul class="index">
         
       <li>
-        <code><a href="adjacency_matrix.html">adjacency_matrix</a></code><br />Takes a Matrix and Generates an Adjacency Matrix</li>
+        <code><a href="adjacency_matrix.html">adjacency_matrix</a></code> <code><a href="file_handling.html">adjmat</a></code><br />Takes a Matrix and Generates an Adjacency Matrix</li>
             
       <li>
         <code><a href="colSplit.html">colSplit</a></code><br />Separate a Column Pasted by paste2</li>
@@ -257,7 +284,7 @@ qdap (Quantitative Discourse Analysis Package) is an R package designed to assis
         <code><a href="strip.html">strip</a></code><br />Strip Text</li>
             
       <li>
-        <code><a href="synonyms.html">synonyms</a></code><br />Search For Synonyms</li>
+        <code><a href="synonyms.html">synonyms</a></code> <code><a href="file_handling.html">syn</a></code><br />Search For Synonyms</li>
             
       <li>
         <code><a href="word_associate.html">word_associate</a></code><br />Find Associated Words.</li>
@@ -397,7 +424,7 @@ qdap (Quantitative Discourse Analysis Package) is an R package designed to assis
             
             
       <li>
-        <code><a href="word.count.html">word.count</a></code><br />Word Counts</li>
+        <code><a href="word.count.html">word.count</a></code> <code><a href="file_handling.html">wc</a></code><br />Word Counts</li>
       <li>
         <code><a href="word.count.html">char.table</a></code><br />Word Counts</li>
             
@@ -419,22 +446,7 @@ qdap (Quantitative Discourse Analysis Package) is an R package designed to assis
     <ul class="index">
         
       <li>
-        <code><a href="Readability.html">automated_readability_index</a></code><br />Readability Measures</li>
-      <li>
-        <code><a href="Readability.html">coleman_liau</a></code><br />Readability Measures</li>
-            
-      <li>
-        <code><a href="Readability.html">flesch_kincaid</a></code><br />Readability Measures</li>
-            
-      <li>
-        <code><a href="Readability.html">fry</a></code><br />Readability Measures</li>
-            
-      <li>
-        <code><a href="Readability.html">linsear_write</a></code><br />Readability Measures</li>
-            
-      <li>
-        <code><a href="Readability.html">SMOG</a></code><br />Readability Measures</li>
-            
+        <code><a href="Readability.html">automated_readability_index</a></code> <code><a href="file_handling.html">coleman_liau</a></code> <code><a href="file_handling.html">flesch_kincaid</a></code> <code><a href="file_handling.html">fry</a></code> <code><a href="file_handling.html">linsear_write</a></code> <code><a href="file_handling.html">SMOG</a></code><br />Readability Measures</li>
             
       <li>
         <code><a href="dissimilarity.html">dissimilarity</a></code><br />Dissimilarity Statistics</li>
@@ -741,7 +753,6 @@ qdap (Quantitative Discourse Analysis Package) is an R package designed to assis
         <code><a href="Top25Words.html">Top25Words</a></code><br />Fry's 25 Most Commonly Used English Words</li>
     
     </ul>
-
   </div>
   
   <div class="span3 offset1">

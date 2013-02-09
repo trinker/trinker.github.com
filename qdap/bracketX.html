@@ -117,24 +117,16 @@
   
     </div>
 
-    <div class="Warning">
-      <h2>Warning</h2>
-      
-      <p>the <code>gen</code> functions are more flexible than the
-  <code>bracket</code> functions but are not compatible with
-  special <code><a href='http://www.inside-r.org/r-doc/base/regex'>regex</a></code> characters.  It is
-  recommended that the researcher use the <code>bracket</code>
-  functions.</p>
-  
-    </div>
-
     <div class="References">
       <h2>References</h2>
       
       <p><a href = 'http://stackoverflow.com/questions/8621066/remove-text-inside-brackets-parens-and-or-braces'>http://stackoverflow.com/questions/8621066/remove-text-inside-brackets-parens-and-or-braces</a></p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # examp <- structure(list(person = structure(c(1L, 2L, 1L, 3L),#     .Label = c("bob", "greg", "sue"), class = "factor"), text =#     c("I love chicken [unintelligible]!",#     "Me too! (laughter) It's so good.[interrupting]",#     "Yep it's awesome {reading}.", "Agreed. {is so much fun}")), .Names =#     c("person", "text"), row.names = c(NA, -4L), class = "data.frame")# # examp# bracketX(examp$text, "square")# bracketX(examp$text, "curly")# bracketX(examp$text, c("square", "round"))# bracketX(examp$text)# # # bracketXtract(examp$text, "square")# bracketXtract(examp$text, "curly")# bracketXtract(examp$text, c("square", "round"))# bracketXtract(examp$text, c("square", "round"), merge = FALSE)# bracketXtract(examp$text)# bracketXtract(examp$text, with = TRUE)# # paste2(bracketXtract(examp$text, "curly"), " ")# # x <- c("Where is the /big dog#?",#     "I think he's @arunning@b with /little cat#.")# genXtract(x, c("/", "@a"), c("#", "@b"))# # x <- c("Where is the L1big dogL2?",#     "I think he's 98running99 with L1little catL2.")# genXtract(x, c("L1", 98), c("L2", 99))# # DATA$state  #notice number 1 and 10# genX(DATA$state, c("is", "we"), c("too", "on"))# ## <strong>End(Not run)</strong></div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>bracketX</li><li>bracketXtract</li><li>genX</li><li>genXtract</li>
