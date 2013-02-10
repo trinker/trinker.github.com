@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>gantt_wrap. qdap 0.2.1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="
+  Andrie de Vries and Tyler Rinker
+  &lt;tyler.rinker@gmail.com&gt;.
+">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">qdap 0.2.1</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Gantt Plot</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><span class="functioncall"><a href='gantt_wrap.html'>gantt_wrap</a></span><span class="keyword">(</span><span class="symbol">dataframe</span><span class="keyword">,</span> <span class="symbol">plot.var</span><span class="keyword">,</span> <span class="argument">facet.vars</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">fill.var</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">title</span> <span class="argument">=</span> NULL<span class="keyword">,</span>
+  <span class="argument">ylab</span> <span class="argument">=</span> <span class="functioncall"><a href='http://www.inside-r.org/r-doc/base/character'>as.character</a></span><span class="keyword">(</span><span class="symbol">plot.var</span><span class="keyword">)</span><span class="keyword">,</span> <span class="argument">xlab</span> <span class="argument">=</span> <span class="string">"duration.default"</span><span class="keyword">,</span> <span class="argument">rev.factor</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span>
+      <span class="argument">transform</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">ncol</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">minor.line.freq</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">major.line.freq</span> <span class="argument">=</span> NULL<span class="keyword">,</span>
+      <span class="argument">sig.dig.line.freq</span> <span class="argument">=</span> <span class="number">1</span><span class="keyword">,</span> <span class="argument">hms.scale</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">scale</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">space</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">size</span> <span class="argument">=</span> <span class="number">3</span><span class="keyword">,</span>
+      <span class="argument">rm.horiz.lines</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">x.ticks</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">y.ticks</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">legend.position</span> <span class="argument">=</span> NULL<span class="keyword">,</span>
+      <span class="argument">bar.color</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">border.color</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">border.size</span> <span class="argument">=</span> <span class="number">2</span><span class="keyword">,</span> <span class="argument">border.width</span> <span class="argument">=</span> <span class="number">0.1</span><span class="keyword">,</span> <span class="argument">constrain</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">)</span></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>dataframe</dt>
+      <dd>A data frame with plotting variable(s)
+  and a column of start and end times.</dd>
+      <dt>plot.var</dt>
+      <dd>A factor plotting variable (y axis).</dd>
+      <dt>facet.vars</dt>
+      <dd>An optional single vector or list of 1
+  or 2 to facet by.</dd>
+      <dt>fill.var</dt>
+      <dd>An optional variable to fill the code
+  strips by.</dd>
+      <dt>title</dt>
+      <dd>An optional title for the plot.</dd>
+      <dt>ylab</dt>
+      <dd>An optional y label.</dd>
+      <dt>xlab</dt>
+      <dd>An optional x label.</dd>
+      <dt>rev.factor</dt>
+      <dd>logical.  If TRUE reverse the current
+  plotting order so the first element in the plotting
+  variable's levels is plotted on top.</dd>
+      <dt>ncol</dt>
+      <dd>if an integer value is passed to this
+  <code>gantt_wrap</code> uses
+  <code><a href='http://www.inside-r.org/r-doc/ggplot2/facet_wrap'>facet_wrap</a></code> rather than
+  <code><a href='http://www.inside-r.org/r-doc/ggplot2/facet_grid'>facet_grid</a></code>.</dd>
+      <dt>transform</dt>
+      <dd>logical.  If TRUE the repeated facets
+  will be transformed from stacked to side by side.</dd>
+      <dt>minor.line.freq</dt>
+      <dd>A numeric value for frequency of
+  minor grid lines.</dd>
+      <dt>major.line.freq</dt>
+      <dd>A numeric value for frequency of
+  major grid lines.</dd>
+      <dt>sig.dig.line.freq</dt>
+      <dd>An internal rounding factor for
+  minor and major line freq.  Generally, default value of 1
+  suffices for larger range of x scale may need to be set
+  to -2..</dd>
+      <dt>hms.scale</dt>
+      <dd>logical.  If TRUE converts scale to
+  h:m:s format.  Default NULL attempts to detect if object
+  is a cm_time2long object</dd>
+      <dt>scale</dt>
+      <dd>Should scales be fixed (<code>"fixed"</code>, the
+  default), free (<code>"free"</code>), or free in one dimension
+  (<code>"free_x"</code>, <code>"free_y"</code>)</dd>
+      <dt>space</dt>
+      <dd>If <code>"fixed"</code>, the default, all panels
+  have the same size. If <code>"free_y"</code> their height will
+  be proportional to the length of the y scale; if
+  <code>"free_x"</code> their width will be proportional to the
+  length of the x scale; or if <code>"free"</code> both height
+  and width will vary. This setting has no effect unless
+  the appropriate scales also vary.</dd>
+      <dt>size</dt>
+      <dd>The width of the plot bars.</dd>
+      <dt>rm.horiz.lines</dt>
+      <dd>logical.  If TRUE the horizontal
+  lines will be removed.</dd>
+      <dt>x.ticks</dt>
+      <dd>logical.  If TRUE the x ticks will be
+  displayed.</dd>
+      <dt>y.ticks</dt>
+      <dd>logical.  If TRUE the y ticks will be
+  displayed.</dd>
+      <dt>legend.position</dt>
+      <dd>The position of legends.
+  (<code>"left"</code>, <code>"right"</code>, <code>"bottom"</code>,
+  <code>"top"</code>, or two-element numeric vector).</dd>
+      <dt>bar.color</dt>
+      <dd>Optional color to constrain all bars.</dd>
+      <dt>border.color</dt>
+      <dd>The color to plot border around Gantt
+  bars (default is NULL).</dd>
+      <dt>border.size</dt>
+      <dd>An integer value for the size to plot
+  borders around Gantt bars. Controls length (width also
+  controlled if not specified).</dd>
+      <dt>border.width</dt>
+      <dd>Controls border width around Gantt
+  bars.  Use a numeric value in addition to border size if
+  plot borders appear disproportional.</dd>
+      <dt>constrain</dt>
+      <dd>logical.  If TRUE the Gantt bars touch
+  the edge of the graph.</dd>
+    </dl>
+    
+    <div class="Value">
+      <h2>Value</h2>
+      
+      <p>Returns a Gantt style visualization. Invisibly returns
+  the ggplot2 list object.</p>
+  
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p>A <a href = 'http://docs.ggplot2.org/current/'>ggplot2</a>
+  wrapper that produces a Gantt plot.</p>
+  
+    </div>
+
+    <div class="Note">
+      <h2>Note</h2>
+      
+      <p>For non repeated measures data/plotting use
+  <code>gantt</code>; for repeated measures data
+  output use <code>gantt_rep</code>; and for a
+  convenient wrapper that takes text and generates plots
+  use <code>gantt_plot</code>.</p>
+  
+    </div>
+
+    <div class="References">
+      <h2>References</h2>
+      
+      <p>Clark, W. & Gantt, H. (1922) The Gantt chart, a working
+  tool of management. New York, Ronald Press.</p>
+  
+    </div>
+      </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>gantt_wrap</li>
+    </ul>
+    <ul>
+      <li>Gantt</li>
+    </ul> -->
+      
+    <h2>See also</h2>
+    
+  <code>gantt</code>,
+  <code>gantt_plot</code>,
+  <code>gantt_rep</code>,
+  <code><a href='http://www.inside-r.org/r-doc/ggplot2/facet_grid'>facet_grid</a></code>,
+  <code><a href='http://www.inside-r.org/r-doc/ggplot2/facet_wrap'>facet_wrap</a></code>
+
+    
+    <h2>Author</h2>
+    
+  Andrie de Vries and Tyler Rinker
+  <tyler.rinker@gmail.com>.
+
+    
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

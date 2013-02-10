@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>cm_df.transcript. qdap 0.2.1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="
+  DWin, Gavin Simpson and Tyler Rinker
+  &lt;tyler.rinker@gmail.com&gt;.
+">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">qdap 0.2.1</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Transcript With Word Number</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><span class="functioncall"><a href='cm_df.transcript.html'>cm_df.transcript</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="symbol">grouping.var</span><span class="keyword">,</span> <span class="argument">file</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">indent</span> <span class="argument">=</span> <span class="number">4</span><span class="keyword">,</span> <span class="argument">width</span> <span class="argument">=</span> <span class="number">70</span><span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">)</span></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>text.var</dt>
+      <dd>The text variable.</dd>
+      <dt>grouping.var</dt>
+      <dd>The grouping variables.  Default NULL
+  generates one word list for all text.  Also takes a
+  single grouping variable or a list of 1 or more grouping
+  variables.</dd>
+      <dt>file</dt>
+      <dd>A connection, or a character string naming
+  the file to print to (e.g., .doc, .txt).</dd>
+      <dt>indent</dt>
+      <dd>Number of spaces to indent.</dd>
+      <dt>width</dt>
+      <dd>Width to output the file (defaults to 70;
+  this is generally a good width and indent for a .docx
+  file).</dd>
+      <dt>...</dt>
+      <dd>Other arguments passed to strip.</dd>
+    </dl>
+    
+    <div class="Value">
+      <h2>Value</h2>
+      
+      <p>Returns a transcript by grouping variable with word
+  number above each word.  This makes use with
+  <code>cm_df2long</code> transfer/usage easier
+  because the researcher has coded on a transcript with the
+  numeric word index already.</p>
+  
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p>Output a transcript with word number/index above for easy
+  input back into
+  <a href = 'http://trinker.github.com/qdap/'>qdap after
+  coding.</a></p>
+  
+    </div>
+
+    <div class="Note">
+      <h2>Note</h2>
+      
+      <p>It is recommended that the researcher actually codes on
+  the output from this file.  The codes can then be
+  transferred to via a list.  If a file already exists
+  <code>cm_df.transcript</code> will append to that file.</p>
+  
+    </div>
+      </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>cm_df.transcript</li>
+    </ul>
+    <ul>
+      <li>transcript</li>
+    </ul> -->
+      
+    <h2>See also</h2>
+    
+  <code>cm_df2long</code>,
+  <code>cm_df.temp</code>
+
+    
+    <h2>Author</h2>
+    
+  DWin, Gavin Simpson and Tyler Rinker
+  <tyler.rinker@gmail.com>.
+
+    
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

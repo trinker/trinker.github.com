@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>htruncdf. qdap 0.2.1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">qdap 0.2.1</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Dataframe Viewing</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><span class="functioncall"><a href='data_viewing.html'>htruncdf</a></span><span class="keyword">(</span><span class="symbol">dataframe</span><span class="keyword">,</span> <span class="argument">n</span> <span class="argument">=</span> <span class="number">10</span><span class="keyword">,</span> <span class="argument">width</span> <span class="argument">=</span> <span class="number">10</span><span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">)</span>
+
+<span class="functioncall"><a href='data_viewing.html'>truncdf</a></span><span class="keyword">(</span><span class="symbol">dataframe</span><span class="keyword">,</span> <span class="argument">end</span> <span class="argument">=</span> <span class="number">10</span><span class="keyword">,</span> <span class="argument">begin</span> <span class="argument">=</span> <span class="number">1</span><span class="keyword">)</span>
+
+<span class="functioncall"><a href='data_viewing.html'>ltruncdf</a></span><span class="keyword">(</span><span class="symbol">dat.list</span><span class="keyword">,</span> <span class="argument">n</span> <span class="argument">=</span> <span class="number">6</span><span class="keyword">,</span> <span class="argument">width</span> <span class="argument">=</span> <span class="number">10</span><span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">)</span>
+
+<span class="functioncall"><a href='data_viewing.html'>qview</a></span><span class="keyword">(</span><span class="symbol">dataframe</span><span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">)</span></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>dataframe</dt>
+      <dd>A data.frame object.</dd>
+      <dt>n</dt>
+      <dd>Number of rows to display.</dd>
+      <dt>width</dt>
+      <dd>The width of the columns to be displayed.</dd>
+      <dt>end</dt>
+      <dd>The last character to be displayed (width).</dd>
+      <dt>begin</dt>
+      <dd>The first character to be displayed
+  (width).</dd>
+      <dt>...</dt>
+      <dd>Other arguments passed to
+  <code>htruncdf</code> (<code>qview</code>;
+  <code>ltruncdf</code>) or
+  <code><a href='http://www.inside-r.org/r-doc/utils/head'>head</a></code>
+  (<code>htruncdf</code>).</dd>
+      <dt>dat.list</dt>
+      <dd>A list of data.frame objects.</dd>
+    </dl>
+    
+    <div class="Value">
+      <h2>Value</h2>
+      
+      <p><code>htrundf</code> - returns n number of rows of a truncated
+  dataframe.</p>
+  
+      <p><code>trundf</code> - returns a truncated dataframe.</p>
+  
+      <p><code>ltruncdf</code> - returns a list of n number of rows of a
+  truncated dataframes.</p>
+  
+      <p><code>qview</code> - returns a dataframe head with summary
+  statistics.</p>
+  
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p><code>htruncdf</code> - Convenience function to view the head
+  of a truncated dataframe.</p>
+  
+      <p><code>truncdf</code> - Convenience function to view a truncated
+  dataframe.</p>
+  
+      <p><code>ltruncdf</code> - Convenience function to view the head
+  of a list of truncated dataframes.</p>
+  
+      <p><code>qview</code> - Convenience function to view a summary and
+  head of a dataframe.</p>
+  
+    </div>
+      </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>htruncdf</li><li>ltruncdf</li><li>qview</li><li>truncdf</li>
+    </ul>
+    <ul>
+      
+    </ul> -->
+      
+    <h2>See also</h2>
+    
+  <code><a href='http://www.inside-r.org/r-doc/utils/head'>head</a></code>
+
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

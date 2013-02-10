@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>all_words. qdap 0.2.1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">qdap 0.2.1</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Searches Text Column for Words</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><span class="functioncall"><a href='all_words.html'>all_words</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="argument">begins.with</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">contains</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">alphabetical</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">)</span></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>text.var</dt>
+      <dd>The text variable.</dd>
+      <dt>begins.with</dt>
+      <dd>This argument takes a word chunk.
+  Default is NULL. Use this if searching for a word
+  beginning with the word chunk.</dd>
+      <dt>contains</dt>
+      <dd>This argument takes a word chunk.
+  Default is NULL. Use this if searching for a word
+  containing the word chunk.</dd>
+      <dt>alphabetical</dt>
+      <dd>logical.  If TRUE orders rows
+  alphabetically, if FALSE orders the rows by frequency.</dd>
+    </dl>
+    
+    <div class="Value">
+      <h2>Value</h2>
+      
+      <p>Returns a dataframe with frequency counts of words that
+  begin with or contain the provided word chunk.</p>
+  
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p>A convenience function to find words that begin with or
+  contain a letter chunk and returns the frequency counts
+  of the number of occurrences of each word.</p>
+  
+    </div>
+
+    <div class="Note">
+      <h2>Note</h2>
+      
+      <p>Cannot provide both <code>begins.with</code> and
+  <code>contains</code> arguments at once.  If both begins.with
+  and contains are NULL <code>all_words</code>
+  returns a frequency count for all words.</p>
+  
+    </div>
+      </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>all_words</li>
+    </ul>
+    <ul>
+      
+    </ul> -->
+      
+    <h2>See also</h2>
+    
+  <code>term.match</code>
+
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>gradient_cloud. qdap 0.2.1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">qdap 0.2.1</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Gradient Word Cloud</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><span class="functioncall"><a href='gradient_cloud.html'>gradient_cloud</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="symbol">bigroup.var</span><span class="keyword">,</span> <span class="argument">rev.bivar</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">X</span> <span class="argument">=</span> <span class="string">"red"</span><span class="keyword">,</span> <span class="argument">Y</span> <span class="argument">=</span> <span class="string">"blue"</span><span class="keyword">,</span> <span class="argument">stem</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span>
+  <span class="argument">stopwords</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">caps</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">caps.list</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">I.list</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">random.order</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span>
+      <span class="argument">rot.per</span> <span class="argument">=</span> <span class="number">0</span><span class="keyword">,</span> <span class="argument">min.freq</span> <span class="argument">=</span> <span class="number">1</span><span class="keyword">,</span> <span class="argument">max.word.size</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">min.word.size</span> <span class="argument">=</span> <span class="number">0.5</span><span class="keyword">,</span> <span class="argument">breaks</span> <span class="argument">=</span> <span class="number">10</span><span class="keyword">,</span>
+      <span class="argument">cloud.font</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">title</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">title.font</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">title.color</span> <span class="argument">=</span> <span class="string">"black"</span><span class="keyword">,</span> <span class="argument">title.padj</span> <span class="argument">=</span> <span class="number">0.25</span><span class="keyword">,</span>
+      <span class="argument">title.location</span> <span class="argument">=</span> <span class="number">3</span><span class="keyword">,</span> <span class="argument">title.cex</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">legend.cex</span> <span class="argument">=</span> <span class="number">0.8</span><span class="keyword">,</span> <span class="argument">legend.location</span> <span class="argument">=</span> <span class="functioncall"><a href='http://www.inside-r.org/r-doc/base/c'>c</a></span><span class="keyword">(</span><span class="number">0.025</span><span class="keyword">,</span>
+          <span class="number">0.025</span><span class="keyword">,</span> <span class="number">0.25</span><span class="keyword">,</span> <span class="number">0.04</span><span class="keyword">)</span><span class="keyword">,</span> <span class="argument">char2space</span> <span class="argument">=</span> <span class="string">"~~"</span><span class="keyword">)</span></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>text.var</dt>
+      <dd>The text variable.</dd>
+      <dt>bigroup.var</dt>
+      <dd>A binary grouping variable.</dd>
+      <dt>rev.bivar</dt>
+      <dd>logical.  If TRUE the ordering of the
+  bi-variate levels is reversed.</dd>
+      <dt>X</dt>
+      <dd>The first gradient color for variable X.</dd>
+      <dt>Y</dt>
+      <dd>The second gradient color for variable Y.</dd>
+      <dt>stem</dt>
+      <dd>logical.  If TRUE the <code>text.var</code> will be
+  stemmed.</dd>
+      <dt>stopwords</dt>
+      <dd>Words to exclude from the cloud.  Words
+  will be removed after determing proportional word usage.</dd>
+      <dt>caps</dt>
+      <dd>logical.  If TRUE selected words will be
+  capitalized.</dd>
+      <dt>caps.list</dt>
+      <dd>A vector of words to capitalize
+  (<code>caps</code> must be TRUE).</dd>
+      <dt>I.list</dt>
+      <dd>logical.  If TRUE capitalizes I words and
+  contractions.</dd>
+      <dt>random.order</dt>
+      <dd>Plot words in random order. If false,
+  they will be plotted in decreasing frequency.</dd>
+      <dt>rot.per</dt>
+      <dd>Proportion words with 90 degree rotation.</dd>
+      <dt>min.freq</dt>
+      <dd>An integer value indicating the minimum
+  frequency a word must appear to be included.</dd>
+      <dt>max.word.size</dt>
+      <dd>A size argument to control the
+  minimum size of the words.</dd>
+      <dt>min.word.size</dt>
+      <dd>A size argument to control the
+  maximum size of the words.</dd>
+      <dt>breaks</dt>
+      <dd>An integer describing the number of breaks
+  (odd numbers will be rounded up).</dd>
+      <dt>cloud.font</dt>
+      <dd>The font family of the cloud text.</dd>
+      <dt>title</dt>
+      <dd>A character string used as the plot title.</dd>
+      <dt>title.font</dt>
+      <dd>The font family of the cloud title.</dd>
+      <dt>title.color</dt>
+      <dd>A character vector of length one
+  corresponding to the color of the title.</dd>
+      <dt>title.padj</dt>
+      <dd>Adjustment for the title. For strings
+  parallel to the axes, padj = 0 means right or top
+  alignment, and padj = 1 means left or bottom alignment.</dd>
+      <dt>title.location</dt>
+      <dd>On which side of the plot
+  (1=bottom, 2=left, 3=top, 4=right).</dd>
+      <dt>title.cex</dt>
+      <dd>Character expansion factor for the
+  title. NULL and NA are equivalent to 1.0.</dd>
+      <dt>legend.cex</dt>
+      <dd>Character expansion factor for the
+  legend. NULL and NA are equivalent to 1.0.</dd>
+      <dt>legend.location</dt>
+      <dd>A vector of length 4 denoting the
+  lower left (x and y left) and upper right (x and y right)
+  coordinates of the rectange of colors in user
+  coordinates.</dd>
+      <dt>char2space</dt>
+      <dd>A vector of characters to be turned
+  into spaces.</dd>
+    </dl>
+    
+    <div class="Value">
+      <h2>Value</h2>
+      
+      <p>Plots a gradient word cloud and invisibly returns the
+  dataframe used to make the cloud.</p>
+  
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p>Produces a gradient word cloud colored by a binary
+  grouping variable.</p>
+  
+    </div>
+
+    <div class="Details">
+      <h2>Details</h2>
+      
+      <p>Breaking is done using <code><a href='http://www.inside-r.org/r-doc/stats/quantile'>quantile</a></code>.
+  This will ensure a certain percentage of words will be
+  colored at each bin.</p>
+  
+    </div>
+      </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>gradient_cloud</li>
+    </ul>
+    <ul>
+      <li>heatcloud</li>
+    </ul> -->
+      
+    <h2>See also</h2>
+    
+  <code>trans.cloud</code>,
+  <code><a href='http://www.inside-r.org/r-doc/wordcloud/wordcloud'>wordcloud</a></code>,
+  <code><a href='http://www.inside-r.org/r-doc/plotrix/color.legend'>color.legend</a></code>
+
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

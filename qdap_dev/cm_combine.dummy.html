@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>cm_combine.dummy. qdap 0.2.1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">qdap 0.2.1</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Find Co-occurrence Between Codes</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><span class="functioncall"><a href='cm_combine.dummy.html'>cm_combine.dummy</a></span><span class="keyword">(</span><span class="symbol">cm.l2d.obj</span><span class="keyword">,</span> <span class="symbol">combine.code</span><span class="keyword">,</span> <span class="argument">rm.var</span> <span class="argument">=</span> <span class="string">"time"</span><span class="keyword">,</span> <span class="argument">overlap</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">)</span></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>cm.l2d.obj</dt>
+      <dd>An object from
+  <code>cm_long2dummy</code>.</dd>
+      <dt>combine.code</dt>
+      <dd>A list of named character vectors of
+  at least two code column names to combine</dd>
+      <dt>rm.var</dt>
+      <dd>Name of the repeated measures column.
+  Default is "time".</dd>
+      <dt>overlap</dt>
+      <dd>logical, integer or character of binary
+  operator + integer. If TRUE finds the overlap.  If FALSE
+  finds anywhere any of the codes occur. If integer finds
+  that exact combination of overlaps.  If character must be
+  a logical vector c(>, <, =<, =>, ==, !=) followed by an
+  integer.</dd>
+    </dl>
+    
+    <div class="Value">
+      <h2>Value</h2>
+      
+      <p>Returns a dataframe with co-occurrences of provided code
+  columns.</p>
+  
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p>Combine code columns where they co-occur.</p>
+  
+    </div>
+      </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>cm_combine.dummy</li>
+    </ul>
+    <ul>
+      <li>co-occurrence</li>
+    </ul> -->
+      
+    <h2>See also</h2>
+    
+  <code>cm_long2dummy</code>
+
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

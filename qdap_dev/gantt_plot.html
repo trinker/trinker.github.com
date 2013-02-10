@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>gantt_plot. qdap 0.2.1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">qdap 0.2.1</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Gantt Plot</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><span class="functioncall"><a href='gantt_plot.html'>gantt_plot</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="symbol">grouping.var</span><span class="keyword">,</span> <span class="argument">rm.var</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">fill.var</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">xlab</span> <span class="argument">=</span> <span class="string">"duration (in words)"</span><span class="keyword">,</span>
+  <span class="argument">units</span> <span class="argument">=</span> <span class="string">"words"</span><span class="keyword">,</span> <span class="argument">col.sep</span> <span class="argument">=</span> <span class="string">"_"</span><span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">)</span></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>text.var</dt>
+      <dd>The text variable.</dd>
+      <dt>grouping.var</dt>
+      <dd>The grouping variables. Also takes a
+  single grouping variable or a list of 1 or more grouping
+  variables.</dd>
+      <dt>rm.var</dt>
+      <dd>An optional single vector or list of 1 or 2
+  of repeated measures to facet by</dd>
+      <dt>fill.var</dt>
+      <dd>An optional variable to fill the code
+  strips by.</dd>
+      <dt>xlab</dt>
+      <dd>The name of the x-axis label.</dd>
+      <dt>units</dt>
+      <dd>The unit of measurement.</dd>
+      <dt>col.sep</dt>
+      <dd>The column separator.</dd>
+      <dt>...</dt>
+      <dd>Other arguments passed to
+  <code>gantt_wrap</code>.</dd>
+    </dl>
+    
+    <div class="Value">
+      <h2>Value</h2>
+      
+      <p>Returns a Gantt style visualization.  Invisibly returns
+  the ggplot2 list object.</p>
+  
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p>A convenience function that wraps
+  <code>gantt</code>, <code>gantt_rep</code>
+  and <code>gantt_wrap</code> into a single plotting
+  function.</p>
+  
+    </div>
+
+    <div class="Note">
+      <h2>Note</h2>
+      
+      <p>For non repeated measures data/plotting use
+  <code>gantt</code>; for repeated measures data
+  output use <code>gantt_rep</code>; and for a
+  flexible gantt plot that words with code matrix functions
+  (cm) use <code>gantt_wrap</code>.</p>
+  
+    </div>
+
+    <div class="References">
+      <h2>References</h2>
+      
+      <p>Clark, W. & Gantt, H. (1922) The Gantt chart, a working
+  tool of management. New York, Ronald Press.</p>
+  
+    </div>
+      </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>gantt_plot</li>
+    </ul>
+    <ul>
+      <li>Gantt</li>
+    </ul> -->
+      
+    <h2>See also</h2>
+    
+  <code>gantt</code>, <code>gantt_rep</code>,
+  <code>gantt_wrap</code>
+
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

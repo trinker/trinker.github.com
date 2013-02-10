@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>imperative. qdap 0.2.1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">qdap 0.2.1</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Intuitively Remark Sentences as Imperative</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><span class="functioncall"><a href='imperative.html'>imperative</a></span><span class="keyword">(</span><span class="symbol">dataframe</span><span class="keyword">,</span> <span class="symbol">person.var</span><span class="keyword">,</span> <span class="symbol">text.var</span><span class="keyword">,</span> <span class="argument">lock.incomplete</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">additional.names</span> <span class="argument">=</span> NULL<span class="keyword">,</span>
+  <span class="argument">parallel</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">warning</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">)</span></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>dataframe</dt>
+      <dd>A data.frame object.</dd>
+      <dt>person.var</dt>
+      <dd>The person variable.</dd>
+      <dt>text.var</dt>
+      <dd>The text variable.</dd>
+      <dt>lock.incomplete</dt>
+      <dd>logical.  If TRUE locks incomplete
+  sentences (sentences ending with "|") from being marked
+  as imperative.</dd>
+      <dt>additional.names</dt>
+      <dd>Additional names that may be used
+  in a command (people in the context that do not speak).</dd>
+      <dt>parallel</dt>
+      <dd>logical.  If TRUE attempts to run the
+  function on multiple cores.  Note that this may not mean
+  a speed boost if you have one core or if the data set is
+  smaller as the cluster takes time to create.  With the
+  <code>mraja1spl</code> data set, with an 8 core machine,
+  <code>imperative</code> had 1/3 the running time.</dd>
+      <dt>warning</dt>
+      <dd>logical.  If TRUE provides comma warnings
+  (sentences that contain numerous commas that may be
+  handled incorrectly by the algorithm).</dd>
+    </dl>
+    
+    <div class="Value">
+      <h2>Value</h2>
+      
+      <p>Returns a dataframe with a text variable indicating
+  imperative sentences.  Imperative sentences are marked
+  with * followed by the original end mark.</p>
+  
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p>Automatic imperative remarking.</p>
+  
+    </div>
+
+    <div class="Warning">
+      <h2>Warning</h2>
+      
+      <p>The algorithm used by <code>imperative</code> is
+  sensitive to English language dialects and types.  Commas
+  can indicate a choppy sentence and may indicate a false
+  positive.</p>
+  
+    </div>
+      </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>imperative</li>
+    </ul>
+    <ul>
+      
+    </ul> -->
+      
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

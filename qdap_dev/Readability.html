@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>automated_readability_index. qdap 0.2.1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">qdap 0.2.1</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Readability Measures</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><span class="functioncall"><a href='Readability.html'>automated_readability_index</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="argument">grouping.var</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">rm.incomplete</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span>
+  <span class="symbol">...</span><span class="keyword">)</span>
+
+<span class="functioncall"><a href='Readability.html'>coleman_liau</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="argument">grouping.var</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">rm.incomplete</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">)</span>
+
+<span class="functioncall"><a href='Readability.html'>SMOG</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="argument">grouping.var</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">output</span> <span class="argument">=</span> <span class="string">"valid"</span><span class="keyword">,</span> <span class="argument">rm.incomplete</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">)</span>
+
+<span class="functioncall"><a href='Readability.html'>flesch_kincaid</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="argument">grouping.var</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">rm.incomplete</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">)</span>
+
+<span class="functioncall"><a href='Readability.html'>fry</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="argument">grouping.var</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">labels</span> <span class="argument">=</span> <span class="string">"automatic"</span><span class="keyword">,</span> <span class="argument">rm.incomplete</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">)</span>
+
+<span class="functioncall"><a href='Readability.html'>linsear_write</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="argument">grouping.var</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">rm.incomplete</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">)</span></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>text.var</dt>
+      <dd>The text variable.</dd>
+      <dt>grouping.var</dt>
+      <dd>The grouping variables.  Default NULL
+  generates one output for all text.  Also takes a single
+  grouping variable or a list of 1 or more grouping
+  variables.</dd>
+      <dt>rm.incomplete</dt>
+      <dd>logical.  If TRUE removes incomplete
+  sentences from the analysis.</dd>
+      <dt>...</dt>
+      <dd>Other arguments passed to
+  <code>end_inc</code>.</dd>
+      <dt>output</dt>
+      <dd>A character vector character string
+  indicating output type. One of "valid" (default and
+  congruent with McLaughlin's intent) or "all".</dd>
+      <dt>labels</dt>
+      <dd>A character vector character string
+  indicating output type. One of <code>"automatic"</code>
+  (default; adds labels automatically) or <code>"click"</code>
+  (interactive).</dd>
+    </dl>
+    
+    <div class="Value">
+      <h2>Value</h2>
+      
+      <p>Returns a dataframe with selected readability statistic
+  by grouping variable(s).  The <code>frey</code> function
+  returns a graphic representation of the readability as
+  well as a list of two dataframe: 1) <code>SENTENCES_USED</code>
+  and 2) <code>SENTENCE_AVERAGES</code>.</p>
+  
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p><code>automated_readability_index</code> - Apply Automated
+  Readability Index to transcript(s) by zero or more
+  grouping variable(s).</p>
+  
+      <p><code>coleman_liau</code> - Apply Coleman Liau Index to
+  transcript(s) by zero or more grouping variable(s).</p>
+  
+      <p><code>SMOG</code> - Apply SMOG Readability to transcript(s) by
+  zero or more grouping variable(s).</p>
+  
+      <p><code>flesch_kincaid</code> - Flesch-Kincaid Readability to
+  transcript(s) by zero or more grouping variable(s).</p>
+  
+      <p><code>fry</code> - Apply Fry Readability to transcript(s) by
+  zero or more grouping variable(s).</p>
+  
+      <p><code>linsear_write</code> - Apply Linsear Write Readability to
+  transcript(s) by zero or more grouping variable(s).</p>
+  
+    </div>
+
+    <div class="Warning">
+      <h2>Warning</h2>
+      
+      <p>Many of the indices (e.g., Automated Readability Index)
+  are derived from word difficulty (letters per word) and
+  sentence difficulty (words per sentence).  If you have
+  not run the sentSplit function on your data the results
+  may not be accurate.</p>
+  
+    </div>
+
+    <div class="References">
+      <h2>References</h2>
+      
+      <p>Coleman, M., & Liau, T. L. (1975). A computer readability
+  formula designed for machine scoring. Journal of Applied
+  Psychology, Vol. 60, pp. 283-284.</p>
+  
+      <p>Flesch R. (1948). A new readability yardstick. Journal of
+  Applied Psychology. Vol. 32(3), pp. 221-233. doi:
+  10.1037/h0057532.</p>
+  
+      <p>Gunning, T. G. (2003). Building Literacy in the Content
+  Areas. Boston: Allyn & Bacon.</p>
+  
+      <p>McLaughlin, G. H. (1969). SMOG Grading: A New Readability
+  Formula. Journal of Reading, Vol. 12(8), pp. 639-646.</p>
+  
+      <p>Senter, R. J., & Smith, E. A.. (1967) Automated
+  readability index. Technical Report AMRLTR-66-220,
+  University of Cincinnati, Cincinnati, Ohio.</p>
+  
+    </div>
+      </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>automated_readability_index</li><li>coleman_liau</li><li>flesch_kincaid</li><li>fry</li><li>linsear_write</li><li>SMOG</li>
+    </ul>
+    <ul>
+      <li>Automated</li><li>Coleman</li><li>Flesch-Kincaid,</li><li>Fry,</li><li>Index,</li><li>Liau,</li><li>Linsear</li><li>Readability</li><li>readability,</li><li>SMOG,</li><li>Write</li>
+    </ul> -->
+      
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

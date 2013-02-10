@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>Search. qdap 0.2.1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">qdap 0.2.1</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Search Columns of a Data Frame</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><span class="functioncall"><a href='Search.html'>Search</a></span><span class="keyword">(</span><span class="symbol">dataframe</span><span class="keyword">,</span> <span class="symbol">term</span><span class="keyword">,</span> <span class="argument">column.name</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">max.distance</span> <span class="argument">=</span> <span class="number">0.02</span><span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">)</span></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>dataframe</dt>
+      <dd>A dataframe object to search.</dd>
+      <dt>term</dt>
+      <dd>A character vector term to search for.</dd>
+      <dt>column.name</dt>
+      <dd>Optional column of the data frame to
+  search (character name or integer index).</dd>
+      <dt>max.distance</dt>
+      <dd>Maximum distance allowed for a match.
+  Expressed either as integer, or as a fraction of the
+  pattern length times the maximal transformation cost
+  (will be replaced by the smallest integer not less than
+  the corresponding fraction).</dd>
+      <dt>...</dt>
+      <dd>Other arguments passed to <code>agrep</code>.</dd>
+    </dl>
+    
+    <div class="Value">
+      <h2>Value</h2>
+      
+      <p>Returns the rows of the data frame that match the search
+  term.</p>
+  
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p>Find terms located in columns of a data frame.</p>
+  
+    </div>
+      </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>Search</li>
+    </ul>
+    <ul>
+      <li>search</li>
+    </ul> -->
+      
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

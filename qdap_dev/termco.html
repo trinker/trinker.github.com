@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>termco. qdap 0.2.1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">qdap 0.2.1</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Search For and Count Terms</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><span class="functioncall"><a href='termco.html'>termco</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="argument">grouping.var</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="symbol">match.list</span><span class="keyword">,</span> <span class="argument">short.term</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">ignore.case</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span>
+  <span class="argument">elim.old</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">percent</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">digits</span> <span class="argument">=</span> <span class="number">2</span><span class="keyword">,</span> <span class="argument">apostrophe.remove</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">char.keep</span> <span class="argument">=</span> NULL<span class="keyword">,</span>
+      <span class="argument">digit.remove</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">zero.replace</span> <span class="argument">=</span> <span class="number">0</span><span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">)</span>
+
+<span class="functioncall"><a href='termco.html'>termco.d</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="argument">grouping.var</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="symbol">match.string</span><span class="keyword">,</span> <span class="argument">short.term</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">ignore.case</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span>
+      <span class="argument">zero.replace</span> <span class="argument">=</span> <span class="number">0</span><span class="keyword">,</span> <span class="argument">percent</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">digits</span> <span class="argument">=</span> <span class="number">2</span><span class="keyword">,</span> <span class="argument">apostrophe.remove</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">char.keep</span> <span class="argument">=</span> NULL<span class="keyword">,</span>
+      <span class="argument">digit.remove</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">)</span>
+
+<span class="functioncall"><a href='termco.html'>term.match</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="symbol">terms</span><span class="keyword">,</span> <span class="argument">return.list</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">apostrophe.remove</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">)</span>
+
+<span class="functioncall"><a href='termco.html'>termco2mat</a></span><span class="keyword">(</span><span class="symbol">dataframe</span><span class="keyword">,</span> <span class="argument">drop.wc</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">short.term</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">rm.zerocol</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">no.quote</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span>
+      <span class="argument">transform</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">trim.terms</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">)</span></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>text.var</dt>
+      <dd>The text variable.</dd>
+      <dt>grouping.var</dt>
+      <dd>The grouping variables.  Default NULL
+  generates one word list for all text.  Also takes a
+  single grouping variable or a list of 1 or more grouping
+  variables.</dd>
+      <dt>match.list</dt>
+      <dd>A list of named character vectors.</dd>
+      <dt>short.term</dt>
+      <dd>logical.  If TRUE column names are
+  trimmed versions of the match list, otherwise the terms
+  are wrapped with 'term(phrase)'</dd>
+      <dt>ignore.case</dt>
+      <dd>logical.  If TRUE case is ignored.</dd>
+      <dt>elim.old</dt>
+      <dd>logical.  If TRUE eliminates the columns
+  that are combined together by the named match.list.</dd>
+      <dt>percent</dt>
+      <dd>logical.  If TRUE output given as percent.
+  If FALSE the output is proportion.</dd>
+      <dt>digits</dt>
+      <dd>Integer; number of decimal places to round
+  when printing.</dd>
+      <dt>apostrophe.remove</dt>
+      <dd>logical.  If TRUE removes
+  apostrophes from the text before examining.</dd>
+      <dt>char.keep</dt>
+      <dd>A character vector of symbol character
+  (i.e., punctuation) that strip should keep.  The default
+  is to strip everything except apostrophes.
+  <code>termco</code> attempts to auto detect
+  characters to keep based on the elements in
+  <code>match.list</code>.</dd>
+      <dt>digit.remove</dt>
+      <dd>logical.  If TRUE strips digits from
+  the text before counting. <code>termco</code>
+  attempts to auto detect if digits should be retained
+  based on the elements in <code>match.list</code>.</dd>
+      <dt>zero.replace</dt>
+      <dd>Value to replace 0 values with.</dd>
+      <dt>...</dt>
+      <dd>Other argument supplied to strip.</dd>
+      <dt>match.string</dt>
+      <dd>A vector of terms to search for.
+  When using inside of <code>term.match</code> the term(s) must
+  be words or partial words but do not have to be when
+  using <code>termco.d</code> (i.e., they can be
+  phrases, symbols etc.).</dd>
+      <dt>terms</dt>
+      <dd>The terms to search for in the
+  <code>text.var</code>.  Similar to <code>match.list</code> but these
+  terms must be words or partial words rather than multiple
+  words and symbols.</dd>
+      <dt>return.list</dt>
+      <dd>logical.  If TRUE returns the output
+  for multiple terms as a list by term rather than a
+  vector.</dd>
+      <dt>dataframe</dt>
+      <dd>A termco (or termco.d) dataframe or
+  object.</dd>
+      <dt>drop.wc</dt>
+      <dd>logical.  If TRUE the word count column
+  will be dropped.</dd>
+      <dt>rm.zerocol</dt>
+      <dd>logical.  If TRUE any column containing
+  all zeros will be removed from the matrix.</dd>
+      <dt>no.quote</dt>
+      <dd>logical.  If TRUE the matrix will be
+  printed without quotes if it's character.</dd>
+      <dt>transform</dt>
+      <dd>logical.  If TRUE the matrix will be
+  transformed.</dd>
+      <dt>trim.terms</dt>
+      <dd>logical.  If TRUE trims the column
+  header/names to ensure there is not a problem with
+  spacing when using in other R functions.</dd>
+    </dl>
+    
+    <div class="Value">
+      <h2>Value</h2>
+      
+      <p><code>termco</code> & <code>termco.d</code> - both return a list, of
+  class "termco.d", of data frames and information
+  regarding word counts: rawraw word counts by
+  grouping variable propproportional word counts
+  by grouping variable; proportional to each individual's
+  word use rnpa character combination data frame
+  of raw and proportional zero_replacevalue to
+  replace zeros with; mostly internal use
+  percentThe value of percent used for plotting
+  purposes. digitsinteger value of number of
+  digits to display; mostly internal use</p>
+  
+      <p><code>term.match</code> - returns a list or vector of possible
+  words that match term(s).</p>
+  
+      <p><code>termco2mat</code> - returns a matrix of term counts.</p>
+  
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p><code>termco</code> - Search a transcript by any number of
+  grouping variables for categories (themes) of grouped
+  root terms.  While there are other termco functions in
+  the termco family (e.g., <code>termco.d</code>)
+  <code>termco</code> is a more powerful and flexible wrapper
+  intended for general use.</p>
+  
+      <p><code>termco.d</code> - Search a transcript by any number of
+  grouping variables for root terms.</p>
+  
+      <p><code>term.match</code> - Search a transcript for words that
+  exactly match term(s).</p>
+  
+      <p><code>termco2mat</code> - Convert a termco dataframe to a
+  matrix for use with visualization functions (e.g.,
+  <code><a href='http://www.inside-r.org/r-doc/gplots/heatmap.2'>heatmap.2</a></code>).</p>
+  
+    </div>
+
+    <div class="Note">
+      <h2>Note</h2>
+      
+      <p>The match.list/match.string is (optionally) case and
+  character sensitive.  Spacing is an important way to grab
+  specific words and requires careful thought.  Using
+  "read" will find the words "bread", "read" "reading", and
+  "ready".  If you want to search for just the word "read"
+  you'd supply a vector of c(" read ", " reads", "
+  reading", " reader").  To search for non character
+  arguments (i.e., numbers and symbols) additional
+  arguments from strip must be passed.</p>
+  
+    </div>
+
+    <div class="Warning">
+      <h2>Warning</h2>
+      
+      <p>Percentages are calculated as a ratio of counts of
+  <code>match.list</code> elements to word counts.  Word counts
+  do not contain symbols or digits.  Using symbols, digits
+  or small segments of full words (e.g., "to") could total
+  more than 100%.</p>
+  
+    </div>
+      </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>term.match</li><li>termco</li><li>termco.d</li><li>termco2mat</li>
+    </ul>
+    <ul>
+      <li>word-search</li>
+    </ul> -->
+      
+    <h2>See also</h2>
+    
+  <code>termco.c</code>
+
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>
