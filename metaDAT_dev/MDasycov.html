@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>MDasycov. metaDAT 0.1.0</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">metaDAT 0.1.0</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Asymptotic Variances/Covariance</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><span class="functioncall"><a href='MDasycov.html'>MDasycov</a></span><span class="keyword">(</span><span class="symbol">cor.mats</span><span class="keyword">,</span> <span class="symbol">n.vect</span><span class="keyword">,</span> <span class="symbol">outcome.var</span><span class="keyword">,</span> <span class="argument">reals</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">fishersz</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">mvmeta.out</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span>
+  <span class="argument">biased.cor.mats</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">sep</span> <span class="argument">=</span> <span class="string">"_x_"</span><span class="keyword">)</span></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>cor.mats</dt>
+      <dd>A list of correlation matrices.  If
+  unattenuated supply the list biased correlations to the
+  <code>biased.cor.mats</code> argument.  If biased optionally
+  supply a dataframe of reliabilities to the <code>reals</code>
+  argument.</dd>
+      <dt>n.vect</dt>
+      <dd>A vector of sample sizes corresponding to
+  the studies in the list of <code>cor.mats</code>.</dd>
+      <dt>outcome.var</dt>
+      <dd>The name of the outcome variable the
+  other measures correlate with.</dd>
+      <dt>reals</dt>
+      <dd>A matrix/data.frame of reliabilities.  The
+  column names must match the column/rownames of the
+  correlation matrices exactly. (order does not matter).</dd>
+      <dt>fishersz</dt>
+      <dd>logical.  If TRUE uses Fisher's z
+  transformation.</dd>
+      <dt>mvmeta.out</dt>
+      <dd>logical.  If TRUE outputs a list with
+  the correlations and variances/covariances in a format
+  that can be used by the <code>mvmeta</code> package.</dd>
+      <dt>biased.cor.mats</dt>
+      <dd>A list of biased correlation
+  matrices supplied if unattentuated correlations are
+  passed to the <code>cor.mats</code> argument.</dd>
+      <dt>sep</dt>
+      <dd>A character string to separate the variable
+  names.</dd>
+    </dl>
+    
+    <div class="Value">
+      <h2>Value</h2>
+      
+      <p>Returns either a list of matrices of asymptotic
+  covariances/variances of the correlation matrices or (if
+  <code>mvmeta.out</code> is TRUE) a list of a matrix of
+  correlations in the form selected (raw, unattenuated or
+  Fishers z transformed) and matrix of
+  variances/covariances with studies as rownames that can
+  be passed to <code>mvmeta</code> from the <code>mvmeta</code>
+  package.</p>
+  
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p>Produce asymptotic variances/covariance with optional
+  correction for attentuation and Fisher's z
+  transformation.</p>
+  
+    </div>
+
+    <div class="Details">
+      <h2>Details</h2>
+      
+      <p>Uses Olkin and Siotani's (1976) formulas:
+  <pre class = 'eq'>Var(r_{ist})\approx
+  \frac{(1-\rho_{ist}^{2})^2}{n_i}</code> <pre class = 'eq'>Cov(r_{ist},
+  r_{iuv})= [.5\rho_{ist}\rho_{iuv}(\rho_{isu}^2 +
+  \rho_{isv}^2 + \rho_{itu}^2 + \rho_{itv}^2) +
+  \rho_{isu}\rho_{itv}+ \rho_{isv}\rho_{itu}-</code>
+  <pre class = 'eq'>(\rho_{ist}\rho_{isu}\rho_{isv} +
+  \rho_{its}\rho_{itu}\rho_{itv}) +
+  \rho_{ius}\rho_{iut}\rho_{iuv} +
+  \rho_{ivs}\rho_{ivt}\rho_{ivu}]/n_i</code></p>
+  
+      <p>Unattenuated Variances Formula (Borenstein, Hedges,
+  Higgins & Rothstein, 2009):</p>
+  
+      <p><pre class = 'eq'>V_{r}^u = \frac{Var(r_{ist})}{\rho/\rho^u}</code></p>
+  
+      <p>Where:  <code class = 'eq'>\rho</code> is the raw correlation 
+  <code class = 'eq'>\rho^u</code> is the unattenuated correlation</p>
+  
+      <p>Fisher's z approach also requires:</p>
+  
+      <p><pre class = 'eq'>Var(z_{ist})\approx \frac{1}{n_i - 3}</code>
+  <pre class = 'eq'>Cov(z_{ist}, z_{iuv})=
+  \frac{\sigma_{ist,uv}}{(1-\rho_{ist}^2)(1-\rho_{iuv}^2)}</code>
+  If a realibility is missing (<code>NA</code>) 1 will be used as
+  a conservative estimate.</p>
+  
+    </div>
+
+    <div class="Note">
+      <h2>Note</h2>
+      
+      <p>Reliability column names must match exactly(including
+  case) the row/column names of the correlation matrices.
+  If needed add a column of <code>NA</code>s.</p>
+  
+    </div>
+
+    <div class="References">
+      <h2>References</h2>
+      
+      <p>Olkin, I., & Siotani, M. (1976) Asymptotic distribution
+  of functions of a correlation matrix. In Essays in
+  Probability and Statistics Chapter 16 (S. Ikeda, ed.)
+  235-251. Shinko Tsusho, Tokyo.</p>
+  
+      <p>Borenstein, M., Hedges, L. V., Higgins, J. P. T., &
+  Rothstein, H. R. (2009). Introduction to meta- analysis
+  (1st ed.). West Sussex, UK: Wiley.</p>
+  
+      <p>Becker, B. J. (2000).  Multivariate meta-analysis.  In H.
+  A. Tinsley & S. Brown, (Eds.).  Handbook of applied
+  multivariate statistics and mathematical modeling.  San
+  Diego: Academic Press.</p>
+  
+    </div>
+      </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>MDasycov</li>
+    </ul>
+    <ul>
+      <li>asymptotic</li><li>covariance</li>
+    </ul> -->
+      
+    <h2>See also</h2>
+    
+  <code>MDfishersz</code>,
+  <code>MDunatten</code>,
+  <code><a href='http://www.inside-r.org/r-doc/mvmeta/mvmeta'>mvmeta</a></code>
+
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>
