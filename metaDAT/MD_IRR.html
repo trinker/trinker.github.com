@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>MD_IRR. metaDAT 0.1.0</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">metaDAT 0.1.0</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Percent Inter-Rater Reliabilitiy</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><span class="functioncall"><a href='MD_IRR.html'>MD_IRR</a></span><span class="keyword">(</span><span class="symbol">meta.obj.1</span><span class="keyword">,</span> <span class="symbol">meta.obj.2</span><span class="keyword">,</span> <span class="argument">exclude.vars</span> <span class="argument">=</span> <span class="functioncall"><a href='http://www.inside-r.org/r-doc/base/c'>c</a></span><span class="keyword">(</span><span class="string">"author"</span><span class="keyword">,</span> <span class="string">"ID"</span><span class="keyword">,</span> <span class="string">"time"</span><span class="keyword">)</span><span class="keyword">,</span> <span class="argument">cor.var</span> <span class="argument">=</span> NULL<span class="keyword">,</span>
+  <span class="argument">comp.var</span> <span class="argument">=</span> <span class="string">"coder"</span><span class="keyword">,</span> <span class="argument">file</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">order.by.comp.var</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">)</span></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>meta.obj.1</dt>
+      <dd>An MDlist (an object from
+  <code>read.MD</code>) for time 1 (primary coding).</dd>
+      <dt>meta.obj.2</dt>
+      <dd>An MDlist (an object from
+  <code>read.MD</code>) for time 2 (secondary coding).</dd>
+      <dt>exclude.vars</dt>
+      <dd>A character vector of variables to
+  exclude from reliability check.</dd>
+      <dt>cor.var</dt>
+      <dd>An optional argument for the MDlist
+  variable that is a list of correlation matrices (can
+  detect and handle correlation variables that are in
+  character correlation triangle format).</dd>
+      <dt>comp.var</dt>
+      <dd>The variable to compare for discrepencies
+  between the two MDlists. Default is "coder".  This
+  argument is particularly useful when there are more than
+  two coders.</dd>
+      <dt>file</dt>
+      <dd>Optional connection, or a character string
+  naming the file to print to.</dd>
+      <dt>order.by.comp.var</dt>
+      <dd>logical.  If TRUE orders the
+  study disagreements by the comparison variable.</dd>
+    </dl>
+    
+    <div class="Value">
+      <h2>Value</h2>
+      
+      <p>Returns a list: Variable_Agreement_RateA
+  dataframe of percentage agreement/disagreement for each
+  variable.  Final row is overall agreement rate.
+  DisagreementsA list of disagreements of study
+  variables between comparison groups (time 1 and time 2)
+  per study.  If correlations are being compared the
+  function outputs an agreement matrix.  Agreement is
+  marked as <code>-</code> and disagreement as <code>X</code>.</p>
+  
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p>Percent inter-rater reliabilitiy by variable.</p>
+  
+    </div>
+
+    <div class="Note">
+      <h2>Note</h2>
+      
+      <p>This function assumes double coding, that is all studies
+  have been coded by two different coders.</p>
+  
+    </div>
+      </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>MD_IRR</li>
+    </ul>
+    <ul>
+      <li>inter-rater</li><li>reliability</li>
+    </ul> -->
+      
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

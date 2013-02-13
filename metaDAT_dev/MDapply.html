@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>MDapply. metaDAT 0.1.0</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">metaDAT 0.1.0</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Apply Function to Elements of a MDlist</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><span class="functioncall"><a href='MDapply.html'>MDapply</a></span><span class="keyword">(</span><span class="symbol">meta.obj</span><span class="keyword">,</span> <span class="symbol">var</span><span class="keyword">,</span> <span class="symbol">FUN</span><span class="keyword">,</span> <span class="argument">newvar</span> <span class="argument">=</span> NULL<span class="keyword">)</span></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>meta.obj</dt>
+      <dd>An MDlist (an object from
+  <code>read.MD</code>).</dd>
+      <dt>var</dt>
+      <dd>A length one character vector of the variable
+  name to grab.</dd>
+      <dt>FUN</dt>
+      <dd>A function that takes a single argument.</dd>
+      <dt>newvar</dt>
+      <dd>A length one character vector of the
+  variable name to assign to.</dd>
+    </dl>
+    
+    <div class="Value">
+      <h2>Value</h2>
+      
+      <p>Returns a metaDAT list object with the newly assigned
+  values.</p>
+  
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p>A convienence wrapper for <code>MDget</code> and optionally
+  <code>MDassign</code>. For more complicated needs (i.e. working
+  with more than one variable or pieces of a variable) use
+  <code>MDget</code> to retrieve variable(s) and then lapply with
+  select functions. Finally, reassign with <code>MDassign</code>.</p>
+  
+    </div>
+      </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>MDapply</li>
+    </ul>
+    <ul>
+      
+    </ul> -->
+      
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>
