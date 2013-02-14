@@ -72,38 +72,52 @@
   scripts: <ul>
 <li>ANALYSIS - A directory
   containing the following analysis scripts: <ul>
-<li>01_clean_data.R * intial cleaning of raw
+<li>01_clean_data.R * initial cleaning of raw
   transcripts </li>
-<li>02_analysis_I.R * intial analysis
+<li>02_analysis_I.R * initial analysis
   </li>
 <li>03_plots.R * plotting script </li>
+</ul></p>
+  
+      <p></li>
+<li>CLEANED_TRANSCRIPTS - A directory to store the
+  cleaned transcripts (If the transcripts are already
+  cleaned you may choose to not utilize the RAW_TRANSCRIPTS
+  directory) </li>
+<li>CM_DATA - A directory to
+  export/import scripts for cm_xxx family of functions
+  </li>
+<li>CODEBOOK - A directory to store coding
+  conventions or demographics data: <ul>
+<li>KEY.csv * A blank template for demographic
+  information </li>
 </ul>
   </li>
-<li>CM_DATA
-  - A directory to export/import scripts for cm_xxx family
-  of functions </li>
-<li>CODEBOOK - A directory to store
-  coding conventions or demographics data
+<li>CORRESPONDENCE - A directory to
+  store correspondence and agreements with the client
+  <ul>
+<li>CONTACT_INFO.txt * A txt file to put
+  research team members' contact information
   </li>
-<li>CORRESPONDENCE - A directory to store
-  correspondence and agreements with the client
+<li>project_directions.pdf * A pdf explaining the
+  structure of the project template </li>
+</ul>
   </li>
-<li>DATA_CLEANED - A directory to store cleaned data
-  (generally .RData format) </li>
-<li>DATA_FOR_REVIEW - A
-  directory to put data that may need to be altered or
-  needs to be inspected more closely </li>
-<li>DOCUMENTS - A
-  directory to store documents related tot he project
-  </li>
-<li>PLOTS - A directory to store plots
-  </li>
-<li>RAW_TRANSCRIPTS - A directory to store the raw
-  transcripts </li>
-<li>REPORTS - A directory to house
-  reports; contains: <ul>
-<li>report_1.rnw * A
-  latex rnw file for use with
+<li>DATA - A
+  directory to store cleaned data (generally .RData
+  format) </li>
+<li>DATA_FOR_REVIEW - A directory to put
+  data that may need to be altered or needs to be inspected
+  more closely </li>
+<li>DOCUMENTS - A directory to store
+  documents related to the project </li>
+<li>PLOTS - A
+  directory to store plots </li>
+<li>RAW_TRANSCRIPTS - A
+  directory to store the raw transcripts </li>
+<li>REPORTS -
+  A directory to house reports; contains: <ul>
+<li>report_1.rnw * A latex rnw file for use with
   <a href = 'http://yihui.name/knitr/'>knitr</a>
   </li>
 <li>project.bib * A latex bibtex file
@@ -118,16 +132,30 @@
 <li>WORD_LISTS - A directory to store word lists that
   can be sourced and supplied to functions
   </li>
+<li>.Rprofile - Performs certan tasks such as loading
+  libraries, data and sourcing functions upon startup in
+  <a href = 'http://www.rstudio.com/'>RStudio</a>
+  </li>
 <li>extra_functions.R - A script to store user made
   functions related to the project </li>
 <li>LOG.txt - A
   text file documenting project changes/needs etc.
   </li>
+<li>xxx.Rproj - A project file used by
+  <a href = 'http://www.rstudio.com/'>RStudio</a>
+  </li>
 <li>TO_DO.txt - A text file documenting project
   tasks </li>
 </ul></p>
   
-      <p></p>
+      <p>The template comes with a .Rproj file and .Rstudio file.
+  This makes operating in
+  <a href = 'http://www.rstudio.com/'>RStudio</a> very easy.  The
+  file can be kept on the desktop or a git application such
+  as <a href = 'https://github.com/'>github</a>,
+  <a href = 'https://bitbucket.org/'>bitbucket</a> or
+  <a href = 'https://www.dropbox.com/'>dropbox</a>, depending on
+  what the client/research team is comfortable utilizing.</p>
   
     </div>
       </div>
