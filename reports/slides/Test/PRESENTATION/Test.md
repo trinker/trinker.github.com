@@ -54,3 +54,5 @@ new_project("NEW")
 
 
 # Get Started!
+
+[Quick Start Slides](https://dl.dropbox.com/u/61803503/report_directory_guide.pdf)
