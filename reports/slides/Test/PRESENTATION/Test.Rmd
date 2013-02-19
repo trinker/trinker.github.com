@@ -20,7 +20,7 @@ MikTex, knitr and Pandoc.
 
 # Getting Started
 **Download:**    
-* RStudio - [http://www.rstudio.com/](http://miktex.org/)    
+* RStudio - [http://www.rstudio.com/](http://www.rstudio.com/)    
 * MikTex - [http://miktex.org/](http://miktex.org/)    
 * Pandoc - [http://johnmacfarlane.net/pandoc/](http://johnmacfarlane.net/pandoc/)     
 * knitr - [http://yihui.name/knitr/](http://yihui.name/knitr/)   
