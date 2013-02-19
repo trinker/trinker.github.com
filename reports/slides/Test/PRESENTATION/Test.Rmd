@@ -1,4 +1,4 @@
-% reports package
+% Quick Start Guide: reports package
 % Tyler Rinker
 % 2-19-13
 
@@ -53,4 +53,4 @@ new_project("NEW")
 
 # Get Started!
 
-[Quick Start Slides](https://dl.dropbox.com/u/61803503/report_directory_guide.pdf)
+[Project Directory Workflow](https://dl.dropbox.com/u/61803503/report_directory_guide.pdf)
