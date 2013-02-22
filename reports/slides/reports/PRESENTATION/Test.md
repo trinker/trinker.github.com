@@ -41,7 +41,7 @@ install_github("reports", "trinker")
 
 # Set Up .Rprofile
 The user can add these options to their .Rprofile:   
-```r
+```{r}
 options(bib.loc = "C:/Users/trinker/Desktop/PhD Program/MASTER.bib") 
 
 options(name_reports = "Tyler Rinker\\\\University at Buffalo\\\\
@@ -51,7 +51,7 @@ options(name_reports = "Tyler Rinker\\\\University at Buffalo\\\\
 # Create Report/Paper Project
 Now the user is ready to generate a new report/paper project.  Use:    
 
-```r
+```r     
 setwd(desired.location)
 new_project("NEW")
 ```
