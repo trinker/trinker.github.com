@@ -8,7 +8,7 @@
 # Purpose
 reports is a package that assists in writing apa6 style reports
 and presentations.  The package is designed to be used with RStudio,
-MikTex, knitr and Pandoc. 
+MikTex/Tex Live, knitr and Pandoc. 
 
 # reports Will Make You...
 - Efficient    
@@ -19,7 +19,7 @@ MikTex, knitr and Pandoc.
 # Getting Started
 **Download:**    
 * RStudio - [http://www.rstudio.com/](http://www.rstudio.com/)    
-* MikTex - [http://miktex.org/](http://miktex.org/) or
+* MikTex - [http://miktex.org/](http://miktex.org/) or    
 * Tex Live -[http://www.tug.org/texlive/](http://www.tug.org/texlive/)   
 * Pandoc - [http://johnmacfarlane.net/pandoc/](http://johnmacfarlane.net/pandoc/)     
 * knitr - [http://yihui.name/knitr/](http://yihui.name/knitr/)  
