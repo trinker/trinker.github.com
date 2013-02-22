@@ -20,12 +20,15 @@ MikTex, knitr and Pandoc.
 
 # Getting Started
 **Download:**    
-* RStudio - [http://www.rstudio.com/](http://www.rstudio.com/)    
-* MikTex - [http://miktex.org/](http://miktex.org/)    
+* RStudio - [http://www.rstudio.com/](http://www.rstudio.com/)       
+* MikTex - [http://miktex.org/](http://miktex.org/) or    
+* Tex Live - [http://www.tug.org/texlive/](http://www.tug.org/texlive/)   
 * Pandoc - [http://johnmacfarlane.net/pandoc/](http://johnmacfarlane.net/pandoc/)     
-* knitr - [http://yihui.name/knitr/](http://yihui.name/knitr/)   
+* knitr - [http://yihui.name/knitr/](http://yihui.name/knitr/)  
 
-`install.packages("knitr")`
+```{r include=TRUE, eval=FALSE, }   
+install.packages("knitr")
+```
 
 
 # Installation
@@ -39,9 +42,12 @@ install_github("reports", "trinker")
 
 # Set Up .Rprofile
 The user can add these options to their .Rprofile:   
-`options(bib.loc = "C:/Users/trinker/Desktop/PhD Program/MASTER.bib")` 
 
-`options(name_reports = "Tyler Rinker\\\\University at Buffalo\\\\Department of Learning and Instruction")`    
+`options(bib.loc = "C:/Users/trinker/Desktop/`    
+    `PhD Program/MASTER.bib")` 
+
+`options(name_reports = "Tyler Rinker\\\\University at Buffalo\\\\ `  
+    `Department of Learning and Instruction")`  
 
 
 # Create Report/Paper Project
