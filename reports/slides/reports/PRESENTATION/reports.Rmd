@@ -3,13 +3,14 @@
 % 2-19-13
 
 ```{r setup, include=FALSE}
+# html5(out.file="replace")     #When finished
 # set global chunk options
 opts_chunk$set(cache=TRUE)
 
 library(knitr); library(knitcitations)
 write.bibtex(c(Francois2013= citation("bibtex"), "Yihui2013" = citation("knitr"), 
-    "Boettiger2013" = citation("knitcitations"), Rinker2013b = citation("reports"), 
-    Rinker2013a = citation("qdap")), file = "reports.bib")
+    "Boettiger2013" = citation("knitcitations"), "Rinker2013b" = citation("reports"), 
+    "Rinker2013a" = citation("qdap")), file = "reports.bib")
 bib <- read.bibtex("reports.bib")
 ```
 
