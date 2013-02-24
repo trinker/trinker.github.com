@@ -63,6 +63,10 @@ code > span.er { color: #ff0000; font-weight: bold; }
     border-top: 1px solid #CCC;
   }
 
+.hangingindent {
+    padding-left: 40px ;
+    text-indent: -35px ;
+}
   /* Transition effect */
   /* Feel free to change the transition effect for original
      animations. See here:
@@ -102,7 +106,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 </section>
 <section class="slide level1" id="purpose">
 <h1>Purpose</h1>
-<p>reports is a package that assists in writing apa6 style reports and presentations. The package is designed to be used with RStudio, MikTex/Tex Live, knitr and Pandoc.</p>
+<p>reports (Rinker, 2013) is a package that assists in writing flexible reports and presentations. The package is designed to be used with RStudio, MikTex/Tex Live, knitr and Pandoc.</p>
 </section>
 <section class="slide level1" id="reports-will-make-you">
 <h1>reports Will Make You…</h1>
@@ -115,8 +119,8 @@ code > span.er { color: #ff0000; font-weight: bold; }
 </section>
 <section class="slide level1" id="getting-started">
 <h1>Getting Started</h1>
-<p><strong>Download:</strong><br>* RStudio - <a href="http://www.rstudio.com/">http://www.rstudio.com/</a><br>* MikTex - <a href="http://miktex.org/">http://miktex.org/</a> or<br>* Tex Live - <a href="http://www.tug.org/texlive/">http://www.tug.org/texlive/</a><br>* Pandoc - <a href="http://johnmacfarlane.net/pandoc/">http://johnmacfarlane.net/pandoc/</a><br>* knitr - <a href="http://yihui.name/knitr/">http://yihui.name/knitr/</a></p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;knitr&quot;</span>)</code></pre>
+<p><strong>Download:</strong><br>* RStudio - <a href="http://www.rstudio.com/">http://www.rstudio.com/</a><br>* MikTex - <a href="http://miktex.org/">http://miktex.org/</a> or<br>* Tex Live - <a href="http://www.tug.org/texlive/">http://www.tug.org/texlive/</a><br>* Pandoc - <a href="http://johnmacfarlane.net/pandoc/">http://johnmacfarlane.net/pandoc/</a><br>* knitr (Xie, 2013) - <a href="http://yihui.name/knitr/">http://yihui.name/knitr/</a><br>* knitcitations (Boettiger, 2013)</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;knitr&quot;</span>, <span class="st">&quot;knitcitations&quot;</span>)</code></pre>
 </section>
 <section class="slide level1" id="installation">
 <h1>Installation</h1>
@@ -140,6 +144,13 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <section class="slide level1" id="get-started">
 <h1>Get Started!</h1>
 <p><a href="https://dl.dropbox.com/u/61803503/report_directory_guide.pdf">Project Directory Workflow</a></p>
+</section>
+<section class="slide level1" id="references">
+<h1>References</h1>
+<p>
+<p class="hangingindent" style="font-size:14px;">Boettiger C (2013). <EM>knitcitations: Citations for knitr markdown files</EM>. R package version 0.3-3, <a href="http://CRAN.R-project.org/package=knitcitations">http://CRAN.R-project.org/package=knitcitations</a>.</p>
+<p class="hangingindent" style="font-size:14px;">Rinker TW (2013). <EM>reports: Package to asssist in report writing</EM>. University at Buffalo/SUNY, Buffalo, New York. version 0.1.0.</p>
+<p class="hangingindent" style="font-size:14px;">Xie Y (2013). <EM>knitr: A general-purpose package for dynamic report generation in R</EM>. R package version 1.1, <a href="http://yihui.name/knitr/">http://yihui.name/knitr/</a>.</p>
 </section>
 <!-- {{{{ dzslides core
 #

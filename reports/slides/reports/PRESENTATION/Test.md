@@ -6,7 +6,7 @@
 
 
 # Purpose
-reports is a package that assists in writing apa6 style reports
+reports (Rinker, 2013) is a package that assists in writing flexible reports
 and presentations.  The package is designed to be used with RStudio,
 MikTex/Tex Live, knitr and Pandoc. 
 
@@ -22,11 +22,12 @@ MikTex/Tex Live, knitr and Pandoc.
 * MikTex - [http://miktex.org/](http://miktex.org/) or    
 * Tex Live - [http://www.tug.org/texlive/](http://www.tug.org/texlive/)   
 * Pandoc - [http://johnmacfarlane.net/pandoc/](http://johnmacfarlane.net/pandoc/)     
-* knitr - [http://yihui.name/knitr/](http://yihui.name/knitr/)  
+* knitr (Xie, 2013) - [http://yihui.name/knitr/](http://yihui.name/knitr/)     
+* knitcitations (Boettiger, 2013) 
 
 
 ```r
-install.packages("knitr")
+install.packages("knitr", "knitcitations")
 ```
 
 
@@ -64,3 +65,19 @@ new_project("NEW")
 # Get Started!
 
 [Project Directory Workflow](https://dl.dropbox.com/u/61803503/report_directory_guide.pdf)
+
+# References
+<p>Boettiger C (2013).
+<EM>knitcitations: Citations for knitr markdown files</EM>.
+R package version 0.3-3, <a href="http://CRAN.R-project.org/package=knitcitations">http://CRAN.R-project.org/package=knitcitations</a>.
+
+<p>Rinker TW (2013).
+<EM>reports: Package to asssist in report writing</EM>.
+University at Buffalo/SUNY, Buffalo, New York.
+version 0.1.0.
+
+<p>Xie Y (2013).
+<EM>knitr: A general-purpose package for dynamic report generation in R</EM>.
+R package version 1.1, <a href="http://yihui.name/knitr/">http://yihui.name/knitr/</a>.
+
+
