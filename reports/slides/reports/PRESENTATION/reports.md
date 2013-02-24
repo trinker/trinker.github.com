@@ -48,7 +48,9 @@ The user can add these options to their .Rprofile:
 
 `options(bib.loc = "C:/Users/trinker/Desktop/PhD Program/MASTER.bib")`    
 
-`options(name_reports = "Tyler Rinker\\\\University at Buffalo\\\\Department of Learning and Instruction")`     
+`options(name_reports = "Tyler Rinker\\\\University at Buffalo\\\\Department of Learning and Instruction")`         
+
+`options(source_reports = path.expand("~/path_1"), path.expand("~/path_2"))`
 
 
 # Create Report/Paper Project
