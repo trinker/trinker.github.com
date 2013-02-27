@@ -52,6 +52,9 @@ The user can add these options to their .Rprofile:
 
 `options(source_reports = path.expand("~/path_1"), path.expand("~/path_2"))`
 
+`options(temp_reports = "apa6.mod.qual_tex")`
+
+`options(github.user = "trinker")`
 
 # Create Report/Paper Project
 Now the user is ready to generate a new report/paper project.  Use:    
