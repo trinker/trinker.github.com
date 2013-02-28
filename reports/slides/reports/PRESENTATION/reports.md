@@ -69,7 +69,8 @@ new_project("NEW")
 
 [Project Directory Workflow](https://dl.dropbox.com/u/61803503/report_directory_guide.pdf)    
 
-[Introductory Video](http://youtu.be/cokNUTGtoM4)    
+# 
+[[[cokNUTGtoM4]]]
 
 # References
 <p>Boettiger C (2013).
