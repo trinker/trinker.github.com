@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+.hangingindent {
+    padding-left: 40px ;
+    text-indent: -35px ;
+}
+		<title>reveal.js - The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+                        <div class="slides">
+
+<!-- SLIDE STUFF HERE -->
+<section>
+  <h1 class="title">Title</h1>
+  <h2 class="author"><a href="https://github.com/trinker">Tyler Rinker</a></h2>
+  <h3 class="date">Date</h3>
+</section>
+<section class="slide level1" id="slide-1">
+<h1>Slide 1</h1>
+<p>this is cool<br></p>
+<aside class="notes">this it a note</aside>
+</section>
+<section class="slide level1" id="slide-2">
+<h1>Slide 2</h1>
+<p>McVee <em>et. al.</em> (2005)<br>Rinker (2013)<br>Rinker (2013)<br>Shanahan (In Press)</p>
+</section>
+<section class="slide level1" id="section">
+<h1></h1>
+<iframe class="youtube-player" type="text/html" width="800" height="500" src="http://www.youtube.com/embed/cokNUTGtoM4" frameborder="0"> </iframe>
+</section>
+<section class="slide level1" id="references">
+<h1>References</h1>
+<p>
+<p class="hangingindent" style="font-size:15px;">McVee MB, Dunsmore K and Gavelek JR (2005). <q>Schema Theory Revisited.</q> <EM>Review of Educational Research</EM>, <B>75</B>(4), pp. 531-566. <a href="http://dx.doi.org/10.3102/00346543075004531">http://dx.doi.org/10.3102/00346543075004531</a>.</p>
+<p class="hangingindent" style="font-size:15px;">Rinker TW (2013). <EM>qdap: Quantitative Discourse Analysis Package</EM>. University at Buffalo/SUNY, Buffalo, New York. version 0.2.1, <a href="http://github.com/trinker/qdap">http://github.com/trinker/qdap</a>.</p>
+<p class="hangingindent" style="font-size:15px;">Rinker TW (2013). <EM>reports: Package to asssist in report writing</EM>. University at Buffalo/SUNY, Buffalo, New York. version 0.1.0, <a href="http://github.com/trinker/reports">http://github.com/trinker/reports</a>.</p>
+<p class="hangingindent" style="font-size:15px;">Shanahan LE (In Press). <q>Composing <q>kid-friendly</q> multimodal text: When conversations, instruction, and signs come together.</q> <EM>Written Communication</EM>.</p>
+</section>
+<!-- SLIDE STUFF HERE -->
+                    </div>
+						
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
