@@ -17,6 +17,7 @@ bib <- read.bibtex("reports.bib")
 reports (`r citep(bib[4])`) is a package that assists in writing flexible reports
 and presentations.  The package is designed to be used with RStudio,
 MiKTex/TexLive/LibreOffice, knitr and Pandoc. 
+![](https://dl.dropbox.com/u/61803503/packages/reports.JPG)
 
 # reports Will Make You...
 - Efficient    

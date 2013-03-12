@@ -9,6 +9,7 @@
 reports (Rinker, 2013) is a package that assists in writing flexible reports
 and presentations.  The package is designed to be used with RStudio,
 MiKTex/TexLive/LibreOffice, knitr and Pandoc. 
+![](https://dl.dropbox.com/u/61803503/packages/reports.JPG)
 
 # reports Will Make You...
 - Efficient    
@@ -72,7 +73,7 @@ new_project("NEW")
 [Project Directory Workflow](https://dl.dropbox.com/u/61803503/report_directory_guide.pdf)    
 
 # 
-[[[cokNUTGtoM4]]]=yt
+[[[kws1PX1Dw9w]]]=yt
 
 # References
 <p>Boettiger C (2013).
