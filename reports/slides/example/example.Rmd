@@ -1,6 +1,6 @@
 % Example
 %[[[[Tyler Rinker](https://github.com/trinker)]]]=small
-% 3-13-2013
+% 3-13-13
 
 ```{r setup, include=FALSE}
 # set global chunk options
@@ -13,7 +13,7 @@ this is cool
 [[[this it a note]]]=notes
 
 # Slide 2
-To run this video use:
+To run these use:
 ```{r eval=FALSE}
 reveal.js(ref.page=NULL)
 ```
@@ -36,14 +36,13 @@ qplot(speed, dist, data = cars) + geom_smooth()
 > possible attend to but that's this slide anyway!
 
 # Slide C  
-
-[[[this it a 3 note]]]=notes    
+  
 - rvgvrrg    
 - dvfvgvgfv    
 - dfv    
 - very
 - d [[[]]]=frag-highlight-green 
-
+[[[this it a 3 note]]]=notes  
 
 [[[]]]=eud
 
