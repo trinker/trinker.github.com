@@ -2,11 +2,8 @@
 %[[[[Tyler Rinker](https://github.com/trinker)]]]=small
 % 3-13-13
 
-```{r setup, include=FALSE}
-# set global chunk options
-opts_chunk$set(cache=TRUE)
-library(knitr); library(knitcitations)
-```
+
+
 
 # Slide 1
 this is cool    
@@ -14,19 +11,24 @@ this is cool
 
 # Slide 2
 To run these use:
-```{r eval=FALSE}
-reveal.js(ref.page=NULL)
+
+```r
+reveal.js(ref.page = NULL)
 ```
+
 [[[this it a 2 note]]]=notes
 
 # 
 [[[cokNUTGtoM4]]]=yt
 
 # Slide C
-```{r, message=FALSE,echo=FALSE, fig.width=4, fig.height=4, fig.cap=""}
-library(ggplot2)
-qplot(speed, dist, data = cars) + geom_smooth()
+
 ```
+## Warning: package 'ggplot2' was built under R version 2.15.2
+```
+
+![](figure/unnamed-chunk-2.png) 
+
 
 [[[]]]=sud
 # Slide A [[[]]]=bg-soothe
