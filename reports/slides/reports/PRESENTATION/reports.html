@@ -208,7 +208,7 @@ MiKTex/TexLive/LibreOffice, knitr and Pandoc.
 <li>knitcitations (Boettiger, 2013) </li>
 </ul>
 
-<p>[[[<code>install.packages(&quot;reports&quot;, &quot;knitr&quot;, &quot;knitcitations&quot;)</code>]]]=hi</p>
+<p>[[[<code>install.packages(c(&quot;reports&quot;, &quot;knitr&quot;, &quot;knitcitations&quot;))</code>]]]=hi</p>
 
 <h1>Windows Users&hellip;</h1>
 
@@ -225,22 +225,30 @@ MiKTex/TexLive/LibreOffice, knitr and Pandoc.
 install_github(&quot;reports&quot;, &quot;trinker&quot;)
 </code></pre>
 
-<h1>Set Up .Rprofile</h1>
+<h1>Set Up Rprofile</h1>
 
-<p>The user can add these options to their .Rprofile:   </p>
+<p>The user can add these options to their Rprofile       </p>
 
-<p>[[[<code>options(bib.loc = &quot;C:/Users/trinker/Desktop/PhD Program/MASTER.bib&quot;)</code>]]]=hi<br/>
-[[[<code>options(name_reports = &quot;Tyler Rinker\\\\University at Buffalo\\\\Department of Learning and Instruction)</code>]]]=hi<br/>
-[[[<code>options(source_reports = path.expand(&quot;~/path_1&quot;), path.expand(&quot;~/path_2&quot;))</code>]]]=hi<br/>
-[[[<code>options(temp_reports = &quot;apa6.mod.qual_tex&quot;)</code>]]]=hi<br/>
-[[[<code>options(github.user = &quot;trinker&quot;)</code>]]]=hi    </p>
+<p>[[[<code>options(bib.loc = &quot;C:/Users/trinker/Desktop/PhD Program/MASTER.bib&quot;)</code>]]]=hi    </p>
+
+<p>[[[<code>options(name_reports = &quot;Tyler Rinker\\\\University at Buffalo\\\\Department of Learning and Instruction)</code>]]]=hi        </p>
+
+<p>[[[<code>options(source_reports = path.expand(&quot;~/path_1&quot;), path.expand(&quot;~/path_2&quot;))</code>]]]=hi    </p>
+
+<p>[[[<code>options(temp_reports = &quot;apa6.mod.qual_tex&quot;)</code>]]]=hi     </p>
+
+<p>[[[<code>options(github.user = &quot;trinker&quot;)</code>]]]=hi          </p>
 
 <h1>Create Report/Paper Project</h1>
 
 <p>Now the user is ready to generate a new report/paper project.  Use:    </p>
 
 <pre><code class="r">setwd(desired.location)
-new_project(&quot;NEW&quot;)
+new_report(&quot;NEW&quot;)
+
+# or
+
+presentation(&quot;NEW&quot;)
 </code></pre>
 
 <h1>Get Started!</h1>

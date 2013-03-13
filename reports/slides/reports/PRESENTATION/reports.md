@@ -1,6 +1,6 @@
 % Quick Start Guide: reports package
 % Tyler Rinker
-% 2-19-13
+% 3-13-13
 
 
 
@@ -27,7 +27,7 @@ MiKTex/TexLive/LibreOffice, knitr and Pandoc.
 * knitr (Xie, 2013) - [http://yihui.name/knitr/](http://yihui.name/knitr/)     
 * knitcitations (Boettiger, 2013) 
 
-[[[`install.packages("reports", "knitr", "knitcitations")`]]]=hi
+[[[`install.packages(c("reports", "knitr", "knitcitations"))`]]]=hi
 
 
 # Windows Users...
@@ -50,21 +50,32 @@ install_github("reports", "trinker")
 ```
 
 
-# Set Up .Rprofile
-The user can add these options to their .Rprofile:   
+# Set Up Rprofile
 
-[[[`options(bib.loc = "C:/Users/trinker/Desktop/PhD Program/MASTER.bib")`]]]=hi            
-[[[`options(name_reports = "Tyler Rinker\\\\University at Buffalo\\\\Department of Learning and Instruction)`]]]=hi       
-[[[`options(source_reports = path.expand("~/path_1"), path.expand("~/path_2"))`]]]=hi     
-[[[`options(temp_reports = "apa6.mod.qual_tex")`]]]=hi    
-[[[`options(github.user = "trinker")`]]]=hi    
+The user can add these options to their Rprofile       
+
+[[[`options(bib.loc = "C:/Users/trinker/Desktop/PhD Program/MASTER.bib")`]]]=hi    
+
+[[[`options(name_reports = "Tyler Rinker\\\\University at Buffalo\\\\Department of Learning and Instruction)`]]]=hi        
+
+[[[`options(source_reports = path.expand("~/path_1"), path.expand("~/path_2"))`]]]=hi    
+
+[[[`options(temp_reports = "apa6.mod.qual_tex")`]]]=hi     
+
+[[[`options(github.user = "trinker")`]]]=hi          
+
+
 
 # Create Report/Paper Project
 Now the user is ready to generate a new report/paper project.  Use:    
 
 ```r
 setwd(desired.location)
-new_project("NEW")
+new_report("NEW")
+
+# or
+
+presentation("NEW")
 ```
 
 

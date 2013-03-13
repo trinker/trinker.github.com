@@ -102,12 +102,12 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <section>
   <h1 class="title">Quick Start Guide: reports package</h1>
   <h2 class="author">Tyler Rinker</h2>
-  <h3 class="date">2-19-13</h3>
+  <h3 class="date">3-13-13</h3>
 </section>
 <section class="slide level1" id="purpose">
 <h1>Purpose</h1>
 <p><strong><font color="blue">reports</font></strong> (Rinker, 2013) is a package that assists in writing <span style="text-decoration:underline;">flexible reports and presentations</span>. The package is designed to be used with RStudio, MiKTex/TexLive/LibreOffice, knitr and Pandoc.	
-<p align="center"><img src="https://dl.dropbox.com/u/61803503/packages/reports.JPG" width="450" height="320"></p>
+<p align="center"><img src="https://dl.dropbox.com/u/61803503/packages/reports.JPG" width="450" height="315"></p>
 </section>
 <section class="slide level1" id="reports-will-make-you">
 <h1>reports Will Make You…</h1>
@@ -121,8 +121,29 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <section class="slide level1" id="getting-started">
 <h1>Getting Started</h1>
 <p><strong>Download:</strong><br>* RStudio - <a href="http://www.rstudio.com/">http://www.rstudio.com/</a><br>* MiKTex - <a href="http://miktex.org/">http://miktex.org/</a> or<br>* TexLive - <a href="http://www.tug.org/texlive/">http://www.tug.org/texlive/</a><br>* LibreOffice - <a href="http://www.libreoffice.org/">http://www.libreoffice.org/</a><br>* Pandoc - <a href="http://johnmacfarlane.net/pandoc/">http://johnmacfarlane.net/pandoc/</a><br>* knitr (Xie, 2013) - <a href="http://yihui.name/knitr/">http://yihui.name/knitr/</a><br>* knitcitations (Boettiger, 2013)</p>
-<p class="hangingindent" style="font-size:24px;"><code>install.packages(&quot;reports&quot;, &quot;knitr&quot;, &quot;knitcitations&quot;)</code></p>
+<p>
+<p>
+<p class="hangingindent" style="font-size:21px;"><code>install.packages(c(&quot;reports&quot;, &quot;knitr&quot;, &quot;knitcitations&quot;))</code></p>
 </section>
+
+<section class="slide level1" id="development-version-installation">
+<h1>Development Version Installation</h1>
+<p><a href="https://github.com/trinker/reports">https://github.com/trinker/reports</a></p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(devtools)
+<span class="kw">install_github</span>(<span class="st">&quot;reports&quot;</span>, <span class="st">&quot;trinker&quot;</span>)</code></pre>
+</section>
+
+
+<section class="slide level1" id="set-up-rprofile">
+<h1>Set Up .Rprofile</h1>
+<p>The user can add these options to their .Rprofile</p>
+<p class="hangingindent" style="font-size:25px;"><code>options(bib.loc = &quot;C:/Users/trinker/Desktop/PhD Program/MASTER.bib&quot;)</code></p>
+<p class="hangingindent" style="font-size:25px;"><code>options(name_reports = &quot;Tyler Rinker\\\\University at Buffalo\\\\Department of Learning and Instruction)</code></p>
+<p class="hangingindent" style="font-size:25px;"><code>options(source_reports = path.expand(&quot;~/path_1&quot;), path.expand(&quot;~/path_2&quot;))</code></p>
+<p class="hangingindent" style="font-size:25px;"><code>options(temp_reports = &quot;apa6.mod.qual_tex&quot;)</code></p>
+<p class="hangingindent" style="font-size:25px;"><code>options(github.user = &quot;trinker&quot;)</code></p>
+</section>
+
 <section class="slide level1" id="create-reportpaper-project">
 <h1>Create Report/Paper Project</h1>
 <p>Now the user is ready to generate a new report/paper project. Use:</p>
