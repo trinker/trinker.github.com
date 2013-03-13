@@ -1,5 +1,3 @@
-Reports Demos
-=========================
 Source and output of demos
 -------------------------
 
