@@ -50,9 +50,9 @@ install_github("reports", "trinker")
 ```
 
 
-# Set Up Rprofile
+# Set Up .Rprofile
 
-The user can add these options to their Rprofile       
+The user can add these options to their .Rprofile       
 
 [[[`options(bib.loc = "C:/Users/trinker/Desktop/PhD Program/MASTER.bib")`]]]=hi    
 
@@ -85,6 +85,11 @@ presentation("NEW")
 
 # 
 [[[kws1PX1Dw9w]]]=yt
+
+
+# Example Demos
+Example Demos can be downloaded from:    
+[http://trinker.github.com/reports/examples](http://trinker.github.com/reports/examples)
 
 # References
 <p>Boettiger C (2013).

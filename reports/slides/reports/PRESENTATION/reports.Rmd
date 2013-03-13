@@ -88,6 +88,11 @@ presentation("NEW")
 # 
 [[[kws1PX1Dw9w]]]=yt
 
+
+# Example Demos
+Example Demos can be downloaded from:    
+[http://trinker.github.com/reports/examples](http://trinker.github.com/reports/examples)
+
 # References
 ```{r, echo=FALSE, results='asis'}
 bibliography("html") 
