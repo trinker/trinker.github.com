@@ -30,6 +30,7 @@ qplot(speed, dist, data = cars) + geom_smooth()
 
 [[[]]]=sud
 # Slide A [[[]]]=bg-soothe
+[[[this it a 3 note]]]=notes 
 
 # Slide B
 > He was a very important man who was evidently the best situation that he could 
@@ -42,7 +43,7 @@ qplot(speed, dist, data = cars) + geom_smooth()
 - dfv    
 - very
 - d [[[]]]=frag-highlight-green    
-[[[this it a 3 note]]]=notes  
+
 
 [[[]]]=eud
 
