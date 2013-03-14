@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>wfm. qdap 0.2.1</title>
+<title>wfm. qdap 0.2.2</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.2.1</a>
+      <a class="brand" href="#">qdap 0.2.2</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -41,7 +41,7 @@
   <div class="span8">
     <h2>Usage</h2>
     <pre><span class="functioncall"><a href='Word_Frequency_Matrix.html'>wfm</a></span><span class="keyword">(</span><span class="argument">text.var</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">grouping.var</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">wfdf</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">output</span> <span class="argument">=</span> <span class="string">"raw"</span><span class="keyword">,</span> <span class="argument">stopwords</span> <span class="argument">=</span> NULL<span class="keyword">,</span>
-  <span class="argument">digits</span> <span class="argument">=</span> <span class="number">2</span><span class="keyword">,</span> <span class="argument">char2space</span> <span class="argument">=</span> <span class="string">"~~"</span><span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">)</span>
+  <span class="argument">char2space</span> <span class="argument">=</span> <span class="string">"~~"</span><span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">)</span>
 
 <span class="functioncall"><a href='Word_Frequency_Matrix.html'>wfdf</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="argument">grouping.var</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">stopwords</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">margins</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">output</span> <span class="argument">=</span> <span class="string">"raw"</span><span class="keyword">,</span>
       <span class="argument">digits</span> <span class="argument">=</span> <span class="number">2</span><span class="keyword">,</span> <span class="argument">char2space</span> <span class="argument">=</span> <span class="string">"~~"</span><span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">)</span>
@@ -70,18 +70,20 @@
   <code>"percent"</code>).</dd>
       <dt>stopwords</dt>
       <dd>A vector of stop words to remove.</dd>
-      <dt>digits</dt>
-      <dd>An integer indicating the number of decimal
-  places (round) or significant digits (signif) to be used.
-  Negative values are allowed</dd>
-      <dt>margins</dt>
-      <dd>logical. If TRUE provides grouping.var and
-  word variable totals.</dd>
+      <dt>char2space</dt>
+      <dd>A vector of characters to be turned
+  into spaces.  If <code>char.keep</code> is NULL,
+  <code>char2space</code> will activate this argument.</dd>
       <dt>...</dt>
       <dd>Other arguments supplied to
   <code>strip</code>.</dd>
-      <dt>wf.obj</dt>
-      <dd>A <code>wfm</code> or <code>wfdf</code> object.</dd>
+      <dt>digits</dt>
+      <dd>An integer indicating the number of decimal
+  places (round) or significant digits (signif) to be used.
+  Negative values are allowed.</dd>
+      <dt>margins</dt>
+      <dd>logical. If TRUE provides grouping.var and
+  word variable totals.</dd>
       <dt>word.lists</dt>
       <dd>A list of character vectors of words to
   pass to <code>wf.combine</code></dd>
@@ -89,10 +91,8 @@
       <dd>logical.  If TRUE returns the output as a
   <code>wfm</code> rather than a
   <code>wfdf</code> object.</dd>
-      <dt>char2space</dt>
-      <dd>A vector of characters to be turned
-  into spaces.  If <code>char.keep</code> is NULL,
-  <code>char2space</code> will activate this argument.</dd>
+      <dt>wf.obj</dt>
+      <dd>A <code>wfm</code> or <code>wfdf</code> object.</dd>
     </dl>
     
     <div class="Value">

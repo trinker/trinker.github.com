@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>new_project. qdap 0.2.1</title>
+<title>new_project. qdap 0.2.2</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.2.1</a>
+      <a class="brand" href="#">qdap 0.2.2</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,7 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre><span class="functioncall"><a href='new_project.html'>new_project</a></span><span class="keyword">(</span><span class="argument">project</span> <span class="argument">=</span> <span class="string">"new"</span><span class="keyword">,</span> <span class="argument">path</span> <span class="argument">=</span> <span class="functioncall"><a href='http://www.inside-r.org/r-doc/base/getwd'>getwd</a></span><span class="keyword">(</span><span class="keyword">)</span><span class="keyword">)</span></pre>
+    <pre><span class="functioncall"><a href='new_project.html'>new_project</a></span><span class="keyword">(</span><span class="argument">project</span> <span class="argument">=</span> <span class="string">"new"</span><span class="keyword">,</span> <span class="argument">path</span> <span class="argument">=</span> <span class="functioncall"><a href='http://www.inside-r.org/r-doc/base/getwd'>getwd</a></span><span class="keyword">(</span><span class="keyword">)</span><span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">)</span></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -49,6 +49,9 @@
       <dt>path</dt>
       <dd>The path to where the project should be
   created.  Default is the current working directory.</dd>
+      <dt>...</dt>
+      <dd>Other arguments passed to
+  <code><a href='http://www.inside-r.org/r-doc/reports/new_report'>new_report</a></code>.</dd>
     </dl>
     
     <div class="Value">
@@ -94,65 +97,83 @@
 </ul>
   </li>
 <li>CORRESPONDENCE - A directory to
-  store correspondence and agreements with the client
+  store correspondence and agreements with the client:
   <ul>
 <li>CONTACT_INFO.txt * A txt file to put
-  research team members' contact information
+  research team members' contact information </li>
+</ul></p>
+  
+      <p></li>
+<li>DATA - A directory to store cleaned data
+  (generally .RData format) </li>
+<li>DATA_FOR_REVIEW - A
+  directory to put data that may need to be altered or
+  needs to be inspected more closely </li>
+<li>DOCUMENTS - A
+  directory to store documents related to the project
   </li>
-<li>project_directions.pdf * A pdf explaining the
+<li>PLOTS - A directory to store plots
+  </li>
+<li>PROJECT_WORKFLOW_GUIDE.pdf * A pdf explaining the
   structure of the project template </li>
+<li>RAW_DATA - A
+  directory to store non-transcript data related to the
+  project: <ul>
+<li>AUDIO * A directory to put
+  audio files (or shortcuts) </li>
+<li>FIELD_NOTES * A
+  directory to put audio files (or shortcuts)
+  </li>
+<li>PAPER_ARTIFACTS * A directory to put paper
+  artifacts </li>
+<li>PHOTOGRAPHS * A directory to put
+  photographs </li>
+<li>VIDEO * A directory to put video
+  files (or shortcuts) </li>
 </ul>
   </li>
-<li>DATA - A
-  directory to store cleaned data (generally .RData
-  format) </li>
-<li>DATA_FOR_REVIEW - A directory to put
-  data that may need to be altered or needs to be inspected
-  more closely </li>
-<li>DOCUMENTS - A directory to store
-  documents related to the project </li>
-<li>PLOTS - A
-  directory to store plots </li>
 <li>RAW_TRANSCRIPTS - A
   directory to store the raw transcripts </li>
 <li>REPORTS -
-  A directory to house reports; contains: <ul>
-<li>report_1.rnw * A latex rnw file for use with
-  <a href = 'http://yihui.name/knitr/'>knitr</a>
+  A directory with report and presentation related tools.
+  Please see the 
+  <a href = 'https://dl.dropbox.com/u/61803503/packages/REPORT_WORKFLOW_GUIDE.pdf'>REPORT_WORKFLOW_GUIDE.pdf</a>
+  for more details </li>
+<li>TABLES - A directory to export
+  tables to </li>
+<li>WORD_LISTS - A directory to store word
+  lists that can be sourced and supplied to functions
   </li>
-<li>project.bib * A latex bibtex file
-  </li>
-<li>preamble.tex * A tex file that
-  <code>report_1.rnw</code> references to generate the preamble
-  </li>
-</ul>
-  </li>
-<li>TABLES - A directory to export tables to
-  </li>
-<li>WORD_LISTS - A directory to store word lists that
-  can be sourced and supplied to functions
-  </li>
-<li>.Rprofile - Performs certan tasks such as loading
-  libraries, data and sourcing functions upon startup in
-  <a href = 'http://www.rstudio.com/'>RStudio</a>
+<li>.Rprofile - Performs certain tasks such as
+  loading libraries, data and sourcing functions upon
+  startup in <a href = 'http://www.rstudio.com/'>RStudio</a>
   </li>
 <li>extra_functions.R - A script to store user made
-  functions related to the project </li>
-<li>LOG.txt - A
-  text file documenting project changes/needs etc.
-  </li>
-<li>xxx.Rproj - A project file used by
-  <a href = 'http://www.rstudio.com/'>RStudio</a>
-  </li>
-<li>TO_DO.txt - A text file documenting project
-  tasks </li>
+  functions related to the project <ul>
+<li>email
+  * A function to view, and optionally copy to the
+  clipboard, emails for the client/lead researcher, analyst
+  and/or other project members (information taking from
+  ~/CORRESPONDENCE/CONTACT_INFO.txt file) </li>
+<li>todo * A
+  function to view, and optionally copy to the clipboard,
+  non-completed tasks from the <code>TO_DO.txt</code> file </li>
 </ul></p>
   
-      <p>The template comes with a .Rproj file and .Rstudio file.
-  This makes operating in
-  <a href = 'http://www.rstudio.com/'>RStudio</a> very easy.  The
-  file can be kept on the desktop or a git application such
-  as <a href = 'https://github.com/'>github</a>,
+      <p></li>
+<li>LOG.txt - A text file documenting project
+  changes/needs etc. </li>
+<li>xxx.Rproj - A project file
+  used by <a href = 'http://www.rstudio.com/'>RStudio</a>; clicking
+  this will open the project in RStudio. </li>
+<li>TO_DO.txt
+  - A text file documenting project tasks </li>
+</ul></p>
+  
+      <p>The template comes with a .Rproj file.  This makes
+  operating in <a href = 'http://www.rstudio.com/'>RStudio</a> very
+  easy.  The file can be kept on the desktop or a git
+  application such as <a href = 'https://github.com/'>github</a>,
   <a href = 'https://bitbucket.org/'>bitbucket</a> or
   <a href = 'https://www.dropbox.com/'>dropbox</a>, depending on
   what the client/research team is comfortable utilizing.</p>
@@ -164,7 +185,7 @@
       <li>new_project</li>
     </ul>
     <ul>
-      <li>replace</li>
+      <li>project,</li><li>workflow</li>
     </ul> -->
       
         
