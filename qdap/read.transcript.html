@@ -45,7 +45,7 @@
     <pre><span class="functioncall"><a href='read.transcript.html'>read.transcript</a></span><span class="keyword">(</span><span class="symbol">file</span><span class="keyword">,</span> <span class="argument">col.names</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">text.var</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">merge.broke.tot</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span>
   <span class="argument">header</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">dash</span> <span class="argument">=</span> <span class="string">""</span><span class="keyword">,</span> <span class="argument">ellipsis</span> <span class="argument">=</span> <span class="string">"..."</span><span class="keyword">,</span> <span class="argument">quote2bracket</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">rm.empty.rows</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span>
       <span class="argument">na.strings</span> <span class="argument">=</span> <span class="functioncall"><a href='http://www.inside-r.org/r-doc/base/c'>c</a></span><span class="keyword">(</span><span class="string">"999"</span><span class="keyword">,</span> <span class="string">"NA"</span><span class="keyword">,</span> <span class="string">""</span><span class="keyword">,</span> <span class="string">" "</span><span class="keyword">)</span><span class="keyword">,</span> <span class="argument">sep</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">skip</span> <span class="argument">=</span> <span class="number">0</span><span class="keyword">,</span> <span class="argument">nontext2factor</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span>
-      <span class="symbol">...</span><span class="keyword">)</span></pre>
+      <span class="symbol">text</span><span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">)</span></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -100,6 +100,11 @@
       <dt>nontext2factor</dt>
       <dd>logical.  If TRUE attempts to
   convert any non text to a factor.</dd>
+      <dt>text</dt>
+      <dd>Character string: if file is not supplied and
+  this is, then data are read from the value of text.
+  Notice that a literal string can be used to include
+  (small) data sets within R code.</dd>
       <dt>...</dt>
       <dd>Further arguments to be passed to
   <code><a href='http://www.inside-r.org/r-doc/utils/read.table'>read.table</a></code>.</dd>
