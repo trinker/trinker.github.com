@@ -1,268 +1,195 @@
-<!DOCTYPE html>
-<!-- saved from url=(0014)about:internet -->
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<!doctype html>
+<html lang="en">
 
-<title>Special Features</title>
+	<head>
+		<meta charset="utf-8">
 
-<style type="text/css">
-body, td {
-   font-family: sans-serif;
-   background-color: white;
-   font-size: 12px;
-   margin: 8px;
-}
+		<title>reveal.js - The HTML Presentation Framework</title>
 
-tt, code, pre {
-   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
-}
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
 
-h1 { 
-   font-size:2.2em; 
-}
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-h2 { 
-   font-size:1.8em; 
-}
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-h3 { 
-   font-size:1.4em; 
-}
+		<link rel="stylesheet" href="css/reveal.min.css">
+<link rel="stylesheet" href="css/theme/default.css" id="theme">
 
-h4 { 
-   font-size:1.0em; 
-}
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
 
-h5 { 
-   font-size:0.9em; 
-}
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
 
-h6 { 
-   font-size:0.8em; 
-}
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
 
-a:visited {
-   color: rgb(50%, 0%, 50%);
-}
+	<body>
 
-pre {	
-   margin-top: 0;
-   max-width: 95%;
-   border: 1px solid #ccc;
-   white-space: pre-wrap;
-}
+		<div class="reveal">
 
-pre code {
-   display: block; padding: 0.5em;
-}
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
 
-code.r, code.cpp {
-   background-color: #F8F8F8;
-}
-
-table, td, th {
-  border: none;
-}
-
-blockquote {
-   color:#666666;
-   margin:0;
-   padding-left: 1em;
-   border-left: 0.5em #EEE solid;
-}
-
-hr {
-   height: 0px;
-   border-bottom: none;
-   border-top-width: thin;
-   border-top-style: dotted;
-   border-top-color: #999999;
-}
-
-@media print {
-   * { 
-      background: transparent !important; 
-      color: black !important; 
-      filter:none !important; 
-      -ms-filter: none !important; 
-   }
-
-   body { 
-      font-size:12pt; 
-      max-width:100%; 
-   }
-       
-   a, a:visited { 
-      text-decoration: underline; 
-   }
-
-   hr { 
-      visibility: hidden;
-      page-break-before: always;
-   }
-
-   pre, blockquote { 
-      padding-right: 1em; 
-      page-break-inside: avoid; 
-   }
-
-   tr, img { 
-      page-break-inside: avoid; 
-   }
-
-   img { 
-      max-width: 100% !important; 
-   }
-
-   @page :left { 
-      margin: 15mm 20mm 15mm 10mm; 
-   }
-     
-   @page :right { 
-      margin: 15mm 10mm 15mm 20mm; 
-   }
-
-   p, h2, h3 { 
-      orphans: 3; widows: 3; 
-   }
-
-   h2, h3 { 
-      page-break-after: avoid; 
-   }
-}
-
-</style>
-
-<!-- Styles for R syntax highlighter -->
-<style type="text/css">
-   pre .operator,
-   pre .paren {
-     color: rgb(104, 118, 135)
-   }
-
-   pre .literal {
-     color: rgb(88, 72, 246)
-   }
-
-   pre .number {
-     color: rgb(0, 0, 205);
-   }
-
-   pre .comment {
-     color: rgb(76, 136, 107);
-   }
-
-   pre .keyword {
-     color: rgb(0, 0, 255);
-   }
-
-   pre .identifier {
-     color: rgb(0, 0, 0);
-   }
-
-   pre .string {
-     color: rgb(3, 106, 7);
-   }
-</style>
-
-<!-- R syntax highlighter -->
-<script type="text/javascript">
-var hljs=new function(){function m(p){return p.replace(/&/gm,"&amp;").replace(/</gm,"&lt;")}function f(r,q,p){return RegExp(q,"m"+(r.cI?"i":"")+(p?"g":""))}function b(r){for(var p=0;p<r.childNodes.length;p++){var q=r.childNodes[p];if(q.nodeName=="CODE"){return q}if(!(q.nodeType==3&&q.nodeValue.match(/\s+/))){break}}}function h(t,s){var p="";for(var r=0;r<t.childNodes.length;r++){if(t.childNodes[r].nodeType==3){var q=t.childNodes[r].nodeValue;if(s){q=q.replace(/\n/g,"")}p+=q}else{if(t.childNodes[r].nodeName=="BR"){p+="\n"}else{p+=h(t.childNodes[r])}}}if(/MSIE [678]/.test(navigator.userAgent)){p=p.replace(/\r/g,"\n")}return p}function a(s){var r=s.className.split(/\s+/);r=r.concat(s.parentNode.className.split(/\s+/));for(var q=0;q<r.length;q++){var p=r[q].replace(/^language-/,"");if(e[p]){return p}}}function c(q){var p=[];(function(s,t){for(var r=0;r<s.childNodes.length;r++){if(s.childNodes[r].nodeType==3){t+=s.childNodes[r].nodeValue.length}else{if(s.childNodes[r].nodeName=="BR"){t+=1}else{if(s.childNodes[r].nodeType==1){p.push({event:"start",offset:t,node:s.childNodes[r]});t=arguments.callee(s.childNodes[r],t);p.push({event:"stop",offset:t,node:s.childNodes[r]})}}}}return t})(q,0);return p}function k(y,w,x){var q=0;var z="";var s=[];function u(){if(y.length&&w.length){if(y[0].offset!=w[0].offset){return(y[0].offset<w[0].offset)?y:w}else{return w[0].event=="start"?y:w}}else{return y.length?y:w}}function t(D){var A="<"+D.nodeName.toLowerCase();for(var B=0;B<D.attributes.length;B++){var C=D.attributes[B];A+=" "+C.nodeName.toLowerCase();if(C.value!==undefined&&C.value!==false&&C.value!==null){A+='="'+m(C.value)+'"'}}return A+">"}while(y.length||w.length){var v=u().splice(0,1)[0];z+=m(x.substr(q,v.offset-q));q=v.offset;if(v.event=="start"){z+=t(v.node);s.push(v.node)}else{if(v.event=="stop"){var p,r=s.length;do{r--;p=s[r];z+=("</"+p.nodeName.toLowerCase()+">")}while(p!=v.node);s.splice(r,1);while(r<s.length){z+=t(s[r]);r++}}}}return z+m(x.substr(q))}function j(){function q(x,y,v){if(x.compiled){return}var u;var s=[];if(x.k){x.lR=f(y,x.l||hljs.IR,true);for(var w in x.k){if(!x.k.hasOwnProperty(w)){continue}if(x.k[w] instanceof Object){u=x.k[w]}else{u=x.k;w="keyword"}for(var r in u){if(!u.hasOwnProperty(r)){continue}x.k[r]=[w,u[r]];s.push(r)}}}if(!v){if(x.bWK){x.b="\\b("+s.join("|")+")\\s"}x.bR=f(y,x.b?x.b:"\\B|\\b");if(!x.e&&!x.eW){x.e="\\B|\\b"}if(x.e){x.eR=f(y,x.e)}}if(x.i){x.iR=f(y,x.i)}if(x.r===undefined){x.r=1}if(!x.c){x.c=[]}x.compiled=true;for(var t=0;t<x.c.length;t++){if(x.c[t]=="self"){x.c[t]=x}q(x.c[t],y,false)}if(x.starts){q(x.starts,y,false)}}for(var p in e){if(!e.hasOwnProperty(p)){continue}q(e[p].dM,e[p],true)}}function d(B,C){if(!j.called){j();j.called=true}function q(r,M){for(var L=0;L<M.c.length;L++){if((M.c[L].bR.exec(r)||[null])[0]==r){return M.c[L]}}}function v(L,r){if(D[L].e&&D[L].eR.test(r)){return 1}if(D[L].eW){var M=v(L-1,r);return M?M+1:0}return 0}function w(r,L){return L.i&&L.iR.test(r)}function K(N,O){var M=[];for(var L=0;L<N.c.length;L++){M.push(N.c[L].b)}var r=D.length-1;do{if(D[r].e){M.push(D[r].e)}r--}while(D[r+1].eW);if(N.i){M.push(N.i)}return f(O,M.join("|"),true)}function p(M,L){var N=D[D.length-1];if(!N.t){N.t=K(N,E)}N.t.lastIndex=L;var r=N.t.exec(M);return r?[M.substr(L,r.index-L),r[0],false]:[M.substr(L),"",true]}function z(N,r){var L=E.cI?r[0].toLowerCase():r[0];var M=N.k[L];if(M&&M instanceof Array){return M}return false}function F(L,P){L=m(L);if(!P.k){return L}var r="";var O=0;P.lR.lastIndex=0;var M=P.lR.exec(L);while(M){r+=L.substr(O,M.index-O);var N=z(P,M);if(N){x+=N[1];r+='<span class="'+N[0]+'">'+M[0]+"</span>"}else{r+=M[0]}O=P.lR.lastIndex;M=P.lR.exec(L)}return r+L.substr(O,L.length-O)}function J(L,M){if(M.sL&&e[M.sL]){var r=d(M.sL,L);x+=r.keyword_count;return r.value}else{return F(L,M)}}function I(M,r){var L=M.cN?'<span class="'+M.cN+'">':"";if(M.rB){y+=L;M.buffer=""}else{if(M.eB){y+=m(r)+L;M.buffer=""}else{y+=L;M.buffer=r}}D.push(M);A+=M.r}function G(N,M,Q){var R=D[D.length-1];if(Q){y+=J(R.buffer+N,R);return false}var P=q(M,R);if(P){y+=J(R.buffer+N,R);I(P,M);return P.rB}var L=v(D.length-1,M);if(L){var O=R.cN?"</span>":"";if(R.rE){y+=J(R.buffer+N,R)+O}else{if(R.eE){y+=J(R.buffer+N,R)+O+m(M)}else{y+=J(R.buffer+N+M,R)+O}}while(L>1){O=D[D.length-2].cN?"</span>":"";y+=O;L--;D.length--}var r=D[D.length-1];D.length--;D[D.length-1].buffer="";if(r.starts){I(r.starts,"")}return R.rE}if(w(M,R)){throw"Illegal"}}var E=e[B];var D=[E.dM];var A=0;var x=0;var y="";try{var s,u=0;E.dM.buffer="";do{s=p(C,u);var t=G(s[0],s[1],s[2]);u+=s[0].length;if(!t){u+=s[1].length}}while(!s[2]);if(D.length>1){throw"Illegal"}return{r:A,keyword_count:x,value:y}}catch(H){if(H=="Illegal"){return{r:0,keyword_count:0,value:m(C)}}else{throw H}}}function g(t){var p={keyword_count:0,r:0,value:m(t)};var r=p;for(var q in e){if(!e.hasOwnProperty(q)){continue}var s=d(q,t);s.language=q;if(s.keyword_count+s.r>r.keyword_count+r.r){r=s}if(s.keyword_count+s.r>p.keyword_count+p.r){r=p;p=s}}if(r.language){p.second_best=r}return p}function i(r,q,p){if(q){r=r.replace(/^((<[^>]+>|\t)+)/gm,function(t,w,v,u){return w.replace(/\t/g,q)})}if(p){r=r.replace(/\n/g,"<br>")}return r}function n(t,w,r){var x=h(t,r);var v=a(t);var y,s;if(v){y=d(v,x)}else{return}var q=c(t);if(q.length){s=document.createElement("pre");s.innerHTML=y.value;y.value=k(q,c(s),x)}y.value=i(y.value,w,r);var u=t.className;if(!u.match("(\\s|^)(language-)?"+v+"(\\s|$)")){u=u?(u+" "+v):v}if(/MSIE [678]/.test(navigator.userAgent)&&t.tagName=="CODE"&&t.parentNode.tagName=="PRE"){s=t.parentNode;var p=document.createElement("div");p.innerHTML="<pre><code>"+y.value+"</code></pre>";t=p.firstChild.firstChild;p.firstChild.cN=s.cN;s.parentNode.replaceChild(p.firstChild,s)}else{t.innerHTML=y.value}t.className=u;t.result={language:v,kw:y.keyword_count,re:y.r};if(y.second_best){t.second_best={language:y.second_best.language,kw:y.second_best.keyword_count,re:y.second_best.r}}}function o(){if(o.called){return}o.called=true;var r=document.getElementsByTagName("pre");for(var p=0;p<r.length;p++){var q=b(r[p]);if(q){n(q,hljs.tabReplace)}}}function l(){if(window.addEventListener){window.addEventListener("DOMContentLoaded",o,false);window.addEventListener("load",o,false)}else{if(window.attachEvent){window.attachEvent("onload",o)}else{window.onload=o}}}var e={};this.LANGUAGES=e;this.highlight=d;this.highlightAuto=g;this.fixMarkup=i;this.highlightBlock=n;this.initHighlighting=o;this.initHighlightingOnLoad=l;this.IR="[a-zA-Z][a-zA-Z0-9_]*";this.UIR="[a-zA-Z_][a-zA-Z0-9_]*";this.NR="\\b\\d+(\\.\\d+)?";this.CNR="\\b(0[xX][a-fA-F0-9]+|(\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)";this.BNR="\\b(0b[01]+)";this.RSR="!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|\\.|-|-=|/|/=|:|;|<|<<|<<=|<=|=|==|===|>|>=|>>|>>=|>>>|>>>=|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~";this.ER="(?![\\s\\S])";this.BE={b:"\\\\.",r:0};this.ASM={cN:"string",b:"'",e:"'",i:"\\n",c:[this.BE],r:0};this.QSM={cN:"string",b:'"',e:'"',i:"\\n",c:[this.BE],r:0};this.CLCM={cN:"comment",b:"//",e:"$"};this.CBLCLM={cN:"comment",b:"/\\*",e:"\\*/"};this.HCM={cN:"comment",b:"#",e:"$"};this.NM={cN:"number",b:this.NR,r:0};this.CNM={cN:"number",b:this.CNR,r:0};this.BNM={cN:"number",b:this.BNR,r:0};this.inherit=function(r,s){var p={};for(var q in r){p[q]=r[q]}if(s){for(var q in s){p[q]=s[q]}}return p}}();hljs.LANGUAGES.cpp=function(){var a={keyword:{"false":1,"int":1,"float":1,"while":1,"private":1,"char":1,"catch":1,"export":1,virtual:1,operator:2,sizeof:2,dynamic_cast:2,typedef:2,const_cast:2,"const":1,struct:1,"for":1,static_cast:2,union:1,namespace:1,unsigned:1,"long":1,"throw":1,"volatile":2,"static":1,"protected":1,bool:1,template:1,mutable:1,"if":1,"public":1,friend:2,"do":1,"return":1,"goto":1,auto:1,"void":2,"enum":1,"else":1,"break":1,"new":1,extern:1,using:1,"true":1,"class":1,asm:1,"case":1,typeid:1,"short":1,reinterpret_cast:2,"default":1,"double":1,register:1,explicit:1,signed:1,typename:1,"try":1,"this":1,"switch":1,"continue":1,wchar_t:1,inline:1,"delete":1,alignof:1,char16_t:1,char32_t:1,constexpr:1,decltype:1,noexcept:1,nullptr:1,static_assert:1,thread_local:1,restrict:1,_Bool:1,complex:1},built_in:{std:1,string:1,cin:1,cout:1,cerr:1,clog:1,stringstream:1,istringstream:1,ostringstream:1,auto_ptr:1,deque:1,list:1,queue:1,stack:1,vector:1,map:1,set:1,bitset:1,multiset:1,multimap:1,unordered_set:1,unordered_map:1,unordered_multiset:1,unordered_multimap:1,array:1,shared_ptr:1}};return{dM:{k:a,i:"</",c:[hljs.CLCM,hljs.CBLCLM,hljs.QSM,{cN:"string",b:"'\\\\?.",e:"'",i:"."},{cN:"number",b:"\\b(\\d+(\\.\\d*)?|\\.\\d+)(u|U|l|L|ul|UL|f|F)"},hljs.CNM,{cN:"preprocessor",b:"#",e:"$"},{cN:"stl_container",b:"\\b(deque|list|queue|stack|vector|map|set|bitset|multiset|multimap|unordered_map|unordered_set|unordered_multiset|unordered_multimap|array)\\s*<",e:">",k:a,r:10,c:["self"]}]}}}();hljs.LANGUAGES.r={dM:{c:[hljs.HCM,{cN:"number",b:"\\b0[xX][0-9a-fA-F]+[Li]?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+(?:[eE][+\\-]?\\d*)?L\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+\\.(?!\\d)(?:i\\b)?",e:hljs.IMMEDIATE_RE,r:1},{cN:"number",b:"\\b\\d+(?:\\.\\d*)?(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\.\\d+(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"keyword",b:"(?:tryCatch|library|setGeneric|setGroupGeneric)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\.",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\d+(?![\\w.])",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\b(?:function)",e:hljs.IMMEDIATE_RE,r:2},{cN:"keyword",b:"(?:if|in|break|next|repeat|else|for|return|switch|while|try|stop|warning|require|attach|detach|source|setMethod|setClass)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"literal",b:"(?:NA|NA_integer_|NA_real_|NA_character_|NA_complex_)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"literal",b:"(?:NULL|TRUE|FALSE|T|F|Inf|NaN)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"identifier",b:"[a-zA-Z.][a-zA-Z0-9._]*\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"<\\-(?!\\s*\\d)",e:hljs.IMMEDIATE_RE,r:2},{cN:"operator",b:"\\->|<\\-",e:hljs.IMMEDIATE_RE,r:1},{cN:"operator",b:"%%|~",e:hljs.IMMEDIATE_RE},{cN:"operator",b:">=|<=|==|!=|\\|\\||&&|=|\\+|\\-|\\*|/|\\^|>|<|!|&|\\||\\$|:",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"%",e:"%",i:"\\n",r:1},{cN:"identifier",b:"`",e:"`",r:0},{cN:"string",b:'"',e:'"',c:[hljs.BE],r:0},{cN:"string",b:"'",e:"'",c:[hljs.BE],r:0},{cN:"paren",b:"[[({\\])}]",e:hljs.IMMEDIATE_RE,r:0}]}};
-hljs.initHighlightingOnLoad();
-</script>
+<!-- SLIDE STUFF HERE -->
+<section>
+<h1 class="title">Example</h1>
+<h2 class="author">
+<p>
+<small>
+<a href="https://github.com/trinker">Tyler Rinker</a>
+</small>
+</p>
+</h2>
+<h3 class="date">3-13-13</h3>
+</section>
 
 
-
-
-</head>
-
-<body>
+<section class="slide level1" id="special-features">
 <h1>Special Features</h1>
-
-<ul>
-<li><code>esc</code> to enter the slide overview </li>
+<ul class="incremental">
+<li><code>esc</code> to enter the slide overview</li>
 <li><code>b</code> or <code>.</code> pause (black screen)</li>
 <li><code>alt</code> and click on any element to zoom in on it</li>
-<li><code>s</code> to see presentation notes*
-<br>
-<br>
-*<em>must be online (DropBox is a possibility)</em></li>
+<li><code>s</code> to see presentation notes* <br> <br> *<em>must be online (DropBox is a possibility)</em></li>
 </ul>
+</section>
 
+
+<section class="slide level1" id="slide-1">
 <h1>Slide 1</h1>
-
-<p>Remember many HTML tags are valid<br/>
-So using:<br/>
-<br /><br/>
-[[[<code>&lt;font size=&quot;20&quot; color=&quot;blue&quot; &gt;big blue&lt;/font&gt;</code> font]]]=small</p>
-
-<ul>
-<li>produces&hellip; [[[]]]=frag-roll-in</li>
-<li>Some <font size="20" color="blue" >big blue</font> font [[[]]]=frag-roll-in</li>
+<p>Remember many HTML tags are valid<br>So using:<br><br /><br>
+<p>
+<small>
+<code>&lt;font size=&quot;20&quot; color=&quot;blue&quot; &gt;big blue&lt;/font&gt;</code> font
+</small>
+</p>
+</p>
+<ul class="incremental">
+<p class="fragment roll-in">produces…</p>
+<p class="fragment roll-in">Some <font size=20 color=blue >big blue</font> font</p>
 </ul>
+<p>
+<aside class="notes">
+this it a note</aside>
+</section>
 
-<p>[[[this it a note]]]=notes</p>
 
+<section class="slide level1" id="slide-2">
 <h1>Slide 2</h1>
-
 <p>To run these without a warning use:</p>
-
-<pre><code class="r">reveal.js(ref.page = NULL)
-</code></pre>
-
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">reveal.js</span>(<span class="dt">ref.page =</span> <span class="ot">NULL</span>)</code></pre>
 <p>Highlight code chunks via knitr.</p>
+<p>
+<aside class="notes">
+this it a 2 note</aside>
+</section>
 
-<p>[[[this it a 2 note]]]=notes</p>
 
-<p>[[[kws1PX1Dw9w]]]=yt</p>
+<section class="slide level1" id="section">
+<h1></h1>
+<iframe class="youtube-player" type="text/html" width="800" height="500" src="http://www.youtube.com/embed/kws1PX1Dw9w" frameborder="0"> </iframe>
+</section>
 
+
+<section class="slide level1" id="slide-4">
 <h1>Slide 4</h1>
+<figure>
+<img src="figure/unnamed-chunk-2.png"><figcaption></figcaption>
+</figure>
+</section>
 
-<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASAAAAEgCAMAAAAjXV6yAAAAulBMVEUAAAAAADoAAGYAOmYAOpAAZrYzZv86AAA6AGY6kNs9PT1mAABmADpmAGZmOgBmZjpmtv9/f39/f5V/f6t/lcF/q9aQOgCQOjqQkDqQ2/+Vf3+Vf6uVlcGVweurf6urlZWr1v+2ZgC2/7a2///BlX/BlZXBlavBwdbB6//Hx8fOzs7Wq3/W1tbW///bkDrb///l5eXrwZXr1qvr///y8vL/tmb/1qv/25D/68H//7b//9b//9v//+v///+exjgNAAAACXBIWXMAAAsSAAALEgHS3X78AAALrElEQVR4nO2dDVvcNhLHt73ETTehl21Detx1W3Kk7clrCDSBhAZ//691frdeRhrJsvymmScPC4v+zOgXSbYsaXaXkxltN3cASzcChBgBQowAIUaAECNAiBEgxAgQYgQIMQKEGAFCjAAhRoAQcwd0Cxj4ZmGfNO/ryjsLAjggQIiAACECAoQICBAiIECIgAAhAgKECAgQIrAH9Pev1/nT+8Phzcf8dPjxfxsEtNsBAmtAD4efrvOH8zw/XT68+Vj82xyg3a4n5A7o6c+nP66r7+4u745Vc8rzQ2H6Jrc2KwHhhfS/agAVjejusv0h31IL8uxiDZNT0cm6FrQxQKDADdDT+8uyEW1zDIIFboBO5ahz3OpVDBTYA9LYzPEHd0CAEAEBQgQECBEQIERAgBABAUIEBAgRECBEQIAQAQGCjBEgs4AAmQWMAJkFBMgsYATILCBAiIAAmQWMAJkFBAgRECCzgBEgs4AAmQWMAJkFBMgsYATILBgf0CfAwDcN5lo+nIO0sV5ALUgwRl3MLCBAZgEjQGYBAUIEBMgsYATILCBAZkHPhyW9lAB1tt93fKgFAYL9viWUUBcDBIwAmQU9oIQGaUDACJBZwEpCLR8CpAj4SzwBUgUSHwIkCwgQIpD4ECBJIPMhQJKAAJkdKHwIkChQ+Oy506sESG1A+z13QHxzgLizy3YO1A62aUB8egArB/It0Na7mAegpP92y4O0YxcD+WwakKMDAmR2APMZDqhOKTBPYgEwtYavA5jPYEB1Uop5UlPA2Ws8HaQwn8GAvvzyscz+Mkt6HKvsNY6WtZZkoumjQP7iQ5mAaqb0OON3McZSsP0Mb0F35/mX/1xvJj1OAEAVmq2kx2EtIIXP7VBAZZK3y7muYpYOrG8UmQ6QIHADBJhr/C7lg041WAdIbkC3BOi2nYKlMJ8tA7LsYkwLSBJsD5BVedYDgvhED4j1gBIAT/SAmA4QIIgdEMwnckAcEg2fuAHxfFKYT9SAhPaT8nw8c7luBJDYv1KBj0+65K0AYjCg8lfxAQLqK/ERAEXXxbgW0ZaX+bSADA6iAqTwaQCZHGwYkNLFBD71ltYU5hMJIKm8xKcilMJ8ogQk9q8eEOIgCkBFX2Min3bXOAEqrRis9zKfxlKYT3SA9lpAqIMYAN1q+TDcQQSACg6Zho+Fg+0DYiIggQ8Baq7umYbPtgAN2rzAREASn00BGrI/qGWRafhMAWiy9D4lIDcHaWdZ9TVJ+ndS24jW04KcuxjXWjK5+TBIAEZkBPR4dtV9nR+QmwOeRgUIXMDwAvT4clfbsw9rA8Qky3QLPKO0ILMNid+2vDsg1p1d5q14S7MAtqWrGCYoa55yp995Pnt4Bd4f0M2zDze73evlA2pqrgOU7GE+3l3s1UXx7/OLpQ3SyhYg1gMCulii5WOxocgM6OyqaEOLAyRvIuvrnspsKj7iZFV2gGxJMwLKb3bfXNwvrouJVeJZQIDK4acHpDrwAmRhLhUev4tJMABA1fBsAuTTxZYKCFrnggElFZ9+WHKPyADo8ey/9a3itwsbg9RVCg2gGg93YRsQ0WpbEMRHBJT0Z3QbQEMiWikgBQ23UNrQSeRfDovIAKibiy2uiwmXbb6RpACd0jINH+8W9O774svN84W1IGYAlCQKnRrQ0IiMgJb5uIMBgKr5KMim+eXgiIyAvr6tWtCyHne0XUayhN8PpTQv4FbHMiIjoIJQMQQZe9jkgLoxRcWjBwTdC1pGZAZkYS4VHgJIqls3pgB4ZEDd/aGWzwYASTMlBgDiBh4BUHv7Y3aARbQqQF3ddUvJECDEARbR0gHdQnz4lVLhugV0MdQBEtHiAfXGVb1bCJQu6/Ig7eYAjGg9gPiKZ2rvggC5OYAjWgsgseYZ1HyY/MjVyYEuopUAkkAoC4E9oGpodnegFawCkAIig5pPDcg5AxUS0RoAqSA0c65qy6FzkjdzRM6A7o5TZ14A+HSX+W7AKb8JsvDmCujhcMynzd0BNZ+sw9IQauaj8wP68stfx0nzB2WK8al+SkDVNyGSC4GGeClTvxynzB8EdK96kBa7WDvyzN6C7so2c5wuf5BmGUeazXs4CDBIP0w2BjHdMo5+KXkhgKa5ijEZELeHJYP5SA7wTZ9rvg9iMqB90k8iMhCPsqdROZI5IKJlAmrrzwFKkn20gLTbfeq5VTv6cBt/MpjPRruYfrtPAai6FVRmFhnMZxGDdHBATAEELgRCfDYK6FbLp+5iwMS0W0rupMYbxe2sasggUs3EPev4NHVvvrHrwy4RLQqQCiLVPNfI5KpHAAgEoXns0zuIp4uBeBJoKXmgg6GCZQDSNR8V0EAHmvdXAgjarCFmr5H4RAWorLb6BLW5eLmuc20QEOMB9R/DmAhb6iQ8MQFiEKAkkfYcMvmuORJAaseq+fTvpfwO1f5i7XFb4yyYDxDrqQgHdMTtLP1CaX+7p7/x2w4gfmwRAMnbWfr9hesHhO820awky9cusYsBHWulXYzZ3abIeBh07r8bpN0qvHhAyIauT/CMqwEkHh6oALlWeAWAKkZqPHWngHfpNrtZxIlpvX1um4CAnf9NDig9IOixxoAKrwiQaMp9n2jgU58hFV4tIOW0ksgHmKzuBz3fWS+g2uBDyYlafugTwiUC0mejsbIqZY1cXsyFY0yUY2eu+XrCpMcZ0oK0mzWGPUJdYgvyAdQdupXxDK3wtgC11y5uLrbf+1V4S4D4aVcLaC+PvjEC6jcjdMad6yJA4GaEbi+CPPrGCUi9b9btRYgREDitAI61D9u1unpAmnPb6rF24530ZgHpTlh0exF6ixFQkugmq1D88XUx/bl/r/j9yi8HELiS3OCJBRCXWF85998MPgEOJfuVnxIQn1k/g+jIgLizkxEDMhxr5zJqRAEI6GLKXY/YxUbZ5+1XftZBWnNqu7Nx4vcrPx8g+JbZdTfLNgHpE0H1gMaL36/89IBqNsgDszHj9ys/NaC25RgBjRu/X/lpAfUdywRo5Pj9yi9nqtGurI4ev1/5xQAauJslNkAh4vcrv5DJKmtTPUYNSDdZbS1Q/H7lFwQoVPx+5UMBAhMLGLpYwPj9ygcCpElNoR2kQ8bvVz4QIE16HDWTTWU2f3E9ZgcITo8Dt6DA/8F+5UO3IAtAoeP3Kz//GBQ8/uAOhgDSpMdRAU0Qf3AHgwDx1v9RAuQKaIr4gzsICGiS+IM7CAdomviDOwgFaKr4gzsIBGiy+IM7CAJowviDOyBAiCAEoCnjD+4gAKBJ4w/uYHxA08Yf3MHogCaOP7iDsQFNHX9wByMDmjz+4A7GBTR9/MEdjApohviDOxgT0BzxB3cwIqBZ4g/ugAAhAgKECAgQIiBAiIAAIQIChAgIECIgQIiAACECb0BjpOvxSO8T3IE3IMhcP3TM+UPK5nNAgBABAUIEBAgRTPNBgSs2AoQYAUKMACFGgBAbA9DpwG2CRa3acX1yUDQCS8XT+8PhzUcHB50AVowA6Ol3ezrlRyP/dC1uvLYR2Pt4OC9oXjo4qAVaByMA+vu3fx/ObQs//VkeahC27tsInHzkd5cODmqB1sEIgB6K/+G7S+viFSD+8IeNwMlH0SacHJQCrYORBuny02otzbEF5V1NbX2cznM3B6em6YAOxmhBx9y1BbmMQbXA2sfT+7KYg4NGoHMw0lXsaF+6ahAuV7FGYOnjVH18t4ODTgA7oPsgxAgQYgQIMQKEGAFCbG2Avr59Pa1DAoTY4gDd73bfXuWPZ//afXOR548vy5+4l3/8EDmgx7Or/OZ5geLZh/uCybvvy5+4l/td7IBeXVQvL1/nX3++KH8qkLUvBTzqYp+/K/tWxend66JP7Yofm5fPL67KN6eNZ3GACrt/9qEEVLagos3kdb9rXqJvQQWcCtDL59W35agjvsQ+BuXv6qvYq3+2VzHu5etbuoo11ozVCzAChNhCAS3HCBBiBAgxAoQYAUKMACFGgBAjQIj9H+PSzTfqJ5WfAAAAAElFTkSuQmCC" alt=""/> </p>
 
-<p>[[[]]]=sud</p>
-
+<section>
+<section>
 <h1>Slide 5a</h1>
+<p>Going down?<br><img src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png"></p>
+<p>
+<aside class="notes">
+this it a 3 note</aside>
+</section>
 
-<p>Going down?<br/>
-<img src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt=""/></p>
 
-<p>[[[this it a 3 note]]]=notes </p>
-
+<section class="slide level1" id="slide-5b">
 <h1>Slide 5b</h1>
-
-<blockquote>
-<p>He was a very important man who was evidently the best situation that he could 
-possible attend to but that&#39;s this slide anyway!</p>
+<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+He was a very important man who was evidently the best situation that he could possible attend to but that’s this slide anyway!
 </blockquote>
+</section>
 
-<h1>Slide 5c [[[]]]=bg-soothe</h1>
 
-<p>Change background colors </p>
+<section data-state="soothe">
+<h1>Slide 5c</h1>
+<p>Change background colors</p>
+</section>
 
+
+<section class="slide level1" id="slide-5d">
 <h1>Slide 5d</h1>
-
-<ul>
-<li>point 1 [[[]]]=frag<br/></li>
-<li>point 2 [[[]]]=frag<br/></li>
-<li>point 3 [[[]]]=frag </li>
-<li>point 4 [[[]]]=frag-rollin<br/></li>
-<li>not a point [[[]]]=frag-highlight-green </li>
-<li>just colorful [[[]]]=frag-highlight-blue</li>
-<li>huh? [[[]]]=frag-highlight-red<br/></li>
+<ul class="incremental">
+<p class="fragment character(0)">point 1 <br></p></p>
+<p class="fragment character(0)">point 2 <br></p></p>
+<p class="fragment character(0)">point 3 </p></p>
+<p class="fragment rollin<br>">point4</p>
+<p class="fragment highlight-green">not a point</p>
+<p class="fragment highlight-blue">just colorful</p>
+<p class="fragment highlight-red">huh?</p>
 </ul>
+<p>
+<aside class="notes">
+this it a 2 note</aside>
+</section>
 
-<p>[[[this it a 2 note]]]=notes</p>
 
-<p>[[[]]]=eud</p>
+</section>
 
+
+<section class="slide level1" id="last-slide">
 <h1>Last slide</h1>
+<p>For more see: <a href="http://lab.hakim.se/reveal-js/#/">reveal.js</a><br>Created with <a href="https://github.com/trinker/reports">reports</a> package</p>
+</section>
 
-<p>For more see: <a href="http://lab.hakim.se/reveal-js/#/">reveal.js</a><br/>
-Created with <a href="https://github.com/trinker/reports">reports</a> package</p>
 
-</body>
+<!-- SLIDE STUFF HERE -->
+ 			</div>
 
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
 </html>
-
