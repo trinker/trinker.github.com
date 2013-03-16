@@ -1,6 +1,6 @@
-% Quick Start Guide: reports package
-% Tyler Rinker
-% 3-13-13
+% Quick Start Guide:<br>reports package
+% [Tyler Rinker](http://about.me/tylerrinker)
+% `r as.character(format(Sys.Date(), format="%B %d, %Y"))`
 
 ```{r setup, include=FALSE}
 # Ret global chunk options
@@ -13,17 +13,18 @@ write.bibtex(c(Francois2013= citation("bibtex"), "Yihui2013" = citation("knitr")
 bib <- read.bibtex("reports.bib")
 ```
 
-# Purpose
+# Purpose   
 reports (`r citep(bib[4])`) is a package that assists in writing flexible reports
 and presentations.  The package is designed to be used with RStudio,
-MiKTex/TexLive/LibreOffice, knitr and Pandoc. 
-![](https://dl.dropbox.com/u/61803503/packages/reports.JPG)
+MiKTex/TexLive/LibreOffice, knitr and Pandoc.  
+
+<p align="center"><img src="https://dl.dropbox.com/u/61803503/packages/reports.JPG" width="450" height="315"></p>
 
 # reports Will Make You...
-- Efficient    
-- Organized    
-- Consistent     
-- Happy    
+- <font size=20>Efficient</font>        
+- <font size=20>Organized</font>     
+- <font size=20>Consistent</font>      
+- <font size=20>Happy</font>     
 
 # Getting Started
 **Download:**    
@@ -34,8 +35,10 @@ MiKTex/TexLive/LibreOffice, knitr and Pandoc.
 * Pandoc - [http://johnmacfarlane.net/pandoc/](http://johnmacfarlane.net/pandoc/)     
 * knitr (`r citep(bib[2])`) - [http://yihui.name/knitr/](http://yihui.name/knitr/)     
 * knitcitations (`r citep(bib[3])`) 
-
-[[[`install.packages(c("reports", "knitr", "knitcitations"))`]]]=hi
+<br><br>
+```{r eval=FALSE}
+install.packages("reports")
+```
 
 
 # Windows Users...
@@ -88,13 +91,11 @@ presentation("NEW")
 # 
 [[[kws1PX1Dw9w]]]=yt
 
+# REVEAL.JS Slides
+These slides are pretty slick: [reveal.js](http://trinker.github.com/reports/examples/output/reveal.js/)
 
-# Example Demos
-Example Demos can be downloaded from:    
-[http://trinker.github.com/reports/examples](http://trinker.github.com/reports/examples)
 
 # References
 ```{r, echo=FALSE, results='asis'}
 bibliography("html") 
 ```
-

@@ -1,21 +1,22 @@
-% Quick Start Guide: reports package
-% Tyler Rinker
-% 3-13-13
+% Quick Start Guide:<br>reports package
+% [Tyler Rinker](http://about.me/tylerrinker)
+% March 16, 2013
 
 
 
 
-# Purpose
+# Purpose   
 reports (Rinker, 2013) is a package that assists in writing flexible reports
 and presentations.  The package is designed to be used with RStudio,
-MiKTex/TexLive/LibreOffice, knitr and Pandoc. 
-![](https://dl.dropbox.com/u/61803503/packages/reports.JPG)
+MiKTex/TexLive/LibreOffice, knitr and Pandoc.  
+
+<p align="center"><img src="https://dl.dropbox.com/u/61803503/packages/reports.JPG" width="450" height="315"></p>
 
 # reports Will Make You...
-- Efficient    
-- Organized    
-- Consistent     
-- Happy    
+- <font size=20>Efficient</font>        
+- <font size=20>Organized</font>     
+- <font size=20>Consistent</font>      
+- <font size=20>Happy</font>     
 
 # Getting Started
 **Download:**    
@@ -26,8 +27,12 @@ MiKTex/TexLive/LibreOffice, knitr and Pandoc.
 * Pandoc - [http://johnmacfarlane.net/pandoc/](http://johnmacfarlane.net/pandoc/)     
 * knitr (Xie, 2013) - [http://yihui.name/knitr/](http://yihui.name/knitr/)     
 * knitcitations (Boettiger, 2013) 
+<br><br>
 
-[[[`install.packages(c("reports", "knitr", "knitcitations"))`]]]=hi
+```r
+install.packages("reports")
+```
+
 
 
 # Windows Users...
@@ -86,10 +91,9 @@ presentation("NEW")
 # 
 [[[kws1PX1Dw9w]]]=yt
 
+# REVEAL.JS Slides
+These slides are pretty slick: [reveal.js](http://trinker.github.com/reports/examples/output/reveal.js/)
 
-# Example Demos
-Example Demos can be downloaded from:    
-[http://trinker.github.com/reports/examples](http://trinker.github.com/reports/examples)
 
 # References
 <p>Boettiger C (2013).
@@ -104,5 +108,4 @@ version 0.1.0, <a href="http://github.com/trinker/reports">http://github.com/tri
 <p>Xie Y (2013).
 <EM>knitr: A general-purpose package for dynamic report generation in R</EM>.
 R package version 1.1, <a href="http://yihui.name/knitr/">http://yihui.name/knitr/</a>.
-
 
