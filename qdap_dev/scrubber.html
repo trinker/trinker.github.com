@@ -40,7 +40,8 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre><span class="functioncall"><a href='scrubber.html'>scrubber</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="argument">num2word</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">rm.quote</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">fix.comma</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">)</span></pre>
+    <pre><span class="functioncall"><a href='scrubber.html'>scrubber</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="argument">num2word</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">rm.quote</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">fix.comma</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">fix.space</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span>
+  <span class="symbol">...</span><span class="keyword">)</span></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -52,6 +53,9 @@
       <dt>fix.comma</dt>
       <dd>logical If TRUE removes any spaces
   before a comma.</dd>
+      <dt>fix.space</dt>
+      <dd>logical.  If TRUE extra spaces before
+  endmarks are removed.</dd>
       <dt>rm.quote</dt>
       <dd>logical If TRUE removes any <code>\"</code>.</dd>
       <dt>...</dt>
