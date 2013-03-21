@@ -115,7 +115,10 @@
   for interaction with <code>cm_range2long</code>.</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # #mcsv_r EXAMPLE:# mtcarsb <- mtcars[1:5, ]; CO2b <- CO2[1:5, ]# (a <- mcsv_w(mtcarsb, CO2b, dir="foo"))# rm("mtcarsb", "CO2b")  # gone from .GlobalEnv# (nms <- dir(a))# mcsv_r(paste(a, nms, sep="/"))# mtcarsb; CO2b# rm("mtcarsb", "CO2b")  # gone from .GlobalEnv# mcsv_r(paste(a, nms, sep="/"), paste0("foo.dat", 1:2))# foo.dat1; foo.dat2# rm("foo.dat1", "foo.dat2")  # gone from .GlobalEnv# delete("foo")# # #mcsv_w EXAMPLE:# (a <- mcsv_w(mtcars, CO2, dir="foo"))# delete("foo")# ## <strong>End(Not run)</strong></div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>mcsv_r</li><li>mcsv_w</li>

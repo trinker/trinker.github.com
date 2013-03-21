@@ -150,7 +150,10 @@
       <p><a href = 'https://github.com/trinker/qdap/wiki/Reading-.docx-%5BMS-Word%5D-Transcripts-into-R'>https://github.com/trinker/qdap/wiki/Reading-.docx-%5BMS-Word%5D-Transcripts-into-R</a></p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # #Note: to view the document below use the path:# gsub("trans1.docx", "", system.file("extdata/transcripts/trans1.docx", package = "qdap"))# (doc1 <- system.file("extdata/transcripts/trans1.docx", package = "qdap"))# (doc2 <- system.file("extdata/transcripts/trans2.docx", package = "qdap"))# (doc3 <- system.file("extdata/transcripts/trans3.docx", package = "qdap"))# (doc4 <- system.file("extdata/transcripts/trans4.xlsx", package = "qdap"))# # dat1 <- read.transcript(doc1)# truncdf(dat1, 40)# dat2 <- read.transcript(doc1, col.names = c("person", "dialogue"))# truncdf(dat2, 40)# dat2b <- rm_row(dat2, "person", "[C") #remove bracket row# truncdf(dat2b, 40)# # ## read.transcript(doc2) #throws an error (need skip)# dat3 <- read.transcript(doc2, skip = 1); truncdf(dat3, 40)# # ## read.transcript(doc3, skip = 1) #incorrect read; wrong sep# dat4 <- read.transcript(doc3, sep = "-", skip = 1); truncdf(dat4, 40)# # dat5 <- read.transcript(doc4); truncdf(dat5, 40) #an .xlsx file# trans <- "sam: Computer is fun. Not too fun.# greg: No it's not, it's dumb.# teacher: What should we do?# sam: You liar, it stinks!"# # read.transcript(text=trans)# ## <strong>End(Not run)</strong></div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>read.transcript</li>
