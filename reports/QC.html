@@ -101,15 +101,11 @@
     
     <h2 id="examples">Examples</h2>
     <pre class="examples"><div class='input'><span class="symbol">x</span> <span class="assignement">&lt;-</span> <span class="string">"\\*note: I *like* chocolate **milk** too ***much***!"</span>
-<span class="functioncall"><a href='QC.html'>QC</a></span><span class="keyword">(</span><span class="symbol">x</span><span class="keyword">)</span></div>
-<strong class='warning'>Warning message:
-running command '"C:\PROGRA~2\Pandoc\bin\pandoc.exe" -f markdown -t \*note: I *like* chocolate **milk** too ***much***!' had status 1</strong>
-<div class='output'>[1] "pandoc.exe: I: openFile: does not exist (No such file or directory)"
+<span class="functioncall"><a href='QC.html'>QC</a></span><span class="keyword">(</span><span class="argument">text</span><span class="argument">=</span><span class="symbol">x</span><span class="keyword">)</span></div>
+<div class='output'>[1] "*note: I \\emph{like} chocolate \\textbf{milk} too \\textbf{\\emph{much}}!"
 </div>
-<div class='input'><span class="functioncall"><a href='QC.html'>QC</a></span><span class="keyword">(</span><span class="symbol">x</span><span class="keyword">,</span> <span class="string">"html"</span><span class="keyword">)</span></div>
-<strong class='warning'>Warning message:
-running command '"C:\PROGRA~2\Pandoc\bin\pandoc.exe" -f html -t \*note: I *like* chocolate **milk** too ***much***!' had status 1</strong>
-<div class='output'>[1] "pandoc.exe: I: openFile: does not exist (No such file or directory)"
+<div class='input'><span class="functioncall"><a href='QC.html'>QC</a></span><span class="keyword">(</span><span class="argument">text</span><span class="argument">=</span><span class="symbol">x</span><span class="keyword">,</span> <span class="string">"html"</span><span class="keyword">)</span></div>
+<div class='output'>[1] "<p>*note: I <em>like</em> chocolate <strong>milk</strong> too <strong><em>much</em></strong>!</p>"
 </div></pre>
   </div>
   <div class="span4">
