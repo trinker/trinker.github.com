@@ -88,7 +88,26 @@
     </div>
     
     <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # x <- readLines(n = 3)# one, two buckle my shoe# three, four close the door# five, six pick up sticks# LL(, x)# LL(FALSE, x)# ## <strong>End(Not run)</strong></div></pre>
+    <pre class="examples"><div class='input'><span class="symbol">x</span> <span class="assignement">&lt;-</span> <span class="functioncall"><a href='http://www.inside-r.org/r-doc/base/c'>c</a></span><span class="keyword">(</span>
+<span class="string">"one, two buckle my shoe"</span><span class="keyword">,</span>
+<span class="string">"three, four close the door"</span><span class="keyword">,</span>
+<span class="string">"five, six pick up sticks"</span><span class="keyword">)</span>
+<span class="functioncall"><a href='LL.html'>LL</a></span><span class="keyword">(</span><span class="keyword">,</span> <span class="symbol">x</span><span class="keyword">)</span></div>
+<div class='output'>                                    
+ \\begin{enumerate}                 
+   \\item one, two buckle my shoe   
+   \\item three, four close the door
+   \\item five, six pick up sticks  
+ \\end{enumerate}                   
+</div>
+<div class='input'><span class="functioncall"><a href='LL.html'>LL</a></span><span class="keyword">(</span><span class="number">FALSE</span><span class="keyword">,</span> <span class="symbol">x</span><span class="keyword">)</span></div>
+<div class='output'>                                    
+ \\begin{itemize}                   
+   \\item one, two buckle my shoe   
+   \\item three, four close the door
+   \\item five, six pick up sticks  
+ \\end{itemize}                     
+</div></pre>
   </div>
   <div class="span4">
     <!-- <ul>

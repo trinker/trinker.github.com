@@ -83,7 +83,18 @@
     </div>
     
     <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # rdirs(admin, 1:15, c("d", "f", "w"), c(1, 4, 6))# rdirs(admin, 1:15, c("d", "f", "w"), c(1, 4, 6), text.only = TRUE)# rdirs(session, 1:12, seq(as.Date("2000/1/1"), by = "month", length.out = 12))# # x <- rdirs(admin, 1:15, c("d", "f", "w"), c(1, 4, 6), text.only = TRUE)# lapply(x, new_report)# ## <strong>End(Not run)</strong></div></pre>
+    <pre class="examples"><div class='input'><span class="comment">## fx &lt;- folder(delete_me)</span>
+<span class="comment">## rdirs(admin, 1:15, c("d", "f", "w"), c(1, 4, 6))</span>
+<span class="functioncall"><a href='rdirs.html'>rdirs</a></span><span class="keyword">(</span><span class="symbol">admin</span><span class="keyword">,</span> <span class="number">1</span><span class="keyword">:</span><span class="number">15</span><span class="keyword">,</span> <span class="functioncall"><a href='http://www.inside-r.org/r-doc/base/c'>c</a></span><span class="keyword">(</span><span class="string">"d"</span><span class="keyword">,</span> <span class="string">"f"</span><span class="keyword">,</span> <span class="string">"w"</span><span class="keyword">)</span><span class="keyword">,</span> <span class="functioncall"><a href='http://www.inside-r.org/r-doc/base/c'>c</a></span><span class="keyword">(</span><span class="number">1</span><span class="keyword">,</span> <span class="number">4</span><span class="keyword">,</span> <span class="number">6</span><span class="keyword">)</span><span class="keyword">,</span> <span class="argument">text.only</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">)</span></div>
+<div class='output'> [1] "admin_01_d_1" "admin_02_f_4" "admin_03_w_6" "admin_04_d_1" "admin_05_f_4" "admin_06_w_6" "admin_07_d_1"
+ [8] "admin_08_f_4" "admin_09_w_6" "admin_10_d_1" "admin_11_f_4" "admin_12_w_6" "admin_13_d_1" "admin_14_f_4"
+[15] "admin_15_w_6"
+</div>
+<div class='input'><span class="comment">## rdirs(session, 1:12, seq(as.Date("2000/1/1"), by = "month", length.out = 12))</span>
+
+<span class="symbol">x</span> <span class="assignement">&lt;-</span> <span class="functioncall"><a href='rdirs.html'>rdirs</a></span><span class="keyword">(</span><span class="symbol">admin</span><span class="keyword">,</span> <span class="number">1</span><span class="keyword">:</span><span class="number">15</span><span class="keyword">,</span> <span class="functioncall"><a href='http://www.inside-r.org/r-doc/base/c'>c</a></span><span class="keyword">(</span><span class="string">"d"</span><span class="keyword">,</span> <span class="string">"f"</span><span class="keyword">,</span> <span class="string">"w"</span><span class="keyword">)</span><span class="keyword">,</span> <span class="functioncall"><a href='http://www.inside-r.org/r-doc/base/c'>c</a></span><span class="keyword">(</span><span class="number">1</span><span class="keyword">,</span> <span class="number">4</span><span class="keyword">,</span> <span class="number">6</span><span class="keyword">)</span><span class="keyword">,</span> <span class="argument">text.only</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">)</span>
+<span class="comment">## lapply(x, new_report)</span>
+<span class="comment">## delete(fx)</span></div></pre>
   </div>
   <div class="span4">
     <!-- <ul>
@@ -95,8 +106,7 @@
       
     <h2>See also</h2>
     
-  <code>folder</code>,
-  <code>delete</code>,
+  <code>folder</code>, <code>delete</code>,
   <code><a href='http://www.inside-r.org/r-doc/base/files2'>dir.create</a></code>
 
         
