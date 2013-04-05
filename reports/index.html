@@ -39,32 +39,15 @@
   <div class="span8">
     <h1>reports</h1>
 
+<p><img src="https://dl.dropbox.com/u/61803503/packages/reports.JPG" width="300" height="200"></p>
+
+
 <p>reports is a package that assists in writing reports and presentations by providing a frame work that brings together existing R, LaTeX/.docx and Pandoc tools.  The package is designed to be used with <a href="http://www.rstudio.com/">RStudio</a>, <a href="http://miktex.org/">MikTex</a>/<a href="http://www.tug.org/texlive/">Tex Live</a>/<a href="http://www.libreoffice.org/">LibreOffice</a>, <a href="http://yihui.name/knitr/">knitr</a>, <a href="http://www.carlboettiger.info/2012/05/30/knitcitations.html">knitcitations</a>, <a href="http://johnmacfarlane.net/pandoc/">Pandoc</a> and <a href="https://github.com/rapporter/pander">pander</a>.  The user will want to download these free programs to maximize the effectiveness of the reports package.</p>
 
-<p><img src="https://dl.dropbox.com/u/61803503/packages/reports.JPG" alt=""/></p>
+<h2>Development Version Installation</h2>
 
-<h2>Installation</h2>
 
-<p>To download the development version of reports:</p>
-
-<p>download the <a href="https://github.com/trinker/reports/zipball/master">zip ball</a> or <a href="https://github.com/trinker/reports/tarball/master">tar ball</a>, decompress and run <code>R CMD INSTALL</code> on it, or use the <strong>devtools</strong> package to install the development version:</p>
-
-<pre><code class="r"># install.packages(&quot;devtools&quot;)
-
-library(devtools)
-install_github(&quot;reports&quot;, &quot;trinker&quot;)
-</code></pre>
-
-<p>Note: Windows users need <a href="http://www.murdoch-sutherland.com/Rtools/">Rtools</a> and <a href="http://CRAN.R-project.org/package=devtools">devtools</a> to install this way.</p>
-
-<h2>Help</h2>
-
-<p>For an intoductory video <a href="http://youtu.be/kws1PX1Dw9w">click here</a><br/>
-For quick start slides <a href="http://trinker.github.com/reports/slides/reports.html">click here</a><br/>
-The qdap web page: <a href="http://trinker.github.com/reports/">trinker.github.com/reports</a><br/>
-For example demos <a href="http://trinker.github.com/reports/examples/">click here</a><br/>
-For the package pdf help manual <a href="https://dl.dropbox.com/u/61803503/reports.pdf">click here</a>       </p>
-
+<p>Download the development version of reports <a href="https://github.com/trinker/reports/">here</a> 
 
     <h2>Help topics</h2>
 
@@ -100,7 +83,10 @@ For the package pdf help manual <a href="https://dl.dropbox.com/u/61803503/repor
         <code><a href="FT.html">FT</a></code><br />Wrap Text With Font Tag</li>
             
       <li>
-        <code><a href="QQ.html">GQ</a></code>(QQ)<br />Format Quotes</li>
+        <code><a href="QQ.html">GQ</a></code><br />Format Quotes</li>
+      <li>
+        <code><a href="QQ.html">QQ</a></code><br />Format Quotes</li>
+            
             
       <li>
         <code><a href="IM.html">IM</a></code><br />Convert path/url to HTML Tag</li>
@@ -125,7 +111,25 @@ For the package pdf help manual <a href="https://dl.dropbox.com/u/61803503/repor
     <ul class="index">
         
       <li>
-        <code><a href="cite.html">citeL</a></code>(parenciteL, parenciteM, posciteL, possciteL, textciteL, textciteM)<br />Format Quotes with Citations</li>
+        <code><a href="cite.html">citeL</a></code><br />Format Quotes with Citations</li>
+      <li>
+        <code><a href="cite.html">parenciteL</a></code><br />Format Quotes with Citations</li>
+            
+      <li>
+        <code><a href="cite.html">parenciteM</a></code><br />Format Quotes with Citations</li>
+            
+      <li>
+        <code><a href="cite.html">posciteL</a></code><br />Format Quotes with Citations</li>
+            
+      <li>
+        <code><a href="cite.html">possciteL</a></code><br />Format Quotes with Citations</li>
+            
+      <li>
+        <code><a href="cite.html">textciteL</a></code><br />Format Quotes with Citations</li>
+            
+      <li>
+        <code><a href="cite.html">textciteM</a></code><br />Format Quotes with Citations</li>
+            
             
       <li>
         <code><a href="notes.html">notes</a></code><br />View Notes</li>
@@ -141,7 +145,10 @@ For the package pdf help manual <a href="https://dl.dropbox.com/u/61803503/repor
     <ul class="index">
         
       <li>
-        <code><a href="file_handling.html">delete</a></code>(folder)<br />Easy File Handling</li>
+        <code><a href="file_handling.html">delete</a></code><br />Easy File Handling</li>
+      <li>
+        <code><a href="file_handling.html">folder</a></code><br />Easy File Handling</li>
+            
             
       <li>
         <code><a href="pad.html">pad</a></code><br />Pad Strings</li>
@@ -157,7 +164,16 @@ For the package pdf help manual <a href="https://dl.dropbox.com/u/61803503/repor
     <ul class="index">
         
       <li>
-        <code><a href="docx.html">tex2docx</a></code>(md2docx, md2tex, tex2html)<br />Convert tex/markdown to docx</li>
+        <code><a href="docx.html">tex2docx</a></code><br />Convert tex/markdown to docx</li>
+      <li>
+        <code><a href="docx.html">md2docx</a></code><br />Convert tex/markdown to docx</li>
+            
+      <li>
+        <code><a href="docx.html">md2tex</a></code><br />Convert tex/markdown to docx</li>
+            
+      <li>
+        <code><a href="docx.html">tex2html</a></code><br />Convert tex/markdown to docx</li>
+            
     
     </ul>
     <h3>USer Defined Templates</h3>
@@ -181,24 +197,6 @@ For the package pdf help manual <a href="https://dl.dropbox.com/u/61803503/repor
             
       <li>
         <code><a href="reveal.js.html">reveal.js</a></code><br />Convert md to HTML5 reveal.js</li>
-    
-    </ul>
-    <h3>Other</h3>
-    
-    
-    <ul class="index">
-        
-      <li>
-        <code><a href="print.reports.html">print.reports</a></code><br />Prints a reports Object</li>
-            
-      <li>
-        <code><a href="reports.html">reports</a></code>(package-reports, reports-package)<br />reports: Assists in the workflow of writing academic articles and other reports</li>
-            
-      <li>
-        <code><a href="templates.html">templates</a></code><br />View Templates</li>
-            
-      <li>
-        <code><a href="themes.html">themes</a></code><br />themes</li>
     
     </ul>
   </div>
