@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>bracketX. qdap 0.2.1</title>
+<title>bracketX. qdap 0.2.2</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="
   Martin Morgan and Tyler Rinker &lt;tyler.rinker@gmail.com&gt;.
@@ -22,7 +22,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.2.1</a>
+      <a class="brand" href="#">qdap 0.2.2</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -42,11 +42,12 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre><span class="functioncall"><a href='bracketX.html'>bracketX</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="argument">bracket</span> <span class="argument">=</span> <span class="string">"all"</span><span class="keyword">,</span> <span class="argument">missing</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">names</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">scrub</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">)</span>
+    <pre><span class="functioncall"><a href='bracketX.html'>bracketX</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="argument">bracket</span> <span class="argument">=</span> <span class="string">"all"</span><span class="keyword">,</span> <span class="argument">missing</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">names</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">fix.space</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span>
+  <span class="argument">scrub</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">)</span>
 
 <span class="functioncall"><a href='bracketX.html'>bracketXtract</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="argument">bracket</span> <span class="argument">=</span> <span class="string">"all"</span><span class="keyword">,</span> <span class="argument">with</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">merge</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">)</span>
 
-<span class="functioncall"><a href='bracketX.html'>genX</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="symbol">left</span><span class="keyword">,</span> <span class="symbol">right</span><span class="keyword">,</span> <span class="argument">missing</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">names</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">scrub</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">)</span>
+<span class="functioncall"><a href='bracketX.html'>genX</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="symbol">left</span><span class="keyword">,</span> <span class="symbol">right</span><span class="keyword">,</span> <span class="argument">missing</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">names</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">fix.space</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">scrub</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">)</span>
 
 <span class="functioncall"><a href='bracketX.html'>genXtract</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="symbol">left</span><span class="keyword">,</span> <span class="symbol">right</span><span class="keyword">,</span> <span class="argument">with</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">merge</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">)</span></pre>
     
@@ -65,6 +66,9 @@
       <dt>names</dt>
       <dd>logical.  If TRUE the sentences are given as
   the names of the counts.</dd>
+      <dt>fix.space</dt>
+      <dd>logical.  If TRUE extra spaces left
+  behind from an extraction will be eliminated.</dd>
       <dt>scrub</dt>
       <dd>logical.  If TRUE
   <code>scrubber</code> will clean the text.</dd>
@@ -120,7 +124,7 @@
     <div class="References">
       <h2>References</h2>
       
-      <p><a href = 'http://stackoverflow.com/questions/8621066/remove-text-inside-brackets-parens-and-or-braces'>http://stackoverflow.com/questions/8621066/remove-text-inside-brackets-parens-and-or-braces</a></p>
+      <p><a href = 'http://stackoverflow.com/q/8621066/1000343'>http://stackoverflow.com/q/8621066/1000343</a></p>
   
     </div>
       </div>

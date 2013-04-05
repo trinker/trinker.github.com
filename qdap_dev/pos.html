@@ -149,10 +149,7 @@
       <p><a href = 'openNLP'>http:/opennlp.apache.org</a></p>
   
     </div>
-    
-    <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # posdat <- pos(DATA$state)# ltruncdf(posdat, 7, 4)# ## str(posdat)# names(posdat)# posdat$text           #original text# posdat$POStagged      #words replaced with parts of speech# posdat$POSprop[, 1:8] #proportion of parts of speech by row# posdat$POSfreq        #frequency of parts of speech by row# # out1 <- pos(DATA$state, parallel = TRUE) # not always useful# ltruncdf(out1, 7, 4)# # #use pos.tags to interpret part of speech tags used by pos & pos.by# pos.tags()[1:10, ]# pos.tags("matrix")[1:10, ]# pos.tags("dataframe")[1:10, ]# pos.tags("df")[1:10, ]# ltruncdf(pos.tags("all"), 3)# # posbydat <- with(DATA, pos.by(state, sex))# names(posbydat)# ltruncdf(posbydat, 7, 4)# truncdf(posbydat$pos.by.prop, 4)# # POSby <- with(DATA, pos.by(state, list(adult, sex)))# plot(POSby, values = TRUE, digits = 2)# #or more quickly - reuse the output from before# out2 <- with(DATA, pos.by(posbydat, list(adult, sex)))# ## <strong>End(Not run)</strong></div></pre>
-  </div>
+      </div>
   <div class="span4">
     <!-- <ul>
       <li>pos</li><li>pos.by</li><li>pos.tags</li>

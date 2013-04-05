@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>presentation. reports 0.1.3</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">reports 0.1.3</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Presentation Template</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><span class="functioncall"><a href='presentation.html'>presentation</a></span><span class="keyword">(</span><span class="argument">presentation</span> <span class="argument">=</span> <span class="string">"presentation"</span><span class="keyword">,</span> <span class="argument">rnw</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">theme</span> <span class="argument">=</span> <span class="string">"Madrid"</span><span class="keyword">,</span> <span class="argument">bib.loc</span> <span class="argument">=</span> <span class="functioncall"><a href='http://www.inside-r.org/r-doc/base/options'>getOption</a></span><span class="keyword">(</span><span class="string">"bib.loc"</span><span class="keyword">)</span><span class="keyword">,</span>
+  <span class="argument">name</span> <span class="argument">=</span> <span class="functioncall"><a href='http://www.inside-r.org/r-doc/base/options'>getOption</a></span><span class="keyword">(</span><span class="string">"name_reports"</span><span class="keyword">)</span><span class="keyword">,</span> <span class="argument">github.user</span> <span class="argument">=</span> <span class="functioncall"><a href='http://www.inside-r.org/r-doc/base/options'>getOption</a></span><span class="keyword">(</span><span class="string">"github.user"</span><span class="keyword">)</span><span class="keyword">,</span> <span class="argument">sources</span> <span class="argument">=</span> <span class="functioncall"><a href='http://www.inside-r.org/r-doc/base/options'>getOption</a></span><span class="keyword">(</span><span class="string">"sources_reports"</span><span class="keyword">)</span><span class="keyword">,</span>
+      <span class="argument">path</span> <span class="argument">=</span> <span class="functioncall"><a href='http://www.inside-r.org/r-doc/base/getwd'>getwd</a></span><span class="keyword">(</span><span class="keyword">)</span><span class="keyword">)</span></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>presentation</dt>
+      <dd>A character vector of length two or
+  one: (1) the main directory name and (2) sub directory
+  names (i.e., all the file contents will be imprinted with
+  this name). If the length of <code>report</code> is one this
+  name will be used as the main directory name and all sub
+  directories and files.</dd>
+      <dt>rnw</dt>
+      <dd>logical.  If <code>TRUE</code> the documents will be
+  .Rnw and .tex files.  If <code>FALSE</code> the documents will
+  be .pptx and .docx files.</dd>
+      <dt>theme</dt>
+      <dd><a href = 'http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html'>Beamer
+  theme</a> to use.  If <code>NULL</code> <code>presentation</code> will
+  allow the user to choose interactively.</dd>
+      <dt>bib.loc</dt>
+      <dd>Optional path to a .bib resource.</dd>
+      <dt>name</dt>
+      <dd>A character vector of the user's name to be
+  used on the report.</dd>
+      <dt>github.user</dt>
+      <dd>GitHub user name (character string).</dd>
+      <dt>sources</dt>
+      <dd>A vector of path(s) to other scripts to be
+  sourced in the report project upon startup (adds this
+  location to the report project's <code>.Rprofile</code>).</dd>
+      <dt>path</dt>
+      <dd>The path to where the project should be
+  created.  Default is the current working directory.</dd>
+    </dl>
+    
+    <div class="Value">
+      <h2>Value</h2>
+      
+      <p>Creates a report template.</p>
+  
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p>Generate a presentation template to increase efficiency.
+  This is a lighter weight version of
+  <code>new_report</code>.</p>
+  
+    </div>
+
+    <div class="Suggestion">
+      <h2>Suggestion</h2>
+      
+      <p>The user may want to set <code><a href='http://www.inside-r.org/r-doc/base/options'>options</a></code> for
+  <code>bib.loc</code>, <code>github.user</code> and
+  <code>sources_reports</code> in the user's primary
+  <code>.Rprofile</code>: <ol>
+<li><b>bib.loc</b> - The
+  path to the users primary bibliography
+  </li>
+<li><b>github.user</b> - GitHub user name
+  </li>
+<li><b>sources_reports</b> - Path(s) to additional
+  files/scripts that should be included to be sourced in
+  the project startup </li>
+</ol></p>
+  
+      <p></p>
+  
+    </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # presentation()# presentation("New", rnw=TRUE, theme=NULL)# presentation("New", rnw=FALSE)# ## <strong>End(Not run)</strong></div></pre>
+  </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>presentation</li>
+    </ul>
+    <ul>
+      
+    </ul> -->
+      
+    <h2>See also</h2>
+    
+  <code>new_report</code>
+
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

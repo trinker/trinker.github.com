@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>doc_temp. reports 0.1.3</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">reports 0.1.3</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Document Template</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><span class="functioncall"><a href='doc_temp.html'>doc_temp</a></span><span class="keyword">(</span><span class="argument">temp.name</span> <span class="argument">=</span> <span class="string">"newDoc"</span><span class="keyword">,</span> <span class="argument">doc.type</span> <span class="argument">=</span> <span class="string">"tex"</span><span class="keyword">,</span> <span class="argument">path</span> <span class="argument">=</span> <span class="functioncall"><a href='http://www.inside-r.org/r-doc/base/getwd'>getwd</a></span><span class="keyword">(</span><span class="keyword">)</span><span class="keyword">)</span></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>temp.name</dt>
+      <dd>The name of the template.</dd>
+      <dt>doc.type</dt>
+      <dd>The type of report that the template will
+  contain (<code>"doc", "rnw", "tex" or "web"</code>).
+  <code>"doc"</code> will contain a .docx document; <code>"rnw"
+  and "tex"</code> contain both <code>doc.rnw</code>/<code>doc.tex</code> and
+  <code>preamble.tex</code> files; whereas <code>"web"</code> contains
+  <code>doc.rmd</code>/.</dd>
+      <dt>path</dt>
+      <dd>The path to where the project should be
+  created.  Default is the current working directory.</dd>
+    </dl>
+    
+    <div class="Value">
+      <h2>Value</h2>
+      
+      <p>Creates a document template framework for template
+  personal use or submission.</p>
+  
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p>This function generates a document template for
+  submission to the reports package to be inclusion as a
+  template in the doc_library.  This function is similar to
+  <code><a href='http://www.inside-r.org/r-doc/utils/package.skeleton'>package.skeleton</a></code>.</p>
+  
+    </div>
+
+    <div class="Details">
+      <h2>Details</h2>
+      
+      <p>templates must contain the following two items: <ul>
+<li>DESCRIPTION - A file used to keep track of users
+  and package information.  All fields must be filled in.
+  </li>
+<li>documents - A minimal working document template.
+  <ul>
+<li>If <code>doc.type = rnw</code> - Must
+  contain: doc.rnw (preamble included) </li>
+<li>If
+  <code>doc.type = tex</code> - Must contain: doc.tex and
+  preamble.tex </li>
+<li>If <code>doc.type = rmd</code> - Must
+  contain: doc.rmd </li>
+<li>If <code>doc.type = docx</code> -
+  Must contain: doc.docx </li>
+</ul>
+ </li>
+</ul>
+ Additional project files and
+  directories can be stored in the <code>inst</code> directory.
+  Files in this directory will be placed in the main
+  directory of the template created by
+  <code>new_report</code></p>
+  
+      <p>To be submitted a .tex template must run in Debian TeX
+  Live on Linux Mint and MiKTex on Windows.  After a
+  template has been tested it can be sent as a .zip file to
+  <code>reports.rpackage@gmail.com</code>.  Please note that the
+  template folder/directory name must end in _tex, _rnw,
+  _web or _doc to indicate to users type of template.</p>
+  
+    </div>
+      </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>doc_temp</li>
+    </ul>
+    <ul>
+      
+    </ul> -->
+      
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

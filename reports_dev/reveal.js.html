@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>reveal.js. reports 0.1.3</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">reports 0.1.3</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Convert md to HTML5 reveal.js</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><span class="functioncall"><a href='reveal.js.html'>reveal.js</a></span><span class="keyword">(</span><span class="argument">theme</span> <span class="argument">=</span> <span class="string">"default"</span><span class="keyword">,</span> <span class="argument">transition</span> <span class="argument">=</span> <span class="string">"default"</span><span class="keyword">,</span> <span class="argument">in.file</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">out.dir</span> <span class="argument">=</span> <span class="symbol">path</span><span class="keyword">,</span>
+  <span class="argument">ref.page</span> <span class="argument">=</span> <span class="string">"References"</span><span class="keyword">,</span> <span class="argument">refs.cex</span> <span class="argument">=</span> <span class="number">15</span><span class="keyword">,</span> <span class="argument">path</span> <span class="argument">=</span> <span class="functioncall"><a href='http://www.inside-r.org/r-doc/base/file.path'>file.path</a></span><span class="keyword">(</span><span class="functioncall"><a href='http://www.inside-r.org/r-doc/base/getwd'>getwd</a></span><span class="keyword">(</span><span class="keyword">)</span><span class="keyword">,</span> <span class="string">"PRESENTATION"</span><span class="keyword">)</span><span class="keyword">,</span>
+      <span class="argument">figure.dir</span> <span class="argument">=</span> <span class="string">"figure"</span><span class="keyword">,</span> <span class="argument">hi.cex</span> <span class="argument">=</span> <span class="number">25</span><span class="keyword">)</span></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>theme</dt>
+      <dd>possible reveal.js themes: c(<code>"sky"</code>,
+  <code>"beige"</code>, <code>"simple"</code>, <code>"serif"</code>,
+  <code>"night"</code>, <code>"default"</code>).</dd>
+      <dt>transition</dt>
+      <dd>possible reveal.js transitions:
+  c(<code>"default"</code>, <code>"cube"</code>, <code>"page"</code>,
+  <code>"concave"</code>, <code>"zoom"</code>, <code>"linear"</code>,
+  <code>"fade"</code>, <code>"none"</code>).</dd>
+      <dt>in.file</dt>
+      <dd>A character vector of the md file.</dd>
+      <dt>out.dir</dt>
+      <dd>A character vector of the out directory.
+  Default uses the root name and outputs to a directory
+  called reveal_js.</dd>
+      <dt>ref.page</dt>
+      <dd>The title of the reference page (adds
+  hanging indent and reduces font size).  If <code>NULL</code>
+  references slide will not be adjusted. If reference title
+  is not found a warning will print.</dd>
+      <dt>refs.cex</dt>
+      <dd>The font size to make the references.</dd>
+      <dt>path</dt>
+      <dd>The path to where the documents reside.
+  Default is the PRESENTATION directory.  This conveniently
+  allows for non paths to be supplied to <code>in.file</code> and
+  <code>out.file</code>.  Paths can be supplied to <code>in.file</code>
+  and <code>out.file</code> by setting <code>path</code> to
+  <code>NULL</code>.</dd>
+      <dt>figure.dir</dt>
+      <dd>The name of the figures directory where
+  figures are stored. This should be in the presentation
+  folder.  By default it is called figure.</dd>
+      <dt>hi.cex</dt>
+      <dd>The font size to make the hanging indent
+  coded text if <code>hi</code> code chunk is used.</dd>
+    </dl>
+    
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p>Uses <a href = 'pandoc'>http://johnmacfarlane.net/pandoc/</a> to
+  convert md to HTML5
+  <a href = 'http://lab.hakim.se/reveal-js/'>reveal.js</a> slides
+  and provides minor modifications (e.g., embedded youtube
+  and hanging indent text, etc.).</p>
+  
+    </div>
+
+    <div class="Details">
+      <h2>Details</h2>
+      
+      <p>Outputs a directory, revel_js, with an index.html and
+  necessary
+  <a href = 'http://lab.hakim.se/reveal-js/'>reveal.js</a> files.
+  The user must have Pandoc installed and on their path.
+  Pandoc can be installed from: 
+  <a href = 'http://johnmacfarlane.net/pandoc/installing.html'>http://johnmacfarlane.net/pandoc/installing.html</a></p>
+  
+    </div>
+
+    <div class="Code Chunks">
+      <h2>Code Chunks</h2>
+      
+      <p>The following convenience code chunks are implemented:
+  <ol>
+<li><b>bg-</b> - Place after a slide title
+  to change background color.  Currently takes
+  <code>bg-soothe</code>, <code>bg-blackout</code>, <code>bg-alert</code>,
+  <code> red </code>, <code> orange </code>, <code> yellow </code>, <code>
+  green </code>, <code> blue </code>, <code> indigo </code>, <code> violet </code>,
+  or <code> brown </code>. </li>
+<li><b>frag-</b> - Using a
+  dash/space (- ) has the usual effect of text appearing
+  however special effects can be applied to text by using
+  the dash/space followed by the text and followed by
+  <code>[[[]]]=frag-</code> and last a fragment style.  Valid
+  styles include: <code>grow</code>, <code>shrink</code>,
+  <code>roll-in</code>, <code>fade-out</code>, <code>highlight-red</code>,
+  <code>highlight-green</code>, or <code>highlight-blue</code>.
+  </li>
+<li><b>hi</b> - Wrapping text with this code chunk will
+  result in hanging indentation.  Use <code>hi.cex</code> to
+  control the font size of the text. </li>
+<li><b>notes</b> -
+  Wrap presenter notes that work when slides are uploaded
+  to the Internet. Press "s" to get the speaker notes
+  window. </li>
+<li><b>small</b> - Wrap text to produce small
+  font. </li>
+<li><b>sud</b> & <b>eud</b>- Wrap a group of
+  slides to give the nested up and down capabilities.
+  start-up-down (sud) goes directly above the beginning
+  side in the .Rmd file, end-up-down (eud) goes directly at
+  the end of the last slide in the nested group, however
+  there should be a space between text and this code tag.
+  </li>
+<li><b>yt</b> - Wrap a youtube url or tag to embed a
+  youtube video. </li>
+</ol>
+ Code chunks use the following form:
+  <b>[[[text]]]=code.tag</b> (e.g.,
+  <b>[[[cokNUTGtoM4]]]=yt</b> embeds a youtube video.
+  Currently this is a convenience feature that may have
+  unexpected results and may need additional tweaking
+  within the html output.  When using embedded youtube,
+  slide titles and text are ignored but may effect the
+  spacing of the player. User additions are welcomed.</p>
+  
+      <p>reports based code chunks are for convenience.  For more
+  control many HTML tags work with Rmarkdown.  The output
+  code can also be manipulated for finer control.  A
+  <code>reveal.js</code> demo can be found
+  <a href = 'http://trinker.github.com/reports/examples/'>http://trinker.github.com/reports/examples/</a>.</p>
+  
+    </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # #Run after running knitr on an Rmd file# reveal.js()  #assumes location of html file out of the box# # # An example .Rmd file can be found:# system.file("extdata/docs/example.Rmd", package = "reports")# ## <strong>End(Not run)</strong></div></pre>
+  </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>reveal.js</li>
+    </ul>
+    <ul>
+      
+    </ul> -->
+      
+    <h2>See also</h2>
+    
+  <code>html5</code>
+
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

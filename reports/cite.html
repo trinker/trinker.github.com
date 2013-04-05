@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>citeL. reports 0.1.3</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">reports 0.1.3</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Format Quotes with Citations</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><span class="functioncall"><a href='cite.html'>citeL</a></span><span class="keyword">(</span><span class="argument">text.loc</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">copy2clip</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">citation</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">)</span>
+
+<span class="functioncall"><a href='cite.html'>parenciteL</a></span><span class="keyword">(</span><span class="argument">text.loc</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">copy2clip</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">citation</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">)</span>
+
+<span class="functioncall"><a href='cite.html'>textciteL</a></span><span class="keyword">(</span><span class="argument">text.loc</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">copy2clip</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">citation</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">)</span>
+
+<span class="functioncall"><a href='cite.html'>possciteL</a></span><span class="keyword">(</span><span class="argument">text.loc</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">copy2clip</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">citation</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">)</span>
+
+<span class="functioncall"><a href='cite.html'>posciteL</a></span><span class="keyword">(</span><span class="argument">text.loc</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">copy2clip</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">citation</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">)</span>
+
+<span class="functioncall"><a href='cite.html'>parenciteM</a></span><span class="keyword">(</span><span class="argument">text.loc</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">width</span> <span class="argument">=</span> <span class="number">70</span><span class="keyword">,</span> <span class="argument">force.block</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">copy2clip</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">citation</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span>
+  <span class="argument">bib.name</span> <span class="argument">=</span> <span class="string">"bib"</span><span class="keyword">)</span>
+
+<span class="functioncall"><a href='cite.html'>textciteM</a></span><span class="keyword">(</span><span class="argument">text.loc</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">width</span> <span class="argument">=</span> <span class="number">70</span><span class="keyword">,</span> <span class="argument">force.block</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">copy2clip</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">citation</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span>
+      <span class="argument">bib.name</span> <span class="argument">=</span> <span class="string">"bib"</span><span class="keyword">)</span></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>text.loc</dt>
+      <dd>The row number (integer value) from
+  notes.xlsx/notes.csv of the text to insert.  The user may
+  also input a character string of partial matches of the
+  bibkeys (a quasi-author search).  If NULL the interactive
+  use allows the user to view the notes.xlsx/notes.csv and
+  chose a row number.</dd>
+      <dt>copy2clip</dt>
+      <dd>logical.  If <code>TRUE</code> attempts to
+  copy the output to the clipboard.</dd>
+      <dt>citation</dt>
+      <dd>logical.  If TRUE will include the
+  formatted citation + the quote.</dd>
+      <dt>width</dt>
+      <dd>The widths of a block quote output (for the
+  markdown family only).</dd>
+      <dt>force.block</dt>
+      <dd>logical.  If TRUE forces a block less
+  than 40 words to be a block quote.</dd>
+    </dl>
+    
+    <div class="Value">
+      <h2>Value</h2>
+      
+      <p>Returns a character vector with LaTeX/markdown formatted
+  text.</p>
+  
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p>Citation tools to grab a quote and format the text taken
+  from the notes.xlsx/notes.csv for LaTeX with optional
+  citation included.  Functions attempt to copy the output
+  to the clipboard for easy paste inclusion.</p>
+  
+    </div>
+
+    <div class="Details">
+      <h2>Details</h2>
+      
+      <p>Each of the functions in the cite family follow a pattern
+  of (cite, parencite, textcite, posscite, poscite) prefix
+  and (L or M) suffix (note that currently only parencite
+  and textcite functions exist for markdown). The cite and
+  textcite are in the form of LaTeX commands by the same
+  name. posscite and poscite are user defined LaTeX
+  function styles that are extensions of the textcite
+  command to fit possessive and -s- ending possessives.
+  They can be defined as:</p>
+  
+      <p><code>\newcommand\posscite[1]{\citeauthor{#1}'s
+  (\citeyear{#1})}</code> 
+  <code>\newcommand\poscite[1]{\citeauthor{#1}'
+  (\citeyear{#1})}</code></p>
+  
+      <p>The L and M correspond to LaTeX or markdown outputs;
+  markdown relies on the <code>knitcitations</code> package.</p>
+  
+    </div>
+
+    <div class="Note">
+      <h2>Note</h2>
+      
+      <p>It is expected that the user maintains
+  notes.xlsx/notes.csv with markdown notation (e.g., ** for
+  bold type and * for italics).</p>
+  
+    </div>
+      </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>citeL</li><li>parenciteL</li><li>parenciteM</li><li>posciteL</li><li>possciteL</li><li>textciteL</li><li>textciteM</li>
+    </ul>
+    <ul>
+      
+    </ul> -->
+      
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>
