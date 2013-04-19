@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>left.just. qdap 0.2.2</title>
+<title>beg2char. qdap 0.2.2</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -35,66 +35,53 @@
         
       </header>
       
-      <h1>Text Justification</h1>
+      <h1>Grab Begin/End of Sting to Character</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>left.just(dataframe, column = NULL, keep.class = FALSE)
+    <pre>beg2char(text.var, char = " ", noc = 1, include = FALSE)
 
-right.just(dataframe)</pre>
+char2end(text.var, char = " ", noc = 1, include = FALSE)</pre>
     
     <h2>Arguments</h2>
     <dl>
-      <dt>dataframe</dt>
-      <dd>A data.frame object with the text
-  column.</dd>
-      <dt>column</dt>
-      <dd>The column to be justified.  If NULL all
-  columns are justified.</dd>
-      <dt>keep.class</dt>
-      <dd>logical.  If TRUE will attempt to keep
-  the original classes of the dataframe if the
-  justification is not altered (i.e., numeric will not be
-  honored but factor may be).</dd>
+      <dt>text.var,</dt>
+      <dd>A character string</dd>
+      <dt>char</dt>
+      <dd>The character from which to grab until/from.</dd>
+      <dt>noc</dt>
+      <dd>Number of times the character appears before
+  the grab.</dd>
+      <dt>include</dt>
+      <dd>logical.  If TRUE includes the character
+  in the grab.</dd>
     </dl>
     
     <div class="Value">
       <h2>Value</h2>
       
-      <p>Returns a dataframe with selected text column left/right
-  justified.</p>
+      <p>returns a vector of text with char on/forwar removed.</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p><code>left.just</code> - Left justifies a text/character
-  column.</p>
+      <p><code>beg2char</code> - Grab from beginning of string to a
+  character(s).</p>
   
-      <p><code>right.just</code> - A means of undoing a left
-  justification.</p>
-  
-    </div>
-
-    <div class="Note">
-      <h2>Note</h2>
-      
-      <p><code>left.just</code> inserts spaces to achieve
-  the justification.  This could interfere with analysis
-  and therefore the output from
-  <code>left.just</code> should only be used for
-  visualization purposes, not analysis.</p>
+      <p><code>beg2char</code> - Grab from character(s) to end of
+  string.</p>
   
     </div>
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>left.just</li><li>right.just</li>
+      <li>beg2char</li><li>char2end</li>
     </ul>
     <ul>
-      <li>justification</li><li>justify,</li>
+      
     </ul> -->
       
         

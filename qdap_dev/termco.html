@@ -40,18 +40,18 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre><span class="functioncall"><a href='termco.html'>termco</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="argument">grouping.var</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="symbol">match.list</span><span class="keyword">,</span> <span class="argument">short.term</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">ignore.case</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span>
-  <span class="argument">elim.old</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">percent</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">digits</span> <span class="argument">=</span> <span class="number">2</span><span class="keyword">,</span> <span class="argument">apostrophe.remove</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">char.keep</span> <span class="argument">=</span> NULL<span class="keyword">,</span>
-      <span class="argument">digit.remove</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">zero.replace</span> <span class="argument">=</span> <span class="number">0</span><span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">)</span>
+    <pre>termco(text.var, grouping.var = NULL, match.list, short.term = TRUE, ignore.case = TRUE, 
+  elim.old = TRUE, percent = TRUE, digits = 2, apostrophe.remove = FALSE, char.keep = NULL, 
+      digit.remove = NULL, zero.replace = 0, ...)
 
-<span class="functioncall"><a href='termco.html'>termco.d</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="argument">grouping.var</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="symbol">match.string</span><span class="keyword">,</span> <span class="argument">short.term</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">ignore.case</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span>
-      <span class="argument">zero.replace</span> <span class="argument">=</span> <span class="number">0</span><span class="keyword">,</span> <span class="argument">percent</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">digits</span> <span class="argument">=</span> <span class="number">2</span><span class="keyword">,</span> <span class="argument">apostrophe.remove</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">char.keep</span> <span class="argument">=</span> NULL<span class="keyword">,</span>
-      <span class="argument">digit.remove</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">)</span>
+termco.d(text.var, grouping.var = NULL, match.string, short.term = FALSE, ignore.case = TRUE, 
+      zero.replace = 0, percent = TRUE, digits = 2, apostrophe.remove = FALSE, char.keep = NULL, 
+      digit.remove = TRUE, ...)
 
-<span class="functioncall"><a href='termco.html'>term.match</a></span><span class="keyword">(</span><span class="symbol">text.var</span><span class="keyword">,</span> <span class="symbol">terms</span><span class="keyword">,</span> <span class="argument">return.list</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">apostrophe.remove</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">)</span>
+term.match(text.var, terms, return.list = TRUE, apostrophe.remove = FALSE)
 
-<span class="functioncall"><a href='termco.html'>termco2mat</a></span><span class="keyword">(</span><span class="symbol">dataframe</span><span class="keyword">,</span> <span class="argument">drop.wc</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">short.term</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">rm.zerocol</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">no.quote</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span>
-      <span class="argument">transform</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">trim.terms</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">)</span></pre>
+termco2mat(dataframe, drop.wc = TRUE, short.term = TRUE, rm.zerocol = FALSE, no.quote = TRUE, 
+      transform = TRUE, trim.terms = TRUE)</pre>
     
     <h2>Arguments</h2>
     <dl>
