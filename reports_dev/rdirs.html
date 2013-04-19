@@ -40,7 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre><span class="functioncall"><a href='rdirs.html'>rdirs</a></span><span class="keyword">(</span><span class="symbol">...</span><span class="keyword">,</span> <span class="argument">path</span> <span class="argument">=</span> <span class="functioncall"><a href='http://www.inside-r.org/r-doc/base/getwd'>getwd</a></span><span class="keyword">(</span><span class="keyword">)</span><span class="keyword">,</span> <span class="argument">sep</span> <span class="argument">=</span> <span class="string">"_"</span><span class="keyword">,</span> <span class="argument">pad.num</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">text.only</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">)</span></pre>
+    <pre>rdirs(..., path = getwd(), sep = "_", pad.num = TRUE, text.only = FALSE)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -83,18 +83,20 @@
     </div>
     
     <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'><span class="comment">## fx &lt;- folder(delete_me)</span>
-<span class="comment">## rdirs(admin, 1:15, c("d", "f", "w"), c(1, 4, 6))</span>
-<span class="functioncall"><a href='rdirs.html'>rdirs</a></span><span class="keyword">(</span><span class="symbol">admin</span><span class="keyword">,</span> <span class="number">1</span><span class="keyword">:</span><span class="number">15</span><span class="keyword">,</span> <span class="functioncall"><a href='http://www.inside-r.org/r-doc/base/c'>c</a></span><span class="keyword">(</span><span class="string">"d"</span><span class="keyword">,</span> <span class="string">"f"</span><span class="keyword">,</span> <span class="string">"w"</span><span class="keyword">)</span><span class="keyword">,</span> <span class="functioncall"><a href='http://www.inside-r.org/r-doc/base/c'>c</a></span><span class="keyword">(</span><span class="number">1</span><span class="keyword">,</span> <span class="number">4</span><span class="keyword">,</span> <span class="number">6</span><span class="keyword">)</span><span class="keyword">,</span> <span class="argument">text.only</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">)</span></div>
+    <pre class="examples"><div class='input'>## fx <- folder(delete_me)
+## rdirs(admin, 1:15, c("d", "f", "w"), c(1, 4, 6))
+rdirs(admin, 1:15, c("d", "f", "w"), c(1, 4, 6), text.only = TRUE)
+</div>
 <div class='output'> [1] "admin_01_d_1" "admin_02_f_4" "admin_03_w_6" "admin_04_d_1" "admin_05_f_4" "admin_06_w_6" "admin_07_d_1"
  [8] "admin_08_f_4" "admin_09_w_6" "admin_10_d_1" "admin_11_f_4" "admin_12_w_6" "admin_13_d_1" "admin_14_f_4"
 [15] "admin_15_w_6"
 </div>
-<div class='input'><span class="comment">## rdirs(session, 1:12, seq(as.Date("2000/1/1"), by = "month", length.out = 12))</span>
+<div class='input'>## rdirs(session, 1:12, seq(as.Date("2000/1/1"), by = "month", length.out = 12))
 
-<span class="symbol">x</span> <span class="assignement">&lt;-</span> <span class="functioncall"><a href='rdirs.html'>rdirs</a></span><span class="keyword">(</span><span class="symbol">admin</span><span class="keyword">,</span> <span class="number">1</span><span class="keyword">:</span><span class="number">15</span><span class="keyword">,</span> <span class="functioncall"><a href='http://www.inside-r.org/r-doc/base/c'>c</a></span><span class="keyword">(</span><span class="string">"d"</span><span class="keyword">,</span> <span class="string">"f"</span><span class="keyword">,</span> <span class="string">"w"</span><span class="keyword">)</span><span class="keyword">,</span> <span class="functioncall"><a href='http://www.inside-r.org/r-doc/base/c'>c</a></span><span class="keyword">(</span><span class="number">1</span><span class="keyword">,</span> <span class="number">4</span><span class="keyword">,</span> <span class="number">6</span><span class="keyword">)</span><span class="keyword">,</span> <span class="argument">text.only</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">)</span>
-<span class="comment">## lapply(x, new_report)</span>
-<span class="comment">## delete(fx)</span></div></pre>
+x <- rdirs(admin, 1:15, c("d", "f", "w"), c(1, 4, 6), text.only = TRUE)
+## lapply(x, new_report)
+## delete(fx)
+</div></pre>
   </div>
   <div class="span4">
     <!-- <ul>

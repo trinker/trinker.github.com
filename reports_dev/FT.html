@@ -40,7 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre><span class="functioncall"><a href='FT.html'>FT</a></span><span class="keyword">(</span><span class="symbol">...</span><span class="keyword">,</span> <span class="argument">text</span> <span class="argument">=</span> <span class="string">"clipboard"</span><span class="keyword">,</span> <span class="argument">copy2clip</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">)</span></pre>
+    <pre>FT(..., text = "clipboard", copy2clip = TRUE)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -86,13 +86,16 @@
     </div>
     
     <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'><span class="functioncall"><a href='FT.html'>FT</a></span><span class="keyword">(</span><span class="number">6</span><span class="keyword">,</span> <span class="argument">text</span><span class="argument">=</span><span class="string">"guy"</span><span class="keyword">)</span></div>
+    <pre class="examples"><div class='input'>FT(6, text="guy")
+</div>
 <div class='output'>[1] <font size="6">guy</font>
 </div>
-<div class='input'><span class="functioncall"><a href='FT.html'>FT</a></span><span class="keyword">(</span><span class="number">6</span><span class="keyword">,</span> <span class="symbol">blue</span><span class="keyword">,</span> <span class="argument">text</span><span class="argument">=</span><span class="string">"guy"</span><span class="keyword">)</span></div>
+<div class='input'>FT(6, blue, text="guy")
+</div>
 <div class='output'>[1] <font size="6" color="blue">guy</font>
 </div>
-<div class='input'><span class="functioncall"><a href='FT.html'>FT</a></span><span class="keyword">(</span><span class="number">6</span><span class="keyword">,</span> <span class="symbol">red</span><span class="keyword">,</span> <span class="symbol">times_new_roman</span><span class="keyword">,</span> <span class="argument">text</span><span class="argument">=</span><span class="string">"guy"</span><span class="keyword">)</span></div>
+<div class='input'>FT(6, red, times_new_roman, text="guy")
+</div>
 <div class='output'>[1] <font size="6" color="red" face="times new roman">guy</font>
 </div></pre>
   </div>

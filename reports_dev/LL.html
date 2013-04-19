@@ -40,7 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre><span class="functioncall"><a href='LL.html'>LL</a></span><span class="keyword">(</span><span class="argument">enumerate</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">text</span> <span class="argument">=</span> <span class="string">"clipboard"</span><span class="keyword">,</span> <span class="argument">copy2clip</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">)</span></pre>
+    <pre>LL(enumerate = TRUE, text = "clipboard", copy2clip = TRUE)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -88,11 +88,12 @@
     </div>
     
     <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'><span class="symbol">x</span> <span class="assignement">&lt;-</span> <span class="functioncall"><a href='http://www.inside-r.org/r-doc/base/c'>c</a></span><span class="keyword">(</span>
-<span class="string">"one, two buckle my shoe"</span><span class="keyword">,</span>
-<span class="string">"three, four close the door"</span><span class="keyword">,</span>
-<span class="string">"five, six pick up sticks"</span><span class="keyword">)</span>
-<span class="functioncall"><a href='LL.html'>LL</a></span><span class="keyword">(</span><span class="keyword">,</span> <span class="symbol">x</span><span class="keyword">)</span></div>
+    <pre class="examples"><div class='input'>x <- c(
+"one, two buckle my shoe",
+"three, four close the door",
+"five, six pick up sticks")
+LL(, x)
+</div>
 <div class='output'>                                    
  \\begin{enumerate}                 
    \\item one, two buckle my shoe   
@@ -100,7 +101,8 @@
    \\item five, six pick up sticks  
  \\end{enumerate}                   
 </div>
-<div class='input'><span class="functioncall"><a href='LL.html'>LL</a></span><span class="keyword">(</span><span class="number">FALSE</span><span class="keyword">,</span> <span class="symbol">x</span><span class="keyword">)</span></div>
+<div class='input'>LL(FALSE, x)
+</div>
 <div class='output'>                                    
  \\begin{itemize}                   
    \\item one, two buckle my shoe   

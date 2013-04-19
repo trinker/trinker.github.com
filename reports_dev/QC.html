@@ -42,7 +42,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre><span class="functioncall"><a href='QC.html'>QC</a></span><span class="keyword">(</span><span class="argument">to</span> <span class="argument">=</span> <span class="string">"latex"</span><span class="keyword">,</span> <span class="argument">from</span> <span class="argument">=</span> <span class="string">"markdown"</span><span class="keyword">,</span> <span class="argument">text</span> <span class="argument">=</span> <span class="string">"clipboard"</span><span class="keyword">,</span> <span class="argument">copy2clip</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">)</span></pre>
+    <pre>QC(to = "latex", from = "markdown", text = "clipboard", copy2clip = TRUE)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -100,11 +100,13 @@
     </div>
     
     <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'><span class="symbol">x</span> <span class="assignement">&lt;-</span> <span class="string">"\\*note: I *like* chocolate **milk** too ***much***!"</span>
-<span class="functioncall"><a href='QC.html'>QC</a></span><span class="keyword">(</span><span class="argument">text</span><span class="argument">=</span><span class="symbol">x</span><span class="keyword">)</span></div>
+    <pre class="examples"><div class='input'>x <- "\\*note: I *like* chocolate **milk** too ***much***!"
+QC(text=x)
+</div>
 <div class='output'>[1] "*note: I \\emph{like} chocolate \\textbf{milk} too \\textbf{\\emph{much}}!"
 </div>
-<div class='input'><span class="functioncall"><a href='QC.html'>QC</a></span><span class="keyword">(</span><span class="argument">text</span><span class="argument">=</span><span class="symbol">x</span><span class="keyword">,</span> <span class="string">"html"</span><span class="keyword">)</span></div>
+<div class='input'>QC(text=x, "html")
+</div>
 <div class='output'>[1] "<p>*note: I <em>like</em> chocolate <strong>milk</strong> too <strong><em>much</em></strong>!</p>"
 </div></pre>
   </div>
