@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>sync. reports 0.1.3</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">reports 0.1.3</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>File Syncing</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre>sync(dir1, dir2, one_way = FALSE, recursive = TRUE, ...)
+
+sync_img(dir1 = file.path(getwd(), "PRESENTATION", "figure"), dir2 = file.path(getwd(), 
+  "PRESENTATION", "assets", "img"), ...)
+
+sync_rnp(dir1 = file.path(getwd(), "REPORT", "figure"), dir2 = file.path(getwd(), 
+      "PRESENTATION", "figure"), ...)</pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>dir1</dt>
+      <dd>The path to the first directory.</dd>
+      <dt>dir2</dt>
+      <dd>The path to the second directory.</dd>
+      <dt>one_way</dt>
+      <dd>logical.  If TRUE the contents of dir2 be
+  copied to dir1, however, dir2 contents will not change.
+  If FALSE both dir1 and dir2 files will be copied to other
+  (dir1 and dir2 will contain identical contents).</dd>
+      <dt>recursive</dt>
+      <dd>logical. Should directories and contents
+  be recursively copied?</dd>
+      <dt>...</dt>
+      <dd>For the <code>sync</code> function ... are
+  other arguments passed to <code><a href='http://www.inside-r.org/r-doc/base/files'>file.copy</a></code>.
+  For <code>sync_img</code> and <code>sync_rnp</code> ... are
+  additional arguments passed to <code>sync</code>.</dd>
+    </dl>
+    
+    <div class="Value">
+      <h2>Value</h2>
+      
+      <p>Syncs files between directories.</p>
+  
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p><code>sync</code> - Sync files between directories.</p>
+  
+      <p><code>sync_img</code> - A wrapper for sync to easily sync the
+  files in ~/PRESENTATION/figure and
+  ~/PRESENTATION/assets/img.</p>
+  
+      <p><code>sync_rnp</code> - A wrapper for sync to easily sync the
+  files in ~/REPORT/figure and ~/PRESENTATION/figure.</p>
+  
+    </div>
+      </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>sync</li><li>sync_img</li><li>sync_rnp</li>
+    </ul>
+    <ul>
+      
+    </ul> -->
+      
+    <h2>See also</h2>
+    
+  <code><a href='http://www.inside-r.org/r-doc/base/files'>file.copy</a></code>
+
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>
