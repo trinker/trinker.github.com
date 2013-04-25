@@ -41,15 +41,15 @@
   <div class="span8">
     <h2>Usage</h2>
     <pre>IM(path = "clipboard", width = 400, height = 300, sty = width * 1.05, center = TRUE, 
-  copy2clip = TRUE, print = FALSE)</pre>
+  link = NULL, copy2clip = TRUE, print = FALSE)</pre>
     
     <h2>Arguments</h2>
     <dl>
       <dt>path</dt>
-      <dd>character vector url/path copied to the
-  clipboard. Default is to read from the clipboard.  Note
-  that Windows users do not have to reorient slashes in
-  local paths if reading from the clipboard.</dd>
+      <dd>character vector url/path to the image.
+  Default is to read from the clipboard.  Note that Windows
+  users do not have to reorient slashes in local paths if
+  reading from the clipboard.</dd>
       <dt>width</dt>
       <dd>the width of the image.</dd>
       <dt>height</dt>
@@ -59,6 +59,9 @@
       <dt>center</dt>
       <dd>logical.  If TRUE the image will be
   centered, if FALSE image will be left justified.</dd>
+      <dt>link</dt>
+      <dd>character vector url/path to hyperlink the
+  image to.</dd>
       <dt>copy2clip</dt>
       <dd>logical.  If <code>TRUE</code> attempts to
   copy the output to the clipboard.</dd>
@@ -82,9 +85,8 @@
       <p>Wrap a path/url to generate an HTML tag.  Often markup
   code: <code>![](url)</code> lacks flexibility with centering
   and sizing.  <code>IM</code> enables conrol of centering via
-  altering the numeric value in <code>width:420px</code> and
-  sizing via the numeric values supplied to height and
-  width.</p>
+  altering the sty/center commands and control of sizing
+  via the numeric values supplied to height and width.</p>
   
     </div>
     
@@ -100,6 +102,10 @@
 <div class='output'><div style="width:420px;margin:auto;">
     <p><img src="https://dl.dropboxusercontent.com/u/61803503/packages/reports.PNG" width="400" height="300"></p>
 </div>
+</div>
+<div class='input'>IM("http://cran.r-project.org/Rlogo.jpg", print=TRUE, link = "http://cran.r-project.org")
+</div>
+<div class='output'><a href="http://cran.r-project.org"><img src="http://cran.r-project.org/Rlogo.jpg" width="400" height="300"></a>
 </div></pre>
   </div>
   <div class="span4">
