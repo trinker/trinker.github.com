@@ -40,7 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>HR(text = NULL, path = "clipboard", copy2clip = TRUE, print = FALSE)</pre>
+    <pre>HR(path = "clipboard", text = NULL, copy2clip = TRUE, print = FALSE)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -57,7 +57,9 @@
       <dd>logical.  If <code>TRUE</code> attempts to
   copy the output to the clipboard.</dd>
       <dt>print</dt>
-      <dd>logical.  If TRUE [base]{cat</dd>
+      <dd>logical.  If TRUE <code><a href='http://www.inside-r.org/r-doc/base/cat'>cat</a></code>
+  prints the output to the console.  If FALSE returns to
+  the console.</dd>
     </dl>
     
     <div class="Value">
@@ -75,7 +77,19 @@
     </div>
     
     <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## HR("new", "assets/img/fry_admin_1.mp4")</div></pre>
+    <pre class="examples"><div class='input'>## HR("assets/img/fry_admin_1.mp4","new")
+HR(path="http://dl.dropbox.com/u/61803503/Likert.pdf")
+</div>
+<div class='output'>[1] "<a href=\"http://dl.dropbox.com/u/61803503/Likert.pdf\">Likert.pdf</a>\n"
+</div>
+<div class='input'>HR("http://cran.r-project.org/src/contrib/reports_0.1.2.tar.gz")
+</div>
+<div class='output'>[1] "<a href=\"http://cran.r-project.org/src/contrib/reports_0.1.2.tar.gz\">reports_0.1.2.tar.gz</a>\n"
+</div>
+<div class='input'>HR("http://cran.r-project.org/src/contrib/reports_0.1.2.tar.gz", "click me")
+</div>
+<div class='output'>[1] "<a href=\"http://cran.r-project.org/src/contrib/reports_0.1.2.tar.gz\">click me</a>\n"
+</div></pre>
   </div>
   <div class="span4">
     <!-- <ul>

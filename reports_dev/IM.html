@@ -40,11 +40,12 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>IM(text = "clipboard", width = 400, height = 300, copy2clip = TRUE, print = TRUE)</pre>
+    <pre>IM(path = "clipboard", width = 400, height = 300, sty = width * 1.05, center = TRUE, 
+  copy2clip = TRUE, print = FALSE)</pre>
     
     <h2>Arguments</h2>
     <dl>
-      <dt>text</dt>
+      <dt>path</dt>
       <dd>character vector url/path copied to the
   clipboard. Default is to read from the clipboard.  Note
   that Windows users do not have to reorient slashes in
@@ -53,11 +54,18 @@
       <dd>the width of the image.</dd>
       <dt>height</dt>
       <dd>the height of the image.</dd>
+      <dt>sty</dt>
+      <dd>the width of the style (used for centering).</dd>
+      <dt>center</dt>
+      <dd>logical.  If TRUE the image will be
+  centered, if FALSE image will be left justified.</dd>
       <dt>copy2clip</dt>
       <dd>logical.  If <code>TRUE</code> attempts to
   copy the output to the clipboard.</dd>
       <dt>print</dt>
-      <dd>logical.  If TRUE [base]{cat</dd>
+      <dd>logical.  If TRUE <code><a href='http://www.inside-r.org/r-doc/base/cat'>cat</a></code>
+  prints the output to the console.  If FALSE returns to
+  the console.</dd>
     </dl>
     
     <div class="Value">
@@ -83,9 +91,11 @@
     <h2 id="examples">Examples</h2>
     <pre class="examples"><div class='input'>IM("http://cran.r-project.org/Rlogo.jpg")
 </div>
-<div class='output'><div style="width:420px;margin:auto;">
-    <p><img src="http://cran.r-project.org/Rlogo.jpg" width="400" height="300"></p>
+<div class='output'>[1] "<div style=\"width:420px;margin:auto;\">\n    <p><img src=\"http://cran.r-project.org/Rlogo.jpg\" width=\"400\" height=\"300\"></p>\n</div>\n"
 </div>
+<div class='input'>IM("https://dl.dropboxusercontent.com/u/61803503/packages/reports.PNG")
+</div>
+<div class='output'>[1] "<div style=\"width:420px;margin:auto;\">\n    <p><img src=\"https://dl.dropboxusercontent.com/u/61803503/packages/reports.PNG\" width=\"400\" height=\"300\"></p>\n</div>\n"
 </div></pre>
   </div>
   <div class="span4">
