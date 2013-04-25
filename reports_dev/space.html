@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>IM. reports 0.1.3</title>
+<title>HS. reports 0.1.3</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -35,62 +35,53 @@
         
       </header>
       
-      <h1>Convert path/url to HTML Image Tag</h1>
+      <h1>Insert HTML Space</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>IM(text = "clipboard", width = 400, height = 300, copy2clip = TRUE, print = TRUE)</pre>
+    <pre>HS(n = 1, copy2clip = TRUE)
+
+VS(n = 1, copy2clip = TRUE)</pre>
     
     <h2>Arguments</h2>
     <dl>
-      <dt>text</dt>
-      <dd>character vector url/path copied to the
-  clipboard. Default is to read from the clipboard.  Note
-  that Windows users do not have to reorient slashes in
-  local paths if reading from the clipboard.</dd>
-      <dt>width</dt>
-      <dd>the width of the image.</dd>
-      <dt>height</dt>
-      <dd>the height of the image.</dd>
+      <dt>n</dt>
+      <dd>Number of spaces to insert.</dd>
       <dt>copy2clip</dt>
       <dd>logical.  If <code>TRUE</code> attempts to
   copy the output to the clipboard.</dd>
-      <dt>print</dt>
-      <dd>logical.  If TRUE [base]{cat</dd>
     </dl>
     
-    <div class="Value">
-      <h2>Value</h2>
-      
-      <p>Returns a character vector of an HTML image tag that
-  embeds an image.</p>
-  
-    </div>
-
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Wrap a path/url to generate an HTML tag.  Often markup
-  code: <code>![](url)</code> lacks flexibility with centering
-  and sizing.  <code>IM</code> enables conrol of centering via
-  altering the numeric value in <code>width:420px</code> and
-  sizing via the numeric values supplied to height and
-  width.</p>
+      <p>Insert n iterations of HTML spacing into a document.</p>
+  
+    </div>
+
+    <div class="Details">
+      <h2>Details</h2>
+      
+      <p><code>HS</code> returns horizontal space (using <code>&nbsp;</code>)
+  and <code>VS</code> returns vertical space (using
+  <code></br></code>).</p>
   
     </div>
     
     <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>IM("http://cran.r-project.org/Rlogo.jpg")
+    <pre class="examples"><div class='input'>paste0("reports", HS(10), "end")
 </div>
-<div class='output'><div style="width:420px;margin:auto;">
-    <p><img src="http://cran.r-project.org/Rlogo.jpg" width="400" height="300"></p>
+<div class='output'>[1] "reports&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end"
 </div>
+<div class='input'>paste0("reports", VS(4), "end")
+</div>
+<div class='output'>[1] "reports</br></br></br></br>end"
 </div></pre>
   </div>
   <div class="span4">
     <!-- <ul>
-      <li>IM</li>
+      <li>HS</li><li>VS</li>
     </ul>
     <ul>
       

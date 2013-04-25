@@ -40,7 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>HR(text = NULL, path = "clipboard", copy2clip = TRUE, print = TRUE)</pre>
+    <pre>HR(text = NULL, path = "clipboard", copy2clip = TRUE, print = FALSE)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -52,13 +52,12 @@
       <dd>character vector url/path copied to the
   clipboard. Default is to read from the clipboard.  Note
   that Windows users do not have to reorient slashes in
-  local paths.</dd>
+  local paths if reading from the clipboard.</dd>
       <dt>copy2clip</dt>
       <dd>logical.  If <code>TRUE</code> attempts to
   copy the output to the clipboard.</dd>
       <dt>print</dt>
-      <dd>logical.  If TRUE prints the output to the
-  console.</dd>
+      <dd>logical.  If TRUE [base]{cat</dd>
     </dl>
     
     <div class="Value">

@@ -35,12 +35,14 @@
         
       </header>
       
-      <h1>YouTube url to iframe HTML Tag</h1>
+      <h1>Video (YouTube/Vimeo) url to iframe HTML Tag</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>YT(text = "clipboard", copy2clip = TRUE)</pre>
+    <pre>YT(text = "clipboard", copy2clip = TRUE)
+
+VM(text = "clipboard", copy2clip = TRUE)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -56,23 +58,32 @@
       <h2>Value</h2>
       
       <p>Returns a character vector of an HTML iframe tag that
-  embeds a YouTube video.</p>
+  embeds a YouTube or Vimeo video.</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Wrap a YouTube tag or url to generate an HTML iframe tag.</p>
+      <p>Wrap a YouTube/Vimeo tag or url to generate an HTML
+  iframe tag.</p>
+  
+    </div>
+
+    <div class="Details">
+      <h2>Details</h2>
+      
+      <p>Use <code>YT</code> for YouTube videos and <code>VM</code> for Vimeo
+  videos.</p>
   
     </div>
     
     <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## YT("kws1PX1Dw9w")## YT("http://www.youtube.com/watch?v=kws1PX1Dw9w")</div></pre>
+    <pre class="examples"><div class='input'>## YT("kws1PX1Dw9w")## YT("http://www.youtube.com/watch?v=kws1PX1Dw9w")## VM("http://vimeo.com/54007714")</div></pre>
   </div>
   <div class="span4">
     <!-- <ul>
-      <li>YT</li>
+      <li>VM</li><li>YT</li>
     </ul>
     <ul>
       
