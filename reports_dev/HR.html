@@ -78,17 +78,18 @@
     
     <h2 id="examples">Examples</h2>
     <pre class="examples"><div class='input'>## HR("assets/img/fry_admin_1.mp4","new")
-HR(path="http://dl.dropbox.com/u/61803503/Likert.pdf")
+
+HR(path="http://dl.dropbox.com/u/61803503/Likert.pdf", print = TRUE)
 </div>
-<div class='output'>[1] "<a href=\"http://dl.dropbox.com/u/61803503/Likert.pdf\">Likert.pdf</a>\n"
+<div class='output'><a href="http://dl.dropbox.com/u/61803503/Likert.pdf">Likert.pdf</a>
 </div>
-<div class='input'>HR("http://cran.r-project.org/src/contrib/reports_0.1.2.tar.gz")
+<div class='input'>HR("http://cran.r-project.org/src/contrib/reports_0.1.2.tar.gz", print = TRUE)
 </div>
-<div class='output'>[1] "<a href=\"http://cran.r-project.org/src/contrib/reports_0.1.2.tar.gz\">reports_0.1.2.tar.gz</a>\n"
+<div class='output'><a href="http://cran.r-project.org/src/contrib/reports_0.1.2.tar.gz">reports_0.1.2.tar.gz</a>
 </div>
-<div class='input'>HR("http://cran.r-project.org/src/contrib/reports_0.1.2.tar.gz", "click me")
+<div class='input'>HR("http://cran.r-project.org/src/contrib/reports_0.1.2.tar.gz", "click me", print = TRUE)
 </div>
-<div class='output'>[1] "<a href=\"http://cran.r-project.org/src/contrib/reports_0.1.2.tar.gz\">click me</a>\n"
+<div class='output'><a href="http://cran.r-project.org/src/contrib/reports_0.1.2.tar.gz">click me</a>
 </div></pre>
   </div>
   <div class="span4">
