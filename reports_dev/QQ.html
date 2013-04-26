@@ -102,7 +102,24 @@ QQ(text = "clipboard", copy2clip = TRUE)</pre>
   "ff", "fi", "fl", "ffi" and "ffl".</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>x1 <- "Note Many functions in reports assume (a) you're using RStudio (b) the
+main report directory is set as the working directory. While
+the default behavior is less flexible it increases efficiency."
+GQ(text=x1)
+</div>
+<div class='output'>Note Many functions in reports assume (a) you're using RStudio (b)
+the main report directory is set as the working directory. While the
+default behavior is less flexible it increases efficiency.
+</div>
+<div class='input'>QQ(x1)
+</div>
+<div class='output'>Note Many functions in reports assume (a) you're using RStudio (b)
+the main report directory is set as the working directory. While the
+default behavior is less flexible it increases efficiency.
+</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>GQ</li><li>QQ</li>
