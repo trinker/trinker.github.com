@@ -42,7 +42,7 @@
     <h2>Usage</h2>
     <pre>HS(n = 1, copy2clip = TRUE)
 
-VS(n = 1, copy2clip = TRUE)</pre>
+VS(n = 1, copy2clip = TRUE, print = FALSE)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -51,6 +51,10 @@ VS(n = 1, copy2clip = TRUE)</pre>
       <dt>copy2clip</dt>
       <dd>logical.  If <code>TRUE</code> attempts to
   copy the output to the clipboard.</dd>
+      <dt>print</dt>
+      <dd>logical.  If TRUE <code><a href='http://www.inside-r.org/r-doc/base/cat'>cat</a></code>
+  prints the output to the console.  If FALSE returns to
+  the console.</dd>
     </dl>
     
     <div class="Description">
@@ -74,8 +78,9 @@ VS(n = 1, copy2clip = TRUE)</pre>
 </div>
 <div class='output'>[1] "reports&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end"
 </div>
-<div class='input'>paste0("reports", VS(4), "end")
+<div class='input'>paste0("reports", VS(4, print = TRUE), "end")
 </div>
+<div class='output'></br></br></br></br></div>
 <div class='output'>[1] "reports</br></br></br></br>end"
 </div></pre>
   </div>
