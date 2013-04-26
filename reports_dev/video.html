@@ -40,9 +40,9 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>YT(text = "clipboard", copy2clip = TRUE)
+    <pre>YT(text = "clipboard", copy2clip = TRUE, print = FALSE)
 
-VM(text = "clipboard", copy2clip = TRUE)</pre>
+VM(text = "clipboard", copy2clip = TRUE, print = FALSE)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -79,18 +79,15 @@ VM(text = "clipboard", copy2clip = TRUE)</pre>
     </div>
     
     <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>YT("kws1PX1Dw9w")
+    <pre class="examples"><div class='input'>YT("kws1PX1Dw9w", print = TRUE)
 </div>
-<div class='output'>[1] "<iframe class=\"youtube-player\" type=\"text/html\" width=\"640\" height=\"360\" src=\"http://www.youtube.com/embed/kws1PX1Dw9w?autoplay=0\" frameborder=\"0\"></iframe>"
+<div class='output'><iframe class="youtube-player" type="text/html" width="640" height="360" src="http://www.youtube.com/embed/kws1PX1Dw9w?autoplay=0" frameborder="0"></iframe></div>
+<div class='input'>YT("http://www.youtube.com/watch?v=kws1PX1Dw9w", print = TRUE)
 </div>
-<div class='input'>YT("http://www.youtube.com/watch?v=kws1PX1Dw9w")
+<div class='output'><iframe class="youtube-player" type="text/html" width="640" height="360" src="http://www.youtube.com/embed/kws1PX1Dw9w?autoplay=0" frameborder="0"></iframe></div>
+<div class='input'>VM("http://vimeo.com/54007714", print = TRUE)
 </div>
-<div class='output'>[1] "<iframe class=\"youtube-player\" type=\"text/html\" width=\"640\" height=\"360\" src=\"http://www.youtube.com/embed/kws1PX1Dw9w?autoplay=0\" frameborder=\"0\"></iframe>"
-</div>
-<div class='input'>VM("http://vimeo.com/54007714")
-</div>
-<div class='output'>[1] "<iframe src=\"http://player.vimeo.com/video/54007714\" width=\"640\" height=\"360\" frameborder=\"0\" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>"
-</div></pre>
+<div class='output'><iframe src="http://player.vimeo.com/video/54007714" width="640" height="360" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div></pre>
   </div>
   <div class="span4">
     <!-- <ul>
