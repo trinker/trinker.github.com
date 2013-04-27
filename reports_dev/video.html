@@ -40,9 +40,9 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>YT(text = "clipboard", copy2clip = TRUE, print = FALSE)
+    <pre>YT(text = "clipboard", copy2clip = TRUE, width = 640, height = 360, print = FALSE)
 
-VM(text = "clipboard", copy2clip = TRUE, print = FALSE)</pre>
+VM(text = "clipboard", copy2clip = TRUE, width = 640, height = 360, print = FALSE)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -52,6 +52,10 @@ VM(text = "clipboard", copy2clip = TRUE, print = FALSE)</pre>
       <dt>copy2clip</dt>
       <dd>logical.  If <code>TRUE</code> attempts to
   copy the output to the clipboard.</dd>
+      <dt>width</dt>
+      <dd>the width of the player.</dd>
+      <dt>height</dt>
+      <dd>the height of the player.</dd>
       <dt>print</dt>
       <dd>logical.  If TRUE <code><a href='http://www.inside-r.org/r-doc/base/cat'>cat</a></code>
   prints the output to the console.  If FALSE returns to
