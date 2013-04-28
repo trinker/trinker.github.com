@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>IE. reports 0.1.3</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">reports 0.1.3</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Flexible <code>ifelse</code> Like Functionality for Arguments</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre>IE(input, out1, out2 = NULL, FUN = is.numeric)</pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>input</dt>
+      <dd>An object to be tested.</dd>
+      <dt>out1</dt>
+      <dd>The output if test is <code>TRUE</code>.</dd>
+      <dt>out2</dt>
+      <dd>The output if test is <code>FALSE</code>.</dd>
+      <dt>FUN</dt>
+      <dd>A function that results in a logical output.</dd>
+    </dl>
+    
+    <div class="Value">
+      <h2>Value</h2>
+      
+      <p>Returns output 1 (out1) or output 2 (out2) as a function
+  of the logical test.</p>
+  
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p>Use in the place of <code>ifelse</code> for arguments
+  (particularly if <code>NULL</code> is an option.</p>
+  
+    </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>IE(25, 360)
+</div>
+<div class='output'>[1] 360
+</div>
+<div class='input'>IE("char", 360)
+</div>
+<div class='output'>NULL
+</div>
+<div class='input'>IE(NULL, 360)
+</div>
+<div class='output'>NULL
+</div>
+<div class='input'>IE(NULL, 360, FUN = is.null)
+</div>
+<div class='output'>[1] 360
+</div></pre>
+  </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>IE</li>
+    </ul>
+    <ul>
+      
+    </ul> -->
+      
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

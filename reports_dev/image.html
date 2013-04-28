@@ -40,8 +40,8 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>IM(path = "clipboard", width = NULL, height = NULL, sty = NULL, center = TRUE, link = NULL, 
-  copy2clip = TRUE, print = FALSE)
+    <pre>IM(path = "clipboard", width = 540, height = IE(width, 360), sty = IE(width, width * 
+  1.05, 480), center = TRUE, link = NULL, copy2clip = TRUE, print = FALSE)
 
 IM2(image = "clipboard", ...)</pre>
     
@@ -106,20 +106,20 @@ IM2(image = "clipboard", ...)</pre>
     <h2 id="examples">Examples</h2>
     <pre class="examples"><div class='input'>IM("http://cran.r-project.org/Rlogo.jpg", print=TRUE)
 </div>
-<div class='output'><div style="width:px;margin:auto;">
-    <p><img src="http://cran.r-project.org/Rlogo.jpg"></p>
+<div class='output'><div style="width:567px;margin:auto;">
+    <p><img src="http://cran.r-project.org/Rlogo.jpg" width="540"></p>
 </div>
 </div>
 <div class='input'>IM("https://dl.dropboxusercontent.com/u/61803503/packages/reports.PNG", print =TRUE)
 </div>
-<div class='output'><div style="width:px;margin:auto;">
-    <p><img src="https://dl.dropboxusercontent.com/u/61803503/packages/reports.PNG"></p>
+<div class='output'><div style="width:567px;margin:auto;">
+    <p><img src="https://dl.dropboxusercontent.com/u/61803503/packages/reports.PNG" width="540"></p>
 </div>
 </div>
 <div class='input'>IM("http://cran.r-project.org/Rlogo.jpg", print=TRUE, link = "http://cran.r-project.org")
 </div>
-<div class='output'><div style="width:px;margin:auto;">
-    <p><a href="http://cran.r-project.org"><img src="http://cran.r-project.org/Rlogo.jpg"></a></p>
+<div class='output'><div style="width:567px;margin:auto;">
+    <p><a href="http://cran.r-project.org"><img src="http://cran.r-project.org/Rlogo.jpg" width="540"></a></p>
 </div>
 </div></pre>
   </div>
