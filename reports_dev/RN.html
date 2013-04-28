@@ -76,17 +76,21 @@
     <pre class="examples"><div class='input'>RN("some fancy notes", print = TRUE)
 </div>
 <div class='output'><aside class="notes">
-   some fancy notes
+some fancy notes <br>
 </aside>
+</div>
+<div class='input'>RN("1) some\n2) fancy\n3) notes")
+</div>
+<div class='output'>[1] "<aside class=\"notes\">\n1) some <br>\n2) fancy <br>\n3) notes <br>\n</aside>\n"
 </div>
 <div class='input'>RN("1) some
 2) fancy
 3) notes", print = TRUE)
 </div>
 <div class='output'><aside class="notes">
-   1) some
-   2) fancy
-   3) notes
+1) some <br>
+2) fancy <br>
+3) notes <br>
 </aside>
 </div></pre>
   </div>

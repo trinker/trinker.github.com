@@ -41,7 +41,9 @@
   <div class="span8">
     <h2>Usage</h2>
     <pre>IM(path = "clipboard", width = NULL, height = NULL, sty = NULL, center = TRUE, link = NULL, 
-  copy2clip = TRUE, print = FALSE)</pre>
+  copy2clip = TRUE, print = FALSE)
+
+IM2(image = "clipboard", ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -69,6 +71,11 @@
       <dd>logical.  If TRUE <code><a href='http://www.inside-r.org/r-doc/base/cat'>cat</a></code>
   prints the output to the console.  If FALSE returns to
   the console.</dd>
+      <dt>image</dt>
+      <dd>character vector name of the image. Default
+  is to read from the clipboard.</dd>
+      <dt>...</dt>
+      <dd>other arguments passed to <code>IM</code>.</dd>
     </dl>
     
     <div class="Value">
@@ -82,11 +89,17 @@
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Wrap a path/url to generate an HTML tag.  Often markup
-  code: <code>![](url)</code> lacks flexibility with centering
-  and sizing.  <code>IM</code> enables conrol of centering via
-  altering the sty/center commands and control of sizing
-  via the numeric values supplied to height and width.</p>
+      <p><code>IM</code> - Wrap a path/url to generate an HTML tag.
+  Often markup code: <code>![](url)</code> lacks flexibility with
+  centering and sizing.  <code>IM</code> enables conrol of
+  centering via altering the sty/center commands and
+  control of sizing via the numeric values supplied to
+  height and width.</p>
+  
+      <p><code>IM2</code> - A wrapper for <code>IM</code> that sets the base
+  path to "assets/img/". This allows the users to just
+  specify the image name that resides in the directory:
+  "assets/img/".</p>
   
     </div>
     
@@ -112,7 +125,7 @@
   </div>
   <div class="span4">
     <!-- <ul>
-      <li>IM</li>
+      <li>IM</li><li>IM2</li>
     </ul>
     <ul>
       

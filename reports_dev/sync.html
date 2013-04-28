@@ -46,7 +46,9 @@ sync_img(dir1 = file.path(getwd(), "PRESENTATION", "figure"), dir2 = file.path(g
   "PRESENTATION", "assets", "img"), ...)
 
 sync_rnp(dir1 = file.path(getwd(), "REPORT", "figure"), dir2 = file.path(getwd(), 
-      "PRESENTATION", "figure"), ...)</pre>
+      "PRESENTATION", "figure"), ...)
+
+sync_all()</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -88,11 +90,15 @@ sync_rnp(dir1 = file.path(getwd(), "REPORT", "figure"), dir2 = file.path(getwd()
       <p><code>sync_rnp</code> - A wrapper for sync to easily sync the
   files in ~/REPORT/figure and ~/PRESENTATION/figure.</p>
   
+      <p><code>sync_rnp</code> - A wrapper for sync to easily sync all
+  files between ~/REPORT/figure, ~/PRESENTATION/figure, and
+  ~/PRESENTATION/assets/img.</p>
+  
     </div>
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>sync</li><li>sync_img</li><li>sync_rnp</li>
+      <li>sync</li><li>sync_all</li><li>sync_img</li><li>sync_rnp</li>
     </ul>
     <ul>
       
