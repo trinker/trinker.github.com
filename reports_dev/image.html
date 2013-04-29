@@ -41,7 +41,7 @@
   <div class="span8">
     <h2>Usage</h2>
     <pre>IM(path = "clipboard", width = 540, height = IE(width, 360), sty = IE(width, width * 
-  1.05, 480), center = TRUE, link = NULL, copy2clip = TRUE, print = FALSE)
+  1.05, 480), center = TRUE, link = NULL, new_win = TRUE, copy2clip = TRUE, print = FALSE)
 
 IM2(image = "clipboard", ...)</pre>
     
@@ -66,6 +66,9 @@ IM2(image = "clipboard", ...)</pre>
       <dt>link</dt>
       <dd>character vector url/path to hyperlink the
   image to.</dd>
+      <dt>new_win</dt>
+      <dd>logical.  If <code>TRUE</code> the link will
+  open in a new window.</dd>
       <dt>copy2clip</dt>
       <dd>logical.  If <code>TRUE</code> attempts to
   copy the output to the clipboard.</dd>
@@ -121,7 +124,7 @@ IM2(image = "clipboard", ...)</pre>
 <div class='input'>IM("http://cran.r-project.org/Rlogo.jpg", NULL, print=TRUE, link = "http://cran.r-project.org")
 </div>
 <div class='output'><div style="width:480px;margin:auto;">
-    <p><a href="http://cran.r-project.org"><img src="http://cran.r-project.org/Rlogo.jpg"></a></p>
+    <p><a href="http://cran.r-project.org"target="_blank"><img src="http://cran.r-project.org/Rlogo.jpg"></a></p>
 </div>
 </div></pre>
   </div>

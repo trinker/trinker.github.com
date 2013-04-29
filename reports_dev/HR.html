@@ -40,19 +40,22 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>HR(path = "clipboard", text = NULL, copy2clip = TRUE, print = FALSE)</pre>
+    <pre>HR(path = "clipboard", text = NULL, new_win = TRUE, copy2clip = TRUE, print = FALSE)</pre>
     
     <h2>Arguments</h2>
     <dl>
-      <dt>text</dt>
-      <dd>character vector of text to hyperref from.
-  Defualt uses the <code><a href='http://www.inside-r.org/r-doc/base/basename'>basename</a></code> of the
-  path.</dd>
       <dt>path</dt>
       <dd>character vector url/path copied to the
   clipboard. Default is to read from the clipboard.  Note
   that Windows users do not have to reorient slashes in
   local paths if reading from the clipboard.</dd>
+      <dt>text</dt>
+      <dd>character vector of text to hyperref from.
+  Defualt uses the <code><a href='http://www.inside-r.org/r-doc/base/basename'>basename</a></code> of the
+  path.</dd>
+      <dt>new_win</dt>
+      <dd>logical.  If <code>TRUE</code> the link will
+  open in a new window.</dd>
       <dt>copy2clip</dt>
       <dd>logical.  If <code>TRUE</code> attempts to
   copy the output to the clipboard.</dd>
@@ -81,15 +84,15 @@
 
 HR(path="http://dl.dropbox.com/u/61803503/Likert.pdf", print = TRUE)
 </div>
-<div class='output'><a href="http://dl.dropbox.com/u/61803503/Likert.pdf">Likert.pdf</a>
+<div class='output'><a href="http://dl.dropbox.com/u/61803503/Likert.pdf"target="_blank">Likert.pdf</a>
 </div>
 <div class='input'>HR("http://cran.r-project.org/src/contrib/reports_0.1.2.tar.gz", print = TRUE)
 </div>
-<div class='output'><a href="http://cran.r-project.org/src/contrib/reports_0.1.2.tar.gz">reports_0.1.2.tar.gz</a>
+<div class='output'><a href="http://cran.r-project.org/src/contrib/reports_0.1.2.tar.gz"target="_blank">reports_0.1.2.tar.gz</a>
 </div>
 <div class='input'>HR("http://cran.r-project.org/src/contrib/reports_0.1.2.tar.gz", "click me", print = TRUE)
 </div>
-<div class='output'><a href="http://cran.r-project.org/src/contrib/reports_0.1.2.tar.gz">click me</a>
+<div class='output'><a href="http://cran.r-project.org/src/contrib/reports_0.1.2.tar.gz"target="_blank">click me</a>
 </div></pre>
   </div>
   <div class="span4">
