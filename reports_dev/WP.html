@@ -40,14 +40,16 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>WP(text = "clipboard", quotes = TRUE, copy2clip = TRUE)</pre>
+    <pre>WP(path = "clipboard", quotes = TRUE, copy2clip = TRUE)</pre>
     
     <h2>Arguments</h2>
     <dl>
-      <dt>clipboard</dt>
-      <dd>logical.  If TRUE copies the path from
-  the clipboard, if FALSE <code>WP</code> will ask for the path
-  interactively.</dd>
+      <dt>path</dt>
+      <dd>character vector url/path copied to the
+  clipboard. Default is to read from the clipboard.</dd>
+      <dt>quotes</dt>
+      <dd>logical.  If <code>TRUE</code> quotes will be
+  added to front/end of the string.</dd>
       <dt>copy2clip</dt>
       <dd>logical.  If <code>TRUE</code> attempts to
   copy the output to the clipboard.</dd>
