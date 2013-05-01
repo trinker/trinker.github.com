@@ -139,7 +139,7 @@ presentation("NEW")
 `r HR("https://dl.dropbox.com/u/61803503/report_directory_guide.pdf", "Project Directory Workflow")`
 `r HR("http://trinker.github.io/reports/", "reports Functions")`
 `r HR("http://trinker.github.io/reports/dependencies", "reports Dependencies")`
-
+`r HR("http://trinker.github.io/slides/reports_quick_slides.txt", ".txt file of these slides")`
 ---
 
 `r YT("kws1PX1Dw9w")`
@@ -149,4 +149,3 @@ presentation("NEW")
 ```{r, echo=FALSE, results='asis'}
 bibliography("html")
 ```
-
