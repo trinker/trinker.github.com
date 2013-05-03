@@ -43,7 +43,7 @@
     <pre>IM(path = "clipboard", width = 540, height = IE(width, 360), sty = IE(width, width * 
   1.05, 480), center = TRUE, link = NULL, new_win = TRUE, copy2clip = TRUE, print = FALSE)
 
-IM2(image = "clipboard", ...)</pre>
+IM2(image = "clipboard", loc = 1, ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -79,6 +79,9 @@ IM2(image = "clipboard", ...)</pre>
       <dt>image</dt>
       <dd>A character vector name of the image.
   Default is to read from the clipboard.</dd>
+      <dt>loc</dt>
+      <dd>The location of the image: 1-/assets/img and
+  2-/figure.</dd>
       <dt>...</dt>
       <dd>Other arguments passed to <code>IM</code>.</dd>
     </dl>
