@@ -40,8 +40,8 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>IF(path = "clipboard", copy2clip = TRUE, width = 640, height = 360, print = FALSE, 
-  text = "Your browser does not support iframes.")</pre>
+    <pre>IF(path = "clipboard", copy2clip = TRUE, width = 640, height = 360, center = TRUE, 
+  print = FALSE, text = "Your browser does not support iframes.")</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -55,6 +55,9 @@
       <dd>The width of the player.</dd>
       <dt>height</dt>
       <dd>The height of the player.</dd>
+      <dt>center</dt>
+      <dd>logical. If TRUE the image will be
+  centered, if FALSE image will be left justified.</dd>
       <dt>print</dt>
       <dd>logical.  If <code>TRUE</code>
   <code><a href='http://www.inside-r.org/r-doc/base/cat'>cat</a></code> prints the output to the console.
@@ -82,7 +85,16 @@
     <h2 id="examples">Examples</h2>
     <pre class="examples"><div class='input'>IF("https://dl.dropboxusercontent.com/u/61803503/MWE.html", print = TRUE)
 </div>
-<div class='output'><iframe src="https://dl.dropboxusercontent.com/u/61803503/MWE.html" width="640" height="360">Your browser does not support iframes.</iframe></div></pre>
+<div class='output'><div style="text-align:center;">
+     <iframe src="https://dl.dropboxusercontent.com/u/61803503/MWE.html" width="640" height="360">Your browser does not support iframes.</iframe>
+</div>
+</div>
+<div class='input'>IF("http://www.estopwatch.net/", center = TRUE, print = TRUE)
+</div>
+<div class='output'><div style="text-align:center;">
+     <iframe src="http://www.estopwatch.net/" width="640" height="360">Your browser does not support iframes.</iframe>
+</div>
+</div></pre>
   </div>
   <div class="span4">
     <!-- <ul>
