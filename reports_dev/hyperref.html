@@ -42,7 +42,9 @@
     <h2>Usage</h2>
     <pre>HR(path = "clipboard", text = NULL, new_win = FALSE, copy2clip = TRUE, print = FALSE)
 
-HR2(path = "clipboard", text = NULL, new_win = TRUE, copy2clip = TRUE, print = FALSE)</pre>
+HR2(path = "clipboard", text = NULL, new_win = TRUE, copy2clip = TRUE, print = FALSE)
+
+BT(path = "clipboard", text = NULL, new_win = FALSE, copy2clip = TRUE, print = FALSE)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -82,6 +84,8 @@ HR2(path = "clipboard", text = NULL, new_win = TRUE, copy2clip = TRUE, print = F
       <p><code>HR2</code> - Convenience version of <code>HR</code> with
   <code>new_win</code> set to <code>TRUE</code>.</p>
   
+      <p><code>BT</code> - Generates a hyperlinked text button.</p>
+  
     </div>
     
     <h2 id="examples">Examples</h2>
@@ -102,11 +106,17 @@ HR(path="http://dl.dropbox.com/u/61803503/Likert.pdf", print = TRUE)
 <div class='input'>HR2("https://github.com/trinker/reports", "reports", print = TRUE)
 </div>
 <div class='output'><a href="https://github.com/trinker/reports" target="_blank">reports</a>
+</div>
+<div class='input'>BT("http://trinker.github.io/reports/dependencies", "Click Here!", print = TRUE)
+</div>
+<div class='output'><form action="http://trinker.github.io/reports/dependencies">
+    <input type="submit" value="Click Here!">
+</form>
 </div></pre>
   </div>
   <div class="span4">
     <!-- <ul>
-      <li>HR</li><li>HR2</li>
+      <li>BT</li><li>HR</li><li>HR2</li>
     </ul>
     <ul>
       
