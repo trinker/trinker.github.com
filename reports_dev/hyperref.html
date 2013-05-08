@@ -52,7 +52,7 @@ HR2(path = "clipboard", text = NULL, new_win = TRUE, copy2clip = TRUE, print = F
   that Windows users do not have to reorient slashes in
   local paths if reading from the clipboard.</dd>
       <dt>text</dt>
-      <dd>character vector of text to hyperref from.
+      <dd>A character vector of text to hyperref from.
   Defualt uses the <code><a href='http://www.inside-r.org/r-doc/base/basename'>basename</a></code> of the
   path.</dd>
       <dt>new_win</dt>
@@ -63,8 +63,8 @@ HR2(path = "clipboard", text = NULL, new_win = TRUE, copy2clip = TRUE, print = F
   copy the output to the clipboard.</dd>
       <dt>print</dt>
       <dd>logical.  If TRUE <code><a href='http://www.inside-r.org/r-doc/base/cat'>cat</a></code>
-  prints the output to the console.  If FALSE returns to
-  the console.</dd>
+  prints the output to the console.  If <code>FALSE</code>
+  returns to the console.</dd>
     </dl>
     
     <div class="Value">
@@ -80,7 +80,7 @@ HR2(path = "clipboard", text = NULL, new_win = TRUE, copy2clip = TRUE, print = F
       <p><code>HR</code> - Wrap a path/url to generate an HTML href tag.</p>
   
       <p><code>HR2</code> - Convenience version of <code>HR</code> with
-  new_win set to <code>TRUE</code>.</p>
+  <code>new_win</code> set to <code>TRUE</code>.</p>
   
     </div>
     
