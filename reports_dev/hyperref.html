@@ -40,7 +40,9 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>HR(path = "clipboard", text = NULL, new_win = TRUE, copy2clip = TRUE, print = FALSE)</pre>
+    <pre>HR(path = "clipboard", text = NULL, new_win = FALSE, copy2clip = TRUE, print = FALSE)
+
+HR2(path = "clipboard", text = NULL, new_win = TRUE, copy2clip = TRUE, print = FALSE)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -75,7 +77,10 @@
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Wrap a path/url to generate an HTML href tag.</p>
+      <p><code>HR</code> - Wrap a path/url to generate an HTML href tag.</p>
+  
+      <p><code>HR</code> - Convenience version of <code>HR</code> with new_win
+  set to <code>TRUE</code>.</p>
   
     </div>
     
@@ -84,20 +89,20 @@
 
 HR(path="http://dl.dropbox.com/u/61803503/Likert.pdf", print = TRUE)
 </div>
-<div class='output'><a href="http://dl.dropbox.com/u/61803503/Likert.pdf"target="_blank">Likert.pdf</a>
+<div class='output'><a href="http://dl.dropbox.com/u/61803503/Likert.pdf">Likert.pdf</a>
 </div>
 <div class='input'>HR("http://cran.r-project.org/src/contrib/reports_0.1.2.tar.gz", print = TRUE)
 </div>
-<div class='output'><a href="http://cran.r-project.org/src/contrib/reports_0.1.2.tar.gz"target="_blank">reports_0.1.2.tar.gz</a>
+<div class='output'><a href="http://cran.r-project.org/src/contrib/reports_0.1.2.tar.gz">reports_0.1.2.tar.gz</a>
 </div>
 <div class='input'>HR("http://cran.r-project.org/src/contrib/reports_0.1.2.tar.gz", "click me", print = TRUE)
 </div>
-<div class='output'><a href="http://cran.r-project.org/src/contrib/reports_0.1.2.tar.gz"target="_blank">click me</a>
+<div class='output'><a href="http://cran.r-project.org/src/contrib/reports_0.1.2.tar.gz">click me</a>
 </div></pre>
   </div>
   <div class="span4">
     <!-- <ul>
-      <li>HR</li>
+      <li>HR</li><li>HR2</li>
     </ul>
     <ul>
       
