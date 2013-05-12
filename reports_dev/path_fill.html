@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>US. reports 0.1.3</title>
+<title>UF. reports 0.1.3</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -35,36 +35,40 @@
         
       </header>
       
-      <h1>Insert Underscores in Path</h1>
+      <h1>Path/URL: Fill Blank Spaces</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>US(text = "clipboard", copy2clip = TRUE)</pre>
+    <pre>UF(path = "clipboard", copy2clip = TRUE, fill = "_")</pre>
     
     <h2>Arguments</h2>
     <dl>
-      <dt>text</dt>
-      <dd>A character vector or text copied to the
+      <dt>path</dt>
+      <dd>A character vector or url/path copied to the
   clipboard.  Default is to read from the clipboard.</dd>
       <dt>copy2clip</dt>
       <dd>logical.  If <code>TRUE</code> attempts to
   copy the output to the clipboard.</dd>
+      <dt>fill</dt>
+      <dd>The character symbol to fill the blank spaces
+  with.</dd>
     </dl>
     
     <div class="Value">
       <h2>Value</h2>
       
       <p>Returns a character vector every space replaced with an
-  underscore.</p>
+  underscore/percent.  <code>UF</code> also converts the text to
+  lower case.</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p>A convenience wrapper to replace black spaces with
-  underscores.</p>
+      <p><code>UF</code> - A convenience wrapper to replace black spaces
+  of paths with underscores.</p>
   
     </div>
 
@@ -78,14 +82,16 @@
     </div>
     
     <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>US("bad path with spaces")
+    <pre class="examples"><div class='input'>UF("bad path with spaces")
 </div>
-<div class='output'>[1] "bad_path_with_spaces"
-</div></pre>
+<strong class='error'>Error in text == "clipboard": comparison (1) is possible only for atomic and list types</strong>
+<div class='input'>PF("https://github.com/trinker/reports/fictional path to nowhere.pdf")
+</div>
+<strong class='error'>Error in text == "clipboard": comparison (1) is possible only for atomic and list types</strong></pre>
   </div>
   <div class="span4">
     <!-- <ul>
-      <li>US</li>
+      <li>UF</li>
     </ul>
     <ul>
       

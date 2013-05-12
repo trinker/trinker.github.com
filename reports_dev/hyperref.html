@@ -44,7 +44,9 @@
 
 HR2(path = "clipboard", text = NULL, new_win = TRUE, copy2clip = TRUE, print = FALSE)
 
-BT(path = "clipboard", text = NULL, new_win = FALSE, copy2clip = TRUE, print = FALSE)</pre>
+BT(path = "clipboard", text = NULL, new_win = FALSE, copy2clip = TRUE, print = FALSE)
+
+PF(path = "clipboard", copy2clip = TRUE, fill = "%")</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -87,6 +89,9 @@ BT(path = "clipboard", text = NULL, new_win = FALSE, copy2clip = TRUE, print = F
       <p><code>BT</code> - Wrap a path/url to generate an HTML
   hyperlinked text button tag.</p>
   
+      <p><code>PF</code> - A convenience wrapper to replace black spaces
+  of URLs with percents.</p>
+  
     </div>
     
     <h2 id="examples">Examples</h2>
@@ -117,7 +122,7 @@ HR(path="http://dl.dropbox.com/u/61803503/Likert.pdf", print = TRUE)
   </div>
   <div class="span4">
     <!-- <ul>
-      <li>BT</li><li>HR</li><li>HR2</li>
+      <li>BT</li><li>HR</li><li>HR2</li><li>PF</li>
     </ul>
     <ul>
       
