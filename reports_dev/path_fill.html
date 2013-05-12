@@ -40,7 +40,9 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>UF(path = "clipboard", copy2clip = TRUE, fill = "_")</pre>
+    <pre>UF(path = "clipboard", copy2clip = TRUE, fill = "_")
+
+PF(path = "clipboard", copy2clip = TRUE, fill = "%")</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -70,6 +72,9 @@
       <p><code>UF</code> - A convenience wrapper to replace black spaces
   of paths with underscores.</p>
   
+      <p><code>PF</code> - A convenience wrapper to replace black spaces
+  of URLs with percents.</p>
+  
     </div>
 
     <div class="Warning">
@@ -84,14 +89,16 @@
     <h2 id="examples">Examples</h2>
     <pre class="examples"><div class='input'>UF("bad path with spaces")
 </div>
-<strong class='error'>Error in text == "clipboard": comparison (1) is possible only for atomic and list types</strong>
+<div class='output'>[1] "bad_path_with_spaces"
+</div>
 <div class='input'>PF("https://github.com/trinker/reports/fictional path to nowhere.pdf")
 </div>
-<strong class='error'>Error in text == "clipboard": comparison (1) is possible only for atomic and list types</strong></pre>
+<div class='output'>[1] "https://github.com/trinker/reports/fictional%path%to%nowhere.pdf"
+</div></pre>
   </div>
   <div class="span4">
     <!-- <ul>
-      <li>UF</li>
+      <li>PF</li><li>UF</li>
     </ul>
     <ul>
       
