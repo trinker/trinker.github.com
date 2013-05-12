@@ -83,38 +83,7 @@ folder(..., folder.name = NULL)</pre>
     </div>
     
     <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>(x <- folder("DELETE.ME"))
-</div>
-<div class='output'>[1] "C:/Users/trinker/GitHub/reports/DELETE.ME"
-</div>
-<div class='input'>which(dir() == "DELETE.ME")
-</div>
-<div class='output'>[1] 2
-</div>
-<div class='input'>delete("DELETE.ME")
-which(dir() == "DELETE.ME")
-</div>
-<div class='output'>integer(0)
-</div>
-<div class='input'>
-folder(cat, dog)
-</div>
-<div class='output'>[[1]]
-[1] "C:/Users/trinker/GitHub/reports/cat"
-
-[[2]]
-[1] "C:/Users/trinker/GitHub/reports/dog"
-
-</div>
-<div class='input'>lapply(c("cat", "dog"), delete)
-</div>
-<div class='output'>[[1]]
-[1] 0
-
-[[2]]
-[1] 0
-
-</div></pre>
+    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # (x <- folder("DELETE.ME"))# which(dir() == "DELETE.ME")# delete("DELETE.ME")# which(dir() == "DELETE.ME")# # folder(cat, dog)# lapply(c("cat", "dog"), delete)# ## <strong>End(Not run)</strong></div></pre>
   </div>
   <div class="span4">
     <!-- <ul>
