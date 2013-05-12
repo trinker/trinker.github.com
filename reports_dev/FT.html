@@ -46,23 +46,67 @@
     <dl>
       <dt>...</dt>
       <dd>1 to 3 arguments of c(`face`, `size` and/or
-  `color`).  face accepts one of the following
-  c(<code>"arial"</code>, <code>"arial_black"</code>,
+  `color`): <ul>
+<li>face- accepts one of the
+  following c(<code>"arial"</code>, <code>"arial_black"</code>,
   <code>"comic_sans_ms"</code>, <code>"courier"</code>,
   <code>"courier_new"</code>, <code>"georgia"</code>,
   <code>"helvetica"</code>, <code>"impact"</code>, <code>"palatino"</code>,
-  <code>"times_new_roman}", <code>"trebuchet_ms"</code>,
-  <code>"verdanaBrowse"</code>). size is any valid whole number.
-  color can be any R color or hex value.</code>
-
-  \itemtextA character vector or text copied to the
-  clipboard.  Default is to read from the clipboard.
-
-  \itemcopy2cliplogical.  If <code>TRUE</code> attempts to
-  copy the output to the clipboard.
+  <code>"times_new_roman"</code>, <code>"trebuchet_ms"</code>,
+  <code>"verdanaBrowse"</code>). </li>
+<li>face- size is any valid
+  whole number. </li>
+<li>face- color can be any R color or
+  hex value. </li>
+</ul>
 </dd>
+      <dt>text</dt>
+      <dd>A character vector or text copied to the
+  clipboard.  Default is to read from the clipboard.</dd>
+      <dt>copy2clip</dt>
+      <dd>logical.  If <code>TRUE</code> attempts to
+  copy the output to the clipboard.</dd>
     </dl>
-          </div>
+    
+    <div class="Value">
+      <h2>Value</h2>
+      
+      <p>Returns a character vector wrapped with a font tag.</p>
+  
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p>Wraps text with a font tags. Conveniently detects
+  c(`face`, `size` and/or `color`) and creates a font tag
+  with the supplied text.</p>
+  
+    </div>
+
+    <div class="Warning">
+      <h2>Warning</h2>
+      
+      <p>Ligatures parsing is very good, however, these elements
+  my be incorrect.  If a warning is thrown check the use of
+  "ff", "fi", "fl", "ffi" and "ffl".</p>
+  
+    </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>FT(6, text="guy")
+</div>
+<div class='output'>[1] <font size="6">guy</font>
+</div>
+<div class='input'>FT(6, blue, text="guy")
+</div>
+<div class='output'>[1] <font size="6" color="blue">guy</font>
+</div>
+<div class='input'>FT(6, red, times_new_roman, text="guy")
+</div>
+<div class='output'>[1] <font size="6" color="red" face="times new roman">guy</font>
+</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>FT</li>
