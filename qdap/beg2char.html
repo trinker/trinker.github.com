@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>mraja1. qdap 0.2.3</title>
+<title>beg2char. qdap 0.2.3</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -35,58 +35,53 @@
         
       </header>
       
-      <h1>Romeo and Juliet: Act 1 Dialogue Merged with Demographics</h1>
+      <h1>Grab Begin/End of Sting to Character</h1>
 
 <div class="row">
   <div class="span8">
-        
-    <div class="Format">
-      <h2>Format</h2>
+    <h2>Usage</h2>
+    <pre>beg2char(text.var, char = " ", noc = 1, include = FALSE)
+
+char2end(text.var, char = " ", noc = 1, include = FALSE)</pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>text.var,</dt>
+      <dd>A character string</dd>
+      <dt>char</dt>
+      <dd>The character from which to grab until/from.</dd>
+      <dt>noc</dt>
+      <dd>Number of times the character appears before
+  the grab.</dd>
+      <dt>include</dt>
+      <dd>logical.  If TRUE includes the character
+  in the grab.</dd>
+    </dl>
+    
+    <div class="Value">
+      <h2>Value</h2>
       
-      <p>A data frame with 235 rows and 5 variables</p>
+      <p>returns a vector of text with char on/forward removed.</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p>A dataset containing act 1 of Romeo and Juliet with
-  demographic information.</p>
+      <p><code>beg2char</code> - Grab from beginning of string to a
+  character(s).</p>
   
-    </div>
-
-    <div class="Details">
-      <h2>Details</h2>
-      
-      <p><ul>
-<li> person. Character in the play </li>
-<li> sex.
-  Gender </li>
-<li> fam.aff. Family affiliation of character
-  </li>
-<li> died. Dummy coded death variable (0-no; 1-yes); if
-  yes the character dies in the play </li>
-<li> dialogue. The
-  spoken dialogue </li>
-</ul></p>
-  
-      <p></p>
-  
-    </div>
-
-    <div class="References">
-      <h2>References</h2>
-      
-      <p><a href = 'http://shakespeare.mit.edu/romeo_juliet/full.html'>http://shakespeare.mit.edu/romeo_juliet/full.html</a></p>
+      <p><code>char2end</code> - Grab from character(s) to end of
+  string.</p>
   
     </div>
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>mraja1</li>
+      <li>beg2char</li><li>char2end</li>
     </ul>
     <ul>
-      <li>datasets</li>
+      
     </ul> -->
       
         

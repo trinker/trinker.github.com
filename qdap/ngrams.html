@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>mraja1. qdap 0.2.3</title>
+<title>ngrams. qdap 0.2.3</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -35,58 +35,56 @@
         
       </header>
       
-      <h1>Romeo and Juliet: Act 1 Dialogue Merged with Demographics</h1>
+      <h1>Generate ngrams</h1>
 
 <div class="row">
   <div class="span8">
-        
-    <div class="Format">
-      <h2>Format</h2>
+    <h2>Usage</h2>
+    <pre>ngrams(text.var, grouping.var = NULL, n = 2)</pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>text.var</dt>
+      <dd>The text variable</dd>
+      <dt>grouping.var</dt>
+      <dd>The grouping variables.  Default NULL
+  generates one output for all text.  Also takes a single
+  grouping variable or a list of 1 or more grouping
+  variables.</dd>
+      <dt>n</dt>
+      <dd>The max number of grams calculate.</dd>
+    </dl>
+    
+    <div class="Value">
+      <h2>Value</h2>
       
-      <p>A data frame with 235 rows and 5 variables</p>
+      <p>Returns a list of: rawA list of pasted single
+  vectors of the ngrams per row. groupA list of
+  pasted vectors of ngrams grouped by grouping.var.
+  unlist1A list of a single vector of pasted ngrams
+  per grouping.var in the order used. unlist2A
+  list of a single vector of pasted ngrams per grouping.var
+  in alphabetical order. group_nA list of a list
+  of vectors of ngrams per grouping.var & n (not pasted).
+  allA single vector of pasted ngrams sorted
+  alphabetically. all_nA list of lists a single
+  vectors of ngrams sorted alphabetically (not pasted).</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p>A dataset containing act 1 of Romeo and Juliet with
-  demographic information.</p>
-  
-    </div>
-
-    <div class="Details">
-      <h2>Details</h2>
-      
-      <p><ul>
-<li> person. Character in the play </li>
-<li> sex.
-  Gender </li>
-<li> fam.aff. Family affiliation of character
-  </li>
-<li> died. Dummy coded death variable (0-no; 1-yes); if
-  yes the character dies in the play </li>
-<li> dialogue. The
-  spoken dialogue </li>
-</ul></p>
-  
-      <p></p>
-  
-    </div>
-
-    <div class="References">
-      <h2>References</h2>
-      
-      <p><a href = 'http://shakespeare.mit.edu/romeo_juliet/full.html'>http://shakespeare.mit.edu/romeo_juliet/full.html</a></p>
+      <p>Transcript apply ngrams.</p>
   
     </div>
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>mraja1</li>
+      <li>ngrams</li>
     </ul>
     <ul>
-      <li>datasets</li>
+      <li>ngram</li>
     </ul> -->
       
         
