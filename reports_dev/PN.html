@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>RN. reports 0.1.3</title>
+<title>PN. reports 0.1.3</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -35,12 +35,12 @@
         
       </header>
       
-      <h1>Insert reveal.js Notes</h1>
+      <h1>Insert Presenter Notes</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>RN(text = "clipboard", copy2clip = TRUE, print = FALSE)</pre>
+    <pre>PN(text = "clipboard", copy2clip = TRUE, print = FALSE)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -73,17 +73,17 @@
     </div>
     
     <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>RN("some fancy notes", print = TRUE)
+    <pre class="examples"><div class='input'>PN("some fancy notes", print = TRUE)
 </div>
 <div class='output'><aside class="notes">
 some fancy notes <br>
 </aside>
 </div>
-<div class='input'>RN("1) some\n2) fancy\n3) notes")
+<div class='input'>PN("1) some\n2) fancy\n3) notes")
 </div>
 <div class='output'>[1] "<aside class=\"notes\">\n1) some <br>\n2) fancy <br>\n3) notes <br>\n</aside>\n"
 </div>
-<div class='input'>RN("1) some
+<div class='input'>PN("1) some
 2) fancy
 3) notes", print = TRUE)
 </div>
@@ -96,7 +96,7 @@ some fancy notes <br>
   </div>
   <div class="span4">
     <!-- <ul>
-      <li>RN</li>
+      <li>PN</li>
     </ul>
     <ul>
       
