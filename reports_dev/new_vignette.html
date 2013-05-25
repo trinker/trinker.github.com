@@ -41,7 +41,10 @@
   <div class="span8">
     <h2>Usage</h2>
     <pre>new_vignette(vignette = "vignette", type = "rmd", path = getwd(), bib.loc = NULL, 
-  name = getOption("name.reports"))</pre>
+  name = getOption("name.reports"))
+
+append_vignette(vignette = "vignette", type = "rmd", path = getwd(), bib.loc = NULL, 
+      name = getOption("name.reports"))</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -77,7 +80,11 @@
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Generate a vignettes template to increase efficiency.</p>
+      <p>`codenew_vignette - Generate a vignettes template to
+  increase efficiency.</p>
+  
+      <p><code>append_vignette</code> - Add vignettes to a prexisting
+  vignettes directory.</p>
   
     </div>
 
@@ -109,7 +116,7 @@
   </div>
   <div class="span4">
     <!-- <ul>
-      <li>new_vignette</li>
+      <li>append_vignette</li><li>new_vignette</li>
     </ul>
     <ul>
       
