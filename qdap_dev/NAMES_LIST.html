@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>names2sex. qdap 0.2.3</title>
+<title>NAMES_LIST. qdap 0.2.3</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -35,38 +35,42 @@
         
       </header>
       
-      <h1>Names to Gender Prediction</h1>
+      <h1>First Names and Predictive Gender (U.S.) List</h1>
 
 <div class="row">
   <div class="span8">
-    <h2>Usage</h2>
-    <pre>names2sex(names.list, pred.sex = TRUE)</pre>
-    
-    <h2>Arguments</h2>
-    <dl>
-      <dt>names.list</dt>
-      <dd>Character vector containing first
-  names.</dd>
-      <dt>pred.sex</dt>
-      <dd>logical.  If <code>TRUE</code> overlapping M/F
-  names will be predicted based on highest cummulative
-  frequency.  If <code>FALSE</code> the overlapping names will be
-  denoted with a <code>"B"</code>.</dd>
-    </dl>
-    
-    <div class="Value">
-      <h2>Value</h2>
+        
+    <div class="Format">
+      <h2>Format</h2>
       
-      <p>Returns a vector of predicted gender (M/F) based on first
-  name.</p>
+      <p>A list with 26 elements</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Predict gender from U.S. names (based on 1990 U.S. census
-  data).</p>
+      <p>A list version of the <code>link[qdap]{NAMES_SEX}</code>)
+  dataset broken down by first letter.</p>
+  
+    </div>
+
+    <div class="Details">
+      <h2>Details</h2>
+      
+      <p>Alphabetical list of dataframes with the following
+  variables: <ul>
+<li> name. A first name.  </li>
+<li>
+  gender2. Gender of the combined male/female list with "B"
+  in place of overlapping (M/F) names.  </li>
+<li> pred.sex.
+  Predicted gender of the names with B's in <code>gender2</code>
+  repalced with the gender that had a higher
+  <code>per.freq</code>. </li>
+</ul></p>
+  
+      <p></p>
   
     </div>
 
@@ -75,16 +79,14 @@
       
       <p><a href = 'http://www.census.gov/genealogy/www/data/1990surnames/names_files.html'>http://www.census.gov/genealogy/www/data/1990surnames/names_files.html</a></p>
   
-      <p><a href = 'http://stackoverflow.com/a/818231/1000343'>http://stackoverflow.com/a/818231/1000343</a></p>
-  
     </div>
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>names2sex</li>
+      <li>NAMES_LIST</li>
     </ul>
     <ul>
-      <li>gender</li><li>name</li>
+      <li>datasets</li>
     </ul> -->
       
         
