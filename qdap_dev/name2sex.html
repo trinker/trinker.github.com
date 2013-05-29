@@ -43,7 +43,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>name2sex(names.list, pred.sex = TRUE, fuzzy.match = pred.sex)</pre>
+    <pre>name2sex(names.list, pred.sex = TRUE, fuzzy.match = pred.sex, USE.NAMES = TRUE)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -62,6 +62,9 @@
   with the same letter.  This is computationally intensive
   and should not be used on larger vectors.  Defaults to
   <code>pred.sex</code>.</dd>
+      <dt>USE.NAMES</dt>
+      <dd>logical.  If <code>TRUE</code> names.list is
+  used to name the gender vector.</dd>
     </dl>
     
     <div class="Value">
