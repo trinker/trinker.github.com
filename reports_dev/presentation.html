@@ -43,7 +43,7 @@
     <pre>presentation(presentation = "presentation", type = c("rnw", "rmd"), theme = "Madrid", 
   bib.loc = getOption("bib.loc"), name = getOption("name.reports"), github.user = getOption("github.user"), 
       sources = getOption("sources.reports"), path = getwd(), slidify = getOption("slidify.template"), 
-      ...)</pre>
+      revealjs.loc = getOption("revealjs.loc"), ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -87,6 +87,9 @@
   argument will be overrode if a custom reports template is
   supplied with an .Rmd file in the inst directory named
   slidify.Rmd (<code>/inst/slidify.Rmd</code>).</dd>
+      <dt>revealjs.loc</dt>
+      <dd>Optional path to a reveal.js full
+  install.</dd>
       <dt>...</dt>
       <dd>Other arguments passed to
   <code><a href='http://www.inside-r.org/r-doc/slidify/author'>author</a></code>.</dd>
@@ -114,10 +117,11 @@
       
       <p>The user may want to set <code><a href='http://www.inside-r.org/r-doc/base/options'>options</a></code> for
   <code>bib.loc</code>, <code>github.user</code>, <code>name.reports</code>
-  and <code>sources.reports</code> in the user's primary
+  <code>sources.reports</code>,<code>slidify.template</code> and
+  <code>reveraljs.loc</code> in the user's primary
   <code>.Rprofile</code>: <ol>
 <li><b>bib.loc</b> - The
-  path to the users primary bibliography
+  path to the user's primary bibliography
   </li>
 <li><b>github.user</b> - GitHub user name
   </li>
@@ -131,6 +135,10 @@
   used in the slidify presentations (see
   <code>slidify_templates</code> for possible non-path
   arguments) </li>
+<li><b>revealjs.loc</b> - The path to the
+  user's
+  <a href = 'https://github.com/hakimel/reveal.js/'>reveal.js
+  full install</a> </li>
 </ol></p>
   
       <p></p>
@@ -161,6 +169,9 @@
   <code>new_report</code>,
   <code>slidify_templates</code>,
   <code><a href='http://www.inside-r.org/r-doc/slidify/author'>author</a></code>
+
+  <a href = 'https://github.com/hakimel/reveal.js/'>Installation
+  section of reveal.js GitHub</a>
 
         
   </div>

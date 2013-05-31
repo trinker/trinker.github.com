@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>local_rjs. reports 0.1.3</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">reports 0.1.3</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>View reveal.js Slide Notes Locally</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre>local_rjs(reveal.html = NULL, revealjs.loc = getOption("revealjs.loc"))</pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>reveal.html</dt>
+      <dd>The location of the
+  <a href = 'https://github.com/hakimel/reveal.js/'>reveal.js</a>
+  created html document. Default <code>NULL</code> will use the
+  first available html file in the PRESENTATION directory.</dd>
+      <dt>revealjs.loc</dt>
+      <dd></dd>
+    </dl>
+    
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p>Reconfigures the HTML output of a slidify reveal.js
+  presentation for use with a reveal.js full install.  This
+  allows the user to view slide notes without an Internet
+  connection (i.e., local host is used as the server).</p>
+  
+    </div>
+
+    <div class="Details">
+      <h2>Details</h2>
+      
+      <p>slidify generated reveal.js presentations are not
+  configured for use with a full install revealjs.  This
+  means that slide notes are not available for local use.
+  <code>local_rjs</code> reconfigures the html output and
+  optionally places the file in the user's reveal.js full
+  install directory.  Additionally the style.css from
+  reports is copied to the css directory in the reveal.js
+  full install and named reports.css.</p>
+  
+      <p>For maximum efficiency configure the
+  <code><a href='http://www.inside-r.org/r-doc/base/options'>options</a></code> for <code>reveraljs.loc</code> in
+  their <code>.Rprofile</code>.</p>
+  
+    </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## local_rjs()</div></pre>
+  </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>local_rjs</li>
+    </ul>
+    <ul>
+      
+    </ul> -->
+      
+    <h2>See also</h2>
+    
+  <a href = 'https://github.com/hakimel/reveal.js/'>Installation
+  section of reveal.js GitHub</a>
+
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>
