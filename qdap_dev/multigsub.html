@@ -41,10 +41,10 @@
   <div class="span8">
     <h2>Usage</h2>
     <pre>multigsub(pattern, replacement = NULL, text.var, leadspace = FALSE, trailspace = FALSE, 
-  fixed = TRUE, ...)
+  fixed = TRUE, trim = TRUE, ...)
 
 mgsub(pattern, replacement = NULL, text.var, leadspace = FALSE, trailspace = FALSE, 
-      fixed = TRUE, ...)</pre>
+      fixed = TRUE, trim = TRUE, ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -58,14 +58,18 @@ mgsub(pattern, replacement = NULL, text.var, leadspace = FALSE, trailspace = FAL
       <dt>text.var</dt>
       <dd>The text variable.</dd>
       <dt>leadspace</dt>
-      <dd>logical.  If TRUE inserts a leading
-  space in the replacements.</dd>
+      <dd>logical.  If <code>TRUE</code> inserts a
+  leading space in the replacements.</dd>
       <dt>trailspace</dt>
-      <dd>logical.  If TRUE inserts a trailing
-  space in the replacements.</dd>
+      <dd>logical.  If <code>TRUE</code>TRUE inserts a
+  trailing space in the replacements.</dd>
       <dt>fixed</dt>
-      <dd>logical. If TRUE, pattern is a string to be
-  matched as is. Overrides all conflicting arguments.</dd>
+      <dd>logical. If <code>TRUE</code>, pattern is a string
+  to be matched as is. Overrides all conflicting
+  arguments.</dd>
+      <dt>trim</dt>
+      <dd>logical.  If <code>TRUE</code> leading and trailing
+  white spaces are removed.</dd>
       <dt>...</dt>
       <dd>Additional arguments passed to
   <code><a href='http://www.inside-r.org/r-doc/base/grep'>gsub</a></code>.</dd>
