@@ -53,24 +53,26 @@
       <dt>text.var</dt>
       <dd>The text variable (character string).</dd>
       <dt>grouping.var</dt>
-      <dd>The grouping variables (character
-  string).</dd>
+      <dd>The grouping variables.  Default
+  <code>NULL</code> generates one word list for all text.  Also
+  takes a single grouping variable or a list of 1 or more
+  grouping variables.</dd>
       <dt>facet.vars</dt>
       <dd>An optional single vector or list of 1
   or 2 to facet by.</dd>
       <dt>tot</dt>
       <dd>The turn of talk variable (character string).
-  May be TRUE (assumes "tot" is the variable name), FALSE
-  (use row numbers), or a character string of the turn of
-  talk column.</dd>
+  May be <code>TRUE</code> (assumes "tot" is the variable name),
+  <code>FALSE</code> (use row numbers), or a character string of
+  the turn of talk column.</dd>
       <dt>ncol</dt>
       <dd>if an integer value is passed to this
   <code>gantt_wrap</code> uses
   <code><a href='http://www.inside-r.org/r-doc/ggplot2/facet_wrap'>facet_wrap</a></code> rather than
   <code><a href='http://www.inside-r.org/r-doc/ggplot2/facet_grid'>facet_grid</a></code>.</dd>
       <dt>transform</dt>
-      <dd>logical.  If TRUE the repeated facets
-  will be transformed from stacked to side by side.</dd>
+      <dd>logical.  If <code>TRUE</code> the repeated
+  facets will be transformed from stacked to side by side.</dd>
       <dt>ylab</dt>
       <dd>Optional y label.</dd>
       <dt>xlab</dt>

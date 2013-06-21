@@ -55,16 +55,16 @@ wf.combine(wf.obj, word.lists, matrix = FALSE)</pre>
       <dt>text.var</dt>
       <dd>The text variable</dd>
       <dt>grouping.var</dt>
-      <dd>The grouping variables.  Default NULL
-  generates one word list for all text.  Also takes a
-  single grouping variable or a list of 1 or more grouping
-  variables.</dd>
+      <dd>The grouping variables.  Default
+  <code>NULL</code> generates one word list for all text.  Also
+  takes a single grouping variable or a list of 1 or more
+  grouping variables.</dd>
       <dt>wfdf</dt>
       <dd>A word frequency data frame given instead of
   raw text.var and optional grouping.var. Basically
   converts a word frequency dataframe (wfdf) to a word
   frequency matrix (<code>wfm</code>).  Default is
-  NULL.</dd>
+  <code>NULL</code>.</dd>
       <dt>output</dt>
       <dd>Output type (either <code>"proportion"</code> or
   <code>"percent"</code>).</dd>
@@ -72,7 +72,7 @@ wf.combine(wf.obj, word.lists, matrix = FALSE)</pre>
       <dd>A vector of stop words to remove.</dd>
       <dt>char2space</dt>
       <dd>A vector of characters to be turned
-  into spaces.  If <code>char.keep</code> is NULL,
+  into spaces.  If <code>char.keep</code> is <code>NULL</code>,
   <code>char2space</code> will activate this argument.</dd>
       <dt>...</dt>
       <dd>Other arguments supplied to
@@ -82,14 +82,14 @@ wf.combine(wf.obj, word.lists, matrix = FALSE)</pre>
   places (round) or significant digits (signif) to be used.
   Negative values are allowed.</dd>
       <dt>margins</dt>
-      <dd>logical. If TRUE provides grouping.var and
-  word variable totals.</dd>
+      <dd>logical. If <code>TRUE</code> provides
+  grouping.var and word variable totals.</dd>
       <dt>word.lists</dt>
       <dd>A list of character vectors of words to
   pass to <code>wf.combine</code></dd>
       <dt>matrix</dt>
-      <dd>logical.  If TRUE returns the output as a
-  <code>wfm</code> rather than a
+      <dd>logical.  If <code>TRUE</code> returns the output
+  as a <code>wfm</code> rather than a
   <code>wfdf</code> object.</dd>
       <dt>wf.obj</dt>
       <dd>A <code>wfm</code> or <code>wfdf</code> object.</dd>
