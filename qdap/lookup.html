@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>lookup. qdap 0.2.3</title>
+<title>lookup. qdap 0.2.4</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.2.3</a>
+      <a class="brand" href="#">qdap 0.2.4</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -47,12 +47,13 @@
       <dt>terms</dt>
       <dd>A vector of terms to undergo a lookup.</dd>
       <dt>key.match</dt>
-      <dd>Either a two column data frame (if data
-  frame supplied no key reassign needed) of a match key and
-  reassignment column or a single vector match key.</dd>
+      <dd>Takes (1) a two column data.frame of a
+  match key and reassignment column, (2) a named list of
+  vectors(if data.frame/named list supplied no key reassign
+  needed) or (3) a single vector match key.</dd>
       <dt>key.reassign</dt>
       <dd>A single reassignment vector supplied
-  if key.match is not a two column data frame.</dd>
+  if key.match is not a two column data.frame/named list.</dd>
       <dt>missing</dt>
       <dd>Value to assign to terms not matching the
   key.match.</dd>

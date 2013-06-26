@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>print.ngram. qdap 0.2.3</title>
+<title>tdm. qdap 0.2.4</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.2.3</a>
+      <a class="brand" href="#">qdap 0.2.4</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -35,31 +35,47 @@
         
       </header>
       
-      <h1>Prints an ngram object</h1>
+      <h1>Convert/Generate Term Document Matrix</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>print(x, ...)</pre>
+    <pre>tdm(text.var, grouping.var = NULL, ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
-      <dt>x</dt>
-      <dd>The ngram object</dd>
+      <dt>text.var</dt>
+      <dd>The text variable or a <code>wfm</code>
+  object.</dd>
+      <dt>grouping.var</dt>
+      <dd>The grouping variables.  Default
+  <code>NULL</code> generates one word list for all text.  Also
+  takes a single grouping variable or a list of 1 or more
+  grouping variables.</dd>
       <dt>...</dt>
-      <dd>ignored</dd>
+      <dd>Other arguments passed to <code>wfm</code>.</dd>
     </dl>
     
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Prints an ngram object</p>
+      <p>Create term document matrices from raw text or <code>wfm</code>
+  for use with other text analysis packages.</p>
+  
+    </div>
+
+    <div class="Details">
+      <h2>Details</h2>
+      
+      <p>Similar to the <code>tm</code> package's
+  <code><a href='http://www.inside-r.org/r-doc/tm/matrix'>TermDocumentMatrix</a></code> though not
+  identical.</p>
   
     </div>
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>print.ngram</li>
+      <li>tdm</li>
     </ul>
     <ul>
       

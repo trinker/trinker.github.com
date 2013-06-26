@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>cm_dummy2long. qdap 0.2.4</title>
+<title>NAMES_SEX. qdap 0.2.4</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -35,50 +35,58 @@
         
       </header>
       
-      <h1>Convert cm_combine.dummy Back to Long</h1>
+      <h1>First Names and Predictive Gender (U.S.)</h1>
 
 <div class="row">
   <div class="span8">
-    <h2>Usage</h2>
-    <pre>cm_dummy2long(cm.comb.obj, rm.var = "time")</pre>
-    
-    <h2>Arguments</h2>
-    <dl>
-      <dt>cm.comb.obj</dt>
-      <dd>An object from cm_combine.dummy</dd>
-      <dt>rm.var</dt>
-      <dd>Name of the repeated measures column.
-  Default is <code>"time"</code>.</dd>
-    </dl>
-    
-    <div class="Value">
-      <h2>Value</h2>
+        
+    <div class="Format">
+      <h2>Format</h2>
       
-      <p>Returns a dataframe with co-occurrences of provided code
-  columns.</p>
+      <p>A data frame with 5163 rows and 3 variables</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p><code>cm_combine.dummy</code> back to long.</p>
+      <p>A truncated version of the <code>link[qdap]{NAMES}</code>)
+  dataset used for predicting.</p>
+  
+    </div>
+
+    <div class="Details">
+      <h2>Details</h2>
+      
+      <p><ul>
+<li> name. A first name.  </li>
+<li> gender2.
+  Gender of the combined male/female list with "B" in place
+  of overlapping (M/F) names.  </li>
+<li> pred.sex. Predicted
+  gender of the names with B's in <code>gender2</code> repalced
+  with the gender that had a higher <code>per.freq</code>. </li>
+</ul></p>
+  
+      <p></p>
+  
+    </div>
+
+    <div class="References">
+      <h2>References</h2>
+      
+      <p><a href = 'http://www.census.gov/genealogy/www/data/1990surnames/names_files.html'>http://www.census.gov/genealogy/www/data/1990surnames/names_files.html</a></p>
   
     </div>
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>cm_dummy2long</li>
+      <li>NAMES_SEX</li>
     </ul>
     <ul>
-      
+      <li>datasets</li>
     </ul> -->
       
-    <h2>See also</h2>
-    
-  <code>cm_long2dummy</code>,
-  <code>cm_combine.dummy</code>
-
         
   </div>
 </div>

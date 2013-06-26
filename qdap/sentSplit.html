@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>sentSplit. qdap 0.2.3</title>
+<title>sentSplit. qdap 0.2.4</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="
   Dason Kurkiewicz and Tyler Rinker
@@ -23,7 +23,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.2.3</a>
+      <a class="brand" href="#">qdap 0.2.4</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -61,14 +61,14 @@ TOT(tot)</pre>
       <dd>A character vector of endmarks to split
   turns of talk into sentences.</dd>
       <dt>incomplete.sub</dt>
-      <dd>logical.  If TRUE detects
+      <dd>logical.  If <code>TRUE</code> detects
   incomplete sentences and replaces with <code>"|"</code>.</dd>
       <dt>rm.bracket</dt>
-      <dd>logical.  If TRUE removes brackets from
-  the text.</dd>
+      <dd>logical.  If <code>TRUE</code> removes
+  brackets from the text.</dd>
       <dt>stem.col</dt>
-      <dd>logical.  If TRUE stems the text as a new
-  column.</dd>
+      <dd>logical.  If <code>TRUE</code> stems the text
+  as a new column.</dd>
       <dt>text.place</dt>
       <dd>A character string giving placement
   location of the text column. This must be one of the
@@ -78,16 +78,17 @@ TOT(tot)</pre>
       <dd>Additional options passed to
   <code>stem2df</code>.</dd>
       <dt>grouping.var</dt>
-      <dd>The grouping variables.  Default NULL
-  generates one output for all text.  Also takes a single
-  grouping variable or a list of 1 or more grouping
-  variables.</dd>
+      <dd>The grouping variables.  Default
+  <code>NULL</code> generates one word list for all text.  Also
+  takes a single grouping variable or a list of 1 or more
+  grouping variables.</dd>
       <dt>tot</dt>
       <dd>A tot column from a
   <code>sentSplit</code> output.</dd>
       <dt>as.list</dt>
-      <dd>logical.  If TRUE returns the output as a
-  list. If false the output is returned as a dataframe.</dd>
+      <dd>logical.  If <code>TRUE</code> returns the
+  output as a list. If <code>FALSE</code> the output is returned
+  as a dataframe.</dd>
     </dl>
     
     <div class="Value">

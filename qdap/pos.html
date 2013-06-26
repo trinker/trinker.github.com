@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>pos. qdap 0.2.3</title>
+<title>pos. qdap 0.2.4</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.2.3</a>
+      <a class="brand" href="#">qdap 0.2.4</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -53,24 +53,24 @@ pos.tags(type = "pretty")</pre>
       <dt>text.var</dt>
       <dd>The text variable</dd>
       <dt>parallel</dt>
-      <dd>logical.  If TRUE attempts to run the
-  function on multiple cores.  Note that this may not mean
-  a speed boost if you have one core or if the data set is
-  smaller as the cluster takes time to create.</dd>
+      <dd>logical.  If <code>TRUE</code> attempts to run
+  the function on multiple cores.  Note that this may not
+  mean a speed boost if you have one core or if the data
+  set is smaller as the cluster takes time to create.</dd>
       <dt>na.omit</dt>
-      <dd>logical.  If TRUE missing values
+      <dd>logical.  If <code>TRUE</code> missing values
   (<code>NA</code>) will be omitted.</dd>
       <dt>digits</dt>
       <dd>Integer; number of decimal places to round
   when printing.</dd>
       <dt>progress.bar</dt>
-      <dd>logical.  If TRUE attempts to provide
-  a OS appropriate progress bar.  If parallel is TRUE this
-  argument is ignored.  Note that setting this argument to
-  TRUE may slow down the function.</dd>
+      <dd>logical.  If <code>TRUE</code> attempts to
+  provide a OS appropriate progress bar.  If parallel is
+  TRUE this argument is ignored. Note that setting this
+  argument to <code>TRUE</code> may slow down the function.</dd>
       <dt>percent</dt>
-      <dd>logical.  If TRUE output given as percent.
-  If FALSE the output is proportion.</dd>
+      <dd>logical.  If <code>TRUE</code> output given as
+  percent.  If <code>FALSE</code> the output is proportion.</dd>
       <dt>zero.replace</dt>
       <dd>Value to replace 0 values with.</dd>
       <dt>gc.rate</dt>
@@ -80,10 +80,10 @@ pos.tags(type = "pretty")</pre>
   wraps.  Consider adjusting this argument upward if the
   error <code>java.lang.OutOfMemoryError</code> occurs.</dd>
       <dt>grouping.var</dt>
-      <dd>The grouping variables.  Default NULL
-  generates one word list for all text.  Also takes a
-  single grouping variable or a list of 1 or more grouping
-  variables.</dd>
+      <dd>The grouping variables.  Default
+  <code>NULL</code> generates one word list for all text.  Also
+  takes a single grouping variable or a list of 1 or more
+  grouping variables.</dd>
       <dt>...</dt>
       <dd>Other argument supplied to <code>pos</code>.</dd>
       <dt>type</dt>

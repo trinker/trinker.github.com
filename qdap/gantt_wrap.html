@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>gantt_wrap. qdap 0.2.3</title>
+<title>gantt_wrap. qdap 0.2.4</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="
   Andrie de Vries and Tyler Rinker
@@ -23,7 +23,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.2.3</a>
+      <a class="brand" href="#">qdap 0.2.4</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -70,17 +70,17 @@
       <dt>xlab</dt>
       <dd>An optional x label.</dd>
       <dt>rev.factor</dt>
-      <dd>logical.  If TRUE reverse the current
-  plotting order so the first element in the plotting
-  variable's levels is plotted on top.</dd>
+      <dd>logical.  If <code>TRUE</code> reverse the
+  current plotting order so the first element in the
+  plotting variable's levels is plotted on top.</dd>
       <dt>ncol</dt>
       <dd>if an integer value is passed to this
   <code>gantt_wrap</code> uses
   <code><a href='http://www.inside-r.org/r-doc/ggplot2/facet_wrap'>facet_wrap</a></code> rather than
   <code><a href='http://www.inside-r.org/r-doc/ggplot2/facet_grid'>facet_grid</a></code>.</dd>
       <dt>transform</dt>
-      <dd>logical.  If TRUE the repeated facets
-  will be transformed from stacked to side by side.</dd>
+      <dd>logical.  If <code>TRUE</code> the repeated
+  facets will be transformed from stacked to side by side.</dd>
       <dt>minor.line.freq</dt>
       <dd>A numeric value for frequency of
   minor grid lines.</dd>
@@ -91,11 +91,11 @@
       <dd>An internal rounding factor for
   minor and major line freq.  Generally, default value of 1
   suffices for larger range of x scale may need to be set
-  to -2..</dd>
+  to -2.</dd>
       <dt>hms.scale</dt>
-      <dd>logical.  If TRUE converts scale to
-  h:m:s format.  Default NULL attempts to detect if object
-  is a cm_time2long object</dd>
+      <dd>logical.  If <code>TRUE</code> converts scale
+  to h:m:s format. Default <code>NULL</code> attempts to detect
+  if object is a cm_time2long object</dd>
       <dt>scale</dt>
       <dd>Should scales be fixed (<code>"fixed"</code>, the
   default), free (<code>"free"</code>), or free in one dimension
@@ -111,14 +111,14 @@
       <dt>size</dt>
       <dd>The width of the plot bars.</dd>
       <dt>rm.horiz.lines</dt>
-      <dd>logical.  If TRUE the horizontal
-  lines will be removed.</dd>
+      <dd>logical.  If <code>TRUE</code> the
+  horizontal lines will be removed.</dd>
       <dt>x.ticks</dt>
-      <dd>logical.  If TRUE the x ticks will be
-  displayed.</dd>
+      <dd>logical.  If <code>TRUE</code> the x ticks will
+  be displayed.</dd>
       <dt>y.ticks</dt>
-      <dd>logical.  If TRUE the y ticks will be
-  displayed.</dd>
+      <dd>logical.  If <code>TRUE</code> the y ticks will
+  be displayed.</dd>
       <dt>legend.position</dt>
       <dd>The position of legends.
   (<code>"left"</code>, <code>"right"</code>, <code>"bottom"</code>,
@@ -127,7 +127,7 @@
       <dd>Optional color to constrain all bars.</dd>
       <dt>border.color</dt>
       <dd>The color to plot border around Gantt
-  bars (default is NULL).</dd>
+  bars (default is <code>NULL</code>).</dd>
       <dt>border.size</dt>
       <dd>An integer value for the size to plot
   borders around Gantt bars. Controls length (width also
@@ -137,8 +137,8 @@
   bars.  Use a numeric value in addition to border size if
   plot borders appear disproportional.</dd>
       <dt>constrain</dt>
-      <dd>logical.  If TRUE the Gantt bars touch
-  the edge of the graph.</dd>
+      <dd>logical.  If <code>TRUE</code> the Gantt bars
+  touch the edge of the graph.</dd>
     </dl>
     
     <div class="Value">
