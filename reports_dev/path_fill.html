@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>UF. reports 0.1.3</title>
+<title>UF. reports 0.2.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">reports 0.1.3</a>
+      <a class="brand" href="#">reports 0.2.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -42,7 +42,9 @@
     <h2>Usage</h2>
     <pre>UF(path = "clipboard", copy2clip = TRUE, fill = "_")
 
-PF(path = "clipboard", copy2clip = TRUE, fill = "%")</pre>
+PF(path = "clipboard", copy2clip = TRUE, fill = "%")
+
+UF(path = "clipboard", copy2clip = TRUE, fill = "_")</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -75,6 +77,9 @@ PF(path = "clipboard", copy2clip = TRUE, fill = "%")</pre>
       <p><code>PF</code> - A convenience function to replace black
   spaces of URLs with percents.</p>
   
+      <p><code>UF</code> - A convenience function to replace black
+  spaces of paths with underscores.</p>
+  
     </div>
 
     <div class="Warning">
@@ -83,6 +88,15 @@ PF(path = "clipboard", copy2clip = TRUE, fill = "%")</pre>
       <p>Ligatures parsing is very good, however, these elements
   my be incorrect.  If a warning is thrown check the use of
   "ff", "fi", "fl", "ffi" and "ffl".</p>
+  
+    </div>
+
+    <div class="Warning">
+      <h2>Warning</h2>
+      
+      <p>UF is deprecated and will be removed from reports in a
+  version subsequent to version 0.2.0 Please use <code>UF</code>
+  instead.</p>
   
     </div>
     

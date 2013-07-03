@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>IM. reports 0.1.3</title>
+<title>IM. reports 0.2.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">reports 0.1.3</a>
+      <a class="brand" href="#">reports 0.2.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,14 +40,15 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>IM(path = "clipboard", link = NULL, width = 540, height = IE(width, 360), sty = IE(width, 
-  width * 1.05, 480), center = TRUE, new_win = TRUE, copy2clip = TRUE, print = FALSE)
+    <pre>IM(path = "clipboard", link = NULL, width = 540, height = IE(width, round(width/1.5)), 
+  sty = IE(width, width * 1.05, 480), center = TRUE, new_win = TRUE, copy2clip = TRUE, 
+      print = FALSE)
 
 IM2(image = "clipboard", loc = 1, ...)
 
 IW(path = "clipboard", link = NULL, side = "right", width = 540, height = IE(width, 
-      360), new_win = TRUE, top = -15, right = 20, left = 20, bottom = 0, copy2clip = TRUE, 
-      print = FALSE)</pre>
+      round(width/1.5)), new_win = TRUE, top = -15, right = 20, left = 20, bottom = 0, 
+      copy2clip = TRUE, print = FALSE)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -136,18 +137,21 @@ IW(path = "clipboard", link = NULL, side = "right", width = 540, height = IE(wid
 <div class='output'><div style="width:480px;margin:auto;">
     <p><img src="http://cran.r-project.org/Rlogo.jpg"></p>
 </div>
+
 </div>
 <div class='input'>IM("https://dl.dropboxusercontent.com/u/61803503/packages/reports.PNG", print =TRUE)
 </div>
 <div class='output'><div style="width:567px;margin:auto;">
     <p><img src="https://dl.dropboxusercontent.com/u/61803503/packages/reports.PNG" width="540" height="360"></p>
 </div>
+
 </div>
 <div class='input'>IM("http://cran.r-project.org/Rlogo.jpg", NULL, print=TRUE, link = "http://cran.r-project.org")
 </div>
 <div class='output'><div style="width:480px;margin:auto;">
     <p><a href="http://cran.r-project.org" target="_blank"><img src="http://cran.r-project.org/Rlogo.jpg"></a></p>
 </div>
+
 </div>
 <div class='input'>cat(IW("http://www.talkstats.com/images/misc/logo.png", "http://www.talkstats.com/",
     width=140, height=75), rep("So much text! ", 100))
