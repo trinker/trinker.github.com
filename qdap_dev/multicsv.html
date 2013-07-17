@@ -42,7 +42,7 @@
     <h2>Usage</h2>
     <pre>mcsv_r(files, a.names = NULL, l.name = NULL, list = TRUE, pos = 1, envir = as.environment(pos))
 
-mcsv_w(..., dir = NULL, open = FALSE)</pre>
+mcsv_w(..., dir = NULL, open = FALSE, sep = ", ")</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -68,7 +68,9 @@ mcsv_w(..., dir = NULL, open = FALSE)</pre>
       <dt>...</dt>
       <dd>data.frame object(s) to write to a file or a
   list of data.frame objects.  If the objects in a list are
-  unnamed V + digit will be assigned.</dd>
+  unnamed V + digit will be assigned. Lists of dataframes
+  (e.g., the output from `termco` or `polarity`) can be
+  passed as well.</dd>
       <dt>dir</dt>
       <dd>optional directory names.  If <code>NULL</code> a
   directory will be created in the working directory with
@@ -76,6 +78,8 @@ mcsv_w(..., dir = NULL, open = FALSE)</pre>
       <dt>open</dt>
       <dd>logical.  If <code>TRUE</code> opens the directory
   upon completion.</dd>
+      <dt>sep</dt>
+      <dd>A character string to separate the terms.</dd>
     </dl>
     
     <div class="Value">
@@ -128,7 +132,7 @@ mcsv_w(..., dir = NULL, open = FALSE)</pre>
     
   <code>cm_range2long</code>,
   <code>cm_df.temp</code>,
-  <code><a href='http://www.inside-r.org/r-doc/base/assign'>assign</a></code>
+  <code>condense</code>, <code><a href='http://www.inside-r.org/r-doc/base/assign'>assign</a></code>
 
         
   </div>
