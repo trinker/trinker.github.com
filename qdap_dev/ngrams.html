@@ -40,7 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>ngrams(text.var, grouping.var = NULL, n = 2)</pre>
+    <pre>ngrams(text.var, grouping.var = NULL, n = 2, ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -52,7 +52,9 @@
   takes a single grouping variable or a list of 1 or more
   grouping variables.</dd>
       <dt>n</dt>
-      <dd>The max number of grams calculate.</dd>
+      <dd>The max number of grams calculate</dd>
+      <dt>...</dt>
+      <dd>Further arguments passed to strip function.</dd>
     </dl>
     
     <div class="Value">
