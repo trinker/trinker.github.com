@@ -42,7 +42,7 @@
     <h2>Usage</h2>
     <pre>mcsv_r(files, a.names = NULL, l.name = NULL, list = TRUE, pos = 1, envir = as.environment(pos))
 
-mcsv_w(..., dir = NULL, open = FALSE, sep = ", ")</pre>
+mcsv_w(..., dir = NULL, open = FALSE, sep = ", ", dataframes = NULL, pos = 1, envir = as.environment(pos))</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -80,6 +80,9 @@ mcsv_w(..., dir = NULL, open = FALSE, sep = ", ")</pre>
   upon completion.</dd>
       <dt>sep</dt>
       <dd>A character string to separate the terms.</dd>
+      <dt>dataframes</dt>
+      <dd>An optional character vector of
+  dataframes in lieu of ... argument.</dd>
     </dl>
     
     <div class="Value">
