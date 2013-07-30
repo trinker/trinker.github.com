@@ -40,7 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>dir_map(loc, obj.prefix = "dat", use.path = FALSE, col.names = c("person", "dialogue"), 
+    <pre>dir_map(loc, obj.prefix = "dat", use.path = TRUE, col.names = c("person", "dialogue"), 
   file = NULL, copy2clip = TRUE)</pre>
     
     <h2>Arguments</h2>
@@ -54,9 +54,9 @@
   object.</dd>
       <dt>use.path</dt>
       <dd>logical.  If <code>TRUE</code> use the actual
-  path to the <code>loc</code> argument.  The default,
-  <code>FALSE</code>, is more portable in that the actual input
-  to <code>loc</code> is supplied to the
+  path to the <code>loc</code> argument.  If <code>FALSE</code>, the
+  code may be more portable in that the actual input to
+  <code>loc</code> is supplied to the
   <code>read.transcript</code>.</dd>
       <dt>col.names</dt>
       <dd>Supplies a vector of column names to the
