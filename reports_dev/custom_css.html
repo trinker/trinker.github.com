@@ -40,13 +40,16 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>custom_css(loc = file.path(getwd(), "REPORT"))</pre>
+    <pre>custom_css(loc = file.path(getwd(), "REPORT"), style.css = NULL)</pre>
     
     <h2>Arguments</h2>
     <dl>
       <dt>loc</dt>
       <dd>Path to the report location where the custom
   css should be placed.</dd>
+      <dt>style.css</dt>
+      <dd>An optional path to a style.css file
+  that will be used as the ~/css/style.css.</dd>
     </dl>
     
     <div class="Description">
@@ -70,7 +73,8 @@
       
       <p>The user has to source before the custom styles will be
   applied. Open the style.R as the active tab in RStudio,
-  and check the `Source on Save` box.</p>
+  check the `Source on Save` box and the click the save
+  icon.</p>
   
     </div>
 
