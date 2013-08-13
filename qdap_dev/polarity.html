@@ -40,9 +40,13 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>polarity(text.var, grouping.var = NULL, positive.list = positive.words, negative.list = negative.words, 
-  negation.list = negation.words, amplification.list = increase.amplification.words, 
-      rm.incomplete = FALSE, digits = 3, ...)</pre>
+    <pre>polarity(text.var, grouping.var = NULL, polarity.frame = qdapDictionaries::env.pol, 
+  negators = qdapDictionaries::negation.words, amplifiers = qdapDictionaries::amplification.words, 
+      deamplifiers = qdapDictionaries::deamplification.words, question.weight = 0, 
+      amplifier.weight = 0.8, n.before = 4, n.after = 2, rm.incomplete = FALSE, digits = 3, 
+      ...)
+
+polarity_frame(positives, negatives, pos.weights = 1, neg.weights = -1, envir = TRUE)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -53,19 +57,35 @@
   <code>NULL</code> generates one word list for all text.  Also
   takes a single grouping variable or a list of 1 or more
   grouping variables.</dd>
-      <dt>positive.list</dt>
-      <dd>A character vector of terms
-  indicating positive reaction.</dd>
-      <dt>negative.list</dt>
-      <dd>A character vector of terms
-  indicating negative reaction.</dd>
-      <dt>negation.list</dt>
-      <dd>A character vector of terms
-  reversing the intent of a positive or negative word.</dd>
-      <dt>amplification.list</dt>
-      <dd>A character vector of terms
-  that increases the intensity of a positive or negative
-  word.</dd>
+      <dt>polarity.frame</dt>
+      <dd>A dataframe or environment
+  containing a dataframe of positive/negative words and
+  weights.</dd>
+      <dt>negators</dt>
+      <dd>A character vector of terms reversing the
+  intent of a positive or negative word.</dd>
+      <dt>amplifiers</dt>
+      <dd>A character vector of terms that
+  increase the intensity of a positive or negative word.</dd>
+      <dt>deamplifiers</dt>
+      <dd>A character vector of terms that
+  decrease the intensity of a positive or negative word.</dd>
+      <dt>question.weight</dt>
+      <dd>The weighting of questions (values
+  from 0 to 1). Defualt 0 corresponds with the belief that
+  questions (pure questions) are not polarized.  A weight
+  may be applied based on the evidence that the questions
+  function with polarity.</dd>
+      <dt>amplifier.weight</dt>
+      <dd>The weight to apply to
+  amplifiers/demplifiers (values from 0 to 1).  This value
+  will multiply the the polarized terms by 1 + this value.</dd>
+      <dt>n.before</dt>
+      <dd>The number of words to consider as
+  valence shifters before the polarized word.</dd>
+      <dt>n.after</dt>
+      <dd>The number of words to consider as valence
+  shifters after the polarized word.</dd>
       <dt>rm.incomplete</dt>
       <dd>logical.  If <code>TRUE</code> text rows
   ending with qdap's incomplete sentence end mark
@@ -75,7 +95,23 @@
   when printing.</dd>
       <dt>...</dt>
       <dd>Other arguments supplied to
-  <code>end_inc</code>.</dd>
+  <code>strip</code>.</dd>
+      <dt>positives</dt>
+      <dd>A character vector of positive words.</dd>
+      <dt>negatives</dt>
+      <dd>A character vector of negative words.</dd>
+      <dt>pos.weights</dt>
+      <dd>A vector of weights to weight each
+  positive word by. Length must be equal to length of
+  <code>postives</code> or 1 (if 1 weight will be recycled).</dd>
+      <dt>neg.weights</dt>
+      <dd>A vector of weights to weight each
+  negative word by. Length must be equal to length of
+  <code>negatives</code> or 1 (if 1 weight will be recycled).</dd>
+      <dt>envir</dt>
+      <dd>logical.  If <code>TRUE</code> a an lookup table
+  (a dataframe within an environment) is produces rather
+  than a data.frame.</dd>
     </dl>
     
     <div class="Value">
@@ -85,34 +121,32 @@
   row with: <ul>
 <li> group.var - the grouping
   variable </li>
-<li> text.var - the text variable </li>
-<li> wc -
-  word count </li>
-<li> polarity - sentence polarity score </li>
-<li>
-  raw - raw polarity score (considering only positive and
-  negative words) </li>
-<li> negation.adj.raw - raw adjusted for
-  negation words </li>
-<li> amplification.adj.raw - raw adjusted
-  for amplification words </li>
-<li> pos.words - words
-  considered positive </li>
-<li> neg.words - words considered
-  negative</li>
+<li> wc - word count </li>
+<li> polarity - sentence
+  polarity score </li>
+<li> pos.words - words considered
+  positive </li>
+<li> neg.words - words considered negative
+  </li>
+<li> text.var - the text variable</li>
 </ul>
-  groupA dataframe with the average
-  polarity score by grouping variable.
-  digitsinteger value od number of digits to
-  display; mostly internal use</p>
+  groupA
+  dataframe with the average polarity score by grouping
+  variable. digitsinteger value od number of
+  digits to display; mostly internal use</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Approximate the sentiment (polarity) of text by grouping
-  variable(s).</p>
+      <p><code>polarity</code> - Approximate the sentiment (polarity) of
+  text by grouping variable(s).</p>
+  
+      <p><code>polarity_frame</code> - Generate a polarity lookup
+  environment or data.frame for use with the
+  <code>polarity.frame</code> argument in the <code>polarity</code>
+  function.</p>
   
     </div>
 
@@ -121,32 +155,41 @@
       
       <p>The equation used by the algorithm to assign value to
   polarity to each sentence fist utilizes the sentiment
-  dictionary (Hu and Liu, 2004) to tag each word as either
-  positive (<code class = 'eq'>x_i^{+}</code>), negative (<code class = 'eq'>x_i^{-}</code>),
-  neutral (<code class = 'eq'>x_i^{0}</code>), negator(<code class = 'eq'>x_i\neg</code>), or
-  amplifier (<code class = 'eq'>x_i^{\uparrow}</code>).  Neutral words hold no
-  value in the equation but do affect word count (<code class = 'eq'>n</code>).
-  Each positive (<code class = 'eq'>x_i^{+}</code>) and negative
-  (<code class = 'eq'>x_i^{-}</code>) word is then weighted by the amplifiers
-  (<code class = 'eq'>x_i^{\uparrow}</code>) directly proceeding the positive
-  or negative word.  Next, I consider amplification value,
-  adding the assigned value <code class = 'eq'>1/n-1</code> to increase the
-  polarity relative to sentence length while ensuring that
-  the polarity scores will remain between the values -1 and
-  1.  This weighted value for each polarized word is then
-  multiplied by -1 to the power of the number of negated
-  (<code class = 'eq'>x_i\neg</code>) words directly proceeding the positive or
-  negative word. Last, these values are then summed and
-  divided by the word count (<code class = 'eq'>n</code>) yielding a polarity
-  score (<code class = 'eq'>\delta</code>) between -1 and 1.</p>
+  dictionary (Hu and Liu, 2004) to tag polarized words.  A
+  context cluster of words is pulled from around this
+  polarized word (defualt 4 words before and two words
+  after) to be considered as valence shifters.  The words
+  in this context cluster are tagged as neutral
+  (<code class = 'eq'>x_i^{0}</code>), negator (<code class = 'eq'>x_i^{N}</code>), amplifier
+  (<code class = 'eq'>x_i^{a}</code>), or de-amplifier (<code class = 'eq'>x_i^{d}</code>). Neutral
+  words hold no value in the equation but do affect word
+  count (<code class = 'eq'>n</code>).  Each polarized word is then weighted
+  <code class = 'eq'>w</code> based on the weigths from the
+  <code>polarity.frame</code> argument and then further weighted
+  by the number and position of the valence shifters
+  directly surrounding the positive or negative word.  The
+  researcher may provide a weight <code class = 'eq'>c</code> to be utilized
+  with amplifiers/de-amplifiers (default is .8; deamplifier
+  weight is constrained to -1 lowe bound).  Last, these
+  values are then summed and divided by the word count
+  (<code class = 'eq'>n</code>) yielding an unbounded polarity score
+  (<code class = 'eq'>\delta</code>).  Note that context clusters containing a
+  comma before the polarized word will only consider words
+  found after the comma.</p>
   
-      <p><pre class = 'eq'>\delta=\frac{\sum(x_i^{0},\quad x_i^{\uparrow} +
-  x_i^{+}\cdot(-1)^{\sum(x_i\neg)},\quad x_i^{\uparrow} +
-  x_i^{-}\cdot(-1)^{\sum(x_i\neg)})}{n}</code></p>
+      <p><pre class = 'eq'>\delta=\frac{\sum{((1 + c(x_i^{A} - x_i^{D}))\cdot
+  w(-1)^{(2 + \sum{(x_i^{N}}))})}}{n}</code></p>
   
       <p>Where:</p>
   
-      <p><pre class = 'eq'>x_i^{\uparrow}=\frac{1}{n-1}</code></p>
+      <p><pre class = 'eq'>x_i^{A}=\sum{(w_{neg}\cdot x_i^{a})}</code></p>
+  
+      <p><pre class = 'eq'>x_i^{D}=\sum{((1 - w_{neg})\cdot x_i^{a} +
+  x_i^{d})}</code></p>
+  
+      <p><pre class = 'eq'>w_{neg}=\left\{\begin{array}{cc} 1 &
+  \sum{(X_i^{N})}>0 \\ 0 & \sum{(X_i^{N}})=0
+  \end{array}\right.</code></p>
   
     </div>
 
@@ -158,11 +201,11 @@
   polarity word dictionary used by Hu, M., & Liu, B.
   (2004), however, this may not be appropriate for the
   context of children in a classroom.  The user may (is
-  encouraged) to provide/augment the dictionary.  For
-  instance the word "sick" in a high school setting may
-  mean that something is good, whereas "sick" used by a
-  typical adult indicates something is not right or
-  negative connotation.</p>
+  encouraged) to provide/augment the dictionary (see the
+  <code>polarity_frame</code> function).  For instance the word
+  "sick" in a high school setting may mean that something
+  is good, whereas "sick" used by a typical adult indicates
+  something is not right or negative connotation.</p>
   
       <p>Also note that <code>polarity</code> assumes
   you've run <code>sentSplit</code>.</p>
@@ -182,7 +225,7 @@
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>polarity</li>
+      <li>polarity</li><li>polarity_frame</li>
     </ul>
     <ul>
       <li>polarity</li><li>sentiment,</li>

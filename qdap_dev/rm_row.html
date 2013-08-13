@@ -40,7 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>rm_row(dataframe, search.column, terms)
+    <pre>rm_row(dataframe, search.column, terms, keep.rownames = FALSE)
 
 rm_empty_row(dataframe)</pre>
     
@@ -55,6 +55,9 @@ rm_empty_row(dataframe)</pre>
       <dd>Terms/markers of the rows that are to be
   removed from the dataframe.  The term/marker must appear
   at the beginning of the string and is case sensitive.</dd>
+      <dt>keep.rownames</dt>
+      <dd>logical.  If <code>TRUE</code> the
+  original, non-sequential, rownames will be used.</dd>
     </dl>
     
     <div class="Value">

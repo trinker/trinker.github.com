@@ -42,7 +42,9 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>hash(x, mode.out = "numeric")</pre>
+    <pre>hash(x, mode.out = "numeric")
+
+hash_look(terms, envir, missing = NA)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -51,12 +53,19 @@
       <dt>mode.out</dt>
       <dd>The type of output (column 2) expected
   (e.g., <code>"character"</code>, <code>"numeric"</code>, etc.)</dd>
+      <dt>terms</dt>
+      <dd>A vector of terms to undergo a lookup.</dd>
+      <dt>envir</dt>
+      <dd>The hash environment to use.</dd>
+      <dt>missing</dt>
+      <dd>Value to assign to terms not found in the
+  hash table.</dd>
     </dl>
     
     <div class="Value">
       <h2>Value</h2>
       
-      <p>Creates a "hash table" or a two column data frame in its
+      <p>Creates a "hash table", a two column data frame in its
   own environment.</p>
   
     </div>
@@ -64,8 +73,14 @@
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Creates a new environment for quick hash style dictionary
-  lookup.</p>
+      <p><code>hash</code> - Creates a new environment for quick hash
+  style dictionary lookup.</p>
+  
+      <p><code>hash_look</code> - Works with a hash table such as is
+  returned from <code>hash</code>, to lookup values.</p>
+  
+      <p><code>terms %ha% envir</code> - A binary operator version of
+  <code>hash_look</code>.</p>
   
     </div>
 
@@ -78,7 +93,7 @@
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>hash</li>
+      <li>%ha%</li><li>hash</li><li>hash_look</li>
     </ul>
     <ul>
       <li>dictionary,</li><li>hash,</li><li>lookup</li>
