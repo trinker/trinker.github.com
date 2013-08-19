@@ -41,7 +41,7 @@
   <div class="span8">
     <h2>Usage</h2>
     <pre>plot(x, point.pch = 20, point.cex = 0.5, point.colors = c("gray65", "red"), bar.colors = NULL, 
-  short.names = FALSE, min.wrdcnt = NULL, ...)</pre>
+  short.names = FALSE, min.wrdcnt = NULL, order.by.formality = TRUE, ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -65,6 +65,10 @@
       <dd>A minimum word count threshold that
   must be achieved to be considered in the results.
   Default includes all subgroups.</dd>
+      <dt>order.by.formality</dt>
+      <dd>logical.  If <code>TRUE</code> the
+  group polarity plot will be ordered by average polarity
+  score, otherwise alphabetical order is assumed.</dd>
       <dt>...</dt>
       <dd>ignored</dd>
     </dl>
