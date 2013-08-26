@@ -40,8 +40,8 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>pos(text.var, parallel = FALSE, na.omit = FALSE, digits = 1, progress.bar = TRUE, 
-  percent = TRUE, zero.replace = 0, gc.rate = 10)
+    <pre>pos(text.var, parallel = FALSE, cores = detectCores()/2, progress.bar = TRUE, na.omit = FALSE, 
+  digits = 1, percent = TRUE, zero.replace = 0, gc.rate = 10)
 
 pos.by(text.var, grouping.var = NULL, digits = 1, percent = TRUE, zero.replace = 0, 
       ...)
@@ -51,23 +51,26 @@ pos.tags(type = "pretty")</pre>
     <h2>Arguments</h2>
     <dl>
       <dt>text.var</dt>
-      <dd>The text variable</dd>
+      <dd>The text variable.</dd>
       <dt>parallel</dt>
       <dd>logical.  If <code>TRUE</code> attempts to run
   the function on multiple cores.  Note that this may not
   mean a speed boost if you have one core or if the data
   set is smaller as the cluster takes time to create.</dd>
+      <dt>cores</dt>
+      <dd>The number of cores to use if <code>parallel
+  = TRUE</code>.  Default is half the number of available cores.</dd>
       <dt>na.omit</dt>
       <dd>logical.  If <code>TRUE</code> missing values
   (<code>NA</code>) will be omitted.</dd>
-      <dt>digits</dt>
-      <dd>Integer; number of decimal places to round
-  when printing.</dd>
       <dt>progress.bar</dt>
       <dd>logical.  If <code>TRUE</code> attempts to
   provide a OS appropriate progress bar.  If parallel is
   <code>TRUE</code> this argument is ignored. Note that setting
   this argument to <code>TRUE</code> may slow down the function.</dd>
+      <dt>digits</dt>
+      <dd>Integer; number of decimal places to round
+  when printing.</dd>
       <dt>percent</dt>
       <dd>logical.  If <code>TRUE</code> output given as
   percent.  If <code>FALSE</code> the output is proportion.</dd>
@@ -160,7 +163,7 @@ pos.tags(type = "pretty")</pre>
       
     <h2>See also</h2>
     
-  <code><a href='http://www.inside-r.org/r-doc/openNLP/tagPOS'>tagPOS</a></code>
+  <code><a href='http://www.inside-r.org/r-doc/openNLP/Maxent_POS_Tag_Annotator'>Maxent_POS_Tag_Annotator</a></code>
 
         
   </div>

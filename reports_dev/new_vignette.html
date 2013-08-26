@@ -41,7 +41,7 @@
   <div class="span8">
     <h2>Usage</h2>
     <pre>new_vignette(vignette = "vignette", type = "rmd", path = getwd(), bib.loc = NULL, 
-  name = getOption("name.reports"))
+  name = getOption("name.reports"), open = FALSE)
 
 append_vignette(vignette = "vignette", type = "rmd", path = getwd(), bib.loc = NULL, 
       name = getOption("name.reports"))</pre>
@@ -68,6 +68,9 @@ append_vignette(vignette = "vignette", type = "rmd", path = getwd(), bib.loc = N
       <dt>name</dt>
       <dd>A character string of the user's name to be
   used on the vignette.</dd>
+      <dt>open</dt>
+      <dd>logical.  If <code>TRUE</code> the project will be
+  opened in RStudio.</dd>
     </dl>
     
     <div class="Value">

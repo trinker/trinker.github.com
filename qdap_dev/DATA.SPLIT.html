@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>replace_abbreviation. qdap 1.0.0</title>
+<title>DATA.SPLIT. qdap 1.0.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -35,61 +35,57 @@
         
       </header>
       
-      <h1>Replace Abbreviations</h1>
+      <h1>Fictitious Split Sentence Classroom Dialogue</h1>
 
 <div class="row">
   <div class="span8">
-    <h2>Usage</h2>
-    <pre>replace_abbreviation(text.var, abbreviation = qdapDictionaries::abbreviations, replace = NULL, 
-  ignore.case = TRUE)</pre>
-    
-    <h2>Arguments</h2>
-    <dl>
-      <dt>text.var</dt>
-      <dd>The text variable.</dd>
-      <dt>abbreviation</dt>
-      <dd>A two column key of abbreviations
-  (column 1) and long form replacements (column 2) or a
-  vector of abbreviations.  Default is to use
-  qdapDictionaries's
-  <code><a href='http://www.inside-r.org/r-doc/qdapDictionaries/abbreviations'>abbreviations</a></code> data set.</dd>
-      <dt>replace</dt>
-      <dd>A vector of long form replacements if a
-  data frame is not supplied to the abbreviation argument.</dd>
-      <dt>ignore.case</dt>
-      <dd>logical.  If <code>TRUE</code> replaces
-  without regard to capitalization.</dd>
-    </dl>
-    
-    <div class="Value">
-      <h2>Value</h2>
+        
+    <div class="Format">
+      <h2>Format</h2>
       
-      <p>Returns a vector with abbreviations replaced.</p>
+      <p>A data frame with 15 rows and 8 variables</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p>This function replaces abbreviations with long form.</p>
+      <p>A <code>sentSplit</code> version of the
+  <code>DATA</code> dataset.</p>
+  
+    </div>
+
+    <div class="Details">
+      <h2>Details</h2>
+      
+      <p><ul>
+<li> person. Speaker </li>
+<li> tot. Turn of talk
+  with sub sentences </li>
+<li> TOT. Turn of talk </li>
+<li> sex.
+  Gender </li>
+<li> adult. Dummy coded adult (0-no; 1-yes) </li>
+<li>
+  code. Dialogue coding scheme </li>
+<li> state. Statement
+  (dialogue) </li>
+<li> stem.text. A stemmed version of the
+  text.var </li>
+</ul></p>
+  
+      <p></p>
   
     </div>
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>replace_abbreviation</li>
+      <li>DATA.SPLIT</li>
     </ul>
     <ul>
-      <li>abbreviation</li>
+      <li>datasets</li>
     </ul> -->
       
-    <h2>See also</h2>
-    
-  <code>bracketX</code>, <code>qprep</code>,
-  <code>replace_contraction</code>,
-  <code>replace_number</code>,
-  <code>replace_symbol</code>
-
         
   </div>
 </div>

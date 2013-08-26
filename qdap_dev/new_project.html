@@ -40,7 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>new_project(project = "new", path = getwd(), ...)</pre>
+    <pre>new_project(project = "new", path = getwd(), open = FALSE, ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -49,6 +49,9 @@
       <dt>path</dt>
       <dd>The path to where the project should be
   created.  Default is the current working directory.</dd>
+      <dt>open</dt>
+      <dd>logical.  If <code>TRUE</code> the project will be
+  opened in RStudio.</dd>
       <dt>...</dt>
       <dd>Other arguments passed to
   <code><a href='http://www.inside-r.org/r-doc/reports/new_report'>new_report</a></code>.</dd>

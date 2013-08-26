@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>replace_contraction. qdap 1.0.0</title>
+<title>print.all_words. qdap 1.0.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -35,65 +35,36 @@
         
       </header>
       
-      <h1>Replace Contractions</h1>
+      <h1>Prints an all_words Object</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>replace_contraction(text.var, contraction = qdapDictionaries::contractions, replace = NULL, 
-  ignore.case = TRUE, sent.cap = TRUE)</pre>
+    <pre>print(x, ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
-      <dt>text.var</dt>
-      <dd>The text variable.</dd>
-      <dt>contraction</dt>
-      <dd>A two column key of contractions
-  (column 1) and expanded form replacements (column 2) or a
-  vector of contractions.  Default is to use
-  qdapDictionaries's
-  <code><a href='http://www.inside-r.org/r-doc/qdapDictionaries/contractions'>contractions</a></code> data set.</dd>
-      <dt>replace</dt>
-      <dd>A vector of expanded form replacements if
-  a data frame is not supplied to the contraction
-  argument.</dd>
-      <dt>ignore.case</dt>
-      <dd>logical.  If <code>TRUE</code> replaces
-  without regard to capitalization.</dd>
-      <dt>sent.cap</dt>
-      <dd>logical.  If <code>TRUE</code> capitalizes the
-  beginning of every sentence.</dd>
+      <dt>x</dt>
+      <dd>The all_words object.</dd>
+      <dt>...</dt>
+      <dd>ignored</dd>
     </dl>
     
-    <div class="Value">
-      <h2>Value</h2>
-      
-      <p>Returns a vector with contractions replaced.</p>
-  
-    </div>
-
     <div class="Description">
       <h2>Description</h2>
       
-      <p>This function replaces contractions with long form.</p>
+      <p>Prints an all_words object.</p>
   
     </div>
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>replace_contraction</li>
+      <li>print.all_words</li>
     </ul>
     <ul>
-      <li>contraction</li>
+      
     </ul> -->
       
-    <h2>See also</h2>
-    
-  <code>bracketX</code>, <code>qprep</code>,
-  <code>replace_abbreviation</code>,
-  <code>replace_number</code>,
-  <code>replace_symbol</code>
-
         
   </div>
 </div>

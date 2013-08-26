@@ -40,7 +40,8 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>all_words(text.var, begins.with = NULL, contains = NULL, alphabetical = TRUE)</pre>
+    <pre>all_words(text.var, begins.with = NULL, contains = NULL, alphabetical = TRUE, apostrophe.remove = FALSE, 
+  ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -57,7 +58,13 @@
       <dt>alphabetical</dt>
       <dd>logical.  If <code>TRUE</code> orders rows
   alphabetically, if <code>FALSE</code> orders the rows by
-  frequency.</dd>
+  descending frequency.</dd>
+      <dt>apostrophe.remove</dt>
+      <dd>logical.  If <code>TRUE</code> removes
+  apostrophes from the text before examining.</dd>
+      <dt>...</dt>
+      <dd>Other argument supplied to
+  <code>strip</code>.</dd>
     </dl>
     
     <div class="Value">
