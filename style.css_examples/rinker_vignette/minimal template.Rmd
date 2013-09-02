@@ -1,0 +1,24 @@
+# Minimal Example
+
+This is an R Markdown documentminimal example.  We will view this template style 
+with various style.css files.
+
+## Code Section:
+
+```{r}
+summary(cars)
+```
+
+### And a Subsetction
+
+<div class="textbox">
+Hello World!
+</div>
+
+
+## Plot Section
+
+```{r fig.width=7, fig.height=6}
+plot(cars)
+```
+
