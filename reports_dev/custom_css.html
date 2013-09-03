@@ -43,7 +43,9 @@
     <pre>custom_css(rprofile = FALSE, loc = file.path(getwd(), "REPORT"), style.css = NULL, 
   source = TRUE)
 
-css_styles()</pre>
+css_styles()
+
+css_style_change(style.css, cur.style.css = file.path(getwd(), "REPORT/css/style.css"))</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -55,14 +57,18 @@ css_styles()</pre>
   css should be placed. If <code>NULL</code> only the style.R is
   created in the base directory .Rprofile.</dd>
       <dt>style.css</dt>
-      <dd>An optional path to a style.css file
-  that will be used as the ~/css/style.css.  Also may take
-  a character string indicating one of the reports
-  package's built in style.css (see
-  <code>css_styles</code>).</dd>
+      <dd>A path to a style.css file that will be
+  used as the &#145;<span class = "file">~/css/style.css</span>&#146;.  Also may take a
+  character string indicating one of the reports package's
+  built in style.css (see
+  <code>css_styles</code>).  Default in
+  <code>custom_css</code> is a blank styl.css.</dd>
       <dt>source</dt>
       <dd>logical.  If <code>TRUE</code> the style.R is
   sourced intially.</dd>
+      <dt>cur.style.css</dt>
+      <dd>The location of the current
+  style.css (this will be replaced).</dd>
     </dl>
     
     <div class="Description">
@@ -72,6 +78,8 @@ css_styles()</pre>
   a custom css for use with RStudio and knitr.</p>
   
       <p><code>css_styles</code> - View the built in style.css</p>
+  
+      <p><code>css_style_change</code> - Change a style.css.</p>
   
     </div>
 
@@ -118,11 +126,13 @@ css_styles()</pre>
 css_styles()
 </div>
 <div class='output'>[1] "rinker_vignette"
+</div>
+<div class='input'>## css_style_change("rinker_vignette")
 </div></pre>
   </div>
   <div class="span4">
     <!-- <ul>
-      <li>css_styles</li><li>custom_css</li>
+      <li>css_style_change</li><li>css_styles</li><li>custom_css</li>
     </ul>
     <ul>
       
