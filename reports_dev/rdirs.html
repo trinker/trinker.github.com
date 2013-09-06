@@ -84,6 +84,7 @@
     
     <h2 id="examples">Examples</h2>
     <pre class="examples"><div class='input'>## fx <- folder(delete_me)
+## owd <- getwd(); setwd(fx)
 ## rdirs(admin, 1:15, c("d", "f", "w"), c(1, 4, 6))
 rdirs(admin, 1:15, c("d", "f", "w"), c(1, 4, 6), text.only = TRUE)
 </div>
@@ -95,7 +96,7 @@ rdirs(admin, 1:15, c("d", "f", "w"), c(1, 4, 6), text.only = TRUE)
 
 x <- rdirs(admin, 1:15, c("d", "f", "w"), c(1, 4, 6), text.only = TRUE)
 ## lapply(x, new_report)
-## delete(fx)
+## setwd(owd); delete(fx)
 </div></pre>
   </div>
   <div class="span4">
