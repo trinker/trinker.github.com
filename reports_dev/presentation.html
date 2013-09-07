@@ -59,7 +59,7 @@
   combination of the following: <code>rnw</code>, <code>rmd</code> or
   <code>pptx</code>.  <code>rnw</code> corresponds to a beamer slides
   (.Rnw file), <code>rmd</code> corresponds to a html5
-  (compliments of slidify) slides (.Rnwd file) and
+  (compliments of slidify) slides (.Rmd file) and
   <code>docx</code> corresponds to PowerPoint slides (.pptx
   file).</dd>
       <dt>theme</dt>
@@ -67,7 +67,7 @@
   theme</a> to use.  If <code>NULL</code> <code>presentation</code> will
   allow the user to choose interactively.</dd>
       <dt>bib.loc</dt>
-      <dd>Optional path to a .bib resource.</dd>
+      <dd>Optional path to a <b>.bib</b> resource.</dd>
       <dt>name</dt>
       <dd>A character vector of the user's name to be
   used on the report.</dd>
@@ -82,11 +82,11 @@
   created.  Default is the current working directory.</dd>
       <dt>slidify</dt>
       <dd>The template to be used in the
-  PRESENTATION .Rmd.  This can be one of the types from
-  <code>slidify_templates</code> or a path to an .Rmd file. This
-  argument will be overrode if a custom reports template is
-  supplied with an .Rmd file in the inst directory named
-  slidify.Rmd (<code>/inst/slidify.Rmd</code>).</dd>
+  <b>PRESENTATION</b> .Rmd. This can be one of the types
+  from <code>slidify_templates</code> or a path to an .Rmd file.
+  This argument will be overrode if a custom reports
+  template is supplied with an .Rmd file in the <b>inst</b>
+  directory named slidify.Rmd (&#145;<span class = "file">~inst/slidify.Rmd</span>&#146;).</dd>
       <dt>open</dt>
       <dd>logical.  If <code>TRUE</code> the project will be
   opened in RStudio. The default is to test if
