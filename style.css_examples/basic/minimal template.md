@@ -1,6 +1,6 @@
 # Minimal Example
 
-This is an R Markdown documentminimal example.  We will view this template style 
+This is an R Markdown document minimal example.  We will view this template style 
 with various style.css files.
 
 ## Code Section:
