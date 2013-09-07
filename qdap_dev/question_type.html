@@ -41,7 +41,7 @@
   <div class="span8">
     <h2>Usage</h2>
     <pre>question_type(text.var, grouping.var = NULL, neg.cont = FALSE, percent = TRUE, zero.replace = 0, 
-  digits = 2)</pre>
+  digits = 2, contraction = qdapDictionaries::contractions)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -64,6 +64,12 @@
       <dt>digits</dt>
       <dd>Integer; number of decimal places to round
   when printing.</dd>
+      <dt>contraction</dt>
+      <dd>A two column key of contractions
+  (column 1) and expanded form replacements (column 2) or a
+  vector of contractions.  Default is to use
+  qdapDictionaries's
+  <code><a href='http://www.inside-r.org/r-doc/qdapDictionaries/contractions'>contractions</a></code> data set.</dd>
     </dl>
     
     <div class="Value">
