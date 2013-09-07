@@ -43,7 +43,9 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>local_host(loc = file.path(getwd(), "PRESENTATION"))</pre>
+    <pre>local_host(loc = file.path(getwd(), "PRESENTATION"))
+
+run_lh(loc = file.path(getwd(), "PRESENTATION"))</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -62,8 +64,10 @@
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Create a .sh/.bat file to open a presentation with a
-  local host.</p>
+      <p><code>local_host</code> - Create a .sh/.bat file to open a
+  presentation with a local host.</p>
+  
+      <p><code>run_lh</code> - Create and run a local host.</p>
   
     </div>
 
@@ -80,16 +84,18 @@
     <div class="Note">
       <h2>Note</h2>
       
-      <p>The .sh/.bat file can not be opened from within RStudio.</p>
+      <p>The .sh/.bat file can not be ran by clicking on the file
+  from within RStudio.  Either open the directory and click
+  the file or use <code>run_lh</code>.</p>
   
     </div>
     
     <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## local_host()</div></pre>
+    <pre class="examples"><div class='input'>## local_host()## run_lh</div></pre>
   </div>
   <div class="span4">
     <!-- <ul>
-      <li>local_host</li>
+      <li>local_host</li><li>run_lh</li>
     </ul>
     <ul>
       <li>localhost</li>
