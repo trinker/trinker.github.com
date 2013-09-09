@@ -40,8 +40,8 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>TB(text = "clipboard", col = "#FFFFCC", border = "black", padding = 10, lty = "solid", 
-  lwd = 1, bor.rad = 5, ..., copy2clip = TRUE, print = FALSE)
+    <pre>TB(text = "clipboard", ..., col = "white", border = "black", padding = 10, lty = "solid", 
+  lwd = 1, bor.rad = 5, bold = FALSE, font.col = "black", copy2clip = TRUE, print = FALSE)
 
 TB2(text = "clipboard", width = nchar(text), text_align = "center", box_align = "left", 
       copy2clip = TRUE, print = FALSE)</pre>
@@ -51,6 +51,9 @@ TB2(text = "clipboard", width = nchar(text), text_align = "center", box_align = 
       <dt>text</dt>
       <dd>A character vector or text copied to the
   clipboard.  Default is to read from the clipboard.</dd>
+      <dt>...</dt>
+      <dd>Other arguments passed to <b>style</b> in
+  the HTML <code>div</code> tag.</dd>
       <dt>col</dt>
       <dd>The color(s) to fill or shade the rectangle
   with.</dd>
@@ -65,12 +68,14 @@ TB2(text = "clipboard", width = nchar(text), text_align = "center", box_align = 
       <dt>lwd</dt>
       <dd>The line width (in px) for borders and
   shading.</dd>
+      <dt>bold</dt>
+      <dd>logical.  If <code>TRUE</code> the font will be
+  boldfaced.</dd>
+      <dt>font.col</dt>
+      <dd>The color of the font.</dd>
       <dt>bor.rad</dt>
       <dd>The degree (in px) to which the corners
   are rounded; 0 results in square corners.</dd>
-      <dt>...</dt>
-      <dd>Other arguments passed to <b>style</b> in
-  the HTML <code>div</code> tag.</dd>
       <dt>copy2clip</dt>
       <dd>logical.  If <code>TRUE</code> attempts to
   copy the output to the clipboard.</dd>
@@ -109,14 +114,20 @@ TB2(text = "clipboard", width = nchar(text), text_align = "center", box_align = 
     <h2 id="examples">Examples</h2>
     <pre class="examples"><div class='input'>TB("I like ice cream!", print=TRUE)
 </div>
-<div class='output'><div style="background-color: #FFFFCC; border-radius: 5px; padding:10px; border: 1px solid black;">
+<div class='output'><div style="background-color: white; border-radius: 5px; padding:10px; border: 1px solid black; color: black; ">
     I like ice cream!
 </div>
 </div>
-<div class='input'>TB("Free cookies for a year!", print=TRUE)
+<div class='input'>TB("Free cookies for a year!", col = "red", font.col="white", print=TRUE)
 </div>
-<div class='output'><div style="background-color: #FFFFCC; border-radius: 5px; padding:10px; border: 1px solid black;">
+<div class='output'><div style="background-color: red; border-radius: 5px; padding:10px; border: 1px solid black; color: white; ">
     Free cookies for a year!
+</div>
+</div>
+<div class='input'>TB("Bad Robot!", "font-style:italic", print=TRUE)
+</div>
+<div class='output'><div style="background-color: white; border-radius: 5px; padding:10px; border: 1px solid black; color: black;  font-style:italic">
+    Bad Robot!
 </div>
 </div>
 <div class='input'>TB2("I like ice cream!", print=TRUE)
