@@ -40,14 +40,44 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>TB(text = "clipboard", width = nchar(text), text_align = "center", box_align = "left", 
-  copy2clip = TRUE, print = FALSE)</pre>
+    <pre>TB(text = "clipboard", col = "#FFFFCC", border = "black", padding = 10, lty = "solid", 
+  lwd = 1, bor.rad = 5, ..., copy2clip = TRUE, print = FALSE)
+
+TB2(text = "clipboard", width = nchar(text), text_align = "center", box_align = "left", 
+      copy2clip = TRUE, print = FALSE)</pre>
     
     <h2>Arguments</h2>
     <dl>
       <dt>text</dt>
       <dd>A character vector or text copied to the
   clipboard.  Default is to read from the clipboard.</dd>
+      <dt>col</dt>
+      <dd>The color(s) to fill or shade the rectangle
+  with.</dd>
+      <dt>border</dt>
+      <dd>The color for rectangle border(s).</dd>
+      <dt>padding</dt>
+      <dd>The distance (in px) between the text and
+  the border.</dd>
+      <dt>lty</dt>
+      <dd>The line type for borders (either "solid" or
+  "dashed").</dd>
+      <dt>lwd</dt>
+      <dd>The line width (in px) for borders and
+  shading.</dd>
+      <dt>bor.rad</dt>
+      <dd>The degree (in px) to which the corners
+  are rounded; 0 results in square corners.</dd>
+      <dt>...</dt>
+      <dd>Other arguments passed to <b>style</b> in
+  the HTML <code>div</code> tag.</dd>
+      <dt>copy2clip</dt>
+      <dd>logical.  If <code>TRUE</code> attempts to
+  copy the output to the clipboard.</dd>
+      <dt>print</dt>
+      <dd>logical.  If TRUE <code><a href='http://www.inside-r.org/r-doc/base/cat'>cat</a></code>
+  prints the output to the console.  If <code>FALSE</code>
+  returns to the console.</dd>
       <dt>width</dt>
       <dd>The width, in characters, to make the box.</dd>
       <dt>text_align</dt>
@@ -58,13 +88,6 @@
       <dd>Alingment of textbox; takes the values
   c(<code>"left"</code>, <code>"right"</code>, <code>"top"</code>,
   <code>"middle"</code>, <code>"bottom"</code>).</dd>
-      <dt>copy2clip</dt>
-      <dd>logical.  If <code>TRUE</code> attempts to
-  copy the output to the clipboard.</dd>
-      <dt>print</dt>
-      <dd>logical.  If TRUE <code><a href='http://www.inside-r.org/r-doc/base/cat'>cat</a></code>
-  prints the output to the console.  If <code>FALSE</code>
-  returns to the console.</dd>
     </dl>
     
     <div class="Value">
@@ -77,18 +100,32 @@
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Wrap text to generate an HTML text box tag.</p>
+      <p><code>TB</code> - Generates an HTML textbox tag.</p>
+  
+      <p><code>TB2</code> - Generates an HTML writeable textbox tag.</p>
   
     </div>
     
     <h2 id="examples">Examples</h2>
     <pre class="examples"><div class='input'>TB("I like ice cream!", print=TRUE)
 </div>
+<div class='output'><div style="background-color: #FFFFCC; border-radius: 5px; padding:10px; border: 1px solid black;">
+    I like ice cream!
+</div>
+</div>
+<div class='input'>TB("Free cookies for a year!", print=TRUE)
+</div>
+<div class='output'><div style="background-color: #FFFFCC; border-radius: 5px; padding:10px; border: 1px solid black;">
+    Free cookies for a year!
+</div>
+</div>
+<div class='input'>TB2("I like ice cream!", print=TRUE)
+</div>
 <div class='output'><div align="left">
     <input style="text-align:center" name="box1" type="text" value="I like ice cream!" size="17" />
 </div>
 </div>
-<div class='input'>TB("Free cookies for a year!", print=TRUE)
+<div class='input'>TB2("Free cookies for a year!", print=TRUE)
 </div>
 <div class='output'><div align="left">
     <input style="text-align:center" name="box1" type="text" value="Free cookies for a year!" size="24" />
@@ -97,7 +134,7 @@
   </div>
   <div class="span4">
     <!-- <ul>
-      <li>TB</li>
+      <li>TB</li><li>TB2</li>
     </ul>
     <ul>
       
