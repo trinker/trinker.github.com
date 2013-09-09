@@ -40,17 +40,19 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>tex2docx(in.file = NULL, out.file = NULL, path = paste0(getwd(), "/REPORT"), bib.loc = getOption("bib.loc"))
+    <pre>tex2docx(in.file = NULL, out.file = NULL, path = QP(), bib.loc = getOption("bib.loc"))
 
-tex2html(in.file = NULL, out.file = NULL, path = paste0(getwd(), "/REPORT"), bib.loc = getOption("bib.loc"))
+tex2html(in.file = NULL, out.file = NULL, path = QP(), bib.loc = getOption("bib.loc"))
 
-md2docx(in.file = NULL, out.file = NULL, path = paste0(getwd(), "/REPORT"), bib.loc = getOption("bib.loc"))
+md2docx(in.file = NULL, out.file = NULL, path = QP(), bib.loc = getOption("bib.loc"))
 
-md2tex(in.file = NULL, out.file = NULL, path = paste0(getwd(), "/REPORT"), bib.loc = getOption("bib.loc"))
+md2tex(in.file = NULL, out.file = NULL, path = QP(), bib.loc = getOption("bib.loc"))
 
-md2pdf(in.file = NULL, out.file = NULL, path = paste0(getwd(), "/REPORT"), bib.loc = getOption("bib.loc"))
+md2pdf(in.file = NULL, out.file = NULL, path = QP(), bib.loc = getOption("bib.loc"))
 
-html2pdf(in.file = NULL, out.file = NULL, path = paste0(getwd(), "/REPORT"), bib.loc = getOption("bib.loc"))</pre>
+html2pdf(in.file = NULL, out.file = NULL, path = QP(), bib.loc = getOption("bib.loc"))
+
+md2html(in.file = NULL, out.file = NULL, path = QP(), bib.loc = getOption("bib.loc"))</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -104,7 +106,7 @@ html2pdf(in.file = NULL, out.file = NULL, path = paste0(getwd(), "/REPORT"), bib
   </div>
   <div class="span4">
     <!-- <ul>
-      <li>html2pdf</li><li>md2docx</li><li>md2pdf</li><li>md2tex</li><li>tex2docx</li><li>tex2html</li>
+      <li>html2pdf</li><li>md2docx</li><li>md2html</li><li>md2pdf</li><li>md2tex</li><li>tex2docx</li><li>tex2html</li>
     </ul>
     <ul>
       

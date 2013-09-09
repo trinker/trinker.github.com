@@ -40,12 +40,11 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>custom_css(rprofile = FALSE, loc = file.path(getwd(), "REPORT"), style.css = NULL, 
-  source = TRUE)
+    <pre>custom_css(rprofile = FALSE, loc = QP(), style.css = NULL, source = TRUE)
 
 css_styles()
 
-css_style_change(style.css, cur.style.css = file.path(getwd(), "REPORT/css/style.css"))</pre>
+css_style_change(style.css, cur.style.css = QP("REPORT/css/style.css"))</pre>
     
     <h2>Arguments</h2>
     <dl>

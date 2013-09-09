@@ -2,12 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>local_host. reports 0.2.0</title>
+<title>QP. reports 0.2.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="author" content="
-  Dason Kurkiewicz and Tyler Rinker
-  &lt;tyler.rinker@gmail.com&gt;
-">
+<meta name="author" content="">
 
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/bootstrap-responsive.css" rel="stylesheet">
@@ -38,76 +35,67 @@
         
       </header>
       
-      <h1>Generate Local Host Bash/Batch</h1>
+      <h1>Quick Path</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>local_host(loc = QP("PRESENTATION"))
-
-run_lh(loc = QP("PRESENTATION"))</pre>
+    <pre>QP(...)</pre>
     
     <h2>Arguments</h2>
     <dl>
-      <dt>loc</dt>
-      <dd>The path to the presentation directory.</dd>
+      <dt>...</dt>
+      <dd>The directory (or nested directories)
+  withing the working directry.</dd>
     </dl>
     
     <div class="Value">
       <h2>Value</h2>
       
-      <p>Creates a .sh/.bat file that opens a local host to that
-  directory.</p>
+      <p>Returns a path.</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p><code>local_host</code> - Create a .sh/.bat file to open a
-  presentation with a local host.</p>
-  
-      <p><code>run_lh</code> - Create and run a local host.</p>
-  
-    </div>
-
-    <div class="Details">
-      <h2>Details</h2>
-      
-      <p>The user must have <a href = 'http://www.python.org/'>Python</a>
-  installed and on their path to be able to utilize this
-  function.  For more details see:
-  <a href = 'http://www.youtube.com/watch?v=VlqpiKHz7Gw&feature=youtu.be'>http://www.youtube.com/watch?v=VlqpiKHz7Gw&feature=youtu.be</a>.</p>
-  
-    </div>
-
-    <div class="Note">
-      <h2>Note</h2>
-      
-      <p>The .sh/.bat file can not be ran by clicking on the file
-  from within RStudio.  Either open the directory and click
-  the file or use <code>run_lh</code>.</p>
+      <p>This function is a wrapper for
+  <code><a href='http://www.inside-r.org/r-doc/base/file.path'>file.path</a></code> and
+  <code><a href='http://www.inside-r.org/r-doc/base/getwd'>getwd</a></code></p>
   
     </div>
     
     <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## local_host()## run_lh</div></pre>
+    <pre class="examples"><div class='input'>QP()
+</div>
+<div class='output'>[1] "C:/Users/trinker/GitHub/reports"
+</div>
+<div class='input'>QP("PRESENTATION")
+</div>
+<div class='output'>[1] "C:/Users/trinker/GitHub/reports/PRESENTATION"
+</div>
+<div class='input'>QP("PRESENTATION/figure")
+</div>
+<div class='output'>[1] "C:/Users/trinker/GitHub/reports/PRESENTATION/figure"
+</div>
+<div class='input'>QP("PRESENTATION", "figure")
+</div>
+<div class='output'>[1] "C:/Users/trinker/GitHub/reports/PRESENTATION/figure"
+</div></pre>
   </div>
   <div class="span4">
     <!-- <ul>
-      <li>local_host</li><li>run_lh</li>
+      <li>QP</li>
     </ul>
     <ul>
-      <li>localhost</li>
+      
     </ul> -->
       
+    <h2>See also</h2>
     
-    <h2>Author</h2>
-    
-  Dason Kurkiewicz and Tyler Rinker
-  <tyler.rinker@gmail.com>
+  <code><a href='http://www.inside-r.org/r-doc/base/file.path'>file.path</a></code>, <code><a href='http://www.inside-r.org/r-doc/base/getwd'>getwd</a></code>
 
-    
+        
   </div>
 </div>
       
