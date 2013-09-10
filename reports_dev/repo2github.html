@@ -77,7 +77,10 @@
       <h2>Description</h2>
       
       <p>Allows uploading a local repository to GitHub without
-  first creating the repository in the clouds.</p>
+  first creating the repository in the clouds.
+  <code>repo2github</code> is designed for the
+  initial psuh to github.  Future pushes can be handled via
+  RStudio or other git interface.</p>
   
     </div>
 
@@ -105,7 +108,7 @@
       <h2>Warning</h2>
       
       <p>For Windows users this function creates a temporary
-  _netrc file in the temp directory and attempts to delete
+  _netrc file in the home directory and attempts to delete
   this file.  The _netrc contains username and password
   information for github. <code><a href='http://www.inside-r.org/r-doc/base/on.exit'>on.exit</a></code>.</p>
   
