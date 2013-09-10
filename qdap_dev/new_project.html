@@ -40,7 +40,8 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>new_project(project = "new", path = getwd(), open = reports::is.global(2), ...)</pre>
+    <pre>new_project(project = "new", path = getwd(), open = reports::is.global(2), github = FALSE, 
+  ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -55,6 +56,10 @@
   <code>new_project</code> is being used in the global
   environment, if it is then the project directory will be
   opened.</dd>
+      <dt>github</dt>
+      <dd>logical.  If <code>TRUE</code> the repo will be
+  sent to public <a href = 'https://github.com/'>GitHub</a>
+  account.</dd>
       <dt>...</dt>
       <dd>Other arguments passed to
   <code><a href='http://www.inside-r.org/r-doc/reports/new_report'>new_report</a></code>.</dd>

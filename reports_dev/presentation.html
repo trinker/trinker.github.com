@@ -43,7 +43,7 @@
     <pre>presentation(presentation = "presentation", type = c("rnw", "rmd"), theme = "Madrid", 
   bib.loc = getOption("bib.loc"), name = getOption("name.reports"), github.user = getOption("github.user"), 
       sources = getOption("sources.reports"), path = getwd(), slidify = getOption("slidify.template"), 
-      open = is.global(2), ...)</pre>
+      open = is.global(2), github = FALSE, ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -93,6 +93,10 @@
   <code>presentation</code> is being used in the global
   environment, if it is then the project directory will be
   opened.</dd>
+      <dt>github</dt>
+      <dd>logical.  If <code>TRUE</code> the repo will be
+  sent to public <a href = 'https://github.com/'>GitHub</a>
+  account.</dd>
       <dt>...</dt>
       <dd>Other arguments passed to
   <code><a href='http://www.inside-r.org/r-doc/slidify/author'>author</a></code>.</dd>

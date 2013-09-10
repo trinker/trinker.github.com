@@ -44,7 +44,7 @@
   <div class="span8">
     <h2>Usage</h2>
     <pre>repo2github(password, project.dir = getwd(), repo = basename(getwd()), github.user = getOption("github.user"), 
-  gitpath = NULL)</pre>
+  gitpath = NULL, readme = TRUE)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -64,6 +64,9 @@
       <dd>Path to the location of git.  If
   <code>NULL</code> <code>repo2github</code> will attempt to locate the
   path if necessary.</dd>
+      <dt>logical.</dt>
+      <dd>If <code>TRUE</code> repo initializes with a
+  README.md file.</dd>
     </dl>
     
     <div class="Value">
