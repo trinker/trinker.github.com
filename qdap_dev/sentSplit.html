@@ -123,6 +123,22 @@ TOT(tot)</pre>
   sub sentence).  Generally, for internal use.</p>
   
     </div>
+
+    <div class="Warning">
+      <h2>Warning</h2>
+      
+      <p><code>sentSplit</code> requires the dialogue
+  (text) column to be cleaned in a particular way.  The
+  data should contain qdap punctuation marks (<code>c("?",
+  ".", "!", "|")</code>) at the end of each sentence.
+  Additionally, extraneous punctuation such as
+  abbreviations should be removed (see
+  <code>replace_abbreviation</code>). Training
+  sentences such as <b>I thought I...</b> will be treated
+  as incomplete and marked with <code>"|"</code> to denote an
+  incomplete/trailing sentence.</p>
+  
+    </div>
       </div>
   <div class="span4">
     <!-- <ul>
