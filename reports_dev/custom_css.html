@@ -44,7 +44,9 @@
 
 css_styles()
 
-css_style_change(style.css, cur.style.css = QP("REPORT/css/style.css"))</pre>
+css_style_change(style.css, cur.style.css = QP("REPORT/css/style.css"))
+
+css_style_add(loc = QP("PRESENTATION/assets/css"))</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -83,6 +85,9 @@ css_style_change(style.css, cur.style.css = QP("REPORT/css/style.css"))</pre>
   files.</p>
   
       <p><code>css_style_change</code> - Change a style.css.</p>
+  
+      <p><code>css_styl_add</code> - Add a style.css.  Defaults to
+  &#145;<span class = "file">~PRESENTATION/assets/css</span>&#146;.</p>
   
     </div>
 
@@ -135,7 +140,7 @@ css_styles()
   </div>
   <div class="span4">
     <!-- <ul>
-      <li>css_style_change</li><li>css_styles</li><li>custom_css</li>
+      <li>css_style_add</li><li>css_style_change</li><li>css_styles</li><li>custom_css</li>
     </ul>
     <ul>
       
