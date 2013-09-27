@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>summary.cmspans. qdap 1.0.0</title>
+<title>plot.sum_cmspans. qdap 1.0.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -35,36 +35,16 @@
         
       </header>
       
-      <h1>Summarize a cmspans object</h1>
+      <h1>Plot Summary Stats for a Summary of a cmspans Object</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>summary(object, grouping.var = NULL, rm.var = NULL, percent = TRUE, digits = 2, ...)
-
-plot(x, digits = NULL, sep = ".", name.sep = "&", values = TRUE, high = "red", transform = TRUE, 
+    <pre>plot(x, digits = NULL, sep = ".", name.sep = "&", values = TRUE, high = "red", transform = TRUE, 
   plot = TRUE, facet.vars = NULL, ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
-      <dt>object</dt>
-      <dd>The cmspans object</dd>
-      <dt>grouping.var</dt>
-      <dd>The grouping variables. Also takes a
-  single grouping variable or a list of 1 or more grouping
-  variables.</dd>
-      <dt>rm.var</dt>
-      <dd>An optional single vector or list of 1 or 2
-  of repeated measures to aggregate by.</dd>
-      <dt>percent</dt>
-      <dd>logical.  If <code>TRUE</code> output given as
-  percent.  If <code>FALSE</code> the output is proportion.</dd>
-      <dt>digits</dt>
-      <dd>Integer; number of decimal places to round
-  when printing.</dd>
-      <dt>...</dt>
-      <dd>Other argument passed to <code>qheat</code> in
-  plot (ignored in summary).</dd>
       <dt>x</dt>
       <dd>The sum_cmspans object (the object produced by
   calling <code>summary</code> on a cmspans object)</dd>
@@ -95,22 +75,24 @@ plot(x, digits = NULL, sep = ".", name.sep = "&", values = TRUE, high = "red", t
     <div class="Description">
       <h2>Description</h2>
       
-      <p><code>summary.cmspans</code> - Summarize a cmspans object</p>
-  
-      <p><code>plot.sum_cmspans</code> - Plots a heat map of summary
-  statistics for sum_cmspans objects (the object produced
-  by calling <code>summary</code> on a cmspans object).</p>
+      <p>Plots a heat map of summary statistics for sum_cmspans
+  objects (the object produced by calling <code>summary</code> on
+  a cmspans object).</p>
   
     </div>
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>plot.sum_cmspans</li><li>summary.cmspans</li>
+      <li>plot.sum_cmspans</li>
     </ul>
     <ul>
       
     </ul> -->
       
+    <h2>See also</h2>
+    
+  <code>summary.cmspans</code>
+
         
   </div>
 </div>
