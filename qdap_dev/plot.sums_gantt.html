@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>plot.diversity. qdap 1.0.0</title>
+<title>plot.sums_gantt. qdap 1.0.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -35,31 +35,38 @@
         
       </header>
       
-      <h1>Plots a diversity object</h1>
+      <h1>Plots a sums_gantt object</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>plot(x, ...)</pre>
+    <pre>plot(x, base = TRUE, title = NULL, ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
       <dt>x</dt>
-      <dd>The diversity object</dd>
+      <dd>The sums_gantt object</dd>
+      <dt>base</dt>
+      <dd>logical.  If <code>TRUE</code> prints in base
+  graphics system. If <code>FALSE</code> prints in ggplot
+  graphics system.</dd>
+      <dt>title</dt>
+      <dd>An optional title.</dd>
       <dt>...</dt>
-      <dd>Other arguments passed to <code>qheat</code></dd>
+      <dd>Other arguments passed to <code>gantt_wrap</code>
+  or <code>plot_gantt_base</code></dd>
     </dl>
     
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Plots a diversity object.</p>
+      <p>Plots a sums_gantt object.</p>
   
     </div>
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>plot.diversity</li>
+      <li>plot.sums_gantt</li>
     </ul>
     <ul>
       

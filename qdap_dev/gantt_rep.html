@@ -40,7 +40,8 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>gantt_rep(rm.var, text.var, grouping.var, units = "words", col.sep = "_")</pre>
+    <pre>gantt_rep(rm.var, text.var, grouping.var = NULL, units = "words", col.sep = "_", 
+  name.sep = "_")</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -59,8 +60,10 @@
   <code>"word"</code>, or <code>"sentence"</code>.</dd>
       <dt>col.sep</dt>
       <dd>The character string to use to separate
-  pasted variables in the merged grouping variable
-  header/name.</dd>
+  pasted variables in the pasted columns.</dd>
+      <dt>name.sep</dt>
+      <dd>The character string to use to separate
+  column names of the pasted columns.</dd>
     </dl>
     
     <div class="Value">
@@ -82,12 +85,10 @@
     <div class="Note">
       <h2>Note</h2>
       
-      <p>For non repeated measures data/plotting use
-  <code>gantt</code>; for a convenient wrapper that
-  takes text and generates plots use
-  <code>gantt_plot</code>; and for a flexible gantt
-  plot that words with code matrix functions (cm) use
-  <code>gantt_wrap</code>.</p>
+      <p>For non repeated measures data use
+  <code>gantt</code>.  For more flexible plotting
+  needs use <code>gantt_wrap</code> over the generic
+  plotting method.</p>
   
     </div>
 

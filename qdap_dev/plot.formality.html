@@ -41,7 +41,7 @@
   <div class="span8">
     <h2>Usage</h2>
     <pre>plot(x, point.pch = 20, point.cex = 0.5, point.colors = c("gray65", "red"), bar.colors = NULL, 
-  short.names = FALSE, min.wrdcnt = NULL, order.by.formality = TRUE, ...)</pre>
+  short.names = FALSE, min.wrdcnt = NULL, order.by.formality = TRUE, plot, ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -69,6 +69,11 @@
       <dd>logical.  If <code>TRUE</code> the
   group polarity plot will be ordered by average polarity
   score, otherwise alphabetical order is assumed.</dd>
+      <dt>plot</dt>
+      <dd>logical.  If <code>TRUE</code> the plot will
+  automatically plot. The user may wish to set to
+  <code>FALSE</code> for use in knitr, sweave, etc. to add
+  additional plot layers.</dd>
       <dt>...</dt>
       <dd>ignored</dd>
     </dl>

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>plot.diversity. qdap 1.0.0</title>
+<title>plot.rmgantt. qdap 1.0.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -35,31 +35,37 @@
         
       </header>
       
-      <h1>Plots a diversity object</h1>
+      <h1>Plots a rmgantt object</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>plot(x, ...)</pre>
+    <pre>plot(x, title, transform = FALSE, ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
       <dt>x</dt>
-      <dd>The diversity object</dd>
+      <dd>The sums_rmgantt object</dd>
+      <dt>title</dt>
+      <dd>An optional title.</dd>
+      <dt>transform</dt>
+      <dd>logical.  If <code>TRUE</code> and there are
+  two repeated mesures the faceting is reversed.</dd>
       <dt>...</dt>
-      <dd>Other arguments passed to <code>qheat</code></dd>
+      <dd>Other arguments passed to
+  <code>gantt_wrap</code></dd>
     </dl>
     
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Plots a diversity object.</p>
+      <p>Plots a rmgantt object.</p>
   
     </div>
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>plot.diversity</li>
+      <li>plot.rmgantt</li>
     </ul>
     <ul>
       

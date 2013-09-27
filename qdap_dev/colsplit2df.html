@@ -40,7 +40,8 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>colsplit2df(dataframe, splitcol = 1, new.names = NULL, sep = ".", keep.orig = FALSE)
+    <pre>colsplit2df(dataframe, splitcol = 1, new.names = NULL, sep = ".", keep.orig = FALSE, 
+  name.sep = "&")
 
 lcolsplit2df(qdap.list, keep.orig = FALSE)</pre>
     
@@ -57,11 +58,14 @@ lcolsplit2df(qdap.list, keep.orig = FALSE)</pre>
   assign to the columns. Default attempts to extract the
   original names before the paste.</dd>
       <dt>sep</dt>
-      <dd>The character that used in <code>paste2</code> to
-  paste the columns.</dd>
+      <dd>The character that was used in <code>paste2</code>
+  to paste the columns.</dd>
       <dt>keep.orig</dt>
       <dd>logical.  If <code>TRUE</code> the original
   pasted column will be retained as well.</dd>
+      <dt>name.sep</dt>
+      <dd>The character that was used to paste the
+  column names.</dd>
       <dt>qdap.list</dt>
       <dd>A qdap list object that contains
   dataframes with a leading <code>paste2</code>

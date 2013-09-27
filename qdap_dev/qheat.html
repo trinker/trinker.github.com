@@ -42,7 +42,8 @@
     <h2>Usage</h2>
     <pre>qheat(mat, low = "white", high = "darkblue", values = FALSE, digits = 1, text.size = 3, 
   text.color = "grey40", xaxis.col = "black", yaxis.col = "black", order.by = NULL, 
-      grid = "white", by.column = TRUE, auto.size = FALSE, mat2 = NULL)</pre>
+      grid = "white", by.column = TRUE, auto.size = FALSE, mat2 = NULL, plot = TRUE, 
+      facet.vars = NULL, facet.transform = FALSE)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -93,6 +94,17 @@
       <dd>A second matrix equal in dimensions to
   <code>mat</code> that will be used for cell labels if
   <code>values</code> is <code>TRUE</code>.</dd>
+      <dt>plot</dt>
+      <dd>logical.  If <code>TRUE</code> the plot will
+  automatically plot. The user may wish to set to
+  <code>FALSE</code> for use in knitr, sweave, etc. to add
+  additional plot layers.</dd>
+      <dt>facet.vars</dt>
+      <dd>A character vector of of 1 or 2 column
+  names to facet by.</dd>
+      <dt>facet.transform</dt>
+      <dd>logical If <code>TRUE</code> the
+  direction of the faceting is reversed.</dd>
     </dl>
     
     <div class="Description">

@@ -42,7 +42,7 @@
     <h2>Usage</h2>
     <pre>plot(x, bar.size = 5, low = "red", mid = "grey99", high = "blue", ave.polarity.shape = "+", 
   alpha = 1/4, shape = 19, point.size = 2.5, jitter = 0.1, nrow = NULL, na.rm = TRUE, 
-      order.by.polarity = TRUE, ...)</pre>
+      order.by.polarity = TRUE, plot = TRUE, ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -83,6 +83,11 @@
       <dd>logical.  If <code>TRUE</code> the
   group polarity plot will be ordered by average polarity
   score, otherwise alphabetical order is assumed.</dd>
+      <dt>plot</dt>
+      <dd>logical.  If <code>TRUE</code> the plot will
+  automatically plot. The user may wish to set to
+  <code>FALSE</code> for use in knitr, sweave, etc. to add
+  additional plot layers.</dd>
       <dt>...</dt>
       <dd>ignored</dd>
     </dl>

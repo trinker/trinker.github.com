@@ -48,7 +48,7 @@
       ncol = NULL, minor.line.freq = NULL, major.line.freq = NULL, sig.dig.line.freq = 1, 
       hms.scale = NULL, scale = NULL, space = NULL, size = 3, rm.horiz.lines = FALSE, 
       x.ticks = TRUE, y.ticks = TRUE, legend.position = NULL, bar.color = NULL, border.color = NULL, 
-      border.size = 2, border.width = 0.1, constrain = TRUE)</pre>
+      border.size = 2, border.width = 0.1, constrain = TRUE, plot = TRUE)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -139,6 +139,11 @@
       <dt>constrain</dt>
       <dd>logical.  If <code>TRUE</code> the Gantt bars
   touch the edge of the graph.</dd>
+      <dt>plot</dt>
+      <dd>logical.  If <code>TRUE</code> the plot will
+  automatically plot. The user may wish to set to
+  <code>FALSE</code> for use in knitr, sweave, etc. to add
+  additional plot layers.</dd>
     </dl>
     
     <div class="Value">

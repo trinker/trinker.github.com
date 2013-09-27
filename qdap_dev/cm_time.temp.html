@@ -40,12 +40,17 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>cm_time.temp(codes, start = ":00", end = NULL, file = NULL)</pre>
+    <pre>cm_time.temp(codes, grouping.var = NULL, start = ":00", end = NULL, file = NULL, 
+  coding = FALSE, print = TRUE)</pre>
     
     <h2>Arguments</h2>
     <dl>
       <dt>codes</dt>
       <dd>List of codes.</dd>
+      <dt>grouping.var</dt>
+      <dd>The grouping variables.  Also takes a
+  single grouping variable or a list of 1 or more grouping
+  variables.</dd>
       <dt>start</dt>
       <dd>A character string in the form of "00:00"
   indicating start time (default is ":00").</dd>
@@ -55,6 +60,13 @@
       <dt>file</dt>
       <dd>A connection, or a character string naming
   the file to print to (.txt or .doc is recommended).</dd>
+      <dt>coding</dt>
+      <dd>logical.  If <code>TRUE</code> a coding list is
+  provided with the time span coding sheet.  <code>coding</code>
+  is ignoted if <code>end = NULL</code>.</dd>
+      <dt>print</dt>
+      <dd>logical.  If <code>TRUE</code> the time spans are
+  printed to the console.</dd>
     </dl>
     
     <div class="Description">

@@ -40,8 +40,8 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>wfm(text.var = NULL, grouping.var = NULL, wfdf = NULL, output = "raw", stopwords = NULL, 
-  char2space = "~~", ...)
+    <pre>wfm(text.var = NULL, grouping.var = NULL, output = "raw", stopwords = NULL, char2space = "~~", 
+  ...)
 
 wfdf(text.var, grouping.var = NULL, stopwords = NULL, margins = FALSE, output = "raw", 
       digits = 2, char2space = "~~", ...)
@@ -59,12 +59,6 @@ wf.combine(wf.obj, word.lists, matrix = FALSE)</pre>
   <code>NULL</code> generates one word list for all text.  Also
   takes a single grouping variable or a list of 1 or more
   grouping variables.</dd>
-      <dt>wfdf</dt>
-      <dd>A word frequency data frame given instead of
-  raw text.var and optional grouping.var. Basically
-  converts a word frequency dataframe (wfdf) to a word
-  frequency matrix (<code>wfm</code>).  Default is
-  <code>NULL</code>.</dd>
       <dt>output</dt>
       <dd>Output type (either <code>"proportion"</code> or
   <code>"percent"</code>).</dd>
