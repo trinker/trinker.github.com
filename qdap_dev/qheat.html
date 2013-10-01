@@ -43,7 +43,7 @@
     <pre>qheat(mat, low = "white", high = "darkblue", values = FALSE, digits = 1, text.size = 3, 
   text.color = "grey40", xaxis.col = "black", yaxis.col = "black", order.by = NULL, 
       grid = "white", by.column = TRUE, auto.size = FALSE, mat2 = NULL, plot = TRUE, 
-      facet.vars = NULL, facet.transform = FALSE)</pre>
+      facet.vars = NULL, facet.flip = FALSE)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -88,7 +88,7 @@
   to the column.  If <code>FALSE</code> applies scaling by row
   (use <code>NULL</code> to turn off scaling).</dd>
       <dt>auto.size</dt>
-      <dd>logical.  IF <code>TRUE</code> the visual will
+      <dd>logical.  If <code>TRUE</code> the visual will
   be resized to create square cells.</dd>
       <dt>mat2</dt>
       <dd>A second matrix equal in dimensions to
@@ -102,9 +102,9 @@
       <dt>facet.vars</dt>
       <dd>A character vector of of 1 or 2 column
   names to facet by.</dd>
-      <dt>facet.transform</dt>
-      <dd>logical If <code>TRUE</code> the
-  direction of the faceting is reversed.</dd>
+      <dt>facet.flip</dt>
+      <dd>logical If <code>TRUE</code> the direction of
+  the faceting is reversed.</dd>
     </dl>
     
     <div class="Description">

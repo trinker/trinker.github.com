@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>trans_context. qdap 1.0.0</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">qdap 1.0.0</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Print Context Around Indices</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre>trans_context(text.var, grouping.var, inds, n.before = 3, tot = TRUE, n.after = n.before)</pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>grouping.var</dt>
+      <dd>The grouping variables.  Also takes a
+  single grouping variable or a list of 1 or more grouping
+  variables.</dd>
+      <dt>inds</dt>
+      <dd>A list of integer indices to print context
+  for.</dd>
+      <dt>n.before</dt>
+      <dd>The number of rows before the indexed
+  occurence.</dd>
+      <dt>tot</dt>
+      <dd>logical.  If <code>TRUE</code> condenses sub-units
+  (e.g., sentences) into turns of talk for that
+  <code>grouping.var</code>.</dd>
+      <dt>n.after</dt>
+      <dd>The number of rows after the indexed
+  occurence.</dd>
+    </dl>
+    
+    <div class="Value">
+      <h2>Value</h2>
+      
+      <p>Returns a dataframe of the class "qdap_context" that can
+  be printed (i.e., saved) in flexible outputs.  The
+  dataframe can be printed as a dataframe style or pretty
+  text output.  The resulting file contains n rows before
+  and after each index of a vector of indices.</p>
+  
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p>Print (or save to an external file) n text elements
+  before and after indices.</p>
+  
+    </div>
+      </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>trans_context</li>
+    </ul>
+    <ul>
+      
+    </ul> -->
+      
+    <h2>See also</h2>
+    
+  <code>boolean_search</code>,
+  <code>question_type</code>,
+  <code>end_mark</code>
+
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

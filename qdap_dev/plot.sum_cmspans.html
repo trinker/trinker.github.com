@@ -40,14 +40,18 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>plot(x, digits = NULL, sep = ".", name.sep = "&", values = TRUE, high = "red", transform = TRUE, 
-  plot = TRUE, facet.vars = NULL, ...)</pre>
+    <pre>plot(x, digits = 3, sep = ".", name.sep = "&", values = TRUE, high = "red", transpose = TRUE, 
+  plot = TRUE, facet.vars = NULL, rev.codes = !transpose, rev.stats = !transpose, 
+      ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
       <dt>x</dt>
       <dd>The sum_cmspans object (the object produced by
   calling <code>summary</code> on a cmspans object)</dd>
+      <dt>digits</dt>
+      <dd>The number of digits displayed if
+  <code>values</code> is <code>TRUE</code>.</dd>
       <dt>sep</dt>
       <dd>The character that was used in <code>paste2</code>
   to paste the columns.</dd>
@@ -59,7 +63,7 @@
   will be included on the heatmap.</dd>
       <dt>high</dt>
       <dd>The color to be used for higher values.</dd>
-      <dt>transform</dt>
+      <dt>transpose</dt>
       <dd>logical.  If <code>TRUE</code> the dataframe
   is rotated 90 degrees.</dd>
       <dt>plot</dt>
@@ -70,6 +74,14 @@
       <dt>facet.vars</dt>
       <dd>A character vector of names to facet
   by.</dd>
+      <dt>rev.codes</dt>
+      <dd>logical If <code>TRUE</code> the plotting
+  order of the code groups is reversed.</dd>
+      <dt>rev.stats</dt>
+      <dd>logical If <code>TRUE</code> the plotting
+  order of the code descriptive statistics is reversed.</dd>
+      <dt>...</dt>
+      <dd>Other arguments passed to qheat.</dd>
     </dl>
     
     <div class="Description">
