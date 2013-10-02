@@ -40,41 +40,16 @@
     <h1>qdap</h1>
 
 <p><img src="https://dl.dropbox.com/u/61803503/qdapicon.png" alt="qdapicon"/><br/>
-<a href="http://trinker.github.com/qdap_dev/">qdap</a> (Quantitative Discourse Analysis Package) is an R package designed to assist in quantitative discourse analysis.  The package stands as a bridge between qualitative transcripts of dialogue and statistical analysis &amp; visualization.</p>
+<a href="https://github.com/trinker/qdap">qdap</a> (Quantitative Discourse Analysis Package) is an R package designed to assist in quantitative discourse analysis.  The package stands as a bridge between qualitative transcripts of dialogue and statistical analysis and visualization.</p>
 
-<h2>Installation</h2>
+<h3>Java Issues</h3>
+  
+<p>If there is a discrepancy between the <a href="https://dl.dropbox.com/u/61803503/rjava_warning.txt">R and Java architectures</a> you will have to <a href="http://www.java.com/en/download/manual.jsp">download</a> the appropriate version of Java compatible with the version of R you're using.    
 
-<p>To download the development version of qdap:</p>
+For more see <a href="http://www.r-statistics.com/2012/08/how-to-load-the-rjava-package-after-the-error-java_home-cannot-be-determined-from-the-registry/" target="_blank">Tal Galili's blog post</a> regarding rJava issues.
 
-<p>Download the <a href="https://github.com/trinker/qdap/zipball/master">zip ball</a> or <a href="https://github.com/trinker/qdap/tarball/master">tar ball</a>, decompress and run <code>R CMD INSTALL</code> on it, or use the <strong>devtools</strong> package to install the development version:</p>
 
-<pre><code class="r"># install.packages(&quot;devtools&quot;)
-
-library(devtools)
-install_github(&quot;qdapDictionaries&quot;, &quot;trinker&quot;)
-install_github(&quot;qdap&quot;, &quot;trinker&quot;)
-</code></pre>
-
-<p><strong>Note</strong>: Windows users need <a href="http://www.murdoch-sutherland.com/Rtools/">Rtools</a> and <a href="http://CRAN.R-project.org/package=devtools">devtools</a> to install this way.</p>
-
-<p><strong>Note</strong>: Mac users might be required to install the appropriate version <a href="https://developer.apple.com/xcode/">XTools</a> from the <a href="https://developer.apple.com/">Apple Developer site</a> in order to install the development version.  You may need to <a href="https://developer.apple.com/programs/register/">register as an Apple developer</a>.  An older version of XTools may also be required.</p>
-
-<h2>Help</h2>
-
-<p><a href="http://trinker.github.com/qdap/">Web Page</a><br/>
-<a href="https://dl.dropboxusercontent.com/u/61803503/packages/qdap_vignette.html">Package Vignette</a> <em>Note: Incomplete</em><br/>
-<a href="https://dl.dropbox.com/u/61803503/qdap.pdf">Package PDF Help Manual</a></p>
-
-<h2>Contact</h2>
-
-<p>You are welcome to:</p>
-
-<ul>
-<li>submit suggestions and bug-reports at: <a href="https://github.com/trinker/qdap/issues">https://github.com/trinker/qdap/issues</a></li>
-<li>send a pull request on: <a href="https://github.com/trinker/qdap/">https://github.com/trinker/qdap/</a></li>
-<li>compose a friendly e-mail to: <a href="mailto:tyler.rinker@gmail.com">tyler.rinker@gmail.com</a></li>
-</ul>
-
+<p>Download the development version of qdap <a href="https://github.com/trinker/qdap/">here</a> 
 
     <h2>Help topics</h2>
 
@@ -101,7 +76,7 @@ install_github(&quot;qdap&quot;, &quot;trinker&quot;)
         <code><a href="dir_map.html">dir_map</a></code><br />Map Transcript Files from a Directory to a Script</li>
             
       <li>
-        <code><a href="multicsv.html">mcsv_r</a></code>(mcsv_w)<br />Read/Write Multiple csv Files at a Time</li>
+        <code><a href="multicsv.html">mcsv_r</a></code> <code><a href="multicsv.html">mcsv_w</a></code><br />Read/Write Multiple csv Files at a Time</li>
             
       <li>
         <code><a href="read.transcript.html">read.transcript</a></code><br />Read Transcripts Into R</li>
@@ -114,10 +89,22 @@ install_github(&quot;qdap&quot;, &quot;trinker&quot;)
     <ul class="index">
         
       <li>
-        <code><a href="bracketX.html">bracketX</a></code>(bracketXtract, genX, genXtract)<br />Bracket Parsing</li>
+        <code><a href="bracketX.html">bracketX</a></code><br />Bracket Parsing</li>
+      <li>
+        <code><a href="bracketX.html">bracketXtract</a></code><br />Bracket Parsing</li>
             
       <li>
-        <code><a href="beg2char.html">beg2char</a></code>(char2end)<br />Grab Begin/End of String to Character</li>
+        <code><a href="bracketX.html">genX</a></code><br />Bracket Parsing</li>
+            
+      <li>
+        <code><a href="bracketX.html">genXtract</a></code><br />Bracket Parsing</li>
+            
+            
+      <li>
+        <code><a href="beg2char.html">beg2char</a></code><br />Grab Begin/End of String to Character</li>
+      <li>
+        <code><a href="beg2char.html">char2end</a></code><br />Grab Begin/End of String to Character</li>
+            
             
       <li>
         <code><a href="capitalizer.html">capitalizer</a></code><br />Capitalize Select Words</li>
@@ -126,10 +113,13 @@ install_github(&quot;qdap&quot;, &quot;trinker&quot;)
         <code><a href="clean.html">clean</a></code><br />Remove Escaped Characters</li>
             
       <li>
-        <code><a href="incomplete_replace.html">incomplete_replace</a></code>(incomp)<br />Denote Incomplete End Marks With "|"</li>
+        <code><a href="incomplete_replace.html">incomplete_replace</a></code><br />Denote Incomplete End Marks With "|"</li>
+      <li>
+        <code><a href="incomplete_replace.html">incomp</a></code><br />Denote Incomplete End Marks With "|"</li>
+            
             
       <li>
-        <code><a href="multigsub.html">multigsub</a></code>(mgsub)<br />Multiple gsub</li>
+        <code><a href="multigsub.html">multigsub</a></code> <code><a href="multigsub.html">mgsub</a></code><br />Multiple gsub</li>
             
       <li>
         <code><a href="name2sex.html">name2sex</a></code><br />Names to Gender Prediction</li>
@@ -153,7 +143,10 @@ install_github(&quot;qdap&quot;, &quot;trinker&quot;)
         <code><a href="replace_symbol.html">replace_symbol</a></code><br />Replace Symbols With Word Equivalents</li>
             
       <li>
-        <code><a href="rm_row.html">rm_row</a></code>(rm_empty_row)<br />Remove Rows That Contain Markers</li>
+        <code><a href="rm_row.html">rm_row</a></code><br />Remove Rows That Contain Markers</li>
+      <li>
+        <code><a href="rm_row.html">rm_empty_row</a></code><br />Remove Rows That Contain Markers</li>
+            
             
       <li>
         <code><a href="scrubber.html">scrubber</a></code><br />Clean Imported Text</li>
@@ -165,7 +158,7 @@ install_github(&quot;qdap&quot;, &quot;trinker&quot;)
         <code><a href="spaste.html">spaste</a></code><br />Add Leading/Trailing Spaces</li>
             
       <li>
-        <code><a href="stemmer.html">stemmer</a></code>(stem_words, stem2df)<br />Stem Text</li>
+        <code><a href="stemmer.html">stemmer</a></code> <code><a href="stemmer.html">stem_words</a></code> <code><a href="stemmer.html">stem2df</a></code><br />Stem Text</li>
             
       <li>
         <code><a href="Trim.html">Trim</a></code><br />Remove Leading/Trailing White Space</li>
@@ -178,13 +171,22 @@ install_github(&quot;qdap&quot;, &quot;trinker&quot;)
     <ul class="index">
         
       <li>
-        <code><a href="data_viewing.html">htruncdf</a></code>(ltruncdf, qview, truncdf)<br />Dataframe Viewing</li>
+        <code><a href="data_viewing.html">htruncdf</a></code><br />Dataframe Viewing</li>
+      <li>
+        <code><a href="data_viewing.html">ltruncdf</a></code><br />Dataframe Viewing</li>
             
       <li>
-        <code><a href="justification.html">left_just</a></code>(right_just)<br />Text Justification</li>
+        <code><a href="data_viewing.html">qview</a></code><br />Dataframe Viewing</li>
             
       <li>
-        <code><a href="Search.html">Search</a></code>(boolean_search)<br />Search Columns of a Data Frame</li>
+        <code><a href="data_viewing.html">truncdf</a></code><br />Dataframe Viewing</li>
+            
+            
+      <li>
+        <code><a href="justification.html">left_just</a></code> <code><a href="justification.html">right_just</a></code><br />Text Justification</li>
+            
+      <li>
+        <code><a href="Search.html">Search</a></code> <code><a href="Search.html">boolean_search</a></code><br />Search Columns of a Data Frame</li>
             
       <li>
         <code><a href="strWrap.html">strWrap</a></code><br />Wrap Character Strings to Format Paragraphs</li>
@@ -197,16 +199,22 @@ install_github(&quot;qdap&quot;, &quot;trinker&quot;)
     <ul class="index">
         
       <li>
-        <code><a href="adjacency_matrix.html">adjacency_matrix</a></code>(adjmat)<br />Takes a Matrix and Generates an Adjacency Matrix</li>
+        <code><a href="adjacency_matrix.html">adjacency_matrix</a></code> <code><a href="adjacency_matrix.html">adjmat</a></code><br />Takes a Matrix and Generates an Adjacency Matrix</li>
             
       <li>
         <code><a href="colSplit.html">colSplit</a></code><br />Separate a Column Pasted by paste2</li>
             
       <li>
-        <code><a href="colsplit2df.html">colsplit2df</a></code>(lcolsplit2df)<br />Wrapper for colSplit that Returns Dataframe(s)</li>
+        <code><a href="colsplit2df.html">colsplit2df</a></code><br />Wrapper for colSplit that Returns Dataframe(s)</li>
+      <li>
+        <code><a href="colsplit2df.html">lcolsplit2df</a></code><br />Wrapper for colSplit that Returns Dataframe(s)</li>
+            
             
       <li>
-        <code><a href="gantt.html">gantt</a></code>(plot_gantt_base)<br />Generates start and end times of supplied text selections (i.e., text
+        <code><a href="gantt.html">gantt</a></code><br />Generates start and end times of supplied text selections (i.e., text
+      <li>
+        <code><a href="gantt.html">plot_gantt_base</a></code><br />Generates start and end times of supplied text selections (i.e., text
+            
 </li>
             
       <li>
@@ -225,7 +233,13 @@ install_github(&quot;qdap&quot;, &quot;trinker&quot;)
         <code><a href="qcombine.html">qcombine</a></code><br />Combine Columns</li>
             
       <li>
-        <code><a href="sentSplit.html">sentSplit</a></code>(sentCombine, TOT)<br />Sentence Splitting</li>
+        <code><a href="sentSplit.html">sentSplit</a></code><br />Sentence Splitting</li>
+      <li>
+        <code><a href="sentSplit.html">sentCombine</a></code><br />Sentence Splitting</li>
+            
+      <li>
+        <code><a href="sentSplit.html">TOT</a></code><br />Sentence Splitting</li>
+            
             
       <li>
         <code><a href="speakerSplit.html">speakerSplit</a></code><br />Break and Stretch if Multiple Persons per Cell</li>
@@ -244,7 +258,13 @@ install_github(&quot;qdap&quot;, &quot;trinker&quot;)
         <code><a href="all_words.html">all_words</a></code><br />Searches Text Column for Words</li>
             
       <li>
-        <code><a href="bag_o_words.html">bag_o_words</a></code>(breaker, word_split)<br />Bag of Words</li>
+        <code><a href="bag_o_words.html">bag_o_words</a></code><br />Bag of Words</li>
+      <li>
+        <code><a href="bag_o_words.html">breaker</a></code><br />Bag of Words</li>
+            
+      <li>
+        <code><a href="bag_o_words.html">word_split</a></code><br />Bag of Words</li>
+            
             
       <li>
         <code><a href="common.html">common</a></code><br />Find Common Words Between Groups</li>
@@ -262,7 +282,7 @@ install_github(&quot;qdap&quot;, &quot;trinker&quot;)
         <code><a href="strip.html">strip</a></code><br />Strip Text</li>
             
       <li>
-        <code><a href="synonyms.html">synonyms</a></code>(syn)<br />Search For Synonyms</li>
+        <code><a href="synonyms.html">synonyms</a></code> <code><a href="synonyms.html">syn</a></code><br />Search For Synonyms</li>
             
       <li>
         <code><a href="word_associate.html">word_associate</a></code><br />Find Associated Words</li>
@@ -351,28 +371,64 @@ install_github(&quot;qdap&quot;, &quot;trinker&quot;)
         <code><a href="outlier_labeler.html">outlier_labeler</a></code><br />Locate Outliers in Numeric String</li>
             
       <li>
-        <code><a href="pos.html">pos</a></code>(pos_by, pos_tags)<br />Parts of Speech Tagging</li>
+        <code><a href="pos.html">pos</a></code><br />Parts of Speech Tagging</li>
+      <li>
+        <code><a href="pos.html">pos_by</a></code><br />Parts of Speech Tagging</li>
+            
+      <li>
+        <code><a href="pos.html">pos_tags</a></code><br />Parts of Speech Tagging</li>
+            
             
       <li>
         <code><a href="question_type.html">question_type</a></code><br />Count of Question Type</li>
             
       <li>
-        <code><a href="syllabication.html">syllable_sum</a></code>(combo_syllable_sum, polysyllable_sum, syllable_count)<br />Syllabication</li>
+        <code><a href="syllabication.html">syllable_sum</a></code><br />Syllabication</li>
+      <li>
+        <code><a href="syllabication.html">combo_syllable_sum</a></code><br />Syllabication</li>
             
       <li>
-        <code><a href="tdm.html">tdm</a></code>(dtm)<br />Convert/Generate Term Document Matrix or Document Term Matrix</li>
+        <code><a href="syllabication.html">polysyllable_sum</a></code><br />Syllabication</li>
             
       <li>
-        <code><a href="termco.html">termco</a></code>(term_match, termco_d, termco2mat)<br />Search For and Count Terms</li>
+        <code><a href="syllabication.html">syllable_count</a></code><br />Syllabication</li>
+            
+            
+      <li>
+        <code><a href="tdm.html">tdm</a></code> <code><a href="tdm.html">dtm</a></code><br />Convert/Generate Term Document Matrix or Document Term Matrix</li>
+            
+      <li>
+        <code><a href="termco.html">termco</a></code><br />Search For and Count Terms</li>
+      <li>
+        <code><a href="termco.html">term_match</a></code><br />Search For and Count Terms</li>
+            
+      <li>
+        <code><a href="termco.html">termco_d</a></code><br />Search For and Count Terms</li>
+            
+      <li>
+        <code><a href="termco.html">termco2mat</a></code><br />Search For and Count Terms</li>
+            
             
       <li>
         <code><a href="termco_c.html">termco_c</a></code><br />Combine Columns from a termco Object</li>
             
       <li>
-        <code><a href="Word_Frequency_Matrix.html">wfm</a></code>(wf_combine, wfdf, wfm_expanded)<br />Word Frequency Matrix</li>
+        <code><a href="Word_Frequency_Matrix.html">wfm</a></code> <code><a href="Word_Frequency_Matrix.html">wfdf</a></code><br />Word Frequency Matrix</li>
+      <li>
+        <code><a href="Word_Frequency_Matrix.html">wf_combine</a></code><br />Word Frequency Matrix</li>
             
       <li>
-        <code><a href="word_count.html">word_count</a></code>(char_table, character_count, character_table, wc)<br />Word Counts</li>
+        <code><a href="Word_Frequency_Matrix.html">wfm_expanded</a></code><br />Word Frequency Matrix</li>
+            
+            
+      <li>
+        <code><a href="word_count.html">word_count</a></code> <code><a href="word_count.html">wc</a></code><br />Word Counts</li>
+      <li>
+        <code><a href="word_count.html">character_count</a></code><br />Word Counts</li>
+            
+      <li>
+        <code><a href="word_count.html">character_table</a></code> <code><a href="word_count.html">char_table</a></code><br />Word Counts</li>
+            
             
       <li>
         <code><a href="word_stats.html">word_stats</a></code><br />Descriptive Word Statistics</li>
@@ -385,7 +441,7 @@ install_github(&quot;qdap&quot;, &quot;trinker&quot;)
     <ul class="index">
         
       <li>
-        <code><a href="Readability.html">automated_readability_index</a></code>(coleman_liau, flesch_kincaid, fry, linsear_write, SMOG)<br />Readability Measures</li>
+        <code><a href="Readability.html">automated_readability_index</a></code> <code><a href="Readability.html">coleman_liau</a></code> <code><a href="Readability.html">flesch_kincaid</a></code> <code><a href="Readability.html">fry</a></code> <code><a href="Readability.html">linsear_write</a></code> <code><a href="Readability.html">SMOG</a></code><br />Readability Measures</li>
             
       <li>
         <code><a href="dissimilarity.html">dissimilarity</a></code><br />Dissimilarity Statistics</li>
@@ -400,7 +456,7 @@ install_github(&quot;qdap&quot;, &quot;trinker&quot;)
         <code><a href="kullback_leibler.html">kullback_leibler</a></code><br />Kullback Leibler Statistic</li>
             
       <li>
-        <code><a href="polarity.html">polarity</a></code>(polarity_frame)<br />Polarity Score (Sentiment Analysis)</li>
+        <code><a href="polarity.html">polarity</a></code> <code><a href="polarity.html">polarity_frame</a></code><br />Polarity Score (Sentiment Analysis)</li>
     
     </ul>
     <h3>qdap Tools</h3>
@@ -416,13 +472,13 @@ install_github(&quot;qdap&quot;, &quot;trinker&quot;)
         <code><a href="duplicates.html">duplicates</a></code><br />Find Duplicated Words in a Text String</li>
             
       <li>
-        <code><a href="hash.html">hash</a></code>(%ha%, hash_look)<br />Hash/Dictionary Lookup</li>
+        <code><a href="hash.html">hash</a></code> <code><a href="hash.html">%ha%</a></code> <code><a href="hash.html">hash_look</a></code><br />Hash/Dictionary Lookup</li>
             
       <li>
         <code><a href="hms2sec.html">hms2sec</a></code><br />Convert h:m:s to Seconds</li>
             
       <li>
-        <code><a href="lookup.html">lookup</a></code>(%l%)<br />Hash Table/Dictionary Lookup</li>
+        <code><a href="lookup.html">lookup</a></code> <code><a href="lookup.html">%l%</a></code><br />Hash Table/Dictionary Lookup</li>
             
       <li>
         <code><a href="qcv.html">qcv</a></code><br />Quick Character Vector</li>
@@ -514,7 +570,10 @@ install_github(&quot;qdap&quot;, &quot;trinker&quot;)
         <code><a href="qheat.html">qheat</a></code><br />Quick Heatmap</li>
             
       <li>
-        <code><a href="rank_freq_plot.html">rank_freq_mplot</a></code>(rank_freq_plot)<br />Rank Frequency Plot</li>
+        <code><a href="rank_freq_plot.html">rank_freq_mplot</a></code><br />Rank Frequency Plot</li>
+      <li>
+        <code><a href="rank_freq_plot.html">rank_freq_plot</a></code><br />Rank Frequency Plot</li>
+            
             
       <li>
         <code><a href="tot_plot.html">tot_plot</a></code><br />Visualize Word Length by Turn of Talk</li>
@@ -645,48 +704,6 @@ install_github(&quot;qdap&quot;, &quot;trinker&quot;)
             
       <li>
         <code><a href="rajSPLIT.html">rajSPLIT</a></code><br />Romeo and Juliet (Complete & Split)</li>
-    
-    </ul>
-    <h3>Other</h3>
-    
-    
-    <ul class="index">
-        
-      <li>
-        <code><a href="cm_combine.dummy.html">cm_combine.dummy</a></code><br />Find Co-occurrence Between Dummy Codes</li>
-            
-      <li>
-        <code><a href="cm_df.fill.html">cm_df.fill</a></code><br />Range Coding</li>
-            
-      <li>
-        <code><a href="common.list.html">common.list</a></code><br />list Method for common</li>
-            
-      <li>
-        <code><a href="plot.rmgantt.html">plot.rmgantt</a></code><br />Plots a rmgantt object</li>
-            
-      <li>
-        <code><a href="plot.sums_gantt.html">plot.sums_gantt</a></code><br />Plots a sums_gantt object</li>
-            
-      <li>
-        <code><a href="print.all_words.html">print.all_words</a></code><br />Prints an all_words Object</li>
-            
-      <li>
-        <code><a href="print.boolean_qdap.html">print.boolean_qdap</a></code><br />Prints a boolean_qdap object</li>
-            
-      <li>
-        <code><a href="print.qdap_context.html">print.qdap_context</a></code><br />Prints a qdap_context object</li>
-            
-      <li>
-        <code><a href="print.qdapProj.html">print.qdapProj</a></code><br />Prints a qdapProj Object</li>
-            
-      <li>
-        <code><a href="print.sums_gantt.html">print.sums_gantt</a></code><br />Prints a sums_gantt object</li>
-            
-      <li>
-        <code><a href="print.wfm.html">print.wfm</a></code><br />Prints an wfm Object</li>
-            
-      <li>
-        <code><a href="qdap.html">qdap</a></code>(package-qdap, qdap-package)<br />qdap: Quantitative Discourse Analysis Package</li>
     
     </ul>
   </div>
