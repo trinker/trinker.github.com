@@ -40,7 +40,9 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>paste2(multi.columns, sep = ".", handle.na = TRUE, trim = TRUE)</pre>
+    <pre>paste2(multi.columns, sep = ".", handle.na = TRUE, trim = TRUE)
+
+colpaste2df(mat, combined.columns, sep = ".", name.sep = "&", keep.orig = TRUE, ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -48,26 +50,52 @@
       <dd>The multiple columns or a list of
   vectors to paste together.</dd>
       <dt>sep</dt>
-      <dd>A character string to separate the terms.</dd>
+      <dd>The character to be used in <code>paste2</code> to
+  paste the columns.</dd>
       <dt>handle.na</dt>
       <dd>logical.  If <code>TRUE</code> returns
   <code>NA</code> if any column/vector contains a missing value.</dd>
       <dt>trim</dt>
       <dd>logical.  If <code>TRUE</code> leading/trailing
   white space is removed.</dd>
+      <dt>mat</dt>
+      <dd>A matrix or dataframe.</dd>
+      <dt>combined.columns</dt>
+      <dd>A list of named vectors of the
+  colnames/indexes of the numeric columns to be pasted.  If
+  a vector is unnamed a name will be assigned.</dd>
+      <dt>name.sep</dt>
+      <dd>The character to be used to paste the
+  column names.</dd>
+      <dt>keep.orig</dt>
+      <dd>logical.  If <code>TRUE</code> the original
+  columns (i.e., <code>combined.columns</code>) will be retained
+  as well.</dd>
+      <dt>...</dt>
+      <dd>Other arguments passed to
+  <code>paste2</code>.</dd>
     </dl>
     
     <div class="Value">
       <h2>Value</h2>
       
-      <p>Returns a vector with row-wise elements pasted together.</p>
+      <p><code>paste2</code> - Returns a vector with row-wise elements
+  pasted together.</p>
+  
+      <p><code>colpaste2df</code> - Returns a dataframe with pasted
+  columns.</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Paste unspecified columns or a list of vectors together.</p>
+      <p><code>paste2</code> - Paste unspecified columns or a list of
+  vectors together.</p>
+  
+      <p><code>colpaste2df</code> - Wrapper for
+  <code>paste2</code> that returns a dataframe with
+  columns pasted together.</p>
   
     </div>
 
@@ -84,7 +112,7 @@
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>paste2</li>
+      <li>colpaste2df</li><li>paste2</li>
     </ul>
     <ul>
       <li>paste</li>
