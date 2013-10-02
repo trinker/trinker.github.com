@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>bag.o.words. qdap 1.0.0</title>
+<title>kullback_leibler. qdap 1.0.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -35,61 +35,70 @@
         
       </header>
       
-      <h1>Bag of Words</h1>
+      <h1>Kullback Leibler Statistic</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>bag.o.words(text.var, apostrophe.remove = FALSE, ...)
-
-breaker(text.var)
-
-word.split(text.var)</pre>
+    <pre>kullback_leibler(x, y = NULL)</pre>
     
     <h2>Arguments</h2>
     <dl>
-      <dt>text.var</dt>
-      <dd>The text variable.</dd>
-      <dt>apostrophe.remove</dt>
-      <dd>logical.  If <code>TRUE</code> removes
-  apostrophe's from the output.</dd>
-      <dt>...</dt>
-      <dd>further arguments passed to strip
-  function.</dd>
+      <dt>x</dt>
+      <dd>A numeric vector, matrix or data frame.</dd>
+      <dt>y</dt>
+      <dd>A second numeric vector if x is also a vector.
+  Default is <code>NULL</code>.</dd>
     </dl>
     
     <div class="Value">
       <h2>Value</h2>
       
-      <p>Returns a vector of striped words.</p>
-  
-      <p><code>breaker</code> - returns a vector of striped words and
-  qdap recognized endmarks (i.e., <code>".", "!", "?", "*",
-  "-"</code>).</p>
+      <p>Returns a matrix of the Kullback Leibler measure between
+  each vector of probabilities.</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p><code>bag.o.words</code> - Reduces a text column to a bag of
-  words.</p>
+      <p>A proximity measure between two probability distributions
+  applied to speech.</p>
   
-      <p><code>breaker</code> - Reduces a text column to a bag of words
-  and qdap recognized end marks.</p>
+    </div>
+
+    <div class="Details">
+      <h2>Details</h2>
+      
+      <p>Uses Kullback & Leibler's (1951) formula:
+  <pre class = 'eq'>D_{KL}(P||Q)=\sum_i{ln\left ( \frac{P_{i}}{Q_{i}}
+  \right )}P_{i}</code></p>
   
-      <p><code>word.split</code> - Reduces a text column to a list of
-  vectors of bag of words and qdap recognized end marks
-  (i.e., <code>".", "!", "?", "*", "-"</code>).</p>
+    </div>
+
+    <div class="Note">
+      <h2>Note</h2>
+      
+      <p>The <code>kullback_leibler</code> function generally receives
+  the output of either <code>wfm</code> or <code>wfdf</code> functions.</p>
+  
+    </div>
+
+    <div class="References">
+      <h2>References</h2>
+      
+      <p>Kullback, S., & Leibler, R.A. (1951). On Information and
+  sufficiency. Annals of Mathematical Statistics 22 (1):
+  79-86. doi:10.1214/aoms/1177729694</p>
   
     </div>
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>bag.o.words</li><li>breaker</li><li>word.split</li>
+      <li>kullback_leibler</li>
     </ul>
     <ul>
-      <li>bag-of-words</li>
+      <li>Kullback-Leibler</li>
     </ul> -->
       
         

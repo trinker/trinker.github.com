@@ -40,10 +40,13 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>trans_context(text.var, grouping.var, inds, n.before = 3, tot = TRUE, n.after = n.before)</pre>
+    <pre>trans_context(text.var, grouping.var, inds, n.before = 3, tot = TRUE, n.after = n.before, 
+  ord.inds = TRUE)</pre>
     
     <h2>Arguments</h2>
     <dl>
+      <dt>text.var</dt>
+      <dd>The text variable.</dd>
       <dt>grouping.var</dt>
       <dd>The grouping variables.  Also takes a
   single grouping variable or a list of 1 or more grouping
@@ -61,6 +64,9 @@
       <dt>n.after</dt>
       <dd>The number of rows after the indexed
   occurence.</dd>
+      <dt>ord.inds</dt>
+      <dd>logical.  If <code>TRUE</code> inds is ordered
+  least to greatest.</dd>
     </dl>
     
     <div class="Value">

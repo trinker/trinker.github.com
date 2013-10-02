@@ -43,7 +43,8 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>cm_df.transcript(text.var, grouping.var, file = NULL, indent = 4, width = 70, ...)</pre>
+    <pre>cm_df.transcript(text.var, grouping.var, file = NULL, indent = 4, width = 70, space = 2, 
+  ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -63,6 +64,11 @@
       <dd>Width to output the file (defaults to 70;
   this is generally a good width and indent for a .docx
   file).</dd>
+      <dt>space</dt>
+      <dd>An integer value denoting the vertical
+  spacing between the <code>grouping.var</code> and the numbered
+  text (alow more spce for more coding room) in the output
+  of a text file.</dd>
       <dt>...</dt>
       <dd>Other arguments passed to strip.</dd>
     </dl>

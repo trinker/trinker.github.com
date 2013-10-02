@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>print.kullback.leibler. qdap 1.0.0</title>
+<title>bag_o_words. qdap 1.0.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -35,36 +35,61 @@
         
       </header>
       
-      <h1>Prints a kullback.leibler Object.</h1>
+      <h1>Bag of Words</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>print(x, digits = 3, ...)</pre>
+    <pre>bag_o_words(text.var, apostrophe.remove = FALSE, ...)
+
+breaker(text.var)
+
+word_split(text.var)</pre>
     
     <h2>Arguments</h2>
     <dl>
-      <dt>x</dt>
-      <dd>The kullback.leibler object</dd>
-      <dt>digits</dt>
-      <dd>Number of decimal places to print.</dd>
+      <dt>text.var</dt>
+      <dd>The text variable.</dd>
+      <dt>apostrophe.remove</dt>
+      <dd>logical.  If <code>TRUE</code> removes
+  apostrophe's from the output.</dd>
       <dt>...</dt>
-      <dd>ignored</dd>
+      <dd>further arguments passed to strip
+  function.</dd>
     </dl>
     
+    <div class="Value">
+      <h2>Value</h2>
+      
+      <p>Returns a vector of striped words.</p>
+  
+      <p><code>breaker</code> - returns a vector of striped words and
+  qdap recognized endmarks (i.e., <code>".", "!", "?", "*",
+  "-"</code>).</p>
+  
+    </div>
+
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Prints a kullback.leibler object.</p>
+      <p><code>bag_o_words</code> - Reduces a text column to a bag of
+  words.</p>
+  
+      <p><code>breaker</code> - Reduces a text column to a bag of words
+  and qdap recognized end marks.</p>
+  
+      <p><code>word_split</code> - Reduces a text column to a list of
+  vectors of bag of words and qdap recognized end marks
+  (i.e., <code>".", "!", "?", "*", "-"</code>).</p>
   
     </div>
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>print.kullback.leibler</li>
+      <li>bag_o_words</li><li>breaker</li><li>word_split</li>
     </ul>
     <ul>
-      
+      <li>bag-of-words</li>
     </ul> -->
       
         

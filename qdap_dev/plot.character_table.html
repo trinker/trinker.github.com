@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>distTab. qdap 1.0.0</title>
+<title>plot.character_table. qdap 1.0.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -35,59 +35,55 @@
         
       </header>
       
-      <h1>SPSS Style Frequency Tables</h1>
+      <h1>Plots a character_table Object</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>distTab(dataframe, breaks = NULL, digits = 2, ...)</pre>
+    <pre>plot(x, label = FALSE, lab.digits = 1, percent = NULL, zero.replace = NULL, ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
-      <dt>dataframe</dt>
-      <dd>A vector or data.frame object.</dd>
-      <dt>breaks</dt>
-      <dd>Either a numeric vector of two or more cut
-  points or a single number (greater than or equal to 2)
-  giving the number of intervals into which x is to be
-  cut.</dd>
-      <dt>digits</dt>
-      <dd>Integer indicating the number of decimal
-  places (round) or significant digits (signif.) to be
-  used. Negative values are allowed</dd>
+      <dt>x</dt>
+      <dd>The character_table object</dd>
+      <dt>label</dt>
+      <dd>logical.  If <code>TRUE</code> the cells of the
+  heat map plot will be labeled with count and proportional
+  values.</dd>
+      <dt>lab.digits</dt>
+      <dd>Integer values specifying the number of
+  digits to be printed if <code>label</code> is <code>TRUE</code>.</dd>
+      <dt>percent</dt>
+      <dd>logical.  If <code>TRUE</code> output given as
+  percent.  If <code>FALSE</code> the output is proportion.  If
+  <code>NULL</code> uses the value from
+  <code>question_type</code>.  Only used if
+  <code>label</code> is <code>TRUE</code>.</dd>
+      <dt>zero.replace</dt>
+      <dd>Value to replace 0 values with.  If
+  <code>NULL</code> uses the value from
+  <code>question_type</code>.  Only used if
+  <code>label</code> is <code>TRUE</code>.</dd>
       <dt>...</dt>
-      <dd>Other variables passed to cut.</dd>
+      <dd>Other arguments passed to
+  <code>qheat</code></dd>
     </dl>
     
-    <div class="Value">
-      <h2>Value</h2>
-      
-      <p>Returns a list of data frames (or singular data frame for
-  a vector) of frequencies, cumulative frequencies,
-  percentages and cumulative percentages for each interval.</p>
-  
-    </div>
-
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Generates a distribution table for vectors, matrices and
-  dataframes.</p>
+      <p>Plots a character_table object.</p>
   
     </div>
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>distTab</li>
+      <li>plot.character_table</li>
     </ul>
     <ul>
-      <li>distribution,</li><li>frequency</li>
+      
     </ul> -->
       
-    <h2>See also</h2>
-    
-  <code><a href='http://www.inside-r.org/r-doc/base/cut'>cut</a></code>
-
         
   </div>
 </div>

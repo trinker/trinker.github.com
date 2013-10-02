@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>word.count. qdap 1.0.0</title>
+<title>word_count. qdap 1.0.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -40,17 +40,17 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>word.count(text.var, byrow = TRUE, missing = NA, digit.remove = TRUE, names = FALSE)
+    <pre>word_count(text.var, byrow = TRUE, missing = NA, digit.remove = TRUE, names = FALSE)
 
 wc(text.var, byrow = TRUE, missing = NA, digit.remove = TRUE, names = FALSE)
 
-character.count(text.var, byrow = TRUE, missing = NA, apostrophe.remove = TRUE, digit.remove = TRUE, 
+character_count(text.var, byrow = TRUE, missing = NA, apostrophe.remove = TRUE, digit.remove = TRUE, 
   count.space = FALSE)
 
-character.table(text.var, grouping.var, percent = TRUE, prop.by.row = TRUE, zero.replace = 0, 
+character_table(text.var, grouping.var, percent = TRUE, prop.by.row = TRUE, zero.replace = 0, 
       digits = 2, ...)
 
-char.table(text.var, grouping.var, percent = TRUE, prop.by.row = TRUE, zero.replace = 0, 
+char_table(text.var, grouping.var, percent = TRUE, prop.by.row = TRUE, zero.replace = 0, 
       digits = 2, ...)</pre>
     
     <h2>Arguments</h2>
@@ -100,12 +100,12 @@ char.table(text.var, grouping.var, percent = TRUE, prop.by.row = TRUE, zero.repl
     <div class="Value">
       <h2>Value</h2>
       
-      <p><code>word.count</code> - returns a word count by row or total.</p>
+      <p><code>word_count</code> - returns a word count by row or total.</p>
   
-      <p><code>character.count</code> - returns a character count by row
+      <p><code>character_count</code> - returns a character count by row
   or total.</p>
   
-      <p><code>character.table</code> - returns a list: dataframe of
+      <p><code>character_table</code> - returns a list: dataframe of
   character counts by grouping variable.
   rawDataframe of the frequency of characters by
   grouping variable. propDataframe of the
@@ -121,12 +121,12 @@ char.table(text.var, grouping.var, percent = TRUE, prop.by.row = TRUE, zero.repl
     <div class="Description">
       <h2>Description</h2>
       
-      <p><code>word.count</code> - Transcript apply word counts.</p>
+      <p><code>word_count</code> - Transcript apply word counts.</p>
   
-      <p><code>character.count</code> - Transcript apply character
+      <p><code>character_count</code> - Transcript apply character
   counts.</p>
   
-      <p><code>character.table</code> - Computes a table of character
+      <p><code>character_table</code> - Computes a table of character
   counts by grouping . variable(s).</p>
   
     </div>
@@ -134,13 +134,13 @@ char.table(text.var, grouping.var, percent = TRUE, prop.by.row = TRUE, zero.repl
     <div class="Note">
       <h2>Note</h2>
       
-      <p>wc is a convenient short hand for word.count.</p>
+      <p>wc is a convenient short hand for word_count.</p>
   
     </div>
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>char.table</li><li>character.count</li><li>character.table</li><li>wc</li><li>word.count</li>
+      <li>char_table</li><li>character_count</li><li>character_table</li><li>wc</li><li>word_count</li>
     </ul>
     <ul>
       <li>character-count</li><li>word-count,</li>
@@ -148,7 +148,7 @@ char.table(text.var, grouping.var, percent = TRUE, prop.by.row = TRUE, zero.repl
       
     <h2>See also</h2>
     
-  <code>syllable.count</code>
+  <code>syllable_count</code>
 
   <code>prop</code>
 

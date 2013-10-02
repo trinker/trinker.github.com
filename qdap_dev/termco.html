@@ -44,11 +44,11 @@
   elim.old = TRUE, percent = TRUE, digits = 2, apostrophe.remove = FALSE, char.keep = NULL, 
       digit.remove = NULL, zero.replace = 0, ...)
 
-termco.d(text.var, grouping.var = NULL, match.string, short.term = FALSE, ignore.case = TRUE, 
+termco_d(text.var, grouping.var = NULL, match.string, short.term = FALSE, ignore.case = TRUE, 
       zero.replace = 0, percent = TRUE, digits = 2, apostrophe.remove = FALSE, char.keep = NULL, 
       digit.remove = TRUE, ...)
 
-term.match(text.var, terms, return.list = TRUE, apostrophe.remove = FALSE)
+term_match(text.var, terms, return.list = TRUE, apostrophe.remove = FALSE)
 
 termco2mat(dataframe, drop.wc = TRUE, short.term = TRUE, rm.zerocol = FALSE, no.quote = TRUE, 
       transform = TRUE, trim.terms = TRUE)</pre>
@@ -104,9 +104,9 @@ termco2mat(dataframe, drop.wc = TRUE, short.term = TRUE, rm.zerocol = FALSE, no.
   <code>strip</code>.</dd>
       <dt>match.string</dt>
       <dd>A vector of terms to search for.
-  When using inside of <code>term.match</code> the term(s) must
+  When using inside of <code>term_match</code> the term(s) must
   be words or partial words but do not have to be when
-  using <code>termco.d</code> (i.e., they can be
+  using <code>termco_d</code> (i.e., they can be
   phrases, symbols etc.).</dd>
       <dt>terms</dt>
       <dd>The terms to search for in the
@@ -118,7 +118,7 @@ termco2mat(dataframe, drop.wc = TRUE, short.term = TRUE, rm.zerocol = FALSE, no.
   output for multiple terms as a list by term rather than a
   vector.</dd>
       <dt>dataframe</dt>
-      <dd>A termco (or termco.d) dataframe or
+      <dd>A termco (or termco_d) dataframe or
   object.</dd>
       <dt>drop.wc</dt>
       <dd>logical.  If <code>TRUE</code> the word count
@@ -141,7 +141,7 @@ termco2mat(dataframe, drop.wc = TRUE, short.term = TRUE, rm.zerocol = FALSE, no.
     <div class="Value">
       <h2>Value</h2>
       
-      <p><code>termco</code> & <code>termco.d</code> - both return a list, of
+      <p><code>termco</code> & <code>termco_d</code> - both return a list, of
   class "termco", of data frames and information regarding
   word counts: rawraw word counts by grouping
   variable propproportional word counts by
@@ -153,7 +153,7 @@ termco2mat(dataframe, drop.wc = TRUE, short.term = TRUE, rm.zerocol = FALSE, no.
   digitsinteger value of number of digits to
   display; mostly internal use</p>
   
-      <p><code>term.match</code> - returns a list or vector of possible
+      <p><code>term_match</code> - returns a list or vector of possible
   words that match term(s).</p>
   
       <p><code>termco2mat</code> - returns a matrix of term counts.</p>
@@ -166,14 +166,14 @@ termco2mat(dataframe, drop.wc = TRUE, short.term = TRUE, rm.zerocol = FALSE, no.
       <p><code>termco</code> - Search a transcript by any number of
   grouping variables for categories (themes) of grouped
   root terms.  While there are other termco functions in
-  the termco family (e.g., <code>termco.d</code>)
+  the termco family (e.g., <code>termco_d</code>)
   <code>termco</code> is a more powerful and flexible wrapper
   intended for general use.</p>
   
-      <p><code>termco.d</code> - Search a transcript by any number of
+      <p><code>termco_d</code> - Search a transcript by any number of
   grouping variables for root terms.</p>
   
-      <p><code>term.match</code> - Search a transcript for words that
+      <p><code>term_match</code> - Search a transcript for words that
   exactly match term(s).</p>
   
       <p><code>termco2mat</code> - Convert a termco dataframe to a
@@ -210,7 +210,7 @@ termco2mat(dataframe, drop.wc = TRUE, short.term = TRUE, rm.zerocol = FALSE, no.
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>term.match</li><li>termco</li><li>termco.d</li><li>termco2mat</li>
+      <li>term_match</li><li>termco</li><li>termco_d</li><li>termco2mat</li>
     </ul>
     <ul>
       <li>word-search</li>
@@ -218,7 +218,7 @@ termco2mat(dataframe, drop.wc = TRUE, short.term = TRUE, rm.zerocol = FALSE, no.
       
     <h2>See also</h2>
     
-  <code>termco.c</code>
+  <code>termco_c</code>
 
         
   </div>

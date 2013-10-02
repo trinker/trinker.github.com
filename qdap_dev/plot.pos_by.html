@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>outlier.labeler. qdap 1.0.0</title>
+<title>plot.pos_by. qdap 1.0.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -35,53 +35,52 @@
         
       </header>
       
-      <h1>Locate Outliers in Numeric String</h1>
+      <h1>Plots a pos_by Object</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>outlier.labeler(x, standardize = TRUE, ...)</pre>
+    <pre>plot(x, label = FALSE, lab.digits = 1, percent = NULL, zero.replace = NULL, ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
       <dt>x</dt>
-      <dd>A numeric vector.</dd>
-      <dt>standardize</dt>
-      <dd>logical.  If <code>TRUE</code> scales the
-  vector first.</dd>
+      <dd>The pos_by object</dd>
+      <dt>label</dt>
+      <dd>logical.  If TRUE the cells of the heat map
+  plot will be labeled with count and proportional values.</dd>
+      <dt>lab.digits</dt>
+      <dd>Integer values specifying the number of
+  digits to be printed if <code>label</code> is TRUE.</dd>
+      <dt>percent</dt>
+      <dd>logical.  If TRUE output given as percent.
+  If FALSE the output is proportion.  If NULL uses the
+  value from <code>question_type</code>.  Only used
+  if <code>label</code> is TRUE.</dd>
+      <dt>zero.replace</dt>
+      <dd>Value to replace 0 values with.  If
+  NULL uses the value from
+  <code>question_type</code>.  Only used if
+  <code>label</code> is TRUE.</dd>
       <dt>...</dt>
-      <dd>Other arguments passed to
-  <code><a href='http://www.inside-r.org/r-doc/base/scale'>scale</a></code>.</dd>
+      <dd>Other arguments passed to qheat.</dd>
     </dl>
     
-    <div class="Value">
-      <h2>Value</h2>
-      
-      <p>Returns a matrix (one column) of possible outliers coded
-  as <code>"3sd"</code>, <code>"2sd"</code> and <code>"1.5sd"</code>,
-  corresponding to >= to 3, 2, or 1.5 standard deviations.</p>
-  
-    </div>
-
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Locate and label possible outliers in a string.</p>
+      <p>Plots a pos_by object.</p>
   
     </div>
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>outlier.labeler</li>
+      <li>plot.pos_by</li>
     </ul>
     <ul>
-      <li>scale,</li><li>standardize</li>
+      
     </ul> -->
       
-    <h2>See also</h2>
-    
-  <code><a href='http://www.inside-r.org/r-doc/base/scale'>scale</a></code>
-
         
   </div>
 </div>

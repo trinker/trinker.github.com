@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>incomplete.replace. qdap 1.0.0</title>
+<title>print.kullback_leibler. qdap 1.0.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -35,48 +35,36 @@
         
       </header>
       
-      <h1>Denote Incomplete End Marks With "|"</h1>
+      <h1>Prints a kullback_leibler Object.</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>incomplete.replace(text.var, scan.mode = FALSE)
-
-incomp(text.var, scan.mode = FALSE)</pre>
+    <pre>print(x, digits = 3, ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
-      <dt>text.var</dt>
-      <dd>The text variable.</dd>
-      <dt>scan.mode</dt>
-      <dd>logical.  If <code>TRUE</code> only scans and
-  reports incomplete sentences.</dd>
+      <dt>x</dt>
+      <dd>The kullback_leibler object</dd>
+      <dt>digits</dt>
+      <dd>Number of decimal places to print.</dd>
+      <dt>...</dt>
+      <dd>ignored</dd>
     </dl>
     
-    <div class="Value">
-      <h2>Value</h2>
-      
-      <p>Returns a text variable (character sting) with incomplete
-  sentence marks (.., ..., .?, ..?, en & em dash etc.)
-  replaced with "|".  If scan mode is <code>TRUE</code> returns a
-  data frame with incomplete sentence location.</p>
-  
-    </div>
-
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Replaces incomplete sentence end marks (.., ..., .?, ..?,
-  en \& em dash etc.) with <code>"|"</code>.</p>
+      <p>Prints a kullback_leibler object.</p>
   
     </div>
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>incomp</li><li>incomplete.replace</li>
+      <li>print.kullback_leibler</li>
     </ul>
     <ul>
-      <li>incomplete-sentence</li>
+      
     </ul> -->
       
         

@@ -43,10 +43,10 @@
     <pre>pos(text.var, parallel = FALSE, cores = detectCores()/2, progress.bar = TRUE, na.omit = FALSE, 
   digits = 1, percent = TRUE, zero.replace = 0, gc.rate = 10)
 
-pos.by(text.var, grouping.var = NULL, digits = 1, percent = TRUE, zero.replace = 0, 
+pos_by(text.var, grouping.var = NULL, digits = 1, percent = TRUE, zero.replace = 0, 
       ...)
 
-pos.tags(type = "pretty")</pre>
+pos_tags(type = "pretty")</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -114,7 +114,7 @@ pos.tags(type = "pretty")</pre>
   purposes. zero.replaceThe value of zero.replace
   used for plotting purposes.</p>
   
-      <p>pos.by returns a list of 6: textThe original
+      <p>pos_by returns a list of 6: textThe original
   text POStaggedThe original words replaced with
   parts of speech in context. POSpropDataframe of
   the proportion of parts of speech by row.
@@ -138,11 +138,11 @@ pos.tags(type = "pretty")</pre>
       <p><code>pos</code> - Apply part of speech tagger to
   transcript(s).</p>
   
-      <p><code>pos.by</code> - Apply part of speech tagger to
+      <p><code>pos_by</code> - Apply part of speech tagger to
   transcript(s) by zero or more grouping variable(s).</p>
   
-      <p><code>pos.tags</code> - Useful for interpreting the parts of
-  speech tags created by pos and pos.by.</p>
+      <p><code>pos_tags</code> - Useful for interpreting the parts of
+  speech tags created by pos and pos_by.</p>
   
     </div>
 
@@ -155,7 +155,7 @@ pos.tags(type = "pretty")</pre>
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>pos</li><li>pos.by</li><li>pos.tags</li>
+      <li>pos</li><li>pos_by</li><li>pos_tags</li>
     </ul>
     <ul>
       <li>parts-of-speech</li>

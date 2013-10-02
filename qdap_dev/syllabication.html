@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>syllable.sum. qdap 1.0.0</title>
+<title>syllable_sum. qdap 1.0.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -40,13 +40,13 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>syllable.sum(text.var, parallel = FALSE)
+    <pre>syllable_sum(text.var, parallel = FALSE)
 
-syllable.count(text, remove.bracketed = TRUE, algorithm.report = FALSE)
+syllable_count(text, remove.bracketed = TRUE, algorithm.report = FALSE)
 
-polysyllable.sum(text.var, parallel = FALSE)
+polysyllable_sum(text.var, parallel = FALSE)
 
-combo_syllable.sum(text.var, parallel = FALSE)</pre>
+combo_syllable_sum(text.var, parallel = FALSE)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -71,17 +71,17 @@ combo_syllable.sum(text.var, parallel = FALSE)</pre>
     <div class="Value">
       <h2>Value</h2>
       
-      <p><code>syllable.sum</code> - returns a vector of syllable counts
+      <p><code>syllable_sum</code> - returns a vector of syllable counts
   per row.</p>
   
-      <p><code>syllable.count</code> - returns a dataframe of syllable
+      <p><code>syllable_count</code> - returns a dataframe of syllable
   counts and algorithm/dictionary uses and, optionally, a
   report of words not found in the dictionary.</p>
   
-      <p><code>polysyllable.sum</code> - returns a vector of
+      <p><code>polysyllable_sum</code> - returns a vector of
   polysyllable counts per row.</p>
   
-      <p><code>combo_syllable.sum</code> - returns a dataframe of
+      <p><code>combo_syllable_sum</code> - returns a dataframe of
   syllable and polysyllable counts per row.</p>
   
     </div>
@@ -89,16 +89,16 @@ combo_syllable.sum(text.var, parallel = FALSE)</pre>
     <div class="Description">
       <h2>Description</h2>
       
-      <p><code>syllable.sum</code> - Count the number of syllables per
+      <p><code>syllable_sum</code> - Count the number of syllables per
   row of text.</p>
   
-      <p><code>syllable.count</code> - Count the number of syllables in
+      <p><code>syllable_count</code> - Count the number of syllables in
   a single text string.</p>
   
-      <p><code>polysyllable.sum</code> - Count the number of
+      <p><code>polysyllable_sum</code> - Count the number of
   polysyllables per row of text.</p>
   
-      <p><code>combo_syllable.sum</code> - Count the number of both
+      <p><code>combo_syllable_sum</code> - Count the number of both
   syllables and polysyllables per row of text.</p>
   
     </div>
@@ -107,7 +107,7 @@ combo_syllable.sum(text.var, parallel = FALSE)</pre>
       <h2>Details</h2>
       
       <p>The worker function of all the syllable functions is
-  <code>syllable.count</code>, though it is not
+  <code>syllable_count</code>, though it is not
   intended for direct use on a transcript.  This function
   relies on a combined dictionary lookup (based on the
   Nettalk Corpus (Sejnowski & Rosenberg, 1987)) and backup
@@ -126,7 +126,7 @@ combo_syllable.sum(text.var, parallel = FALSE)</pre>
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>combo_syllable.sum</li><li>polysyllable.sum</li><li>syllable.count</li><li>syllable.sum</li>
+      <li>combo_syllable_sum</li><li>polysyllable_sum</li><li>syllable_count</li><li>syllable_sum</li>
     </ul>
     <ul>
       <li>polysyllable</li><li>syllabication,</li><li>syllable,</li>
