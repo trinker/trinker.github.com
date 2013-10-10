@@ -48,7 +48,7 @@ wfdf(text.var, grouping.var = NULL, stopwords = NULL, margins = FALSE, output = 
 
 wfm_expanded(text.var, grouping.var = NULL, ...)
 
-wf_combine(wf.obj, word.lists, matrix = FALSE)</pre>
+wfm_combine(wf.obj, word.lists, matrix = TRUE)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -80,7 +80,7 @@ wf_combine(wf.obj, word.lists, matrix = FALSE)</pre>
   grouping.var and word variable totals.</dd>
       <dt>word.lists</dt>
       <dd>A list of character vectors of words to
-  pass to <code>wf_combine</code></dd>
+  pass to <code>wfm_combine</code></dd>
       <dt>matrix</dt>
       <dd>logical.  If <code>TRUE</code> returns the output
   as a <code>wfm</code> rather than a
@@ -103,7 +103,7 @@ wf_combine(wf.obj, word.lists, matrix = FALSE)</pre>
   to represent the maximum usages of the word and cells are
   dummy coded to indicate that number of uses.</p>
   
-      <p><code>wf_combine</code> - returns a word frequency matrix
+      <p><code>wfm_combine</code> - returns a word frequency matrix
   (<code>wfm</code>) or dataframe (<code>wfdf</code>) with counts for
   the combined word.lists merged and remaining terms
   (<code>else</code>).</p>
@@ -122,8 +122,8 @@ wf_combine(wf.obj, word.lists, matrix = FALSE)</pre>
       <p><code>wfm_expanded</code> - Expand a word frequency matrix to
   have multiple rows for each word.</p>
   
-      <p><code>wf_combine</code> - Combines words (rows) of a word
-  frequency dataframe (<code>wfdf</code>) together.</p>
+      <p><code>wfm_combine</code> - Combines words (rows) of a word
+  frequency matrix (<code>wfdf</code>) together.</p>
   
     </div>
 
@@ -139,7 +139,7 @@ wf_combine(wf.obj, word.lists, matrix = FALSE)</pre>
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>wf_combine</li><li>wfdf</li><li>wfm</li><li>wfm_expanded</li>
+      <li>wfdf</li><li>wfm</li><li>wfm_combine</li><li>wfm_expanded</li>
     </ul>
     <ul>
       <li>word-frequency-matrix</li>

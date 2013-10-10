@@ -68,7 +68,11 @@ genXtract(text.var, left, right, with = FALSE, merge = TRUE)</pre>
   given as the names of the counts.</dd>
       <dt>fix.space</dt>
       <dd>logical.  If <code>TRUE</code> extra spaces
-  left behind from an extraction will be eliminated.</dd>
+  left behind from an extraction will be eliminated.
+  Additionally, non-space (e.g., <strong>"text(nospace
+  between text and parenthesis)"</strong>) is repalced with a
+  single space (e.g., <strong>"text (space between text and
+  parenthesis)"</strong>).</dd>
       <dt>scrub</dt>
       <dd>logical.  If <code>TRUE</code>
   <code>scrubber</code> will clean the text.</dd>

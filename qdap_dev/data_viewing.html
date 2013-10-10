@@ -46,7 +46,9 @@ truncdf(dataframe, end = 10, begin = 1)
 
 ltruncdf(dat.list, n = 6, width = 10, ...)
 
-qview(dataframe, ...)</pre>
+qview(dataframe, ...)
+
+lview(x, print = TRUE)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -69,6 +71,12 @@ qview(dataframe, ...)</pre>
   (<code>htruncdf</code>).</dd>
       <dt>dat.list</dt>
       <dd>A list of data.frame objects.</dd>
+      <dt>x</dt>
+      <dd>A class qdap object that is a list which prints
+  as a dataframe.</dd>
+      <dt>print</dt>
+      <dd>logical.  If <code>TRUE</code> prints to the
+  console.</dd>
     </dl>
     
     <div class="Value">
@@ -84,6 +92,9 @@ qview(dataframe, ...)</pre>
   
       <p><code>qview</code> - returns a dataframe head with summary
   statistics.</p>
+  
+      <p><code>qview</code> - prints a list of the qdap object and
+  invisibly returns the unclassed object.</p>
   
     </div>
 
@@ -102,11 +113,15 @@ qview(dataframe, ...)</pre>
       <p><code>qview</code> - Convenience function to view a summary and
   head of a dataframe.</p>
   
+      <p><code>lview</code> - Convenience function to view the list
+  (list view) of qdap objects that have print methods that
+  print a single dataframe.</p>
+  
     </div>
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>htruncdf</li><li>ltruncdf</li><li>qview</li><li>truncdf</li>
+      <li>htruncdf</li><li>ltruncdf</li><li>lview</li><li>qview</li><li>truncdf</li>
     </ul>
     <ul>
       

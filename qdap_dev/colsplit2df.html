@@ -40,8 +40,8 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>colsplit2df(dataframe, splitcol = 1, new.names = NULL, sep = ".", keep.orig = FALSE, 
-  name.sep = "&")
+    <pre>colsplit2df(dataframe, splitcols = 1, new.names = NULL, sep = ".", keep.orig = FALSE, 
+  name.sep = "&", index.names = FALSE)
 
 lcolsplit2df(qdap.list, keep.orig = FALSE)</pre>
     
@@ -51,21 +51,26 @@ lcolsplit2df(qdap.list, keep.orig = FALSE)</pre>
       <dd>A dataframe with a column that has been
   pasted together.</dd>
       <dt>splitcol</dt>
-      <dd>The name of the column that has been
-  pasted together.</dd>
+      <dd>The name/index of the column(s) that has
+  been pasted together.</dd>
       <dt>new.names</dt>
       <dd>A character vector of new names to
-  assign to the columns. Default attempts to extract the
+  assign to the columns (or list of names if multiple
+  columns are being split). Default attempts to extract the
   original names before the paste.</dd>
       <dt>sep</dt>
-      <dd>The character that was used in <code>paste2</code>
-  to paste the columns.</dd>
+      <dd>The character(s) that was used in
+  <code>paste2</code> to paste the columns.</dd>
       <dt>keep.orig</dt>
       <dd>logical.  If <code>TRUE</code> the original
   pasted column will be retained as well.</dd>
       <dt>name.sep</dt>
-      <dd>The character that was used to paste the
-  column names.</dd>
+      <dd>The character(s) that was used to paste
+  the column names.</dd>
+      <dt>index.names</dt>
+      <dd>logical.  If <code>TRUE</code> names of
+  columns that are duplicated are indexed with c("name.1",
+  "name.2", ... "name.n").</dd>
       <dt>qdap.list</dt>
       <dd>A qdap list object that contains
   dataframes with a leading <code>paste2</code>
@@ -122,7 +127,8 @@ lcolsplit2df(qdap.list, keep.orig = FALSE)</pre>
       
     <h2>See also</h2>
     
-  <code>colSplit</code>, <code><a href='paste2.html'>paste2</a></code>
+  <code>colSplit</code>, <code><a href='paste2.html'>colpaste2df</a></code>
+  <code><a href='paste2.html'>paste2</a></code>
 
         
   </div>
