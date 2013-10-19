@@ -43,7 +43,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>sentSplit(dataframe, text.var, endmarks = c("?", ".", "!", "|"), incomplete.sub = TRUE, 
+    <pre>sentSplit(dataframe, text.var, rm.var = NULL, endmarks = c("?", ".", "!", "|"), incomplete.sub = TRUE, 
   rm.bracket = TRUE, stem.col = FALSE, text.place = "right", ...)
 
 sentCombine(text.var, grouping.var = NULL, as.list = FALSE)
@@ -57,6 +57,10 @@ TOT(tot)</pre>
   text variable.</dd>
       <dt>text.var</dt>
       <dd>The text variable.</dd>
+      <dt>rm.var</dt>
+      <dd>An optional character vector of 1 or 2
+  naming the variables that are repeated measures (This
+  will restart the <strong>"tot"</strong> column).</dd>
       <dt>endmarks</dt>
       <dd>A character vector of endmarks to split
   turns of talk into sentences.</dd>
