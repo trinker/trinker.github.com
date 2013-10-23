@@ -43,7 +43,7 @@
     <pre>qheat(mat, low = "white", high = "darkblue", values = FALSE, digits = 1, text.size = 3, 
   text.color = "grey40", xaxis.col = "black", yaxis.col = "black", order.by = NULL, 
       grid = "white", by.column = TRUE, auto.size = FALSE, mat2 = NULL, plot = TRUE, 
-      facet.vars = NULL, facet.flip = FALSE, diag.na = FALSE)</pre>
+      facet.vars = NULL, facet.flip = FALSE, diag.na = FALSE, diag.values = "")</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -111,6 +111,10 @@
   This is useful with correlation matrices because the
   diagonal of ones do not effect the scaling of the
   heatmap.</dd>
+      <dt>diag.values</dt>
+      <dd>The string to be used for the diagonal
+  labels (values) if <code>diag.na</code> is set to <code>TRUE</code>.
+  Defualt is to not print a value.</dd>
     </dl>
     
     <div class="Description">

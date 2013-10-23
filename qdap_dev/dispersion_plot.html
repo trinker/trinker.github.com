@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>dispersion_plot. qdap 1.0.0</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">qdap 1.0.0</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Lexical Dispersion Plot</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre>dispersion_plot(text.var, match.terms, grouping.var = NULL, rm.vars = NULL, color = "blue", 
+  bg.color = "grey90", horiz.color = "grey85", symbol = "|", title = "Lexical Dispersion Plot", 
+      rev.factor = TRUE, wrap = "'", xlab = "Dialogue (Words)", ylab = NULL, size = 4, 
+      plot = TRUE, char2space = "~~", scales = "free", space = "free", total.color = "black")</pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>text.var</dt>
+      <dd>The text variable.</dd>
+      <dt>match.terms</dt>
+      <dd>A vector of quoted terms.</dd>
+      <dt>grouping.var</dt>
+      <dd>The grouping variables.  Default
+  <code>NULL</code> generates one word list for all text.  Also
+  takes a single grouping variable or a list of 1 or more
+  grouping variables.</dd>
+      <dt>rm.vars</dt>
+      <dd>The repeated measures variables.  Default
+  <code>NULL</code> generates one facet for all text.  Also takes
+  a single repeated measures variable or a list of 1 or
+  more grouping variables.</dd>
+      <dt>color</dt>
+      <dd>The color of the word symbols.</dd>
+      <dt>bg.color</dt>
+      <dd>The background color.</dd>
+      <dt>horiz.color</dt>
+      <dd>The color of the horizontal tracking
+  stripe.  Use <code>horiz.color = bg.color</code> to eliminate.</dd>
+      <dt>symbol</dt>
+      <dd>The word symbol.  Defualt is <code>"|"</code>.</dd>
+      <dt>title</dt>
+      <dd>Title of the plot</dd>
+      <dt>rev.factor</dt>
+      <dd>logical.  If <code>TRUE</code> reverses the
+  plot order of the factors.</dd>
+      <dt>wrap</dt>
+      <dd>a character to wrap around the words (enables
+  the reader to visualize spaces).  Defualt is <code>"'"</code>,
+  use <code>""</code> to remove.</dd>
+      <dt>xlab</dt>
+      <dd>The x label.</dd>
+      <dt>ylab</dt>
+      <dd>The y label.</dd>
+      <dt>size</dt>
+      <dd>The size of the plotting symbol.</dd>
+      <dt>plot</dt>
+      <dd>logical.  If <code>TRUE</code> the plot will
+  automatically plot. The user may wish to set to
+  <code>FALSE</code> for use in knitr, sweave, etc. to add
+  additional plot layers.</dd>
+      <dt>char2space</dt>
+      <dd>A vector of characters to be turned
+  into spaces.</dd>
+      <dt>scales</dt>
+      <dd>Should scales be fixed (<code>"fixed"</code>, the
+  default), free (<code>"free"</code>), or free in one dimension
+  (<code>"free_x"</code>, <code>"free_y"</code>)</dd>
+      <dt>space</dt>
+      <dd>If <code>"fixed"</code>, the default, all panels
+  have the same size. If <code>"free_y"</code> their height will
+  be proportional to the length of the y scale; if
+  <code>"free_x"</code> their width will be proportional to the
+  length of the x scale; or if <code>"free"</code> both height
+  and width will vary.</dd>
+      <dt>total.color</dt>
+      <dd>The color to use for summary `all`
+  group.  If <code>NULL</code> totals are dropped.</dd>
+    </dl>
+    
+    <div class="Value">
+      <h2>Value</h2>
+      
+      <p>Plots a dispersion plot and invisibly returns the ggplot2
+  object.</p>
+  
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p>Generate a lexical dispersion plot of terms.</p>
+  
+    </div>
+
+    <div class="Note">
+      <h2>Note</h2>
+      
+      <p>The match.terms is character sensitive.  Spacing is an
+  important way to grab specific words and requires careful
+  thought.  Using "read" will find the words "bread",
+  "read" "reading", and "ready".  If you want to search for
+  just the word "read" you'd supply a vector of c(" read ",
+  " reads", " reading", " reader").</p>
+  
+    </div>
+      </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>dispersion_plot</li>
+    </ul>
+    <ul>
+      <li>dispersion</li>
+    </ul> -->
+      
+    <h2>See also</h2>
+    
+  <code>term_match</code>
+
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>
