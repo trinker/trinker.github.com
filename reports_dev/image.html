@@ -48,7 +48,9 @@ IM2(image = "clipboard", loc = 1, ...)
 
 IW(path = "clipboard", link = NULL, side = "right", width = 540, height = IE(width, 
       round(width/1.5)), new_win = TRUE, top = -15, right = 20, left = 20, bottom = 0, 
-      copy2clip = TRUE, print = FALSE)</pre>
+      copy2clip = TRUE, print = FALSE)
+
+IMF(image = "clipboard", ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -129,6 +131,11 @@ IW(path = "clipboard", link = NULL, side = "right", width = 540, height = IE(wid
   
       <p><code>IW</code> - Text wrapped images.</p>
   
+      <p><code>IMF</code> - A wrapper for <code>IM</code> that attempts to
+  find the image in expected image directories.  Uses the
+  first available image matching the image name.  No
+  path/url is specified.  IMS stands for `image locate`.</p>
+  
     </div>
     
     <h2 id="examples">Examples</h2>
@@ -162,7 +169,7 @@ IW(path = "clipboard", link = NULL, side = "right", width = 540, height = IE(wid
   </div>
   <div class="span4">
     <!-- <ul>
-      <li>IM</li><li>IM2</li><li>IW</li>
+      <li>IM</li><li>IM2</li><li>IMF</li><li>IW</li>
     </ul>
     <ul>
       

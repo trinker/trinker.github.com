@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>WP. reports 0.2.0</title>
+<title>is.url. reports 0.2.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -35,53 +35,56 @@
         
       </header>
       
-      <h1>Convert Windows Path</h1>
+      <h1>Check If String is a URL</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>WP(from.clip = TRUE, quotes = TRUE, copy2clip = TRUE)</pre>
+    <pre>is.url(x)</pre>
     
     <h2>Arguments</h2>
     <dl>
-      <dt>from.clip</dt>
-      <dd>logical.  If <code>TRUE</code> path is read
-  from the clipboard. If <code>FALSE</code> user inputs path
-  inteactively.</dd>
-      <dt>quotes</dt>
-      <dd>logical.  If <code>TRUE</code> quotes will be
-  added to front/end of the string.</dd>
-      <dt>copy2clip</dt>
-      <dd>logical.  If <code>TRUE</code> attempts to
-  copy the output to the clipboard.</dd>
+      <dt>x</dt>
+      <dd>A character string.</dd>
     </dl>
     
     <div class="Value">
       <h2>Value</h2>
       
-      <p>Returns a character vector path with slashes oriented for
-  R.</p>
+      <p>Returns a logical evalution as to whether a string is a
+  url.</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Reorients Windows path backslashes to forward slashes.</p>
+      <p>Uses a regex approach to check if a string is a url.
+  This approach is faster than
+  <code><a href='http://www.inside-r.org/r-doc/RCurl/url.exists'>url.exists</a></code> but does do the actual
+  verification.</p>
   
     </div>
     
     <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## WP(FALSE)  #using readline <br>## C:\Users\trinker\Desktop\doc</div></pre>
+    <pre class="examples"><div class='input'>urls <- c("a", "f/g/h", "www.talkstats.com", "https://github.com/trinker")
+is.url(urls)
+</div>
+<div class='output'>[1] FALSE FALSE  TRUE  TRUE
+</div></pre>
   </div>
   <div class="span4">
     <!-- <ul>
-      <li>WP</li>
+      <li>is.url</li>
     </ul>
     <ul>
-      
+      <li>url</li>
     </ul> -->
       
+    <h2>See also</h2>
+    
+  <code><a href='http://www.inside-r.org/r-doc/RCurl/url.exists'>url.exists</a></code>
+
         
   </div>
 </div>
