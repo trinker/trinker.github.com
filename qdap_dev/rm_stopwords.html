@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>stopwords. qdap 1.0.0</title>
+<title>rm_stopwords. qdap 1.0.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -35,24 +35,28 @@
         
       </header>
       
-      <h1>Remove Stopwords</h1>
+      <h1>Remove Stop Words</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>stopwords(textString, stopwords = qdapDictionaries::Top25Words, unlist = FALSE, separate = TRUE, 
-  strip = FALSE, unique = FALSE, char.keep = NULL, names = FALSE, ignore.case = TRUE, 
+    <pre>rm_stopwords(text.var, stopwords = qdapDictionaries::Top25Words, unlist = FALSE, 
+  separate = TRUE, strip = FALSE, unique = FALSE, char.keep = NULL, names = FALSE, 
+      ignore.case = TRUE, apostrophe.remove = FALSE, ...)
+
+rm_stop(text.var, stopwords = qdapDictionaries::Top25Words, unlist = FALSE, separate = TRUE, 
+      strip = FALSE, unique = FALSE, char.keep = NULL, names = FALSE, ignore.case = TRUE, 
       apostrophe.remove = FALSE, ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
-      <dt>textString</dt>
-      <dd>A character string of text or a vector
-  of character strings.</dd>
+      <dt>text.var</dt>
+      <dd>A character string of text or a vector of
+  character strings.</dd>
       <dt>stopwords</dt>
       <dd>A character vector of words to remove
   from the text.  qdap has a number of data sets that can
-  be used as stopwords including: <code>Top200Words</code>,
+  be used as stop words including: <code>Top200Words</code>,
   <code>Top100Words</code>, <code>Top25Words</code>.  For the tm
   package's traditional English stop words use
   <code>tm::stopwords("english")</code>.</dd>
@@ -77,13 +81,13 @@
       <dt>names</dt>
       <dd>logical.  If <code>TRUE</code> will name the
   elements of the vector or list with the original
-  <code>textString</code>.</dd>
+  <code>text.var</code>.</dd>
       <dt>ignore.case</dt>
       <dd>logical.  If <code>TRUE</code> stop words
   will be removed regardless of case.  Additionally, case
-  will be stripped from the text.  If <code>FALSE</code>
-  stopwords removal is contingent upon case.  Additionally,
-  case is not stripped.</dd>
+  will be stripped from the text.  If <code>FALSE</code> stop
+  word removal is contingent upon case.  Additionally, case
+  is not stripped.</dd>
       <dt>apostrophe.remove</dt>
       <dd>logical.  If <code>TRUE</code> removes
   apostrophe's from the output.</dd>
@@ -104,13 +108,13 @@
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Transcript apply the removal of stopwords.</p>
+      <p>Transcript apply the removal of stop words.</p>
   
     </div>
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>stopwords</li>
+      <li>rm_stop</li><li>rm_stopwords</li>
     </ul>
     <ul>
       <li>stopwords</li>

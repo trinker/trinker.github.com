@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>tdm. qdap 1.0.0</title>
+<title>freq_terms. qdap 1.0.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -35,56 +35,65 @@
         
       </header>
       
-      <h1>Convert/Generate Term Document Matrix or Document Term Matrix</h1>
+      <h1>Find Frequent Terms</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>tdm(text.var, grouping.var = NULL, ...)
-
-dtm(text.var, grouping.var = NULL, ...)</pre>
+    <pre>freq_terms(text.var, top = 20, at.least = 1, stopwords = NULL, extend = TRUE, ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
       <dt>text.var</dt>
-      <dd>The text variable or a <code>wfm</code>
-  object.</dd>
-      <dt>grouping.var</dt>
-      <dd>The grouping variables.  Default
-  <code>NULL</code> generates one word list for all text.  Also
-  takes a single grouping variable or a list of 1 or more
-  grouping variables.</dd>
+      <dd>The text variable.</dd>
+      <dt>top</dt>
+      <dd>Top number of terms to show.</dd>
+      <dt>at.least</dt>
+      <dd>An interger indicating at least how many
+  characters a word must be to be included in the output.</dd>
+      <dt>stopwords</dt>
+      <dd>A character vector of words to remove
+  from the text.  qdap has a number of data sets that can
+  be used as stop words including: <code>Top200Words</code>,
+  <code>Top100Words</code>, <code>Top25Words</code>.  For the tm
+  package's traditional English stop words use
+  <code>tm::stopwords("english")</code>.</dd>
+      <dt>extend</dt>
+      <dd>logical.  If <code>TRUE</code> the <code>top</code>
+  argument is extended to any word that has the same
+  frequency as the <code>top</code> word.</dd>
       <dt>...</dt>
-      <dd>Other arguments passed to <code>wfm</code>.</dd>
+      <dd>Other arguments passed to
+  <code>all_words</code>.</dd>
     </dl>
     
-    <div class="Description">
-      <h2>Description</h2>
+    <div class="Value">
+      <h2>Value</h2>
       
-      <p><code>tdm</code> - Create term document matrices from raw text
-  or <code>wfm</code> for use with other text analysis packages.</p>
-  
-      <p><code>dtm</code> - Create document term matrices from raw text
-  or <code>wfm</code> for use with other text analysis packages.</p>
+      <p>Returns a dataframe with the top occurring words.</p>
   
     </div>
 
-    <div class="Details">
-      <h2>Details</h2>
+    <div class="Description">
+      <h2>Description</h2>
       
-      <p>Identical to the <code>tm</code> package's
-  <code><a href='http://www.inside-r.org/r-doc/tm/matrix'>TermDocumentMatrix</a></code>/<code><a href='http://www.inside-r.org/r-doc/tm/matrix'>DocumentTermMatrix</a></code>.</p>
+      <p>Find the most frequently occuring terms in a text vector.</p>
   
     </div>
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>dtm</li><li>tdm</li>
+      <li>freq_terms</li>
     </ul>
     <ul>
-      
+      <li>frequent_terms</li>
     </ul> -->
       
+    <h2>See also</h2>
+    
+  <code>word_list</code>,
+  <code>all_words</code>
+
         
   </div>
 </div>

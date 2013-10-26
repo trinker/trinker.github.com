@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>tdm. qdap 1.0.0</title>
+<title>plot.wfm. qdap 1.0.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -35,51 +35,47 @@
         
       </header>
       
-      <h1>Convert/Generate Term Document Matrix or Document Term Matrix</h1>
+      <h1>Plots a wfm object</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>tdm(text.var, grouping.var = NULL, ...)
-
-dtm(text.var, grouping.var = NULL, ...)</pre>
+    <pre>plot(x, non.zero = FALSE, digits = 0, by.column, high = ifelse(non.zero, "black", 
+  "blue"), grid = ifelse(non.zero, "black", "white"), ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
-      <dt>text.var</dt>
-      <dd>The text variable or a <code>wfm</code>
-  object.</dd>
-      <dt>grouping.var</dt>
-      <dd>The grouping variables.  Default
-  <code>NULL</code> generates one word list for all text.  Also
-  takes a single grouping variable or a list of 1 or more
-  grouping variables.</dd>
+      <dt>x</dt>
+      <dd>The wfm object</dd>
+      <dt>non.zero</dt>
+      <dd>logical.  If <code>TRUE</code> all values
+  coverted to dummy coded based on x_ij > 0.</dd>
+      <dt>digits</dt>
+      <dd>The number of digits displayed if
+  <code>values</code> is <code>TRUE</code>.</dd>
+      <dt>by.column</dt>
+      <dd>logical.  If <code>TRUE</code> applies scaling
+  to the column.  If <code>FALSE</code> applies scaling by row
+  (use <code>NULL</code> to turn off scaling).</dd>
+      <dt>high</dt>
+      <dd>The color to be used for higher values.</dd>
+      <dt>grid</dt>
+      <dd>The color of the grid (Use <code>NULL</code> to
+  remove the grid).</dd>
       <dt>...</dt>
-      <dd>Other arguments passed to <code>wfm</code>.</dd>
+      <dd>Other arguments passed to qheat.</dd>
     </dl>
     
     <div class="Description">
       <h2>Description</h2>
       
-      <p><code>tdm</code> - Create term document matrices from raw text
-  or <code>wfm</code> for use with other text analysis packages.</p>
-  
-      <p><code>dtm</code> - Create document term matrices from raw text
-  or <code>wfm</code> for use with other text analysis packages.</p>
-  
-    </div>
-
-    <div class="Details">
-      <h2>Details</h2>
-      
-      <p>Identical to the <code>tm</code> package's
-  <code><a href='http://www.inside-r.org/r-doc/tm/matrix'>TermDocumentMatrix</a></code>/<code><a href='http://www.inside-r.org/r-doc/tm/matrix'>DocumentTermMatrix</a></code>.</p>
+      <p>Plots a wfm object.</p>
   
     </div>
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>dtm</li><li>tdm</li>
+      <li>plot.wfm</li>
     </ul>
     <ul>
       
