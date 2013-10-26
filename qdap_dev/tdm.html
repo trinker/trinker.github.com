@@ -35,14 +35,18 @@
         
       </header>
       
-      <h1>Convert/Generate Term Document Matrix or Document Term Matrix</h1>
+      <h1>tm Package Compatability Tools: Aplly to or Convert to/from Term Document Matrix or Document Term Matrix</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
     <pre>tdm(text.var, grouping.var = NULL, ...)
 
-dtm(text.var, grouping.var = NULL, ...)</pre>
+dtm(text.var, grouping.var = NULL, ...)
+
+tm2qdap(x)
+
+apply_as_tm(wfm.obj, tmfun, ..., to.qdap = TRUE)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -55,9 +59,38 @@ dtm(text.var, grouping.var = NULL, ...)</pre>
   takes a single grouping variable or a list of 1 or more
   grouping variables.</dd>
       <dt>...</dt>
-      <dd>Other arguments passed to <code>wfm</code>.</dd>
+      <dd>If <code>tdm</code> or <code>dtm</code> - Other
+  arguments passed to <code>wfm</code>.  If <code>apply_as_tm</code> -
+  Other arguments passed to functions used on the tm
+  package's <code>"TermDocumentMatrix"</code>.</dd>
+      <dt>x</dt>
+      <dd>A
+  <code><a href='http://www.inside-r.org/r-doc/tm/matrix'>TermDocumentMatrix</a></code>/<code><a href='http://www.inside-r.org/r-doc/tm/matrix'>DocumentTermMatrix</a></code>.</dd>
+      <dt>wfm.obj</dt>
+      <dd>A <code>wfm</code> object.</dd>
+      <dt>tmfun</dt>
+      <dd>A function applied to a
+  <code><a href='http://www.inside-r.org/r-doc/tm/matrix'>TermDocumentMatrix</a></code> object.</dd>
+      <dt>to.qdap</dt>
+      <dd>logical.  If <code>TRUE</code> should
+  <code>wfm</code> try to coerce the output back to
+  a qdap object.</dd>
     </dl>
     
+    <div class="Value">
+      <h2>Value</h2>
+      
+      <p><code>tdm</code> - Returns a
+  <code><a href='http://www.inside-r.org/r-doc/tm/matrix'>TermDocumentMatrix</a></code>.</p>
+  
+      <p><code>dtm</code> - Returns a
+  <code><a href='http://www.inside-r.org/r-doc/tm/matrix'>DocumentTermMatrix</a></code>.</p>
+  
+      <p><code>tm2qdap</code> - Returns a <code>wfm</code> object
+  or <code>wfm_weight</code> object.</p>
+  
+    </div>
+
     <div class="Description">
       <h2>Description</h2>
       
@@ -66,6 +99,15 @@ dtm(text.var, grouping.var = NULL, ...)</pre>
   
       <p><code>dtm</code> - Create document term matrices from raw text
   or <code>wfm</code> for use with other text analysis packages.</p>
+  
+      <p><code>tm2wfm</code> - Convert the <code>tm</code> package's
+  <code><a href='http://www.inside-r.org/r-doc/tm/matrix'>TermDocumentMatrix</a></code>/<code><a href='http://www.inside-r.org/r-doc/tm/matrix'>DocumentTermMatrix</a></code>
+  to <code>wfm</code>.</p>
+  
+      <p><code>apply_as_tm</code> - Apply functions intended to be used
+  on the <code>tm</code> package's
+  <code><a href='http://www.inside-r.org/r-doc/tm/matrix'>TermDocumentMatrix</a></code> to a
+  <code>wfm</code> object.</p>
   
     </div>
 
@@ -79,7 +121,7 @@ dtm(text.var, grouping.var = NULL, ...)</pre>
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>dtm</li><li>tdm</li>
+      <li>apply_as_tm</li><li>dtm</li><li>tdm</li><li>tm2qdap</li>
     </ul>
     <ul>
       
