@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>rprof4rpubs. reports 0.2.0</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">reports 0.2.0</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Rpubs .Rprofile</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre>rprof4rpubs(path = 1)</pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>path</dt>
+      <dd>The path to the directory with the document
+  to be published. Also takes the values of <code>1</code>
+  corresponding to &#145;<span class = "file">~PRESNETATION</span>&#146; or <code>2</code>
+  corresponding to &#145;<span class = "file">~REPORT</span>&#146;.</dd>
+    </dl>
+    
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p>When publishing to Rpubs an error may occur as seen
+  below. <code>rprof4rpubs</code> adds/appends a .Rprofile with
+  <code>options(rpubs.upload.method = "internal")</code>
+  necessary for publishing to
+  <a href = 'http://rpubs.com/'>Rpubs</a> from
+  <a href = 'http://www.rstudio.com/'>Rstudio</a>.</p>
+  
+    </div>
+
+    <div class="Details">
+      <h2>Details</h2>
+      
+      <p>If you see the following error <code>rprof4rpubs</code> may be
+  of help:</p>
+  
+      <p>Error in function (type, msg, asError = TRUE) :  SSL
+  certificate problem, verify that the CA cert is OK.
+  Details:  error:14090086:SSL
+  routines:SSL3_GET_SERVER_CERTIFICATE:certificate verify
+  failed  Calls: rpubsUpload ... <Anonymous> ->
+  .postForm -> .Call -> <Anonymous> -> fun</p>
+  
+    </div>
+
+    <div class="References">
+      <h2>References</h2>
+      
+      <p><a href = 'http://support.rstudio.org/help/discussions/problems/2582-publishing-to-rpubs-from-behind-proxy#comment_16691989'>http://support.rstudio.org/help/discussions/problems/2582-publishing-to-rpubs-from-behind-proxy#comment_16691989</a></p>
+  
+    </div>
+      </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>rprof4rpubs</li>
+    </ul>
+    <ul>
+      
+    </ul> -->
+      
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

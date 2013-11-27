@@ -35,20 +35,23 @@
         
       </header>
       
-      <h1>Video (YouTube/Vimeo) url to HTML iframe Tag</h1>
+      <h1>Video (YouTube/Vimeo/local) url to HTML iframe/video Tag</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
     <pre>YT(path = "clipboard", copy2clip = TRUE, width = 640, height = 360, print = FALSE)
 
-VM(path = "clipboard", copy2clip = TRUE, width = 640, height = 360, print = FALSE)</pre>
+VM(path = "clipboard", copy2clip = TRUE, width = 640, height = 360, print = FALSE)
+
+VD(path = "clipboard", video.js.path = "assets/js/vidscript.js", width = "100%", 
+  height = 520, indent.controls = 4, copy2clip = TRUE, print = FALSE)</pre>
     
     <h2>Arguments</h2>
     <dl>
       <dt>path</dt>
-      <dd>A character vector url/tag copied to the
-  clipboard. Default is to read from the clipboard.</dd>
+      <dd>A url/tag/path. Default is to read from the
+  clipboard.  Note that <code>VD</code> requires a .mp4 file.</dd>
       <dt>copy2clip</dt>
       <dd>logical.  If <code>TRUE</code> attempts to
   copy the output to the clipboard.</dd>
@@ -60,6 +63,15 @@ VM(path = "clipboard", copy2clip = TRUE, width = 640, height = 360, print = FALS
       <dd>logical.  If <code>TRUE</code>
   <code><a href='http://www.inside-r.org/r-doc/base/cat'>cat</a></code> prints the output to the console.
   If <code>FALSE</code> returns to the console.</dd>
+      <dt>video.js.path</dt>
+      <dd>The path to the vidscript.js.  If
+  the file is not found in the <code><a href='http://www.inside-r.org/r-doc/base/basename'>dirname</a></code>
+  of <code>video.js.path</code> then
+  <code>js_copy</code> will be utilized to place
+  the appropriate video file in the correct location.</dd>
+      <dt>indent.controls</dt>
+      <dd>An integer value for number of
+  indents to push the control panel.</dd>
     </dl>
     
     <div class="Value">
@@ -73,8 +85,14 @@ VM(path = "clipboard", copy2clip = TRUE, width = 640, height = 360, print = FALS
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Wrap a YouTube/Vimeo tag or url to generate an HTML
+      <p><code>YT</code> - Wrap a YouTube tag or url to generate an HTML
   iframe tag.</p>
+  
+      <p><code>VM</code> - Wrap a Vimeo tag or url OR to generate an
+  HTML iframe tag.</p>
+  
+      <p><code>VD</code> - Wrap a local path to generate an HTML video
+  tag.</p>
   
     </div>
 
@@ -97,6 +115,13 @@ VM(path = "clipboard", copy2clip = TRUE, width = 640, height = 360, print = FALS
   after <code>yt:</code> is the youtube tag.</p>
   
     </div>
+
+    <div class="References">
+      <h2>References</h2>
+      
+      <p>urlhttp://blog.teamtreehouse.com/building-custom-controls-for-html5-videos</p>
+  
+    </div>
     
     <h2 id="examples">Examples</h2>
     <pre class="examples"><div class='input'>YT("ArHQjQyIS70", print = TRUE)
@@ -114,15 +139,16 @@ VM(path = "clipboard", copy2clip = TRUE, width = 640, height = 360, print = FALS
   </div>
   <div class="span4">
     <!-- <ul>
-      <li>VM</li><li>YT</li>
+      <li>VD</li><li>VM</li><li>YT</li>
     </ul>
     <ul>
-      
+      <li>video</li>
     </ul> -->
       
     <h2>See also</h2>
     
-  <code>slidify_layouts</code>
+  <code>slidify_layouts</code>,
+  <code>js_copy</code>
 
         
   </div>
