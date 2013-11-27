@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>web. reports 0.2.0</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">reports 0.2.0</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Functions for Internet Articles/Information</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre>web(category = NULL, select = NULL, desc.width = 80, path = NULL)
+
+read.web(path, ...)
+
+write.web(url, description = NA, category = NA, path, sheet = "Sheet1", ...)</pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>category</dt>
+      <dd>An optional category subest to be
+  assigned to (<code>write.web</code>) or selected from
+  (<code>web</code>).</dd>
+      <dt>select</dt>
+      <dd>A integer row number from the
+  &#145;<span class = "file">websites.xlsx</span>&#146;/&#145;<span class = "file">websites.csv</span>&#146;.  If this value
+  is <code>NULL</code> an interactive selection will be enabled.</dd>
+      <dt>path</dt>
+      <dd>Path to the websites.csv/websites.xlsx.  If
+  <code>missing</code>/<code>NULL</code> the location will be assumed
+  to be in &#145;<span class = "file">~/ARTICLES</span>&#146;.</dd>
+      <dt>...</dt>
+      <dd>Other arguments passed to
+  <code><a href='http://www.inside-r.org/r-doc/utils/read.table'>read.csv</a></code> or
+  <code><a href='http://www.inside-r.org/r-doc/xlsx/read.xlsx'>read.xlsx</a></code></dd>
+      <dt>url</dt>
+      <dd>The url from the website to be entered into
+  &#145;<span class = "file">websites.xlsx</span>&#146;/&#145;<span class = "file">websites.csv</span>&#146;.</dd>
+      <dt>description</dt>
+      <dd>An optional description to be entered
+  into &#145;<span class = "file">websites.xlsx</span>&#146;/&#145;<span class = "file">websites.csv</span>&#146;.</dd>
+      <dt>sheet</dt>
+      <dd>The sheet name of the &#145;<span class = "file">websites.xlsx</span>&#146;
+  file.  The defualt is <code>"Sheet1"</code>.</dd>
+    </dl>
+    
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p>The web family of functions enable quick reading, writing
+  and browsing of Internet urls related to the project, all
+  housed in a central location.</p>
+  
+    </div>
+      </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>read.web</li><li>web</li><li>write.web</li>
+    </ul>
+    <ul>
+      <li>Internet,</li><li>url</li><li>website,</li>
+    </ul> -->
+      
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>
