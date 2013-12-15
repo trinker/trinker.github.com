@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>caption. reports 0.2.0</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">reports 0.2.0</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Captions for Figures and Tables</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre>caption(type = 1, label, caption, copy2clip = TRUE, print = FALSE)
+
+caption_figure(label, caption, copy2clip = TRUE, print = FALSE)
+
+caption_table(label, caption, copy2clip = TRUE, print = FALSE)</pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>type</dt>
+      <dd>Either "figure" or "table" or accompanying
+  numeric reference: figure = 1, table = 2.</dd>
+      <dt>label</dt>
+      <dd>A hyperlink reference label.</dd>
+      <dt>caption</dt>
+      <dd>A caption to place below/above a
+  figure/table.</dd>
+      <dt>copy2clip</dt>
+      <dd>logical.  If <code>TRUE</code> attempts to
+  copy the output to the clipboard.</dd>
+      <dt>print</dt>
+      <dd>logical.  If <code>TRUE</code>
+  <code><a href='http://www.inside-r.org/r-doc/base/cat'>cat</a></code> prints the output to the console.
+  If <code>FALSE</code> returns to the console.</dd>
+    </dl>
+    
+    <div class="Value">
+      <h2>Value</h2>
+      
+      <p>Returns a character vector of a caption.</p>
+  
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p><code>caption</code> - Keep track of numbering for table and
+  figure captions.</p>
+  
+      <p><code>caption_figure</code> - Keep track of numbering for
+  figure captions.</p>
+  
+      <p><code>caption_table</code> - Keep track of numbering for table
+  captions.</p>
+  
+    </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # caption_figure("fig1", "A random figure.")# caption_table("tab1", "A table")# ## <strong>End(Not run)</strong></div></pre>
+  </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>caption</li><li>caption_figure</li><li>caption_table</li>
+    </ul>
+    <ul>
+      <li>caption</li>
+    </ul> -->
+      
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>
