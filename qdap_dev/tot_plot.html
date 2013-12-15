@@ -42,7 +42,7 @@
     <h2>Usage</h2>
     <pre>tot_plot(dataframe, text.var, grouping.var = NULL, facet.vars = NULL, tot = TRUE, 
   transform = FALSE, ncol = NULL, ylab = NULL, xlab = NULL, bar.space = 0, scale = NULL, 
-      space = NULL)</pre>
+      space = NULL, plot = TRUE)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -92,6 +92,11 @@
   length of the x scale; or if <code>"free"</code> both height
   and width will vary. This setting has no effect unless
   the appropriate scales also vary.</dd>
+      <dt>plot</dt>
+      <dd>logical.  If <code>TRUE</code> the plot will
+  automatically plot. The user may wish to set to
+  <code>FALSE</code> for use in knitr, sweave, etc. to add
+  additional plot layers.</dd>
     </dl>
     
     <div class="Value">

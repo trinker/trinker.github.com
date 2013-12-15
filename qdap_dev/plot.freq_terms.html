@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>env.syn. qdapDictionaries 0.0.1</title>
+<title>plot.freq_terms. qdap 1.0.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdapDictionaries 0.0.1</a>
+      <a class="brand" href="#">qdap 1.0.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -35,44 +35,39 @@
         
       </header>
       
-      <h1>Synonym Lookup Environment</h1>
+      <h1>Plots a freq_terms Object</h1>
 
 <div class="row">
   <div class="span8">
-        
-    <div class="Format">
-      <h2>Format</h2>
-      
-      <p>A environment with words and synonyms.</p>
-  
-    </div>
-
+    <h2>Usage</h2>
+    <pre>plot(x, plot = TRUE, ...)</pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>x</dt>
+      <dd>The freq_terms object.</dd>
+      <dt>...</dt>
+      <dd>ignored.</dd>
+      <dt>plot</dt>
+      <dd>logical.  If <code>TRUE</code> the plot will
+  automatically plot. The user may wish to set to
+  <code>FALSE</code> for use in knitr, sweave, etc. to add
+  additional plot layers.</dd>
+    </dl>
+    
     <div class="Description">
       <h2>Description</h2>
       
-      <p>A dataset containing a synonym lookup environment (see
-  <code>SYNONYM</code>).</p>
-  
-    </div>
-
-    <div class="References">
-      <h2>References</h2>
-      
-      <p>Scraped from:
-  <a href = 'http://dictionary.reverso.net/english-synonyms/'>Reverso
-  Online Dictionary</a>. The word list fed to
-  <a href = 'http://dictionary.reverso.net/english-synonyms/'>Reverso</a>
-  is the unique words from the combination of
-  <code>DICTIONARY</code> and <code>labMT</code>.</p>
+      <p>Plots a freq_terms object.</p>
   
     </div>
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>env.syn</li>
+      <li>plot.freq_terms</li>
     </ul>
     <ul>
-      <li>datasets</li>
+      
     </ul> -->
       
         

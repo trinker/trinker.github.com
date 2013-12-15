@@ -41,7 +41,7 @@
   <div class="span8">
     <h2>Usage</h2>
     <pre>plot(x, digits = 3, sep = ".", name.sep = "&", values = TRUE, high = "red", transpose = TRUE, 
-  plot = TRUE, facet.vars = NULL, rev.codes = !transpose, rev.stats = !transpose, 
+  plot = TRUE, facet.vars = "time", rev.codes = !transpose, rev.stats = !transpose, 
       ...)</pre>
     
     <h2>Arguments</h2>
@@ -73,7 +73,7 @@
   additional plot layers.</dd>
       <dt>facet.vars</dt>
       <dd>A character vector of names to facet
-  by.</dd>
+  by.  Defualt is <code>"time"</code>.</dd>
       <dt>rev.codes</dt>
       <dd>logical If <code>TRUE</code> the plotting
   order of the code groups is reversed.</dd>

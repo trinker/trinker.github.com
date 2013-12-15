@@ -45,7 +45,7 @@
     <pre>read.transcript(file, col.names = NULL, text.var = NULL, merge.broke.tot = TRUE, 
   header = FALSE, dash = "", ellipsis = "...", quote2bracket = FALSE, rm.empty.rows = TRUE, 
       na.strings = c("999", "NA", "", " "), sep = NULL, skip = 0, nontext2factor = TRUE, 
-      text, ...)</pre>
+      text, comment.char = "", ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -106,6 +106,11 @@
   this is, then data are read from the value of text.
   Notice that a literal string can be used to include
   (small) data sets within R code.</dd>
+      <dt>comment.char</dt>
+      <dd>A character vector of length one
+  containing a single character or an empty string. Use
+  <code>""</code> to turn off the interpretation of comments
+  altogether.</dd>
       <dt>...</dt>
       <dd>Further arguments to be passed to
   <code><a href='http://www.inside-r.org/r-doc/utils/read.table'>read.table</a></code>.</dd>

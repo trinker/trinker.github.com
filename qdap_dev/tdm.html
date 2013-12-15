@@ -35,24 +35,29 @@
         
       </header>
       
-      <h1>tm Package Compatability Tools: Aplly to or Convert to/from Term Document Matrix or Document Term Matrix</h1>
+      <h1>tm Package Compatability Tools: Apply to or Convert to/from Term Document
+Matrix or Document Term Matrix</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>tdm(text.var, grouping.var = NULL, ...)
+    <pre>tdm(text.var, grouping.var = NULL, vowel.check = TRUE, ...)
 
-dtm(text.var, grouping.var = NULL, ...)
+dtm(text.var, grouping.var = NULL, vowel.check = TRUE, ...)
 
 tm2qdap(x)
 
-apply_as_tm(wfm.obj, tmfun, ..., to.qdap = TRUE)</pre>
+apply_as_tm(wfm.obj, tmfun, ..., to.qdap = TRUE)
+
+tm_corpus2df(tm.corpus, col1 = "docs", col2 = "text")
+
+df2tm_corpus(text.var, grouping.var = NULL, ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
       <dt>text.var</dt>
-      <dd>The text variable or a <code>wfm</code>
-  object.</dd>
+      <dd>The text variable or a
+  <code>wfm</code> object.</dd>
       <dt>grouping.var</dt>
       <dd>The grouping variables.  Default
   <code>NULL</code> generates one word list for all text.  Also
@@ -62,7 +67,12 @@ apply_as_tm(wfm.obj, tmfun, ..., to.qdap = TRUE)</pre>
       <dd>If <code>tdm</code> or <code>dtm</code> - Other
   arguments passed to <code>wfm</code>.  If <code>apply_as_tm</code> -
   Other arguments passed to functions used on the tm
-  package's <code>"TermDocumentMatrix"</code>.</dd>
+  package's <code>"TermDocumentMatrix"</code>.  If
+  <code>df2tm_corpus</code> - Other arguments passed to the tm
+  package's <code><a href='http://www.inside-r.org/r-doc/tm/VCorpus'>Corpus</a></code>.</dd>
+      <dt>vowel.check</dt>
+      <dd>logical.  Should terms without vowels
+  be remove?</dd>
       <dt>x</dt>
       <dd>A
   <code><a href='http://www.inside-r.org/r-doc/tm/matrix'>TermDocumentMatrix</a></code>/<code><a href='http://www.inside-r.org/r-doc/tm/matrix'>DocumentTermMatrix</a></code>.</dd>
@@ -75,6 +85,13 @@ apply_as_tm(wfm.obj, tmfun, ..., to.qdap = TRUE)</pre>
       <dd>logical.  If <code>TRUE</code> should
   <code>wfm</code> try to coerce the output back to
   a qdap object.</dd>
+      <dt>tm.corpus</dt>
+      <dd>A <code><a href='http://www.inside-r.org/r-doc/tm/VCorpus'>Corpus</a></code> object.</dd>
+      <dt>col1</dt>
+      <dd>Name for column 1 (the vector elements).</dd>
+      <dt>col2</dt>
+      <dd>Name for column 2 (the names of the
+  vectors).</dd>
     </dl>
     
     <div class="Value">
@@ -89,16 +106,29 @@ apply_as_tm(wfm.obj, tmfun, ..., to.qdap = TRUE)</pre>
       <p><code>tm2qdap</code> - Returns a <code>wfm</code> object
   or <code>wfm_weight</code> object.</p>
   
+      <p><code>apply_as_tm</code> - Applies a tm oriented function to a
+  <code>wfm</code> and attempts to simplify back to
+  a <code>wfm</code> or
+  <code>wfm_weight</code> format.</p>
+  
+      <p><code>tm_corpus2df</code> - Converts a <code><a href='http://www.inside-r.org/r-doc/tm/VCorpus'>Corpus</a></code>
+  and returns a qdap oriented dataframe.</p>
+  
+      <p><code>df2tm_corpus</code> - Converts a qdap oriented dataframe
+  and returns a <code><a href='http://www.inside-r.org/r-doc/tm/VCorpus'>Corpus</a></code>.</p>
+  
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
       <p><code>tdm</code> - Create term document matrices from raw text
-  or <code>wfm</code> for use with other text analysis packages.</p>
+  or <code>wfm</code> for use with other text
+  analysis packages.</p>
   
       <p><code>dtm</code> - Create document term matrices from raw text
-  or <code>wfm</code> for use with other text analysis packages.</p>
+  or <code>wfm</code> for use with other text
+  analysis packages.</p>
   
       <p><code>tm2wfm</code> - Convert the <code>tm</code> package's
   <code><a href='http://www.inside-r.org/r-doc/tm/matrix'>TermDocumentMatrix</a></code>/<code><a href='http://www.inside-r.org/r-doc/tm/matrix'>DocumentTermMatrix</a></code>
@@ -109,24 +139,39 @@ apply_as_tm(wfm.obj, tmfun, ..., to.qdap = TRUE)</pre>
   <code><a href='http://www.inside-r.org/r-doc/tm/matrix'>TermDocumentMatrix</a></code> to a
   <code>wfm</code> object.</p>
   
+      <p><code>tm_corpus2df</code> - Convert a tm package corpus to a
+  dataframe.</p>
+  
+      <p><code>df2tm_corpus</code> - Convert a qdap dataframe to a tm
+  package <code><a href='http://www.inside-r.org/r-doc/tm/VCorpus'>Corpus</a></code>.</p>
+  
     </div>
 
     <div class="Details">
       <h2>Details</h2>
       
-      <p>Identical to the <code>tm</code> package's
-  <code><a href='http://www.inside-r.org/r-doc/tm/matrix'>TermDocumentMatrix</a></code>/<code><a href='http://www.inside-r.org/r-doc/tm/matrix'>DocumentTermMatrix</a></code>.</p>
+      <p>Produces output that is identical to the <code>tm</code>
+  package's <code><a href='http://www.inside-r.org/r-doc/tm/matrix'>TermDocumentMatrix</a></code>,
+  <code><a href='http://www.inside-r.org/r-doc/tm/matrix'>DocumentTermMatrix</a></code>,
+  <code><a href='http://www.inside-r.org/r-doc/tm/VCorpus'>Corpus</a></code> or allows convenient inteface
+  between the qdap and tm packages.</p>
   
     </div>
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>apply_as_tm</li><li>dtm</li><li>tdm</li><li>tm2qdap</li>
+      <li>apply_as_tm</li><li>df2tm_corpus</li><li>dtm</li><li>tdm</li><li>tm_corpus2df</li><li>tm2qdap</li>
     </ul>
     <ul>
       
     </ul> -->
       
+    <h2>See also</h2>
+    
+  <code><a href='http://www.inside-r.org/r-doc/tm/matrix'>DocumentTermMatrix</a></code>,
+  <code><a href='http://www.inside-r.org/r-doc/tm/VCorpus'>Corpus</a></code>,
+  <code><a href='http://www.inside-r.org/r-doc/tm/matrix'>TermDocumentMatrix</a></code>
+
         
   </div>
 </div>

@@ -65,7 +65,15 @@ boolean_search(text.var, terms, ignore.case = TRUE, values = FALSE, exclude = NU
       <dt>text.var</dt>
       <dd>The text variable.</dd>
       <dt>terms</dt>
-      <dd>A character string(s) to search for.</dd>
+      <dd>A character string(s) to search for.  The
+  terms are aranged in a single string with AND (use
+  <code>AND</code> or <code>&&</code> to connect terms together) and OR
+  (use <code>OR</code> or <code>||</code> to to allow for searches of
+  either set of terms.  Spaces may be used to control what
+  is searched for. For example using <code>" I "</code> on
+  <code>c("I'm", "I want", "in")</code> will result in
+  <code>FALSE TRUE FALSE</code> whereas <code>"I"</code> will match all
+  three (if case is ignored).</dd>
       <dt>ignore.case</dt>
       <dd>logical.  If <code>TRUE</code> case is
   ignored.</dd>
@@ -75,11 +83,7 @@ boolean_search(text.var, terms, ignore.case = TRUE, values = FALSE, exclude = NU
       <dt>exclude</dt>
       <dd>Terms to exclude from the search.  If one
   of these terms is found in the sentence it can not be
-  returned.  The terms are aranged in a single string with
-  AND (use <code>AND</code> or <code>&&</code> to connect terms
-  together) and OR (use <code>OR</code> or <code>||</code> to to allow
-  for searches of either set of terms.  Spaces amy be used
-  to control what is searched for.</dd>
+  returned.</dd>
       <dt>apostrophe.remove</dt>
       <dd>logical.  If <code>TRUE</code> removes
   apostrophes from the text before examining.</dd>
