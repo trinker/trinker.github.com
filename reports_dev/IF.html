@@ -40,17 +40,14 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>IF(path = "clipboard", copy2clip = TRUE, width = 640, height = 360, center = TRUE, 
-  print = FALSE, text = "Your browser does not support iframes.")</pre>
+    <pre>IF(path = "clipboard", width = 640, height = 360, center = TRUE, print = FALSE, copy2clip = interactive(), 
+  text = "Your browser does not support iframes.")</pre>
     
     <h2>Arguments</h2>
     <dl>
       <dt>path</dt>
       <dd>A character vector url/tag copied to the
   clipboard. Default is to read from the clipboard.</dd>
-      <dt>copy2clip</dt>
-      <dd>logical.  If <code>TRUE</code> attempts to
-  copy the output to the clipboard.</dd>
       <dt>width</dt>
       <dd>The width of the iframe.</dd>
       <dt>height</dt>
@@ -58,6 +55,9 @@
       <dt>center</dt>
       <dd>logical. If <code>TRUE</code> the image will be
   centered, if <code>FALSE</code> image will be left justified.</dd>
+      <dt>copy2clip</dt>
+      <dd>logical.  If <code>TRUE</code> attempts to
+  copy the output to the clipboard.</dd>
       <dt>print</dt>
       <dd>logical.  If <code>TRUE</code>
   <code><a href='http://www.inside-r.org/r-doc/base/cat'>cat</a></code> prints the output to the console.

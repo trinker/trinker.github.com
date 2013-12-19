@@ -40,25 +40,25 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>YT(path = "clipboard", copy2clip = TRUE, width = 640, height = 360, print = FALSE)
+    <pre>YT(path = "clipboard", width = 640, height = 360, copy2clip = interactive(), print = FALSE)
 
-VM(path = "clipboard", copy2clip = TRUE, width = 640, height = 360, print = FALSE)
+VM(path = "clipboard", width = 640, height = 360, copy2clip = interactive(), print = FALSE)
 
 VD(path = "clipboard", video.js.path = "assets/js/vidscript.js", width = "100%", 
-  height = 520, indent.controls = 4, copy2clip = TRUE, print = FALSE)</pre>
+  height = 520, indent.controls = 4, copy2clip = interactive(), print = FALSE)</pre>
     
     <h2>Arguments</h2>
     <dl>
       <dt>path</dt>
       <dd>A url/tag/path. Default is to read from the
   clipboard.  Note that <code>VD</code> requires a .mp4 file.</dd>
-      <dt>copy2clip</dt>
-      <dd>logical.  If <code>TRUE</code> attempts to
-  copy the output to the clipboard.</dd>
       <dt>width</dt>
       <dd>The width of the player.</dd>
       <dt>height</dt>
       <dd>The height of the player.</dd>
+      <dt>copy2clip</dt>
+      <dd>logical.  If <code>TRUE</code> attempts to
+  copy the output to the clipboard.</dd>
       <dt>print</dt>
       <dd>logical.  If <code>TRUE</code>
   <code><a href='http://www.inside-r.org/r-doc/base/cat'>cat</a></code> prints the output to the console.
