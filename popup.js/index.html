@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>popup.js Demonstration</title>
+  <meta charset="utf-8">
+  <meta name="description" content="popup.js Demonstration">
+  <meta name="author" content="Tyler Rinker">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="http://slidifylibraries2.googlecode.com/git/inst/libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="http://slidifylibraries2.googlecode.com/git/inst/libraries/widgets/quiz/css/demo.css"></link>
+<link rel=stylesheet href="http://slidifylibraries2.googlecode.com/git/inst/libraries/widgets/bootstrap/css/bootstrap.css"></link>
+<link rel=stylesheet href="./assets/css/popup_style.css"></link>
+<link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="http://slidifylibraries2.googlecode.com/git/inst/libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/js/slides" 
+    src="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <aside class="gdbar">
+    <img src="data:image/jpeg;base64,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">
+  </aside>
+  <hgroup class="auto-fadein">
+    <h1>popup.js Demonstration</h1>
+    <h2></h2>
+    <p>Tyler Rinker<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <article data-timings="">
+    <style>
+body {
+  background-color: #000;
+}
+.quiz-option label{
+  display: inline;
+  font-size: 1em;
+}
+.refs {
+  padding-left: 80px;
+  text-indent: -35px;
+}
+ul.nav li::before { content: ""; } 
+ul.nav li{ font-size: 18px; line-height: 24px;}
+</style>
+
+<h2>Read-And-Delete</h2>
+
+<p><a href="somewhere.html" onmouseover="nhpup.popup('Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.');">some text</a>    </p>
+
+<p><a onmouseover="nhpup.popup('Here, a good friend: &lt;br&gt;&lt;/a&gt;&lt;br/&gt; &lt;img src=&quot;http://images4.wikia.nocookie.net/__cb20101015151248/muppet/images/0/05/Beaker.jpg&quot;&gt;', {'width': 140});">a picture</a></p>
+
+<p><a href="somewhere.html" onmouseover="nhpup.popup($('#hidden-table').html(), {'width': 400});">a table</a>
+</p></p>
+
+<div style="display:none;" id="hidden-table">
+  <table width="400" border="1">
+    <tbody>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Hans</td>
+            <td>22</td>
+        </tr>
+        <tr>
+            <td>Gretchen</td>
+            <td>22</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <article data-timings="">
+    <div class="testpup" onmouseover="nhpup.popup('A default popup ...');">
+    hover over me
+</div>
+
+<div class="testpup"
+     onmouseover="nhpup.popup('This has CSS class pup_class2 ...',
+                              {'class': 'pup_class2'});">
+    hover over me
+</div>
+
+<div class="testpup"
+     onmouseover="nhpup.popup('This has CSS class pup_class3 and a distinct width of 400px ...',
+                              {'class': 'pup_class3', 'width': 400});">
+    hover over me
+</div>
+
+<div class="testpup" id="rather_wide"
+     onmouseover="nhpup.popup('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut arcu magna. Donec lectus turpis, aliquet ut iaculis quis, dignissim sed lacus. Praesent porta mi a lorem ultricies ac pretium ligula ultricies. Sed vitae libero ut tellus scelerisque posuere eu vitae est. Suspendisse convallis nisl ut erat aliquet id pellentesque diam ullamcorper. Proin dapibus placerat erat, ac porttitor lacus tristique sit amet. Nulla nisl purus, sollicitudin vitae egestas at, ultricies vel elit. Praesent feugiat purus et turpis commodo eget ullamcorper enim rhoncus. Curabitur sed nisl et libero interdum mollis a non odio. Fusce libero mauris, lacinia id viverra eget, malesuada sed risus. Sed ut tempus libero.', {'width': 700});">
+    hover over me (this is gonna be big, though)
+</div>
+
+<div class="testpup" id="rather_tall"
+     onmouseover="nhpup.popup('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut arcu magna. Donec lectus turpis, aliquet ut iaculis quis, dignissim sed lacus. Praesent porta mi a lorem ultricies ac pretium ligula ultricies. Sed vitae libero ut tellus scelerisque posuere eu vitae est. Suspendisse convallis nisl ut erat aliquet id pellentesque diam ullamcorper. Proin dapibus placerat erat, ac porttitor lacus tristique sit amet. Nulla nisl purus, sollicitudin vitae egestas at, ultricies vel elit. Praesent feugiat purus et turpis commodo eget ullamcorper enim rhoncus. Curabitur sed nisl et libero interdum mollis a non odio. Fusce libero mauris, lacinia id viverra eget, malesuada sed risus. Sed ut tempus libero.', {'width': 300});">
+    hover over me (this is gonna be big, though)
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h1>Change width (500)</h1>
+  </hgroup>
+  <article data-timings="">
+    <p><a href="somewhere.html" onmouseover="nhpup.popup('Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.', {'width': 500});">some text</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h1>Wider still...</h1>
+  </hgroup>
+  <article data-timings="">
+    <p><a href="somewhere.html" onmouseover="nhpup.popup('Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.', {'width': 1000});">some text</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="refs" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>References</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Work based on Nicolas Honing&#39;s <a href="https://github.com/nhoening/popup.js">popup.js (https://github.com/nhoening/popup.js)</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title=''>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title=''>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Change width (500)'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Wider still...'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='References'>
+         5
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  <script src="http://slidifylibraries2.googlecode.com/git/inst/libraries/widgets/quiz/js/jquery.quiz.js"></script>
+<script src="http://slidifylibraries2.googlecode.com/git/inst/libraries/widgets/quiz/js/mustache.min.js"></script>
+<script src="http://slidifylibraries2.googlecode.com/git/inst/libraries/widgets/quiz/js/quiz-app.js"></script>
+<script src="http://slidifylibraries2.googlecode.com/git/inst/libraries/widgets/bootstrap/js/bootstrap.min.js"></script>
+<script src="http://slidifylibraries2.googlecode.com/git/inst/libraries/widgets/bootstrap/js/bootbox.min.js"></script>
+<script src="./assets/js/jquery-1.9.1.min.js"></script>
+<script src="./assets/js/nhpup-ioshack_1.0.js"></script>
+<script src="./assets/js/nhpup_1.0.js"></script>
+<script src="./assets/js/nhpup_1.1.js"></script>
+
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="http://slidifylibraries2.googlecode.com/git/inst/libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<script>  
+  $(function (){ 
+    $("#example").popover(); 
+    $("[rel='tooltip']").tooltip(); 
+  });  
+  </script>  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="http://slidifylibraries2.googlecode.com/git/inst/libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
