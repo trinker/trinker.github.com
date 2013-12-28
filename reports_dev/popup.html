@@ -72,7 +72,9 @@
     <div class="Details">
       <h2>Details</h2>
       
-      <p>The user must become familiar with Nicolas Honing's
+      <p><code>popup</code> adds the css/js scripts necessary to create
+  hight quality mouseover popup events.  The user must
+  become familiar with Nicolas Honing's
   <a href = 'https://github.com/nhoening/popup.js'>popup.js</a>.
   Currently no shortcut reports package tag generating
   function is offered for popups that utilize popup.js.  To
@@ -81,13 +83,33 @@
   
     </div>
 
+    <div class="Note">
+      <h2>Note</h2>
+      
+      <p>If adding popup.js documents to non-slidify, .Rmd based
+  presentations the user may have to manually add:</p>
+  
+      <p><code><link rel="stylesheet"
+  href="./assets/css/pop_style.css" /></code>  <code><script
+  type="text/javascript"
+  src="./assets/js/jquery-1.9.1.min.js"></script></code> 
+  <code><script type="text/javascript"
+  src="./assets/js/nhpup_1.1.js"></script></code></p>
+  
+      <p>to the document.</p>
+  
+    </div>
+
     <div class="References">
       <h2>References</h2>
       
-      <p><a href = 'https://github.com/nhoening/popup.js/blob/master/test/test.htm'>https://github.com/nhoening/popup.js/blob/master/test/test.htm</a></p>
+      <p><a href = 'https://github.com/nhoening/popup.js'>https://github.com/nhoening/popup.js</a></p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # popup()# ## <strong>End(Not run)</strong></div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>popup</li>

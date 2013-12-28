@@ -50,7 +50,11 @@ IW(path = "clipboard", link = NULL, side = "right", width = 540, height = IE(wid
       round(width/1.5)), new_win = TRUE, top = -15, right = 20, left = 20, bottom = 0, 
       copy2clip = interactive(), print = FALSE)
 
-IMF(image = "clipboard", ...)</pre>
+IMF(image = "clipboard", ...)
+
+IM_MO(path = "clipboard", link = NULL, width = 32, height = 32, width2 = width * 
+      10, height2 = height * 10, sty = width * 1.05, center = FALSE, new_win = TRUE, 
+      copy2clip = interactive(), print = FALSE)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -103,6 +107,10 @@ IMF(image = "clipboard", ...)</pre>
       <dt>bottom</dt>
       <dd>Space between bottom margin and bottom of
   text (0 is defualt).</dd>
+      <dt>width2</dt>
+      <dd>The width to grow to during mouseover.</dd>
+      <dt>height2</dt>
+      <dd>The height to grow to during mouseover.</dd>
     </dl>
     
     <div class="Value">
@@ -136,6 +144,22 @@ IMF(image = "clipboard", ...)</pre>
   first available image matching the image name.  No
   path/url is specified.  IMS stands for `image locate`.</p>
   
+      <p><code>IM_MO</code> - Creates an HTML image tag with mouseover
+  grow/shrink properties.  Only takes integer width/height
+  values converted to px.</p>
+  
+    </div>
+
+    <div class="Note">
+      <h2>Note</h2>
+      
+      <p><code>IM_MO</code> Requires a link to the &#145;<span class = "file">js/reports.js</span>&#146;
+  in the document as well as the document itself.  Usually
+  this is done automatically upon the use of
+  <code>new_report</code>/<code>presentation</code>.  <code>IM_MO</code> only
+  takes integer width/height values which are converted to
+  px.</p>
+  
     </div>
     
     <h2 id="examples">Examples</h2>
@@ -165,11 +189,15 @@ IMF(image = "clipboard", ...)</pre>
 </div>
 <div class='output'><div style="float:right;margin:-15px 20px 0px 20px;">
     <a href="http://www.talkstats.com/" target="_blank"><img src="http://www.talkstats.com/images/misc/logo.png" width="140" height="75"></a>
-</div> So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text! </div></pre>
+</div> So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text!  So much text! </div>
+<div class='input'>## <strong>Not run</strong>: 
+# IM_MO("http://i.imgur.com/VClk4DS.png")
+# ## <strong>End(Not run)</strong>
+</div></pre>
   </div>
   <div class="span4">
     <!-- <ul>
-      <li>IM</li><li>IM2</li><li>IMF</li><li>IW</li>
+      <li>IM</li><li>IM_MO</li><li>IM2</li><li>IMF</li><li>IW</li>
     </ul>
     <ul>
       
