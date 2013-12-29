@@ -4,7 +4,7 @@ title: Trinker's R Blog
 tagline: Experiments & Experiences in R
 ---
 {% include JB/setup %}
-<link rel="shortcut icon" href="/favicon.png" type="image/png">
+
 <div class="row">
   <div class="span12">
     <div class="row">
