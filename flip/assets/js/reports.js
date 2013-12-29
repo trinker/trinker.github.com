@@ -15,7 +15,3 @@ x.style.width=w;
 }
 
 
-function myFunction(x)
-{
-alert(x);
-}
