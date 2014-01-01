@@ -24,7 +24,7 @@
 	transform: perspective( 600px ) rotateY( 180deg );
 	background: #80BFFF; width:320px; height:427px; border-radius: 7px;
 	border-style:solid;
-    border-color:#000000;
+    border-color:#C7C7C7;
 	border-width:1px;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
