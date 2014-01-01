@@ -40,6 +40,15 @@
 	transform: perspective( 600px ) rotateY( 0deg );
 }
 
+.flip3D:focus > .front{
+	-webkit-transform: perspective( 600px ) rotateY( -180deg );
+	transform: perspective( 600px ) rotateY( -180deg );
+}
+.flip3D:focus > .back{
+	-webkit-transform: perspective( 600px ) rotateY( 0deg );
+	transform: perspective( 600px ) rotateY( 0deg );
+}
+
 .front .name {
     font-size: 1.7em;
     display: inline-block;
