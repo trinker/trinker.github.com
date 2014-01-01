@@ -45,8 +45,8 @@
 	transform: perspective( 600px ) rotateY( -180deg );
 }
 .flip3D:focus > .back{
-	-webkit-transform: perspective( 600px ) rotateY( -180deg );
-	transform: perspective( 600px ) rotateY( -180deg );
+	-webkit-transform: perspective( 600px ) rotateY( 180deg );
+	transform: perspective( 600px ) rotateY( 180deg );
 }
 
 .front .name {
