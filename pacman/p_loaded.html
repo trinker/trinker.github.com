@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>p_loaded. pacman 0.2.0</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">pacman 0.2.0</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>View loaded packages</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre>p_loaded(..., all = FALSE)</pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>...</dt>
+      <dd>Optional package names.  Adding package
+  names will check their individual load status.</dd>
+      <dt>all</dt>
+      <dd>logical.  If TRUE will show all packages
+  including base install; FALSE will show all packages
+  excluding base install packages that install when R
+  loads</dd>
+    </dl>
+    
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p>Output is a character string of loaded packages</p>
+  
+    </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## <strong>Not run</strong>: p_load(lattice)
+p_loaded()
+</div>
+<div class='output'> [1] "pacman"           "acc.roxygen2"     "staticdocs"       "highlight"        "codetools"       
+ [6] "reports"          "roxygen2"         "digest"           "devtools"         "qdap"            
+[11] "RColorBrewer"     "qdapDictionaries" "ggplot2"         
+</div>
+<div class='input'>p_loaded(all=TRUE)
+</div>
+<div class='output'> [1] "pacman"           "acc.roxygen2"     "staticdocs"       "highlight"        "codetools"       
+ [6] "tools"            "graphics"         "grDevices"        "utils"            "datasets"        
+[11] "reports"          "roxygen2"         "digest"           "devtools"         "qdap"            
+[16] "RColorBrewer"     "qdapDictionaries" "ggplot2"          "stats"            "methods"         
+[21] "base"            
+</div>
+<div class='input'>p_loaded(ggplot2, tm, qdap)
+</div>
+<div class='output'>ggplot2      tm    qdap 
+   TRUE   FALSE    TRUE 
+</div>
+<div class='input'>## <strong>Not run</strong>: p_unload(lattice)
+</div></pre>
+  </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>p_loaded</li>
+    </ul>
+    <ul>
+      <li>loaded</li><li>packages</li>
+    </ul> -->
+      
+    <h2>See also</h2>
+    
+<code><a href='http://www.inside-r.org/r-doc/base/zpackages'>.packages</a></code>,
+<code><a href='http://www.inside-r.org/r-doc/utils/sessionInfo'>sessionInfo</a></code>
+
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

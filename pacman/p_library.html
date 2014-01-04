@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>p_library. pacman 0.2.0</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">pacman 0.2.0</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Display library packages</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre>p_library(open = FALSE)
+
+p_lib(open = FALSE)</pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>open</dt>
+      <dd>logical. If TRUE opens the directory of the
+  add on packages library.</dd>
+    </dl>
+    
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p>Generates a vector of all available add on packages
+available to the user and optionally opens the user's
+library (this isn't necessarily where all of the available
+packages are stored).</p>
+  
+    </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>p_lib()
+</div>
+<div class='output'>  [1] "acc.roxygen2"     "animation"        "arcdiagram"       "ascii"            "base"            
+  [6] "bibtex"           "BiocGenerics"     "BiocInstaller"    "bitops"           "boot"            
+ [11] "brew"             "ca"               "car"              "caTools"          "chron"           
+ [16] "class"            "clickme"          "cluster"          "codetools"        "coin"            
+ [21] "colorspace"       "compiler"         "datasets"         "devtools"         "dichromat"       
+ [26] "digest"           "ellipse"          "evaluate"         "FactoMineR"       "flashClust"      
+ [31] "foreign"          "formatR"          "Formula"          "gdata"            "ggmap"           
+ [36] "ggplot2"          "ggthemes"         "gmailR"           "googleVis"        "gplots"          
+ [41] "graph"            "graphics"         "grDevices"        "grid"             "gridExtra"       
+ [46] "gtable"           "gtools"           "highlight"        "highr"            "Hmisc"           
+ [51] "HSAUR"            "httr"             "igraph"           "imguR"            "installr"        
+ [56] "kernlab"          "KernSmooth"       "knitcitations"    "knitr"            "koRpus"          
+ [61] "labeling"         "lattice"          "lda"              "leaps"            "lsa"             
+ [66] "manipulate"       "markdown"         "MASS"             "Matrix"           "memoise"         
+ [71] "methods"          "mgcv"             "microbenchmark"   "missMDA"          "modeltools"      
+ [76] "munsell"          "mvtnorm"          "nlme"             "NLP"              "nnet"            
+ [81] "openNLP"          "openNLPdata"      "pacman"           "pander"           "parallel"        
+ [86] "plotflow"         "plotrix"          "plyr"             "ProjectTemplate"  "proto"           
+ [91] "proxy"            "qdap"             "qdapDictionaries" "randomForest"     "rapport"         
+ [96] "rCharts"          "RColorBrewer"     "Rcpp"             "RCurl"            "reports"         
+[101] "reporttools"      "reshape"          "reshape2"         "rgl"              "Rgraphviz"       
+[106] "rJava"            "rjson"            "RJSONIO"          "rJython"          "roxygen2"        
+[111] "rpart"            "rstudio"          "RWeka"            "RWekajars"        "RWordPress"      
+[116] "scales"           "scatterplot3d"    "slam"             "slidify"          "slidifyLibraries"
+[121] "Snowball"         "SnowballC"        "spatial"          "splines"          "staticdocs"      
+[126] "stats"            "stats4"           "stringr"          "survival"         "tables"          
+[131] "tcltk"            "testthat"         "tm"               "tools"            "translations"    
+[136] "utils"            "vcd"              "venneuler"        "whisker"          "wordcloud"       
+[141] "XLConnect"        "xlsx"             "xlsxjars"         "XML"              "XMLRPC"          
+[146] "xtable"           "yaml"            
+</div>
+<div class='input'>p_library()
+</div>
+<div class='output'>  [1] "acc.roxygen2"     "animation"        "arcdiagram"       "ascii"            "base"            
+  [6] "bibtex"           "BiocGenerics"     "BiocInstaller"    "bitops"           "boot"            
+ [11] "brew"             "ca"               "car"              "caTools"          "chron"           
+ [16] "class"            "clickme"          "cluster"          "codetools"        "coin"            
+ [21] "colorspace"       "compiler"         "datasets"         "devtools"         "dichromat"       
+ [26] "digest"           "ellipse"          "evaluate"         "FactoMineR"       "flashClust"      
+ [31] "foreign"          "formatR"          "Formula"          "gdata"            "ggmap"           
+ [36] "ggplot2"          "ggthemes"         "gmailR"           "googleVis"        "gplots"          
+ [41] "graph"            "graphics"         "grDevices"        "grid"             "gridExtra"       
+ [46] "gtable"           "gtools"           "highlight"        "highr"            "Hmisc"           
+ [51] "HSAUR"            "httr"             "igraph"           "imguR"            "installr"        
+ [56] "kernlab"          "KernSmooth"       "knitcitations"    "knitr"            "koRpus"          
+ [61] "labeling"         "lattice"          "lda"              "leaps"            "lsa"             
+ [66] "manipulate"       "markdown"         "MASS"             "Matrix"           "memoise"         
+ [71] "methods"          "mgcv"             "microbenchmark"   "missMDA"          "modeltools"      
+ [76] "munsell"          "mvtnorm"          "nlme"             "NLP"              "nnet"            
+ [81] "openNLP"          "openNLPdata"      "pacman"           "pander"           "parallel"        
+ [86] "plotflow"         "plotrix"          "plyr"             "ProjectTemplate"  "proto"           
+ [91] "proxy"            "qdap"             "qdapDictionaries" "randomForest"     "rapport"         
+ [96] "rCharts"          "RColorBrewer"     "Rcpp"             "RCurl"            "reports"         
+[101] "reporttools"      "reshape"          "reshape2"         "rgl"              "Rgraphviz"       
+[106] "rJava"            "rjson"            "RJSONIO"          "rJython"          "roxygen2"        
+[111] "rpart"            "rstudio"          "RWeka"            "RWekajars"        "RWordPress"      
+[116] "scales"           "scatterplot3d"    "slam"             "slidify"          "slidifyLibraries"
+[121] "Snowball"         "SnowballC"        "spatial"          "splines"          "staticdocs"      
+[126] "stats"            "stats4"           "stringr"          "survival"         "tables"          
+[131] "tcltk"            "testthat"         "tm"               "tools"            "translations"    
+[136] "utils"            "vcd"              "venneuler"        "whisker"          "wordcloud"       
+[141] "XLConnect"        "xlsx"             "xlsxjars"         "XML"              "XMLRPC"          
+[146] "xtable"           "yaml"            
+</div>
+<div class='input'>## <strong>Not run</strong>: p_lib(TRUE)
+</div></pre>
+  </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>p_lib</li><li>p_library</li>
+    </ul>
+    <ul>
+      <li>library</li><li>package</li>
+    </ul> -->
+      
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

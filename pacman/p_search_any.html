@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>p_search_any. pacman 0.2.0</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">pacman 0.2.0</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Search for CRAN packages by maintainer or match
+by similar package names</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre>p_search_any(term, search.by = "Maintainer")
+
+p_sa(term, search.by = "Maintainer")</pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>term</dt>
+      <dd>A search character string</dd>
+      <dt>search.by</dt>
+      <dd>The variable to search by (takes a
+  integer or a character string): 1-"Maintainer",
+  1-"Author", 2-"Package", 3-"Version"</dd>
+    </dl>
+    
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p>Uses agrep to find packages by maintainer (often this is
+the author as well) or by name</p>
+  
+    </div>
+
+    <div class="details">
+      <h2>details</h2>
+      
+      <p>Useful for finding packages by the same author (usually
+  the same as the maintainer).  This function will take
+  some time as the function is searching thousands of
+  packages via CRAN's website.</p>
+  
+    </div>
+
+    <div class="References">
+      <h2>References</h2>
+      
+      <p><a href = 'http://cran.r-project.org/web/checks/check_summary_by_maintainer.html#summary_by_maintainer'>http://cran.r-project.org/web/checks/check_summary_by_maintainer.html#summary_by_maintainer</a></p>
+  
+    </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # p_search_any("hadley", 1)# p_sa("hadley", "author")# p_sa("color", 2)# p_sa("psych", "package")# ## <strong>End(Not run)</strong></div></pre>
+  </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>p_sa</li><li>p_search_any</li>
+    </ul>
+    <ul>
+      <li>author</li><li>package</li><li>search</li>
+    </ul> -->
+      
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>
