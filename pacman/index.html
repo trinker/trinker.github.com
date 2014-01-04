@@ -39,47 +39,13 @@
   <div class="span8">
     <h1>pacman</h1>
 
-<p><a href="https://travis-ci.org/trinker/pacman"><img src="https://travis-ci.org/trinker/pacman.png?branch=master" alt="Build Status"/></a></p>
-
 <p>The pacman package is an R package management tool that combines the functionality of base library related functions into intuitively named functions.  This package is ideally added to .Rprofile to increase workflow by reducing time recalling obscurely named functions, reducing code and integrating functionality of base functions to simultaneously perform multiple actions.  </p>
 
-<p><img src="inst/pacman_logo/r_pacman.png" width="45%"></p>
+<p><img src="http://github.com/trinker/pacman/blob/master/inst/pacman_logo/r_pacman.png?raw=true" width="45%"></p>
 
 <p>Function names in the pacman package follow the format of <code>p_xxx</code> where &#39;xxx&#39; is the task the function performs.  For instance the <code>p_load</code> function allows the user to load one or more packages as a more generic substitute for the <code>library</code> or <code>require</code> functions and if the package isn&#39;t available locally it will install it for you.</p>
-
-<h2>CRAN Release Date</h2>
-
-<p>We plan to upload pacman to CRAN on 02-01-2014.  We will tackle as many <a href="https://github.com/trinker/pacman/issues?state=open">issues</a> between now and then as possible.</p>
-
-<h2>Installation</h2>
-
-<p>Currently there isn&#39;t a release on <a href="http://cran.r-project.org/">CRAN</a>.</p>
-
-<p>You can, however, download the <a href="https://github.com/trinker/pacman/zipball/master">zip ball</a> or <a href="https://github.com/trinker/pacman/tarball/master">tar ball</a>, decompress and run <code>R CMD INSTALL</code> on it, or use the <strong>devtools</strong> package to install the development version:</p>
-
-<pre><code class="r">## Make sure your current packages are up to date
-update.packages()
-## devtools is required
-library(devtools)
-install_github(&quot;pacman&quot;, &quot;trinker&quot;)
-</code></pre>
-
-<p>Note: Windows users need <a href="http://www.murdoch-sutherland.com/Rtools/">Rtools</a> and <a href="http://CRAN.R-project.org/package=devtools">devtools</a> to install this way.</p>
-
-<h2>Help</h2>
-
-<p><a href="https://dl.dropbox.com/u/61803503/pacman.pdf">Package PDF Help Manual</a>   </p>
-
-<h2>Contact</h2>
-
-<p>You are welcome to:</p>
-
-<ul>
-<li>submit suggestions and bug-reports at: <a href="https://github.com/trinker/pacman/issues">https://github.com/trinker/pacman/issues</a></li>
-<li>send a pull request on: <a href="https://github.com/trinker/pacman/">https://github.com/trinker/pacman/</a></li>
-<li>compose a friendly e-mail to: <a href="mailto:tyler.rinker@gmail.com">tyler.rinker@gmail.com</a></li>
-</ul>
-
+  
+<p>Download the development version of pacman <a href="https://github.com/trinker/pacman/">here</a> 
 
     <h2>Help topics</h2>
 
@@ -96,7 +62,7 @@ install_github(&quot;pacman&quot;, &quot;trinker&quot;)
         <code><a href="p_base.html">p_base</a></code><br />List all the packages in a base install</li>
             
       <li>
-        <code><a href="p_citation.html">p_citation</a></code>(p_cite)<br />Generate citation for a package</li>
+        <code><a href="p_citation.html">p_citation</a></code> <code><a href="p_citation.html">p_cite</a></code><br />Generate citation for a package</li>
             
       <li>
         <code><a href="p_cran.html">p_cran</a></code><br />List all available CRAN packages</li>
@@ -105,7 +71,7 @@ install_github(&quot;pacman&quot;, &quot;trinker&quot;)
         <code><a href="p_data.html">p_data</a></code><br />List all data sets available in a package</li>
             
       <li>
-        <code><a href="p_delete.html">p_delete</a></code>(p_del)<br />Remove package(s) from the library</li>
+        <code><a href="p_delete.html">p_delete</a></code> <code><a href="p_delete.html">p_del</a></code><br />Remove package(s) from the library</li>
             
       <li>
         <code><a href="p_detectOS.html">p_detectOS</a></code><br />Detects operating system</li>
@@ -114,25 +80,28 @@ install_github(&quot;pacman&quot;, &quot;trinker&quot;)
         <code><a href="p_exists.html">p_exists</a></code><br />Checks CRAN to determine if a package exists</li>
             
       <li>
-        <code><a href="p_functions.html">p_functions</a></code>(p_funs)<br />List the functions from a package</li>
+        <code><a href="p_functions.html">p_functions</a></code> <code><a href="p_functions.html">p_funs</a></code><br />List the functions from a package</li>
             
       <li>
         <code><a href="p_help.html">p_help</a></code><br />Generate an html, web or pdf package help manual</li>
             
       <li>
-        <code><a href="p_information.html">p_information</a></code>(p_info)<br />See information on a package.</li>
+        <code><a href="p_information.html">p_information</a></code> <code><a href="p_information.html">p_info</a></code><br />See information on a package.</li>
             
       <li>
-        <code><a href="p_install.html">p_install</a></code>(p_get)<br />Installs and loads a package provided the package is a CRAN package</li>
+        <code><a href="p_install.html">p_install</a></code><br />Installs and loads a package provided the package is a CRAN package</li>
+      <li>
+        <code><a href="p_install.html">p_get</a></code><br />Installs and loads a package provided the package is a CRAN package</li>
+            
             
       <li>
-        <code><a href="p_interactive.html">p_interactive</a></code>(p_inter)<br />Interactive package exploration</li>
+        <code><a href="p_interactive.html">p_interactive</a></code> <code><a href="p_interactive.html">p_inter</a></code><br />Interactive package exploration</li>
             
       <li>
         <code><a href="p_isloaded.html">p_isloaded</a></code><br />Check if package(s) is loaded</li>
             
       <li>
-        <code><a href="p_library.html">p_library</a></code>(p_lib)<br />Display library packages</li>
+        <code><a href="p_library.html">p_library</a></code> <code><a href="p_library.html">p_lib</a></code><br />Display library packages</li>
             
       <li>
         <code><a href="p_load.html">p_load</a></code><br />Load one or more packages</li>
@@ -150,11 +119,11 @@ install_github(&quot;pacman&quot;, &quot;trinker&quot;)
         <code><a href="p_path.html">p_path</a></code><br />See path to library of add on package</li>
             
       <li>
-        <code><a href="p_search_any.html">p_search_any</a></code>(p_sa)<br />Search for CRAN packages by maintainer or match
+        <code><a href="p_search_any.html">p_search_any</a></code> <code><a href="p_search_any.html">p_sa</a></code><br />Search for CRAN packages by maintainer or match
 </li>
             
       <li>
-        <code><a href="p_search_library.html">p_search_library</a></code>(p_sl)<br />Search library packages using partial matching</li>
+        <code><a href="p_search_library.html">p_search_library</a></code> <code><a href="p_search_library.html">p_sl</a></code><br />Search library packages using partial matching</li>
             
       <li>
         <code><a href="p_temp.html">p_temp</a></code><br />Install a package temporarily</li>
@@ -166,28 +135,19 @@ install_github(&quot;pacman&quot;, &quot;trinker&quot;)
         <code><a href="p_unlock.html">p_unlock</a></code><br />Delete 00LOCK Directory</li>
             
       <li>
-        <code><a href="p_update.html">p_update</a></code>(p_up)<br />Update out of date packages</li>
+        <code><a href="p_update.html">p_update</a></code> <code><a href="p_update.html">p_up</a></code><br />Update out of date packages</li>
             
       <li>
-        <code><a href="p_version.html">p_version</a></code>(p_ver)<br />Determine installed package version</li>
+        <code><a href="p_version.html">p_version</a></code> <code><a href="p_version.html">p_ver</a></code><br />Determine installed package version</li>
             
       <li>
-        <code><a href="p_vignette.html">p_vignette</a></code>(p_vign)<br />Look at a package's vignette</li>
+        <code><a href="p_vignette.html">p_vignette</a></code> <code><a href="p_vignette.html">p_vign</a></code><br />Look at a package's vignette</li>
             
       <li>
-        <code><a href="p_zip.html">p_zip</a></code>(p_tar)<br />Install zip/tar</li>
-    
-    </ul>
-    <h3>Other</h3>
-    
-    
-    <ul class="index">
-        
+        <code><a href="p_zip.html">p_zip</a></code><br />Install zip/tar</li>
       <li>
-        <code><a href="p_set_cranrepo.html">p_set_cranrepo</a></code><br />Check if a repo is set</li>
+        <code><a href="p_zip.html">p_tar</a></code><br />Install zip/tar</li>
             
-      <li>
-        <code><a href="print.p_data.html">print.p_data</a></code><br />Prints a p_data Object</li>
     
     </ul>
   </div>
