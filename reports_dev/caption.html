@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>caption. reports 0.2.0</title>
+<title>cap. reports 0.2.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -40,11 +40,14 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>caption(type = 1, label, caption, copy2clip = interactive(), print = FALSE)
+    <pre>cap(type = 1, label, caption, style = "margin-bottom: 3em;", copy2clip = interactive(), 
+  print = FALSE, spaces = 2)
 
-caption_figure(label, caption, copy2clip = interactive(), print = FALSE)
+caption_figure(label, caption, style = "margin-bottom: 3em;", copy2clip = interactive(), 
+      print = FALSE)
 
-caption_table(label, caption, copy2clip = interactive(), print = FALSE)</pre>
+caption_table(label, caption, style = "margin-top: 4em;", copy2clip = interactive(), 
+      print = FALSE, spaces = 2)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -56,6 +59,9 @@ caption_table(label, caption, copy2clip = interactive(), print = FALSE)</pre>
       <dt>caption</dt>
       <dd>A caption to place below/above a
   figure/table.</dd>
+      <dt>style</dt>
+      <dd>Additional style elements to be passed to
+  the html <code>p</code> tag.</dd>
       <dt>copy2clip</dt>
       <dd>logical.  If <code>TRUE</code> attempts to
   copy the output to the clipboard.</dd>
@@ -63,6 +69,9 @@ caption_table(label, caption, copy2clip = interactive(), print = FALSE)</pre>
       <dd>logical.  If <code>TRUE</code>
   <code><a href='http://www.inside-r.org/r-doc/base/cat'>cat</a></code> prints the output to the console.
   If <code>FALSE</code> returns to the console.</dd>
+      <dt>spaces</dt>
+      <dd>An integer value dictating the number of
+  lines to skip after the table caption header.</dd>
     </dl>
     
     <div class="Value">
@@ -76,22 +85,29 @@ caption_table(label, caption, copy2clip = interactive(), print = FALSE)</pre>
       <h2>Description</h2>
       
       <p><code>caption</code> - Keep track of numbering for table and
-  figure captions.</p>
+figure captions.</p>
   
-      <p><code>caption_figure</code> - Keep track of numbering for
-  figure captions.</p>
+      <p><code>caption_figure</code> - Keep track of numbering for figure
+captions.</p>
   
       <p><code>caption_table</code> - Keep track of numbering for table
-  captions.</p>
+captions.</p>
   
     </div>
     
     <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # caption_figure("fig1", "A random figure.")# caption_table("tab1", "A table")# ## <strong>End(Not run)</strong></div></pre>
+    <pre class="examples"><div class='input'>caption_figure("fig1", "A random figure.")
+</div>
+<div class='output'>[1] "<p id=\"fig1\" style=\"margin-bottom: 3em;\"><em>Figure 1</em>: A random figure.</p>"
+</div>
+<div class='input'>caption_table("tab1", "A table")
+</div>
+<div class='output'>[1] "<p id=\"tab1\" style=\"margin-top: 4em;\">Table 1<br><br><em>A table</em></p>"
+</div></pre>
   </div>
   <div class="span4">
     <!-- <ul>
-      <li>caption</li><li>caption_figure</li><li>caption_table</li>
+      <li>cap</li><li>caption_figure</li><li>caption_table</li>
     </ul>
     <ul>
       <li>caption</li>

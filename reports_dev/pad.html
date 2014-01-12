@@ -65,17 +65,17 @@
       <h2>Value</h2>
       
       <p>Returns a character vector every element padded with
-  0/spaces.</p>
+0/spaces.</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p>A convenience wrapper for <code><a href='http://www.inside-r.org/r-doc/base/sprintf'>sprintf</a></code>
-  that pads the front end of strings with spaces or 0s.
-  Useful for creating multiple uniform directories that
-  will maintain correct order.</p>
+      <p>A convenience wrapper for <code><a href='http://www.inside-r.org/r-doc/base/sprintf'>sprintf</a></code> that
+pads the front end of strings with spaces or 0s. Useful for
+creating multiple uniform directories that will maintain
+correct order.</p>
   
     </div>
     
@@ -86,7 +86,7 @@
 </div>
 <div class='input'>pad(sample(1:10, 10), sort=FALSE)
 </div>
-<div class='output'> [1] "02" "04" "09" "10" "06" "03" "07" "08" "01" "05"
+<div class='output'> [1] "09" "05" "01" "06" "02" "04" "07" "10" "08" "03"
 </div>
 <div class='input'>pad(as.character(sample(1:10, 10)))
 </div>
@@ -94,7 +94,7 @@
 </div>
 <div class='input'>pad(as.character(sample(1:10, 10)), sort=FALSE)
 </div>
-<div class='output'> [1] " 5" " 1" "10" " 8" " 6" " 9" " 4" " 7" " 3" " 2"
+<div class='output'> [1] " 6" " 7" " 8" " 3" " 9" "10" " 5" " 4" " 2" " 1"
 </div>
 <div class='input'>pad(as.character(sample(1:10, 10)), 4)
 </div>
@@ -111,7 +111,7 @@
       
     <h2>See also</h2>
     
-  <code><a href='http://www.inside-r.org/r-doc/base/sprintf'>sprintf</a></code>
+<code><a href='http://www.inside-r.org/r-doc/base/sprintf'>sprintf</a></code>
 
         
   </div>

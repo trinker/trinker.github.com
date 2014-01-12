@@ -61,8 +61,8 @@
     <div class="Value">
       <h2>Value</h2>
       
-      <p>Creates a document template framework for template
-  personal use or submission.</p>
+      <p>Creates a document template framework for template personal
+use or submission.</p>
   
     </div>
 
@@ -70,9 +70,9 @@
       <h2>Description</h2>
       
       <p>This function generates a document template for personal
-  use or submission to the reports package to be included
-  as a template in the doc_library.  This function is
-  similar to <code><a href='http://www.inside-r.org/r-doc/utils/package.skeleton'>package.skeleton</a></code>.</p>
+use or submission to the reports package to be included as
+a template in the doc_library.  This function is similar to
+<code><a href='http://www.inside-r.org/r-doc/utils/package.skeleton'>package.skeleton</a></code>.</p>
   
     </div>
 
@@ -81,37 +81,36 @@
       
       <p>templates must contain the following two items: <ul>
 <li>DESCRIPTION - A file used to keep track of users
-  and package information.  All fields must be filled in.
-  </li>
+and package information.  All fields must be filled in.
+</li>
 <li>documents - A minimal working document template.
-  <ul>
-<li>If <code>doc.type = rnw</code> - Must
-  contain: doc.rnw (preamble included) </li>
+<ul>
+<li>If <code>doc.type = rnw</code> - Must contain:
+doc.rnw (preamble included) </li>
+<li>If <code>doc.type =
+tex</code> - Must contain: doc.tex and preamble.tex </li>
 <li>If
-  <code>doc.type = tex</code> - Must contain: doc.tex and
-  preamble.tex </li>
-<li>If <code>doc.type = rmd</code> - Must
-  contain: doc.rmd </li>
-<li>If <code>doc.type = docx</code> -
-  Must contain: doc.docx </li>
+<code>doc.type = rmd</code> - Must contain: doc.rmd </li>
+<li>If
+<code>doc.type = docx</code> - Must contain: doc.docx </li>
 </ul>
  </li>
-</ul>
- Additional project files and
-  directories can be stored in the <b>inst</b> directory.
-  Files in this directory will be placed in the main
-  directory of the template created by
-  <code>new_report</code>.  If a directory called
-  <b>css</b> this directory will be moved to the
-  <b>REPORT</b> directory rather than the main directory.</p>
+</ul></p>
   
-      <p>To be submitted a .tex template must run in Debian TeX
-  Live on Linux Mint and MiKTex on Windows.  After a
-  template has been tested it can be sent as a .zip file to
-  the reports package <a href='mailto:reports.rpackage@gmail.com'>reports.rpackage@gmail.com</a>.
-  Please note that the template folder/directory name must
-  end in _tex, _rnw, _rmd or _doc to indicate to the user
-  the type of template.</p>
+      <p>Additional project files and directories can be stored in
+the <b>inst</b> directory.  Files in this directory will be
+placed in the main directory of the template created by
+<code>new_report</code>.  If a directory called
+<b>css</b> this directory will be moved to the
+<b>REPORT</b> directory rather than the main directory.</p>
+  
+      <p>To be submitted a .tex template must run in Debian TeX Live
+on Linux Mint and MiKTex on Windows.  After a template has
+been tested it can be sent as a .zip file to the reports
+package <a href='mailto:reports.rpackage@gmail.com'>reports.rpackage@gmail.com</a>.  Please note
+that the template folder/directory name must end in _tex,
+_rnw, _rmd or _doc to indicate to the user the type of
+template.</p>
   
     </div>
       </div>
