@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>gridify. embodied 1.0</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">embodied 1.0</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Add Grids to Multiple png</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre>gridify(path = ".", out = file.path(path, "out"), columns = 20, rows = columns, parallel = FALSE, 
+  cores = detectCores()/2, width = 480, height = 480, text.color = "gray60", text.size = 3, 
+      grid.color = text.color, ...)</pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>path</dt>
+      <dd>Path to the in directory with the png files.</dd>
+      <dt>out</dt>
+      <dd>Path to the out directory.</dd>
+      <dt>columns</dt>
+      <dd>The number of grid columns.</dd>
+      <dt>rows</dt>
+      <dd>The number of grid rows.</dd>
+      <dt>parallel</dt>
+      <dd>logical.  If <code>TRUE</code> attempts to run
+  the function on multiple cores.  Note that this may not
+  mean a speed boost if you have one core or if the data
+  set is smaller as the cluster takes time to create.</dd>
+      <dt>cores</dt>
+      <dd>The number of cores to use if <code>parallel
+  = TRUE</code>.  Default is half the number of available cores.</dd>
+      <dt>width</dt>
+      <dd>The width of the device.</dd>
+      <dt>height</dt>
+      <dd>The height of the device.</dd>
+      <dt>text.color</dt>
+      <dd>The color to make the coordinate
+  labels.</dd>
+      <dt>text.size</dt>
+      <dd>The size of the coordinate labels.</dd>
+      <dt>grid.color</dt>
+      <dd>The color to make the grid.</dd>
+      <dt>...</dt>
+      <dd>other arguments passed to
+  <code><a href='http://www.inside-r.org/r-doc/grDevices/png'>png</a></code>.</dd>
+    </dl>
+    
+    <div class="Value">
+      <h2>Value</h2>
+      
+      <p>Returns multiple png files with grid lines.</p>
+  
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p>A wrapper function for <code>grid_calc</code> and
+<code>plot_grid</code> used to read in a directory of png files.
+Add grid lines.  Output to directory.</p>
+  
+    </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # deb <- system.file("extdata", package = "embodied")# gridify(deb, "out")# ## <strong>End(Not run)</strong></div></pre>
+  </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>gridify</li>
+    </ul>
+    <ul>
+      
+    </ul> -->
+      
+    <h2>See also</h2>
+    
+<code>plot_grid</code>
+
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>
