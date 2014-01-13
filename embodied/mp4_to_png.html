@@ -40,7 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>mp4_to_png(path, out = file.path(dirname(path), "raw"), images.per.sec = 1, ffmpeg = NULL)</pre>
+    <pre>mp4_to_png(path, out = file.path(dirname(path), "raw"), fps = 1, ffmpeg = NULL)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -48,8 +48,8 @@
       <dd>Path to the in .mp4 file.</dd>
       <dt>out</dt>
       <dd>Path to place the out .png files.</dd>
-      <dt>images.per.sec</dt>
-      <dd>The number of images per second to
+      <dt>fps</dt>
+      <dd>The number of image frames per second to
   output.</dd>
       <dt>ffmpeg</dt>
       <dd>Raw <a href = 'http://www.ffmpeg.org/'>mmpeg</a>
