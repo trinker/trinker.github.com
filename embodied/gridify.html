@@ -95,7 +95,13 @@ Add grid lines.  Output to directory.</p>
     </div>
     
     <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # deb <- system.file("extdata", package = "embodied")# gridify(deb, "out")# ## <strong>End(Not run)</strong></div></pre>
+    <pre class="examples"><div class='input'>deb <- system.file("extdata", package = "embodied")
+gridify(deb, "out")
+</div>
+<strong class='warning'>Warning message:
+'C:\Users\trinker\GitHub\embodied\out' already exists</strong>
+<strong class='message'>Grid files plotted to:
+out</strong></pre>
   </div>
   <div class="span4">
     <!-- <ul>

@@ -35,22 +35,43 @@
         
       </header>
       
-      <h1>Convert Video to Images</h1>
+      <h1>Convert Between Video/Images</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>mp4_to_png(path, out = file.path(dirname(path), "raw"), fps = 1, ffmpeg = NULL)</pre>
+    <pre>mp4_to_png(path, out = file.path(dirname(path), "raw"), fps = 4, size = "500x500", 
+  other.opts = "", crop = "", ffmpeg = NULL)
+
+png_to_mp4(path, out = file.path(dirname(path), "raw"), fps = 4, ffmpeg = NULL)</pre>
     
     <h2>Arguments</h2>
     <dl>
       <dt>path</dt>
-      <dd>Path to the in .mp4 file.</dd>
+      <dd>Path to the in .mp4 video file
+  (<code>mp4_to_png</code>) or .png directory
+  (<code>png_to_mp4</code>).</dd>
       <dt>out</dt>
-      <dd>Path to place the out .png files.</dd>
+      <dd>Path to place the out .png files or .mp4
+  video.</dd>
       <dt>fps</dt>
       <dd>The number of image frames per second to
-  output.</dd>
+  output.  Generally the fps used to desconstruct a video
+  into images will be used to reconstruct the images back
+  to video.</dd>
+      <dt>size</dt>
+      <dd>Character string of the output size of the
+  png files in the form of "width x height" (in px and no
+  spaces).</dd>
+      <dt>other.opts</dt>
+      <dd>other options to be passed to
+  <a href = 'http://www.ffmpeg.org/'>ffmpeg</a>.</dd>
+      <dt>crop</dt>
+      <dd>Character string of
+  <a href = 'http://www.ffmpeg.org/'>ffmpeg</a> code used to crop
+  the images (e.g. <code>"-vf crop=in_w-2*120"</code>).  See:
+  <a href = 'http://www.ffmpeg.org/ffmpeg-filters.html#crop'>http://www.ffmpeg.org/ffmpeg-filters.html#crop</a> for
+  more.</dd>
       <dt>ffmpeg</dt>
       <dd>Raw <a href = 'http://www.ffmpeg.org/'>mmpeg</a>
   code that may be provided in lieu of the other
@@ -60,14 +81,21 @@
     <div class="Value">
       <h2>Value</h2>
       
-      <p>Returns an interval .mp4.</p>
+      <p><code>mp4_to_png</code> - Returns an directory of still .png
+images.</p>
+  
+      <p><code>mp4_to_png</code> - Returns a spliced .mp4 video.</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Convert an .mp4 video to .png images.</p>
+      <p><code>mp4_to_png</code> - Converts a .mp4 video to a directory of
+sill .png images.</p>
+  
+      <p><code>png_to_mp4</code> - Converts a directory of .png images to
+.mp4 video.</p>
   
     </div>
 
@@ -76,6 +104,8 @@
       
       <p>User must have <a href = 'http://www.ffmpeg.org/'>mmpeg</a>
 installed.</p>
+  
+      <p><code>mp4_to_png</code> - Currently not functional.</p>
   
     </div>
 
@@ -87,11 +117,11 @@ installed.</p>
     </div>
     
     <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # mp4_to_png("spliced.mp4")# ## <strong>End(Not run)</strong></div></pre>
+    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # mp4_to_png("foo.mp4")# ## <strong>End(Not run)</strong></div></pre>
   </div>
   <div class="span4">
     <!-- <ul>
-      <li>mp4_to_png</li>
+      <li>mp4_to_png</li><li>png_to_mp4</li>
     </ul>
     <ul>
       
