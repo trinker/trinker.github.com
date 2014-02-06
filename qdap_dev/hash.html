@@ -5,7 +5,7 @@
 <title>hash. qdap 1.0.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="
-  Bryan Goodrich and Tyler Rinker &lt;tyler.rinker@gmail.com&gt;.
+Bryan Goodrich and Tyler Rinker &lt;tyler.rinker@gmail.com&gt;.
 ">
 
 <link href="css/bootstrap.css" rel="stylesheet">
@@ -44,7 +44,9 @@
     <h2>Usage</h2>
     <pre>hash(x, mode.out = "numeric")
 
-hash_look(terms, envir, missing = NA)</pre>
+hash_look(terms, envir, missing = NA)
+
+terms %ha% envir</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -65,8 +67,8 @@ hash_look(terms, envir, missing = NA)</pre>
     <div class="Value">
       <h2>Value</h2>
       
-      <p>Creates a "hash table", a two column data frame in its
-  own environment.</p>
+      <p>Creates a "hash table", a two column data frame in its own
+environment.</p>
   
     </div>
 
@@ -74,13 +76,13 @@ hash_look(terms, envir, missing = NA)</pre>
       <h2>Description</h2>
       
       <p><code>hash</code> - Creates a new environment for quick hash
-  style dictionary lookup.</p>
+style dictionary lookup.</p>
   
       <p><code>hash_look</code> - Works with a hash table such as is
-  returned from <code>hash</code>, to lookup values.</p>
+returned from <code>hash</code>, to lookup values.</p>
   
       <p><code>terms %ha% envir</code> - A binary operator version of
-  <code>hash_look</code>.</p>
+<code>hash_look</code>.</p>
   
     </div>
 
@@ -101,13 +103,12 @@ hash_look(terms, envir, missing = NA)</pre>
       
     <h2>See also</h2>
     
-  <code>lookup</code>,
-  <code><a href='http://www.inside-r.org/r-doc/base/environment'>environment</a></code>
+<code>lookup</code>, <code><a href='http://www.inside-r.org/r-doc/base/environment'>environment</a></code>
 
     
     <h2>Author</h2>
     
-  Bryan Goodrich and Tyler Rinker <tyler.rinker@gmail.com>.
+Bryan Goodrich and Tyler Rinker <tyler.rinker@gmail.com>.
 
     
   </div>

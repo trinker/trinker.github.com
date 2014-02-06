@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>cm_range.temp. qdap 1.0.0</title>
+<title>rm_url. qdap 1.0.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -35,55 +35,58 @@
         
       </header>
       
-      <h1>Range Code Sheet</h1>
+      <h1>Remove/Replace URLs</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>cm_range.temp(codes, text.var = NULL, grouping.var = NULL, file = NULL)</pre>
+    <pre>rm_url(text.var, trim = TRUE, clean = TRUE, pattern = "(http[^ ]*)|(www\\.[^ ]*)", 
+  replacement = "", ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
-      <dt>codes</dt>
-      <dd>Character vector of codes.</dd>
       <dt>text.var</dt>
       <dd>The text variable.</dd>
-      <dt>grouping.var</dt>
-      <dd>The grouping variables.  Also takes a
-  single grouping variable or a list of 1 or more grouping
-  variables.</dd>
-      <dt>file</dt>
-      <dd>A connection, or a character string naming
-  the file to print to (.txt or .doc is recommended).</dd>
+      <dt>trim</dt>
+      <dd>logical.  If <code>TRUE</code> removes leading and
+  trailing white spaces.</dd>
+      <dt>clean</dt>
+      <dd>trim logical.  If <code>TRUE</code> extra white
+  sapces and escaped character will be removed.</dd>
+      <dt>pattern</dt>
+      <dd>A character string containing a regular
+  expression (or character string for <code>fixed = TRUE</code>)
+  to be matched in the given character vector.</dd>
+      <dt>replacement</dt>
+      <dd>Replacement for matched
+  <code>pattern</code>.</dd>
     </dl>
     
-    <div class="Description">
-      <h2>Description</h2>
+    <div class="Value">
+      <h2>Value</h2>
       
-      <p>Generates a range coding sheet for coding words.</p>
+      <p>Returns a character string with URLs removed.</p>
   
     </div>
 
-    <div class="References">
-      <h2>References</h2>
+    <div class="Description">
+      <h2>Description</h2>
       
-      <p>Miles, M. B. & Huberman, A. M. (1994). An expanded
-sourcebook: Qualitative data analysis. 2nd ed. Thousand
-Oaks, CA: SAGE Publications.</p>
+      <p>Remove/Replace URLs from a string.</p>
   
     </div>
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>cm_range.temp</li>
+      <li>rm_url</li>
     </ul>
     <ul>
-      <li>coding</li>
+      <li>http</li><li>url</li><li>www</li>
     </ul> -->
       
     <h2>See also</h2>
     
-<code>cm_time.temp</code>
+<code><a href='http://www.inside-r.org/r-doc/base/grep'>gsub</a></code>
 
         
   </div>

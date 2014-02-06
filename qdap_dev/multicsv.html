@@ -50,16 +50,17 @@ mcsv_w(..., dir = NULL, open = FALSE, sep = ", ", dataframes = NULL, pos = 1, en
       <dd>csv file(s) to read.</dd>
       <dt>a.names</dt>
       <dd>object names to assign the csv file(s) to.
-  If <code>NULL</code> assigns the csv to the name(s) of the csv
-  file(s) in the global environment.</dd>
+  If <code>NULL</code> assigns the name(s) of the csv files in
+  the directory, without the file extension, to the objects
+  in the global environment.</dd>
       <dt>l.name</dt>
-      <dd>A character vector of names to assign to
-  the csv files (dataframes) being read in.  Default
-  (<code>NULL</code>) uses the names of the files in the
-  directory without the file extension.</dd>
+      <dd>A single character string of a name to
+  assign to the list if dataframes created by the csv files
+  being read in.  Default (<code>NULL</code>) uses <code>L1</code>.</dd>
       <dt>list</dt>
-      <dd>A character vector of length one to name the
-  list being read in. Default is <code>"L1"</code>.</dd>
+      <dd>logical.  If <code>TRUE</code> then a list of
+  dataframes is crated in the global environment in
+  addition to the individual dataframes.</dd>
       <dt>pos</dt>
       <dd>where to do the removal. By default, uses the
   current environment.</dd>
@@ -91,18 +92,18 @@ mcsv_w(..., dir = NULL, open = FALSE, sep = ", ", dataframes = NULL, pos = 1, en
       <p><code>mcsv_r</code> - reads in multiple csv files at once.</p>
   
       <p><code>mcsv_w</code> - creates a directory with multiple csv
-  files. Silently returns the path of the directory.</p>
+files. Silently returns the path of the directory.</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p><code>mcsv_w</code> - Read and assign multiple csv files at the
-  same time.</p>
+      <p><code>mcsv_r</code> - Read and assign multiple csv files at the
+same time.</p>
   
-      <p><code>mcsv_w</code> - Write multiple csv files into a file at
-  the same time.</p>
+      <p><code>mcsv_w</code> - Write multiple csv files into a file at the
+same time.</p>
   
     </div>
 
@@ -110,7 +111,7 @@ mcsv_w(..., dir = NULL, open = FALSE, sep = ", ", dataframes = NULL, pos = 1, en
       <h2>Details</h2>
       
       <p>mcsv is short for "multiple csv" and the suffix c(_r, _w)
-  stands for "read" (r) or "write" (w).</p>
+stands for "read" (r) or "write" (w).</p>
   
     </div>
 
@@ -118,8 +119,8 @@ mcsv_w(..., dir = NULL, open = FALSE, sep = ", ", dataframes = NULL, pos = 1, en
       <h2>Note</h2>
       
       <p><code>mcsv_r</code> is useful for reading in
-  multiple csv files from <code>cm_df.temp</code>
-  for interaction with <code>cm_range2long</code>.</p>
+multiple csv files from <code>cm_df.temp</code> for
+interaction with <code>cm_range2long</code>.</p>
   
     </div>
       </div>
@@ -133,9 +134,9 @@ mcsv_w(..., dir = NULL, open = FALSE, sep = ", ", dataframes = NULL, pos = 1, en
       
     <h2>See also</h2>
     
-  <code>cm_range2long</code>,
-  <code>cm_df.temp</code>,
-  <code>condense</code>, <code><a href='http://www.inside-r.org/r-doc/base/assign'>assign</a></code>
+<code>cm_range2long</code>,
+<code>cm_df.temp</code>,
+<code>condense</code>, <code><a href='http://www.inside-r.org/r-doc/base/assign'>assign</a></code>
 
         
   </div>

@@ -115,29 +115,29 @@
       <h2>Value</h2>
       
       <p>An object of the class <code>"cm_distance"</code>.  This is a
-  list with the following components:</p>
+list with the following components:</p>
   
       <p>pvalsA logical indication of whether pvalues were
-  calculated replicationsInteger value of number
-  of replications used extended.outputAn optional
-  list of individual repeated measures information
-  main.outputA list of aggregated repeated measures
-  information adj.alphaAn adjusted alpha level
-  (based on <code class = 'eq'>\alpha = .05</code>) for the estimated p-values
-  using the upper end of the confidence interval around the
-  p-values</p>
+calculated replicationsInteger value of number of
+replications used extended.outputAn optional list
+of individual repeated measures information
+main.outputA list of aggregated repeated measures
+information adj.alphaAn adjusted alpha level
+(based on <code class = 'eq'>\alpha = .05</code>) for the estimated p-values
+using the upper end of the confidence interval around the
+p-values</p>
   
       <p>Within the lists of extended.output and list of the
-  main.output are the following items:</p>
+main.output are the following items:</p>
   
-      <p>meanA distance matrix of average distances
-  between codes sdA matrix of standard deviations
-  of distances between codes nA matrix of counts
-  of distances between codes stan.meanA matrix of
-  standardized values of distances between codes.  The
-  closer a value is to zero the closer two codes relate.
-  pvalueA n optional matrix of simulated pvalues
-  associated with the mean distances</p>
+      <p>meanA distance matrix of average distances between
+codes sdA matrix of standard deviations of
+distances between codes nA matrix of counts of
+distances between codes stan.meanA matrix of
+standardized values of distances between codes.  The closer
+a value is to zero the closer two codes relate.
+pvalueA n optional matrix of simulated pvalues
+associated with the mean distances</p>
   
     </div>
 
@@ -145,21 +145,21 @@
       <h2>Description</h2>
       
       <p>Generate distance measures to ascertain a mean distance
-  measure between codes.</p>
+measure between codes.</p>
   
     </div>
 
     <div class="Details">
       <h2>Details</h2>
       
-      <p>Note that row names are the first code and column names
-  are the second comparison code. The values for Code A
-  compared to Code B will not be the same as Code B
-  compared to Code A. This is because, unlike a true
-  distance measure, cm_distance's matrix is asymmetrical.
-  <code>cm_distance</code> computes the distance by taking each
-  span (start and end) for Code A and comparing it to the
-  nearest start or end for Code B.</p>
+      <p>Note that row names are the first code and column names are
+the second comparison code. The values for Code A compared
+to Code B will not be the same as Code B compared to Code
+A. This is because, unlike a true distance measure,
+cm_distance's matrix is asymmetrical. <code>cm_distance</code>
+computes the distance by taking each span (start and end)
+for Code A and comparing it to the nearest start or end for
+Code B.</p>
   
     </div>
 
@@ -194,7 +194,7 @@
       
     <h2>See also</h2>
     
-  <code>print.cm_distance</code>
+<code>print.cm_distance</code>
 
         
   </div>

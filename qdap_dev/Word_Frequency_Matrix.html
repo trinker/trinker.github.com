@@ -106,25 +106,23 @@ wfm_weight(wfm.obj, type = "prop")</pre>
     <div class="Value">
       <h2>Value</h2>
       
-      <p><code>wfm</code> - returns a word frequency of the class
-  matrix.</p>
+      <p><code>wfm</code> - returns a word frequency of the class matrix.</p>
   
       <p><code>wfdf</code> - returns a word frequency of the class
-  data.frame with a words column and optional margin sums.</p>
+data.frame with a words column and optional margin sums.</p>
   
       <p><code>wfm_expanded</code> - returns a matrix similar to a word
-  frequency matrix (<code>wfm</code>) but the rows are expanded
-  to represent the maximum usages of the word and cells are
-  dummy coded to indicate that number of uses.</p>
+frequency matrix (<code>wfm</code>) but the rows are expanded to
+represent the maximum usages of the word and cells are
+dummy coded to indicate that number of uses.</p>
   
       <p><code>wfm_combine</code> - returns a word frequency matrix
-  (<code>wfm</code>) or dataframe (<code>wfdf</code>) with counts for
-  the combined word.lists merged and remaining terms
-  (<code>else</code>).</p>
+(<code>wfm</code>) or dataframe (<code>wfdf</code>) with counts for the
+combined word.lists merged and remaining terms
+(<code>else</code>).</p>
   
-      <p><code>wfm_weight</code> - Returns a weighted matrix for use
-  with other R packages. The output is not of the class
-  "wfm".</p>
+      <p><code>wfm_weight</code> - Returns a weighted matrix for use with
+other R packages. The output is not of the class "wfm".</p>
   
     </div>
 
@@ -132,19 +130,19 @@ wfm_weight(wfm.obj, type = "prop")</pre>
       <h2>Description</h2>
       
       <p><code>wfm</code> - Generate a word frequency matrix by grouping
-  variable(s).</p>
+variable(s).</p>
   
       <p><code>wfdf</code> - Generate a word frequency data frame by
-  grouping variable.</p>
+grouping variable.</p>
   
       <p><code>wfm_expanded</code> - Expand a word frequency matrix to
-  have multiple rows for each word.</p>
+have multiple rows for each word.</p>
   
       <p><code>wfm_combine</code> - Combines words (rows) of a word
-  frequency matrix (<code>wfdf</code>) together.</p>
+frequency matrix (<code>wfdf</code>) together.</p>
   
       <p><code>wfm_weight</code> - Weight a word frequency matrix for
-  analysis were such weighting is sensible..</p>
+analysis were such weighting is sensible..</p>
   
     </div>
 
@@ -152,9 +150,9 @@ wfm_weight(wfm.obj, type = "prop")</pre>
       <h2>Note</h2>
       
       <p>Words can be kept as one by inserting a double tilde
-  (<code>"~~"</code>), or other character strings passed to
-  char2space, as a single word/entry. This is useful for
-  keeping proper names as a single unit.</p>
+(<code>"~~"</code>), or other character strings passed to
+char2space, as a single word/entry. This is useful for
+keeping proper names as a single unit.</p>
   
     </div>
       </div>

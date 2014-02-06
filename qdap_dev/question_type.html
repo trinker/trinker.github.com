@@ -91,19 +91,18 @@
     <div class="Value">
       <h2>Value</h2>
       
-      <p>Returns a list of: rawA dataframe of the
-  questions used in the transcript and their type.
-  countA dataframe of total questions
-  (<code>tot.quest</code>) and counts of question types (initial
-  interrogative word) by grouping variable(s).
-  rnpDataframe of the frequency and proportions of
-  question types by grouping variable. indsThe
-  indices of the original text variable that contain
-  questions. missingThe row numbers of the missing
-  data (excluded from analysis). percentThe value
-  of percent used for plotting purposes.
-  zero.replaceThe value of zero.replace used for
-  plotting purposes.</p>
+      <p>Returns a list of: rawA dataframe of the questions
+used in the transcript and their type. countA
+dataframe of total questions (<code>tot.quest</code>) and counts
+of question types (initial interrogative word) by grouping
+variable(s). rnpDataframe of the frequency and
+proportions of question types by grouping variable.
+indsThe indices of the original text variable that
+contain questions. missingThe row numbers of the
+missing data (excluded from analysis). percentThe
+value of percent used for plotting purposes.
+zero.replaceThe value of zero.replace used for
+plotting purposes.</p>
   
     </div>
 
@@ -118,34 +117,34 @@
       <h2>Details</h2>
       
       <p>The algorithm searches for the following interrogative
-  words (and optionally, their negative contraction form as
-  well):</p>
+words (and optionally, their negative contraction form as
+well):</p>
   
-      <p>1) whose 2) whom 3) who 4) where 5) what 6) which 7) why
-  8) when 9) were* 10) was* 11) does* 12) did* 13) do* 14)
-  is 15) are* 16) will* 17) how 18) should 19) could 20)
-  would* 21) shall 22) may 23) might* 24) must* 25) can*
-  26) has 27) have* 28) had* 29) ok 30) right 31) correct
-  32) implied do/does/did</p>
+      <p>1) whose 2) whom 3) who 4) where 5) what 6) which 7) why 8)
+when 9) were* 10) was* 11) does* 12) did* 13) do* 14) is
+15) are* 16) will* 17) how 18) should 19) could 20) would*
+21) shall 22) may 23) might* 24) must* 25) can* 26) has 27)
+have* 28) had* 29) ok 30) right 31) correct 32) implied
+do/does/did</p>
   
       <p>The interrogative word that is found first (with the
-  exception of "ok", "right"/"alright", and "correct") in
-  the question determines the sentence type. "ok",
-  "right"/"alright", and "correct" sentence types are
-  determined if the sentence is a question with no other
-  interrogative words found and "ok", "right"/"alright", or
-  "correct" is the last word of the sentence.  Those
-  interrogative sentences beginning with the word "you",
-  "wanna", or "want" are categorized as implying
-  do/does/did question type, though the use of do/does/did
-  is not explicit.  Those sentence beginning with "you"
-  followed by a select interrogative word (and or their
-  negative counter parts) above (marked with *) or 1-2
-  amplifier(s) followed by the select interrogative word
-  are categorized by the select word rather than an implied
-  do/does/did question type.  A sentence that is marked
-  "ok" over rides an implied do/does/did label.  Those with
-  undetermined sentence type are labeled unknown.</p>
+exception of "ok", "right"/"alright", and "correct") in the
+question determines the sentence type. "ok",
+"right"/"alright", and "correct" sentence types are
+determined if the sentence is a question with no other
+interrogative words found and "ok", "right"/"alright", or
+"correct" is the last word of the sentence.  Those
+interrogative sentences beginning with the word "you",
+"wanna", or "want" are categorized as implying do/does/did
+question type, though the use of do/does/did is not
+explicit.  Those sentence beginning with "you" followed by
+a select interrogative word (and or their negative counter
+parts) above (marked with *) or 1-2 amplifier(s) followed
+by the select interrogative word are categorized by the
+select word rather than an implied do/does/did question
+type.  A sentence that is marked "ok" over rides an implied
+do/does/did label.  Those with undetermined sentence type
+are labeled unknown.</p>
   
     </div>
       </div>
@@ -154,13 +153,13 @@
       <li>question_type</li>
     </ul>
     <ul>
-      <li>question-count</li><li>question,</li>
+      <li>question,</li><li>question-count</li>
     </ul> -->
       
     <h2>See also</h2>
     
-  <code>colcomb2class</code>,
-  <code>bracketX</code>
+<code>colcomb2class</code>,
+<code>bracketX</code>
 
         
   </div>

@@ -40,7 +40,9 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>lookup(terms, key.match, key.reassign = NULL, missing = NA)</pre>
+    <pre>lookup(terms, key.match, key.reassign = NULL, missing = NA)
+
+terms %l% key.match</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -73,11 +75,11 @@
       <h2>Description</h2>
       
       <p>Environment based hash table useful for large vector
-  lookups.</p>
+lookups.</p>
   
-      <p><code>terms %l% key.match</code> - A binary operator version
-  of <code>lookup</code> for when <code>key.match</code> is a
-  data.frame or named list.</p>
+      <p><code>terms %l% key.match</code> - A binary operator version of
+<code>lookup</code> for when <code>key.match</code> is a data.frame or
+named list.</p>
   
     </div>
       </div>
@@ -91,7 +93,7 @@
       
     <h2>See also</h2>
     
-  <code><a href='http://www.inside-r.org/r-doc/base/environment'>new.env</a></code>
+<code><a href='http://www.inside-r.org/r-doc/base/environment'>new.env</a></code>
 
         
   </div>

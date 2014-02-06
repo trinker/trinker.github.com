@@ -41,9 +41,10 @@
   <div class="span8">
     <h2>Usage</h2>
     <pre>dispersion_plot(text.var, match.terms, grouping.var = NULL, rm.vars = NULL, color = "blue", 
-  bg.color = "grey90", horiz.color = "grey85", symbol = "|", title = "Lexical Dispersion Plot", 
-      rev.factor = TRUE, wrap = "'", xlab = "Dialogue (Words)", ylab = NULL, size = 4, 
-      plot = TRUE, char2space = "~~", scales = "free", space = "free", total.color = "black")</pre>
+  bg.color = "grey90", horiz.color = "grey85", total.color = "black", symbol = "|", 
+      title = "Lexical Dispersion Plot", rev.factor = TRUE, wrap = "'", xlab = "Dialogue (Words)", 
+      ylab = NULL, size = 4, plot = TRUE, char2space = "~~", apostrophe.remove = FALSE, 
+      scales = "free", space = "free", ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -68,6 +69,9 @@
       <dt>horiz.color</dt>
       <dd>The color of the horizontal tracking
   stripe.  Use <code>horiz.color = bg.color</code> to eliminate.</dd>
+      <dt>total.color</dt>
+      <dd>The color to use for summary `all`
+  group.  If <code>NULL</code> totals are dropped.</dd>
       <dt>symbol</dt>
       <dd>The word symbol.  Defualt is <code>"|"</code>.</dd>
       <dt>title</dt>
@@ -93,6 +97,9 @@
       <dt>char2space</dt>
       <dd>A vector of characters to be turned
   into spaces.</dd>
+      <dt>apostrophe.remove</dt>
+      <dd>logical.  If <code>TRUE</code> removes
+  apostrophes from the output.</dd>
       <dt>scales</dt>
       <dd>Should scales be fixed (<code>"fixed"</code>, the
   default), free (<code>"free"</code>), or free in one dimension
@@ -104,16 +111,16 @@
   <code>"free_x"</code> their width will be proportional to the
   length of the x scale; or if <code>"free"</code> both height
   and width will vary.</dd>
-      <dt>total.color</dt>
-      <dd>The color to use for summary `all`
-  group.  If <code>NULL</code> totals are dropped.</dd>
+      <dt>...</dt>
+      <dd>Other argument supplied to
+  <code>strip</code>.</dd>
     </dl>
     
     <div class="Value">
       <h2>Value</h2>
       
       <p>Plots a dispersion plot and invisibly returns the ggplot2
-  object.</p>
+object.</p>
   
     </div>
 
@@ -128,11 +135,11 @@
       <h2>Note</h2>
       
       <p>The match.terms is character sensitive.  Spacing is an
-  important way to grab specific words and requires careful
-  thought.  Using "read" will find the words "bread",
-  "read" "reading", and "ready".  If you want to search for
-  just the word "read" you'd supply a vector of c(" read ",
-  " reads", " reading", " reader").</p>
+important way to grab specific words and requires careful
+thought.  Using "read" will find the words "bread", "read"
+"reading", and "ready".  If you want to search for just the
+word "read" you'd supply a vector of c(" read ", " reads",
+" reading", " reader").</p>
   
     </div>
       </div>
@@ -146,7 +153,7 @@
       
     <h2>See also</h2>
     
-  <code>term_match</code>
+<code>term_match</code>
 
         
   </div>

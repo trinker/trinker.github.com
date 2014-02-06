@@ -5,8 +5,7 @@
 <title>sentSplit. qdap 1.0.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="
-  Dason Kurkiewicz and Tyler Rinker
-  &lt;tyler.rinker@gmail.com&gt;.
+Dason Kurkiewicz and Tyler Rinker &lt;tyler.rinker@gmail.com&gt;.
 ">
 
 <link href="css/bootstrap.css" rel="stylesheet">
@@ -48,7 +47,10 @@
 
 sentCombine(text.var, grouping.var = NULL, as.list = FALSE)
 
-TOT(tot)</pre>
+TOT(tot)
+
+sent_detect(text.var, endmarks = c("?", ".", "!", "|"), incomplete.sub = TRUE, rm.bracket = TRUE, 
+      ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -99,15 +101,18 @@ TOT(tot)</pre>
       <h2>Value</h2>
       
       <p><code>sentSplit</code> - returns a dataframe with turn of talk
-  broken apart into sentences.  Optionally a stemmed
-  version of the text variable may be returned as well.</p>
+broken apart into sentences.  Optionally a stemmed version
+of the text variable may be returned as well.</p>
   
       <p><code>sentCombine</code> - returns a list of vectors with the
-  continuous sentences by grouping.var pasted together.
-  returned as well.</p>
+continuous sentences by grouping.var pasted together.
+returned as well.</p>
   
-      <p><code>TOT</code> - returns a numeric vector of the turns of
-  talk without sentence sub indexing (e.g. 3.2 become 3).</p>
+      <p><code>TOT</code> - returns a numeric vector of the turns of talk
+without sentence sub indexing (e.g. 3.2 become 3).</p>
+  
+      <p><code>sent_detect</code> - returns a character vector of
+sentences split on endmark.</p>
   
     </div>
 
@@ -115,16 +120,19 @@ TOT(tot)</pre>
       <h2>Description</h2>
       
       <p><code>sentSplit</code> - Splits turns of talk into individual
-  sentences (provided proper punctuation is used).  This
-  procedure is usually done as part of the data read in and
-  cleaning process.</p>
+sentences (provided proper punctuation is used).  This
+procedure is usually done as part of the data read in and
+cleaning process.</p>
   
       <p><code>sentCombine</code> - Combines sentences by the same
-  grouping variable together.</p>
+grouping variable together.</p>
   
       <p><code>TOT</code> - Convert the tot column from
-  <code>sentSplit</code> to turn of talk index (no
-  sub sentence).  Generally, for internal use.</p>
+<code>sentSplit</code> to turn of talk index (no sub
+sentence).  Generally, for internal use.</p>
+  
+      <p><code>sent_detect</code> - Detect and split sentences on endmark
+boundaries.</p>
   
     </div>
 
@@ -146,7 +154,7 @@ TOT(tot)</pre>
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>sentCombine</li><li>sentSplit</li><li>TOT</li>
+      <li>TOT</li><li>sentCombine</li><li>sentSplit</li><li>sent_detect</li>
     </ul>
     <ul>
       <li>sentence,</li><li>split,</li><li>turn-of-talk</li>
@@ -154,15 +162,14 @@ TOT(tot)</pre>
       
     <h2>See also</h2>
     
-  <code>bracketX</code>,
-  <code>incomplete_replace</code>,
-  <code>stem2df</code> , <code>TOT</code>
+<code>bracketX</code>,
+<code>incomplete_replace</code>,
+<code>stem2df</code> , <code>TOT</code>
 
     
     <h2>Author</h2>
     
-  Dason Kurkiewicz and Tyler Rinker
-  <tyler.rinker@gmail.com>.
+Dason Kurkiewicz and Tyler Rinker <tyler.rinker@gmail.com>.
 
     
   </div>
