@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>dissimilarity. qdap 0.2.3</title>
+<title>dissimilarity. qdap 1.2.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.2.3</a>
+      <a class="brand" href="#">qdap 1.2.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -41,7 +41,7 @@
   <div class="span8">
     <h2>Usage</h2>
     <pre>dissimilarity(text.var, grouping.var = NULL, method = "prop", diag = FALSE, upper = FALSE, 
-  p = 2)</pre>
+  p = 2, ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -65,14 +65,17 @@
       <dd>logical.  If <code>TRUE</code> returns the upper
   triangle of the matrix.</dd>
       <dt>p</dt>
-      <dd>The power of the Minkowski distance</dd>
+      <dd>The power of the Minkowski distance.</dd>
+      <dt>...</dt>
+      <dd>Other arguments passed to
+  <code>wfm</code>.</dd>
     </dl>
     
     <div class="Value">
       <h2>Value</h2>
       
       <p>Returns a matrix of dissimilarity values (the agreement
-  between text).</p>
+between text).</p>
   
     </div>
 
@@ -80,7 +83,7 @@
       <h2>Description</h2>
       
       <p>Uses the distance function to calculate dissimilarity
-  statistics by grouping variables.</p>
+statistics by grouping variables.</p>
   
     </div>
       </div>
@@ -94,7 +97,7 @@
       
     <h2>See also</h2>
     
-  <code><a href='http://www.inside-r.org/r-doc/stats/dist'>dist</a></code>
+<code><a href='http://www.inside-r.org/r-doc/stats/dist'>dist</a></code>
 
         
   </div>

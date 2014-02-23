@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>qprep. qdap 1.0.0</title>
+<title>qprep. qdap 1.2.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 1.0.0</a>
+      <a class="brand" href="#">qdap 1.2.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -41,7 +41,7 @@
   <div class="span8">
     <h2>Usage</h2>
     <pre>qprep(text.var, rm.dash = TRUE, bracket = "all", missing = NULL, names = FALSE, abbreviation = qdapDictionaries::abbreviations, 
-  replace = NULL, ignore.case = TRUE, num.paste = "separate", ...)</pre>
+  replace = NULL, ignore.case = TRUE, num.paste = TRUE, ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -75,11 +75,11 @@
       <dd>logical.  If <code>TRUE</code> replaces
   without regard to capitalization.</dd>
       <dt>num.paste</dt>
-      <dd>A character string c(<code>"separate"</code>,
-  <code>"combine"</code>); <code>"separate"</code> will treat each word
-  section as separate, <code>"combine"</code> will lump the
-  sections together as one word.  Also takes the argument
-  <code>NULL</code> which turns off this parsing technique.</dd>
+      <dd>logical.  If <code>TURE</code> a the elements
+  of larger numbers are separated with spaces.  If
+  <code>FALSE</code> the elements will be joined without spaces.
+  Also takes the argument <code>NULL</code> which turns off this
+  parsing technique.</dd>
       <dt>...</dt>
       <dd>Other arguments passed to
   <code>replace_symbol</code>.</dd>

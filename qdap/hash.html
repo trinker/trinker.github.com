@@ -2,10 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>hash. qdap 0.2.3</title>
+<title>hash. qdap 1.2.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="
-  Bryan Goodrich and Tyler Rinker &lt;tyler.rinker@gmail.com&gt;.
+Bryan Goodrich and Tyler Rinker &lt;tyler.rinker@gmail.com&gt;.
 ">
 
 <link href="css/bootstrap.css" rel="stylesheet">
@@ -22,7 +22,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.2.3</a>
+      <a class="brand" href="#">qdap 1.2.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -42,7 +42,11 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>hash(x, mode.out = "numeric")</pre>
+    <pre>hash(x, mode.out = "numeric")
+
+hash_look(terms, envir, missing = NA)
+
+terms %ha% envir</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -51,21 +55,34 @@
       <dt>mode.out</dt>
       <dd>The type of output (column 2) expected
   (e.g., <code>"character"</code>, <code>"numeric"</code>, etc.)</dd>
+      <dt>terms</dt>
+      <dd>A vector of terms to undergo a lookup.</dd>
+      <dt>envir</dt>
+      <dd>The hash environment to use.</dd>
+      <dt>missing</dt>
+      <dd>Value to assign to terms not found in the
+  hash table.</dd>
     </dl>
     
     <div class="Value">
       <h2>Value</h2>
       
-      <p>Creates a "hash table" or a two column data frame in its
-  own environment.</p>
+      <p>Creates a "hash table", a two column data frame in its own
+environment.</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Creates a new environment for quick hash style dictionary
-  lookup.</p>
+      <p><code>hash</code> - Creates a new environment for quick hash
+style dictionary lookup.</p>
+  
+      <p><code>hash_look</code> - Works with a hash table such as is
+returned from <code>hash</code>, to lookup values.</p>
+  
+      <p><code>terms %ha% envir</code> - A binary operator version of
+<code>hash_look</code>.</p>
   
     </div>
 
@@ -78,7 +95,7 @@
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>hash</li>
+      <li>%ha%</li><li>hash</li><li>hash_look</li>
     </ul>
     <ul>
       <li>dictionary,</li><li>hash,</li><li>lookup</li>
@@ -86,13 +103,12 @@
       
     <h2>See also</h2>
     
-  <code>lookup</code>,
-  <code><a href='http://www.inside-r.org/r-doc/base/environment'>environment</a></code>
+<code>lookup</code>, <code><a href='http://www.inside-r.org/r-doc/base/environment'>environment</a></code>
 
     
     <h2>Author</h2>
     
-  Bryan Goodrich and Tyler Rinker <tyler.rinker@gmail.com>.
+Bryan Goodrich and Tyler Rinker <tyler.rinker@gmail.com>.
 
     
   </div>

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>gantt_rep. qdap 0.2.3</title>
+<title>gantt_rep. qdap 1.2.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.2.3</a>
+      <a class="brand" href="#">qdap 1.2.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,7 +40,8 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>gantt_rep(rm.var, text.var, grouping.var, units = "words", col.sep = "_")</pre>
+    <pre>gantt_rep(rm.var, text.var, grouping.var = NULL, units = "words", col.sep = "_", 
+  name.sep = "_")</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -59,15 +60,17 @@
   <code>"word"</code>, or <code>"sentence"</code>.</dd>
       <dt>col.sep</dt>
       <dd>The character string to use to separate
-  pasted variables in the merged grouping variable
-  header/name.</dd>
+  pasted variables in the pasted columns.</dd>
+      <dt>name.sep</dt>
+      <dd>The character string to use to separate
+  column names of the pasted columns.</dd>
     </dl>
     
     <div class="Value">
       <h2>Value</h2>
       
       <p>Returns a data frame of start and end times by repeated
-  measure and grouping variable(s)</p>
+measure and grouping variable(s)</p>
   
     </div>
 
@@ -75,19 +78,17 @@
       <h2>Description</h2>
       
       <p>Produces start and end times for occurrences for each
-  repeated measure condition.</p>
+repeated measure condition.</p>
   
     </div>
 
     <div class="Note">
       <h2>Note</h2>
       
-      <p>For non repeated measures data/plotting use
-  <code>gantt</code>; for a convenient wrapper that
-  takes text and generates plots use
-  <code>gantt_plot</code>; and for a flexible gantt
-  plot that words with code matrix functions (cm) use
-  <code>gantt_wrap</code>.</p>
+      <p>For non-repeated measures data use
+<code>gantt</code>.  For more flexible plotting
+needs use <code>gantt_wrap</code> over the generic
+plotting method.</p>
   
     </div>
 
@@ -95,7 +96,7 @@
       <h2>References</h2>
       
       <p>Clark, W. & Gantt, H. (1922) The Gantt chart, a working
-  tool of management. New York, Ronald Press.</p>
+tool of management. New York, Ronald Press.</p>
   
     </div>
       </div>
@@ -109,9 +110,8 @@
       
     <h2>See also</h2>
     
-  <code>gantt</code>,
-  <code>gantt_wrap</code>,
-  <code>gantt_plot</code>
+<code>gantt</code>, <code>gantt_wrap</code>,
+<code>gantt_plot</code>
 
         
   </div>

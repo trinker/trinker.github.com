@@ -2,11 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>sentSplit. qdap 0.2.3</title>
+<title>sentSplit. qdap 1.2.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="
-  Dason Kurkiewicz and Tyler Rinker
-  &lt;tyler.rinker@gmail.com&gt;.
+Dason Kurkiewicz and Tyler Rinker &lt;tyler.rinker@gmail.com&gt;.
 ">
 
 <link href="css/bootstrap.css" rel="stylesheet">
@@ -23,7 +22,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.2.3</a>
+      <a class="brand" href="#">qdap 1.2.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -43,12 +42,15 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>sentSplit(dataframe, text.var, endmarks = c("?", ".", "!", "|"), incomplete.sub = TRUE, 
+    <pre>sentSplit(dataframe, text.var, rm.var = NULL, endmarks = c("?", ".", "!", "|"), incomplete.sub = TRUE, 
   rm.bracket = TRUE, stem.col = FALSE, text.place = "right", ...)
 
 sentCombine(text.var, grouping.var = NULL, as.list = FALSE)
 
-TOT(tot)</pre>
+TOT(tot)
+
+sent_detect(text.var, endmarks = c("?", ".", "!", "|"), incomplete.sub = TRUE, rm.bracket = TRUE, 
+      ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -57,6 +59,10 @@ TOT(tot)</pre>
   text variable.</dd>
       <dt>text.var</dt>
       <dd>The text variable.</dd>
+      <dt>rm.var</dt>
+      <dd>An optional character vector of 1 or 2
+  naming the variables that are repeated measures (This
+  will restart the <strong>"tot"</strong> column).</dd>
       <dt>endmarks</dt>
       <dd>A character vector of endmarks to split
   turns of talk into sentences.</dd>
@@ -95,15 +101,18 @@ TOT(tot)</pre>
       <h2>Value</h2>
       
       <p><code>sentSplit</code> - returns a dataframe with turn of talk
-  broken apart into sentences.  Optionally a stemmed
-  version of the text variable may be returned as well.</p>
+broken apart into sentences.  Optionally a stemmed version
+of the text variable may be returned as well.</p>
   
       <p><code>sentCombine</code> - returns a list of vectors with the
-  continuous sentences by grouping.var pasted together.
-  returned as well.</p>
+continuous sentences by grouping.var pasted together.
+returned as well.</p>
   
-      <p><code>TOT</code> - returns a numeric vector of the turns of
-  talk without sentence sub indexing (e.g. 3.2 become 3).</p>
+      <p><code>TOT</code> - returns a numeric vector of the turns of talk
+without sentence sub indexing (e.g. 3.2 become 3).</p>
+  
+      <p><code>sent_detect</code> - returns a character vector of
+sentences split on endmark.</p>
   
     </div>
 
@@ -111,22 +120,41 @@ TOT(tot)</pre>
       <h2>Description</h2>
       
       <p><code>sentSplit</code> - Splits turns of talk into individual
-  sentences (provided proper punctuation is used).  This
-  procedure is usually done as part of the data read in and
-  cleaning process.</p>
+sentences (provided proper punctuation is used).  This
+procedure is usually done as part of the data read in and
+cleaning process.</p>
   
       <p><code>sentCombine</code> - Combines sentences by the same
-  grouping variable together.</p>
+grouping variable together.</p>
   
       <p><code>TOT</code> - Convert the tot column from
-  <code>sentSplit</code> to turn of talk index (no
-  sub sentence).  Generally, for internal use.</p>
+<code>sentSplit</code> to turn of talk index (no sub
+sentence).  Generally, for internal use.</p>
+  
+      <p><code>sent_detect</code> - Detect and split sentences on endmark
+boundaries.</p>
+  
+    </div>
+
+    <div class="Warning">
+      <h2>Warning</h2>
+      
+      <p><code>sentSplit</code> requires the dialogue
+  (text) column to be cleaned in a particular way.  The
+  data should contain qdap punctuation marks (<code>c("?",
+  ".", "!", "|")</code>) at the end of each sentence.
+  Additionally, extraneous punctuation such as
+  abbreviations should be removed (see
+  <code>replace_abbreviation</code>). Trailing
+  sentences such as <b>I thought I...</b> will be treated
+  as incomplete and marked with <code>"|"</code> to denote an
+  incomplete/trailing sentence.</p>
   
     </div>
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>sentCombine</li><li>sentSplit</li><li>TOT</li>
+      <li>TOT</li><li>sentCombine</li><li>sentSplit</li><li>sent_detect</li>
     </ul>
     <ul>
       <li>sentence,</li><li>split,</li><li>turn-of-talk</li>
@@ -134,15 +162,14 @@ TOT(tot)</pre>
       
     <h2>See also</h2>
     
-  <code>bracketX</code>,
-  <code>incomplete.replace</code>,
-  <code>stem2df</code> , <code>TOT</code>
+<code>bracketX</code>,
+<code>incomplete_replace</code>,
+<code>stem2df</code> , <code>TOT</code>
 
     
     <h2>Author</h2>
     
-  Dason Kurkiewicz and Tyler Rinker
-  <tyler.rinker@gmail.com>.
+Dason Kurkiewicz and Tyler Rinker <tyler.rinker@gmail.com>.
 
     
   </div>

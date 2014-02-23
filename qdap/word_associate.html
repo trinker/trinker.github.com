@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>word_associate. qdap 0.2.3</title>
+<title>word_associate. qdap 1.2.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.2.3</a>
+      <a class="brand" href="#">qdap 1.2.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -35,7 +35,7 @@
         
       </header>
       
-      <h1>Find Associated Words.</h1>
+      <h1>Find Associated Words</h1>
 
 <div class="row">
   <div class="span8">
@@ -178,34 +178,32 @@
       <dt>char2space</dt>
       <dd>Currently a road to nowhere.
   Eventually this will allow the retention of characters as
-  is allowed in <code>trans.cloud</code> already.</dd>
+  is allowed in <code>trans_cloud</code> already.</dd>
       <dt>...</dt>
       <dd>Other arguments supplied to
-  <code>trans.cloud</code>.</dd>
+  <code>trans_cloud</code>.</dd>
     </dl>
     
     <div class="Value">
       <h2>Value</h2>
       
       <p>Returns a list: word frequency matricesWord
-  frequency matrices for each grouping variable.
-  dialogueA list of dataframes for each word list
-  (each vector supplied to <code>match.string</code>) and a final
-  dataframe of all combined text units that contain any
-  match string. match.termsA list of vectors of
-  word lists (each vector supplied to
-  <code>match.string</code>). Optionally, returns a word cloud
-  and/or a network plot of the text unit containing the
-  <code>match.string</code> terms.</p>
+frequency matrices for each grouping variable.
+dialogueA list of dataframes for each word list
+(each vector supplied to <code>match.string</code>) and a final
+dataframe of all combined text units that contain any match
+string. match.termsA list of vectors of word lists
+(each vector supplied to <code>match.string</code>). Optionally,
+returns a word cloud and/or a network plot of the text unit
+containing the <code>match.string</code> terms.</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Find words associated with a given word(s) or a
-  phrase(s).  Results can be output as a network graph
-  and/or wordcloud.</p>
+      <p>Find words associated with a given word(s) or a phrase(s).
+Results can be output as a network graph and/or wordcloud.</p>
   
     </div>
       </div>
@@ -219,10 +217,10 @@
       
     <h2>See also</h2>
     
-  <code>trans.cloud</code>,
-  <code>word.network.plot</code>,
-  <code><a href='http://www.inside-r.org/r-doc/wordcloud/wordcloud'>wordcloud</a></code>,
-  <code><a href='http://www.inside-r.org/r-doc/igraph/graph.adjacency'>graph.adjacency</a></code>
+<code>trans_cloud</code>,
+<code>word_network_plot</code>,
+<code><a href='http://www.inside-r.org/r-doc/wordcloud/wordcloud'>wordcloud</a></code>,
+<code><a href='http://www.inside-r.org/r-doc/igraph/graph.adjacency'>graph.adjacency</a></code>
 
         
   </div>

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>cm_distance. qdap 0.2.3</title>
+<title>cm_distance. qdap 1.2.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.2.3</a>
+      <a class="brand" href="#">qdap 1.2.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,8 +40,9 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>cm_distance(dataframe, time.var = NULL, parallel = FALSE, code.var = "code", causal = FALSE, 
-  start.var = "start", end.var = "end", mean.digits = 2, sd.digits = 2, stan.digits = 2)</pre>
+    <pre>cm_distance(dataframe, pvals = c(TRUE, FALSE), replications = 1000, parallel = TRUE, 
+  extended.output = TRUE, time.var = TRUE, code.var = "code", causal = FALSE, start.var = "start", 
+      end.var = "end", cores = detectCores()/2)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -49,51 +50,94 @@
       <dd>A data frame from the cm_x2long family
   (<code>cm_range2long</code>; <code>cm_df2long</code>;
   <code>cm_time2long</code>).</dd>
+      <dt>pvals</dt>
+      <dd>A logical vector of length 1 or 2.  If
+  element 2 is blank element 1 will be recycled.  If the
+  first element is <code>TRUE</code> pvalues will be calculated
+  for the combined (main) output for all repeated measures
+  from simulated resampling of the data.  If the second
+  element is <code>TRUE</code> pvalues will be calculated for the
+  individual (extended) repeated measures output from
+  simulated resampling of the data.  Default is to
+  calculate pvalues for the main output but not for the
+  extended output.  This process involves multiple
+  resampling of the data and is a time consuming process.
+  It may take from a few minutes to days to calculate the
+  pvalues depending on the number of all codes use, number
+  of different codes and number of <code>replications</code>.</dd>
+      <dt>replications</dt>
+      <dd>An integer value for the number of
+  replications used in resampling the data if any
+  <code>pvals</code> is <code>TRUE</code>.  It is recommended that this
+  value be no lower than 1000. Failure to use enough
+  replications may result in unreliable pvalues.</dd>
+      <dt>parallel</dt>
+      <dd>logical.  If <code>TRUE</code> runs the
+  <code>cm_distance</code> on multiple cores (if available).
+  This will generally be effective with most data sets,
+  given there are repeated measures, because of the large
+  number of simulations.  Default uses 1/2 of the available
+  cores.</dd>
+      <dt>extended.output</dt>
+      <dd>logical.  If <code>TRUE</code> the
+  information on individual repeated measures is calculated
+  in addition to the aggregated repeated measures results
+  for the main output.</dd>
       <dt>time.var</dt>
       <dd>An optional variable to split the
   dataframe by (if you have data that is by various times
   this must be supplied).</dd>
-      <dt>parallel</dt>
-      <dd>logical.  If <code>TRUE</code> runs the
-  <code>cm_distance</code> on multiple cores. This is effective
-  with larger data sets but may actually be slower with
-  smaller data sets.</dd>
       <dt>code.var</dt>
       <dd>The name of the code variable column.
   Defaults to "codes" as out putted by x2long family.</dd>
       <dt>causal</dt>
       <dd>logical.  If <code>TRUE</code> measures the
-  distance between x and y given that x must proceed y.</dd>
+  distance between x and y given that x must precede y.
+  That is, only those <code class = 'eq'>y_i</code> that begin after the
+  <code class = 'eq'>x_i</code> has begun will be considered, as it is assumed
+  that x precedes y.  If <code>FALSE</code> x is not assumed to
+  precede y.  The closest <code class = 'eq'>y_i</code> (either its beginning
+  or end) is calculated to <code class = 'eq'>x_i</code> (either it's beginning
+  or end).</dd>
       <dt>start.var</dt>
       <dd>The name of the start variable column.
   Defaults to "start" as out putted by x2long family.</dd>
       <dt>end.var</dt>
       <dd>The name of the end variable column.
   Defaults to "end" as out putted by x2long family.</dd>
-      <dt>mean.digits</dt>
-      <dd>The number of digits to be displayed
-  in the mean matrix.</dd>
-      <dt>sd.digits</dt>
-      <dd>The number of digits to be displayed in
-  the sd (standard deviation) matrix.</dd>
-      <dt>stan.digits</dt>
-      <dd>The number of digits to use in the
-  standardized mean difference matrix.</dd>
+      <dt>cores</dt>
+      <dd>An integer value describing the number of
+  cores to use if <code>parallel = TRUE</code>.  Default is to
+  use half of the available cores.</dd>
     </dl>
     
     <div class="Value">
       <h2>Value</h2>
       
-      <p>An object of the class cm.dist.  This is a list of n
-  lists with the following components per each list
-  (time.var): meanA distance matrix of average
-  distances between codes sdA matrix of standard
-  deviations of distances between codes nA matrix
-  of counts of distances between codes combinedA
-  matrix of combined mean, sd and n of distances between
-  codes standardizedA matrix of standardized
-  values of distances between codes.  The closer a value is
-  to zero the closer two codes relate.</p>
+      <p>An object of the class <code>"cm_distance"</code>.  This is a
+list with the following components:</p>
+  
+      <p>pvalsA logical indication of whether pvalues were
+calculated replicationsInteger value of number of
+replications used extended.outputAn optional list
+of individual repeated measures information
+main.outputA list of aggregated repeated measures
+information adj.alphaAn adjusted alpha level
+(based on <code class = 'eq'>\alpha = .05</code>) for the estimated p-values
+using the upper end of the confidence interval around the
+p-values</p>
+  
+      <p>Within the lists of extended.output and list of the
+main.output are the following items:</p>
+  
+      <p>meanA distance matrix of average distances between
+codes sdA matrix of standard deviations of
+distances between codes nA matrix of counts of
+distances between codes stan.meanA matrix of
+standardized values of distances between codes.  The closer
+a value is to zero the closer two codes relate.
+pvalueA n optional matrix of simulated pvalues
+associated with the mean distances</p>
   
     </div>
 
@@ -101,7 +145,42 @@
       <h2>Description</h2>
       
       <p>Generate distance measures to ascertain a mean distance
-  measure between codes.</p>
+measure between codes.</p>
+  
+    </div>
+
+    <div class="Details">
+      <h2>Details</h2>
+      
+      <p>Note that row names are the first code and column names are
+the second comparison code. The values for Code A compared
+to Code B will not be the same as Code B compared to Code
+A. This is because, unlike a true distance measure,
+cm_distance's matrix is asymmetrical. <code>cm_distance</code>
+computes the distance by taking each span (start and end)
+for Code A and comparing it to the nearest start or end for
+Code B.</p>
+  
+    </div>
+
+    <div class="Warning">
+      <h2>Warning</h2>
+      
+      <p>p-values are estimated and thus subject to error.  More
+  replications decreases the error.  Use:</p>
+  
+      <p><pre class = 'eq'>p \pm \left ( 1.96 \cdot
+  \sqrt{\frac{\alpha(1-\alpha)}{n}}\right )</code></p>
+  
+      <p>to adjust the confidence in the estimated p-values based
+  on the number of replications.</p>
+  
+    </div>
+
+    <div class="References">
+      <h2>References</h2>
+      
+      <p><a href = 'http://stats.stackexchange.com/a/22333/7482'>http://stats.stackexchange.com/a/22333/7482</a></p>
   
     </div>
       </div>
@@ -110,9 +189,13 @@
       <li>cm_distance</li>
     </ul>
     <ul>
-      <li>distance</li>
+      <li>association</li><li>codes</li><li>distance</li>
     </ul> -->
       
+    <h2>See also</h2>
+    
+<code>print.cm_distance</code>
+
         
   </div>
 </div>

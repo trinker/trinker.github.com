@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>plot.formality. qdap 0.2.3</title>
+<title>plot.formality. qdap 1.2.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.2.3</a>
+      <a class="brand" href="#">qdap 1.2.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -41,7 +41,8 @@
   <div class="span8">
     <h2>Usage</h2>
     <pre>plot(x, point.pch = 20, point.cex = 0.5, point.colors = c("gray65", "red"), bar.colors = NULL, 
-  short.names = FALSE, min.wrdcnt = NULL, ...)</pre>
+  short.names = TRUE, min.wrdcnt = NULL, order.by.formality = TRUE, plot = TRUE, 
+      ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -65,6 +66,15 @@
       <dd>A minimum word count threshold that
   must be achieved to be considered in the results.
   Default includes all subgroups.</dd>
+      <dt>order.by.formality</dt>
+      <dd>logical.  If <code>TRUE</code> the
+  group polarity plot will be ordered by average polarity
+  score, otherwise alphabetical order is assumed.</dd>
+      <dt>plot</dt>
+      <dd>logical.  If <code>TRUE</code> the plot will
+  automatically plot. The user may wish to set to
+  <code>FALSE</code> for use in knitr, sweave, etc. to add
+  additional plot layers.</dd>
       <dt>...</dt>
       <dd>ignored</dd>
     </dl>
@@ -72,16 +82,16 @@
     <div class="Value">
       <h2>Value</h2>
       
-      <p>Invisibly returns the <code>ggplot2</code> objects that form
-  the larger plot.</p>
+      <p>Invisibly returns the <code>ggplot2</code> objects that form the
+larger plot.</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Plots a formality object including the parts of speech
-  used to calculate contextual/formal speech.</p>
+      <p>Plots a formality object including the parts of speech used
+to calculate contextual/formal speech.</p>
   
     </div>
       </div>

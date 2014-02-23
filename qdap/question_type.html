@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>question_type. qdap 0.2.3</title>
+<title>question_type. qdap 1.2.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.2.3</a>
+      <a class="brand" href="#">qdap 1.2.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -41,7 +41,8 @@
   <div class="span8">
     <h2>Usage</h2>
     <pre>question_type(text.var, grouping.var = NULL, neg.cont = FALSE, percent = TRUE, zero.replace = 0, 
-  digits = 2)</pre>
+  digits = 2, contraction = qdapDictionaries::contractions, bracket = "all", amplifiers = qdapDictionaries::amplification.words, 
+      ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -53,7 +54,7 @@
   takes a single grouping variable or a list of 1 or more
   grouping variables.</dd>
       <dt>neg.cont</dt>
-      <dd>logical.  IF <code>TRUE</code> provides
+      <dd>logical.  If <code>TRUE</code> provides
   separate counts for the negative contraction forms of the
   interrogative words.</dd>
       <dt>percent</dt>
@@ -64,22 +65,44 @@
       <dt>digits</dt>
       <dd>Integer; number of decimal places to round
   when printing.</dd>
+      <dt>contraction</dt>
+      <dd>A two column key of contractions
+  (column 1) and expanded form replacements (column 2) or a
+  vector of contractions.  Default is to use
+  qdapDictionaries's
+  <code><a href='http://www.inside-r.org/r-doc/qdapDictionaries/contractions'>contractions</a></code> data set.</dd>
+      <dt>bracket</dt>
+      <dd>The type of bracket (and encased text) to
+  remove.  This is one or more of the strings
+  <code>"curly"</code>, <code>"square"</code>, <code>"round"</code>,
+  <code>"angle"</code> and <code>"all"</code>.  These strings
+  correspond to: {, [, (, < or all four types.</dd>
+      <dt>amplifiers</dt>
+      <dd>A character vector of terms that
+  increase the intensity of a positive or negative word.
+  Default is to use qdapDictionaries's
+  <code><a href='http://www.inside-r.org/r-doc/qdapDictionaries/amplification.words'>amplification.words</a></code> data
+  set.</dd>
+      <dt>...</dt>
+      <dd>Other arguments passed to
+  <code>bracketX</code>.</dd>
     </dl>
     
     <div class="Value">
       <h2>Value</h2>
       
-      <p>Returns a list of: rawA dataframe of the
-  questions used in the transcript and their type.
-  countA dataframe of total questions
-  (<code>tot.quest</code>) and counts of question types (initial
-  interrogative word) by grouping variable(s).
-  rnpDataframe of the frequency and proportions of
-  question types by grouping variable. missingThe
-  row numbers of the missing data (excluded from
-  analysis). percentThe value of percent used for
-  plotting purposes. zero.replaceThe value of
-  zero.replace used for plotting purposes.</p>
+      <p>Returns a list of: rawA dataframe of the questions
+used in the transcript and their type. countA
+dataframe of total questions (<code>tot.quest</code>) and counts
+of question types (initial interrogative word) by grouping
+variable(s). rnpDataframe of the frequency and
+proportions of question types by grouping variable.
+indsThe indices of the original text variable that
+contain questions. missingThe row numbers of the
+missing data (excluded from analysis). percentThe
+value of percent used for plotting purposes.
+zero.replaceThe value of zero.replace used for
+plotting purposes.</p>
   
     </div>
 
@@ -94,27 +117,34 @@
       <h2>Details</h2>
       
       <p>The algorithm searches for the following interrogative
-  words (and optionally, their negative contraction form as
-  well):</p>
+words (and optionally, their negative contraction form as
+well):</p>
   
-      <p>1) whose 2) whom 3) who 4) where 5) what 6) which 7) why
-  8) when 9) were 10) was 11) does 12) did 13) do 14) is
-  15) are 16) will 17) how 18) should 19) could 20) would
-  21) shall 22) may 23) might 24) must 25) can 26) has 27)
-  have 28) had 29) ok 30) right 31) correct 32) implied
-  do/does</p>
+      <p>1) whose 2) whom 3) who 4) where 5) what 6) which 7) why 8)
+when 9) were* 10) was* 11) does* 12) did* 13) do* 14) is
+15) are* 16) will* 17) how 18) should 19) could 20) would*
+21) shall 22) may 23) might* 24) must* 25) can* 26) has 27)
+have* 28) had* 29) ok 30) right 31) correct 32) implied
+do/does/did</p>
   
       <p>The interrogative word that is found first (with the
-  exception of "ok", "right" and "correct") in the question
-  determines the sentence type. "ok", "right" and "correct"
-  sentence types are determined if the sentence is a
-  question with no other interrogative words found and
-  "ok", "right" or "correct" is the last word of the
-  sentence.  Those interrogative sentences beginning with
-  the word "you" are categorized as implying do or does
-  question type, though the use of do/does is not explicit.
-  Those with undetermined sentence type are labeled
-  unknown.</p>
+exception of "ok", "right"/"alright", and "correct") in the
+question determines the sentence type. "ok",
+"right"/"alright", and "correct" sentence types are
+determined if the sentence is a question with no other
+interrogative words found and "ok", "right"/"alright", or
+"correct" is the last word of the sentence.  Those
+interrogative sentences beginning with the word "you",
+"wanna", or "want" are categorized as implying do/does/did
+question type, though the use of do/does/did is not
+explicit.  Those sentence beginning with "you" followed by
+a select interrogative word (and or their negative counter
+parts) above (marked with *) or 1-2 amplifier(s) followed
+by the select interrogative word are categorized by the
+select word rather than an implied do/does/did question
+type.  A sentence that is marked "ok" over rides an implied
+do/does/did label.  Those with undetermined sentence type
+are labeled unknown.</p>
   
     </div>
       </div>
@@ -123,9 +153,14 @@
       <li>question_type</li>
     </ul>
     <ul>
-      <li>question-count</li><li>question,</li>
+      <li>question,</li><li>question-count</li>
     </ul> -->
       
+    <h2>See also</h2>
+    
+<code>colcomb2class</code>,
+<code>bracketX</code>
+
         
   </div>
 </div>

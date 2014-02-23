@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>dir_map. qdap 0.2.3</title>
+<title>dir_map. qdap 1.2.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.2.3</a>
+      <a class="brand" href="#">qdap 1.2.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,8 +40,8 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>dir_map(loc, obj.prefix = "dat", col.names = c("person", "dialogue"), file = NULL, 
-  copy2clip = TRUE)</pre>
+    <pre>dir_map(loc = "CLEANED_TRANSCRIPTS", obj.prefix = "dat", use.path = TRUE, col.names = c("person", 
+  "dialogue"), file = NULL, copy2clip = interactive())</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -52,6 +52,12 @@
       <dd>A character string that will be used as
   the prefix (followed by a unique digit) as the assignment
   object.</dd>
+      <dt>use.path</dt>
+      <dd>logical.  If <code>TRUE</code> use the actual
+  path to the <code>loc</code> argument.  If <code>FALSE</code>, the
+  code may be more portable in that the actual input to
+  <code>loc</code> is supplied to the
+  <code>read.transcript</code>.</dd>
       <dt>col.names</dt>
       <dd>Supplies a vector of column names to the
   transcript columns.</dd>
@@ -67,8 +73,8 @@
       <h2>Value</h2>
       
       <p>Prints a read in script text to the console, optionally
-  copies the wrapped text to the clipboard on a Mac or
-  Windows machine and optionally prints to an outside file.</p>
+copies the wrapped text to the clipboard on a Mac or
+Windows machine and optionally prints to an outside file.</p>
   
     </div>
 
@@ -76,9 +82,9 @@
       <h2>Description</h2>
       
       <p>Generate script text (and optionally output it to the
-  clipboard and/or an external file) that can be used to
-  individually read in every file in a directory and assign
-  it to an object.</p>
+clipboard and/or an external file) that can be used to
+individually read in every file in a directory and assign
+it to an object.</p>
   
     </div>
 
@@ -86,10 +92,10 @@
       <h2>Details</h2>
       
       <p>Generally, the researcher will want to read in and parse
-  every transcript document separately.  The task of
-  writing the script for multiple transcript documents can
-  be tedious.  This function is designed to make the
-  process more efficient and less prone to errors.</p>
+every transcript document separately.  The task of writing
+the script for multiple transcript documents can be
+tedious.  This function is designed to make the process
+more efficient and less prone to errors.</p>
   
     </div>
 
@@ -97,7 +103,7 @@
       <h2>Note</h2>
       
       <p><code>skip</code> is set to 0, however, it is likely that this
-  value will need to be changed for each transcript.</p>
+value will need to be changed for each transcript.</p>
   
     </div>
       </div>
@@ -111,7 +117,7 @@
       
     <h2>See also</h2>
     
-  <code>read.transcript</code>
+<code>read.transcript</code>
 
         
   </div>

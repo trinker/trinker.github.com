@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>word_stats. qdap 0.2.3</title>
+<title>word_stats. qdap 1.2.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.2.3</a>
+      <a class="brand" href="#">qdap 1.2.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -78,75 +78,75 @@
       <dd>Integer; number of decimal places to round
   when printing.</dd>
       <dt>...</dt>
-      <dd>Any other arguments passed to end_inc.</dd>
+      <dd>Any other arguments passed to
+  <code>end_inc</code>.</dd>
     </dl>
     
     <div class="Value">
       <h2>Value</h2>
       
       <p>Returns a list of three descriptive word statistics:
-  tsA data frame of descriptive word statistics by
-  row gtsA data frame of word/sentence statistics
-  per grouping variable: <ul>
-<li>n.tot - number
-  of turns of talk </li>
+tsA data frame of descriptive word statistics by
+row gtsA data frame of word/sentence statistics
+per grouping variable: <ul>
+<li>n.tot - number of
+turns of talk </li>
 <li>n.sent - number of sentences
-  </li>
+</li>
 <li>n.words - number of words </li>
-<li>n.char -
-  number of characters </li>
-<li>n.syl - number of
-  syllables </li>
-<li>n.poly - number of polysyllables
-  </li>
-<li>sptot - syllables per turn of talk </li>
-<li>wptot
-  - words per turn of talk </li>
-<li>wps - words per
-  sentence </li>
-<li>cps - characters per sentence
-  </li>
-<li>sps - syllables per sentence </li>
-<li>psps -
-  poly-syllables per sentence </li>
-<li>cpw - characters per
-  word </li>
-<li>spw - syllables per word </li>
-<li>n.state -
-  number of statements </li>
-<li>n.quest - number of
-  questions </li>
-<li>n.exclm - number of exclamations
-  </li>
-<li>n.incom - number of incomplete statements
-  </li>
-<li>p.state - proportion of statements
-  </li>
+<li>n.char - number
+of characters </li>
+<li>n.syl - number of syllables
+</li>
+<li>n.poly - number of polysyllables </li>
+<li>sptot -
+syllables per turn of talk </li>
+<li>wptot - words per turn
+of talk </li>
+<li>wps - words per sentence </li>
+<li>cps -
+characters per sentence </li>
+<li>sps - syllables per
+sentence </li>
+<li>psps - poly-syllables per sentence
+</li>
+<li>cpw - characters per word </li>
+<li>spw - syllables
+per word </li>
+<li>n.state - number of statements
+</li>
+<li>n.quest - number of questions </li>
+<li>n.exclm -
+number of exclamations </li>
+<li>n.incom - number of
+incomplete statements </li>
+<li>p.state - proportion of
+statements </li>
 <li>p.quest - proportion of questions
-  </li>
+</li>
 <li>p.exclm - proportion of exclamations
-  </li>
+</li>
 <li>p.incom - proportion of incomplete statements
-  </li>
-<li>n.hapax - number of hapax legomenon
-  </li>
-<li>n.dis - number of dis legomenon
-  </li>
-<li>grow.rate - proportion of hapax legomenon to
-  words </li>
-<li>prop.dis - proportion of dis legomenon to
-  words </li>
+</li>
+<li>n.hapax - number of hapax legomenon </li>
+<li>n.dis
+- number of dis legomenon </li>
+<li>grow.rate - proportion
+of hapax legomenon to words </li>
+<li>prop.dis - proportion
+of dis legomenon to words </li>
 </ul>
-  mpunAn account of sentences with an
-  improper/missing end mark word.elemA data frame
-  with word element columns from gts sent.elemA
-  data frame with sentence element columns from gts
-  omitCounter of omitted sentences for internal use
-  (only included if some rows contained missing values)
-  percentThe value of percent used for plotting
-  purposes. zero.replaceThe value of zero.replace
-  used for plotting purposes. digitsinteger value
-  od number of digits to display; mostly internal use</p>
+  mpunAn account of
+sentences with an improper/missing end mark
+word.elemA data frame with word element columns
+from gts sent.elemA data frame with sentence
+element columns from gts omitCounter of omitted
+sentences for internal use (only included if some rows
+contained missing values) percentThe value of
+percent used for plotting purposes.
+zero.replaceThe value of zero.replace used for
+plotting purposes. digitsinteger value od number
+of digits to display; mostly internal use</p>
   
     </div>
 
@@ -154,6 +154,26 @@
       <h2>Description</h2>
       
       <p>Transcript apply descriptive word statistics.</p>
+  
+    </div>
+
+    <div class="Details">
+      <h2>Details</h2>
+      
+      <p>Note that a sentence is classified with only one endmark.
+An imperative sentence is classified only as imperative
+(not as a state, quest, or exclm as well).  If a sentence
+is both imperative and incomplete the sentence will be
+counted as incomplete rather than imperative. labeled as
+both imperative</p>
+  
+    </div>
+
+    <div class="Warning">
+      <h2>Warning</h2>
+      
+      <p>It is assumed the user has run <code>sentSplit</code> on their
+  data, otherwise some counts may not be accurate.</p>
   
     </div>
       </div>
@@ -165,6 +185,10 @@
       <li>descriptive</li><li>statistic</li>
     </ul> -->
       
+    <h2>See also</h2>
+    
+<code>end_inc</code>
+
         
   </div>
 </div>

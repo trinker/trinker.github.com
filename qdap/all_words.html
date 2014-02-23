@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>all_words. qdap 0.2.3</title>
+<title>all_words. qdap 1.2.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.2.3</a>
+      <a class="brand" href="#">qdap 1.2.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,7 +40,8 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>all_words(text.var, begins.with = NULL, contains = NULL, alphabetical = TRUE)</pre>
+    <pre>all_words(text.var, begins.with = NULL, contains = NULL, alphabetical = TRUE, apostrophe.remove = FALSE, 
+  ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -48,22 +49,29 @@
       <dd>The text variable.</dd>
       <dt>begins.with</dt>
       <dd>This argument takes a word chunk.
-  Default is NULL. Use this if searching for a word
+  Default is <code>NULL</code>. Use this if searching for a word
   beginning with the word chunk.</dd>
       <dt>contains</dt>
       <dd>This argument takes a word chunk.
-  Default is NULL. Use this if searching for a word
+  Default is <code>NULL</code>. Use this if searching for a word
   containing the word chunk.</dd>
       <dt>alphabetical</dt>
-      <dd>logical.  If TRUE orders rows
-  alphabetically, if FALSE orders the rows by frequency.</dd>
+      <dd>logical.  If <code>TRUE</code> orders rows
+  alphabetically, if <code>FALSE</code> orders the rows by
+  descending frequency.</dd>
+      <dt>apostrophe.remove</dt>
+      <dd>logical.  If <code>TRUE</code> removes
+  apostrophes from the text before examining.</dd>
+      <dt>...</dt>
+      <dd>Other argument supplied to
+  <code>strip</code>.</dd>
     </dl>
     
     <div class="Value">
       <h2>Value</h2>
       
       <p>Returns a dataframe with frequency counts of words that
-  begin with or contain the provided word chunk.</p>
+begin with or contain the provided word chunk.</p>
   
     </div>
 
@@ -71,18 +79,18 @@
       <h2>Description</h2>
       
       <p>A convenience function to find words that begin with or
-  contain a letter chunk and returns the frequency counts
-  of the number of occurrences of each word.</p>
+contain a letter chunk and returns the frequency counts of
+the number of occurrences of each word.</p>
   
     </div>
 
     <div class="Note">
       <h2>Note</h2>
       
-      <p>Cannot provide both <code>begins.with</code> and
-  <code>contains</code> arguments at once.  If both begins.with
-  and contains are NULL <code>all_words</code>
-  returns a frequency count for all words.</p>
+      <p>Cannot provide both <code>begins.with</code> and <code>contains</code>
+arguments at once.  If both begins.with and contains are
+<code>NULL</code>. <code>all_words</code> returns a
+frequency count for all words.</p>
   
     </div>
       </div>
@@ -96,7 +104,7 @@
       
     <h2>See also</h2>
     
-  <code>term.match</code>
+<code>term_match</code>
 
         
   </div>

@@ -2,11 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>gantt_wrap. qdap 0.2.3</title>
+<title>gantt_wrap. qdap 1.2.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="
-  Andrie de Vries and Tyler Rinker
-  &lt;tyler.rinker@gmail.com&gt;.
+Andrie de Vries and Tyler Rinker &lt;tyler.rinker@gmail.com&gt;.
 ">
 
 <link href="css/bootstrap.css" rel="stylesheet">
@@ -23,7 +22,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.2.3</a>
+      <a class="brand" href="#">qdap 1.2.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -44,11 +43,11 @@
   <div class="span8">
     <h2>Usage</h2>
     <pre>gantt_wrap(dataframe, plot.var, facet.vars = NULL, fill.var = NULL, title = NULL, 
-  ylab = as.character(plot.var), xlab = "duration.default", rev.factor = TRUE, 
-      transform = FALSE, ncol = NULL, minor.line.freq = NULL, major.line.freq = NULL, 
-      sig.dig.line.freq = 1, hms.scale = NULL, scale = NULL, space = NULL, size = 3, 
-      rm.horiz.lines = FALSE, x.ticks = TRUE, y.ticks = TRUE, legend.position = NULL, 
-      bar.color = NULL, border.color = NULL, border.size = 2, border.width = 0.1, constrain = TRUE)</pre>
+  ylab = plot.var, xlab = "duration.default", rev.factor = TRUE, transform = FALSE, 
+      ncol = NULL, minor.line.freq = NULL, major.line.freq = NULL, sig.dig.line.freq = 1, 
+      hms.scale = NULL, scale = NULL, space = NULL, size = 3, rm.horiz.lines = FALSE, 
+      x.ticks = TRUE, y.ticks = TRUE, legend.position = NULL, bar.color = NULL, border.color = NULL, 
+      border.size = 2, border.width = 0.1, constrain = TRUE, plot = TRUE)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -139,32 +138,37 @@
       <dt>constrain</dt>
       <dd>logical.  If <code>TRUE</code> the Gantt bars
   touch the edge of the graph.</dd>
+      <dt>plot</dt>
+      <dd>logical.  If <code>TRUE</code> the plot will
+  automatically plot. The user may wish to set to
+  <code>FALSE</code> for use in knitr, sweave, etc. to add
+  additional plot layers.</dd>
     </dl>
     
     <div class="Value">
       <h2>Value</h2>
       
-      <p>Returns a Gantt style visualization. Invisibly returns
-  the ggplot2 list object.</p>
+      <p>Returns a Gantt style visualization. Invisibly returns the
+ggplot2 list object.</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p>A <a href = 'http://docs.ggplot2.org/current/'>ggplot2</a>
-  wrapper that produces a Gantt plot.</p>
+      <p>A <a href = 'http://docs.ggplot2.org/current/'>ggplot2</a> wrapper
+that produces a Gantt plot.</p>
   
     </div>
 
     <div class="Note">
       <h2>Note</h2>
       
-      <p>For non repeated measures data/plotting use
-  <code>gantt</code>; for repeated measures data
-  output use <code>gantt_rep</code>; and for a
-  convenient wrapper that takes text and generates plots
-  use <code>gantt_plot</code>.</p>
+      <p>For non-repeated measures data/plotting use
+<code>gantt</code>; for repeated measures data
+output use <code>gantt_rep</code>; and for a
+convenient wrapper that takes text and generates plots use
+<code>gantt_plot</code>.</p>
   
     </div>
 
@@ -172,7 +176,7 @@
       <h2>References</h2>
       
       <p>Clark, W. & Gantt, H. (1922) The Gantt chart, a working
-  tool of management. New York, Ronald Press.</p>
+tool of management. New York, Ronald Press.</p>
   
     </div>
       </div>
@@ -186,17 +190,15 @@
       
     <h2>See also</h2>
     
-  <code>gantt</code>,
-  <code>gantt_plot</code>,
-  <code>gantt_rep</code>,
-  <code><a href='http://www.inside-r.org/r-doc/ggplot2/facet_grid'>facet_grid</a></code>,
-  <code><a href='http://www.inside-r.org/r-doc/ggplot2/facet_wrap'>facet_wrap</a></code>
+<code>gantt</code>, <code>gantt_plot</code>,
+<code>gantt_rep</code>,
+<code><a href='http://www.inside-r.org/r-doc/ggplot2/facet_grid'>facet_grid</a></code>,
+<code><a href='http://www.inside-r.org/r-doc/ggplot2/facet_wrap'>facet_wrap</a></code>
 
     
     <h2>Author</h2>
     
-  Andrie de Vries and Tyler Rinker
-  <tyler.rinker@gmail.com>.
+Andrie de Vries and Tyler Rinker <tyler.rinker@gmail.com>.
 
     
   </div>

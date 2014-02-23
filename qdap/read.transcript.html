@@ -2,10 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>read.transcript. qdap 0.2.3</title>
+<title>read.transcript. qdap 1.2.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="
-  Bryan Goodrich and Tyler Rinker &lt;tyler.rinker@gmail.com&gt;.
+Bryan Goodrich and Tyler Rinker &lt;tyler.rinker@gmail.com&gt;.
 ">
 
 <link href="css/bootstrap.css" rel="stylesheet">
@@ -22,7 +22,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.2.3</a>
+      <a class="brand" href="#">qdap 1.2.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -45,7 +45,7 @@
     <pre>read.transcript(file, col.names = NULL, text.var = NULL, merge.broke.tot = TRUE, 
   header = FALSE, dash = "", ellipsis = "...", quote2bracket = FALSE, rm.empty.rows = TRUE, 
       na.strings = c("999", "NA", "", " "), sep = NULL, skip = 0, nontext2factor = TRUE, 
-      text, ...)</pre>
+      text, comment.char = "", ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -88,11 +88,11 @@
   empty rows.</dd>
       <dt>na.strings</dt>
       <dd>A vector of character strings which are
-  to be interpreted as NA values.</dd>
+  to be interpreted as <code>NA</code> values.</dd>
       <dt>sep</dt>
       <dd>The field separator character. Values on each
   line of the file are separated by this character.  The
-  default of NULL instructs
+  default of <code>NULL</code> instructs
   <code>read.transcript</code> to use a separator
   suitable for the file type being read in.</dd>
       <dt>skip</dt>
@@ -100,12 +100,17 @@
   to skip before beginning to read data.</dd>
       <dt>nontext2factor</dt>
       <dd>logical.  If <code>TRUE</code> attempts
-  to convert any non text to a factor.</dd>
+  to convert any non-text to a factor.</dd>
       <dt>text</dt>
       <dd>Character string: if file is not supplied and
   this is, then data are read from the value of text.
   Notice that a literal string can be used to include
   (small) data sets within R code.</dd>
+      <dt>comment.char</dt>
+      <dd>A character vector of length one
+  containing a single character or an empty string. Use
+  <code>""</code> to turn off the interpretation of comments
+  altogether.</dd>
       <dt>...</dt>
       <dd>Further arguments to be passed to
   <code><a href='http://www.inside-r.org/r-doc/utils/read.table'>read.table</a></code>.</dd>
@@ -128,10 +133,10 @@
     <div class="Note">
       <h2>Note</h2>
       
-      <p>If a transcript is a .docx file read transcript expects
-  two columns (generally person and dialogue) with some
-  sort of separator (default is colon separator).  .doc
-  files must be converted to .docx before reading in.</p>
+      <p>If a transcript is a .docx file read transcript expects two
+columns (generally person and dialogue) with some sort of
+separator (default is colon separator).  .doc files must be
+converted to .docx before reading in.</p>
   
     </div>
 
@@ -162,12 +167,12 @@
       
     <h2>See also</h2>
     
-  <code>dir_map</code>
+<code>dir_map</code>
 
     
     <h2>Author</h2>
     
-  Bryan Goodrich and Tyler Rinker <tyler.rinker@gmail.com>.
+Bryan Goodrich and Tyler Rinker <tyler.rinker@gmail.com>.
 
     
   </div>

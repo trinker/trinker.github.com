@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>rank_freq_mplot. qdap 0.2.3</title>
+<title>rank_freq_mplot. qdap 1.2.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.2.3</a>
+      <a class="brand" href="#">qdap 1.2.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -106,13 +106,13 @@ rank_freq_plot(words, frequencies, plot = TRUE, title.ext = NULL, jitter.ammount
       <h2>Value</h2>
       
       <p>Returns a rank-frequency plot and a list of three
-  dataframes: WORD_COUNTSThe word frequencies
-  supplied to <code>rank_freq_plot</code> or created
-  by <code>rank_freq_mplot</code>.
-  RANK_AND_FREQUENCY_STATSA dataframe of rank and
-  frequencies for the words used in the text.
-  LEGOMENA_STATSA dataframe displaying the percent
-  hapax legomena and percent dis legomena of the text.</p>
+dataframes: WORD_COUNTSThe word frequencies
+supplied to <code>rank_freq_plot</code> or created
+by <code>rank_freq_mplot</code>.
+RANK_AND_FREQUENCY_STATSA dataframe of rank and
+frequencies for the words used in the text.
+LEGOMENA_STATSA dataframe displaying the percent
+hapax legomena and percent dis legomena of the text.</p>
   
     </div>
 
@@ -120,10 +120,19 @@ rank_freq_plot(words, frequencies, plot = TRUE, title.ext = NULL, jitter.ammount
       <h2>Description</h2>
       
       <p><code>rank_freq_mplot</code> - Plot a faceted word rank versus
-  frequencies by grouping variable(s).</p>
+frequencies by grouping variable(s).</p>
   
-      <p><code>rank_freq_plot</code> - Plot word rank versus
-  frequencies.</p>
+      <p><code>rank_freq_plot</code> - Plot word rank versus frequencies.</p>
+  
+    </div>
+
+    <div class="Note">
+      <h2>Note</h2>
+      
+      <p><code>rank_freq_mplot</code> utilizes the ggplot2 package,
+whereas, <code>rank_freq_plot</code> employs base graphics.
+<code>rank_freq_mplot</code> is more general & flexible; in most
+cases <code>rank_freq_mplot</code> should be prefered.</p>
   
     </div>
 
@@ -131,8 +140,8 @@ rank_freq_plot(words, frequencies, plot = TRUE, title.ext = NULL, jitter.ammount
       <h2>References</h2>
       
       <p>Zipf, G. K. (1949). Human behavior and the principle of
-  least effort. Cambridge, Massachusetts: Addison-Wesley.
-  p. 1.</p>
+least effort. Cambridge, Massachusetts: Addison-Wesley. p.
+1.</p>
   
     </div>
       </div>
@@ -141,7 +150,7 @@ rank_freq_plot(words, frequencies, plot = TRUE, title.ext = NULL, jitter.ammount
       <li>rank_freq_mplot</li><li>rank_freq_plot</li>
     </ul>
     <ul>
-      <li>rank-frequency</li><li>Zipf,</li>
+      <li>Zipf,</li><li>rank-frequency</li>
     </ul> -->
       
         

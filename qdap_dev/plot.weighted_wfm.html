@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>common. qdap 1.2.0</title>
+<title>plot.weighted_wfm. qdap 1.2.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -35,46 +35,52 @@
         
       </header>
       
-      <h1>Find Common Words Between Groups</h1>
+      <h1>Plots a weighted_wfm object</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>common(word.list, overlap = "all", equal.or = "more", ...)</pre>
+    <pre>plot(x, non.zero = FALSE, digits = 0, by.column = NULL, high = ifelse(non.zero, "black", 
+  "blue"), grid = ifelse(non.zero, "black", "white"), plot = TRUE, ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
-      <dt>word.list</dt>
-      <dd>A list of names character vectors.</dd>
-      <dt>overlap</dt>
-      <dd>Minimum/exact amount of overlap.</dd>
-      <dt>equal.or</dt>
-      <dd>A character vector of c(<code>"equal"</code>,
-  <code>"greater"</code>, <code>"more"</code>, <code>"less"</code>).</dd>
+      <dt>x</dt>
+      <dd>The weighted_wfm object</dd>
+      <dt>non.zero</dt>
+      <dd>logical.  If <code>TRUE</code> all values
+  converted to dummy coded based on x_ij > 0.</dd>
+      <dt>digits</dt>
+      <dd>The number of digits displayed if
+  <code>values</code> is <code>TRUE</code>.</dd>
+      <dt>by.column</dt>
+      <dd>logical.  If <code>TRUE</code> applies scaling
+  to the column.  If <code>FALSE</code> applies scaling by row
+  (use <code>NULL</code> to turn off scaling).</dd>
+      <dt>high</dt>
+      <dd>The color to be used for higher values.</dd>
+      <dt>grid</dt>
+      <dd>The color of the grid (Use <code>NULL</code> to
+  remove the grid).</dd>
+      <dt>plot</dt>
+      <dd>logical.  If <code>TRUE</code> the plot will
+  automatically plot. The user may wish to set to
+  <code>FALSE</code> for use in knitr, sweave, etc. to add
+  additional plot layers.</dd>
       <dt>...</dt>
-      <dd>In lieu of <code>word.list</code> the user may
-  input n number of character vectors.</dd>
+      <dd>Other arguments passed to qheat.</dd>
     </dl>
     
-    <div class="Value">
-      <h2>Value</h2>
-      
-      <p>Returns a dataframe of all words that match the criteria
-set by <code>overlap</code> and <code>equal.or</code>.</p>
-  
-    </div>
-
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Find common words between grouping variables (e.g.,
-people).</p>
+      <p>Plots a weighted_wfm object.</p>
   
     </div>
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>common</li>
+      <li>plot.weighted_wfm</li>
     </ul>
     <ul>
       

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>print.cm_distance. qdap 0.2.3</title>
+<title>print.cm_distance. qdap 1.2.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.2.3</a>
+      <a class="brand" href="#">qdap 1.2.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,12 +40,40 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>print(x, ...)</pre>
+    <pre>print(x, mean.digits = 0, sd.digits = 2, sd.mean.digits = 3, pval.digits = 3, new.order = NULL, 
+  na.replace = "-", diag.replace = na.replace, print = TRUE, ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
       <dt>x</dt>
       <dd>The cm_distance object.</dd>
+      <dt>mean.digits</dt>
+      <dd>The number of digits to print for the
+  mean code distances.</dd>
+      <dt>sd.digits</dt>
+      <dd>The number of digits to print for the
+  standard deviations of the code distances.</dd>
+      <dt>sd.mean.digits</dt>
+      <dd>The number of digits to print for
+  the standardized mean distances.</dd>
+      <dt>pval.digits</dt>
+      <dd>The number of digits to print for the
+  p-values.</dd>
+      <dt>new.order</dt>
+      <dd>An integer vector reordering the columns
+  and rows of the output.  Omission of a column number will
+  result in omission from the output.</dd>
+      <dt>na.replace</dt>
+      <dd>A character to replace <code>NA</code> values
+  with.</dd>
+      <dt>diag.replace</dt>
+      <dd>A character to replace the diagonal
+  of the mean distance matrix.</dd>
+      <dt>print</dt>
+      <dd>logical.  If <code>TRUE</code> prints to the
+  console.  <code>FALSE</code> may be used to extract the
+  invisibly returned output without printing to the
+  console.</dd>
       <dt>...</dt>
       <dd>ignored</dd>
     </dl>

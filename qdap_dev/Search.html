@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>Search. qdap 1.0.0</title>
+<title>Search. qdap 1.2.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 1.0.0</a>
+      <a class="brand" href="#">qdap 1.2.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -66,9 +66,9 @@ boolean_search(text.var, terms, ignore.case = TRUE, values = FALSE, exclude = NU
       <dd>The text variable.</dd>
       <dt>terms</dt>
       <dd>A character string(s) to search for.  The
-  terms are aranged in a single string with AND (use
+  terms are arranged in a single string with AND (use
   <code>AND</code> or <code>&&</code> to connect terms together) and OR
-  (use <code>OR</code> or <code>||</code> to to allow for searches of
+  (use <code>OR</code> or <code>||</code> to allow for searches of
   either set of terms.  Spaces may be used to control what
   is searched for. For example using <code>" I "</code> on
   <code>c("I'm", "I want", "in")</code> will result in
@@ -82,7 +82,7 @@ boolean_search(text.var, terms, ignore.case = TRUE, values = FALSE, exclude = NU
   the index of the values.</dd>
       <dt>exclude</dt>
       <dd>Terms to exclude from the search.  If one
-  of these terms is found in the sentence it can not be
+  of these terms is found in the sentence it cannot be
   returned.</dd>
       <dt>apostrophe.remove</dt>
       <dd>logical.  If <code>TRUE</code> removes
@@ -129,8 +129,8 @@ terms/strings within a character vector.</p>
       
       <p>The terms string is first split by the OR separators into a
 list. Next the list of vectors is split on the AND
-separator to produce a list of vectors of seach terms.
-Each sentence is matched agains the terms.  For a sentence
+separator to produce a list of vectors of search terms.
+Each sentence is matched against the terms.  For a sentence
 to be counted it must fit all of the terms in an AND
 Boolean or one of the conditions in an OR Boolean.</p>
   

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>pos. qdap 0.2.3</title>
+<title>pos. qdap 1.2.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.2.3</a>
+      <a class="brand" href="#">qdap 1.2.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,34 +40,37 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>pos(text.var, parallel = FALSE, na.omit = FALSE, digits = 1, progress.bar = TRUE, 
-  percent = TRUE, zero.replace = 0, gc.rate = 10)
+    <pre>pos(text.var, parallel = FALSE, cores = detectCores()/2, progress.bar = TRUE, na.omit = FALSE, 
+  digits = 1, percent = TRUE, zero.replace = 0, gc.rate = 10)
 
-pos.by(text.var, grouping.var = NULL, digits = 1, percent = TRUE, zero.replace = 0, 
+pos_by(text.var, grouping.var = NULL, digits = 1, percent = TRUE, zero.replace = 0, 
       ...)
 
-pos.tags(type = "pretty")</pre>
+pos_tags(type = "pretty")</pre>
     
     <h2>Arguments</h2>
     <dl>
       <dt>text.var</dt>
-      <dd>The text variable</dd>
+      <dd>The text variable.</dd>
       <dt>parallel</dt>
       <dd>logical.  If <code>TRUE</code> attempts to run
   the function on multiple cores.  Note that this may not
   mean a speed boost if you have one core or if the data
   set is smaller as the cluster takes time to create.</dd>
+      <dt>cores</dt>
+      <dd>The number of cores to use if <code>parallel
+  = TRUE</code>.  Default is half the number of available cores.</dd>
       <dt>na.omit</dt>
       <dd>logical.  If <code>TRUE</code> missing values
   (<code>NA</code>) will be omitted.</dd>
-      <dt>digits</dt>
-      <dd>Integer; number of decimal places to round
-  when printing.</dd>
       <dt>progress.bar</dt>
       <dd>logical.  If <code>TRUE</code> attempts to
   provide a OS appropriate progress bar.  If parallel is
-  TRUE this argument is ignored. Note that setting this
-  argument to <code>TRUE</code> may slow down the function.</dd>
+  <code>TRUE</code> this argument is ignored. Note that setting
+  this argument to <code>TRUE</code> may slow down the function.</dd>
+      <dt>digits</dt>
+      <dd>Integer; number of decimal places to round
+  when printing.</dd>
       <dt>percent</dt>
       <dd>logical.  If <code>TRUE</code> output given as
   percent.  If <code>FALSE</code> the output is proportion.</dd>
@@ -100,46 +103,45 @@ pos.tags(type = "pretty")</pre>
     <div class="Value">
       <h2>Value</h2>
       
-      <p>pos returns a list of 4: textThe original text
-  POStaggedThe original words replaced with parts
-  of speech in context. POSpropDataframe of the
-  proportion of parts of speech by row.
-  POSfreqDataframe of the frequency of parts of
-  speech by row. POSrnpDataframe of the frequency
-  and proportions of parts of speech by row.
-  percentThe value of percent used for plotting
-  purposes. zero.replaceThe value of zero.replace
-  used for plotting purposes.</p>
+      <p><code>pos</code> - returns a list of 4: textThe original
+text POStaggedThe original words replaced with
+parts of speech in context. POSpropDataframe of
+the proportion of parts of speech by row.
+POSfreqDataframe of the frequency of parts of
+speech by row. POSrnpDataframe of the frequency
+and proportions of parts of speech by row.
+percentThe value of percent used for plotting
+purposes. zero.replaceThe value of zero.replace
+used for plotting purposes.</p>
   
-      <p>pos.by returns a list of 6: textThe original
-  text POStaggedThe original words replaced with
-  parts of speech in context. POSpropDataframe of
-  the proportion of parts of speech by row.
-  POSfreqDataframe of the frequency of parts of
-  speech by row. POSrnpDataframe of the frequency
-  and proportions of parts of speech by row.
-  pos.by.propDataframe of the proportion of parts
-  of speech by grouping variable.
-  pos.by.freqDataframe of the frequency of parts of
-  speech by grouping variable. pos.by.rnpDataframe
-  of the frequency and proportions of parts of speech by
-  grouping variable. percentThe value of percent
-  used for plotting purposes. zero.replaceThe
-  value of zero.replace used for plotting purposes.</p>
+      <p><code>pos_by</code> - returns a list of 6: textThe
+original text POStaggedThe original words replaced
+with parts of speech in context. POSpropDataframe
+of the proportion of parts of speech by row.
+POSfreqDataframe of the frequency of parts of
+speech by row. POSrnpDataframe of the frequency
+and proportions of parts of speech by row.
+pos.by.propDataframe of the proportion of parts of
+speech by grouping variable. pos.by.freqDataframe
+of the frequency of parts of speech by grouping variable.
+pos.by.rnpDataframe of the frequency and
+proportions of parts of speech by grouping variable.
+percentThe value of percent used for plotting
+purposes. zero.replaceThe value of zero.replace
+used for plotting purposes.</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p><code>pos</code> - Apply part of speech tagger to
-  transcript(s).</p>
+      <p><code>pos</code> - Apply part of speech tagger to transcript(s).</p>
   
-      <p><code>pos.by</code> - Apply part of speech tagger to
-  transcript(s) by zero or more grouping variable(s).</p>
+      <p><code>pos_by</code> - Apply part of speech tagger to
+transcript(s) by zero or more grouping variable(s).</p>
   
-      <p><code>pos.tags</code> - Useful for interpreting the parts of
-  speech tags created by pos and pos.by.</p>
+      <p><code>pos_tags</code> - Useful for interpreting the parts of
+speech tags created by pos and pos_by.</p>
   
     </div>
 
@@ -152,7 +154,7 @@ pos.tags(type = "pretty")</pre>
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>pos</li><li>pos.by</li><li>pos.tags</li>
+      <li>pos</li><li>pos_by</li><li>pos_tags</li>
     </ul>
     <ul>
       <li>parts-of-speech</li>
@@ -160,7 +162,8 @@ pos.tags(type = "pretty")</pre>
       
     <h2>See also</h2>
     
-  <code><a href='http://www.inside-r.org/r-doc/openNLP/tagPOS'>tagPOS</a></code>
+<code><a href='http://www.inside-r.org/r-doc/openNLP/Maxent_POS_Tag_Annotator'>Maxent_POS_Tag_Annotator</a></code>,
+<code>colcomb2class</code>
 
         
   </div>

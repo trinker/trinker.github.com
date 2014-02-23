@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>stemmer. qdap 0.2.3</title>
+<title>stemmer. qdap 1.2.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.2.3</a>
+      <a class="brand" href="#">qdap 1.2.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -43,7 +43,7 @@
     <pre>stemmer(text.var, rm.bracket = TRUE, capitalize = TRUE, warn = TRUE, char.keep = "~~", 
   ...)
 
-stem.words(...)
+stem_words(...)
 
 stem2df(dataframe, text.var, stem.name = NULL, ...)</pre>
     
@@ -69,7 +69,7 @@ stem2df(dataframe, text.var, stem.name = NULL, ...)</pre>
       <dt>...</dt>
       <dd>Various:  <em><code>stemmer</code> - Other
   arguments passed to <code>capitalizer</code></em> 
-  <em><code>stem.words</code> - Words or terms.</em> 
+  <em><code>stem_words</code> - Words or terms.</em> 
   <em><code>stem2df</code> - Other arguments passed to
   <code>stemmer</code></em></dd>
       <dt>dataframe</dt>
@@ -84,13 +84,13 @@ stem2df(dataframe, text.var, stem.name = NULL, ...)</pre>
       <h2>Value</h2>
       
       <p><code>stemmer</code> - returns a character vector with stemmed
-  text.</p>
+text.</p>
   
-      <p><code>stem.words</code> - returns a vector of individually
-  stemmed words.</p>
+      <p><code>stem_words</code> - returns a vector of individually
+stemmed words.</p>
   
       <p><code>stem2df</code> - returns a dataframe with a character
-  vector with stemmed text.</p>
+vector with stemmed text.</p>
   
     </div>
 
@@ -99,18 +99,18 @@ stem2df(dataframe, text.var, stem.name = NULL, ...)</pre>
       
       <p><code>stemmer</code> - Stems a vector of text strings.</p>
   
-      <p><code>stem.words</code> - Wrapper for stemmer that stems a
-  vector of words.</p>
+      <p><code>stem_words</code> - Wrapper for stemmer that stems a vector
+of words.</p>
   
-      <p><code>stem2df</code> - Wrapper for stemmer that stems a vector
-  of text strings and returns a dataframe with the vector
-  added..</p>
+      <p><code>stem2df</code> - Wrapper for stemmer that stems a vector of
+text strings and returns a dataframe with the vector
+added..</p>
   
     </div>
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>stem.words</li><li>stem2df</li><li>stemmer</li>
+      <li>stem2df</li><li>stem_words</li><li>stemmer</li>
     </ul>
     <ul>
       <li>stem</li>
@@ -118,7 +118,7 @@ stem2df(dataframe, text.var, stem.name = NULL, ...)</pre>
       
     <h2>See also</h2>
     
-  <code>capitalizer</code>
+<code>capitalizer</code>
 
         
   </div>

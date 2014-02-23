@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>replace_abbreviation. qdap 0.2.3</title>
+<title>replace_abbreviation. qdap 1.2.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.2.3</a>
+      <a class="brand" href="#">qdap 1.2.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,7 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>replace_abbreviation(text.var, abbreviation = qdap::abbreviations, replace = NULL, 
+    <pre>replace_abbreviation(text.var, abbreviation = qdapDictionaries::abbreviations, replace = NULL, 
   ignore.case = TRUE)</pre>
     
     <h2>Arguments</h2>
@@ -50,8 +50,9 @@
       <dt>abbreviation</dt>
       <dd>A two column key of abbreviations
   (column 1) and long form replacements (column 2) or a
-  vector of abbreviations.  Default is to use qdap's
-  abbreviations data set.</dd>
+  vector of abbreviations.  Default is to use
+  qdapDictionaries's
+  <code><a href='http://www.inside-r.org/r-doc/qdapDictionaries/abbreviations'>abbreviations</a></code> data set.</dd>
       <dt>replace</dt>
       <dd>A vector of long form replacements if a
   data frame is not supplied to the abbreviation argument.</dd>
@@ -84,10 +85,10 @@
       
     <h2>See also</h2>
     
-  <code>bracketX</code>, <code>qprep</code>,
-  <code>replace_contraction</code>,
-  <code>replace_number</code>,
-  <code>replace_symbol</code>
+<code>bracketX</code>, <code>qprep</code>,
+<code>replace_contraction</code>,
+<code>replace_number</code>,
+<code>replace_symbol</code>
 
         
   </div>

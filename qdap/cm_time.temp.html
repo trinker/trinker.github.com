@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>cm_time.temp. qdap 0.2.3</title>
+<title>cm_time.temp. qdap 1.2.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.2.3</a>
+      <a class="brand" href="#">qdap 1.2.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,12 +40,17 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>cm_time.temp(codes, start = ":00", end = NULL, file = NULL)</pre>
+    <pre>cm_time.temp(codes, grouping.var = NULL, start = ":00", end = NULL, file = NULL, 
+  coding = FALSE, print = TRUE)</pre>
     
     <h2>Arguments</h2>
     <dl>
       <dt>codes</dt>
       <dd>List of codes.</dd>
+      <dt>grouping.var</dt>
+      <dd>The grouping variables.  Also takes a
+  single grouping variable or a list of 1 or more grouping
+  variables.</dd>
       <dt>start</dt>
       <dd>A character string in the form of "00:00"
   indicating start time (default is ":00").</dd>
@@ -55,13 +60,19 @@
       <dt>file</dt>
       <dd>A connection, or a character string naming
   the file to print to (.txt or .doc is recommended).</dd>
+      <dt>coding</dt>
+      <dd>logical.  If <code>TRUE</code> a coding list is
+  provided with the time span coding sheet.  <code>coding</code>
+  is ignored if <code>end = NULL</code>.</dd>
+      <dt>print</dt>
+      <dd>logical.  If <code>TRUE</code> the time spans are
+  printed to the console.</dd>
     </dl>
     
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Generates a time span coding sheet and coding format
-  sheet.</p>
+      <p>Generates a time span coding sheet and coding format sheet.</p>
   
     </div>
 
@@ -69,8 +80,8 @@
       <h2>References</h2>
       
       <p>Miles, M. B. & Huberman, A. M. (1994). An expanded
-  sourcebook: Qualitative data analysis. 2nd ed. Thousand
-  Oaks, CA: SAGE Publications.</p>
+sourcebook: Qualitative data analysis. 2nd ed. Thousand
+Oaks, CA: SAGE Publications.</p>
   
     </div>
       </div>
@@ -84,7 +95,7 @@
       
     <h2>See also</h2>
     
-  <code>cm_range.temp</code>,
+<code>cm_range.temp</code>,
 
         
   </div>

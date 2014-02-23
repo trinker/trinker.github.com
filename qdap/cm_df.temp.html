@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>cm_df.temp. qdap 0.2.3</title>
+<title>cm_df.temp. qdap 1.2.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 0.2.3</a>
+      <a class="brand" href="#">qdap 1.2.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,8 +40,8 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>cm_df.temp(dataframe, text.var, codes = NULL, csv = TRUE, file.name = NULL, transpose = FALSE, 
-  strip = FALSE, ...)</pre>
+    <pre>cm_df.temp(dataframe, text.var, codes = NULL, file = NULL, transpose = FALSE, strip = FALSE, 
+  ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -51,12 +51,9 @@
       <dd>The name of the text variable.</dd>
       <dt>codes</dt>
       <dd>Optional list of codes.</dd>
-      <dt>csv</dt>
-      <dd>logical.  If <code>TRUE</code> creates a csv in the
-  working directory.</dd>
-      <dt>file.name</dt>
-      <dd>The name of the csv file.  If
-  <code>NULL</code> defaults to the dataframe name.</dd>
+      <dt>file</dt>
+      <dd>The name of the file (csv is recommended file
+  type).  If <code>NULL</code> no file is written.</dd>
       <dt>transpose</dt>
       <dd>logical.  If <code>TRUE</code> transposes the
   dataframe so that the text is across the top.</dd>
@@ -70,13 +67,13 @@
     <div class="Value">
       <h2>Value</h2>
       
-      <p>Generates a dataframe, and optional csv file, of
-  individual words while maintaining demographic
-  information.  If a vector of codes is provided the
-  outcome is a matrix of words used by codes filled with
-  zeros.  This dataframe is useful for dummy coded (1-yes
-  code exists; 2-no it does not) representation of data and
-  can be used for visualizations and statistical analysis.</p>
+      <p>Generates a dataframe, and optional csv file, of individual
+words while maintaining demographic information.  If a
+vector of codes is provided the outcome is a matrix of
+words used by codes filled with zeros.  This dataframe is
+useful for dummy coded (1-yes code exists; 0-no it does
+not) representation of data and can be used for
+visualizations and statistical analysis.</p>
   
     </div>
 
@@ -84,9 +81,9 @@
       <h2>Description</h2>
       
       <p>Breaks transcript dialogue into words while retaining the
-  demographic factors associate with each word.  The codes
-  argument provides a matrix of zeros that can serve as a
-  dummy coded matrix of codes per word.</p>
+demographic factors associate with each word.  The codes
+argument provides a matrix of zeros that can serve as a
+dummy coded matrix of codes per word.</p>
   
     </div>
 
@@ -94,8 +91,8 @@
       <h2>References</h2>
       
       <p>Miles, M. B. & Huberman, A. M. (1994). An expanded
-  sourcebook: Qualitative data analysis. 2nd ed. Thousand
-  Oaks, CA: SAGE Publications.</p>
+sourcebook: Qualitative data analysis. 2nd ed. Thousand
+Oaks, CA: SAGE Publications.</p>
   
     </div>
       </div>
@@ -109,8 +106,8 @@
       
     <h2>See also</h2>
     
-  <code><a href='cm_range2long.html'>cm_range2long</a></code>,
-  <code><a href='cm_df.transcript.html'>cm_df.transcript</a></code>, <code><a href='cm_df.fill.html'>cm_df.fill</a></code>
+<code><a href='cm_range2long.html'>cm_range2long</a></code>,
+<code><a href='cm_df.transcript.html'>cm_df.transcript</a></code>, <code><a href='cm_df.fill.html'>cm_df.fill</a></code>
 
         
   </div>
