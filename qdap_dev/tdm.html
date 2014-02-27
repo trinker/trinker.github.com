@@ -51,6 +51,8 @@ apply_as_tm(wfm.obj, tmfun, ..., to.qdap = TRUE)
 
 tm_corpus2df(tm.corpus, col1 = "docs", col2 = "text")
 
+tm_corpus2wfm(tm.corpus, col1 = "docs", col2 = "text", ...)
+
 df2tm_corpus(text.var, grouping.var = NULL, ...)</pre>
     
     <h2>Arguments</h2>
@@ -69,7 +71,9 @@ df2tm_corpus(text.var, grouping.var = NULL, ...)</pre>
   Other arguments passed to functions used on the tm
   package's <code>"TermDocumentMatrix"</code>.  If
   <code>df2tm_corpus</code> - Other arguments passed to the tm
-  package's <code><a href='http://www.inside-r.org/r-doc/tm/VCorpus'>Corpus</a></code>.</dd>
+  package's <code><a href='http://www.inside-r.org/r-doc/tm/VCorpus'>Corpus</a></code>.  If
+  <code>tm_corpus2wfm</code> - Other arguments passed to
+  <code>wfm</code>.</dd>
       <dt>vowel.check</dt>
       <dd>logical.  Should terms without vowels
   be remove?</dd>
@@ -114,6 +118,9 @@ format.</p>
       <p><code>tm_corpus2df</code> - Converts a <code><a href='http://www.inside-r.org/r-doc/tm/VCorpus'>Corpus</a></code>
 and returns a qdap oriented dataframe.</p>
   
+      <p><code>df2tm_wfm</code> - Converts a qdap oriented dataframe and
+returns a <code>wfm</code>.</p>
+  
       <p><code>df2tm_corpus</code> - Converts a qdap oriented dataframe
 and returns a <code><a href='http://www.inside-r.org/r-doc/tm/VCorpus'>Corpus</a></code>.</p>
   
@@ -142,6 +149,9 @@ the <code>tm</code> package's
       <p><code>tm_corpus2df</code> - Convert a tm package corpus to a
 dataframe.</p>
   
+      <p><code>tm_corpus2wfm</code> - Convert a <code><a href='http://www.inside-r.org/r-doc/tm/VCorpus'>Corpus</a></code>
+package corpus to a <code>wfm</code>.</p>
+  
       <p><code>df2tm_corpus</code> - Convert a qdap dataframe to a tm
 package <code><a href='http://www.inside-r.org/r-doc/tm/VCorpus'>Corpus</a></code>.</p>
   
@@ -160,7 +170,7 @@ between the qdap and tm packages.</p>
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>apply_as_tm</li><li>df2tm_corpus</li><li>dtm</li><li>tdm</li><li>tm2qdap</li><li>tm_corpus2df</li>
+      <li>apply_as_tm</li><li>df2tm_corpus</li><li>dtm</li><li>tdm</li><li>tm2qdap</li><li>tm_corpus2df</li><li>tm_corpus2wfm</li>
     </ul>
     <ul>
       
