@@ -195,10 +195,29 @@ For more see <a href="http://www.r-statistics.com/2012/08/how-to-load-the-rjava-
         <code><a href="justification.html">left_just</a></code> <code><a href="justification.html">right_just</a></code><br />Text Justification</li>
             
       <li>
-        <code><a href="Search.html">Search</a></code> <code><a href="Search.html">boolean_search</a></code><br />Search Columns of a Data Frame</li>
+        <code><a href="Search.html">Search</a></code> <code><a href="Search.html">boolean_search</a></code> <code><a href="Search.html">%bs%</a></code><br />Search Columns of a Data Frame</li>
             
       <li>
         <code><a href="strWrap.html">strWrap</a></code><br />Wrap Character Strings to Format Paragraphs</li>
+    
+    </ul>
+    <h3>Generic qdap Methods</h3>
+    <p>Functions to aid data viewing.</p>
+
+    
+    <ul class="index">
+        
+      <li>
+        <code><a href="counts.html">counts</a></code><br />Generic Counts Method</li>
+            
+      <li>
+        <code><a href="preprocessed.html">preprocessed</a></code><br />Generic Preprocessed Method</li>
+            
+      <li>
+        <code><a href="proportions.html">proportions</a></code><br />Generic Proportions Method</li>
+            
+      <li>
+        <code><a href="scores.html">scores</a></code><br />Generic Scores Method</li>
     
     </ul>
     <h3>Reshaping</h3>
@@ -236,7 +255,16 @@ For more see <a href="http://www.r-statistics.com/2012/08/how-to-load-the-rjava-
         <code><a href="key_merge.html">key_merge</a></code><br />Merge Demographic Information with Person/Text Transcript</li>
             
       <li>
-        <code><a href="list2df.html">list2df</a></code> <code><a href="list2df.html">matrix2df</a></code><br />List/Matrix to Dataframe</li>
+        <code><a href="list2df.html">list2df</a></code> <code><a href="list2df.html">matrix2df</a></code><br />List/Matrix/Vector to Dataframe</li>
+      <li>
+        <code><a href="list2df.html">list_df2df</a></code><br />List/Matrix/Vector to Dataframe</li>
+            
+      <li>
+        <code><a href="list2df.html">list_vect2df</a></code><br />List/Matrix/Vector to Dataframe</li>
+            
+      <li>
+        <code><a href="list2df.html">vect2df</a></code><br />List/Matrix/Vector to Dataframe</li>
+            
             
       <li>
         <code><a href="mtabulate.html">mtabulate</a></code><br />Tabulate Frequency Counts for Multiple Vectors</li>
@@ -370,6 +398,35 @@ For more see <a href="http://www.r-statistics.com/2012/08/how-to-load-the-rjava-
         <code><a href="cm_long2dummy.html">cm_long2dummy</a></code><br />Stretch and Dummy Code cm_xxx2long</li>
     
     </ul>
+    <h3>tm Package Integration</h3>
+    <p>Functions for working between the tm and qdap packages.</p>
+
+    
+    <ul class="index">
+        
+      <li>
+        <code><a href="tdm.html">tdm</a></code> <code><a href="tdm.html">dtm</a></code><br />tm Package Compatibility Tools: Apply to or Convert to/from Term Document
+      <li>
+        <code><a href="tdm.html">apply_as_df</a></code><br />tm Package Compatibility Tools: Apply to or Convert to/from Term Document
+            
+      <li>
+        <code><a href="tdm.html">apply_as_tm</a></code><br />tm Package Compatibility Tools: Apply to or Convert to/from Term Document
+            
+      <li>
+        <code><a href="tdm.html">df2tm_corpus</a></code><br />tm Package Compatibility Tools: Apply to or Convert to/from Term Document
+            
+      <li>
+        <code><a href="tdm.html">tm2qdap</a></code><br />tm Package Compatibility Tools: Apply to or Convert to/from Term Document
+            
+      <li>
+        <code><a href="tdm.html">tm_corpus2df</a></code><br />tm Package Compatibility Tools: Apply to or Convert to/from Term Document
+            
+      <li>
+        <code><a href="tdm.html">tm_corpus2wfm</a></code><br />tm Package Compatibility Tools: Apply to or Convert to/from Term Document
+            
+</li>
+    
+    </ul>
     <h3>Counts/Descriptives</h3>
     <p>Functions for word counts and descriptive statistics.</p>
 
@@ -413,10 +470,6 @@ For more see <a href="http://www.r-statistics.com/2012/08/how-to-load-the-rjava-
             
             
       <li>
-        <code><a href="tdm.html">tdm</a></code> <code><a href="tdm.html">dtm</a></code> <code><a href="tdm.html">apply_as_tm</a></code> <code><a href="tdm.html">tm2qdap</a></code> <code><a href="tdm.html">df2tm_corpus</a></code> <code><a href="tdm.html">tm_corpus2df</a></code> <code><a href="tdm.html">tm_corpus2wfm</a></code><br />tm Package Compatability Tools: Apply to or Convert to/from Term Document
-</li>
-            
-      <li>
         <code><a href="termco.html">termco</a></code><br />Search For and Count Terms</li>
       <li>
         <code><a href="termco.html">term_match</a></code><br />Search For and Count Terms</li>
@@ -432,12 +485,9 @@ For more see <a href="http://www.r-statistics.com/2012/08/how-to-load-the-rjava-
         <code><a href="termco_c.html">termco_c</a></code><br />Combine Columns from a termco Object</li>
             
       <li>
-        <code><a href="Word_Frequency_Matrix.html">wfm</a></code> <code><a href="Word_Frequency_Matrix.html">wfdf</a></code> <code><a href="Word_Frequency_Matrix.html">wfm_weight</a></code> <code><a href="Word_Frequency_Matrix.html">as.wfm</a></code> <code><a href="Word_Frequency_Matrix.html">nchar_range</a></code><br />Word Frequency Matrix</li>
+        <code><a href="Word_Frequency_Matrix.html">wfm</a></code> <code><a href="Word_Frequency_Matrix.html">wfdf</a></code> <code><a href="Word_Frequency_Matrix.html">as.wfm</a></code> <code><a href="Word_Frequency_Matrix.html">Filter.wfm</a></code> <code><a href="Word_Frequency_Matrix.html">weight.wfdf</a></code> <code><a href="Word_Frequency_Matrix.html">weight.wfm</a></code> <code><a href="Word_Frequency_Matrix.html">wfm_combine</a></code> <code><a href="Word_Frequency_Matrix.html">wfm_expanded</a></code><br />Word Frequency Matrix</li>
       <li>
-        <code><a href="Word_Frequency_Matrix.html">wfm_combine</a></code><br />Word Frequency Matrix</li>
-            
-      <li>
-        <code><a href="Word_Frequency_Matrix.html">wfm_expanded</a></code><br />Word Frequency Matrix</li>
+        <code><a href="Word_Frequency_Matrix.html">Filter</a></code><br />Word Frequency Matrix</li>
             
             
       <li>
@@ -463,7 +513,7 @@ For more see <a href="http://www.r-statistics.com/2012/08/how-to-load-the-rjava-
         <code><a href="Readability.html">automated_readability_index</a></code> <code><a href="Readability.html">coleman_liau</a></code> <code><a href="Readability.html">flesch_kincaid</a></code> <code><a href="Readability.html">fry</a></code> <code><a href="Readability.html">linsear_write</a></code> <code><a href="Readability.html">SMOG</a></code><br />Readability Measures</li>
             
       <li>
-        <code><a href="dissimilarity.html">dissimilarity</a></code><br />Dissimilarity Statistics</li>
+        <code><a href="Dissimilarity.html">Dissimilarity</a></code> <code><a href="Dissimilarity.html">dissimilarity</a></code><br />Dissimilarity Statistics</li>
             
       <li>
         <code><a href="diversity.html">diversity</a></code><br />Diversity Statistics</li>
@@ -509,10 +559,7 @@ For more see <a href="http://www.r-statistics.com/2012/08/how-to-load-the-rjava-
         <code><a href="hms2sec.html">hms2sec</a></code><br />Convert h:m:s to Seconds</li>
             
       <li>
-        <code><a href="lookup.html">lookup</a></code> <code><a href="lookup.html">%l%</a></code><br />Hash Table/Dictionary Lookup</li>
-      <li>
-        <code><a href="lookup.html">%l+%</a></code><br />Hash Table/Dictionary Lookup</li>
-            
+        <code><a href="lookup.html">lookup</a></code> <code><a href="lookup.html">%l%</a></code> <code><a href="lookup.html">%l+%</a></code><br />Hash Table/Dictionary Lookup</li>
             
       <li>
         <code><a href="qcv.html">qcv</a></code><br />Quick Character Vector</li>
@@ -670,7 +717,7 @@ For more see <a href="http://www.r-statistics.com/2012/08/how-to-load-the-rjava-
         <code><a href="print.colsplit2df.html">print.colsplit2df</a></code><br />Prints a colsplit2df Object.</li>
             
       <li>
-        <code><a href="print.dissimilarity.html">print.dissimilarity</a></code><br />Prints a dissimilarity object</li>
+        <code><a href="print.Dissimilarity.html">print.Dissimilarity</a></code><br />Prints a Dissimilarity object</li>
             
       <li>
         <code><a href="print.diversity.html">print.diversity</a></code><br />Prints a diversity object</li>
@@ -685,7 +732,7 @@ For more see <a href="http://www.r-statistics.com/2012/08/how-to-load-the-rjava-
         <code><a href="print.ngrams.html">print.ngrams</a></code><br />Prints an ngrams object</li>
             
       <li>
-        <code><a href="print.polarity.html">print.polarity</a></code><br />Prints a polarity Object</li>
+        <code><a href="print.polarity.html">print.polarity</a></code><br />Prints an polarity Object</li>
             
       <li>
         <code><a href="print.pos.html">print.pos</a></code><br />Prints a pos Object.</li>
@@ -715,7 +762,7 @@ For more see <a href="http://www.r-statistics.com/2012/08/how-to-load-the-rjava-
         <code><a href="print.v_outer.html">print.v_outer</a></code><br />Prints a v_outer Object.</li>
             
       <li>
-        <code><a href="print.wfm.html">print.wfm</a></code><br />Prints an wfm Object</li>
+        <code><a href="print.wfm.html">print.wfm</a></code><br />Prints a wfm Object</li>
             
       <li>
         <code><a href="print.word_associate.html">print.word_associate</a></code><br />Prints a word_associate object</li>

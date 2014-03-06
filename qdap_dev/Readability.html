@@ -49,8 +49,8 @@ SMOG(text.var, grouping.var = NULL, output = "valid", rm.incomplete = FALSE, ...
 
 flesch_kincaid(text.var, grouping.var = NULL, rm.incomplete = FALSE, ...)
 
-fry(text.var, grouping.var = NULL, auto.label = TRUE, rm.incomplete = FALSE, grid = FALSE, 
-      div.col = "grey85", ...)
+fry(text.var, grouping.var = NULL, rm.incomplete = FALSE, auto.label = TRUE, grid = FALSE, 
+      div.col = "grey85", plot = TRUE, ...)
 
 linsear_write(text.var, grouping.var = NULL, rm.incomplete = FALSE, ...)</pre>
     
@@ -84,16 +84,24 @@ linsear_write(text.var, grouping.var = NULL, rm.incomplete = FALSE, ...)</pre>
       <dt>div.col</dt>
       <dd>The color of the grade level division
   lines.</dd>
+      <dt>plot</dt>
+      <dd>logical.  If <code>TRUE</code> a graph is plotted
+  corresponding to Fry's graphic representation.</dd>
     </dl>
     
     <div class="Value">
       <h2>Value</h2>
       
-      <p>Returns a dataframe with selected readability statistic by
-grouping variable(s).  The <code>frey</code> function returns a
-graphic representation of the readability as well as a list
-of two dataframe: 1) <code>SENTENCES_USED</code> and 2)
-<code>SENTENCE_AVERAGES</code>.</p>
+      <p>Returns a list of 2 dataframes: (1) Counts and (2)
+Readability. Counts are the raw scores used to calculate
+readability score and can be accessed via
+<code>counts</code>.  Readability is the dataframe
+with the selected readability statistic by grouping
+variable(s) and can be access via
+<code>scores</code>.  The <code>fry</code>
+function returns a graphic representation of the
+readability as the <code>scores</code> returns the
+information for graphing but not a readability score.</p>
   
     </div>
 

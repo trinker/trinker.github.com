@@ -40,7 +40,8 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>rm_row(dataframe, search.column, terms, keep.rownames = FALSE)
+    <pre>rm_row(dataframe, search.column, terms, contains = FALSE, ignore.case = FALSE, keep.rownames = FALSE, 
+  ...)
 
 rm_empty_row(dataframe)</pre>
     
@@ -55,9 +56,21 @@ rm_empty_row(dataframe)</pre>
       <dd>Terms/markers of the rows that are to be
   removed from the dataframe.  The term/marker must appear
   at the beginning of the string and is case sensitive.</dd>
+      <dt>contains</dt>
+      <dd>logical.  If <code>TRUE</code> <code>rm_row</code>
+  searches for the terms anywhere within the string.  If
+  <code>FALSE</code> <code>rm_row</code> searches only the begining of
+  the string.</dd>
+      <dt>ignore.case</dt>
+      <dd>logical.  If <code>TRUE</code> case is
+  ignored during matching, if <code>FALSE</code>the pattern
+  matching is case sensitive.</dd>
       <dt>keep.rownames</dt>
       <dd>logical.  If <code>TRUE</code> the
   original, non-sequential, rownames will be used.</dd>
+      <dt>...</dt>
+      <dd>Other arguments passed to
+  <code><a href='http://www.inside-r.org/r-doc/base/grep'>grepl</a></code>.</dd>
     </dl>
     
     <div class="Value">

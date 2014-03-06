@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>list2df. qdap 1.1.0</title>
+<title>list2df. qdap 1.2.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 1.1.0</a>
+      <a class="brand" href="#">qdap 1.2.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -35,14 +35,20 @@
         
       </header>
       
-      <h1>List/Matrix to Dataframe</h1>
+      <h1>List/Matrix/Vector to Dataframe</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
     <pre>list2df(list.object, col1 = "X1", col2 = "X2")
 
-matrix2df(matrix.object, col1 = "var1")</pre>
+matrix2df(matrix.object, col1 = "var1")
+
+vect2df(vector.object, col1 = "X1", col2 = "X2", order = TRUE, rev = FALSE)
+
+list_df2df(list.df.object, col1 = "X1")
+
+list_vect2df(list.vector.object, col1 = "X1", col2 = "X2", col3 = "X3", ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -57,7 +63,27 @@ matrix2df(matrix.object, col1 = "var1")</pre>
       <dd>Name for column 2 (the names of the
   vectors).</dd>
       <dt>matrix.object</dt>
-      <dd>A matrix object.</dd>
+      <dd>A matrix or simple_triplet_matrix
+  object.</dd>
+      <dt>vector.object</dt>
+      <dd>A vector object.</dd>
+      <dt>order</dt>
+      <dd>logical.  If <code>TRUE</code> the dataframe will
+  be ordered.</dd>
+      <dt>rev</dt>
+      <dd>logical. If <code>TRUE</code> and <code>order =
+  TRUE</code> the dataframe will be ordered in descending order.</dd>
+      <dt>list.df.object</dt>
+      <dd>A list of dataframes with equal
+  number/named of columns.</dd>
+      <dt>list.vector.object</dt>
+      <dd>A list of dataframes with equal
+  number/named of columns.</dd>
+      <dt>col3</dt>
+      <dd>The name of the third column
+  (<code>list_vect2df</code>).</dd>
+      <dt>...</dt>
+      <dd>Further arguments passed to <code>vect2df</code>)</dd>
     </dl>
     
     <div class="Value">
@@ -66,6 +92,12 @@ matrix2df(matrix.object, col1 = "var1")</pre>
       <p><code>list2df</code> - Returns a dataframe with two columns.</p>
   
       <p><code>matrix2df</code> - Returns a dataframe.</p>
+  
+      <p><code>vect2df</code> - Returns a dataframe.</p>
+  
+      <p><code>list_df2df</code> - Returns a dataframe.</p>
+  
+      <p><code>list_vect2df</code> - Returns a dataframe.</p>
   
     </div>
 
@@ -78,6 +110,15 @@ dataframe.</p>
       <p><code>matrix2df</code> - Convert a matrix to a dataframe and
 convert the rownames to the first column.</p>
   
+      <p><code>vect2df</code> - Convert a named vector to a dataframe.</p>
+  
+      <p><code>list_df2df</code> - Convert a list of equal numbered/named
+columns to a dataframe using the list names as the level
+two variable.</p>
+  
+      <p><code>list_vect2df</code> - Convert a list of named vectors to a
+hierarchical dataframe.</p>
+  
     </div>
 
     <div class="Details">
@@ -89,7 +130,7 @@ convert the rownames to the first column.</p>
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>list2df</li><li>matrix2df</li>
+      <li>list2df</li><li>list_df2df</li><li>list_vect2df</li><li>matrix2df</li><li>vect2df</li>
     </ul>
     <ul>
       <li>collapse</li><li>list</li>

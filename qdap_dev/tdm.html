@@ -35,7 +35,7 @@
         
       </header>
       
-      <h1>tm Package Compatability Tools: Apply to or Convert to/from Term Document
+      <h1>tm Package Compatibility Tools: Apply to or Convert to/from Term Document
 Matrix or Document Term Matrix</h1>
 
 <div class="row">
@@ -53,7 +53,9 @@ tm_corpus2df(tm.corpus, col1 = "docs", col2 = "text")
 
 tm_corpus2wfm(tm.corpus, col1 = "docs", col2 = "text", ...)
 
-df2tm_corpus(text.var, grouping.var = NULL, ...)</pre>
+df2tm_corpus(text.var, grouping.var = NULL, ...)
+
+apply_as_df(tm.corpus, qdapfun, ...)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -96,6 +98,9 @@ df2tm_corpus(text.var, grouping.var = NULL, ...)</pre>
       <dt>col2</dt>
       <dd>Name for column 2 (the names of the
   vectors).</dd>
+      <dt>qdapfun</dt>
+      <dd>A qdap function that is usually used on
+  text.variable ~ grouping variable.</dd>
     </dl>
     
     <div class="Value">
@@ -108,12 +113,11 @@ df2tm_corpus(text.var, grouping.var = NULL, ...)</pre>
 <code><a href='http://www.inside-r.org/r-doc/tm/matrix'>DocumentTermMatrix</a></code>.</p>
   
       <p><code>tm2qdap</code> - Returns a <code>wfm</code> object
-or <code>wfm_weight</code> object.</p>
+or <code>weight</code> object.</p>
   
       <p><code>apply_as_tm</code> - Applies a tm oriented function to a
 <code>wfm</code> and attempts to simplify back to a
-<code>wfm</code> or <code>wfm_weight</code>
-format.</p>
+<code>wfm</code> or <code>weight</code> format.</p>
   
       <p><code>tm_corpus2df</code> - Converts a <code><a href='http://www.inside-r.org/r-doc/tm/VCorpus'>Corpus</a></code>
 and returns a qdap oriented dataframe.</p>
@@ -155,6 +159,9 @@ package corpus to a <code>wfm</code>.</p>
       <p><code>df2tm_corpus</code> - Convert a qdap dataframe to a tm
 package <code><a href='http://www.inside-r.org/r-doc/tm/VCorpus'>Corpus</a></code>.</p>
   
+      <p>Apply a <span class = "pkg">tm</span> <code><a href='http://www.inside-r.org/r-doc/tm/VCorpus'>Corpus</a></code> as a qdap
+dataframe.</p>
+  
     </div>
 
     <div class="Details">
@@ -167,10 +174,18 @@ package's <code><a href='http://www.inside-r.org/r-doc/tm/matrix'>TermDocumentMa
 between the qdap and tm packages.</p>
   
     </div>
+
+    <div class="Note">
+      <h2>Note</h2>
+      
+      <p><code>aply_ad_df</code> coherses to a dataframe with columns
+named `docs` and the othe rnames `docs`.</p>
+  
+    </div>
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>apply_as_tm</li><li>df2tm_corpus</li><li>dtm</li><li>tdm</li><li>tm2qdap</li><li>tm_corpus2df</li><li>tm_corpus2wfm</li>
+      <li>apply_as_df</li><li>apply_as_tm</li><li>df2tm_corpus</li><li>dtm</li><li>tdm</li><li>tm2qdap</li><li>tm_corpus2df</li><li>tm_corpus2wfm</li>
     </ul>
     <ul>
       
