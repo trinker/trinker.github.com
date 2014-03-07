@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>wfm. qdap 1.2.0</title>
+<title>wfm. qdap 1.3.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 1.2.0</a>
+      <a class="brand" href="#">qdap 1.3.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -53,8 +53,6 @@ wfm_combine(wf.obj, word.lists, matrix = TRUE)
 weight(x, type = "prop", ...)
 
 weight(x, type = "prop", ...)
-
-Filter(x, min = 1, max = Inf, count.apostrophe = TRUE, stopwords = NULL, ...)
 
 Filter(x, min = 1, max = Inf, count.apostrophe = TRUE, stopwords = NULL, ...)
 
@@ -108,7 +106,8 @@ as.wfm(matrix.object)</pre>
   FALSE</code>; output is not integer and column sums may not be
   equal.</dd>
       <dt>x</dt>
-      <dd>A <code>wfm</code> object.</dd>
+      <dd>A filterable object (e.g.,
+  <code>wfm</code>, <code><a href='http://www.inside-r.org/r-doc/base/character'>character</a></code>).</dd>
       <dt>min</dt>
       <dd>Minimum word length.</dd>
       <dt>max</dt>
@@ -172,18 +171,8 @@ analysis where such weighting is sensible.</p>
       <p><code>Filter</code> - Filter words from a wfm that meet max/min
 word length criteria.</p>
   
-      <p><code>Filter.wfm</code> - Filter words from a wfm that meet
-max/min word length criteria.</p>
-  
       <p><code>as.wfm</code> - Attempts to coerce a matrix to a
 <code>wfm</code>.</p>
-  
-    </div>
-
-    <div class="Details">
-      <h2>Details</h2>
-      
-      <p>wfm Method for Filter</p>
   
     </div>
 
@@ -199,7 +188,7 @@ keeping proper names as a single unit.</p>
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>Filter</li><li>Filter.wfm</li><li>as.wfm</li><li>weight.wfdf</li><li>weight.wfm</li><li>wfdf</li><li>wfm</li><li>wfm_combine</li><li>wfm_expanded</li>
+      <li>Filter.wfm</li><li>as.wfm</li><li>weight.wfdf</li><li>weight.wfm</li><li>wfdf</li><li>wfm</li><li>wfm_combine</li><li>wfm_expanded</li>
     </ul>
     <ul>
       <li>word-frequency-matrix</li>

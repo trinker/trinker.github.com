@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>tdm. qdap 1.2.0</title>
+<title>tdm. qdap 1.3.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 1.2.0</a>
+      <a class="brand" href="#">qdap 1.3.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -55,7 +55,8 @@ tm_corpus2wfm(tm.corpus, col1 = "docs", col2 = "text", ...)
 
 df2tm_corpus(text.var, grouping.var = NULL, ...)
 
-apply_as_df(tm.corpus, qdapfun, ...)</pre>
+apply_as_df(tm.corpus, qdapfun, ..., stopwords = NULL, min = 1, max = Inf, count.apostrophe = TRUE, 
+  ignore.case = TRUE)</pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -101,6 +102,23 @@ apply_as_df(tm.corpus, qdapfun, ...)</pre>
       <dt>qdapfun</dt>
       <dd>A qdap function that is usually used on
   text.variable ~ grouping variable.</dd>
+      <dt>stopwords</dt>
+      <dd>A character vector of words to remove
+  from the text.  qdap has a number of data sets that can
+  be used as stop words including: <code>Top200Words</code>,
+  <code>Top100Words</code>, <code>Top25Words</code>.  For the tm
+  package's traditional English stop words use
+  <code>tm::stopwords("english")</code>.</dd>
+      <dt>min</dt>
+      <dd>Minimum word length.</dd>
+      <dt>max</dt>
+      <dd>Maximum word length.</dd>
+      <dt>count.apostrophe</dt>
+      <dd>logical.  If <code>TRUE</code>
+  apostrophes are counted as characters.</dd>
+      <dt>ignore.case</dt>
+      <dd>logical.  If <code>TRUE</code> stop words
+  will be removed regardless of case.</dd>
     </dl>
     
     <div class="Value">
@@ -178,8 +196,8 @@ between the qdap and tm packages.</p>
     <div class="Note">
       <h2>Note</h2>
       
-      <p><code>aply_ad_df</code> coherses to a dataframe with columns
-named `docs` and the othe rnames `docs`.</p>
+      <p><code>aply_ad_df</code> coerces to a dataframe with columns named
+`docs` and the other named `text`.</p>
   
     </div>
       </div>
@@ -196,6 +214,8 @@ named `docs` and the othe rnames `docs`.</p>
 <code><a href='http://www.inside-r.org/r-doc/tm/matrix'>DocumentTermMatrix</a></code>,
 <code><a href='http://www.inside-r.org/r-doc/tm/VCorpus'>Corpus</a></code>,
 <code><a href='http://www.inside-r.org/r-doc/tm/matrix'>TermDocumentMatrix</a></code>
+
+<code>Filter</code>
 
         
   </div>
