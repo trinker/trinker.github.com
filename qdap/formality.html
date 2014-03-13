@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>formality. qdap 1.2.0</title>
+<title>formality. qdap 1.3.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 1.2.0</a>
+      <a class="brand" href="#">qdap 1.3.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,7 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>formality(text.var, grouping.var = NULL, order.by.formality = TRUE, digits = 2, ...)</pre>
+    <pre><div>formality(text.var, grouping.var&nbsp;=&nbsp;NULL, order.by.formality&nbsp;=&nbsp;TRUE, digits&nbsp;=&nbsp;2, ...)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -128,7 +128,10 @@ Context, Special issue of Foundations of Science, 7 (3),
 293-340.</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # with(DATA, formality(state, person))# (x1 &lt;- with(DATA, formality(state, list(sex, adult))))# plot(x1)# plot(x1, short.names = FALSE)# # scores(x1)# counts(x1)# proportions(x1)# preprocessed(x1)# # plot(scores(x1))# plot(counts(x1))# plot(proportions(x1), high=&quot;darkgreen&quot;)# plot(preprocessed(x1))# # data(rajPOS) #A data set consisting of a pos list object# x2 &lt;- with(raj, formality(rajPOS, act))# plot(x2)# x3 &lt;- with(raj, formality(rajPOS, person))# plot(x3, bar.colors=&quot;Dark2&quot;)# plot(x3, bar.colors=c(&quot;Dark2&quot;, &quot;Set1&quot;))# x4 &lt;- with(raj, formality(rajPOS, list(person, act)))# plot(x4, bar.colors=c(&quot;Dark2&quot;, &quot;Set1&quot;))# # rajDEM &lt;- key_merge(raj, raj.demographics) #merge demographics with transcript.# x5 &lt;- with(rajDEM, formality(rajPOS, sex))# plot(x5, bar.colors=&quot;RdBu&quot;)# x6 &lt;- with(rajDEM, formality(rajPOS, list(fam.aff, sex)))# plot(x6, bar.colors=&quot;RdBu&quot;)# x7 &lt;- with(rajDEM, formality(rajPOS, list(died, fam.aff)))# plot(x7, bar.colors=&quot;RdBu&quot;,  point.cex=2, point.pch = 3)# x8 &lt;- with(rajDEM, formality(rajPOS, list(died, sex)))# plot(x8, bar.colors=&quot;RdBu&quot;,  point.cex=2, point.pch = &quot;|&quot;)# # names(x8)# colsplit2df(x8$formality)# # #pass an object from pos or pos_by# ltruncdf(with(raj, formality(x8 , list(act, person))), 6, 4)# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>formality</li>

@@ -40,12 +40,8 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>rank_freq_mplot(text.var, grouping.var = NULL, ncol = 4, jitter = 0.2, log.freq = TRUE, 
-  log.rank = TRUE, hap.col = "red", dis.col = "blue", alpha = 1, shape = 1, title = "Rank-Frequency Plot", 
-      digits = 2, plot = TRUE)
-
-rank_freq_plot(words, frequencies, plot = TRUE, title.ext = NULL, jitter.ammount = 0.1, 
-      log.scale = TRUE, hap.col = "red", dis.col = "blue")</pre>
+    <pre><div>rank_freq_mplot(text.var, grouping.var&nbsp;=&nbsp;NULL, ncol&nbsp;=&nbsp;4, jitter&nbsp;=&nbsp;0.2, log.freq&nbsp;=&nbsp;TRUE, log.rank&nbsp;=&nbsp;TRUE, hap.col&nbsp;=&nbsp;"red", dis.col&nbsp;=&nbsp;"blue", alpha&nbsp;=&nbsp;1, shape&nbsp;=&nbsp;1, title&nbsp;=&nbsp;"Rank-Frequency Plot", digits&nbsp;=&nbsp;2, plot&nbsp;=&nbsp;TRUE)</div>
+<div>rank_freq_plot(words, frequencies, plot&nbsp;=&nbsp;TRUE, title.ext&nbsp;=&nbsp;NULL, jitter.ammount&nbsp;=&nbsp;0.1, log.scale&nbsp;=&nbsp;TRUE, hap.col&nbsp;=&nbsp;"red", dis.col&nbsp;=&nbsp;"blue")</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -144,7 +140,10 @@ least effort. Cambridge, Massachusetts: Addison-Wesley. p.
 1.</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # #rank_freq_mplot EXAMPLES:# x1 &lt;- rank_freq_mplot(DATA$state, DATA$person, ncol = 2, jitter = 0)# ltruncdf(x1, 10)# x2 &lt;- rank_freq_mplot(mraja1spl$dialogue, mraja1spl$person, ncol = 5,#     hap.col = &quot;purple&quot;)# ltruncdf(x2, 10)# invisible(rank_freq_mplot(mraja1spl$dialogue, mraja1spl$person, ncol = 5,#     log.freq = FALSE, log.rank = FALSE, jitter = .6))# invisible(rank_freq_mplot(raj$dialogue, jitter = .5, alpha = 1/15))# invisible(rank_freq_mplot(raj$dialogue, jitter = .5, shape = 19, alpha = 1/15))# # #rank_freq_plot EXAMPLES:# mod &lt;- with(mraja1spl , word_list(dialogue, person, cut.n = 10,#     cap.list=unique(mraja1spl$person)))# x3 &lt;- rank_freq_plot(mod$fwl$Romeo$WORD, mod$fwl$Romeo$FREQ, title.ext = &#39;Romeo&#39;)# ltruncdf(x3, 10)# ltruncdf(rank_freq_plot(mod$fwl$Romeo$WORD, mod$fwl$Romeo$FREQ, plot = FALSE)           , 10)# invisible(rank_freq_plot(mod$fwl$Romeo$WORD, mod$fwl$Romeo$FREQ, title.ext = &#39;Romeo&#39;,#     jitter.ammount = 0.15, hap.col = &quot;darkgreen&quot;, dis.col = &quot;purple&quot;))# invisible(rank_freq_plot(mod$fwl$Romeo$WORD, mod$fwl$Romeo$FREQ, title.ext = &#39;Romeo&#39;,#     jitter.ammount = 0.5, log.scale=FALSE))# invisible(lapply(seq_along(mod$fwl), function(i){#     dev.new()#     rank_freq_plot(mod$fwl[[i]]$WORD, mod$fwl[[i]]$FREQ,#         title.ext = names(mod$fwl)[i], jitter.ammount = 0.5, log.scale=FALSE)# }))# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>rank_freq_mplot</li><li>rank_freq_plot</li>

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>multiscale. qdap 1.2.0</title>
+<title>multiscale. qdap 1.3.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 1.2.0</a>
+      <a class="brand" href="#">qdap 1.3.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,7 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>multiscale(numeric.var, grouping.var, original_order = TRUE, digits = 2)</pre>
+    <pre><div>multiscale(numeric.var, grouping.var, original_order&nbsp;=&nbsp;TRUE, digits&nbsp;=&nbsp;2)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -76,7 +76,10 @@ by group.</p>
       <p>Standardize within a subgroup and then within a group.</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # dat &lt;- with(mraja1spl, word_stats(dialogue, list(person, sex, fam.aff)))# htruncdf(colsplit2df(dat$ts), ,4)# out1 &lt;- with(colsplit2df(dat$ts), multiscale(word.count, person))# ltruncdf(out1, 10)# out2 &lt;- with(colsplit2df(dat$ts), multiscale(word.count,#     list(fam.aff, sex)))# ltruncdf(out2, 10)# out3 &lt;- with(colsplit2df(dat$ts), multiscale(word.count,#     list(fam.aff, sex), original_order = FALSE))# ltruncdf(out3, 10)# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>multiscale</li>

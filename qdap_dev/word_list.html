@@ -40,9 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>word_list(text.var, grouping.var = NULL, stopwords = NULL, alphabetical = FALSE, 
-  cut.n = 20, cap = TRUE, cap.list = NULL, cap.I = TRUE, rm.bracket = TRUE, char.keep = NULL, 
-      apostrophe.remove = FALSE, ...)</pre>
+    <pre><div>word_list(text.var, grouping.var&nbsp;=&nbsp;NULL, stopwords&nbsp;=&nbsp;NULL, alphabetical&nbsp;=&nbsp;FALSE, cut.n&nbsp;=&nbsp;20, cap&nbsp;=&nbsp;TRUE, cap.list&nbsp;=&nbsp;NULL, cap.I&nbsp;=&nbsp;TRUE, rm.bracket&nbsp;=&nbsp;TRUE, char.keep&nbsp;=&nbsp;NULL, apostrophe.remove&nbsp;=&nbsp;FALSE, ...)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -107,7 +105,10 @@ same as fswl but truncated to n rows</p>
 grouping variable(s).</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # word_list(raj.act.1$dialogue)# # out1 &lt;- with(raj, word_list(text.var = dialogue,#     grouping.var = list(person, act)))# names(out1)# lapply(out1$cwl, &quot;[&quot;, 1:5)# # with(DATA, word_list(state, person))# with(DATA, word_list(state, person, stopwords = Top25Words))# with(DATA, word_list(state, person, cap = FALSE, cap.list=c(&quot;do&quot;, &quot;we&quot;)))# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>word_list</li>

@@ -42,11 +42,9 @@ Bryan Goodrich and Tyler Rinker &lt;tyler.rinker@gmail.com&gt;.
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>hash(x, mode.out = "numeric")
-
-hash_look(terms, envir, missing = NA)
-
-terms %ha% envir</pre>
+    <pre><div>hash(x, mode.out&nbsp;=&nbsp;"numeric")</div>
+<div>hash_look(terms, envir, missing&nbsp;=&nbsp;NA)</div>
+<div>terms %ha% envir</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -92,7 +90,10 @@ returned from <code>hash</code>, to lookup values.</p>
       <p><a href = 'http://www.talkstats.com/showthread.php/22754-Create-a-fast-dictionary'>http://www.talkstats.com/showthread.php/22754-Create-a-fast-dictionary</a></p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # (DF &lt;- aggregate(mpg~as.character(carb), mtcars, mean))# new.hash1 &lt;- hash(DF)  #numeric outcome# x &lt;- sample(DF[, 1], 20, TRUE)# hash_look(x, new.hash1)# # new.hash2 &lt;- hash(DF, &quot;character&quot;) #character outcome# x %ha% new.hash2# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>%ha%</li><li>hash</li><li>hash_look</li>

@@ -40,11 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>dispersion_plot(text.var, match.terms, grouping.var = NULL, rm.vars = NULL, color = "blue", 
-  bg.color = "grey90", horiz.color = "grey85", total.color = "black", symbol = "|", 
-      title = "Lexical Dispersion Plot", rev.factor = TRUE, wrap = "'", xlab = "Dialogue (Words)", 
-      ylab = NULL, size = 4, plot = TRUE, char2space = "~~", apostrophe.remove = FALSE, 
-      scales = "free", space = "free", ...)</pre>
+    <pre><div>dispersion_plot(text.var, match.terms, grouping.var&nbsp;=&nbsp;NULL, rm.vars&nbsp;=&nbsp;NULL, color&nbsp;=&nbsp;"blue", bg.color&nbsp;=&nbsp;"grey90", horiz.color&nbsp;=&nbsp;"grey85", total.color&nbsp;=&nbsp;"black", symbol&nbsp;=&nbsp;"|", title&nbsp;=&nbsp;"Lexical Dispersion Plot", rev.factor&nbsp;=&nbsp;TRUE, wrap&nbsp;=&nbsp;"'", xlab&nbsp;=&nbsp;"Dialogue (Words)", ylab&nbsp;=&nbsp;NULL, size&nbsp;=&nbsp;4, plot&nbsp;=&nbsp;TRUE, char2space&nbsp;=&nbsp;"~~", apostrophe.remove&nbsp;=&nbsp;FALSE, scales&nbsp;=&nbsp;"free", space&nbsp;=&nbsp;"free", ...)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -142,7 +138,10 @@ word "read" you'd supply a vector of c(" read ", " reads",
 " reading", " reader").</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # term_match(raj$dialogue, c(&quot; love &quot;, &quot;love&quot;, &quot; night &quot;, &quot;night&quot;))# dispersion_plot(raj$dialogue, c(&quot; love &quot;, &quot;love&quot;, &quot; night &quot;, &quot;night&quot;))# dispersion_plot(raj$dialogue, c(&quot;love&quot;, &quot;night&quot;), rm.vars = raj$act)# with(rajSPLIT , dispersion_plot(dialogue, c(&quot;love&quot;, &quot;night&quot;),#     grouping.var = list(fam.aff, sex), rm.vars = act))# # ## With grouping variables# with(rajSPLIT , dispersion_plot(dialogue, c(&quot;love&quot;, &quot;night&quot;),#      grouping.var = sex, rm.vars = act))# # ## Drop total with `total.color = NULL`# with(rajSPLIT , dispersion_plot(dialogue, c(&quot;love&quot;, &quot;night&quot;),#      grouping.var = sex, rm.vars = act, total.color = NULL))# # ## Change color scheme# with(rajSPLIT, dispersion_plot(dialogue, c(&quot;love&quot;, &quot;night&quot;),#     bg.color = &quot;black&quot;, grouping.var = list(fam.aff, sex),#     color = &quot;yellow&quot;, total.color = &quot;white&quot;, horiz.color=&quot;grey20&quot;))# # ## Use word list# ## Presidential debates by all# wrds &lt;- word_list(pres_debates2012$dialogue, stopwords = Top200Words)# wrds2 &lt;- spaste(wrds[[&quot;rfswl&quot;]][[&quot;all&quot;]][, &quot;WORD&quot;])# wrds2 &lt;- c(&quot; governor~~romney &quot;, wrds2[-c(3, 12)])# with(pres_debates2012 , dispersion_plot(dialogue, wrds2, rm.vars = time))# # ## Presidential debates by person# dat &lt;- pres_debates2012# dat &lt;- dat[dat$person %in% qcv(ROMNEY, OBAMA), ]# # wordlist &lt;- c(&quot; tax&quot;, &quot; health&quot;, &quot; rich &quot;, &quot;america&quot;, &quot; truth&quot;,#     &quot; money&quot;, &quot;cost&quot;, &quot; governnor&quot;, &quot; president&quot;, &quot; we &quot;,#     &quot; job&quot;, &quot; i &quot;, &quot; you &quot;, &quot; because &quot;, &quot; our &quot;, &quot; years &quot;)# # with(dat, dispersion_plot(dialogue, wordlist, total.color = NULL,#     bg.color = &quot;white&quot;, grouping.var = person, rm.vars = time,#     color = &quot;black&quot;, horiz.color=&quot;grey80&quot;))# # ## Extras:# ## Reverse facets# # x &lt;- with(pres_debates2012 , dispersion_plot(dialogue, wrds2, rm.vars = time))# # ## function to reverse ggplot2 facets# rev_facet &lt;- function(x) {#     names(x$facet)[1:2] &lt;- names(x$facet)[2:1]#     print(x)# }# # rev_facet(x)# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>dispersion_plot</li>

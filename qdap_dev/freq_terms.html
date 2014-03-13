@@ -40,7 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>freq_terms(text.var, top = 20, at.least = 1, stopwords = NULL, extend = TRUE, ...)</pre>
+    <pre><div>freq_terms(text.var, top&nbsp;=&nbsp;20, at.least&nbsp;=&nbsp;1, stopwords&nbsp;=&nbsp;NULL, extend&nbsp;=&nbsp;TRUE, ...)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -80,7 +80,10 @@
       <p>Find the most frequently occurring terms in a text vector.</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # freq_terms(DATA$state, 5)# freq_terms(DATA$state)# freq_terms(DATA$state, extend = FALSE)# freq_terms(DATA$state, at.least = 4)# (x &lt;- freq_terms(pres_debates2012$dialogue, stopwords = Top200Words))# plot(x)# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>freq_terms</li>

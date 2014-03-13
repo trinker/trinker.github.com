@@ -40,11 +40,9 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>lookup(terms, key.match, key.reassign = NULL, missing = NA)
-
-terms %l% key.match
-
-terms %l+% key.match</pre>
+    <pre><div>lookup(terms, key.match, key.reassign&nbsp;=&nbsp;NULL, missing&nbsp;=&nbsp;NA)</div>
+<div>terms %l% key.match</div>
+<div>terms %l+% key.match</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -89,7 +87,10 @@ or named list and <code>missing</code> is assumed to be
 <code>NULL</code>.</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # ## Supply a dataframe to key.match# # lookup(1:5, data.frame(1:4, 11:14))# # ## Retain original values for missing# lookup(1:5, data.frame(1:4, 11:14), missing=NULL)# # lookup(LETTERS[1:5], data.frame(LETTERS[1:5], 100:104))# # key &lt;- data.frame(x=1:2, y=c(&quot;A&quot;, &quot;B&quot;))# big.vec &lt;- sample(1:2, 3000000, T)# out &lt;- lookup(big.vec, key)# out[1:20]# # ## Supply a named list of vectors to key.match# # codes &lt;- list(A=c(1, 2, 4),#     B = c(3, 5),#     C = 7,#     D = c(6, 8:10))# # lookup(1:10, codes)# # ## Supply a single vector to key.match and key.assign# # lookup(mtcars$carb, sort(unique(mtcars$carb)),#     c(&#39;one&#39;, &#39;two&#39;, &#39;three&#39;, &#39;four&#39;, &#39;six&#39;, &#39;eight&#39;))# # lookup(mtcars$carb, sort(unique(mtcars$carb)),#     seq(10, 60, by=10))# # ## %l%, a binary operator version of lookup# 1:5 %l% data.frame(1:4, 11:14)# 1:10 %l% codes# # 1:12 %l% codes# 1:12 %l+% codes# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>%l+%</li><li>%l%</li><li>lookup</li>

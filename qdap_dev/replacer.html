@@ -40,7 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>replacer(dat, replace = 0, with = "-")</pre>
+    <pre><div>replacer(dat, replace&nbsp;=&nbsp;0, with&nbsp;=&nbsp;"-")</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -67,7 +67,10 @@ replaced.</p>
 least restrictive class.</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # replacer(mtcars[1:10, ], 0, &quot;REP&quot;)# replacer(mtcars[1:10, ], 4, NA)# replacer(c(&quot;a&quot;, &quot;b&quot;), &quot;a&quot;, &quot;foo&quot;)# #replace missing values (NA)# dat &lt;- data.frame(matrix(sample(c(1:3, NA), 25, TRUE), ncol=5))# replacer(dat, NA, &quot;FOO&quot;)# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>replacer</li>

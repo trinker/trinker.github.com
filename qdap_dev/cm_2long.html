@@ -40,7 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>cm_2long(..., v.name = "variable", list.var = TRUE, debug = TRUE)</pre>
+    <pre><div>cm_2long(..., v.name&nbsp;=&nbsp;"variable", list.var&nbsp;=&nbsp;TRUE, debug&nbsp;=&nbsp;TRUE)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -78,7 +78,10 @@ classes.</p>
 being read and outputs the correct form and class.</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # ## cm_range2long use:# foo &lt;- list(#     person_greg = qcv(terms=&#39;7:11, 20:24, 30:33, 49:56&#39;),#     person_researcher = qcv(terms=&#39;42:48&#39;),#     person_sally = qcv(terms=&#39;25:29, 37:41&#39;),#     person_sam = qcv(terms=&#39;1:6, 16:19, 34:36&#39;),#     person_teacher = qcv(terms=&#39;12:15&#39;),#     adult_0 = qcv(terms=&#39;1:11, 16:41, 49:56&#39;),#     adult_1 = qcv(terms=&#39;12:15, 42:48&#39;),#     AA = qcv(terms=&quot;1&quot;),#     BB = qcv(terms=&quot;1:2, 3:10, 19&quot;),#     CC = qcv(terms=&quot;1:9, 100:150&quot;)# )# # foo2  &lt;- list(#     person_greg = qcv(terms=&#39;7:11, 20:24, 30:33, 49:56&#39;),#     person_researcher = qcv(terms=&#39;42:48&#39;),#     person_sally = qcv(terms=&#39;25:29, 37:41&#39;),#     person_sam = qcv(terms=&#39;1:6, 16:19, 34:36&#39;),#     person_teacher = qcv(terms=&#39;12:15&#39;),#     adult_0 = qcv(terms=&#39;1:11, 16:41, 49:56&#39;),#     adult_1 = qcv(terms=&#39;12:15, 42:48&#39;),#     AA = qcv(terms=&quot;40&quot;),#     BB = qcv(terms=&quot;50:90&quot;),#     CC = qcv(terms=&quot;60:90, 100:120, 150&quot;),#     DD = qcv(terms=&quot;&quot;)# )# # cm_2long(foo, foo2, v.name = &quot;time&quot;)# # ## cm_time2long use:# x &lt;- list(#     transcript_time_span = qcv(00:00 - 1:12:00),#     A = qcv(terms = &quot;2.40:3.00, 5.01, 6.02:7.00, 9.00&quot;),#     B = qcv(terms = &quot;2.40, 3.01:3.02, 5.01, 6.02:7.00,#         9.00, 1.12.00:1.19.01&quot;),#     C = qcv(terms = &quot;2.40:3.00, 5.01, 6.02:7.00, 9.00, 17.01&quot;)# )# cm_2long(x)# # ## cm_df2long use:# codes &lt;- qcv(dc, sf, wes, pol, rejk, lk, azx, mmm)# x1 &lt;- cm_df.temp(DATA, &quot;state&quot;, codes)# #fill it randomly# x1[, 7:14] &lt;- lapply(7:14,  function(i) sample(0:1, nrow(x1), TRUE))# out2 &lt;- cm_2long(x1)# head(out2, 15)# plot(out2)# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>cm_2long</li>

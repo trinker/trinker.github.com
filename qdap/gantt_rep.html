@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>gantt_rep. qdap 1.2.0</title>
+<title>gantt_rep. qdap 1.3.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 1.2.0</a>
+      <a class="brand" href="#">qdap 1.3.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,8 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>gantt_rep(rm.var, text.var, grouping.var = NULL, units = "words", col.sep = "_", 
-  name.sep = "_")</pre>
+    <pre><div>gantt_rep(rm.var, text.var, grouping.var&nbsp;=&nbsp;NULL, units&nbsp;=&nbsp;"words", col.sep&nbsp;=&nbsp;"_", name.sep&nbsp;=&nbsp;"_")</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -99,7 +98,10 @@ plotting method.</p>
 tool of management. New York, Ronald Press.</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # dat &lt;- with(rajSPLIT, gantt_rep(act, dialogue, list(fam.aff, sex),#     units = &quot;words&quot;, col.sep = &quot;_&quot;))# head(dat, 20)# plot(dat)# # gantt_wrap(dat,  &quot;fam.aff_sex&quot;,  facet.vars = &quot;act&quot;,#     title = &quot;Repeated Measures Gantt Plot&quot;,#     minor.line.freq = 25, major.line.freq = 100)# # ## Two facets variables# dat2 &lt;- with(DATA2, gantt_rep(list(day, class), state, person,#     units = &quot;words&quot;, col.sep = &quot;_&quot;))# head(dat2, 20)# plot(dat2)# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>gantt_rep</li>

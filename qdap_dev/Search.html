@@ -40,12 +40,9 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>Search(dataframe, term, column.name = NULL, max.distance = 0.02, ...)
-
-boolean_search(text.var, terms, ignore.case = TRUE, values = FALSE, exclude = NULL, 
-  apostrophe.remove = FALSE, char.keep = NULL, digit.remove = FALSE)
-
-text.var %bs% terms</pre>
+    <pre><div>Search(dataframe, term, column.name&nbsp;=&nbsp;NULL, max.distance&nbsp;=&nbsp;0.02, ...)</div>
+<div>boolean_search(text.var, terms, ignore.case&nbsp;=&nbsp;TRUE, values&nbsp;=&nbsp;FALSE, exclude&nbsp;=&nbsp;NULL, apostrophe.remove&nbsp;=&nbsp;FALSE, char.keep&nbsp;=&nbsp;NULL, digit.remove&nbsp;=&nbsp;FALSE)</div>
+<div>text.var %bs% terms</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -140,7 +137,10 @@ to be counted it must fit all of the terms in an AND
 Boolean or one of the conditions in an OR Boolean.</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # ## Dataframe search:# (SampDF &lt;- data.frame(&quot;islands&quot;=names(islands)[1:32],mtcars, row.names=NULL))# # Search(SampDF, &quot;Cuba&quot;, &quot;islands&quot;)# Search(SampDF, &quot;New&quot;, &quot;islands&quot;)# Search(SampDF, &quot;Ho&quot;)# Search(SampDF, &quot;Ho&quot;, max.distance = 0)# Search(SampDF, &quot;Axel Heiberg&quot;)# Search(SampDF, 19) #too much tolerance in max.distance# Search(SampDF, 19, max.distance = 0)# Search(SampDF, 19, &quot;qsec&quot;, max.distance = 0)# # ##Boolean search:# boolean_search(DATA$state, &quot; I ORliar&amp;&amp;stinks&quot;)# boolean_search(DATA$state, &quot; I &amp;&amp;.&quot;, values=TRUE)# boolean_search(DATA$state, &quot; I OR.&quot;, values=TRUE)# boolean_search(DATA$state, &quot; I &amp;&amp;.&quot;)# # ## Exclusion:# boolean_search(DATA$state, &quot; I ||.&quot;, values=TRUE)# boolean_search(DATA$state, &quot; I ||.&quot;, exclude = c(&quot;way&quot;, &quot;truth&quot;), values=TRUE)# # ## From stackoverflow: http://stackoverflow.com/q/19640562/1000343# dat &lt;- data.frame(x = c(&quot;Doggy&quot;, &quot;Hello&quot;, &quot;Hi Dog&quot;, &quot;Zebra&quot;), y = 1:4)# z &lt;- data.frame(z =c(&quot;Hello&quot;, &quot;Dog&quot;))# # dat[boolean_search(dat$x, paste(z$z, collapse = &quot;OR&quot;)), ]# # ## Binary operator version# dat[dat$x %bs% paste(z$z, collapse = &quot;OR&quot;), ]# # ## Passing to `trans_context`# inds &lt;- boolean_search(DATA.SPLIT$state, &quot; I&amp;&amp;.|| I&amp;&amp;!&quot;, ignore.case = FALSE)# with(DATA.SPLIT, trans_context(state, person, inds=inds))# # (inds2 &lt;- boolean_search(raj$dialogue, spaste(paste(negation.words,#     collapse = &quot; || &quot;))))# trans_context(raj$dialogue, raj$person, inds2)# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>Search</li><li>%bs%</li><li>boolean_search</li>

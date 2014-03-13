@@ -43,9 +43,8 @@ Josh O'Brien, Justin Haynes and Tyler Rinker
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>beg2char(text.var, char = " ", noc = 1, include = FALSE)
-
-char2end(text.var, char = " ", noc = 1, include = FALSE)</pre>
+    <pre><div>beg2char(text.var, char&nbsp;=&nbsp;" ", noc&nbsp;=&nbsp;1, include&nbsp;=&nbsp;FALSE)</div>
+<div>char2end(text.var, char&nbsp;=&nbsp;" ", noc&nbsp;=&nbsp;1, include&nbsp;=&nbsp;FALSE)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -84,7 +83,10 @@ character(s).</p>
       <p><a href = 'http://stackoverflow.com/q/15909626/1000343'>http://stackoverflow.com/q/15909626/1000343</a></p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # x &lt;- c(&quot;a_b_c_d&quot;, &quot;1_2_3_4&quot;, &quot;&lt;_?_._:&quot;)# beg2char(x, &quot;_&quot;)# beg2char(x, &quot;_&quot;, 2)# beg2char(x, &quot;_&quot;, 3)# beg2char(x, &quot;_&quot;, 4)# beg2char(x, &quot;_&quot;, 3, include=TRUE)# # char2end(x, &quot;_&quot;)# char2end(x, &quot;_&quot;, 2)# char2end(x, &quot;_&quot;, 3)# char2end(x, &quot;_&quot;, 4)# char2end(x, &quot;_&quot;, 3, include=TRUE)# # x2 &lt;- gsub(&quot;_&quot;, &quot; &quot;, x)# char2end(x2, &quot; &quot;, 2)# beg2char(x2, &quot; &quot;, 2)# # x3 &lt;- gsub(&quot;_&quot;, &quot;\\^&quot;, x)# char2end(x3, &quot;^&quot;, 2)# beg2char(x3, &quot;^&quot;, 2)# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>beg2char</li><li>char2end</li>

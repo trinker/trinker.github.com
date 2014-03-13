@@ -40,7 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>text2color(words, recode.words, colors)</pre>
+    <pre><div>text2color(words, recode.words, colors)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -69,7 +69,10 @@ words vector.</p>
       <p>A dictionary lookup that maps words to colors.</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # set.seed(10)# x &lt;- data.frame(X1 = sample(Top25Words[1:10], 20, TRUE))# # #blue was recycled# text2color(x$X1, qcv(the, and, is), qcv(red, green, blue))# text2color(x$X1, qcv(the, and, is), qcv(red, green, blue, white))# x$X2 &lt;- text2color(x$X1, list(qcv(the, and, is), &quot;that&quot;),#     qcv(red, green, white))# x# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>text2color</li>

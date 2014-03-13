@@ -40,8 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>gantt_plot(text.var, grouping.var = NULL, rm.var = NULL, fill.var = NULL, xlab = "duration (in words)", 
-  units = "words", col.sep = "__", ...)</pre>
+    <pre><div>gantt_plot(text.var, grouping.var&nbsp;=&nbsp;NULL, rm.var&nbsp;=&nbsp;NULL, fill.var&nbsp;=&nbsp;NULL, xlab&nbsp;=&nbsp;"duration (in words)", units&nbsp;=&nbsp;"words", col.sep&nbsp;=&nbsp;"__", ...)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -104,7 +103,10 @@ flexible gantt plot that words with code matrix functions
 tool of management. New York, Ronald Press.</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # with(rajSPLIT, gantt_plot(text.var = dialogue,#     grouping.var = person, size=4))# # with(rajSPLIT, gantt_plot(text.var = dialogue,#     grouping.var = list(fam.aff, sex), rm.var  = act,#     title = &quot;Romeo and Juliet&#39;s dialogue&quot;))# # with(rajSPLIT, gantt_plot(dialogue, list(fam.aff, sex), act,#     transform=T))# # rajSPLIT2 &lt;- rajSPLIT# # rajSPLIT2$newb &lt;- as.factor(sample(LETTERS[1:2], nrow(rajSPLIT2),#     replace=TRUE))# # z &lt;- with(rajSPLIT2, gantt_plot(dialogue, list(fam.aff, sex),#     list(act, newb), size = 4))# # library(ggplot2); library(scales); library(RColorBrewer); library(grid)# z + theme(panel.margin = unit(1, &quot;lines&quot;)) + scale_colour_grey()# z + scale_colour_brewer(palette=&quot;Dark2&quot;)# # ## Fill Variable Example# dat &lt;- rajSPLIT[rajSPLIT$act == 1, ]# dat$end_mark &lt;- factor(end_mark(dat$dialogue))# # with(dat, gantt_plot(text.var = dialogue, grouping.var = list(person, sex),#     fill.var=end_mark))# # ## Repeated Measures with Fill Example# rajSPLIT$end_mark &lt;- end_mark(rajSPLIT$dialogue)# # with(rajSPLIT, gantt_plot(text.var = dialogue,#     grouping.var = list(fam.aff), rm.var  = list(act),#     fill.var=end_mark, title = &quot;Romeo and Juliet&#39;s dialogue&quot;))# # ## Repeated Measures Sentence Type Example# with(rajSPLIT, gantt_plot(text.var = dialogue,#     grouping.var = list(fam.aff, sex), rm.var  = list(end_mark, act),#     title = &quot;Romeo and Juliet&#39;s dialogue&quot;))# # ## Reset rajSPLIT# rajSPLIT &lt;- qdap::rajSPLIT# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>gantt_plot</li>

@@ -40,23 +40,14 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>wfm(text.var = NULL, grouping.var = NULL, output = "raw", stopwords = NULL, char2space = "~~", 
-  ...)
-
-wfdf(text.var, grouping.var = NULL, stopwords = NULL, margins = FALSE, output = "raw", 
-      digits = 2, char2space = "~~", ...)
-
-wfm_expanded(text.var, grouping.var = NULL, ...)
-
-wfm_combine(wf.obj, word.lists, matrix = TRUE)
-
-weight(x, type = "prop", ...)
-
-weight(x, type = "prop", ...)
-
-Filter(x, min = 1, max = Inf, count.apostrophe = TRUE, stopwords = NULL, ...)
-
-as.wfm(matrix.object)</pre>
+    <pre><div>wfm(text.var&nbsp;=&nbsp;NULL, grouping.var&nbsp;=&nbsp;NULL, output&nbsp;=&nbsp;"raw", stopwords&nbsp;=&nbsp;NULL, char2space&nbsp;=&nbsp;"~~", ...)</div>
+<div>wfdf(text.var, grouping.var&nbsp;=&nbsp;NULL, stopwords&nbsp;=&nbsp;NULL, margins&nbsp;=&nbsp;FALSE, output&nbsp;=&nbsp;"raw", digits&nbsp;=&nbsp;2, char2space&nbsp;=&nbsp;"~~", ...)</div>
+<div>wfm_expanded(text.var, grouping.var&nbsp;=&nbsp;NULL, ...)</div>
+<div>wfm_combine(wf.obj, word.lists, matrix&nbsp;=&nbsp;TRUE)</div>
+<div>"weight"(x, type&nbsp;=&nbsp;"prop", ...)</div>
+<div>"weight"(x, type&nbsp;=&nbsp;"prop", ...)</div>
+<div>"Filter"(x, min&nbsp;=&nbsp;1, max&nbsp;=&nbsp;Inf, count.apostrophe&nbsp;=&nbsp;TRUE, stopwords&nbsp;=&nbsp;NULL, ...)</div>
+<div>as.wfm(matrix.object)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -185,7 +176,10 @@ char2space, as a single word/entry. This is useful for
 keeping proper names as a single unit.</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # ## word frequency matrix (wfm) example:# with(DATA, wfm(state, list(sex, adult)))[1:15, ]# with(DATA, wfm(state, person))[1:15, ]# Filter(with(DATA, wfm(state, list(sex, adult))), 5)# with(DATA, wfm(state, list(sex, adult)))# # ## Filter particular words based on max/min values in wfm# v &lt;- with(DATA, wfm(state, list(sex, adult)))# Filter(v, 5)# Filter(v, 5, count.apostrophe = FALSE)# Filter(v, 5, 7)# Filter(v, 4, 4)# Filter(v, 3, 4)# Filter(v, 3, 4, stopwords = Top25Words)# # ## insert double tilde (&quot;~~&quot;) to keep phrases(i.e., first last name)# alts &lt;- c(&quot; fun&quot;, &quot;I &quot;)# state2 &lt;- space_fill(DATA$state, alts, rm.extra = FALSE)# with(DATA, wfm(state2, list(sex, adult)))[1:18, ]# # ## word frequency dataframe (wfdf) example:# with(DATA, wfdf(state, list(sex, adult)))[1:15, ]# with(DATA, wfdf(state, person))[1:15, ]# # ## wfm_expanded example:# z &lt;- wfm(DATA$state, DATA$person)# wfm_expanded(z)[30:45, ] #two &quot;you&quot;s# # ## wf_combine examples:# #===================# ## raw no margins (will work)# x &lt;- wfm(DATA$state, DATA$person)# # ## raw with margin (will work)# y &lt;- wfdf(DATA$state, DATA$person, margins = TRUE)# # ## Proportion matrix# z2 &lt;- wfm(DATA$state, DATA$person, output=&quot;proportion&quot;)# # WL1 &lt;- c(y[, 1])# WL2 &lt;- list(c(&quot;read&quot;, &quot;the&quot;, &quot;a&quot;), c(&quot;you&quot;, &quot;your&quot;, &quot;you&#39;re&quot;))# WL3 &lt;- list(bob = c(&quot;read&quot;, &quot;the&quot;, &quot;a&quot;), yous = c(&quot;you&quot;, &quot;your&quot;, &quot;you&#39;re&quot;))# WL4 &lt;- list(bob = c(&quot;read&quot;, &quot;the&quot;, &quot;a&quot;), yous = c(&quot;a&quot;, &quot;you&quot;, &quot;your&quot;, &quot;your&#39;re&quot;))# WL5 &lt;- list(yous = c(&quot;you&quot;, &quot;your&quot;, &quot;your&#39;re&quot;))# WL6 &lt;- list(c(&quot;you&quot;, &quot;your&quot;, &quot;your&#39;re&quot;))  #no name so will be called words 1# WL7 &lt;- c(&quot;you&quot;, &quot;your&quot;, &quot;your&#39;re&quot;)# # wfm_combine(z, WL2) #Won&#39;t work not a raw frequency matrix# wfm_combine(x, WL2) #Works (raw and no margins)# wfm_combine(y, WL2) #Works (raw with margins)# wfm_combine(y, c(&quot;you&quot;, &quot;your&quot;, &quot;your&#39;re&quot;))# wfm_combine(y, WL1)# wfm_combine(y, WL3)# ## wfm_combine(y, WL4) #Error# wfm_combine(y, WL5)# wfm_combine(y, WL6)# wfm_combine(y, WL7)# # worlis &lt;- c(&quot;you&quot;, &quot;it&quot;, &quot;it&#39;s&quot;, &quot;no&quot;, &quot;not&quot;, &quot;we&quot;)# y &lt;- wfdf(DATA$state, list(DATA$sex, DATA$adult), margins = TRUE)# z &lt;- wfm_combine(y, worlis)# # chisq.test(z)# chisq.test(wfm(y))# # ## Dendrogram# presdeb &lt;- with(pres_debates2012, wfm(dialogue, list(person, time)))# library(sjPlot)# sjc.dend(t(presdeb), 2:4)# # ## Words correlated within turns of talk# ## EXAMPLE 1# library(reports)# x &lt;- factor(with(rajSPLIT, paste(act, pad(TOT(tot)), sep = &quot;|&quot;)))# dat &lt;- wfm(rajSPLIT$dialogue, x)# # cor(t(dat)[, c(&quot;romeo&quot;, &quot;juliet&quot;)])# cor(t(dat)[, c(&quot;romeo&quot;, &quot;banished&quot;)])# cor(t(dat)[, c(&quot;romeo&quot;, &quot;juliet&quot;, &quot;hate&quot;, &quot;love&quot;)])# qheat(cor(t(dat)[, c(&quot;romeo&quot;, &quot;juliet&quot;, &quot;hate&quot;, &quot;love&quot;)]),#     diag.na = TRUE, values = TRUE, digits = 3, by.column = NULL)# # dat2 &lt;- wfm(DATA$state, id(DATA))# qheat(cor(t(dat2)), low = &quot;yellow&quot;, high = &quot;red&quot;,#     grid = &quot;grey90&quot;, diag.na = TRUE, by.column = NULL)# # ## EXAMPLE 2# x2 &lt;- factor(with(pres_debates2012, paste(time, pad(TOT(tot)), sep = &quot;|&quot;)))# dat2 &lt;- wfm(pres_debates2012$dialogue, x2)# wrds &lt;- word_list(pres_debates2012$dialogue,#     stopwords = c(&quot;it&#39;s&quot;, &quot;that&#39;s&quot;, Top200Words))# wrds2 &lt;- tolower(sort(wrds$rfswl[[1]][, 1]))# qheat(word_cor(t(dat2), word = wrds2, r = NULL),#     diag.na = TRUE, values = TRUE, digits = 3, by.column = NULL,#     high=&quot;red&quot;, low=&quot;yellow&quot;, grid=NULL)# # ## EXAMPLE 3# library(gridExtra); library(ggplot2); library(grid)# dat3 &lt;- lapply(qcv(OBAMA, ROMNEY), function(x) {#     with(pres_debates2012, wfm(dialogue[person == x], x2[person == x]))# })# # # # Presidential debates by person# dat5 &lt;- pres_debates2012# dat5 &lt;- dat5[dat5$person %in% qcv(ROMNEY, OBAMA), ]# # disp &lt;- with(dat5, dispersion_plot(dialogue, wrds2, grouping.var = person,#     total.color = NULL, rm.vars=time))# # # cors &lt;- lapply(dat3, function(m) {#     word_cor(t(m), word = wrds2, r = NULL)# })# # plots &lt;- lapply(cors, function(x) {#     qheat(x, diag.na = TRUE, values = TRUE, digits = 3, plot = FALSE,#     by.column = NULL, high=&quot;red&quot;, low=&quot;yellow&quot;, grid=NULL)# })# # plots &lt;- lapply(1:2, function(i) {#     plots[[i]] + ggtitle(qcv(OBAMA, ROMNEY)[i]) +#     theme(axis.title.x = element_blank(),#         plot.margin = unit(rep(0, 4), &quot;lines&quot;))# })# # grid.arrange(disp, arrangeGrob(plots[[1]], plots[[2]], ncol=1), ncol=2)# # ## With `word_cor`# worlis &lt;- list(#     pronouns = c(&quot;you&quot;, &quot;it&quot;, &quot;it&#39;s&quot;, &quot;we&quot;, &quot;i&#39;m&quot;, &quot;i&quot;),#     negative = qcv(no, dumb, distrust, not, stinks),#     literacy = qcv(computer, talking, telling)# )# y &lt;- wfdf(DATA$state, id(DATA, prefix = TRUE))# z &lt;- wfm_combine(y, worlis)# # word_cor(t(z), word = names(worlis), r = NULL)# # ## Plotting method# plot(y, TRUE)# plot(z)# # ## Correspondence Analysis# library(ca)# # dat &lt;- pres_debates2012# dat &lt;- dat[dat$person %in% qcv(ROMNEY, OBAMA), ]# # speech &lt;- stemmer(dat$dialogue)# mytable1 &lt;- with(dat, wfm(speech, list(person, time), stopwords = Top25Words))# # fit &lt;- ca(mytable1)# summary(fit)# plot(fit)# plot3d.ca(fit, labels=1)# # # mytable2 &lt;- with(dat, wfm(speech, list(person, time), stopwords = Top200Words))# # fit2 &lt;- ca(mytable2)# summary(fit2)# plot(fit2)# plot3d.ca(fit2, labels=1)# # ## Weight a wfm# WFM &lt;- with(DATA, wfm(state, list(sex, adult)))# plot(weight(WFM, &quot;scaled&quot;), TRUE)# weight(WFM, &quot;prop&quot;)# weight(WFM, &quot;max&quot;)# weight(WFM, &quot;scaled&quot;)# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>Filter.wfm</li><li>as.wfm</li><li>weight.wfdf</li><li>weight.wfm</li><li>wfdf</li><li>wfm</li><li>wfm_combine</li><li>wfm_expanded</li>

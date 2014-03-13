@@ -40,8 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>word_stats(text.var, grouping.var = NULL, tot = NULL, parallel = FALSE, rm.incomplete = FALSE, 
-  digit.remove = FALSE, apostrophe.remove = FALSE, digits = 3, ...)</pre>
+    <pre><div>word_stats(text.var, grouping.var&nbsp;=&nbsp;NULL, tot&nbsp;=&nbsp;NULL, parallel&nbsp;=&nbsp;FALSE, rm.incomplete&nbsp;=&nbsp;FALSE, digit.remove&nbsp;=&nbsp;FALSE, apostrophe.remove&nbsp;=&nbsp;FALSE, digits&nbsp;=&nbsp;3, ...)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -176,7 +175,10 @@ both imperative</p>
   data, otherwise some counts may not be accurate.</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # word_stats(mraja1spl$dialogue, mraja1spl$person)# # (desc_wrds &lt;- with(mraja1spl, word_stats(dialogue, person, tot = tot)))# # ## Recycle for speed boost# with(mraja1spl, word_stats(desc_wrds, person, tot = tot))# # scores(desc_wrds)# counts(desc_wrds)# htruncdf(counts(desc_wrds), 15, 6)# plot(scores(desc_wrds))# plot(counts(desc_wrds))# # names(desc_wrds)# htruncdf(desc_wrds$ts, 15, 5)# htruncdf(desc_wrds$gts, 15, 6)# desc_wrds$mpun# desc_wrds$word.elem# desc_wrds$sent.elem# plot(desc_wrds)# plot(desc_wrds, label=TRUE, lab.digits = 1)# # ## Correlation Visualization# qheat(cor(scores(desc_wrds)[, -1]), diag.na = TRUE, by.column =NULL,#     low = &quot;yellow&quot;, high = &quot;red&quot;, grid = FALSE)# # ## Parallel (possible speed boost)# with(mraja1spl, word_stats(dialogue, list(sex, died, fam.aff)))# with(mraja1spl, word_stats(dialogue, list(sex, died, fam.aff),#     parallel = TRUE))# # ## Recycle for speed boost# word_stats(desc_wrds, mraja1spl$sex)# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>word_stats</li>

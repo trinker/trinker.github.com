@@ -40,11 +40,8 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>multigsub(pattern, replacement = NULL, text.var, leadspace = FALSE, trailspace = FALSE, 
-  fixed = TRUE, trim = TRUE, ...)
-
-mgsub(pattern, replacement = NULL, text.var, leadspace = FALSE, trailspace = FALSE, 
-      fixed = TRUE, trim = TRUE, ...)</pre>
+    <pre><div>multigsub(pattern, replacement&nbsp;=&nbsp;NULL, text.var, leadspace&nbsp;=&nbsp;FALSE, trailspace&nbsp;=&nbsp;FALSE, fixed&nbsp;=&nbsp;TRUE, trim&nbsp;=&nbsp;TRUE, ...)</div>
+<div>mgsub(pattern, replacement&nbsp;=&nbsp;NULL, text.var, leadspace&nbsp;=&nbsp;FALSE, trailspace&nbsp;=&nbsp;FALSE, fixed&nbsp;=&nbsp;TRUE, trim&nbsp;=&nbsp;TRUE, ...)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -99,7 +96,10 @@ once.  This means a previous (first in pattern string) sub
 could alter a later sub.</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # multigsub(c(&quot;it&#39;s&quot;, &quot;I&#39;m&quot;), c(&quot;it is&quot;, &quot;I am&quot;), DATA$state)# mgsub(c(&quot;it&#39;s&quot;, &quot;I&#39;m&quot;), c(&quot;it is&quot;, &quot;I am&quot;), DATA$state)# mgsub(&quot;[[:punct:]]&quot;, &quot;PUNC&quot;, DATA$state, fixed = FALSE)# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>mgsub</li><li>multigsub</li>

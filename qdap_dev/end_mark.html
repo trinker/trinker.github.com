@@ -40,7 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>end_mark(text.var)</pre>
+    <pre><div>end_mark(text.var)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -70,7 +70,10 @@ occur) "*!"Imperative-exclamatory sentence.
 useful to categorize based on sentence type.</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # end_mark(DATA.SPLIT$state)# end_mark(mraja1spl$dialogue)# ques &lt;- mraja1spl[end_mark(mraja1spl$dialogue) == &quot;?&quot;, ] #grab questions# htruncdf(ques)# non.ques &lt;- mraja1spl[end_mark(mraja1spl$dialogue) != &quot;?&quot;, ] #non questions# htruncdf(non.ques, 20)# ques.per &lt;- mraja1spl[end_mark(mraja1spl$dialogue) %in% c(&quot;.&quot;, &quot;?&quot;), ] #grab ? and .# htruncdf(ques.per, 20)# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>end_mark</li>

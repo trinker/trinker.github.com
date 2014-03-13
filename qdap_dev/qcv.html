@@ -40,8 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>qcv(..., terms = NULL, space.wrap = FALSE, trailing = FALSE, leading = FALSE, split = " ", 
-  rm.blank = TRUE)</pre>
+    <pre><div>qcv(..., terms&nbsp;=&nbsp;NULL, space.wrap&nbsp;=&nbsp;FALSE, trailing&nbsp;=&nbsp;FALSE, leading&nbsp;=&nbsp;FALSE, split&nbsp;=&nbsp;" ", rm.blank&nbsp;=&nbsp;TRUE)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -85,7 +84,10 @@
 marks.</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # qcv(I, like, dogs)# qcv(terms = &quot;I, like, dogs&quot;) #default separator is &quot; &quot;# qcv(terms = &quot;I, like, dogs&quot;, split = &quot;,&quot;)# qcv(terms = &quot;I  like dogs&quot;)# qcv(I, like, dogs, space.wrap = TRUE)# qcv(I, like, dogs, trailing = TRUE)# qcv(I, like, dogs, leading = TRUE)# exclude(Top25Words, qcv(the, of, and))# qcv(terms = &quot;mpg cyl  disp  hp drat    wt  qsec vs am gear carb&quot;)# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>qcv</li>

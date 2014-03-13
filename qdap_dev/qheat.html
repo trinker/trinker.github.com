@@ -40,10 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>qheat(mat, low = "white", high = "darkblue", values = FALSE, digits = 1, text.size = 3, 
-  text.color = "grey40", xaxis.col = "black", yaxis.col = "black", order.by = NULL, 
-      grid = "white", by.column = TRUE, auto.size = FALSE, mat2 = NULL, plot = TRUE, 
-      facet.vars = NULL, facet.flip = FALSE, diag.na = FALSE, diag.values = "")</pre>
+    <pre><div>qheat(mat, low&nbsp;=&nbsp;"white", high&nbsp;=&nbsp;"darkblue", values&nbsp;=&nbsp;FALSE, digits&nbsp;=&nbsp;1, text.size&nbsp;=&nbsp;3, text.color&nbsp;=&nbsp;"grey40", xaxis.col&nbsp;=&nbsp;"black", yaxis.col&nbsp;=&nbsp;"black", order.by&nbsp;=&nbsp;NULL, grid&nbsp;=&nbsp;"white", by.column&nbsp;=&nbsp;TRUE, auto.size&nbsp;=&nbsp;FALSE, mat2&nbsp;=&nbsp;NULL, plot&nbsp;=&nbsp;TRUE, facet.vars&nbsp;=&nbsp;NULL, facet.flip&nbsp;=&nbsp;FALSE, diag.na&nbsp;=&nbsp;FALSE, diag.values&nbsp;=&nbsp;"")</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -141,7 +138,10 @@ data formats produced by qdap.  The function isn't designed
 to be extended beyond exploratory qdap usage.</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # dat &lt;- sentSplit(DATA, &quot;state&quot;)# ws.ob &lt;- with(dat, word_stats(state, list(sex, adult), tot=tot))# qheat(ws.ob)# qheat(ws.ob) + coord_flip()# qheat(ws.ob, order.by = &quot;sptot&quot;,#     xaxis.col = c(&quot;red&quot;, &quot;black&quot;, &quot;green&quot;, &quot;blue&quot;))# qheat(ws.ob, order.by = &quot;sptot&quot;)# qheat(ws.ob, order.by = &quot;-sptot&quot;)# qheat(ws.ob, values = TRUE)# qheat(ws.ob, values = TRUE, text.color = &quot;red&quot;)# qheat(ws.ob, &quot;yellow&quot;, &quot;red&quot;, grid = FALSE)# qheat(mtcars, facet.vars = &quot;cyl&quot;)# qheat(mtcars, facet.vars = c(&quot;gear&quot;, &quot;cyl&quot;))# qheat(t(mtcars), by.column=FALSE)# qheat(cor(mtcars), diag.na=TRUE, diag.value=&quot;&quot;, by.column=NULL, values = TRUE)# # dat1 &lt;- data.frame(G=LETTERS[1:5], matrix(rnorm(20), ncol = 4))# dat2 &lt;- data.frame(matrix(LETTERS[1:25], ncol=5))# qheat(dat1, values=TRUE)# qheat(dat1, values=TRUE, mat2=dat2)# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>qheat</li>

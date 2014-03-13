@@ -40,10 +40,8 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>rm_row(dataframe, search.column, terms, contains = FALSE, ignore.case = FALSE, keep.rownames = FALSE, 
-  ...)
-
-rm_empty_row(dataframe)</pre>
+    <pre><div>rm_row(dataframe, search.column, terms, contains&nbsp;=&nbsp;FALSE, ignore.case&nbsp;=&nbsp;FALSE, keep.rownames&nbsp;=&nbsp;FALSE, ...)</div>
+<div>rm_empty_row(dataframe)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -95,7 +93,10 @@ that are common in reading in data (default method in
 <code>read.transcript</code>).</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # #rm_row EXAMPLE:# rm_row(DATA, &quot;person&quot;, c(&quot;sam&quot;, &quot;greg&quot;))# rm_row(DATA, 1, c(&quot;sam&quot;, &quot;greg&quot;))# rm_row(DATA, &quot;state&quot;, c(&quot;Comp&quot;))# rm_row(DATA, &quot;state&quot;, c(&quot;I &quot;))# rm_row(DATA, &quot;state&quot;, c(&quot;you&quot;), contains = TRUE, ignore.case=TRUE)# # #rm_empty_row EXAMPLE:# (dat &lt;- rbind.data.frame(DATA[, c(1, 4)], matrix(rep(&quot; &quot;, 4),#    ncol =2, dimnames=list(12:13, colnames(DATA)[c(1, 4)]))))# rm_empty_row(dat)# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>rm_empty_row</li><li>rm_row</li>

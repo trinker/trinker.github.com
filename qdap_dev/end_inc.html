@@ -40,7 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>end_inc(dataframe, text.var, warning.report = TRUE, which.mode = FALSE)</pre>
+    <pre><div>end_inc(dataframe, text.var, warning.report&nbsp;=&nbsp;TRUE, which.mode&nbsp;=&nbsp;FALSE)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -72,7 +72,10 @@
       <p>Test for incomplete sentences and optionally remove them.</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # dat &lt;- sentSplit(DATA, &quot;state&quot;, stem.col = FALSE)# dat$state[c(2, 5)] &lt;- paste(strip(dat$state[c(2, 5)]), &quot;|&quot;)# end_inc(dat, &quot;state&quot;)# end_inc(dat, &quot;state&quot;, warning.report = FALSE)# end_inc(dat, &quot;state&quot;, which.mode = TRUE)# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>end_inc</li>

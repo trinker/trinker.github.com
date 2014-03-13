@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>word_diff_list. qdap 1.2.0</title>
+<title>word_diff_list. qdap 1.3.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 1.2.0</a>
+      <a class="brand" href="#">qdap 1.3.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,8 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>word_diff_list(text.var, grouping.var, vs.all = FALSE, vs.all.cut = 1, stopwords = NULL, 
-  alphabetical = FALSE, digits = 2)</pre>
+    <pre><div>word_diff_list(text.var, grouping.var, vs.all&nbsp;=&nbsp;FALSE, vs.all.cut&nbsp;=&nbsp;1, stopwords&nbsp;=&nbsp;NULL, alphabetical&nbsp;=&nbsp;FALSE, digits&nbsp;=&nbsp;2)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -92,7 +91,10 @@ variable(s).  Look at all possible "a" vs. "b" combinations
 or "a" vs. all others.</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # out1 &lt;- with(DATA, word_diff_list(text.var = state,#     grouping.var = list(sex, adult)))# lapply(unlist(out1, recursive = FALSE), head, n=3)# # out2 &lt;- with(DATA, word_diff_list(state, person))# lapply(unlist(out2, recursive = FALSE), head, n=3)# # out3 &lt;- with(DATA, word_diff_list(state, grouping.var = list(sex, adult),#     vs.all=TRUE, vs.all.cut=2))# # # out4 &lt;- with(mraja1, word_diff_list(text.var = dialogue,#     grouping.var = list(mraja1$sex, mraja1$fam.aff)))# # # out5 &lt;- word_diff_list(mraja1$dialogue, mraja1$person)# # out6 &lt;- word_diff_list(mraja1$dialogue, mraja1$fam.aff, stopwords = Top25Words)# # out7 &lt;- word_diff_list(mraja1$dialogue, mraja1$fam.aff, vs.all=TRUE, vs.all.cut=2)# lapply(out7, head, n=3)# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>word_diff_list</li>

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>trans_venn. qdap 1.2.0</title>
+<title>trans_venn. qdap 1.3.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 1.2.0</a>
+      <a class="brand" href="#">qdap 1.3.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,10 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>trans_venn(text.var, grouping.var, stopwords = NULL, rm.duplicates = TRUE, title = TRUE, 
-  title.font = NULL, title.color = "black", title.cex = NULL, title.name = NULL, 
-      legend = TRUE, legend.cex = 0.8, legend.location = "bottomleft", legend.text.col = "black", 
-      legend.horiz = FALSE, ...)</pre>
+    <pre><div>trans_venn(text.var, grouping.var, stopwords&nbsp;=&nbsp;NULL, rm.duplicates&nbsp;=&nbsp;TRUE, title&nbsp;=&nbsp;TRUE, title.font&nbsp;=&nbsp;NULL, title.color&nbsp;=&nbsp;"black", title.cex&nbsp;=&nbsp;NULL, title.name&nbsp;=&nbsp;NULL, legend&nbsp;=&nbsp;TRUE, legend.cex&nbsp;=&nbsp;0.8, legend.location&nbsp;=&nbsp;"bottomleft", legend.text.col&nbsp;=&nbsp;"black", legend.horiz&nbsp;=&nbsp;FALSE, ...)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -124,7 +121,10 @@
   variables) or a heat map (<code>qheat</code>).</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # with(DATA , trans_venn(state, person, legend.location = &quot;topright&quot;))# #the plot below will take a considerable amount of time to plot# with(raj.act.1 , trans_venn(dialogue, person, legend.location = &quot;topleft&quot;))# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>trans_venn</li>

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>tot_plot. qdap 1.2.0</title>
+<title>tot_plot. qdap 1.3.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 1.2.0</a>
+      <a class="brand" href="#">qdap 1.3.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,9 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>tot_plot(dataframe, text.var, grouping.var = NULL, facet.vars = NULL, tot = TRUE, 
-  transform = FALSE, ncol = NULL, ylab = NULL, xlab = NULL, bar.space = 0, scale = NULL, 
-      space = NULL, plot = TRUE)</pre>
+    <pre><div>tot_plot(dataframe, text.var, grouping.var&nbsp;=&nbsp;NULL, facet.vars&nbsp;=&nbsp;NULL, tot&nbsp;=&nbsp;TRUE, transform&nbsp;=&nbsp;FALSE, ncol&nbsp;=&nbsp;NULL, ylab&nbsp;=&nbsp;NULL, xlab&nbsp;=&nbsp;NULL, bar.space&nbsp;=&nbsp;0, scale&nbsp;=&nbsp;NULL, space&nbsp;=&nbsp;NULL, plot&nbsp;=&nbsp;TRUE)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -113,7 +111,10 @@
 and grouping variables by turn of talk.</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # dataframe &lt;- sentSplit(DATA, &quot;state&quot;)# tot_plot(dataframe, &quot;state&quot;)# tot_plot(DATA, &quot;state&quot;, tot=FALSE)# tot_plot(dataframe, &quot;state&quot;, bar.space=.03)# tot_plot(dataframe, &quot;state&quot;, &quot;sex&quot;)# tot_plot(dataframe, &quot;state&quot;, &quot;person&quot;, tot = &quot;sex&quot;)# tot_plot(mraja1, &quot;dialogue&quot;, &quot;fam.aff&quot;, tot=FALSE)# tot_plot(mraja1, &quot;dialogue&quot;, &quot;died&quot;, tot=FALSE)# tot_plot(mraja1, &quot;dialogue&quot;, c(&quot;sex&quot;, &quot;fam.aff&quot;), tot=FALSE) +#     scale_fill_hue(l=40)# tot_plot(mraja1, &quot;dialogue&quot;, c(&quot;sex&quot;, &quot;fam.aff&quot;), tot=FALSE)+#     scale_fill_brewer(palette=&quot;Spectral&quot;)# tot_plot(mraja1, &quot;dialogue&quot;, c(&quot;sex&quot;, &quot;fam.aff&quot;), tot=FALSE)+#     scale_fill_brewer(palette=&quot;Set1&quot;)# # ## repeated measures# rajSPLIT2 &lt;- do.call(rbind, lapply(split(rajSPLIT, rajSPLIT$act), head, 25))# tot_plot(rajSPLIT2, &quot;dialogue&quot;, &quot;fam.aff&quot;, facet.var = &quot;act&quot;)# # ## add mean and +/- 2 sd# tot_plot(mraja1, &quot;dialogue&quot;, grouping.var = c(&quot;sex&quot;, &quot;fam.aff&quot;), tot=FALSE)+#     scale_fill_brewer(palette=&quot;Set1&quot;) +#     geom_hline(aes(yintercept=mean(word.count))) +#     geom_hline(aes(yintercept=mean(word.count) + (2 *sd(word.count)))) +#     geom_hline(aes(yintercept=mean(word.count) + (3 *sd(word.count)))) +#     geom_text(parse=TRUE, hjust=0, vjust=0, family=&quot;serif&quot;, size = 4, aes(x = 2,#         y = mean(word.count) + 2, label = &quot;bar(x)&quot;)) +#     geom_text(hjust=0, vjust=0, family=&quot;serif&quot;, size = 4, aes(x = 1,#         y = mean(word.count) + (2 *sd(word.count)) + 2, label = &quot;+2 sd&quot;)) +#     geom_text(hjust=0, vjust=0, family=&quot;serif&quot;, size = 4, aes(x = 1,#         y = mean(word.count) + (3 *sd(word.count)) + 2, label = &quot;+3 sd&quot;))# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>tot_plot</li>

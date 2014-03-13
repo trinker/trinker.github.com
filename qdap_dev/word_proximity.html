@@ -40,11 +40,9 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>word_proximity(text.var, terms, grouping.var = NULL, parallel = TRUE, cores = parallel::detectCores()/2)
-
-weight(x, type = "scale", ...)
-
-weight(x, type = "scale", ...)</pre>
+    <pre><div>word_proximity(text.var, terms, grouping.var&nbsp;=&nbsp;NULL, parallel&nbsp;=&nbsp;TRUE, cores&nbsp;=&nbsp;parallel::detectCores()/2)</div>
+<div>weight(x, type&nbsp;=&nbsp;"scale", ...)</div>
+<div>"weight"(x, type&nbsp;=&nbsp;"scale", ...)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -135,7 +133,10 @@ word "read" you'd supply a vector of c(" read ", " reads",
 log is used to deal with the problem of <code>log(0)</code>.</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # wrds &lt;- word_list(pres_debates2012$dialogue,#     stopwords = c(&quot;it&#39;s&quot;, &quot;that&#39;s&quot;, Top200Words))# wrds2 &lt;- tolower(sort(wrds$rfswl[[1]][, 1]))# # (x &lt;- with(pres_debates2012, word_proximity(dialogue, wrds2)))# plot(x)# plot(weight(x))# plot(weight(x, &quot;rev_scale_log&quot;))# # (x2 &lt;- with(pres_debates2012, word_proximity(dialogue, wrds2, person)))# # ## The spaces around `terms` are important# (x3 &lt;- with(DATA, word_proximity(state, spaste(qcv(the, i)))))# (x4 &lt;- with(DATA, word_proximity(state, qcv(the, i))))# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>weight</li><li>weight.word_proximity</li><li>word_proximity</li>

@@ -40,7 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>speakerSplit(dataframe, person.var = 1, sep = c("and", "&", ","), track.reps = FALSE)</pre>
+    <pre><div>speakerSplit(dataframe, person.var&nbsp;=&nbsp;1, sep&nbsp;=&nbsp;c("and", "&", ","), track.reps&nbsp;=&nbsp;FALSE)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -73,7 +73,10 @@ stretched and accompanying rows repeated.</p>
 rows for each person.</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # DATA$person &lt;- as.character(DATA$person)# DATA$person[c(1, 4, 6)] &lt;- c(&quot;greg, sally, &amp; sam&quot;,#     &quot;greg, sally&quot;, &quot;sam and sally&quot;)# # speakerSplit(DATA)# speakerSplit(DATA, track.reps=TRUE)# # DATA$person[c(1, 4, 6)] &lt;- c(&quot;greg_sally_sam&quot;,#     &quot;greg.sally&quot;, &quot;sam; sally&quot;)# # speakerSplit(DATA, sep = c(&quot;.&quot;, &quot;_&quot;, &quot;;&quot;))# # DATA &lt;- qdap::DATA  #reset DATA# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>speakerSplit</li>

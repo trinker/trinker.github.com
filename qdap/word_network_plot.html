@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>word_network_plot. qdap 1.2.0</title>
+<title>word_network_plot. qdap 1.3.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 1.2.0</a>
+      <a class="brand" href="#">qdap 1.3.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,12 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>word_network_plot(text.var, grouping.var = 1:length(text.var), target.words = NULL, 
-  stopwords = qdapDictionaries::Top100Words, label.cex = 0.8, label.size = 0.5, 
-      edge.curved = TRUE, vertex.shape = "circle", edge.color = "gray70", label.colors = "black", 
-      layout = NULL, title.name = NULL, title.padj = -4.5, title.location = 3, title.font = NULL, 
-      title.cex = 0.8, log.labels = FALSE, title.color = "black", legend = NULL, legend.cex = 0.8, 
-      legend.location = c(-1.54, 1.41), plot = TRUE, char2space = "~~", ...)</pre>
+    <pre><div>word_network_plot(text.var, grouping.var&nbsp;=&nbsp;1:length(text.var), target.words&nbsp;=&nbsp;NULL, stopwords&nbsp;=&nbsp;qdapDictionaries::Top100Words, label.cex&nbsp;=&nbsp;0.8, label.size&nbsp;=&nbsp;0.5, edge.curved&nbsp;=&nbsp;TRUE, vertex.shape&nbsp;=&nbsp;"circle", edge.color&nbsp;=&nbsp;"gray70", label.colors&nbsp;=&nbsp;"black", layout&nbsp;=&nbsp;NULL, title.name&nbsp;=&nbsp;NULL, title.padj&nbsp;=&nbsp;-4.5, title.location&nbsp;=&nbsp;3, title.font&nbsp;=&nbsp;NULL, title.cex&nbsp;=&nbsp;0.8, log.labels&nbsp;=&nbsp;FALSE, title.color&nbsp;=&nbsp;"black", legend&nbsp;=&nbsp;NULL, legend.cex&nbsp;=&nbsp;0.8, legend.location&nbsp;=&nbsp;c(-1.54, 1.41), plot&nbsp;=&nbsp;TRUE, char2space&nbsp;=&nbsp;"~~", ...)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -156,7 +151,10 @@ char2space, as a single word/entry. This is useful for
 keeping proper names as a single unit.</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # word_network_plot(text.var=DATA$state)# word_network_plot(text.var=DATA$state, stopwords=NULL)# word_network_plot(text.var=DATA$state, DATA$person)# word_network_plot(text.var=DATA$state, DATA$person, stopwords=NULL)# word_network_plot(text.var=DATA$state, grouping.var=list(DATA$sex,#     DATA$adult))# word_network_plot(text.var=DATA$state, grouping.var=DATA$person,#     title.name = &quot;TITLE&quot;, log.labels=TRUE)# word_network_plot(text.var=raj.act.1$dialogue, grouping.var=raj.act.1$person,#   stopwords = Top200Words)# # #insert double tilde (&quot;~~&quot;) to keep dual words (e.g., first last name)# alts &lt;- c(&quot; fun&quot;, &quot;I &quot;)# state2 &lt;- mgsub(alts, gsub(&quot;\\s&quot;, &quot;~~&quot;, alts), DATA$state)# word_network_plot(text.var=state2, grouping.var=DATA$person)# # ## Invisibly returns the igraph model# x &lt;- word_network_plot(text.var=DATA$state, DATA$person)# str(x)# library(igraph)# plot(x, vertex.size=0, vertex.color=&quot;white&quot;, edge.curved = TRUE)# # x2 &lt;- word_network_plot(text.var=DATA$state, grouping.var=DATA$person,#     title.name = &quot;TITLE&quot;, log.labels = TRUE, label.size = 1.2)# l &lt;- layout.drl(x2, options=list(simmer.attraction=0))# plot(x2, vertex.size=0, layout = l)# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>word_network_plot</li>

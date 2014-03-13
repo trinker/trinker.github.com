@@ -40,13 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>trans_cloud(text.var = NULL, grouping.var = NULL, word.list = NULL, stem = FALSE, 
-  target.words = NULL, expand.target = TRUE, target.exclude = NULL, stopwords = NULL, 
-      min.freq = 1, caps = TRUE, caps.list = NULL, random.order = FALSE, rot.per = 0, 
-      cloud.colors = NULL, title = TRUE, cloud.font = NULL, title.font = NULL, title.color = "black", 
-      title.padj = -4.5, title.location = 3, title.cex = NULL, title.names = NULL, 
-      proportional = FALSE, max.word.size = NULL, min.word.size = 0.5, legend = NULL, 
-      legend.cex = 0.8, legend.location = c(-0.03, 1.03), char.keep = "~~", char2space = "~~")</pre>
+    <pre><div>trans_cloud(text.var&nbsp;=&nbsp;NULL, grouping.var&nbsp;=&nbsp;NULL, word.list&nbsp;=&nbsp;NULL, stem&nbsp;=&nbsp;FALSE, target.words&nbsp;=&nbsp;NULL, expand.target&nbsp;=&nbsp;TRUE, target.exclude&nbsp;=&nbsp;NULL, stopwords&nbsp;=&nbsp;NULL, min.freq&nbsp;=&nbsp;1, caps&nbsp;=&nbsp;TRUE, caps.list&nbsp;=&nbsp;NULL, random.order&nbsp;=&nbsp;FALSE, rot.per&nbsp;=&nbsp;0, cloud.colors&nbsp;=&nbsp;NULL, title&nbsp;=&nbsp;TRUE, cloud.font&nbsp;=&nbsp;NULL, title.font&nbsp;=&nbsp;NULL, title.color&nbsp;=&nbsp;"black", title.padj&nbsp;=&nbsp;-4.5, title.location&nbsp;=&nbsp;3, title.cex&nbsp;=&nbsp;NULL, title.names&nbsp;=&nbsp;NULL, proportional&nbsp;=&nbsp;FALSE, max.word.size&nbsp;=&nbsp;NULL, min.word.size&nbsp;=&nbsp;0.5, legend&nbsp;=&nbsp;NULL, legend.cex&nbsp;=&nbsp;0.8, legend.location&nbsp;=&nbsp;c(-0.03, 1.03), char.keep&nbsp;=&nbsp;"~~", char2space&nbsp;=&nbsp;"~~")</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -163,7 +157,10 @@
 grouping variable.</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # terms &lt;- list(#     I=c(&quot;i&quot;, &quot;i&#39;m&quot;),#     mal=qcv(stinks, dumb, distrust),#     articles=qcv(the, a, an),#     pronoun=qcv(we, you)# )# # with(DATA, trans_cloud(state, person, target.words=terms,#     cloud.colors=qcv(red, green, blue, black, gray65),#     expand.target=FALSE, proportional=TRUE, legend=c(names(terms),#     &quot;other&quot;)))# # with(DATA, trans_cloud(state, person, target.words=terms,#     stopwords=exclude(with(DATA, unique(bag_o_words(state))),#         unique(unlist(terms))),#     cloud.colors=qcv(red, green, blue, black, gray65),#     expand.target=FALSE, proportional=TRUE, legend=names(terms)))# # # #color the negated phrases opposite:# DATA &lt;- qdap::DATA# DATA[1, 4] &lt;- &quot;This is not good!&quot;# DATA[8, 4] &lt;- &quot;I don&#39;t distrust you.&quot;# # DATA$state &lt;- space_fill(DATA$state, paste0(negation.words, &quot; &quot;),#     rm.extra = FALSE)# # txt &lt;- gsub(&quot;~~&quot;, &quot; &quot;, breaker(DATA$state))# rev.neg &lt;- sapply(negation.words, paste, negative.words)# rev.pos &lt;- sapply(negation.words, paste, positive.words)# # # tw &lt;- list(#     positive=c(positive.words, rev.neg[rev.neg %in% txt]),#     negative=c(negative.words, rev.pos[rev.pos %in% txt])# )# # # with(DATA, trans_cloud(state, person,#     target.words=tw,#     cloud.colors=qcv(darkgreen, red, gray65),#     expand.target=FALSE, proportional=TRUE, legend=names(tw)))# # DATA &lt;- qdap::DATA  ## Reset DATA# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>trans_cloud</li>

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>polarity. qdap 1.2.0</title>
+<title>polarity. qdap 1.3.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 1.2.0</a>
+      <a class="brand" href="#">qdap 1.3.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,13 +40,8 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>polarity(text.var, grouping.var = NULL, polarity.frame = qdapDictionaries::env.pol, 
-  negators = qdapDictionaries::negation.words, amplifiers = qdapDictionaries::amplification.words, 
-      deamplifiers = qdapDictionaries::deamplification.words, question.weight = 0, 
-      amplifier.weight = 0.8, n.before = 4, n.after = 2, rm.incomplete = FALSE, digits = 3, 
-      ...)
-
-polarity_frame(positives, negatives, pos.weights = 1, neg.weights = -1, envir = TRUE)</pre>
+    <pre><div>polarity(text.var, grouping.var&nbsp;=&nbsp;NULL, polarity.frame&nbsp;=&nbsp;qdapDictionaries::env.pol, negators&nbsp;=&nbsp;qdapDictionaries::negation.words, amplifiers&nbsp;=&nbsp;qdapDictionaries::amplification.words, deamplifiers&nbsp;=&nbsp;qdapDictionaries::deamplification.words, question.weight&nbsp;=&nbsp;0, amplifier.weight&nbsp;=&nbsp;0.8, n.before&nbsp;=&nbsp;4, n.after&nbsp;=&nbsp;2, rm.incomplete&nbsp;=&nbsp;FALSE, digits&nbsp;=&nbsp;3, ...)</div>
+<div>polarity_frame(positives, negatives, pos.weights&nbsp;=&nbsp;1, neg.weights&nbsp;=&nbsp;-1, envir&nbsp;=&nbsp;TRUE)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -244,7 +239,10 @@ Intelligence.</p>
       <p><a href = 'http://www.slideshare.net/jeffreybreen/r-by-example-mining-twitter-for'>http://www.slideshare.net/jeffreybreen/r-by-example-mining-twitter-for</a></p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # with(DATA, polarity(state, list(sex, adult)))# (poldat &lt;- with(sentSplit(DATA, 4), polarity(state, person)))# counts(poldat)# scores(poldat)# plot(poldat)# # poldat2 &lt;- with(mraja1spl, polarity(dialogue,#     list(sex, fam.aff, died)))# colsplit2df(scores(poldat2))# plot(poldat2)# plot(scores(poldat2))# # poldat3 &lt;- with(rajSPLIT, polarity(dialogue, person))# poldat3[[&quot;group&quot;]][, &quot;OL&quot;] &lt;- outlier_labeler(scores(poldat3)[,#     &quot;ave.polarity&quot;])# poldat3[[&quot;all&quot;]][, &quot;OL&quot;] &lt;- outlier_labeler(counts(poldat3)[,#     &quot;polarity&quot;])# htruncdf(scores(poldat3), 10)# htruncdf(counts(poldat3), 15, 8)# plot(poldat3)# plot(poldat3, nrow=4)# qheat(scores(poldat3)[, -7], high=&quot;red&quot;, order.b=&quot;ave.polarity&quot;)# # ## Create researcher defined polarity.frame# POLENV &lt;- polarity_frame(positive.words, negative.words)# POLENV# ls(POLENV)[1:20]# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>polarity</li><li>polarity_frame</li>

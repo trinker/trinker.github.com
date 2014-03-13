@@ -40,13 +40,10 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>syllable_sum(text.var, parallel = FALSE)
-
-syllable_count(text, remove.bracketed = TRUE, algorithm.report = FALSE)
-
-polysyllable_sum(text.var, parallel = FALSE)
-
-combo_syllable_sum(text.var, parallel = FALSE)</pre>
+    <pre><div>syllable_sum(text.var, parallel&nbsp;=&nbsp;FALSE)</div>
+<div>syllable_count(text, remove.bracketed&nbsp;=&nbsp;TRUE, algorithm.report&nbsp;=&nbsp;FALSE)</div>
+<div>polysyllable_sum(text.var, parallel&nbsp;=&nbsp;FALSE)</div>
+<div>combo_syllable_sum(text.var, parallel&nbsp;=&nbsp;FALSE)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -123,7 +120,10 @@ networks that learn to pronounce English text" in Complex
 Systems, 1, 145-168.</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # syllable_count(&quot;Robots like Dason lie.&quot;)# syllable_count(&quot;Robots like Dason lie.&quot;, algorithm.report = TRUE)# syllable_sum(DATA$state)# polysyllable_sum(DATA$state)# combo_syllable_sum(DATA$state)# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>combo_syllable_sum</li><li>polysyllable_sum</li><li>syllable_count</li><li>syllable_sum</li>

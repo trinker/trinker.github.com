@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>bracketX. qdap 1.2.0</title>
+<title>bracketX. qdap 1.3.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="
 Martin Morgan and Tyler Rinker &lt;tyler.rinker@gmail.com&gt;.
@@ -22,7 +22,7 @@ Martin Morgan and Tyler Rinker &lt;tyler.rinker@gmail.com&gt;.
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 1.2.0</a>
+      <a class="brand" href="#">qdap 1.3.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -42,14 +42,10 @@ Martin Morgan and Tyler Rinker &lt;tyler.rinker@gmail.com&gt;.
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>bracketX(text.var, bracket = "all", missing = NULL, names = FALSE, fix.space = TRUE, 
-  scrub = fix.space)
-
-bracketXtract(text.var, bracket = "all", with = FALSE, merge = TRUE)
-
-genX(text.var, left, right, missing = NULL, names = FALSE, fix.space = TRUE, scrub = TRUE)
-
-genXtract(text.var, left, right, with = FALSE, merge = TRUE)</pre>
+    <pre><div>bracketX(text.var, bracket&nbsp;=&nbsp;"all", missing&nbsp;=&nbsp;NULL, names&nbsp;=&nbsp;FALSE, fix.space&nbsp;=&nbsp;TRUE, scrub&nbsp;=&nbsp;fix.space)</div>
+<div>bracketXtract(text.var, bracket&nbsp;=&nbsp;"all", with&nbsp;=&nbsp;FALSE, merge&nbsp;=&nbsp;TRUE)</div>
+<div>genX(text.var, left, right, missing&nbsp;=&nbsp;NULL, names&nbsp;=&nbsp;FALSE, fix.space&nbsp;=&nbsp;TRUE, scrub&nbsp;=&nbsp;TRUE)</div>
+<div>genXtract(text.var, left, right, with&nbsp;=&nbsp;FALSE, merge&nbsp;=&nbsp;TRUE)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -131,7 +127,10 @@ character vectors.</p>
       <p><a href = 'http://stackoverflow.com/q/8621066/1000343'>http://stackoverflow.com/q/8621066/1000343</a></p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # examp &lt;- structure(list(person = structure(c(1L, 2L, 1L, 3L),#     .Label = c(&quot;bob&quot;, &quot;greg&quot;, &quot;sue&quot;), class = &quot;factor&quot;), text =#     c(&quot;I love chicken [unintelligible]!&quot;,#     &quot;Me too! (laughter) It&#39;s so good.[interrupting]&quot;,#     &quot;Yep it&#39;s awesome {reading}.&quot;, &quot;Agreed. {is so much fun}&quot;)), .Names =#     c(&quot;person&quot;, &quot;text&quot;), row.names = c(NA, -4L), class = &quot;data.frame&quot;)# # examp# bracketX(examp$text, &quot;square&quot;)# bracketX(examp$text, &quot;curly&quot;)# bracketX(examp$text, c(&quot;square&quot;, &quot;round&quot;))# bracketX(examp$text)# # # bracketXtract(examp$text, &quot;square&quot;)# bracketXtract(examp$text, &quot;curly&quot;)# bracketXtract(examp$text, c(&quot;square&quot;, &quot;round&quot;))# bracketXtract(examp$text, c(&quot;square&quot;, &quot;round&quot;), merge = FALSE)# bracketXtract(examp$text)# bracketXtract(examp$text, with = TRUE)# # paste2(bracketXtract(examp$text, &quot;curly&quot;), &quot; &quot;)# # x &lt;- c(&quot;Where is the /big dog#?&quot;,#     &quot;I think he&#39;s @arunning@b with /little cat#.&quot;)# genXtract(x, c(&quot;/&quot;, &quot;@a&quot;), c(&quot;#&quot;, &quot;@b&quot;))# # x &lt;- c(&quot;Where is the L1big dogL2?&quot;,#     &quot;I think he&#39;s 98running99 with L1little catL2.&quot;)# genXtract(x, c(&quot;L1&quot;, 98), c(&quot;L2&quot;, 99))# # DATA$state  #notice number 1 and 10# genX(DATA$state, c(&quot;is&quot;, &quot;we&quot;), c(&quot;too&quot;, &quot;on&quot;))# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>bracketX</li><li>bracketXtract</li><li>genX</li><li>genXtract</li>

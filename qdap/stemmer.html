@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>stemmer. qdap 1.2.0</title>
+<title>stemmer. qdap 1.3.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 1.2.0</a>
+      <a class="brand" href="#">qdap 1.3.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,12 +40,9 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>stemmer(text.var, rm.bracket = TRUE, capitalize = TRUE, warn = TRUE, char.keep = "~~", 
-  ...)
-
-stem_words(...)
-
-stem2df(dataframe, text.var, stem.name = NULL, ...)</pre>
+    <pre><div>stemmer(text.var, rm.bracket&nbsp;=&nbsp;TRUE, capitalize&nbsp;=&nbsp;TRUE, warn&nbsp;=&nbsp;TRUE, char.keep&nbsp;=&nbsp;"~~", ...)</div>
+<div>stem_words(...)</div>
+<div>stem2df(dataframe, text.var, stem.name&nbsp;=&nbsp;NULL, ...)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -107,7 +104,10 @@ text strings and returns a dataframe with the vector
 added..</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # #stemmer EXAMPLE:# stemmer(DATA$state)# out1 &lt;- stemmer(raj$dialogue)# htruncdf(out1, 20, 60)# # #stem_words EXAMPLE:# stem_words(doggies, jumping, swims)# # #stem2df EXAMPLE:# out2 &lt;- stem2df(DATA, &quot;state&quot;, &quot;new&quot;)# truncdf(out2, 30)# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>stem2df</li><li>stem_words</li><li>stemmer</li>

@@ -40,9 +40,8 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>mcsv_r(files, a.names = NULL, l.name = NULL, list = TRUE, pos = 1, envir = as.environment(pos))
-
-mcsv_w(..., dir = NULL, open = FALSE, sep = ", ", dataframes = NULL, pos = 1, envir = as.environment(pos))</pre>
+    <pre><div>mcsv_r(files, a.names&nbsp;=&nbsp;NULL, l.name&nbsp;=&nbsp;NULL, list&nbsp;=&nbsp;TRUE, pos&nbsp;=&nbsp;1, envir&nbsp;=&nbsp;as.environment(pos))</div>
+<div>mcsv_w(..., dir&nbsp;=&nbsp;NULL, open&nbsp;=&nbsp;FALSE, sep&nbsp;=&nbsp;", ", dataframes&nbsp;=&nbsp;NULL, pos&nbsp;=&nbsp;1, envir&nbsp;=&nbsp;as.environment(pos))</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -123,7 +122,10 @@ multiple csv files from <code>cm_df.temp</code> for
 interaction with <code>cm_range2long</code>.</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # ## mcsv_r EXAMPLE:# mtcarsb &lt;- mtcars[1:5, ]; CO2b &lt;- CO2[1:5, ]# (a &lt;- mcsv_w(mtcarsb, CO2b, dir=&quot;foo&quot;))# rm(&quot;mtcarsb&quot;, &quot;CO2b&quot;)  # gone from .GlobalEnv# (nms &lt;- dir(a))# mcsv_r(file.path(a, nms))# mtcarsb; CO2b# rm(&quot;mtcarsb&quot;, &quot;CO2b&quot;)  # gone from .GlobalEnv# mcsv_r(file.path(a, nms), paste0(&quot;foo.dat&quot;, 1:2))# foo.dat1; foo.dat2# rm(&quot;foo.dat1&quot;, &quot;foo.dat2&quot;)  # gone from .GlobalEnv# library(reports); delete(&quot;foo&quot;)# # ## mcsv_w EXAMPLES:# (a &lt;- mcsv_w(mtcars, CO2, dir=&quot;foo&quot;))# delete(&quot;foo&quot;)# # ## Write lists of dataframes as well# poldat &lt;- with(DATA.SPLIT, polarity(state, person))# term &lt;- c(&quot;the &quot;, &quot;she&quot;, &quot; wh&quot;)# termdat &lt;- with(raj.act.1,  termco(dialogue, person, term))# mcsv_w(poldat, termdat, mtcars, CO2, dir=&quot;foo2&quot;)# delete(&quot;foo2&quot;)# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>mcsv_r</li><li>mcsv_w</li>

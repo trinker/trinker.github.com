@@ -40,7 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>dist_tab(dataframe, breaks = NULL, digits = 2, ...)</pre>
+    <pre><div>dist_tab(dataframe, breaks&nbsp;=&nbsp;NULL, digits&nbsp;=&nbsp;2, ...)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -75,7 +75,10 @@ and cumulative percentages for each interval.</p>
 dataframes.</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # dist_tab(rnorm(10000), 10)# dist_tab(sample(c(&quot;red&quot;, &quot;blue&quot;, &quot;gray&quot;), 100, T), right = FALSE)# dist_tab(CO2, 4)# # out1 &lt;- dist_tab(mtcars[, 1:3])# ltruncdf(out1, 4)# # out2 &lt;- dist_tab(mtcars[, 1:3], 4)# ltruncdf(out2, 4)# # wdst &lt;- with(mraja1spl, word_stats(dialogue, list(sex, fam.aff, died)))# out3 &lt;- dist_tab(wdst$gts[1:4])# ltruncdf(out3, 4)# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>dist_tab</li>

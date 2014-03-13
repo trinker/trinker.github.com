@@ -43,8 +43,7 @@ DWin, Gavin Simpson and Tyler Rinker
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>cm_df.transcript(text.var, grouping.var, file = NULL, indent = 4, width = 70, space = 2, 
-  ...)</pre>
+    <pre><div>cm_df.transcript(text.var, grouping.var, file&nbsp;=&nbsp;NULL, indent&nbsp;=&nbsp;4, width&nbsp;=&nbsp;70, space&nbsp;=&nbsp;2, ...)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -102,7 +101,10 @@ to via a list.  If a file already exists
 <code>cm_df.transcript</code> will append to that file.</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # with(DATA, cm_df.transcript(state, person))# with(DATA, cm_df.transcript(state, list(sex, adult)))# #use it with nested variables just to keep track of demographic info# with(DATA, cm_df.transcript(state, list(person, sex, adult)))# # #use double tilde &quot;~~&quot; to keep word group as one word# DATA$state &lt;- mgsub(&quot;be certain&quot;, &quot;be~~certain&quot;, DATA$state, fixed = TRUE)# with(DATA, cm_df.transcript(state, person))# DATA &lt;- qdap::DATA# # ##  with(mraja1spl, cm_df.transcript(dialogue, list(person)))# ##  with(mraja1spl, cm_df.transcript(dialogue, list(sex, fam.aff, died)))# ##  with(mraja1spl, cm_df.transcript(dialogue, list(person), file=&quot;foo.doc&quot;))# ##  library(reports); delete(&quot;foo.doc&quot;)   #delete the file just created# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>cm_df.transcript</li>

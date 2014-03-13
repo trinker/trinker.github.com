@@ -40,9 +40,8 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>adjacency_matrix(matrix.obj)
-
-adjmat(matrix.obj)</pre>
+    <pre><div>adjacency_matrix(matrix.obj)</div>
+<div>adjmat(matrix.obj)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -74,7 +73,10 @@ adjacency matrix for use with the
 <a href = 'http://igraph.sourceforge.net/'>igraph</a> package.</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # words &lt;- c(&quot; you&quot;, &quot; the&quot;, &quot;it&quot;, &quot;oo&quot;)# Terms &lt;- with(DATA, termco(state, list(sex, adult), words))# Terms# adjacency_matrix(Terms)# # wordLIST &lt;- c(&quot; montague&quot;, &quot; capulet&quot;, &quot; court&quot;, &quot; marry&quot;)# raj.termco &lt;- with(raj.act.1, termco(dialogue, person, wordLIST))# raj.adjmat &lt;- adjmat(raj.termco)# names(raj.adjmat)  #see what&#39;s available from the adjacency_matrix object# library(igraph)# g &lt;- graph.adjacency(raj.adjmat$adjacency, weighted=TRUE, mode =&quot;undirected&quot;)# g &lt;- simplify(g)# V(g)$label &lt;- V(g)$name# V(g)$degree &lt;- degree(g)# plot(g, layout=layout.auto(g))# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>adjacency_matrix</li><li>adjmat</li>

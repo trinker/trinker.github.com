@@ -40,8 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>trans_context(text.var, grouping.var, inds, n.before = 3, tot = TRUE, n.after = n.before, 
-  ord.inds = TRUE)</pre>
+    <pre><div>trans_context(text.var, grouping.var, inds, n.before&nbsp;=&nbsp;3, tot&nbsp;=&nbsp;TRUE, n.after&nbsp;=&nbsp;n.before, ord.inds&nbsp;=&nbsp;TRUE)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -87,7 +86,10 @@ index of a vector of indices.</p>
 and after indices.</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # (x &lt;- with(DATA, trans_context(state, person, inds=c(1, 4, 7, 11))))# print(x, pretty=FALSE)# print(x, double_space = FALSE)# print(x, file=&quot;foo.xlsx&quot;)# print(x, file=&quot;foo.csv&quot;)# print(x, file=&quot;foo.txt&quot;)# print(x, file=&quot;foo.txt&quot;, pretty = FALSE)# print(x, file=&quot;foo.doc&quot;)# # ## With `end_mark`# inds1 &lt;- which(end_mark(DATA.SPLIT[, &quot;state&quot;]) == &quot;?&quot;)# with(DATA.SPLIT, trans_context(state, person, inds=inds1))# with(DATA.SPLIT, trans_context(state, person, n.before = 0, inds=inds1))# # ## With `boolean_search`# inds2 &lt;- boolean_search(DATA.SPLIT$state, &quot; I &amp;&amp;.&quot;)# with(DATA.SPLIT, trans_context(state, person, inds=inds2))# # inds3 &lt;- boolean_search(DATA$state, &quot; I ||.&quot;)# with(DATA.SPLIT, trans_context(state, person, inds=inds3))# with(DATA.SPLIT, trans_context(state, list(person, sex), inds=inds3))# with(DATA.SPLIT, trans_context(state, list(sex, adult), inds=inds3))# # inds4 &lt;- boolean_search(raj$dialogue, spaste(paste(negation.words, collapse = &quot; || &quot;)))# trans_context(raj$dialogue, raj$person, inds4)# # ### With `question_type`# (x &lt;- question_type(DATA.SPLIT$state, DATA.SPLIT$person))# # ## All questions# with(DATA.SPLIT, trans_context(state, person, inds=x$inds))# # ## Specific question types# y &lt;- x[[&quot;raw&quot;]]# inds5 &lt;- y[y[, &quot;q.type&quot;] %in% qcv(what, how), &quot;n.row&quot;]# with(DATA.SPLIT, trans_context(state, person, inds=inds5))# with(DATA.SPLIT, trans_context(state, person, inds=inds5, tot=F))# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>trans_context</li>

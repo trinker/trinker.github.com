@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>automated_readability_index. qdap 1.2.0</title>
+<title>automated_readability_index. qdap 1.3.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 1.2.0</a>
+      <a class="brand" href="#">qdap 1.3.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,19 +40,12 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>automated_readability_index(text.var, grouping.var = NULL, rm.incomplete = FALSE, 
-  ...)
-
-coleman_liau(text.var, grouping.var = NULL, rm.incomplete = FALSE, ...)
-
-SMOG(text.var, grouping.var = NULL, output = "valid", rm.incomplete = FALSE, ...)
-
-flesch_kincaid(text.var, grouping.var = NULL, rm.incomplete = FALSE, ...)
-
-fry(text.var, grouping.var = NULL, rm.incomplete = FALSE, auto.label = TRUE, grid = FALSE, 
-      div.col = "grey85", plot = TRUE, ...)
-
-linsear_write(text.var, grouping.var = NULL, rm.incomplete = FALSE, ...)</pre>
+    <pre><div>automated_readability_index(text.var, grouping.var&nbsp;=&nbsp;NULL, rm.incomplete&nbsp;=&nbsp;FALSE, ...)</div>
+<div>coleman_liau(text.var, grouping.var&nbsp;=&nbsp;NULL, rm.incomplete&nbsp;=&nbsp;FALSE, ...)</div>
+<div>SMOG(text.var, grouping.var&nbsp;=&nbsp;NULL, output&nbsp;=&nbsp;"valid", rm.incomplete&nbsp;=&nbsp;FALSE, ...)</div>
+<div>flesch_kincaid(text.var, grouping.var&nbsp;=&nbsp;NULL, rm.incomplete&nbsp;=&nbsp;FALSE, ...)</div>
+<div>fry(text.var, grouping.var&nbsp;=&nbsp;NULL, rm.incomplete&nbsp;=&nbsp;FALSE, auto.label&nbsp;=&nbsp;TRUE, grid&nbsp;=&nbsp;FALSE, div.col&nbsp;=&nbsp;"grey85", plot&nbsp;=&nbsp;TRUE, ...)</div>
+<div>linsear_write(text.var, grouping.var&nbsp;=&nbsp;NULL, rm.incomplete&nbsp;=&nbsp;FALSE, ...)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -162,7 +155,10 @@ index. Technical Report AMRLTR-66-220, University of
 Cincinnati, Cincinnati, Ohio.</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # AR1 &lt;- with(rajSPLIT, automated_readability_index(dialogue, list(person, act)))# ltruncdf(AR1,, 15)# scores(AR1)# counts(AR1)# plot(AR1)# plot(counts(AR1))# # AR2 &lt;- with(rajSPLIT, automated_readability_index(dialogue, list(sex, fam.aff)))# ltruncdf(AR2,, 15)# scores(AR2)# counts(AR2)# plot(AR2)# plot(counts(AR2))# # AR3 &lt;- with(rajSPLIT, automated_readability_index(dialogue, person))# ltruncdf(AR3,, 15)# scores(AR3)# head(counts(AR3))# plot(AR3)# plot(counts(AR3))# # CL1 &lt;- with(rajSPLIT, coleman_liau(dialogue, list(person, act)))# ltruncdf(CL1, 20)# head(counts(CL1))# plot(CL1)# # CL2 &lt;- with(rajSPLIT, coleman_liau(dialogue, list(sex, fam.aff)))# ltruncdf(CL2)# plot(counts(CL2))# # (SM1 &lt;- with(rajSPLIT, SMOG(dialogue, list(person, act))))# plot(counts(SM1))# plot(SM1)# # (SM2 &lt;- with(rajSPLIT, SMOG(dialogue, list(sex, fam.aff))))# # (FL1 &lt;- with(rajSPLIT, flesch_kincaid(dialogue, list(person, act))))# plot(scores(FL1))# plot(counts(FL1))# # (FL2 &lt;-  with(rajSPLIT, flesch_kincaid(dialogue, list(sex, fam.aff))))# plot(scores(FL2))# plot(counts(FL2))# # FR1 &lt;- with(rajSPLIT, fry(dialogue, list(sex, fam.aff)))# scores(FR1)# plot(scores(FR1))# counts(FR1)# plot(counts(FR1))# # FR2 &lt;- with(rajSPLIT, fry(dialogue, person))# scores(FR2)# plot(scores(FR2))# counts(FR2)# plot(counts(FR2))# # FR3 &lt;- with(pres_debates2012, fry(dialogue, list(time, person)))# colsplit2df(scores(FR3))# plot(scores(FR3), auto.label = FALSE)# counts(FR3)# plot(counts(FR3))# # library(ggplot2)# ggplot(colsplit2df(counts(FR3)), aes(sent.per.100.wrds,#     syllables.per.100.wrds)) +#     geom_point(aes(fill=person), shape=21, size=3) +#     facet_grid(person~time)# # LW1 &lt;- with(rajSPLIT, linsear_write(dialogue, list(person, act)))# plot(scores(LW1))# plot(counts(LW1))# # LW2 &lt;- with(rajSPLIT, linsear_write(dialogue, list(sex, fam.aff)))# plot(scores(LW2), method=&quot;lm&quot;)# plot(counts(LW2))# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>SMOG</li><li>automated_readability_index</li><li>coleman_liau</li><li>flesch_kincaid</li><li>fry</li><li>linsear_write</li>

@@ -40,13 +40,8 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>rm_stopwords(text.var, stopwords = qdapDictionaries::Top25Words, unlist = FALSE, 
-  separate = TRUE, strip = FALSE, unique = FALSE, char.keep = NULL, names = FALSE, 
-      ignore.case = TRUE, apostrophe.remove = FALSE, ...)
-
-rm_stop(text.var, stopwords = qdapDictionaries::Top25Words, unlist = FALSE, separate = TRUE, 
-      strip = FALSE, unique = FALSE, char.keep = NULL, names = FALSE, ignore.case = TRUE, 
-      apostrophe.remove = FALSE, ...)</pre>
+    <pre><div>rm_stopwords(text.var, stopwords&nbsp;=&nbsp;qdapDictionaries::Top25Words, unlist&nbsp;=&nbsp;FALSE, separate&nbsp;=&nbsp;TRUE, strip&nbsp;=&nbsp;FALSE, unique&nbsp;=&nbsp;FALSE, char.keep&nbsp;=&nbsp;NULL, names&nbsp;=&nbsp;FALSE, ignore.case&nbsp;=&nbsp;TRUE, apostrophe.remove&nbsp;=&nbsp;FALSE, ...)</div>
+<div>rm_stop(text.var, stopwords&nbsp;=&nbsp;qdapDictionaries::Top25Words, unlist&nbsp;=&nbsp;FALSE, separate&nbsp;=&nbsp;TRUE, strip&nbsp;=&nbsp;FALSE, unique&nbsp;=&nbsp;FALSE, char.keep&nbsp;=&nbsp;NULL, names&nbsp;=&nbsp;FALSE, ignore.case&nbsp;=&nbsp;TRUE, apostrophe.remove&nbsp;=&nbsp;FALSE, ...)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -111,7 +106,10 @@ removed.  Output depends on supplied arguments.</p>
       <p>Transcript apply the removal of stop words.</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # rm_stopwords(DATA$state)# rm_stopwords(DATA$state, tm::stopwords(&quot;english&quot;))# rm_stopwords(DATA$state, Top200Words)# rm_stopwords(DATA$state, Top200Words, strip = TRUE)# rm_stopwords(DATA$state, Top200Words, separate = FALSE)# rm_stopwords(DATA$state, Top200Words, separate = FALSE, ignore.case = FALSE)# rm_stopwords(DATA$state, Top200Words, unlist = TRUE)# rm_stopwords(DATA$state, Top200Words, unlist = TRUE, strip=TRUE)# rm_stop(DATA$state, Top200Words, unlist = TRUE, unique = TRUE)# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>rm_stop</li><li>rm_stopwords</li>

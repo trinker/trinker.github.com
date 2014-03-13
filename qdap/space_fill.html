@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>space_fill. qdap 1.2.0</title>
+<title>space_fill. qdap 1.3.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 1.2.0</a>
+      <a class="brand" href="#">qdap 1.3.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,8 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>space_fill(text.var, terms, sep = "~~", rm.extra = TRUE, ignore.case = TRUE, fixed = FALSE, 
-  ...)</pre>
+    <pre><div>space_fill(text.var, terms, sep&nbsp;=&nbsp;"~~", rm.extra&nbsp;=&nbsp;TRUE, ignore.case&nbsp;=&nbsp;TRUE, fixed&nbsp;=&nbsp;FALSE, ...)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -102,7 +101,10 @@ as a single unit.</p>
 double tilde <code>"~~"</code> character.</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # x &lt;- c(&quot;I want to hear the Dr. Martin Luther King Jr. speech.&quot;,#     &quot;I also want to go to the white House to see President Obama speak.&quot;)# # keeps &lt;- c(&quot;Dr. Martin Luther King Jr.&quot;, &quot;The White House&quot;, &quot;President Obama&quot;)# space_fill(x, keeps)# strip(space_fill(x, keeps))# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>space_fill</li>
