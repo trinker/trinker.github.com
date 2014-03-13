@@ -35,15 +35,13 @@
         
       </header>
       
-      <h1>Search for CRAN packages by maintainer or match
-by similar package names</h1>
+      <h1>Search CRAN Packages by Maintainer, Author, Version or Package</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>p_search_any(term, search.by = "Maintainer")
-
-p_sa(term, search.by = "Maintainer")</pre>
+    <pre><div>p_search_any(term, search.by&nbsp;=&nbsp;"Maintainer")</div>
+<div>p_sa(term, search.by&nbsp;=&nbsp;"Maintainer")</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -51,15 +49,16 @@ p_sa(term, search.by = "Maintainer")</pre>
       <dd>A search character string</dd>
       <dt>search.by</dt>
       <dd>The variable to search by (takes a
-  integer or a character string): 1-"Maintainer",
-  1-"Author", 2-"Package", 3-"Version"</dd>
+  integer or a character string): 1-<code>"Maintainer"</code>,
+  1-<code>"Author"</code>, 2-<code>"Package"</code>,
+  3-<code>"Version"</code></dd>
     </dl>
     
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Uses agrep to find packages by maintainer (often this is
-the author as well) or by name</p>
+      <p>Uses <code><a href='http://www.inside-r.org/r-doc/base/agrep'>agrep</a></code> to find packages by
+maintainer (often this is the author as well) or by name.</p>
   
     </div>
 
@@ -81,7 +80,7 @@ the author as well) or by name</p>
     </div>
     
     <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # p_search_any("hadley", 1)# p_sa("hadley", "author")# p_sa("color", 2)# p_sa("psych", "package")# ## <strong>End(Not run)</strong></div></pre>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # p_search_any(&quot;hadley&quot;, 1)# p_sa(&quot;hadley&quot;, &quot;author&quot;)# p_sa(&quot;color&quot;, 2)# p_sa(&quot;psych&quot;, &quot;package&quot;)# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
   </div>
   <div class="span4">
     <!-- <ul>

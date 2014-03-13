@@ -35,23 +35,29 @@
         
       </header>
       
-      <h1>Generate citation for a package</h1>
+      <h1>Package Citation</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>p_citation(package = "r", copy2clip = TRUE, ...)
-
-p_cite(package = "r", copy2clip = TRUE, ...)</pre>
+    <pre><div>p_citation(package&nbsp;=&nbsp;"r", copy2clip&nbsp;=&nbsp;interactive(), tex&nbsp;=&nbsp;getOption("pac_tex"), ...)</div>
+<div>p_cite(package&nbsp;=&nbsp;"r", copy2clip&nbsp;=&nbsp;interactive(), tex&nbsp;=&nbsp;getOption("pac_tex"), ...)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
       <dt>package</dt>
       <dd>Name of the package you want a citation
-  for</dd>
+  for.</dd>
       <dt>copy2clip</dt>
-      <dd>logical.  If TRUE attempts to copy the
-  output to the clipboard</dd>
+      <dd>logical.  If <code>TRUE</code> attempts to
+  copy the output to the clipboard.</dd>
+      <dt>tex</dt>
+      <dd>logical.  If <code>TRUE</code> A only the BibTex
+  version of the citation is copied to the clipboard.  If
+  <code>FALSE</code> The standard citation is copied to the
+  clipboard.  If <code>NA</code> both are copied to the
+  clipboard.  Default allows the user to set a
+  <code>"pac_tex"</code> in his/her .Rprofile.</dd>
       <dt>...</dt>
       <dd>Additional inputs to
   <code><a href='http://www.inside-r.org/r-doc/utils/citation'>citation</a></code></dd>
@@ -60,78 +66,12 @@ p_cite(package = "r", copy2clip = TRUE, ...)</pre>
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Generate citation for a package</p>
+      <p>Generate citation for a package.</p>
   
     </div>
     
     <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>p_citation()
-</div>
-<div class='output'>
-To cite R in publications use:
-
-  R Core Team (2013). R: A language and environment for statistical computing. R Foundation for
-  Statistical Computing, Vienna, Austria. URL http://www.R-project.org/.
-
-A BibTeX entry for LaTeX users is
-
-  @Manual{,
-    title = {R: A Language and Environment for Statistical Computing},
-    author = {{R Core Team}},
-    organization = {R Foundation for Statistical Computing},
-    address = {Vienna, Austria},
-    year = {2013},
-    url = {http://www.R-project.org/},
-  }
-
-We have invested a lot of time and effort in creating R, please cite it when using it for data
-analysis. See also ‘citation("pkgname")’ for citing R packages.
-
-</div>
-<div class='input'>p_cite(pacman)
-</div>
-<div class='output'>
-To cite package ‘pacman’ in publications use:
-
-  Tyler Rinker & Dason Kurkiewicz (2012). pacman: Package Management Tool. R package version 0.2.0.
-  https://github.com/trinker/pacman
-
-A BibTeX entry for LaTeX users is
-
-  @Manual{,
-    title = {pacman: Package Management Tool},
-    author = {Tyler Rinker & Dason Kurkiewicz},
-    year = {2012},
-    note = {R package version 0.2.0},
-    url = {https://github.com/trinker/pacman},
-  }
-
-ATTENTION: This citation information has been auto-generated from the package DESCRIPTION file and
-may need manual editing, see ‘help("citation")’.
-
-</div>
-<div class='input'>p_citation(pacman)
-</div>
-<div class='output'>
-To cite package ‘pacman’ in publications use:
-
-  Tyler Rinker & Dason Kurkiewicz (2012). pacman: Package Management Tool. R package version 0.2.0.
-  https://github.com/trinker/pacman
-
-A BibTeX entry for LaTeX users is
-
-  @Manual{,
-    title = {pacman: Package Management Tool},
-    author = {Tyler Rinker & Dason Kurkiewicz},
-    year = {2012},
-    note = {R package version 0.2.0},
-    url = {https://github.com/trinker/pacman},
-  }
-
-ATTENTION: This citation information has been auto-generated from the package DESCRIPTION file and
-may need manual editing, see ‘help("citation")’.
-
-</div></pre>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # p_citation()# p_cite(pacman)# p_citation(pacman, tex = FALSE)# p_citation(tex = FALSE)# p_cite(knitr)# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
   </div>
   <div class="span4">
     <!-- <ul>

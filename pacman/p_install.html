@@ -35,36 +35,39 @@
         
       </header>
       
-      <h1>Installs and loads a package provided the package is a CRAN package</h1>
+      <h1>Installs & Loads Packages</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>p_install(package, character.only = FALSE, ...)
-
-p_get(package, character.only = FALSE, ...)</pre>
+    <pre><div>p_install(package, character.only&nbsp;=&nbsp;FALSE, path&nbsp;=&nbsp;getOption("download_path"), ...)</div>
+<div>p_get(package, character.only&nbsp;=&nbsp;FALSE, path&nbsp;=&nbsp;getOption("download_path"), ...)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
       <dt>package</dt>
-      <dd>Name of package(s)</dd>
+      <dd>Name of package(s).</dd>
       <dt>character.only</dt>
-      <dd>Logical indicating if input is a
-  character string</dd>
+      <dd>logical.  If <code>TRUE</code>
+  <code>...</code> is treated a character string.</dd>
       <dt>...</dt>
       <dd>Additional parameters to pass to
-  install.packages</dd>
+  <code>install.packages</code>.</dd>
+      <dt>path</dt>
+      <dd>The path to the directory that contains the
+  package.  It is convenient to set <code>download_path</code> in
+  .Rprofile options to the downloads directory.</dd>
     </dl>
     
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Installs a package provided the package is a CRAN package</p>
+      <p>Installs a package provided the package is a CRAN package.</p>
   
     </div>
     
     <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## <strong>Not run</strong>: p_install(pacman)</div></pre>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: p_install(pacman)</div></pre>
   </div>
   <div class="span4">
     <!-- <ul>

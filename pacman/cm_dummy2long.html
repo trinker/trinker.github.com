@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>cm_dummy2long. qdap 1.3.2</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">qdap 1.3.2</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Convert cm_combine.dummy Back to Long</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><div>cm_dummy2long(cm_long2dummy_obj, rm.var&nbsp;=&nbsp;"time")</div></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>cm_long2dummy_obj</dt>
+      <dd>An object from cm_combine.dummy</dd>
+      <dt>rm.var</dt>
+      <dd>Name of the repeated measures column.
+  Default is <code>"time"</code>.</dd>
+    </dl>
+    
+    <div class="Value">
+      <h2>Value</h2>
+      
+      <p>Returns a dataframe with co-occurrences of provided code
+columns.</p>
+  
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p><code>cm_combine.dummy</code> back to long.</p>
+  
+    </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # foo &lt;- list(#     AA = qcv(terms=&quot;1:10&quot;),#     BB = qcv(terms=&quot;1:2, 3:10, 19&quot;),#     CC = qcv(terms=&quot;1:3, 5:6&quot;)# )# # foo2  &lt;- list(#     AA = qcv(terms=&quot;4:8&quot;),#     BB = qcv(terms=&quot;1:4, 10:12&quot;),#     CC = qcv(terms=&quot;1, 11, 15:20&quot;),#     DD = qcv(terms=&quot;&quot;)# )# # (x &lt;- cm_range2long(foo))# (out1 &lt;- cm_long2dummy(x))# # (z &lt;- cm_range2long(foo, foo2, v.name=&quot;time&quot;))# out2 &lt;- cm_long2dummy(z, &quot;time&quot;)# lapply(out2, head)# cm_combine.dummy(out1, combine.code = list(AB=qcv(AA, BB)))# # combines &lt;- list(AB=qcv(AA, BB), ABC=qcv(AA, BB, CC))# A &lt;- cm_combine.dummy(out2, combine.code = combines)# head(A, 10)# B &lt;- cm_combine.dummy(out1, combine.code = combines)# head(B, 10)# # cm_dummy2long(A)# cm_dummy2long(B)# plot(cm_dummy2long(A))# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>cm_dummy2long</li>
+    </ul>
+    <ul>
+      
+    </ul> -->
+      
+    <h2>See also</h2>
+    
+<code>cm_long2dummy</code>,
+<code>cm_combine.dummy</code>
+
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

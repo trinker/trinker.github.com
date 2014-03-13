@@ -40,35 +40,46 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre>p_unload(..., negate = FALSE)</pre>
+    <pre><div>p_unload(..., negate&nbsp;=&nbsp;FALSE, char, character.only&nbsp;=&nbsp;FALSE)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
       <dt>...</dt>
       <dd>name of package(s) or "all" (all removes all
-  add on packages)</dd>
+  add on packages).</dd>
       <dt>negate</dt>
-      <dd>logical. If TRUE will unload all add on
-  packages except those provided to p_unload.</dd>
+      <dd>logical. If <code>TRUE</code> will unload all add
+  on packages except those provided to <code>p_unload</code>.</dd>
+      <dt>char</dt>
+      <dd>Character vector containing packages to load.
+  If you are calling <code>p_unload</code> from within a function
+  (or just having difficulties calling it using a character
+  vector input) then pass your character vector of packages
+  to load to this parameter directly.</dd>
+      <dt>character.only</dt>
+      <dd>logical. If <code>TRUE</code> then
+  <code>p_unload</code> will only accept a single input which is
+  a character vector containing the names of packages to
+  load.</dd>
     </dl>
     
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Unloads package(s) or all packages</p>
+      <p>Unloads package(s) or all packages.</p>
   
     </div>
 
     <div class="Note">
       <h2>Note</h2>
       
-      <p>p_unload will not unload the base install packages that
-load when R boots up.</p>
+      <p><code>p_unload</code> will not unload the base install packages
+that load when R boots up.</p>
   
     </div>
     
     <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## <strong>Not run</strong>: # p_load(lattice)# p_loaded()# p_unload(lattice)# p_loaded()# # p_load("lattice", "MASS")# p_loaded()# p_unload(all)# p_loaded() # will not work as you unloaded pacman# # p_load(lattice, MASS, foreign)# p_loaded()# p_unload(pacman, negate=TRUE)# p_loaded()# ## <strong>End(Not run)</strong></div></pre>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # p_load(lattice)# p_loaded()# p_unload(lattice)# p_loaded()# # p_load(&quot;lattice&quot;, &quot;MASS&quot;)# p_loaded()# p_unload(all)# p_loaded() # will not work as you unloaded pacman# # library(pacman)# p_load(lattice, MASS, foreign)# p_loaded()# p_unload(pacman, negate=TRUE)# p_loaded()# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
   </div>
   <div class="span4">
     <!-- <ul>
