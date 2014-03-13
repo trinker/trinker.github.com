@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>trans_context. qdap 1.3.2</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">qdap 1.3.2</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Print Context Around Indices</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><div>trans_context(text.var, grouping.var, inds, n.before&nbsp;=&nbsp;3, tot&nbsp;=&nbsp;TRUE, n.after&nbsp;=&nbsp;n.before, ord.inds&nbsp;=&nbsp;TRUE)</div></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>text.var</dt>
+      <dd>The text variable.</dd>
+      <dt>grouping.var</dt>
+      <dd>The grouping variables.  Also takes a
+  single grouping variable or a list of 1 or more grouping
+  variables.</dd>
+      <dt>inds</dt>
+      <dd>A list of integer indices to print context
+  for.</dd>
+      <dt>n.before</dt>
+      <dd>The number of rows before the indexed
+  occurrence.</dd>
+      <dt>tot</dt>
+      <dd>logical.  If <code>TRUE</code> condenses sub-units
+  (e.g., sentences) into turns of talk for that
+  <code>grouping.var</code>.</dd>
+      <dt>n.after</dt>
+      <dd>The number of rows after the indexed
+  occurrence.</dd>
+      <dt>ord.inds</dt>
+      <dd>logical.  If <code>TRUE</code> inds is ordered
+  least to greatest.</dd>
+    </dl>
+    
+    <div class="Value">
+      <h2>Value</h2>
+      
+      <p>Returns a dataframe of the class "qdap_context" that can be
+printed (i.e., saved) in flexible outputs.  The dataframe
+can be printed as a dataframe style or pretty text output.
+The resulting file contains n rows before and after each
+index of a vector of indices.</p>
+  
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p>Print (or save to an external file) n text elements before
+and after indices.</p>
+  
+    </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # (x &lt;- with(DATA, trans_context(state, person, inds=c(1, 4, 7, 11))))# print(x, pretty=FALSE)# print(x, double_space = FALSE)# print(x, file=&quot;foo.xlsx&quot;)# print(x, file=&quot;foo.csv&quot;)# print(x, file=&quot;foo.txt&quot;)# print(x, file=&quot;foo.txt&quot;, pretty = FALSE)# print(x, file=&quot;foo.doc&quot;)# # ## With `end_mark`# inds1 &lt;- which(end_mark(DATA.SPLIT[, &quot;state&quot;]) == &quot;?&quot;)# with(DATA.SPLIT, trans_context(state, person, inds=inds1))# with(DATA.SPLIT, trans_context(state, person, n.before = 0, inds=inds1))# # ## With `boolean_search`# inds2 &lt;- boolean_search(DATA.SPLIT$state, &quot; I &amp;&amp;.&quot;)# with(DATA.SPLIT, trans_context(state, person, inds=inds2))# # inds3 &lt;- boolean_search(DATA$state, &quot; I ||.&quot;)# with(DATA.SPLIT, trans_context(state, person, inds=inds3))# with(DATA.SPLIT, trans_context(state, list(person, sex), inds=inds3))# with(DATA.SPLIT, trans_context(state, list(sex, adult), inds=inds3))# # inds4 &lt;- boolean_search(raj$dialogue, spaste(paste(negation.words, collapse = &quot; || &quot;)))# trans_context(raj$dialogue, raj$person, inds4)# # ### With `question_type`# (x &lt;- question_type(DATA.SPLIT$state, DATA.SPLIT$person))# # ## All questions# with(DATA.SPLIT, trans_context(state, person, inds=x$inds))# # ## Specific question types# y &lt;- x[[&quot;raw&quot;]]# inds5 &lt;- y[y[, &quot;q.type&quot;] %in% qcv(what, how), &quot;n.row&quot;]# with(DATA.SPLIT, trans_context(state, person, inds=inds5))# with(DATA.SPLIT, trans_context(state, person, inds=inds5, tot=F))# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>trans_context</li>
+    </ul>
+    <ul>
+      
+    </ul> -->
+      
+    <h2>See also</h2>
+    
+<code>boolean_search</code>,
+<code>question_type</code>,
+<code>end_mark</code>
+
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

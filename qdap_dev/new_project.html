@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>new_project. qdap 1.3.2</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">qdap 1.3.2</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Project Template</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><div>new_project(project&nbsp;=&nbsp;"new", path&nbsp;=&nbsp;getwd(), open&nbsp;=&nbsp;reports::is.global(2), github&nbsp;=&nbsp;FALSE, ...)</div></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>project</dt>
+      <dd>A character vector of the project name.</dd>
+      <dt>path</dt>
+      <dd>The path to where the project should be
+  created.  Default is the current working directory.</dd>
+      <dt>open</dt>
+      <dd>logical.  If <code>TRUE</code> the project will be
+  opened in RStudio. The default is to test if
+  <code>new_project</code> is being used in the global
+  environment, if it is then the project directory will be
+  opened.</dd>
+      <dt>github</dt>
+      <dd>logical.  If <code>TRUE</code> the repo will be
+  sent to public <a href = 'https://github.com/'>GitHub</a>
+  account.</dd>
+      <dt>...</dt>
+      <dd>Other arguments passed to
+  <code><a href='http://www.inside-r.org/r-doc/reports/new_report'>new_report</a></code>.</dd>
+    </dl>
+    
+    <div class="Value">
+      <h2>Value</h2>
+      
+      <p>Creates a project template.</p>
+  
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p>Generate a project template to increase efficiency.</p>
+  
+    </div>
+
+    <div class="Details">
+      <h2>Details</h2>
+      
+      <p>The project template includes these main directories and
+scripts: <ul>
+<li>ANALYSIS - A directory
+containing the following analysis scripts: <ul>
+<li>01_clean_data.R * initial cleaning of raw
+transcripts </li>
+<li>02_analysis_I.R * initial analysis
+</li>
+<li>03_plots.R * plotting script </li>
+</ul></p>
+  
+      <p></li>
+<li>CLEANED_TRANSCRIPTS - A directory to store the
+cleaned transcripts (If the transcripts are already cleaned
+you may choose to not utilize the RAW_TRANSCRIPTS
+directory) </li>
+<li>CM_DATA - A directory to export/import
+scripts for cm_xxx family of functions </li>
+<li>CODEBOOK -
+A directory to store coding conventions or demographics
+data: <ul>
+<li>KEY.csv * A blank template for
+demographic information </li>
+</ul>
+  </li>
+<li>CORRESPONDENCE - A
+directory to store correspondence and agreements with the
+client: <ul>
+<li>CONTACT_INFO.txt * A txt file to
+put research team members' contact information </li>
+</ul></p>
+  
+      <p></li>
+<li>DATA - A directory to store cleaned data (generally
+.RData format) </li>
+<li>DATA_FOR_REVIEW - A directory to
+put data that may need to be altered or needs to be
+inspected more closely </li>
+<li>DOCUMENTS - A directory to
+store documents related to the project </li>
+<li>PLOTS - A
+directory to store plots
+</li>
+<li>PROJECT_WORKFLOW_GUIDE.pdf * A pdf explaining the
+structure of the project template </li>
+<li>RAW_DATA - A
+directory to store non-transcript data related to the
+project: <ul>
+<li>ANALYTIC_MEMOS * A directory to
+put audio files (or shortcuts) </li>
+<li>AUDIO * A directory
+to put audio files (or shortcuts) </li>
+<li>FIELD_NOTES * A
+directory to put audio files (or shortcuts)
+</li>
+<li>PAPER_ARTIFACTS * A directory to put paper
+artifacts </li>
+<li>PHOTOGRAPHS * A directory to put
+photographs </li>
+<li>VIDEO * A directory to put video files
+(or shortcuts) </li>
+</ul>
+  </li>
+<li>RAW_TRANSCRIPTS - A directory
+to store the raw transcripts </li>
+<li>REPORTS - A directory
+with report and presentation related tools.  Please see the</p>
+  
+      <p><a href = 'https://dl.dropbox.com/u/61803503/packages/REPORT_WORKFLOW_GUIDE.pdf'>REPORT_WORKFLOW_GUIDE.pdf</a>
+for more details </li>
+<li>TABLES - A directory to export
+tables to </li>
+<li>WORD_LISTS - A directory to store word
+lists that can be sourced and supplied to functions
+</li>
+<li>.Rprofile - Performs certain tasks such as loading
+libraries, data and sourcing functions upon startup in
+<a href = 'http://www.rstudio.com/'>RStudio</a>
+</li>
+<li>extra_functions.R - A script to store user made
+functions related to the project <ul>
+<li>email *
+A function to view, and optionally copy to the clipboard,
+emails for the client/lead researcher, analyst and/or other
+project members (information taking from
+~/CORRESPONDENCE/CONTACT_INFO.txt file) </li>
+<li>todo * A
+function to view, and optionally copy to the clipboard,
+non-completed tasks from the <code>TO_DO.txt</code> file </li>
+</ul></p>
+  
+      <p></li>
+<li>LOG - A text file documenting project changes/needs
+etc. </li>
+<li>xxx.Rproj - A project file used by
+<a href = 'http://www.rstudio.com/'>RStudio</a>; clicking this will
+open the project in RStudio. </li>
+<li>TO_DO - A text file
+documenting project tasks </li>
+</ul></p>
+  
+      <p>The template comes with a .Rproj file.  This makes
+operating in <a href = 'http://www.rstudio.com/'>RStudio</a> very
+easy.  The file can be kept on the desktop or a git
+application such as <a href = 'https://github.com/'>github</a>,
+<a href = 'https://bitbucket.org/'>bitbucket</a> or
+<a href = 'https://www.dropbox.com/'>dropbox</a>, depending on what
+the client/research team is comfortable utilizing.</p>
+  
+    </div>
+      </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>new_project</li>
+    </ul>
+    <ul>
+      <li>is.global</li><li>project,</li><li>workflow,</li>
+    </ul> -->
+      
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>
