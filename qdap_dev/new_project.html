@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>new_project. qdap 1.3.2</title>
+<title>new_project. qdap 1.3.3</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 1.3.2</a>
+      <a class="brand" href="#">qdap 1.3.3</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,7 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre><div>new_project(project&nbsp;=&nbsp;"new", path&nbsp;=&nbsp;getwd(), open&nbsp;=&nbsp;reports::is.global(2), github&nbsp;=&nbsp;FALSE, ...)</div></pre>
+    <pre><div>new_project(project&nbsp;=&nbsp;"new", path&nbsp;=&nbsp;getwd(), open&nbsp;=&nbsp;is.global(2), github&nbsp;=&nbsp;FALSE, ...)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -83,73 +83,81 @@
       
       <p>The project template includes these main directories and
 scripts: <ul>
-<li>ANALYSIS - A directory
-containing the following analysis scripts: <ul>
-<li>01_clean_data.R * initial cleaning of raw
+<li>SCRIPTS - A directory to store
+scripts; already contains the following: <ul>
+<li>01_clean_data.R - initial cleaning of raw
 transcripts </li>
-<li>02_analysis_I.R * initial analysis
+<li>02_analysis_I.R - initial analysis
 </li>
-<li>03_plots.R * plotting script </li>
-</ul></p>
-  
-      <p></li>
-<li>CLEANED_TRANSCRIPTS - A directory to store the
-cleaned transcripts (If the transcripts are already cleaned
-you may choose to not utilize the RAW_TRANSCRIPTS
-directory) </li>
-<li>CM_DATA - A directory to export/import
-scripts for cm_xxx family of functions </li>
-<li>CODEBOOK -
-A directory to store coding conventions or demographics
+<li>03_plots.R - plotting script </li>
+</ul>
+  </li>
+<li>CODEBOOK
+- A directory to store coding conventions or demographics
 data: <ul>
-<li>KEY.csv * A blank template for
+<li>KEY.csv - A blank template for
 demographic information </li>
 </ul>
   </li>
 <li>CORRESPONDENCE - A
 directory to store correspondence and agreements with the
 client: <ul>
-<li>CONTACT_INFO.txt * A txt file to
+<li>CONTACT_INFO.txt - A text file to
 put research team members' contact information </li>
 </ul></p>
   
       <p></li>
-<li>DATA - A directory to store cleaned data (generally
-.RData format) </li>
-<li>DATA_FOR_REVIEW - A directory to
-put data that may need to be altered or needs to be
-inspected more closely </li>
-<li>DOCUMENTS - A directory to
-store documents related to the project </li>
-<li>PLOTS - A
-directory to store plots
+<li>DATA - A directory to store data: <ul>
+<li>CLEANED_TRANSCRIPTS - A directory to store the
+cleaned transcripts (If the transcripts are already cleaned
+you may choose to not utilize the RAW_TRANSCRIPTS
+directory) </li>
+<li>CM_DATA - A directory to export/import
+scripts for cm_xxx family of functions
 </li>
-<li>PROJECT_WORKFLOW_GUIDE.pdf * A pdf explaining the
-structure of the project template </li>
-<li>RAW_DATA - A
-directory to store non-transcript data related to the
-project: <ul>
-<li>ANALYTIC_MEMOS * A directory to
-put audio files (or shortcuts) </li>
-<li>AUDIO * A directory
-to put audio files (or shortcuts) </li>
-<li>FIELD_NOTES * A
-directory to put audio files (or shortcuts)
+<li>DATA_FOR_REVIEW - A directory to put data that may
+need to be altered or needs to be inspected more closely
 </li>
-<li>PAPER_ARTIFACTS * A directory to put paper
-artifacts </li>
-<li>PHOTOGRAPHS * A directory to put
-photographs </li>
-<li>VIDEO * A directory to put video files
-(or shortcuts) </li>
+<li>RAW_DATA - A directory to store non-transcript data
+related to the project: <ul>
+<li>ANALYTIC_MEMOS -
+A directory to put audio files (or shortcuts)
+</li>
+<li>AUDIO - A directory to put audio files (or
+shortcuts) </li>
+<li>FIELD_NOTES - A directory to put audio
+files (or shortcuts) </li>
+<li>PAPER_ARTIFACTS - A directory
+to put paper artifacts </li>
+<li>PHOTOGRAPHS - A directory
+to put photographs </li>
+<li>VIDEO - A directory to put
+video files (or shortcuts) </li>
 </ul>
   </li>
-<li>RAW_TRANSCRIPTS - A directory
-to store the raw transcripts </li>
-<li>REPORTS - A directory
-with report and presentation related tools.  Please see the</p>
-  
-      <p><a href = 'https://dl.dropbox.com/u/61803503/packages/REPORT_WORKFLOW_GUIDE.pdf'>REPORT_WORKFLOW_GUIDE.pdf</a>
+<li>TRANSCRIPTS - A
+directory to put transcription data: <ul>
+<li>CLEANED_TRANSCRIPTS - A directory to store the
+cleaned transcripts (If the transcripts are already cleaned
+you may choose to not utilize the RAW_TRANSCRIPTS
+directory) </li>
+<li>RAW_TRANSCRIPTS - A directory to store
+the raw transcripts </li>
+</ul>
+  </li>
+</ul>
+ </li>
+<li>DOCUMENTATION - A
+directory to store documents related to the project
+</li>
+<li>PLOTS - A directory to store plots
+</li>
+<li>PROJECT_WORKFLOW_GUIDE.pdf - A pdf explaining the
+structure of the project template </li>
+<li>REPORTS - A
+directory with report and presentation related tools.
+Please see the 
+<a href = 'https://dl.dropbox.com/u/61803503/packages/REPORT_WORKFLOW_GUIDE.pdf'>REPORT_WORKFLOW_GUIDE.pdf</a>
 for more details </li>
 <li>TABLES - A directory to export
 tables to </li>
@@ -162,12 +170,12 @@ libraries, data and sourcing functions upon startup in
 </li>
 <li>extra_functions.R - A script to store user made
 functions related to the project <ul>
-<li>email *
+<li>email -
 A function to view, and optionally copy to the clipboard,
 emails for the client/lead researcher, analyst and/or other
 project members (information taking from
 ~/CORRESPONDENCE/CONTACT_INFO.txt file) </li>
-<li>todo * A
+<li>todo - A
 function to view, and optionally copy to the clipboard,
 non-completed tasks from the <code>TO_DO.txt</code> file </li>
 </ul></p>
