@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>synonyms. qdap 1.3.2</title>
+<title>synonyms. qdap 1.3.3</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 1.3.2</a>
+      <a class="brand" href="#">qdap 1.3.3</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,8 +40,10 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre><div>synonyms(terms, return.list&nbsp;=&nbsp;TRUE, multiwords&nbsp;=&nbsp;TRUE, report.null&nbsp;=&nbsp;TRUE)</div>
-<div>syn(terms, return.list&nbsp;=&nbsp;TRUE, multiwords&nbsp;=&nbsp;TRUE, report.null&nbsp;=&nbsp;TRUE)</div></pre>
+    <pre><div>synonyms(terms, return.list&nbsp;=&nbsp;TRUE, multiwords&nbsp;=&nbsp;TRUE, report.null&nbsp;=&nbsp;TRUE, synonym.frame&nbsp;=&nbsp;qdapDictionaries::env.syn)</div>
+<div>syn(terms, return.list&nbsp;=&nbsp;TRUE, multiwords&nbsp;=&nbsp;TRUE, report.null&nbsp;=&nbsp;TRUE, synonym.frame&nbsp;=&nbsp;qdapDictionaries::env.syn)</div>
+<div>synonyms_frame(synonym.list, envir&nbsp;=&nbsp;TRUE, prior.frame)</div>
+<div>syn_frame(synonym.list, envir&nbsp;=&nbsp;TRUE, prior.frame)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -58,6 +60,20 @@
       <dt>report.null</dt>
       <dd>logical.  If <code>TRUE</code> reports the
   words that no match was found at the head of the output.</dd>
+      <dt>synonym.frame</dt>
+      <dd>A dataframe or environment
+  containing a dataframe of positive/negative words and
+  weights.</dd>
+      <dt>synonym.list</dt>
+      <dd>A named list of lists (or vectos) of
+  synonyms.</dd>
+      <dt>envir</dt>
+      <dd>logical.  If <code>TRUE</code> a lookup table (a
+  dataframe within an environment) is produced rather than
+  a data.frame.</dd>
+      <dt>A</dt>
+      <dd>prior synonyms data.frame in the format produced
+  by <code>synonym_frame</code></dd>
     </dl>
     
     <div class="Value">
@@ -72,6 +88,10 @@ match term(s).</p>
       <h2>Description</h2>
       
       <p>Search for synonyms that match term(s).</p>
+  
+      <p><code>synonyms_frame</code> - Generate a synonym lookup
+environment for use with the <code>synonym.frame</code> argument
+in the <code>synonym</code> function.</p>
   
     </div>
 
@@ -91,11 +111,11 @@ is the unique words from the combination of
     </div>
     
     <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # synonyms(c(&quot;the&quot;, &quot;cat&quot;, &quot;job&quot;, &quot;environment&quot;, &quot;read&quot;, &quot;teach&quot;))# head(syn(c(&quot;the&quot;, &quot;cat&quot;, &quot;job&quot;, &quot;environment&quot;, &quot;read&quot;, &quot;teach&quot;),#     return.list = FALSE), 30)# syn(c(&quot;the&quot;, &quot;cat&quot;, &quot;job&quot;, &quot;environment&quot;, &quot;read&quot;, &quot;teach&quot;), multiwords = FALSE)# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # synonyms(c(&quot;the&quot;, &quot;cat&quot;, &quot;job&quot;, &quot;environment&quot;, &quot;read&quot;, &quot;teach&quot;))# head(syn(c(&quot;the&quot;, &quot;cat&quot;, &quot;job&quot;, &quot;environment&quot;, &quot;read&quot;, &quot;teach&quot;),#     return.list = FALSE), 30)# syn(c(&quot;the&quot;, &quot;cat&quot;, &quot;job&quot;, &quot;environment&quot;, &quot;read&quot;, &quot;teach&quot;), multiwords = FALSE)# # ## User defined synonym lookup# syn_dat &lt;- list(#     like = list(c(&quot;want&quot;, &quot;desire&quot;), c(&quot;love&quot;, &quot;care&quot;)),#     show = list(c(&quot;reveal&quot;), c(&quot;movie&quot;, &quot;opera&quot;)),#     R = c(&quot;old friend&quot;, &quot;statistics language&quot;)# )# # synonyms_frame(syn_dat)# synonyms_frame(syn_dat, return.hash=FALSE)# syn(c(&quot;R&quot;, &quot;show&quot;), synonym.frame = syn_frame(syn_dat))# # syns.hash &lt;- syn_frame(syn_dat, prior.frame = SYNONYM)# syn(c(&quot;R&quot;, &quot;show&quot;, &quot;like&quot;, &quot;robot&quot;), synonym.frame = syns.hash)# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
   </div>
   <div class="span4">
     <!-- <ul>
-      <li>syn</li><li>synonyms</li>
+      <li>syn</li><li>syn_frame</li><li>synonyms</li><li>synonyms_frame</li>
     </ul>
     <ul>
       
