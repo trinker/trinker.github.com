@@ -40,8 +40,8 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre><div>multigsub(pattern, replacement&nbsp;=&nbsp;NULL, text.var, leadspace&nbsp;=&nbsp;FALSE, trailspace&nbsp;=&nbsp;FALSE, fixed&nbsp;=&nbsp;TRUE, trim&nbsp;=&nbsp;TRUE, ...)</div>
-<div>mgsub(pattern, replacement&nbsp;=&nbsp;NULL, text.var, leadspace&nbsp;=&nbsp;FALSE, trailspace&nbsp;=&nbsp;FALSE, fixed&nbsp;=&nbsp;TRUE, trim&nbsp;=&nbsp;TRUE, ...)</div></pre>
+    <pre><div>multigsub(pattern, replacement&nbsp;=&nbsp;NULL, text.var, leadspace&nbsp;=&nbsp;FALSE, trailspace&nbsp;=&nbsp;FALSE, fixed&nbsp;=&nbsp;TRUE, trim&nbsp;=&nbsp;TRUE, order.pattern&nbsp;=&nbsp;fixed, ...)</div>
+<div>mgsub(pattern, replacement&nbsp;=&nbsp;NULL, text.var, leadspace&nbsp;=&nbsp;FALSE, trailspace&nbsp;=&nbsp;FALSE, fixed&nbsp;=&nbsp;TRUE, trim&nbsp;=&nbsp;TRUE, order.pattern&nbsp;=&nbsp;fixed, ...)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -67,6 +67,12 @@
       <dt>trim</dt>
       <dd>logical.  If <code>TRUE</code> leading and trailing
   white spaces are removed.</dd>
+      <dt>order.pattern</dt>
+      <dd>logical.  If <code>TRUE</code> and
+  <code>fixed = TRUE</code>, the <code>pattern</code> string is sorted
+  by number of characters to prevent substrings replacing
+  meta strings (e.g., <code>pattern = c("the", "then")</code>
+  resorts to search for "then" first).</dd>
       <dt>...</dt>
       <dd>Additional arguments passed to
   <code><a href='http://www.inside-r.org/r-doc/base/grep'>gsub</a></code>.</dd>
@@ -85,15 +91,6 @@
       <p>A wrapper for <code><a href='http://www.inside-r.org/r-doc/base/grep'>gsub</a></code> that takes a vector
 of search terms and a vector or single value of
 replacements.</p>
-  
-    </div>
-
-    <div class="Note">
-      <h2>Note</h2>
-      
-      <p>The replacements occur sequentially rather than all at
-once.  This means a previous (first in pattern string) sub
-could alter a later sub.</p>
   
     </div>
     
