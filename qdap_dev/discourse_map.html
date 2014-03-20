@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>discourse_map. qdap 1.3.3</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">qdap 1.3.3</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Discourse Mapping</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><div>discourse_map(text.var, grouping.var, edge.constant, sep&nbsp;=&nbsp;"_", ...)</div></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>text.var</dt>
+      <dd>The text variable or a
+  <code>"word_stats"</code> object (i.e., the output of a
+  <code>word_stats</code> function).</dd>
+      <dt>grouping.var</dt>
+      <dd>The grouping variables.  Also takes a
+  single grouping variable or a list of 1 or more grouping
+  variables.</dd>
+      <dt>edge.constant</dt>
+      <dd>A constant to multiple the edges by.
+  Defaults (if <code>missing</code>) to 2.5 times the number of
+  social actors.</dd>
+      <dt>...</dt>
+      <dd>ignored</dd>
+      <dt>sep</dt>
+      <dd>The separator character to use between
+  grouping variables.</dd>
+    </dl>
+    
+    <div class="Value">
+      <h2>Value</h2>
+      
+      <p>Returns a list: rawThe dataframe with to and from
+columns (the edges) + word counts edge_word_countA
+dataframe of edges and word counts + proportional word
+count vertex_word_countA dataframe of vertices and
+word counts + proportional word count plotAn
+<span class = "pkg">igraph</span> object</p>
+  
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p>View the flow of discourse from social actors.</p>
+  
+    </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # discourse_map(DATA$state, list(DATA$person, DATA$sex))# x &lt;- with(mraja1, discourse_map(dialogue, person))# x# lview(x)# library(igraph)# plot(visual(x), edge.curved=FALSE)# # ## Augmenting the plot# mygraph &lt;- visual(x)# # plot(mygraph, edge.curved=TRUE)# # V(mygraph)$sex &lt;- V(mygraph)$name %l% raj.demographics[, 1:2]# V(mygraph)$color &lt;- ifelse(V(mygraph)$sex==&quot;f&quot;, &quot;pink&quot;, &quot;lightblue&quot;)# # plot(mygraph, edge.curved=TRUE)# # V(mygraph)$family &lt;- V(mygraph)$name %l+% raj.demographics[, c(1, 3)]# cols &lt;- qcv(blue, red, brown, darkgreen, grey10)# V(mygraph)$label.color &lt;- lookup(V(mygraph)$family,#     unique(V(mygraph)$family), cols)# # plot(mygraph, edge.curved=TRUE)# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>discourse_map</li>
+    </ul>
+    <ul>
+      
+    </ul> -->
+      
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>
