@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>Animate.discourse_map. qdap 1.3.3</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">qdap 1.3.3</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Discourse Map</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><div>"Animate"(x, edge.constant, sep&nbsp;=&nbsp;"_", current.color&nbsp;=&nbsp;"red", previous.color&nbsp;=&nbsp;"grey50", wc.time&nbsp;=&nbsp;TRUE, time.constant&nbsp;=&nbsp;2, title&nbsp;=&nbsp;NULL, ...)</div></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>x</dt>
+      <dd>The discourse_map object.</dd>
+      <dt>edge.constant</dt>
+      <dd>A constant to multiple edge width
+  by.</dd>
+      <dt>sep</dt>
+      <dd>The separator character to use between
+  grouping variables.</dd>
+      <dt>current.color</dt>
+      <dd>The color to make the vector edge as
+  it moves.</dd>
+      <dt>previous.color</dt>
+      <dd>The color to make the already
+  plotted edges.</dd>
+      <dt>wc.time</dt>
+      <dd>logical.  If <code>TRUE</code> weights duration
+  of frame by word count.</dd>
+      <dt>time.constant</dt>
+      <dd>A constant to divide the maximum
+  word count by.  Time is calculated by `round(exp(WORD
+  COUNT/(max(WORD COUNT)/time.constant)))`. Therefor a
+  larger constant will make the difference between the
+  large and small word counts greater.</dd>
+      <dt>title</dt>
+      <dd>The title to apply to the animated
+  image(s).</dd>
+      <dt>...</dt>
+      <dd>ignored</dd>
+    </dl>
+    
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p><code>Animate.discourse_map</code> - View Animate from
+<code>discourse_map</code>.</p>
+  
+    </div>
+
+    <div class="Details">
+      <h2>Details</h2>
+      
+      <p>discourse_map Method for Animate</p>
+  
+    </div>
+
+    <div class="Note">
+      <h2>Note</h2>
+      
+      <p>The width of edges is based on words counts on that edge
+until that moment divided by total number of words used
+until that moment.  Thicker edges tend to thin as time
+passes.  The actual duration a word lasts is based on word
+counts for that particular flow of dialogue divided by
+total dialogue (words) used.</p>
+  
+    </div>
+      </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>Animate.discourse_map</li>
+    </ul>
+    <ul>
+      
+    </ul> -->
+      
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>
