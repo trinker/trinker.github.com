@@ -6,7 +6,7 @@
 	    'width': 480,
 	    'delay': 100,
 	    'loopMode': 'loop',
- 'controls': ['first', 'previous', 'play', 'next', 'last', 'loop', 'speed'], 'delayMin': 0
+ 'controls': ['first', 'play', 'loop', 'speed'], 'delayMin': 0
 	});
 	$('#Rplot').scianimator('play');
     });
