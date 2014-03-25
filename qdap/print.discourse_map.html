@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>print.fry. qdap 1.3.3</title>
+<title>print.discourse_map. qdap 1.3.3</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -35,48 +35,37 @@
         
       </header>
       
-      <h1>Prints an fry Object</h1>
+      <h1>Prints a discourse_map Object</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre><div>"print"(x, digits&nbsp;=&nbsp;3, auto.label, grid, div.col, plot, ...)</div></pre>
+    <pre><div>"print"(x, edge.curved&nbsp;=&nbsp;TRUE, title&nbsp;=&nbsp;NULL, ...)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
       <dt>x</dt>
-      <dd>The fry object.</dd>
-      <dt>digits</dt>
-      <dd>The number of digits displayed if
-  <code>values</code> is <code>TRUE</code>.</dd>
-      <dt>auto.label</dt>
-      <dd>logical.  If <code>TRUE</code> labels
-  automatically added.  If <code>FALSE</code> the user clicks
-  interactively.</dd>
-      <dt>grid</dt>
-      <dd>logical.  If <code>TRUE</code> a micro grid is
-  displayed similar to Fry's original depiction, though
-  this makes visualizing more difficult.</dd>
-      <dt>div.col</dt>
-      <dd>The color of the grade level division
-  lines.</dd>
-      <dt>plot</dt>
-      <dd>logical.  If <code>TRUE</code> a graph is plotted
-  corresponding to Fry's graphic representation.</dd>
+      <dd>The discourse_map object.</dd>
+      <dt>edge.curved</dt>
+      <dd>logical.  If <code>TRUE</code> edges are
+  plotted with curves.</dd>
+      <dt>title</dt>
+      <dd>The title of the plot.</dd>
       <dt>...</dt>
-      <dd>ignored</dd>
+      <dd>Other Arguments passed to
+  <code><a href='http://www.inside-r.org/r-doc/igraph/plot.graph'>plot.igraph</a></code>.</dd>
     </dl>
     
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Prints an fry object.</p>
+      <p>Prints a discourse_map object.</p>
   
     </div>
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>print.fry</li>
+      <li>print.discourse_map</li>
     </ul>
     <ul>
       

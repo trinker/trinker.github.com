@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>phrase_net. qdap 1.3.3</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">qdap 1.3.3</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Phrase Nets</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><div>phrase_net(text.var, freq&nbsp;=&nbsp;4, r&nbsp;=&nbsp;0.35, edge.constant&nbsp;=&nbsp;6, vertex.constant&nbsp;=&nbsp;3, ...)</div></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>text.var</dt>
+      <dd>The text variable.</dd>
+      <dt>freq</dt>
+      <dd>The minimum word frequency occurrence.</dd>
+      <dt>r</dt>
+      <dd>The minimum correlation value</dd>
+      <dt>edge.constant</dt>
+      <dd>A constant to multiple the edges
+  by.</dd>
+      <dt>vertex.constant</dt>
+      <dd>A constant to multiple the vertex
+  label sizes by.</dd>
+      <dt>...</dt>
+      <dd>Other arguments passed to
+  <code>Filter</code>.</dd>
+    </dl>
+    
+    <div class="Value">
+      <h2>Value</h2>
+      
+      <p>Returns an igraph object.</p>
+  
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p>Create
+<a href = 'http://www-958.ibm.com/software/data/cognos/manyeyes/'>Many
+Eyes</a> style phrase nets.</p>
+  
+    </div>
+
+    <div class="Note">
+      <h2>Note</h2>
+      
+      <p>While
+<a href = 'http://www-958.ibm.com/software/data/cognos/manyeyes/'>Many
+Eyes</a> phrase nets inspired this function the two outputs
+are not identical.  The <code>phrase_net</code>
+function operates off of correlations between words in
+sentences.</p>
+  
+    </div>
+
+    <div class="References">
+      <h2>References</h2>
+      
+      <p><a href = 'http://www-01.ibm.com/software/analytics/many-eyes/'>http://www-01.ibm.com/software/analytics/many-eyes/</a></p>
+  
+    </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # x &lt;- &quot;Questions must be at least 2 days old to be eligible for a bounty.#     There can only be 1 active bounty per question at any given time.#     Users must have at least 75 reputation to offer a bounty, and may#     only have a maximum of 3 active bounties at any given time. The#     bounty period lasts 7 days. Bounties must have a minimum duration of#     at least 1 day. After the bounty ends, there is a grace period of 24#     hours to manually award the bounty. If you do not award your bounty#     within 7 days (plus the grace period), the highest voted answer#     created after the bounty started with at least 2 upvotes will be#     awarded half the bounty amount. If there&#39;s no answer meeting that#     criteria, the bounty is not awarded to anyone. If the bounty was#     started by the question owner, and the question owner accepts an#     answer during the bounty period, and the bounty expires without an#     explicit award - we assume the bounty owner liked the answer they#     accepted and award it the full bounty amount at the time of bounty#     expiration. In any case, you will always give up the amount of#     reputation specified in the bounty, so if you start a bounty, be sure#     to follow up and award your bounty to the best answer! As an#     additional bonus, bounty awards are immune to the daily reputation#     cap and community wiki mode.&quot;# # dat &lt;- sentSplit(data.frame(text = qprep(x)), &quot;text&quot;)# # phrase_net(dat$text, r=.5)# library(igraph)# plot(phrase_net(dat$text, r=.5), edge.curved = FALSE)# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+  </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>phrase_net</li>
+    </ul>
+    <ul>
+      <li>phrase_net</li>
+    </ul> -->
+      
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -65,15 +65,15 @@
   containing a dataframe of positive/negative words and
   weights.</dd>
       <dt>synonym.list</dt>
-      <dd>A named list of lists (or vectos) of
+      <dd>A named list of lists (or vectors) of
   synonyms.</dd>
       <dt>envir</dt>
       <dd>logical.  If <code>TRUE</code> a lookup table (a
   dataframe within an environment) is produced rather than
   a data.frame.</dd>
-      <dt>A</dt>
-      <dd>prior synonyms data.frame in the format produced
-  by <code>synonym_frame</code></dd>
+      <dt>prior.frame</dt>
+      <dd>A prior synonyms data.frame in the
+  format produced by <code>synonym_frame</code></dd>
     </dl>
     
     <div class="Value">
@@ -87,7 +87,7 @@ match term(s).</p>
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Search for synonyms that match term(s).</p>
+      <p><code>synonyms</code> - Search for synonyms that match term(s).</p>
   
       <p><code>synonyms_frame</code> - Generate a synonym lookup
 environment for use with the <code>synonym.frame</code> argument
@@ -111,7 +111,7 @@ is the unique words from the combination of
     </div>
     
     <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # synonyms(c(&quot;the&quot;, &quot;cat&quot;, &quot;job&quot;, &quot;environment&quot;, &quot;read&quot;, &quot;teach&quot;))# head(syn(c(&quot;the&quot;, &quot;cat&quot;, &quot;job&quot;, &quot;environment&quot;, &quot;read&quot;, &quot;teach&quot;),#     return.list = FALSE), 30)# syn(c(&quot;the&quot;, &quot;cat&quot;, &quot;job&quot;, &quot;environment&quot;, &quot;read&quot;, &quot;teach&quot;), multiwords = FALSE)# # ## User defined synonym lookup# syn_dat &lt;- list(#     like = list(c(&quot;want&quot;, &quot;desire&quot;), c(&quot;love&quot;, &quot;care&quot;)),#     show = list(c(&quot;reveal&quot;), c(&quot;movie&quot;, &quot;opera&quot;)),#     R = c(&quot;old friend&quot;, &quot;statistics language&quot;)# )# # synonyms_frame(syn_dat)# synonyms_frame(syn_dat, return.hash=FALSE)# syn(c(&quot;R&quot;, &quot;show&quot;), synonym.frame = syn_frame(syn_dat))# # syns.hash &lt;- syn_frame(syn_dat, prior.frame = SYNONYM)# syn(c(&quot;R&quot;, &quot;show&quot;, &quot;like&quot;, &quot;robot&quot;), synonym.frame = syns.hash)# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # synonyms(c(&quot;the&quot;, &quot;cat&quot;, &quot;job&quot;, &quot;environment&quot;, &quot;read&quot;, &quot;teach&quot;))# head(syn(c(&quot;the&quot;, &quot;cat&quot;, &quot;job&quot;, &quot;environment&quot;, &quot;read&quot;, &quot;teach&quot;),#     return.list = FALSE), 30)# syn(c(&quot;the&quot;, &quot;cat&quot;, &quot;job&quot;, &quot;environment&quot;, &quot;read&quot;, &quot;teach&quot;), multiwords = FALSE)# # ## User defined synonym lookup# syn_dat &lt;- list(#     like = list(c(&quot;want&quot;, &quot;desire&quot;), c(&quot;love&quot;, &quot;care&quot;)),#     show = list(c(&quot;reveal&quot;), c(&quot;movie&quot;, &quot;opera&quot;)),#     R = c(&quot;old friend&quot;, &quot;statistics language&quot;)# )# # synonyms_frame(syn_dat)# synonyms_frame(syn_dat, envir=FALSE)# syn(c(&quot;R&quot;, &quot;show&quot;), synonym.frame = syn_frame(syn_dat))# # syns.hash &lt;- syn_frame(syn_dat, prior.frame = SYNONYM)# syn(c(&quot;R&quot;, &quot;show&quot;, &quot;like&quot;, &quot;robot&quot;), synonym.frame = syns.hash)# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
   </div>
   <div class="span4">
     <!-- <ul>
