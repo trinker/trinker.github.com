@@ -1,0 +1,57 @@
+The combination Gantt + Dialogue Map was generated via:
+
+```
+library(animation)
+library(grid)
+library(gridBase)
+library(qdap)
+library(reports)
+
+loc <- folder(animation_gantt_network)
+
+ani_gannt <- with(mraja1, gantt(dialogue, person))
+ani_network <- with(mraja1, discourse_map(dialogue, person))
+oopt <- animation::ani.options(interval = 0.1)
+
+out <- Animate(ani_gannt)
+out2 <- Animate(ani_network)
+
+FUN <- function(follow=FALSE) {
+    lapply(seq_along(out), function(i) {
+        if (follow) {
+            png(file=sprintf("%s/images/Rplot%s.png", loc, i), 
+                width=650, height=725)
+        }
+        layout(matrix(c(rep(1, 9), rep(2, 4)), 13, 1, byrow = TRUE))
+        par(mar=c(0, 0, 1, 0))
+        set.seed(10)
+        plot.igraph(out2[[i]], edge.curved=TRUE)
+        mtext("Discourse Map for Romeo and Juliet: Act 1", side=3, padj=1)     
+        plot.new()              
+        vps <- baseViewports()
+        p <- out[[i]] + theme(plot.margin = unit(c(-.75,1,.2,0), "cm")) + 
+           ggtitle(NULL) + ylab("Person") + xlab(NULL)
+        print(p,vp = vpStack(vps$figure,vps$plot))
+        animation::ani.pause()
+        if (follow) {
+            dev.off()
+        }
+    })
+
+}
+
+
+type <- if(.Platform$OS.type == "windows") shell else system
+saveGIF(FUN(), interval = 0.1, outdir = loc, cmd.fun = type)
+
+saveHTML(FUN(), autoplay = FALSE, loop = TRUE, verbose = FALSE,
+    outdir = loc, single.opts =
+    "'controls': ['first', 'play', 'loop', 'speed'], 'delayMin': 0")
+
+FUN(TRUE)
+```
+
+<div style="text-align:center;">
+     <iframe src="http://trinker.github.io/qdap_examples/animation_gantt_network/" width="640" height="360">Your browser does not support iframes.</iframe>
+</div>
+
