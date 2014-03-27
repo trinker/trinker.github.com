@@ -12,11 +12,11 @@ mraja2
 
 loc <- folder(animation_gantt_network)
 
-ani_gannt <- with(raj.act.2, gantt(dialogue, person))
+ani_gantt <- with(raj.act.2, gantt(dialogue, person))
 ani_network <- with(raj.act.2, discourse_map(dialogue, person))
 oopt <- animation::ani.options(interval = 0.1)
 
-out <- Animate(ani_gannt)
+out <- Animate(ani_gantt)
 out2 <- Animate(ani_network)
 
 FUN <- function(follow=FALSE) {
