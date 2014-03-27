@@ -45,6 +45,7 @@ FUN <- function(follow=FALSE) {
 type <- if(.Platform$OS.type == "windows") shell else system
 
 saveHTML(FUN(), autoplay = FALSE, loop = TRUE, verbose = FALSE,
+    ani.width = 650, ani.height=1000, 
     outdir = loc, single.opts =
     "'controls': ['first', 'play', 'loop', 'speed'], 'delayMin': 0")
 
