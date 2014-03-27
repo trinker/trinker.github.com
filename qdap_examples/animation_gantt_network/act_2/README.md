@@ -8,8 +8,6 @@ library(qdap)
 library(reports)
 library(igraph)
 
-mraja2
-
 loc <- folder(animation_gantt_network)
 
 ani_gantt <- with(raj.act.2, gantt(dialogue, person))
