@@ -6,6 +6,7 @@ library(grid)
 library(gridBase)
 library(qdap)
 library(reports)
+library(igraph)
 
 loc <- folder(animation_gantt_network)
 
@@ -42,7 +43,6 @@ FUN <- function(follow=FALSE) {
 
 
 type <- if(.Platform$OS.type == "windows") shell else system
-saveGIF(FUN(), interval = 0.1, outdir = loc, cmd.fun = type)
 
 saveHTML(FUN(), autoplay = FALSE, loop = TRUE, verbose = FALSE,
     outdir = loc, single.opts =
@@ -50,8 +50,4 @@ saveHTML(FUN(), autoplay = FALSE, loop = TRUE, verbose = FALSE,
 
 FUN(TRUE)
 ```
-
-<div style="text-align:center;">
-     <iframe src="http://trinker.github.io/qdap_examples/animation_gantt_network/" width="640" height="360">Your browser does not support iframes.</iframe>
-</div>
 
