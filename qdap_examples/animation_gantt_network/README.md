@@ -1,4 +1,4 @@
-The combination Gantt + Dialogue Map was generated via:
+The [combination Gantt + Dialogue Map](http://trinker.github.io/qdap_examples/animation_gantt_network/) was generated via:
 
 ```
 library(animation)
