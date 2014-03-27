@@ -10,11 +10,11 @@ library(igraph)
 
 loc <- folder(animation_gantt_network)
 
-ani_gannt <- with(mraja1, gantt(dialogue, person))
+ani_gantt <- with(mraja1, gantt(dialogue, person))
 ani_network <- with(mraja1, discourse_map(dialogue, person))
 oopt <- animation::ani.options(interval = 0.1)
 
-out <- Animate(ani_gannt)
+out <- Animate(ani_gantt)
 out2 <- Animate(ani_network)
 
 FUN <- function(follow=FALSE) {
