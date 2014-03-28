@@ -31,7 +31,5 @@ saveHTML(FUN(), autoplay = FALSE, loop = TRUE, verbose = FALSE,
     ani.width = 650, ani.height=425, 
     outdir = loc, single.opts =
     "'controls': ['first', 'play', 'loop', 'speed'], 'delayMin': 0")
-
-FUN(TRUE)
 ```
 
