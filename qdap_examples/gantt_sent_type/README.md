@@ -2,21 +2,18 @@ The [Gantt Sentence Type](http://trinker.github.io/qdap_examples/gantt_sent_type
 
 ```
 library(animation)
-library(grid)
-library(gridBase)
 library(qdap)
-library(reports)
-library(igraph)
 
-loc <- folder(gantt_sent_type)
+loc <- folder(by_sent_type)
 
 dat <- rajSPLIT[rajSPLIT$act == 1, ]
 dat$end_mark <- factor(end_mark(dat$dialogue))
 
 ani_gantt <- with(dat, gantt_plot(text.var = dialogue, 
-    grouping.var = list(person, sex), fill.var=end_mark))
+    grouping.var = list(person, sex), fill.var=end_mark), plot=FALSE) +
+    ggtitle("Sentence Type for Romeo and Juliet: Act 1")
 
-out <- Animate(ani_gantt)
+out <- Animate(ani_gantt, colors=qcv(red, grey90, blue, orange))
 
 FUN <- function() {
     lapply(out, function(x) {
@@ -28,7 +25,7 @@ FUN <- function() {
 type <- if(.Platform$OS.type == "windows") shell else system
 
 saveHTML(FUN(), autoplay = FALSE, loop = TRUE, verbose = FALSE,
-    ani.width = 650, ani.height=425, 
+    ani.width = 850, ani.height=350,
     outdir = loc, single.opts =
     "'controls': ['first', 'play', 'loop', 'speed'], 'delayMin': 0")
 ```
