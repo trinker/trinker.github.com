@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>print.animated_discourse_map. qdap 1.3.4</title>
+<title>Animate.gantt_plot. qdap 1.3.4</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -35,38 +35,54 @@
         
       </header>
       
-      <h1>Prints a animated_discourse_map  Object</h1>
+      <h1>Gantt Plot</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre><div>"print"(x, title&nbsp;=&nbsp;NULL, seed&nbsp;=&nbsp;sample(1:10000, 1), layout&nbsp;=&nbsp;layout.auto, ...)</div></pre>
+    <pre><div>"Animate"(x, wc.time&nbsp;=&nbsp;TRUE, time.constant&nbsp;=&nbsp;2, colors&nbsp;=&nbsp;NULL, ...)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
       <dt>x</dt>
-      <dd>The animated_discourse_map object.</dd>
-      <dt>title</dt>
-      <dd>The title of the plot.</dd>
-      <dt>seed</dt>
-      <dd>The seed to use in plotting the graph.</dd>
-      <dt>layout</dt>
-      <dd><span class = "pkg">igraph</span> <code>layout</code> to use.</dd>
+      <dd>The gantt_plot object.</dd>
+      <dt>wc.time</dt>
+      <dd>logical.  If <code>TRUE</code> weights duration
+  of frame by word count.</dd>
+      <dt>time.constant</dt>
+      <dd>A constant to divide the maximum
+  word count by.  Time is calculated by `round(exp(WORD
+  COUNT/(max(WORD COUNT)/time.constant)))`. Therefore a
+  larger constant will make the difference between the
+  large and small word counts greater.</dd>
+      <dt>colors</dt>
+      <dd>An optional character vector of colors to
+  color the Gantt bars. Must be length 1 (repeats the same
+  color) or equal to the levels of the grouping variable.</dd>
       <dt>...</dt>
-      <dd>Other Arguments passed to
-  <code><a href='http://www.inside-r.org/r-doc/igraph/plot.graph'>plot.igraph</a></code>.</dd>
+      <dd>ignored</dd>
     </dl>
     
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Prints a animated_discourse_map object.</p>
+      <p><code>gantt_plot</code> - Animate discourse from
+<code>gantt_wrap</code>,
+<code>gantt_wrap</code>, or any other Gantt plotting
+method.</p>
+  
+    </div>
+
+    <div class="Details">
+      <h2>Details</h2>
+      
+      <p>gantt_plot Method for Animate</p>
   
     </div>
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>print.animated_discourse_map</li>
+      <li>Animate.gantt_plot</li>
     </ul>
     <ul>
       
