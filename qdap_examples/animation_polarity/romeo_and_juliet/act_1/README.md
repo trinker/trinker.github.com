@@ -1,4 +1,4 @@
-The [Gantt Sentence Type](http://trinker.github.io/qdap_examples/animation_polarity_romeo_and _juliet) was generated via:
+The [Polarity Analysis Plot](http://trinker.github.io/qdap_examples/animation_polarity/romeo_and_juliet/act_1) was generated via:
 
 ```
 library(animation)
