@@ -1,4 +1,4 @@
-The [Gantt Sentence Type](http://trinker.github.io/qdap_examples/animation_polarity) was generated via:
+The [Animated Polarity Sequence](http://trinker.github.io/qdap_examples/animation_polarity) was generated via:
 
 ```
 library(animation)
