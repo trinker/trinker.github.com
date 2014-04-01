@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>freq_terms. qdap 1.3.3</title>
+<title>freq_terms. qdap 1.3.4</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 1.3.3</a>
+      <a class="brand" href="#">qdap 1.3.4</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -82,7 +82,7 @@
     </div>
     
     <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # freq_terms(DATA$state, 5)# freq_terms(DATA$state)# freq_terms(DATA$state, extend = FALSE)# freq_terms(DATA$state, at.least = 4)# (out &lt;- freq_terms(pres_debates2012$dialogue, stopwords = Top200Words))# plot(out)# # x &lt;- raj$dialogue# ## All words by sentence (row)# list_df2df(setNames(lapply(x, freq_terms, top=Inf), seq_along(x)), &quot;row&quot;)# list_df2df(setNames(lapply(x, freq_terms, top=10, stopwords = Dolch),#     seq_along(x)), &quot;Title&quot;)# # # ## All words by person# FUN &lt;- function(x, n=Inf) freq_terms(paste(x, collapse=&quot; &quot;), top=n)# list_df2df(lapply(split(x, raj$person), FUN), &quot;person&quot;)# # ## Plot it# out &lt;- lapply(split(x, raj$person), FUN, n=10)# pdf(&quot;Freq Terms by Person.pdf&quot;, width=13)# lapply(seq_along(out), function(i) {#     ## dev.new()#     plot(out[[i]], plot=FALSE) + ggtitle(names(out)[i])# })# dev.off()# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # freq_terms(DATA$state, 5)# freq_terms(DATA$state)# freq_terms(DATA$state, extend = FALSE)# freq_terms(DATA$state, at.least = 4)# (out &lt;- freq_terms(pres_debates2012$dialogue, stopwords = Top200Words))# plot(out)# # ## All words by sentence (row)# x &lt;- raj$dialogue# list_df2df(setNames(lapply(x, freq_terms, top=Inf), seq_along(x)), &quot;row&quot;)# list_df2df(setNames(lapply(x, freq_terms, top=10, stopwords = Dolch),#     seq_along(x)), &quot;Title&quot;)# # # ## All words by person# FUN &lt;- function(x, n=Inf) freq_terms(paste(x, collapse=&quot; &quot;), top=n)# list_df2df(lapply(split(x, raj$person), FUN), &quot;person&quot;)# # ## Plot it# out &lt;- lapply(split(x, raj$person), FUN, n=10)# pdf(&quot;Freq Terms by Person.pdf&quot;, width=13)# lapply(seq_along(out), function(i) {#     ## dev.new()#     plot(out[[i]], plot=FALSE) + ggtitle(names(out)[i])# })# dev.off()# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
   </div>
   <div class="span4">
     <!-- <ul>

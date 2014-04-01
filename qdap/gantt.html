@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>gantt. qdap 1.3.3</title>
+<title>gantt. qdap 1.3.4</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="
 DigEmAll (&lt;a href = 'stackoverflow.com'&gt;stackoverflow.com&lt;/a&gt;) and Tyler Rinker
@@ -23,7 +23,7 @@ DigEmAll (&lt;a href = 'stackoverflow.com'&gt;stackoverflow.com&lt;/a&gt;) and T
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 1.3.3</a>
+      <a class="brand" href="#">qdap 1.3.4</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -38,8 +38,7 @@ DigEmAll (&lt;a href = 'stackoverflow.com'&gt;stackoverflow.com&lt;/a&gt;) and T
         
       </header>
       
-      <h1>Generates start and end times of supplied text selections (i.e., text
-selections are determined by any number of grouping variables).</h1>
+      <h1>Gantt Durations</h1>
 
 <div class="row">
   <div class="span8">
@@ -94,9 +93,9 @@ variable(s).</p>
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Generates start and end times of supplied text selections
-(i.e., text selections are determined by any number of
-grouping variables).</p>
+      <p><code>gantt</code> - Generates start and end times of supplied
+text selections (i.e., text selections are determined by
+any number of grouping variables).</p>
   
       <p><code>plot_gantt_base</code> - For internal use.</p>
   
@@ -121,7 +120,7 @@ tool of management. New York, Ronald Press.</p>
     </div>
     
     <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # (a &lt;- gantt(DATA$state, DATA$person))# plot(a)# plot(a, base = TRUE)# # (b &lt;- gantt(DATA$state, DATA$person, sums = TRUE))# plot(b)# plot(b, base = FALSE)# # (d &lt;- gantt(DATA$state, list(DATA$sex, DATA$adult)))# plot(d)# # x &lt;- gantt(mraja1$dialogue, mraja1$person)# plot(x, base = TRUE)# plot(x, , base = TRUE, box.color = &quot;black&quot;)# # z &lt;- gantt(mraja1$dialogue, mraja1$sex)# plot(z)# # e &lt;- with(mraja1, gantt(dialogue, list(fam.aff, sex, died),#    units = &quot;characters&quot;, sums = TRUE))# plot(e)# # f &lt;- gantt(mraja1$dialogue, mraja1$person, units = &quot;syllables&quot;,#     sums = TRUE)# plot(f, box.color = &quot;red&quot;)# plot(f, base = FALSE)# # dat &lt;- gantt(mraja1$dialogue, list(mraja1$fam.aff, mraja1$sex),#     units = &quot;sentences&quot;, col.sep = &quot;_&quot;)# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # (a &lt;- gantt(DATA$state, DATA$person))# plot(a)# plot(a, base = TRUE)# # (b &lt;- gantt(DATA$state, DATA$person, sums = TRUE))# plot(b)# plot(b, base = FALSE)# # (d &lt;- gantt(DATA$state, list(DATA$sex, DATA$adult)))# plot(d)# # x &lt;- gantt(mraja1$dialogue, mraja1$person)# plot(x, base = TRUE)# plot(x, , base = TRUE, box.color = &quot;black&quot;)# # z &lt;- gantt(mraja1$dialogue, mraja1$sex)# plot(z)# # e &lt;- with(mraja1, gantt(dialogue, list(fam.aff, sex, died),#    units = &quot;characters&quot;, sums = TRUE))# plot(e)# # f &lt;- gantt(mraja1$dialogue, mraja1$person, units = &quot;syllables&quot;,#     sums = TRUE)# plot(f, box.color = &quot;red&quot;)# plot(f, base = FALSE)# # dat &lt;- gantt(mraja1$dialogue, list(mraja1$fam.aff, mraja1$sex),#     units = &quot;sentences&quot;, col.sep = &quot;_&quot;)# # # ## Animate It# ##=================# ani_gannt &lt;- with(DATA.SPLIT, gantt(state, person))# Animate(ani_gannt)# Animate(plot(ani_gannt))# # library(animation)# loc &lt;- folder(animation_gantt)# # ## Set up the plotting function# oopt &lt;- animation::ani.options(interval = 0.1)# # FUN &lt;- function() {#     out &lt;- Animate(ani_gannt)#     lapply(out, function(x) {#         print(x)#         animation::ani.pause()#     })# # }# # type &lt;- if(.Platform$OS.type == &quot;windows&quot;) shell else system# saveGIF(FUN(), interval = 0.1, outdir = loc, cmd.fun = type)# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
   </div>
   <div class="span4">
     <!-- <ul>
