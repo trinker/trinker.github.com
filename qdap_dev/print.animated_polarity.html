@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>print.animated_polarity. qdap 1.3.5</title>
+<title>print.animated_polarity. qdap 1.3.6</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 1.3.5</a>
+      <a class="brand" href="#">qdap 1.3.6</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,7 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre><div>"print"(x, title&nbsp;=&nbsp;NULL, seed&nbsp;=&nbsp;sample(1:10000, 1), layout&nbsp;=&nbsp;layout.auto, pause&nbsp;=&nbsp;0, legend&nbsp;=&nbsp;c(-0.5, -1.5, 0.5, -1.45), legend.cex&nbsp;=&nbsp;1, bg&nbsp;=&nbsp;NULL, ...)</div></pre>
+    <pre><div>"print"(x, title&nbsp;=&nbsp;NULL, seed&nbsp;=&nbsp;sample(1:10000, 1), layout&nbsp;=&nbsp;layout.auto, pause&nbsp;=&nbsp;0, legend&nbsp;=&nbsp;c(-0.5, -1.5, 0.5, -1.45), legend.cex&nbsp;=&nbsp;1, bg&nbsp;=&nbsp;NULL, net.legend.color&nbsp;=&nbsp;"black", ...)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -66,6 +66,9 @@
       <dd>The color to be used for the background of the
   device region. See <code><a href='http://www.inside-r.org/r-doc/graphics/par'>par</a></code> for more
   information.</dd>
+      <dt>net.legend.color</dt>
+      <dd>The text legend color for the
+  network plot.</dd>
       <dt>...</dt>
       <dd>Other Arguments passed to
   <code><a href='http://www.inside-r.org/r-doc/igraph/plot.graph'>plot.igraph</a></code>.</dd>

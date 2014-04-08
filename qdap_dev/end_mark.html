@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>end_mark. qdap 1.3.5</title>
+<title>end_mark. qdap 1.3.6</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 1.3.5</a>
+      <a class="brand" href="#">qdap 1.3.6</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,12 +40,37 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre><div>end_mark(text.var)</div></pre>
+    <pre><div>end_mark(text.var, missing.end.mark&nbsp;=&nbsp;"_", missing.text&nbsp;=&nbsp;NA, other.endmarks&nbsp;=&nbsp;NULL)</div>
+<div>end_mark_by(text.var, grouping.var, digits&nbsp;=&nbsp;3, percent&nbsp;=&nbsp;FALSE, zero.replace&nbsp;=&nbsp;0, ...)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
       <dt>text.var</dt>
       <dd>The text variable.</dd>
+      <dt>missing.end.mark</dt>
+      <dd>A value to use for sentences with
+  missing endmarks.</dd>
+      <dt>missing.text</dt>
+      <dd>A value to use for sentences with
+  missing (<code>NA</code>) text.</dd>
+      <dt>other.endmarks</dt>
+      <dd>Other 1-2 character endmarks tos
+  earch for.</dd>
+      <dt>grouping.var</dt>
+      <dd>The grouping variables.  Default
+  <code>NULL</code> generates one word list for all text.  Also
+  takes a single grouping variable or a list of 1 or more
+  grouping variables.</dd>
+      <dt>percent</dt>
+      <dd>logical.  If <code>TRUE</code> output given as
+  percent.  If <code>FALSE</code> the output is proportion.</dd>
+      <dt>zero.replace</dt>
+      <dd>Value to replace 0 values with.</dd>
+      <dt>digits</dt>
+      <dd>Integer; number of decimal places to round
+  when printing.</dd>
+      <dt>...</dt>
+      <dd>Other arguments passed to <code>end_mark</code>.</dd>
     </dl>
     
     <div class="Value">
@@ -66,17 +91,21 @@ occur) "*!"Imperative-exclamatory sentence.
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Grab the sentence end marks for a transcript.  This can be
-useful to categorize based on sentence type.</p>
+      <p><code>end_mark</code> - Grab the sentence end marks for a
+transcript.  This can be useful to categorize based on
+sentence type.</p>
+  
+      <p><code>end_mark_by</code> - Grab the sentence end marks for a
+transcriptby grouping variable(s).</p>
   
     </div>
     
     <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # end_mark(DATA.SPLIT$state)# end_mark(mraja1spl$dialogue)# ques &lt;- mraja1spl[end_mark(mraja1spl$dialogue) == &quot;?&quot;, ] #grab questions# htruncdf(ques)# non.ques &lt;- mraja1spl[end_mark(mraja1spl$dialogue) != &quot;?&quot;, ] #non questions# htruncdf(non.ques, 20)# ques.per &lt;- mraja1spl[end_mark(mraja1spl$dialogue) %in% c(&quot;.&quot;, &quot;?&quot;), ] #grab ? and .# htruncdf(ques.per, 20)# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # end_mark(DATA.SPLIT$state)# end_mark(mraja1spl$dialogue)# ques &lt;- mraja1spl[end_mark(mraja1spl$dialogue) == &quot;?&quot;, ] #grab questions# htruncdf(ques)# non.ques &lt;- mraja1spl[end_mark(mraja1spl$dialogue) != &quot;?&quot;, ] #non questions# htruncdf(non.ques, 20)# ques.per &lt;- mraja1spl[end_mark(mraja1spl$dialogue) %in% c(&quot;.&quot;, &quot;?&quot;), ] #grab ? and .# htruncdf(ques.per, 20)# # (x_by &lt;- end_mark_by(DATA.SPLIT$state, DATA.SPLIT$person))# scores(x_by)# counts(x_by)# proportions(x_by)# preprocessed(x_by)# plot(scores(x_by))# plot(counts(x_by))# plot(proportions(x_by))# plot(preprocessed(x_by))# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
   </div>
   <div class="span4">
     <!-- <ul>
-      <li>end_mark</li>
+      <li>end_mark</li><li>end_mark_by</li>
     </ul>
     <ul>
       <li>end-mark</li>

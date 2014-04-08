@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>polarity. qdap 1.3.4</title>
+<title>polarity. qdap 1.3.5</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 1.3.4</a>
+      <a class="brand" href="#">qdap 1.3.5</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -169,44 +169,44 @@ function.</p>
       <p>The equation used by the algorithm to assign value to
 polarity of each sentence fist utilizes the sentiment
 dictionary (Hu and Liu, 2004) to tag polarized words.  A
-context cluster (<code class = 'eq'>x_i^{T}</code>) of words is pulled from
-around this polarized word (default 4 words before and two
-words after) to be considered as valence shifters.  The
+context cluster (<code class = 'eq'>x_i^T</code>) of words is pulled
+from around this polarized word (default 4 words before and
+two words after) to be considered as valence shifters.  The
 words in this context cluster are tagged as neutral
-(<code class = 'eq'>x_i^{0}</code>), negator (<code class = 'eq'>x_i^{N}</code>), amplifier
-(<code class = 'eq'>x_i^{a}</code>), or de-amplifier (<code class = 'eq'>x_i^{d}</code>). Neutral
-words hold no value in the equation but do affect word
-count (<code class = 'eq'>n</code>).  Each polarized word is then weighted
-<code class = 'eq'>w</code> based on the weights from the <code>polarity.frame</code>
-argument and then further weighted by the number and
-position of the valence shifters directly surrounding the
-positive or negative word.  The researcher may provide a
-weight <code class = 'eq'>c</code> to be utilized with amplifiers/de-amplifiers
-(default is .8; deamplifier weight is constrained to -1
-lower bound).  Last, these context cluster (<code class = 'eq'>x_i^{T}</code>)
-are summed and divided by the square root of the word count
-(<code class = 'eq'>\sqrt{n}</code>) yielding an unbounded polarity score
-(<code class = 'eq'>\delta</code>).  Note that context clusters containing a
-comma before the polarized word will only consider words
-found after the comma.</p>
+(<code class = 'eq'>x_i^0</code>), negator (<code class = 'eq'>x_i^N</code>),
+amplifier (<code class = 'eq'>x_i^a</code>), or de-amplifier
+(<code class = 'eq'>x_i^d</code>). Neutral words hold no value in the
+equation but do affect word count (<code class = 'eq'>n</code>).  Each
+polarized word is then weighted <code class = 'eq'>w</code> based on the
+weights from the <code>polarity.frame</code> argument and then
+further weighted by the number and position of the valence
+shifters directly surrounding the positive or negative
+word.  The researcher may provide a weight <code class = 'eq'>c</code> to be
+utilized with amplifiers/de-amplifiers (default is .8;
+deamplifier weight is constrained to -1 lower bound).
+Last, these context cluster (<code class = 'eq'>x_i^T</code>) are
+summed and divided by the square root of the word count
+(<code class = 'eq'>\sqrtn</code>) yielding an unbounded polarity
+score (<code class = 'eq'>C</code>).  Note that context clusters
+containing a comma before the polarized word will only
+consider words found after the comma.</p>
   
-      <p><pre class = 'eq'>\delta=\frac{x_i^T}{\sqrt{n}}</code></p>
+      <p><pre class = 'eq'>C=x_i^2/\sqrt(n)</code></p>
   
       <p>Where:</p>
   
-      <p><pre class = 'eq'>x_i^T=\sum{((1 + c(x_i^{A} - x_i^{D}))\cdot
-w(-1)^{\sum{x_i^{N}}})}</code></p>
+      <p><pre class = 'eq'>x_i^T=\sum((1 + c * (x_i^A -
+x_i^D)) * w(-1)^(\sumx_i^N))</code></p>
   
-      <p><pre class = 'eq'>x_i^{A}=\sum{(w_{neg}\cdot x_i^{a})}</code></p>
+      <p><pre class = 'eq'>x_i^A=\sum(w_neg * x_i^a)</code></p>
   
-      <p><pre class = 'eq'>x_{i}^D=\left\{\begin{array}{cc} x_{i}^D & x_{i}^D
-\geq -1 \\ -1 & x_{i}^D < -1 \end{array}\right.</code></p>
+      <p><pre class = 'eq'> (x_i^D
+x_i^D >= -1 x_i^D= ( (-1 x_i^D < -1</code></p>
   
-      <p><pre class = 'eq'>x_i^{D}=\sum{(- w_{neg}\cdot x_i^{a} + x_i^{d})}</code></p>
+      <p><pre class = 'eq'>x_i^D=\sum(- w_neg * x_i^a + x_i^d)</code></p>
   
-      <p><pre class = 'eq'>w_{neg}=\left\{\begin{array}{cc} 1 & \sum{x_i^{N}}
-\bmod {2} >0 \\ 0 & \sum{x_i^{N}} \bmod {2} =0
-\end{array}\right.</code></p>
+      <p><pre class = 'eq'> (1 \sumx_i^N mod 2 > 0 w_neg= ( (0
+\sumx_i^N mod 2 = 0 </code></p>
   
     </div>
 
@@ -222,7 +222,8 @@ provide/augment the dictionary (see the
 <code>polarity_frame</code> function).  For instance the word
 "sick" in a high school setting may mean that something is
 good, whereas "sick" used by a typical adult indicates
-something is not right or negative connotation.</p>
+something is not right or negative connotation
+(<strong>deixis</strong>).</p>
   
       <p>Also note that <code>polarity</code> assumes you've
 run <code>sentSplit</code>.</p>
