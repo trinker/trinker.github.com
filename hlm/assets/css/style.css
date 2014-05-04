@@ -1,0 +1,298 @@
+/* line 884, ../scss/default.scss */
+aside.gdbar {
+  height: 97px;
+  width: 215px;
+  position: absolute;
+  left: -1px;
+  top: 125px;
+  -webkit-border-radius: 0 10px 10px 0;
+  -moz-border-radius: 0 10px 10px 0;
+  -ms-border-radius: 0 10px 10px 0;
+  -o-border-radius: 0 10px 10px 0;
+  border-radius: 0 10px 10px 0;
+
+/* IE10 Consumer Preview */ 
+background-image: -ms-linear-gradient(right, #F0F2FF 0%, #7EAEC2 100%);
+
+/* Mozilla Firefox */ 
+background-image: -moz-linear-gradient(right, #F0F2FF 0%, #7EAEC2 100%);
+
+/* Opera */ 
+background-image: -o-linear-gradient(right, #F0F2FF 0%, #7EAEC2 100%);
+
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(linear, right top, left top, color-stop(0, #F0F2FF), color-stop(1, #7EAEC2));
+
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-linear-gradient(right, #F0F2FF 0%, #7EAEC2 100%);
+
+/* W3C Markup, IE10 Release Preview */ 
+background-image: linear-gradient(to left, #F0F2FF 0%, #7EAEC2 100%);
+
+  -webkit-background-size: 0% 100%;
+  -moz-background-size: 0% 100%;
+  -o-background-size: 0% 100%;
+  background-size: 0% 100%;
+  -webkit-transition: all 0.5s ease-out 0.5s;
+  -moz-transition: all 0.5s ease-out 0.5s;
+  -ms-transition: all 0.5s ease-out 0.5s;
+  -o-transition: all 0.5s ease-out 0.5s;
+  transition: all 0.5s ease-out 0.5s;
+  /* Better to transition only on background-size, but not sure how to do that with the mixin. */
+}
+
+
+/* Tables */
+table.mytable caption{
+  margin-top: 20pt;
+  font-weight: normal;
+  font-family: "Trebuchet MS", Garuda, sans-serif;
+}
+
+table.mytable th {
+  text-transform: capitalize;
+}
+
+/* Tables */
+
+table.mytable {
+  border: none;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 24px;
+  line-height: 32px;
+  font-family: 'Trebuchet MS';
+  font-weight: bolder;
+  color: rgb(102, 102, 102);
+}
+table.mytable thead {
+  border-top: 1px solid #BFBEAD;
+  border-bottom: 1px solid #BFBEAD;
+}
+table.mytable th, table.mytable td, table.mytable caption {
+  margin: 0;
+  padding: 2pt 6pt;
+  text-align: left;
+  vertical-align: top;
+}
+table.mytable th {
+  background: #CFCEBD;
+  color: #575400;
+  text-transform: uppercase;
+}
+table.mytable td {
+  border-bottom: 1px solid #CFCEBD;
+}
+
+table.mytable td.ind1 {
+  text-indent:25px;
+}
+
+table.mytable td.ind2 {
+  text-indent:50px;
+}
+
+table.mytable td.ind3 {
+  text-indent:90px;
+}
+
+
+table.mytable tr:nth-child(2n+1) {
+/*  background: #E8F2FF; */
+  background: #FFFFFF;
+}
+
+
+/* Fonts and Spacing */
+slide.big li, slide.big p{
+  font-family: 'Open Sans','Helvetica', 'Crimson Text', 'Garamond',  'Palatino', sans-serif;
+  text-align: justify;
+  font-size:38px;
+  line-height: 1.5em;
+  color: #444;
+}
+
+a.bigurl {
+  font-family: 'Open Sans','Helvetica', 'Crimson Text', 'Garamond',  'Palatino', sans-serif;
+  text-align:center;
+  font-size:50px;
+}
+
+slide.bigcenter1 p{
+  font-family: 'Open Sans','Helvetica', 'Crimson Text', 'Garamond',  'Palatino', sans-serif;
+  margin-left:auto;
+  margin-right:auto;
+  width:40%;
+  font-size:80px;
+  font-weight:bold;
+  letter-spacing: -2px;
+  color: #993333;  
+  text-decoration:none
+}
+
+slide.bigcenter2 p{
+  font-family: 'Open Sans','Helvetica', 'Crimson Text', 'Garamond',  'Palatino', sans-serif;
+  margin-left:auto;
+  margin-right:auto;
+  width:30%;
+  font-size:80px;
+  font-weight:bold;
+  letter-spacing: -2px;
+  color: #993333;  
+  text-decoration:none
+}
+
+slide.bigcenter3 p{
+  font-family: 'Open Sans','Helvetica', 'Crimson Text', 'Garamond',  'Palatino', sans-serif;
+  margin-left:auto;
+  margin-right:auto;
+  width:52%;
+  font-size:80px;
+  font-weight:bold;
+  letter-spacing: -2px;
+  color: #993333;  
+  text-decoration:none
+}
+
+slide.bigcenter4 p{
+  font-family: 'Open Sans','Helvetica', 'Crimson Text', 'Garamond',  'Palatino', sans-serif;
+  margin-left:auto;
+  margin-right:auto;
+  width:80%;
+  font-size:80px;
+  font-weight:bold;
+  letter-spacing: -2px;
+  color: #993333;  
+  text-decoration:none
+}
+
+slide.bigcenter5 p{
+  font-family: 'Open Sans','Helvetica', 'Crimson Text', 'Garamond',  'Palatino', sans-serif;
+  margin-left:auto;
+  margin-right:auto;
+  width:77%;
+  font-size:80px;
+  font-weight:bold;
+  letter-spacing: -2px;
+  text-decoration:none
+}
+slide.bigcenter6 p{
+  font-family: 'Open Sans','Helvetica', 'Crimson Text', 'Garamond',  'Palatino', sans-serif;
+  margin-left:auto;
+  margin-right:auto;
+  width:84%;
+  font-size:70px;
+  font-weight:bold;
+  letter-spacing: -2px;
+  text-decoration:none
+}
+
+
+.title-slide {
+  background-color: #FFFFFF; /* #EDE0CF; ; #CA9F9D*/
+  /* background-image:url(http://goo.gl/EpXln); */
+}
+
+
+.textbox {
+    background-color: #FFFFAA;
+    border-radius: 5px; 
+    padding:10px; 
+    border: 1px #9C661F;
+}
+
+
+table.mytable2 {
+  border: none;
+  width: 30%;
+  border-collapse: collapse;
+  font-size: 24px;
+  line-height: 32px;
+  font-family: 'Trebuchet MS';
+  font-weight: bolder;
+  color: rgb(102, 102, 102);
+}
+
+table.mytable2 th, table.mytable2 td, table.mytable2 caption {
+  margin: 0;
+  padding: 1pt 3pt;
+  text-align: left;
+  vertical-align: top;
+}
+
+table.mytable10 th, table.mytable2 td, table.mytable2 caption {
+  margin: 0;
+  padding: 1pt 3pt;
+  text-align: left;
+  vertical-align: top;
+}
+
+table.mytable10 {
+  border: none;
+  width: 50%;
+  border-collapse: collapse;
+  font-size: 24px;
+  line-height: 32px;
+  font-family: 'Trebuchet MS';
+  font-weight: bolder;
+  color: rgb(102, 102, 102);
+}
+
+
+
+/* Tables */
+table.mytable3 caption{
+  margin-top: 20pt;
+  font-weight: normal;
+  font-family: "Trebuchet MS", Garuda, sans-serif;
+}
+
+table.mytable3 th {
+  text-transform: capitalize;
+}
+
+/* Tables */
+
+table.mytable3 {
+  border: none;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 24px;
+  line-height: 32px;
+  font-family: 'Trebuchet MS';
+  font-weight: bolder;
+  color: rgb(102, 102, 102);
+}
+table.mytable3 thead {
+  border-top: 1px solid #BFBEAD;
+  border-bottom: 1px solid #BFBEAD;
+}
+table.mytable3 th, table.mytable3 td, table.mytable3 caption {
+  margin: 0;
+  padding: 2pt 6pt;
+  vertical-align: top;
+}
+table.mytable3 th {
+  background: #CFCEBD;
+  color: #575400;
+  text-transform: uppercase;
+}
+table.mytable3 td {
+  border-bottom: 1px solid #CFCEBD;
+}
+
+
+table.mytable3 td + td,
+table.mytable3 th + th
+{
+    text-align:right
+}
+
+
+.rl {
+   text-align: right;
+}
+
+.cent {
+   text-align: centert;
+}
