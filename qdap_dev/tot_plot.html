@@ -45,58 +45,53 @@
     <h2>Arguments</h2>
     <dl>
       <dt>dataframe</dt>
-      <dd>A dataframe that contains the text
-  variable and optionally the grouping.var and tot
-  variables.</dd>
+      <dd>A dataframe that contains the text variable and optionally
+the grouping.var and tot variables.</dd>
       <dt>text.var</dt>
       <dd>The text variable (character string).</dd>
       <dt>grouping.var</dt>
-      <dd>The grouping variables to color by.
-  Default <code>NULL</code> colors everything in "black".  Also
-  takes a single grouping variable or a list of 1 or more
-  grouping variables.</dd>
+      <dd>The grouping variables to color by.  Default <code>NULL</code>
+colors everything in "black".  Also takes a single grouping variable or a list
+of 1 or more grouping variables.</dd>
       <dt>facet.vars</dt>
-      <dd>An optional single vector or list of 1
-  or 2 to facet by.</dd>
+      <dd>An optional single vector or list of 1 or 2 to facet by.</dd>
       <dt>tot</dt>
-      <dd>The turn of talk variable (character string).
-  May be <code>TRUE</code> (assumes "tot" is the variable name),
-  <code>FALSE</code> (use row numbers), or a character string of
-  the turn of talk column.</dd>
+      <dd>The turn of talk variable (character string). May be <code>TRUE</code>
+(assumes "tot" is the variable name), <code>FALSE</code> (use row numbers), or a
+character string of the turn of talk column.</dd>
       <dt>ncol</dt>
       <dd>number of columns.
-  <code>gantt_wrap</code> uses
-  <code><a href='http://www.inside-r.org/r-doc/ggplot2/facet_wrap'>facet_wrap</a></code> rather than
-  <code><a href='http://www.inside-r.org/r-doc/ggplot2/facet_grid'>facet_grid</a></code>.</dd>
+<code>gantt_wrap</code> uses <code><a href='http://www.inside-r.org/r-doc/ggplot2/facet_wrap'>facet_wrap</a></code>
+rather than <code><a href='http://www.inside-r.org/r-doc/ggplot2/facet_grid'>facet_grid</a></code>.</dd>
       <dt>transform</dt>
-      <dd>logical.  If <code>TRUE</code> the repeated
-  facets will be transformed from stacked to side by side.</dd>
+      <dd>logical.  If <code>TRUE</code> the repeated facets will be
+transformed from stacked to side by side.</dd>
       <dt>ylab</dt>
       <dd>Optional y label.</dd>
       <dt>xlab</dt>
       <dd>Optional x label.</dd>
       <dt>bar.space</dt>
-      <dd>The amount space between bars (ranging
-  between 1 and 0).</dd>
+      <dd>The amount space between bars (ranging between 1 and 0).</dd>
       <dt>scale</dt>
-      <dd>Should scales be fixed (<code>"fixed"</code>, the
-  default), free (<code>"free"</code>), or free in one dimension
-  (<code>"free_x"</code>, <code>"free_y"</code>)</dd>
+      <dd>Should scales be fixed (<code>"fixed"</code>, the default), free
+(<code>"free"</code>), or free in one dimension (<code>"free_x"</code>, <code>"free_y"</code>)</dd>
       <dt>space</dt>
-      <dd>If <code>"fixed"</code>, the default, all panels
-  have the same size. If <code>"free_y"</code> their height will
-  be proportional to the length of the y scale; if
-  <code>"free_x"</code> their width will be proportional to the
-  length of the x scale; or if <code>"free"</code> both height
-  and width will vary. This setting has no effect unless
-  the appropriate scales also vary.</dd>
+      <dd>If <code>"fixed"</code>, the default, all panels have the same size.
+If <code>"free_y"</code> their height will be proportional to the length of the y
+scale; if <code>"free_x"</code> their width will be proportional to the length of
+the x scale; or if <code>"free"</code> both height and width will vary. This
+setting has no effect unless the appropriate scales also vary.</dd>
       <dt>plot</dt>
-      <dd>logical.  If <code>TRUE</code> the plot will
-  automatically plot. The user may wish to set to
-  <code>FALSE</code> for use in knitr, sweave, etc. to add
-  additional plot layers.</dd>
+      <dd>logical.  If <code>TRUE</code> the plot will automatically plot.
+The user may wish to set to <code>FALSE</code> for use in knitr, sweave, etc.
+to add additional plot layers.</dd>
     </dl>
     
+    <div class="Visualize Word Length by Turn of Talk">
+      <h2>Visualize Word Length by Turn of Talk</h2>
+      
+    </div>
+
     <div class="Value">
       <h2>Value</h2>
       
@@ -107,8 +102,8 @@
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Uses a bar graph to visualize patterns in sentence length
-and grouping variables by turn of talk.</p>
+      <p>Uses a bar graph to visualize patterns in sentence length and grouping
+variables by turn of talk.</p>
   
     </div>
     

@@ -49,46 +49,39 @@
       <dt>bigroup.var</dt>
       <dd>A binary grouping variable.</dd>
       <dt>rev.binary</dt>
-      <dd>logical.  If <code>TRUE</code> the ordering
-  of the binary levels of bigroup.var is reversed.</dd>
+      <dd>logical.  If <code>TRUE</code> the ordering of the binary levels of
+bigroup.var is reversed.</dd>
       <dt>X</dt>
       <dd>The first gradient color for variable X.</dd>
       <dt>Y</dt>
       <dd>The second gradient color for variable Y.</dd>
       <dt>stem</dt>
-      <dd>logical.  If <code>TRUE</code> the <code>text.var</code>
-  will be stemmed.</dd>
+      <dd>logical.  If <code>TRUE</code> the <code>text.var</code> will be stemmed.</dd>
       <dt>stopwords</dt>
-      <dd>Words to exclude from the cloud.  Words
-  will be removed after determining proportional word
-  usage.</dd>
+      <dd>Words to exclude from the cloud.  Words will be removed
+after determining proportional word usage.</dd>
       <dt>caps</dt>
-      <dd>logical.  If <code>TRUE</code> selected words will
-  be capitalized.</dd>
+      <dd>logical.  If <code>TRUE</code> selected words will be capitalized.</dd>
       <dt>caps.list</dt>
-      <dd>A vector of words to capitalize
-  (<code>caps</code> must be <code>TRUE</code>).</dd>
+      <dd>A vector of words to capitalize (<code>caps</code> must be
+<code>TRUE</code>).</dd>
       <dt>I.list</dt>
-      <dd>logical.  If <code>TRUE</code> capitalizes I
-  words and contractions.</dd>
+      <dd>logical.  If <code>TRUE</code> capitalizes I words and contractions.</dd>
       <dt>random.order</dt>
-      <dd>Plot words in random order. If
-  <code>FALSE</code>, they will be plotted in decreasing
-  frequency.</dd>
+      <dd>Plot words in random order. If <code>FALSE</code>, they will be
+plotted in decreasing frequency.</dd>
       <dt>rot.per</dt>
       <dd>Proportion words with 90 degree rotation.</dd>
       <dt>min.freq</dt>
-      <dd>An integer value indicating the minimum
-  frequency a word must appear to be included.</dd>
+      <dd>An integer value indicating the minimum frequency a word must
+appear to be included.</dd>
       <dt>max.word.size</dt>
-      <dd>A size argument to control the
-  minimum size of the words.</dd>
+      <dd>A size argument to control the minimum size of the words.</dd>
       <dt>min.word.size</dt>
-      <dd>A size argument to control the
-  maximum size of the words.</dd>
+      <dd>A size argument to control the maximum size of the words.</dd>
       <dt>breaks</dt>
-      <dd>An integer describing the number of breaks
-  (odd numbers will be rounded up).</dd>
+      <dd>An integer describing the number of breaks (odd numbers will be
+rounded up).</dd>
       <dt>cloud.font</dt>
       <dd>The font family of the cloud text.</dd>
       <dt>title</dt>
@@ -96,53 +89,54 @@
       <dt>title.font</dt>
       <dd>The font family of the cloud title.</dd>
       <dt>title.color</dt>
-      <dd>A character vector of length one
-  corresponding to the color of the title.</dd>
+      <dd>A character vector of length one corresponding to the
+color of the title.</dd>
       <dt>title.padj</dt>
-      <dd>Adjustment for the title. For strings
-  parallel to the axes, padj = 0 means right or top
-  alignment, and padj = 1 means left or bottom alignment.</dd>
+      <dd>Adjustment for the title. For strings parallel to the axes,
+padj = 0 means right or top alignment, and padj = 1 means left or bottom
+alignment.</dd>
       <dt>title.location</dt>
-      <dd>On which side of the plot
-  (1=bottom, 2=left, 3=top, 4=right).</dd>
+      <dd>On which side of the plot (1=bottom, 2=left, 3=top,
+4=right).</dd>
       <dt>title.cex</dt>
-      <dd>Character expansion factor for the
-  title. <code>NULL</code> and <code>NA</code> are equivalent to 1.0.</dd>
+      <dd>Character expansion factor for the title. <code>NULL</code> and
+<code>NA</code> are equivalent to 1.0.</dd>
       <dt>legend.cex</dt>
-      <dd>Character expansion factor for the
-  legend. <code>NULL</code> and <code>NA</code> are equivalent to 1.0.</dd>
+      <dd>Character expansion factor for the legend. <code>NULL</code> and
+<code>NA</code> are equivalent to 1.0.</dd>
       <dt>legend.location</dt>
-      <dd>A vector of length 4 denoting the
-  lower left (x and y left) and upper right (x and y right)
-  coordinates of the rectangle of colors in user
-  coordinates.</dd>
+      <dd>A vector of length 4 denoting the lower left (x and y
+left) and upper right (x and y right) coordinates of the rectangle of colors
+in user coordinates.</dd>
       <dt>char2space</dt>
-      <dd>A vector of characters to be turned
-  into spaces.</dd>
+      <dd>A vector of characters to be turned into spaces.</dd>
     </dl>
     
+    <div class="Gradient Word Cloud">
+      <h2>Gradient Word Cloud</h2>
+      
+    </div>
+
     <div class="Value">
       <h2>Value</h2>
       
-      <p>Plots a gradient word cloud and invisibly returns the
-dataframe used to make the cloud.</p>
+      <p>Plots a gradient word cloud and invisibly returns the dataframe used
+to make the cloud.</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Produces a gradient word cloud colored by a binary grouping
-variable.</p>
+      <p>Produces a gradient word cloud colored by a binary grouping variable.</p>
   
     </div>
 
     <div class="Details">
       <h2>Details</h2>
       
-      <p>Breaking is done using <code><a href='http://www.inside-r.org/r-doc/stats/quantile'>quantile</a></code>.  This
-will ensure a certain percentage of words will be colored
-at each bin.</p>
+      <p>Breaking is done using <code><a href='http://www.inside-r.org/r-doc/stats/quantile'>quantile</a></code>.  This will
+ensure a certain percentage of words will be colored at each bin.</p>
   
     </div>
     

@@ -47,72 +47,68 @@ Bryan Goodrich and Tyler Rinker &lt;tyler.rinker@gmail.com&gt;.
     <h2>Arguments</h2>
     <dl>
       <dt>file</dt>
-      <dd>The name of the file which the data are to be
-  read from. Each row of the table appears as one line of
-  the file. If it does not contain an absolute path, the
-  file name is relative to the current working directory,
-  <code>getwd()</code>.</dd>
+      <dd>The name of the file which the data are to be read from. Each row
+of the table appears as one line of the file. If it does not contain an
+absolute path, the file name is relative to the current working directory,
+<code>getwd()</code>.</dd>
       <dt>col.names</dt>
-      <dd>A character vector specifying the column
-  names of the transcript columns.</dd>
+      <dd>A character vector specifying the column names of the
+transcript columns.</dd>
       <dt>text.var</dt>
-      <dd>A character string specifying the name of
-  the text variable will ensure that variable is classed as
-  character.  If <code>NULL</code>
-  <code>read.transcript</code> attempts to guess the
-  text.variable (dialogue).</dd>
+      <dd>A character string specifying the name of the text variable
+will ensure that variable is classed as character.  If <code>NULL</code>
+<code>read.transcript</code> attempts to guess the text.variable
+(dialogue).</dd>
       <dt>merge.broke.tot</dt>
-      <dd>logical.  If <code>TRUE</code> and if
-  the file being read in is .docx with broken space between
-  a single turn of talk read.transcript will attempt to
-  merge these into a single turn of talk.</dd>
+      <dd>logical.  If <code>TRUE</code> and if the file being read in
+is .docx with broken space between a single turn of talk read.transcript
+will attempt to merge these into a single turn of talk.</dd>
       <dt>header</dt>
-      <dd>logical.  If <code>TRUE</code> the file contains
-  the names of the variables as its first line.</dd>
+      <dd>logical.  If <code>TRUE</code> the file contains the names of the
+variables as its first line.</dd>
       <dt>dash</dt>
-      <dd>A character string to replace the en and em
-  dashes special characters (default is to remove).</dd>
+      <dd>A character string to replace the en and em dashes special
+characters (default is to remove).</dd>
       <dt>ellipsis</dt>
-      <dd>A character string to replace the
-  ellipsis special characters (default is text ...).</dd>
+      <dd>A character string to replace the ellipsis special characters
+(default is text ...).</dd>
       <dt>quote2bracket</dt>
-      <dd>logical. If <code>TRUE</code> replaces
-  curly quotes with curly braces (default is <code>FALSE</code>).
-  If <code>FALSE</code> curly quotes are removed.</dd>
+      <dd>logical. If <code>TRUE</code> replaces curly quotes with curly
+braces (default is <code>FALSE</code>).  If <code>FALSE</code> curly quotes are removed.</dd>
       <dt>rm.empty.rows</dt>
       <dd>logical.  If <code>TRUE</code>
-  <code>read.transcript</code> attempts to remove
-  empty rows.</dd>
+<code>read.transcript</code>  attempts to remove empty rows.</dd>
       <dt>na.strings</dt>
-      <dd>A vector of character strings which are
-  to be interpreted as <code>NA</code> values.</dd>
+      <dd>A vector of character strings which are to be interpreted
+as <code>NA</code> values.</dd>
       <dt>sep</dt>
-      <dd>The field separator character. Values on each
-  line of the file are separated by this character.  The
-  default of <code>NULL</code> instructs
-  <code>read.transcript</code> to use a separator
-  suitable for the file type being read in.</dd>
+      <dd>The field separator character. Values on each line of the file are
+separated by this character.  The default of <code>NULL</code> instructs
+<code>read.transcript</code> to use a separator suitable for the file
+type being read in.</dd>
       <dt>skip</dt>
-      <dd>Integer; the number of lines of the data file
-  to skip before beginning to read data.</dd>
+      <dd>Integer; the number of lines of the data file to skip before
+beginning to read data.</dd>
       <dt>nontext2factor</dt>
-      <dd>logical.  If <code>TRUE</code> attempts
-  to convert any non-text to a factor.</dd>
+      <dd>logical.  If <code>TRUE</code> attempts to convert any
+non-text to a factor.</dd>
       <dt>text</dt>
-      <dd>Character string: if file is not supplied and
-  this is, then data are read from the value of text.
-  Notice that a literal string can be used to include
-  (small) data sets within R code.</dd>
+      <dd>Character string: if file is not supplied and this is, then data
+are read from the value of text. Notice that a literal string can be used to
+include (small) data sets within R code.</dd>
       <dt>comment.char</dt>
-      <dd>A character vector of length one
-  containing a single character or an empty string. Use
-  <code>""</code> to turn off the interpretation of comments
-  altogether.</dd>
+      <dd>A character vector of length one containing a single
+character or an empty string. Use <code>""</code> to turn off the interpretation of
+comments altogether.</dd>
       <dt>...</dt>
-      <dd>Further arguments to be passed to
-  <code><a href='http://www.inside-r.org/r-doc/utils/read.table'>read.table</a></code>.</dd>
+      <dd>Further arguments to be passed to <code><a href='http://www.inside-r.org/r-doc/utils/read.table'>read.table</a></code>.</dd>
     </dl>
     
+    <div class="Read Transcripts Into R">
+      <h2>Read Transcripts Into R</h2>
+      
+    </div>
+
     <div class="Value">
       <h2>Value</h2>
       
@@ -130,20 +126,18 @@ Bryan Goodrich and Tyler Rinker &lt;tyler.rinker@gmail.com&gt;.
     <div class="Note">
       <h2>Note</h2>
       
-      <p>If a transcript is a .docx file read transcript expects two
-columns (generally person and dialogue) with some sort of
-separator (default is colon separator).  .doc files must be
-converted to .docx before reading in.</p>
+      <p>If a transcript is a .docx file read transcript expects two columns
+(generally person and dialogue) with some sort of separator (default is colon
+separator).  .doc files must be converted to .docx before reading in.</p>
   
     </div>
 
     <div class="Warning">
       <h2>Warning</h2>
       
-      <p><code>read.transcript</code> may contain errors if
-  the file being read in is .docx.  The researcher should
-  carefully investigate each transcript for errors before
-  further parsing the data.</p>
+      <p><code>read.transcript</code> may contain errors if the
+file being read in is .docx.  The researcher should carefully investigate
+each transcript for errors before further parsing the data.</p>
   
     </div>
 

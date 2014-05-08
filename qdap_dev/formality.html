@@ -45,77 +45,77 @@
     <h2>Arguments</h2>
     <dl>
       <dt>text.var</dt>
-      <dd>The text variable (or an object from
-  <code>pos</code>, <code>pos_by</code> or
-  <code>formality</code>.  Passing the later three
-  object will greatly reduce run time.</dd>
+      <dd>The text variable (or an object from <code>pos</code>,
+<code>pos_by</code> or <code>formality</code>.  Passing the
+later three object will greatly reduce run time.</dd>
       <dt>grouping.var</dt>
-      <dd>The grouping variables.  Default
-  <code>NULL</code> generates one word list for all text.  Also
-  takes a single grouping variable or a list of 1 or more
-  grouping variables.</dd>
+      <dd>The grouping variables.  Default <code>NULL</code> generates
+one word list for all text.  Also takes a single grouping variable or a list
+of 1 or more grouping variables.</dd>
       <dt>order.by.formality</dt>
-      <dd>logical.  If <code>TRUE</code> orders
-  the results by formality score.</dd>
+      <dd>logical.  If <code>TRUE</code> orders the results by
+formality score.</dd>
       <dt>digits</dt>
       <dd>The number of digits displayed.</dd>
       <dt>...</dt>
-      <dd>Other arguments passed to
-  <code>pos_by</code>.</dd>
+      <dd>Other arguments passed to <code>pos_by</code>.</dd>
     </dl>
     
+    <div class="Formality Score">
+      <h2>Formality Score</h2>
+      
+    </div>
+
     <div class="Value">
       <h2>Value</h2>
       
       <p>A list containing at the following components:
-textThe text variable POStaggedRaw part of
-speech for every word of the text variable
-POSpropPart of speech proportion for every word of
-the text variable POSfreqPart of speech count for
-every word of the text variable pos.by.freqThe
-part of speech count for every word of the text variable by
-grouping variable(s) pos.by.propThe part of speech
-proportion for every word of the text variable by grouping
-variable(s) form.freq.byThe nine broad part of
-speech categories count for every word of the text variable
-by grouping variable(s) form.prop.byThe nine broad
-part of speech categories proportion for every word of the
-text variable by grouping variable(s)
+textThe text variable
+POStaggedRaw part of speech for every word of the text variable
+POSpropPart of speech proportion for every word of the text variable
+POSfreqPart of speech count for every word of the text variable
+pos.by.freqThe part of speech count for every word of the text
+variable by grouping variable(s)
+pos.by.propThe part of speech proportion for every word of the text
+variable by grouping variable(s)
+form.freq.byThe nine broad part of speech categories count for every
+word of the text variable by grouping variable(s)
+form.prop.byThe nine broad part of speech categories proportion for
+every word of the text variable by grouping variable(s)
 formalityFormality scores by grouping variable(s)
-pos.reshapedAn expanded formality scores output
-(grouping, word.count, pos & form.class) by word</p>
+pos.reshapedAn expanded formality scores output (grouping,
+word.count, pos & form.class) by word</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Transcript apply formality score by grouping variable(s)
-and optionally plot the breakdown of the model.</p>
+      <p>Transcript apply formality score by grouping variable(s) and optionally plot
+the breakdown of the model.</p>
   
     </div>
 
     <div class="Details">
       <h2>Details</h2>
       
-      <p>Heylighen & Dewaele(2002)'s formality score is calculated
-as: <pre class = 'eq'>F =
-50(n_f-n_c/N + 1)</code></p>
+      <p>Heylighen & Dewaele(2002)'s formality score is calculated as:
+<pre class = 'eq'>F = 50(n_f-n_c/N + 1)</code></p>
   
-      <p>Where: <pre class = 'eq'>f = {noun,adjective, preposition,
-article}</code> <pre class = 'eq'>c = {pronoun, verb, adverb,
-interjection}</code> <pre class = 'eq'>N = \sum(f + c + conjunctions)</code></p>
+      <p>Where:
+<pre class = 'eq'>f = {noun,adjective, preposition, article}</code>
+<pre class = 'eq'>c = {pronoun, verb, adverb, interjection}</code>
+<pre class = 'eq'>N = \sum(f + c + conjunctions)</code></p>
   
     </div>
 
     <div class="Warning">
       <h2>Warning</h2>
       
-      <p>Heylighen & Dewaele (2002) state, "At present, a sample
-  would probably need to contain a few hundred words for
-  the measure to be minimally reliable. For single
-  sentences, the F-value should only be computed for
-  purposes of illustration" (p. 24).</p>
+      <p>Heylighen & Dewaele (2002) state, "At present, a sample would
+probably need to contain a few hundred words for the measure to be minimally
+reliable. For single sentences, the F-value should only be computed for
+purposes of illustration" (p. 24).</p>
   
     </div>
 
@@ -123,9 +123,8 @@ interjection}</code> <pre class = 'eq'>N = \sum(f + c + conjunctions)</code></p>
       <h2>References</h2>
       
       <p>Heylighen, F., & Dewaele, J.M. (2002). Variation in the
-contextuality of language: An empirical measure. Context in
-Context, Special issue of Foundations of Science, 7 (3),
-293-340.</p>
+contextuality of language: An empirical measure. Context in Context, Special
+issue of Foundations of Science, 7 (3), 293-340.</p>
   
     </div>
     

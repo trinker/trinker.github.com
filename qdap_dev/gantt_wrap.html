@@ -47,16 +47,14 @@ Andrie de Vries and Tyler Rinker &lt;tyler.rinker@gmail.com&gt;.
     <h2>Arguments</h2>
     <dl>
       <dt>dataframe</dt>
-      <dd>A data frame with plotting variable(s)
-  and a column of start and end times.</dd>
+      <dd>A data frame with plotting variable(s) and a column of start
+and end times.</dd>
       <dt>plot.var</dt>
       <dd>A factor plotting variable (y axis).</dd>
       <dt>facet.vars</dt>
-      <dd>An optional single vector or list of 1
-  or 2 to facet by.</dd>
+      <dd>An optional single vector or list of 1 or 2 to facet by.</dd>
       <dt>fill.var</dt>
-      <dd>An optional variable to fill the code
-  strips by.</dd>
+      <dd>An optional variable to fill the code strips by.</dd>
       <dt>title</dt>
       <dd>An optional title for the plot.</dd>
       <dt>ylab</dt>
@@ -64,105 +62,95 @@ Andrie de Vries and Tyler Rinker &lt;tyler.rinker@gmail.com&gt;.
       <dt>xlab</dt>
       <dd>An optional x label.</dd>
       <dt>rev.factor</dt>
-      <dd>logical.  If <code>TRUE</code> reverse the
-  current plotting order so the first element in the
-  plotting variable's levels is plotted on top.</dd>
+      <dd>logical.  If <code>TRUE</code> reverse the current plotting order
+so the first element in the plotting variable's levels is plotted on top.</dd>
       <dt>ncol</dt>
       <dd>if an integer value is passed to this
-  <code>gantt_wrap</code> uses
-  <code><a href='http://www.inside-r.org/r-doc/ggplot2/facet_wrap'>facet_wrap</a></code> rather than
-  <code><a href='http://www.inside-r.org/r-doc/ggplot2/facet_grid'>facet_grid</a></code>.</dd>
+<code>gantt_wrap</code> uses <code><a href='http://www.inside-r.org/r-doc/ggplot2/facet_wrap'>facet_wrap</a></code>
+rather than <code><a href='http://www.inside-r.org/r-doc/ggplot2/facet_grid'>facet_grid</a></code>.</dd>
       <dt>transform</dt>
-      <dd>logical.  If <code>TRUE</code> the repeated
-  facets will be transformed from stacked to side by side.</dd>
+      <dd>logical.  If <code>TRUE</code> the repeated facets will be
+transformed from stacked to side by side.</dd>
       <dt>minor.line.freq</dt>
-      <dd>A numeric value for frequency of
-  minor grid lines.</dd>
+      <dd>A numeric value for frequency of minor grid lines.</dd>
       <dt>major.line.freq</dt>
-      <dd>A numeric value for frequency of
-  major grid lines.</dd>
+      <dd>A numeric value for frequency of major grid lines.</dd>
       <dt>sig.dig.line.freq</dt>
-      <dd>An internal rounding factor for
-  minor and major line freq.  Generally, default value of 1
-  suffices for larger range of x scale may need to be set
-  to -2.</dd>
+      <dd>An internal rounding factor for minor and major line
+freq.  Generally, default value of 1 suffices for larger range of x scale may
+need to be set to -2.</dd>
       <dt>hms.scale</dt>
-      <dd>logical.  If <code>TRUE</code> converts scale
-  to h:m:s format. Default <code>NULL</code> attempts to detect
-  if object is a cm_time2long object</dd>
+      <dd>logical.  If <code>TRUE</code> converts scale to h:m:s format.
+Default <code>NULL</code> attempts to detect if object is a cm_time2long object</dd>
       <dt>scale</dt>
-      <dd>Should scales be fixed (<code>"fixed"</code>, the
-  default), free (<code>"free"</code>), or free in one dimension
-  (<code>"free_x"</code>, <code>"free_y"</code>)</dd>
+      <dd>Should scales be fixed (<code>"fixed"</code>, the default), free
+(<code>"free"</code>), or free in one dimension (<code>"free_x"</code>, <code>"free_y"</code>)</dd>
       <dt>space</dt>
-      <dd>If <code>"fixed"</code>, the default, all panels
-  have the same size. If <code>"free_y"</code> their height will
-  be proportional to the length of the y scale; if
-  <code>"free_x"</code> their width will be proportional to the
-  length of the x scale; or if <code>"free"</code> both height
-  and width will vary. This setting has no effect unless
-  the appropriate scales also vary.</dd>
+      <dd>If <code>"fixed"</code>, the default, all panels have the same size.
+If <code>"free_y"</code> their height will be proportional to the length of the y
+scale; if <code>"free_x"</code> their width will be proportional to the length of
+the x scale; or if <code>"free"</code> both height and width will vary. This
+setting has no effect unless the appropriate scales also vary.</dd>
       <dt>size</dt>
       <dd>The width of the plot bars.</dd>
       <dt>rm.horiz.lines</dt>
-      <dd>logical.  If <code>TRUE</code> the
-  horizontal lines will be removed.</dd>
+      <dd>logical.  If <code>TRUE</code> the horizontal lines will be
+removed.</dd>
       <dt>x.ticks</dt>
-      <dd>logical.  If <code>TRUE</code> the x ticks will
-  be displayed.</dd>
+      <dd>logical.  If <code>TRUE</code> the x ticks will be displayed.</dd>
       <dt>y.ticks</dt>
-      <dd>logical.  If <code>TRUE</code> the y ticks will
-  be displayed.</dd>
+      <dd>logical.  If <code>TRUE</code> the y ticks will be displayed.</dd>
       <dt>legend.position</dt>
-      <dd>The position of legends.
-  (<code>"left"</code>, <code>"right"</code>, <code>"bottom"</code>,
-  <code>"top"</code>, or two-element numeric vector).</dd>
+      <dd>The position of legends. (<code>"left"</code>,
+<code>"right"</code>, <code>"bottom"</code>, <code>"top"</code>, or two-element numeric
+vector).</dd>
       <dt>bar.color</dt>
       <dd>Optional color to constrain all bars.</dd>
       <dt>border.color</dt>
-      <dd>The color to plot border around Gantt
-  bars (default is <code>NULL</code>).</dd>
+      <dd>The color to plot border around Gantt bars (default is
+<code>NULL</code>).</dd>
       <dt>border.size</dt>
-      <dd>An integer value for the size to plot
-  borders around Gantt bars. Controls length (width also
-  controlled if not specified).</dd>
+      <dd>An integer value for the size to plot borders around Gantt
+bars. Controls length (width also controlled if not specified).</dd>
       <dt>border.width</dt>
-      <dd>Controls border width around Gantt
-  bars.  Use a numeric value in addition to border size if
-  plot borders appear disproportional.</dd>
+      <dd>Controls border width around Gantt bars.  Use a numeric
+value in addition to border size if plot borders appear disproportional.</dd>
       <dt>constrain</dt>
-      <dd>logical.  If <code>TRUE</code> the Gantt bars
-  touch the edge of the graph.</dd>
+      <dd>logical.  If <code>TRUE</code> the Gantt bars touch the edge of
+the graph.</dd>
       <dt>plot</dt>
-      <dd>logical.  If <code>TRUE</code> the plot will
-  automatically plot. The user may wish to set to
-  <code>FALSE</code> for use in knitr, sweave, etc. to add
-  additional plot layers.</dd>
+      <dd>logical.  If <code>TRUE</code> the plot will automatically plot.
+The user may wish to set to <code>FALSE</code> for use in knitr, sweave, etc.
+to add additional plot layers.</dd>
     </dl>
     
+    <div class="Gantt Plot">
+      <h2>Gantt Plot</h2>
+      
+    </div>
+
     <div class="Value">
       <h2>Value</h2>
       
-      <p>Returns a Gantt style visualization. Invisibly returns the
-ggplot2 list object.</p>
+      <p>Returns a Gantt style visualization. Invisibly returns the ggplot2
+list object.</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p>A <a href = 'http://docs.ggplot2.org/current/'>ggplot2</a> wrapper
-that produces a Gantt plot.</p>
+      <p>A <a href = 'http://docs.ggplot2.org/current/'>ggplot2</a> wrapper that produces a
+Gantt plot.</p>
   
     </div>
 
     <div class="Note">
       <h2>Note</h2>
       
-      <p>For non-repeated measures data/plotting use
-<code>gantt</code>; for repeated measures data
-output use <code>gantt_rep</code>; and for a
-convenient wrapper that takes text and generates plots use
+      <p>For non-repeated measures data/plotting use <code>gantt</code>;
+for repeated measures data output use <code>gantt_rep</code>; and for
+a convenient wrapper that takes text and generates plots use
 <code>gantt_plot</code>.</p>
   
     </div>
@@ -170,8 +158,8 @@ convenient wrapper that takes text and generates plots use
     <div class="References">
       <h2>References</h2>
       
-      <p>Clark, W. & Gantt, H. (1922) The Gantt chart, a working
-tool of management. New York, Ronald Press.</p>
+      <p>Clark, W. & Gantt, H. (1922) The Gantt chart, a working tool of
+management. New York, Ronald Press.</p>
   
     </div>
     
@@ -188,7 +176,8 @@ tool of management. New York, Ronald Press.</p>
       
     <h2>See also</h2>
     
-<code>gantt</code>, <code>gantt_plot</code>,
+<code>gantt</code>,
+<code>gantt_plot</code>,
 <code>gantt_rep</code>,
 <code><a href='http://www.inside-r.org/r-doc/ggplot2/facet_grid'>facet_grid</a></code>,
 <code><a href='http://www.inside-r.org/r-doc/ggplot2/facet_wrap'>facet_wrap</a></code>

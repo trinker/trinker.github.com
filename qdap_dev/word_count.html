@@ -51,62 +51,59 @@
       <dt>text.var</dt>
       <dd>The text variable</dd>
       <dt>grouping.var</dt>
-      <dd>The grouping variables.  Default
-  <code>NULL</code> generates one word list for all text.  Also
-  takes a single grouping variable or a list of 1 or more
-  grouping variables.</dd>
+      <dd>The grouping variables.  Default <code>NULL</code> generates
+one word list for all text.  Also takes a single grouping variable or a list
+of 1 or more grouping variables.</dd>
       <dt>byrow</dt>
-      <dd>logical.  If <code>TRUE</code> counts by row, if
-  <code>FALSE</code> counts all words.</dd>
+      <dd>logical.  If <code>TRUE</code> counts by row, if <code>FALSE</code> counts
+all words.</dd>
       <dt>missing</dt>
-      <dd>Value to insert for missing values (empty
-  cells).</dd>
+      <dd>Value to insert for missing values (empty cells).</dd>
       <dt>digit.remove</dt>
-      <dd>logical.  If <code>TRUE</code> removes
-  digits before counting words.</dd>
+      <dd>logical.  If <code>TRUE</code> removes digits before counting
+words.</dd>
       <dt>names</dt>
-      <dd>logical.  If <code>TRUE</code> the sentences are
-  given as the names of the counts.</dd>
+      <dd>logical.  If <code>TRUE</code> the sentences are given as the names of
+the counts.</dd>
       <dt>apostrophe.remove</dt>
-      <dd>logical.  If <code>TRUE</code>
-  apostrophes will be counted in the character count.</dd>
+      <dd>logical.  If <code>TRUE</code> apostrophes will be counted
+in the character count.</dd>
       <dt>count.space</dt>
-      <dd>logical.  If <code>TRUE</code> spaces are
-  counted as characters.</dd>
+      <dd>logical.  If <code>TRUE</code> spaces are counted as characters.</dd>
       <dt>prop.by.row</dt>
-      <dd>logical.  If <code>TRUE</code> applies
-  proportional to the row. If <code>FALSE</code> applies by
-  column.</dd>
+      <dd>logical.  If <code>TRUE</code> applies proportional to the row.
+If <code>FALSE</code> applies by column.</dd>
       <dt>...</dt>
-      <dd>Other arguments passed to
-  <code>prop</code>.</dd>
+      <dd>Other arguments passed to <code>prop</code>.</dd>
       <dt>percent</dt>
-      <dd>logical.  If <code>TRUE</code> output given as
-  percent.  If <code>FALSE</code> the output is proportion.</dd>
+      <dd>logical.  If <code>TRUE</code> output given as percent.  If
+<code>FALSE</code> the output is proportion.</dd>
       <dt>zero.replace</dt>
       <dd>Value to replace 0 values with.</dd>
       <dt>digits</dt>
-      <dd>Integer; number of decimal places to round
-  when printing.</dd>
+      <dd>Integer; number of decimal places to round when printing.</dd>
     </dl>
     
+    <div class="Word Counts">
+      <h2>Word Counts</h2>
+      
+    </div>
+
     <div class="Value">
       <h2>Value</h2>
       
       <p><code>word_count</code> - returns a word count by row or total.</p>
   
-      <p><code>character_count</code> - returns a character count by row
-or total.</p>
+      <p><code>character_count</code> - returns a character count by row or total.</p>
   
-      <p><code>character_table</code> - returns a list: dataframe of
-character counts by grouping variable. rawDataframe
-of the frequency of characters by grouping variable.
-propDataframe of the proportion of characters by
-grouping variable. rnpDataframe of the frequency
-and proportions of characters by grouping variable.
-percentThe value of percent used for plotting
-purposes. zero.replaceThe value of zero.replace
-used for plotting purposes.</p>
+      <p><code>character_table</code> - returns a list:
+dataframe of character counts by grouping variable.
+rawDataframe of the frequency of characters by grouping variable.
+propDataframe of the proportion of characters by grouping variable.
+rnpDataframe of the frequency and proportions of characters by
+grouping variable.
+percentThe value of percent used for plotting purposes.
+zero.replaceThe value of zero.replace used for plotting purposes.</p>
   
     </div>
 
@@ -117,8 +114,8 @@ used for plotting purposes.</p>
   
       <p><code>character_count</code> - Transcript apply character counts.</p>
   
-      <p><code>character_table</code> - Computes a table of character
-counts by grouping . variable(s).</p>
+      <p><code>character_table</code> - Computes a table of character counts by grouping .
+variable(s).</p>
   
     </div>
 
@@ -143,7 +140,8 @@ counts by grouping . variable(s).</p>
     <h2>See also</h2>
     
 <code>syllable_count</code>,
-<code>prop</code>, <code>colcomb2class</code>
+<code>prop</code>,
+<code>colcomb2class</code>
 
         
   </div>

@@ -46,65 +46,61 @@
     <h2>Arguments</h2>
     <dl>
       <dt>multi.columns</dt>
-      <dd>The multiple columns or a list of
-  vectors to paste together.</dd>
+      <dd>The multiple columns or a list of vectors to paste
+together.</dd>
       <dt>sep</dt>
-      <dd>The character to be used in <code>paste2</code> to
-  paste the columns.</dd>
+      <dd>The character to be used in <code>paste2</code> to paste the columns.</dd>
       <dt>handle.na</dt>
-      <dd>logical.  If <code>TRUE</code> returns
-  <code>NA</code> if any column/vector contains a missing value.</dd>
+      <dd>logical.  If <code>TRUE</code> returns <code>NA</code> if any
+column/vector contains a missing value.</dd>
       <dt>trim</dt>
-      <dd>logical.  If <code>TRUE</code> leading/trailing
-  white space is removed.</dd>
+      <dd>logical.  If <code>TRUE</code> leading/trailing white space is removed.</dd>
       <dt>mat</dt>
       <dd>A matrix or dataframe.</dd>
       <dt>combined.columns</dt>
-      <dd>A list of named vectors of the
-  colnames/indexes of the numeric columns to be pasted.  If
-  a vector is unnamed a name will be assigned.</dd>
+      <dd>A list of named vectors of the colnames/indexes
+of the numeric columns to be pasted.  If a vector is unnamed a
+name will be assigned.</dd>
       <dt>name.sep</dt>
-      <dd>The character to be used to paste the
-  column names.</dd>
+      <dd>The character to be used to paste the column names.</dd>
       <dt>keep.orig</dt>
-      <dd>logical.  If <code>TRUE</code> the original
-  columns (i.e., <code>combined.columns</code>) will be retained
-  as well.</dd>
+      <dd>logical.  If <code>TRUE</code> the original columns
+(i.e., <code>combined.columns</code>) will be retained as well.</dd>
       <dt>...</dt>
-      <dd>Other arguments passed to
-  <code>paste2</code>.</dd>
+      <dd>Other arguments passed to <code>paste2</code>.</dd>
     </dl>
     
+    <div class="Paste an Unspecified Number Of Text Columns">
+      <h2>Paste an Unspecified Number Of Text Columns</h2>
+      
+    </div>
+
     <div class="Value">
       <h2>Value</h2>
       
-      <p><code>paste2</code> - Returns a vector with row-wise elements
-pasted together.</p>
+      <p><code>paste2</code> - Returns a vector with row-wise elements pasted together.</p>
   
-      <p><code>colpaste2df</code> - Returns a dataframe with pasted
-columns.</p>
+      <p><code>colpaste2df</code> - Returns a dataframe with pasted columns.</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p><code>paste2</code> - Paste unspecified columns or a list of
-vectors together.</p>
+      <p><code>paste2</code> - Paste unspecified columns or a list of vectors together.</p>
   
-      <p><code>colpaste2df</code> - Wrapper for <code>paste2</code>
-that returns a dataframe with columns pasted together.</p>
+      <p><code>colpaste2df</code> - Wrapper for <code>paste2</code> that returns a
+dataframe with columns pasted together.</p>
   
     </div>
 
     <div class="Note">
       <h2>Note</h2>
       
-      <p><code><a href='http://www.inside-r.org/r-doc/base/paste'>paste</a></code> differs from
-<code>paste2</code> because <code>paste</code> does not
-allowed an unspecified number of columns to be pasted.
-This behavior can be convenient for inside of functions
-when the number of columns being pasted is unknown.</p>
+      <p><code><a href='http://www.inside-r.org/r-doc/base/paste'>paste</a></code> differs from <code>paste2</code>
+because <code>paste</code> does not allowed an unspecified number of columns to be
+pasted.  This behavior can be convenient for inside of functions when the
+number of columns being pasted is unknown.</p>
   
     </div>
     
@@ -121,7 +117,8 @@ when the number of columns being pasted is unknown.</p>
       
     <h2>See also</h2>
     
-<code><a href='http://www.inside-r.org/r-doc/base/paste'>paste</a></code>, <code><a href='colsplit2df.html'>colsplit2df</a></code>
+<code><a href='http://www.inside-r.org/r-doc/base/paste'>paste</a></code>,
+<code><a href='colsplit2df.html'>colsplit2df</a></code>
 
         
   </div>

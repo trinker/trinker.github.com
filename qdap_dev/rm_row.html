@@ -48,49 +48,47 @@
       <dt>dataframe</dt>
       <dd>A dataframe object.</dd>
       <dt>search.column</dt>
-      <dd>Column name to search for
-  markers/terms.</dd>
+      <dd>Column name to search for markers/terms.</dd>
       <dt>terms</dt>
-      <dd>Terms/markers of the rows that are to be
-  removed from the dataframe.  The term/marker must appear
-  at the beginning of the string and is case sensitive.</dd>
+      <dd>Terms/markers of the rows that are to be removed from the
+dataframe.  The term/marker must appear at the beginning of the string and is
+case sensitive.</dd>
       <dt>contains</dt>
-      <dd>logical.  If <code>TRUE</code> <code>rm_row</code>
-  searches for the terms anywhere within the string.  If
-  <code>FALSE</code> <code>rm_row</code> searches only the beginning of
-  the string.</dd>
+      <dd>logical.  If <code>TRUE</code> <code>rm_row</code> searches for the terms
+anywhere within the string.  If <code>FALSE</code> <code>rm_row</code> searches only the
+beginning of the string.</dd>
       <dt>ignore.case</dt>
-      <dd>logical.  If <code>TRUE</code> case is
-  ignored during matching, if <code>FALSE</code>the pattern
-  matching is case sensitive.</dd>
+      <dd>logical.  If <code>TRUE</code> case is ignored during matching,
+if <code>FALSE</code>the pattern matching is case sensitive.</dd>
       <dt>keep.rownames</dt>
-      <dd>logical.  If <code>TRUE</code> the
-  original, non-sequential, rownames will be used.</dd>
+      <dd>logical.  If <code>TRUE</code> the original, non-sequential,
+rownames will be used.</dd>
       <dt>...</dt>
-      <dd>Other arguments passed to
-  <code><a href='http://www.inside-r.org/r-doc/base/grep'>grepl</a></code>.</dd>
+      <dd>Other arguments passed to <code><a href='http://www.inside-r.org/r-doc/base/grep'>grepl</a></code>.</dd>
     </dl>
     
+    <div class="Remove Rows That Contain Markers">
+      <h2>Remove Rows That Contain Markers</h2>
+      
+    </div>
+
     <div class="Value">
       <h2>Value</h2>
       
-      <p><code>rm_row</code> - returns a dataframe with the
-termed/markered rows removed.</p>
-  
-      <p><code>rm_empty_row</code> - returns a dataframe with empty rows
+      <p><code>rm_row</code> - returns a dataframe with the termed/markered rows
 removed.</p>
+  
+      <p><code>rm_empty_row</code> - returns a dataframe with empty rows removed.</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p><code>rm_row</code> - Remove rows from a data set that contain a
-given marker/term.</p>
+      <p><code>rm_row</code> - Remove rows from a data set that contain a given marker/term.</p>
   
-      <p><code>rm_empty_row</code> - Removes the empty rows of a data set
-that are common in reading in data (default method in
-<code>read.transcript</code>).</p>
+      <p><code>rm_empty_row</code> - Removes the empty rows of a data set that are common in
+reading in data (default method in <code>read.transcript</code>).</p>
   
     </div>
     

@@ -47,48 +47,49 @@
       <dt>text.var</dt>
       <dd>The text variable.</dd>
       <dt>begins.with</dt>
-      <dd>This argument takes a word chunk.
-  Default is <code>NULL</code>. Use this if searching for a word
-  beginning with the word chunk.</dd>
+      <dd>This argument takes a word chunk.  Default is <code>NULL</code>.
+Use this if searching for a word beginning with the word chunk.</dd>
       <dt>contains</dt>
-      <dd>This argument takes a word chunk.
-  Default is <code>NULL</code>. Use this if searching for a word
-  containing the word chunk.</dd>
+      <dd>This argument takes a word chunk.  Default is <code>NULL</code>.
+Use this if searching for a word containing the word chunk.</dd>
       <dt>alphabetical</dt>
-      <dd>logical.  If <code>TRUE</code> orders rows
-  alphabetically, if <code>FALSE</code> orders the rows by
-  descending frequency.</dd>
+      <dd>logical.  If <code>TRUE</code> orders rows alphabetically, if
+<code>FALSE</code> orders the rows by descending frequency.</dd>
       <dt>apostrophe.remove</dt>
-      <dd>logical.  If <code>TRUE</code> removes
-  apostrophes from the text before examining.</dd>
+      <dd>logical.  If <code>TRUE</code> removes apostrophes from
+the text before examining.</dd>
       <dt>...</dt>
-      <dd>Other argument supplied to
-  <code>strip</code>.</dd>
+      <dd>Other argument supplied to <code>strip</code>.</dd>
     </dl>
     
+    <div class="Searches Text Column for Words">
+      <h2>Searches Text Column for Words</h2>
+      
+    </div>
+
     <div class="Value">
       <h2>Value</h2>
       
-      <p>Returns a dataframe with frequency counts of words that
-begin with or contain the provided word chunk.</p>
+      <p>Returns a dataframe with frequency counts of words that begin with or
+contain the provided word chunk.</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p>A convenience function to find words that begin with or
-contain a letter chunk and returns the frequency counts of
-the number of occurrences of each word.</p>
+      <p>A convenience function to find words that begin with or contain a letter
+chunk and returns the frequency counts of the number of occurrences of each
+word.</p>
   
     </div>
 
     <div class="Note">
       <h2>Note</h2>
       
-      <p>Cannot provide both <code>begins.with</code> and <code>contains</code>
-arguments at once.  If both begins.with and contains are
-<code>NULL</code>. <code>all_words</code> returns a
+      <p>Cannot provide both <code>begins.with</code> and <code>contains</code> arguments
+at once.  If both begins.with and contains are <code>NULL</code>.
+<code>all_words</code> returns a
 frequency count for all words.</p>
   
     </div>

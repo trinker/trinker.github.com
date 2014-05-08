@@ -48,55 +48,58 @@
       <dt>text.var</dt>
       <dd>The text variable.</dd>
       <dt>missing.end.mark</dt>
-      <dd>A value to use for sentences with
-  missing endmarks.</dd>
+      <dd>A value to use for sentences with missing endmarks.</dd>
       <dt>missing.text</dt>
-      <dd>A value to use for sentences with
-  missing (<code>NA</code>) text.</dd>
+      <dd>A value to use for sentences with missing (<code>NA</code>)
+text.</dd>
       <dt>other.endmarks</dt>
-      <dd>Other 1-2 character endmarks tos
-  earch for.</dd>
+      <dd>Other 1-2 character endmarks tos earch for.</dd>
       <dt>grouping.var</dt>
-      <dd>The grouping variables.  Default
-  <code>NULL</code> generates one word list for all text.  Also
-  takes a single grouping variable or a list of 1 or more
-  grouping variables.</dd>
+      <dd>The grouping variables.  Default <code>NULL</code> generates
+one word list for all text.  Also takes a single grouping variable or a list
+of 1 or more grouping variables.</dd>
       <dt>percent</dt>
-      <dd>logical.  If <code>TRUE</code> output given as
-  percent.  If <code>FALSE</code> the output is proportion.</dd>
+      <dd>logical.  If <code>TRUE</code> output given as percent.  If
+<code>FALSE</code> the output is proportion.</dd>
       <dt>zero.replace</dt>
       <dd>Value to replace 0 values with.</dd>
       <dt>digits</dt>
-      <dd>Integer; number of decimal places to round
-  when printing.</dd>
+      <dd>Integer; number of decimal places to round when printing.</dd>
       <dt>...</dt>
       <dd>Other arguments passed to <code>end_mark</code>.</dd>
     </dl>
     
+    <div class="Sentence End Marks">
+      <h2>Sentence End Marks</h2>
+      
+    </div>
+
     <div class="Value">
       <h2>Value</h2>
       
-      <p>Returns a character vector of qdap end marks for each
-sentence. End marks include: "."Declarative
-sentence. "?"Question sentence.
-"!"Exclamatory sentence. "|"Incomplete
-sentence. "*."Imperative-declarative sentence.
-"*?"Imperative-question sentence (unlikely to
-occur) "*!"Imperative-exclamatory sentence.
+      <p>Returns a character vector of qdap end marks for each sentence.
+End marks include:
+"."Declarative sentence.
+"?"Question sentence.
+"!"Exclamatory sentence.
+"|"Incomplete sentence.
+"*."Imperative-declarative sentence.
+"*?"Imperative-question sentence (unlikely to occur)
+"*!"Imperative-exclamatory sentence.
 "*|"Imperative-incomplete sentence.
-"no.em"No end mark. "blank"Empty cell/NA.</p>
+"no.em"No end mark.
+"blank"Empty cell/NA.</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p><code>end_mark</code> - Grab the sentence end marks for a
-transcript.  This can be useful to categorize based on
-sentence type.</p>
+      <p><code>end_mark</code> - Grab the sentence end marks for a transcript.  This can be
+useful to categorize based on sentence type.</p>
   
-      <p><code>end_mark_by</code> - Grab the sentence end marks for a
-transcriptby grouping variable(s).</p>
+      <p><code>end_mark_by</code> - Grab the sentence end marks for a transcriptby grouping
+variable(s).</p>
   
     </div>
     

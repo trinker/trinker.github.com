@@ -52,40 +52,39 @@
     <h2>Arguments</h2>
     <dl>
       <dt>x</dt>
-      <dd>A filterable object (e.g.,
-  <code>wfm</code>, <code><a href='http://www.inside-r.org/r-doc/base/character'>character</a></code>).</dd>
+      <dd>A filterable object (e.g., <code>wfm</code>,
+<code><a href='http://www.inside-r.org/r-doc/base/character'>character</a></code>).</dd>
       <dt>min</dt>
       <dd>Minimum word length.</dd>
       <dt>max</dt>
       <dd>Maximum word length.</dd>
       <dt>count.apostrophe</dt>
-      <dd>logical.  If <code>TRUE</code>
-  apostrophes are counted as characters.</dd>
+      <dd>logical.  If <code>TRUE</code> apostrophes are counted as
+characters.</dd>
       <dt>stopwords</dt>
       <dd>A vector of stop words to remove.</dd>
       <dt>ignore.case</dt>
-      <dd>logical.  If <code>TRUE</code> stopwords
-  will be removed regardless of case (ignored if used on a
-  <code>wfm</code>).</dd>
+      <dd>logical.  If <code>TRUE</code> stopwords will be removed
+regardless of case (ignored if used on a <code>wfm</code>).</dd>
       <dt>...</dt>
-      <dd>Other arguments passed to specific Filter
-  methods.</dd>
+      <dd>Other arguments passed to specific Filter methods.</dd>
     </dl>
     
+    <div class="Filter">
+      <h2>Filter</h2>
+      
+    </div>
+
     <div class="Value">
       <h2>Value</h2>
       
-      <p><code>Filter.all_words</code> - Returns a matrix of the class
-"all_words".</p>
+      <p><code>Filter.all_words</code> - Returns a matrix of the class "all_words".</p>
   
-      <p><code>Filter.TermDocumentMatrix</code> - Returns a matrix of the
-class "TermDocumentMatrix".</p>
+      <p><code>Filter.TermDocumentMatrix</code> - Returns a matrix of the class "TermDocumentMatrix".</p>
   
-      <p><code>Filter.DocumentTermMatrix</code> - Returns a matrix of the
-class "DocumentTermMatrix".</p>
+      <p><code>Filter.DocumentTermMatrix</code> - Returns a matrix of the class "DocumentTermMatrix".</p>
   
-      <p><code>Filter.character</code> - Returns a vector of the class
-"character".</p>
+      <p><code>Filter.character</code> - Returns a vector of the class "character".</p>
   
       <p><code>Filter.wfm</code> - Returns a matrix of the class "wfm".</p>
   
@@ -93,8 +92,7 @@ class "DocumentTermMatrix".</p>
   
       <p><code>Filter.fswl</code> - Returns a matrix of the class "fswl".</p>
   
-      <p><code>Filter.rfswl</code> - Returns a matrix of the class
-"rfswl".</p>
+      <p><code>Filter.rfswl</code> - Returns a matrix of the class "rfswl".</p>
   
     </div>
 
@@ -104,27 +102,26 @@ class "DocumentTermMatrix".</p>
       <p><code>Filter.all_words</code> - Filter words from a all_words
 that meet max/min word length criteria.</p>
   
-      <p><code>Filter.TermDocumentMatrix</code> - Filter words from a
-TermDocumentMatrix vector that meet max/min word length
-criteria.</p>
-  
-      <p><code>Filter.DocumentTermMatrix</code> - Filter words from a
-DocumentTermMatrix that meet max/min word length criteria.</p>
-  
-      <p><code>Filter</code> - Filter words from various objects that meet
+      <p><code>Filter.TermDocumentMatrix</code> - Filter words from a TermDocumentMatrix vector that meet
 max/min word length criteria.</p>
   
-      <p><code>Filter.character</code> - Filter words from a character
-vector that meet max/min word length criteria.</p>
+      <p><code>Filter.DocumentTermMatrix</code> - Filter words from a DocumentTermMatrix
+that meet max/min word length criteria.</p>
   
-      <p><code>Filter.fwl</code> - Filter words from a fwl that meet
+      <p><code>Filter</code> - Filter words from various objects that meet max/min word
+length criteria.</p>
+  
+      <p><code>Filter.character</code> - Filter words from a character vector that meet
 max/min word length criteria.</p>
   
-      <p><code>Filter.fswl</code> - Filter words from a fswl that meet
-max/min word length criteria.</p>
+      <p><code>Filter.fwl</code> - Filter words from a fwl
+that meet max/min word length criteria.</p>
   
-      <p><code>Filter.rfswl</code> - Filter words from a rfswl that meet
-max/min word length criteria.</p>
+      <p><code>Filter.fswl</code> - Filter words from a fswl
+that meet max/min word length criteria.</p>
+  
+      <p><code>Filter.rfswl</code> - Filter words from a rfswl
+that meet max/min word length criteria.</p>
   
     </div>
 
@@ -150,10 +147,9 @@ max/min word length criteria.</p>
     <div class="Note">
       <h2>Note</h2>
       
-      <p>The name and idea behind this function is inspired by the
-<span class = "pkg">dplyr</span> package's <code>filter</code> function and has a
-similar meaning in that you are grabbing rows (or elements)
-meeting a particular criteria.</p>
+      <p>The name and idea behind this function is inspired by the <span class = "pkg">dplyr</span>
+package's <code>filter</code> function and has a similar meaning in that you are
+grabbing rows (or elements) meeting a particular criteria.</p>
   
     </div>
     

@@ -47,62 +47,60 @@
     <h2>Arguments</h2>
     <dl>
       <dt>text.var</dt>
-      <dd>The text variable.  In
-  <code>stemmer</code> this is a vector text string.
-  For <code>stem2df</code> this is a character
-  vector of length one naming the text column.</dd>
+      <dd>The text variable.  In <code>stemmer</code> this is a
+vector text string. For <code>stem2df</code> this is a character
+vector of length one naming the text column.</dd>
       <dt>rm.bracket</dt>
-      <dd>logical.  If <code>TRUE</code> brackets are
-  removed from the text.</dd>
+      <dd>logical.  If <code>TRUE</code> brackets are removed from the text.</dd>
       <dt>capitalize</dt>
-      <dd>logical.  If <code>TRUE</code> selected terms
-  are capitalized.</dd>
+      <dd>logical.  If <code>TRUE</code> selected terms are capitalized.</dd>
       <dt>warn</dt>
-      <dd>logical.  If <code>TRUE</code> warns about rows not
-  ending with standard qdap punctuation endmarks.</dd>
+      <dd>logical.  If <code>TRUE</code> warns about rows not ending with
+standard qdap punctuation endmarks.</dd>
       <dt>char.keep</dt>
-      <dd>A character vector of symbols that
-  should be kept within sentences.</dd>
+      <dd>A character vector of symbols that should be kept within
+sentences.</dd>
       <dt>...</dt>
-      <dd>Various:  <em><code>stemmer</code> - Other
-  arguments passed to <code>capitalizer</code></em> 
-  <em><code>stem_words</code> - Words or terms.</em> 
-  <em><code>stem2df</code> - Other arguments passed to
-  <code>stemmer</code></em></dd>
+      <dd>Various: 
+<em><code>stemmer</code> - Other arguments passed to
+<code>capitalizer</code></em> 
+<em><code>stem_words</code> - Words or terms.</em> 
+<em><code>stem2df</code> - Other arguments passed to
+<code>stemmer</code></em></dd>
       <dt>dataframe</dt>
       <dd>A dataframe object.</dd>
       <dt>stem.name</dt>
-      <dd>A character vector of length one for the
-  stemmed column.  If <code>NULL</code> defaults to
-  <code>"stem.text"</code>.</dd>
+      <dd>A character vector of length one for the stemmed column.  If
+<code>NULL</code> defaults to <code>"stem.text"</code>.</dd>
     </dl>
     
+    <div class="Stem Text">
+      <h2>Stem Text</h2>
+      
+    </div>
+
     <div class="Value">
       <h2>Value</h2>
       
-      <p><code>stemmer</code> - returns a character vector with stemmed
-text.</p>
+      <p><code>stemmer</code> - returns a character vector with stemmed text.</p>
   
-      <p><code>stem_words</code> - returns a vector of individually
-stemmed words.</p>
+      <p><code>stem_words</code> - returns a vector of individually stemmed words.</p>
   
-      <p><code>stem2df</code> - returns a dataframe with a character
-vector with stemmed text.</p>
+      <p><code>stem2df</code> - returns a dataframe with a character vector with
+stemmed text.</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p><code>stemmer</code> - Stems a vector of text strings (A wrapper
-for the pkgtm package's <code><a href='http://www.inside-r.org/r-doc/tm/stemDocument'>stemDocument</a></code>.</p>
+      <p><code>stemmer</code> - Stems a vector of text strings (A wrapper for the pkgtm
+package's <code><a href='http://www.inside-r.org/r-doc/tm/stemDocument'>stemDocument</a></code>.</p>
   
-      <p><code>stem_words</code> - Wrapper for stemmer that stems a vector
-of words.</p>
+      <p><code>stem_words</code> - Wrapper for stemmer that stems a vector of words.</p>
   
-      <p><code>stem2df</code> - Wrapper for stemmer that stems a vector of
-text strings and returns a dataframe with the vector
-added..</p>
+      <p><code>stem2df</code> - Wrapper for stemmer that stems a vector of text strings
+and returns a dataframe with the vector added..</p>
   
     </div>
     

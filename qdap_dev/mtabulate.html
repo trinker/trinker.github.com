@@ -50,21 +50,24 @@ Joran Elias and Tyler Rinker &lt;tyler.rinker@gmail.com&gt;.
       <dd>A list of named/unnamed vectors.</dd>
     </dl>
     
+    <div class="Tabulate Frequency Counts for Multiple Vectors">
+      <h2>Tabulate Frequency Counts for Multiple Vectors</h2>
+      
+    </div>
+
     <div class="Value">
       <h2>Value</h2>
       
-      <p>Returns a dataframe with frequency counts per list item
-(levels unused by any vectors in the list are dropped).  If
-list of vectors is named these will be the rownames of the
-dataframe.</p>
+      <p>Returns a dataframe with frequency counts per list item (levels
+unused by any vectors in the list are dropped).  If list of vectors is named
+these will be the rownames of the dataframe.</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p>A wrapper for <code><a href='http://www.inside-r.org/r-doc/base/tabulate'>tabulate</a></code> that works on
-multiple vectors.</p>
+      <p>A wrapper for <code><a href='http://www.inside-r.org/r-doc/base/tabulate'>tabulate</a></code> that works on multiple vectors.</p>
   
     </div>
 
@@ -197,8 +200,8 @@ dat &lt;- data.frame(matrix(sample(qcv(A, B), 30, TRUE), ncol=3))
 t(mtabulate(dat))
 </div>
 <div class='output'>  X1 X2 X3
-A  6  4  7
-B  4  6  3
+A  5  7  2
+B  5  3  8
 </div></pre>
   </div>
   <div class="span4">

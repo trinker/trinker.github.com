@@ -47,30 +47,31 @@
       <dt>text.var</dt>
       <dd>The text variable</dd>
       <dt>grouping.var</dt>
-      <dd>The grouping variables.  Default
-  <code>NULL</code> generates one word list for all text.  Also
-  takes a single grouping variable or a list of 1 or more
-  grouping variables.</dd>
+      <dd>The grouping variables.  Default <code>NULL</code> generates
+one word list for all text.  Also takes a single grouping variable or a list
+of 1 or more grouping variables.</dd>
       <dt>n</dt>
       <dd>The max number of grams calculate</dd>
       <dt>...</dt>
       <dd>Further arguments passed to strip function.</dd>
     </dl>
     
+    <div class="Generate ngrams">
+      <h2>Generate ngrams</h2>
+      
+    </div>
+
     <div class="Value">
       <h2>Value</h2>
       
-      <p>Returns a list of: rawA list of pasted single
-vectors of the ngrams per row. groupA list of
-pasted vectors of ngrams grouped by grouping.var.
-unlist1A list of a single vector of pasted ngrams
-per grouping.var in the order used. unlist2A list
-of a single vector of pasted ngrams per grouping.var in
-alphabetical order. group_nA list of a list of
-vectors of ngrams per grouping.var & n (not pasted).
-allA single vector of pasted ngrams sorted
-alphabetically. all_nA list of lists a single
-vectors of ngrams sorted alphabetically (not pasted).</p>
+      <p>Returns a list of:
+rawA list of pasted single vectors of the ngrams per row.
+groupA list of pasted vectors of ngrams grouped by grouping.var.
+unlist1A list of a single vector of pasted ngrams per grouping.var in the order used.
+unlist2A list of a single vector of pasted ngrams per grouping.var in alphabetical order.
+group_nA list of a list of vectors of ngrams per grouping.var & n (not pasted).
+allA single vector of pasted ngrams sorted alphabetically.
+all_nA list of lists a single vectors of ngrams sorted alphabetically (not pasted).</p>
   
     </div>
 

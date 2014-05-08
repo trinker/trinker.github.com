@@ -47,45 +47,42 @@ Dason Kurkiewicz and Tyler Rinker &lt;tyler.rinker@gmail.com&gt;.
     <h2>Arguments</h2>
     <dl>
       <dt>names.list</dt>
-      <dd>Character vector containing first
-  names.</dd>
+      <dd>Character vector containing first names.</dd>
       <dt>pred.sex</dt>
-      <dd>logical.  If <code>TRUE</code> overlapping M/F
-  names will be predicted based on highest cumulative
-  frequency.  If <code>FALSE</code> the overlapping names will be
-  denoted with a <code>"B"</code>.</dd>
+      <dd>logical.  If <code>TRUE</code> overlapping M/F names will be
+predicted based on highest cumulative frequency.  If <code>FALSE</code> the
+overlapping names will be denoted with a <code>"B"</code>.</dd>
       <dt>fuzzy.match</dt>
-      <dd>logical.  If <code>TRUE</code> uses
-  Levenshtein edit distance from <code><a href='http://www.inside-r.org/r-doc/base/agrep'>agrep</a></code>
-  to predict gender from the closest name match starting
-  with the same letter.  This is computationally intensive
-  and should not be used on larger vectors.  Defaults to
-  <code>pred.sex</code>.</dd>
+      <dd>logical.  If <code>TRUE</code> uses Levenshtein edit distance
+from <code><a href='http://www.inside-r.org/r-doc/base/agrep'>agrep</a></code> to predict gender from the closest name match
+starting with the same letter.  This is computationally intensive and should
+not be used on larger vectors.  Defaults to <code>pred.sex</code>.</dd>
       <dt>USE.NAMES</dt>
-      <dd>logical.  If <code>TRUE</code> names.list is
-  used to name the gender vector.</dd>
+      <dd>logical.  If <code>TRUE</code> names.list is used to name the
+gender vector.</dd>
       <dt>database</dt>
-      <dd>A database of names (mostly for internal
-  purposes).</dd>
+      <dd>A database of names (mostly for internal purposes).</dd>
       <dt>list.database</dt>
-      <dd>A list version of the database of
-  names broken down by first letter of the name (mostly for
-  internal purposes).</dd>
+      <dd>A list version of the database of names broken down by
+first letter of the name (mostly for internal purposes).</dd>
     </dl>
     
+    <div class="Names to Gender Prediction">
+      <h2>Names to Gender Prediction</h2>
+      
+    </div>
+
     <div class="Value">
       <h2>Value</h2>
       
-      <p>Returns a vector of predicted gender (M/F) based on first
-name.</p>
+      <p>Returns a vector of predicted gender (M/F) based on first name.</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Predict gender from U.S. names (based on 1990 U.S. census
-data).</p>
+      <p>Predict gender from U.S. names (based on 1990 U.S. census data).</p>
   
     </div>
 

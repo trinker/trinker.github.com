@@ -41,65 +41,83 @@
   <div class="span8">
     <h2>Usage</h2>
     <pre><div>multigsub(pattern, replacement&nbsp;=&nbsp;NULL, text.var, leadspace&nbsp;=&nbsp;FALSE, trailspace&nbsp;=&nbsp;FALSE, fixed&nbsp;=&nbsp;TRUE, trim&nbsp;=&nbsp;TRUE, order.pattern&nbsp;=&nbsp;fixed, ...)</div>
-<div>mgsub(pattern, replacement&nbsp;=&nbsp;NULL, text.var, leadspace&nbsp;=&nbsp;FALSE, trailspace&nbsp;=&nbsp;FALSE, fixed&nbsp;=&nbsp;TRUE, trim&nbsp;=&nbsp;TRUE, order.pattern&nbsp;=&nbsp;fixed, ...)</div></pre>
+<div>mgsub(pattern, replacement&nbsp;=&nbsp;NULL, text.var, leadspace&nbsp;=&nbsp;FALSE, trailspace&nbsp;=&nbsp;FALSE, fixed&nbsp;=&nbsp;TRUE, trim&nbsp;=&nbsp;TRUE, order.pattern&nbsp;=&nbsp;fixed, ...)</div>
+<div>sub_holder(pattern, text.var, ...)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
       <dt>pattern</dt>
-      <dd>Character string to be matched in the
-  given character vector.</dd>
+      <dd>Character string to be matched in the given character vector.</dd>
       <dt>replacement</dt>
-      <dd>Character string equal in length to
-  pattern or of length one which are a replacement for
-  matched pattern.</dd>
+      <dd>Character string equal in length to pattern or of length
+one which are  a replacement for matched pattern.</dd>
       <dt>text.var</dt>
       <dd>The text variable.</dd>
       <dt>leadspace</dt>
-      <dd>logical.  If <code>TRUE</code> inserts a
-  leading space in the replacements.</dd>
+      <dd>logical.  If <code>TRUE</code> inserts a leading space in the
+replacements.</dd>
       <dt>trailspace</dt>
-      <dd>logical.  If <code>TRUE</code> inserts a
-  trailing space in the replacements.</dd>
+      <dd>logical.  If <code>TRUE</code> inserts a trailing space in the
+replacements.</dd>
       <dt>fixed</dt>
-      <dd>logical. If <code>TRUE</code>, pattern is a string
-  to be matched as is. Overrides all conflicting
-  arguments.</dd>
+      <dd>logical. If <code>TRUE</code>, pattern is a string to be matched as is.
+Overrides all conflicting arguments.</dd>
       <dt>trim</dt>
-      <dd>logical.  If <code>TRUE</code> leading and trailing
-  white spaces are removed.</dd>
+      <dd>logical.  If <code>TRUE</code> leading and trailing white spaces are
+removed.</dd>
       <dt>order.pattern</dt>
-      <dd>logical.  If <code>TRUE</code> and
-  <code>fixed = TRUE</code>, the <code>pattern</code> string is sorted
-  by number of characters to prevent substrings replacing
-  meta strings (e.g., <code>pattern = c("the", "then")</code>
-  resorts to search for "then" first).</dd>
+      <dd>logical.  If <code>TRUE</code> and <code>fixed = TRUE</code>, the
+<code>pattern</code> string is sorted by number of characters to prevent substrings
+replacing meta strings (e.g., <code>pattern = c("the", "then")</code> resorts to
+search for "then" first).</dd>
       <dt>...</dt>
-      <dd>Additional arguments passed to
-  <code><a href='http://www.inside-r.org/r-doc/base/grep'>gsub</a></code>.</dd>
+      <dd>Additional arguments passed to <code><a href='http://www.inside-r.org/r-doc/base/grep'>gsub</a></code>.</dd>
     </dl>
     
+    <div class="Multiple gsub">
+      <h2>Multiple gsub</h2>
+      
+    </div>
+
     <div class="Value">
       <h2>Value</h2>
       
-      <p>Returns a vector with the pattern replaced.</p>
+      <p><code>multigsub</code> - Returns a vector with the pattern replaced.</p>
+  
+      <p><code>sub_holder</code> - Returns a list with the following:
+outputkeyed place holder character vector
+unholdA function used to revert back to the original values</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p>A wrapper for <code><a href='http://www.inside-r.org/r-doc/base/grep'>gsub</a></code> that takes a vector
-of search terms and a vector or single value of
-replacements.</p>
+      <p><code>multigsub</code> - A wrapper for <code><a href='http://www.inside-r.org/r-doc/base/grep'>gsub</a></code> that takes a vector
+of search terms and a vector or single value of replacements.</p>
+  
+      <p><code>sub_holder</code> - This function holds the place for particular character
+values, allowing the user to manipulate the vector and then revert the place
+holders back to the original values.</p>
+  
+    </div>
+
+    <div class="Note">
+      <h2>Note</h2>
+      
+      <p>The <code>unhold</code> function for <code>sub_holder</code> will only work on keys
+that have not been disturbed by subsequen alterations.  The key follows the
+pattern of `qdapplaceholder` followed by lower case letter keys followed by
+`qdap`.</p>
   
     </div>
     
     <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # multigsub(c(&quot;it&#39;s&quot;, &quot;I&#39;m&quot;), c(&quot;it is&quot;, &quot;I am&quot;), DATA$state)# mgsub(c(&quot;it&#39;s&quot;, &quot;I&#39;m&quot;), c(&quot;it is&quot;, &quot;I am&quot;), DATA$state)# mgsub(&quot;[[:punct:]]&quot;, &quot;PUNC&quot;, DATA$state, fixed = FALSE)# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # multigsub(c(&quot;it&#39;s&quot;, &quot;I&#39;m&quot;), c(&quot;it is&quot;, &quot;I am&quot;), DATA$state)# mgsub(c(&quot;it&#39;s&quot;, &quot;I&#39;m&quot;), c(&quot;it is&quot;, &quot;I am&quot;), DATA$state)# mgsub(&quot;[[:punct:]]&quot;, &quot;PUNC&quot;, DATA$state, fixed = FALSE)# # ## `sub_holder` Function# (fake_dat &lt;- paste(emoticon[1:11,2], DATA$state))# (m &lt;- sub_holder(emoticon[,2], fake_dat))# m$unhold(strip(m$output))# # With Stemming# m$unhold(stemmer(strip(m$output), capitalize = FALSE))# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
   </div>
   <div class="span4">
     <!-- <ul>
-      <li>mgsub</li><li>multigsub</li>
+      <li>mgsub</li><li>multigsub</li><li>sub_holder</li>
     </ul>
     <ul>
       

@@ -51,43 +51,42 @@
       <dt>terms</dt>
       <dd>A vector of quoted terms.</dd>
       <dt>grouping.var</dt>
-      <dd>The grouping variables.  Default
-  <code>NULL</code> generates one word list for all text.  Also
-  takes a single grouping variable or a list of 1 or more
-  grouping variables.</dd>
+      <dd>The grouping variables.  Default <code>NULL</code> generates
+one word list for all text.  Also takes a single grouping variable or a list
+of 1 or more grouping variables.</dd>
       <dt>parallel</dt>
-      <dd>logical.  If <code>TRUE</code> attempts to run
-  the function on multiple cores.  Note that this may not
-  mean a speed boost if you have one core or if the data
-  set is smaller as the cluster takes time to create.</dd>
+      <dd>logical.  If <code>TRUE</code> attempts to run the function on
+multiple cores.  Note that this may not mean a speed boost if you have one
+core or if the data set is smaller as the cluster takes time to create.</dd>
       <dt>cores</dt>
-      <dd>The number of cores to use if <code>parallel
-  = TRUE</code>.  Default is half the number of available cores.</dd>
+      <dd>The number of cores to use if <code>parallel = TRUE</code>.  Default
+is half the number of available cores.</dd>
       <dt>x</dt>
       <dd>An object to be weighted.</dd>
       <dt>type</dt>
-      <dd>A weighting type of: c(<code>"scale_log"</code>,
-  <code>"scale"</code>, <code>"rev_scale"</code>,
-  <code>"rev_scale_log"</code>, <code>"log"</code>, <code>"sqrt"</code>,
-  <code>"scale_sqrt"</code>, <code>"rev_sqrt"</code>,
-  <code>"rev_scale_sqrt"</code>).  The weight type section name
-  (i.e. <code>A_B_C</code> where <code>A</code>, <code>B</code>, and <code>C</code>
-  are sections) determines what action will occur.
-  <code>log</code> will use <code><a href='http://www.inside-r.org/r-doc/base/Log'>log</a></code>, <code>sqrt</code>
-  will use <code><a href='http://www.inside-r.org/r-doc/base/MathFun'>sqrt</a></code>, <code>scale</code> will
-  standardize the values.  <code>rev</code> will multiply by -1
-  to give the inverse sign.  This enables a comparison
-  similar to correlations rather than distance.</dd>
+      <dd>A weighting type of: c(<code>"scale_log"</code>, <code>"scale"</code>,
+<code>"rev_scale"</code>, <code>"rev_scale_log"</code>, <code>"log"</code>, <code>"sqrt"</code>,
+<code>"scale_sqrt"</code>, <code>"rev_sqrt"</code>, <code>"rev_scale_sqrt"</code>).  The
+weight type section name (i.e. <code>A_B_C</code> where <code>A</code>, <code>B</code>, and
+<code>C</code> are sections) determines what action will occur.  <code>log</code> will
+use <code><a href='http://www.inside-r.org/r-doc/base/Log'>log</a></code>, <code>sqrt</code> will use <code><a href='http://www.inside-r.org/r-doc/base/MathFun'>sqrt</a></code>,
+<code>scale</code> will standardize the values.  <code>rev</code> will multiply by -1 to
+give the inverse sign.  This enables a comparison similar to correlations
+rather than distance.</dd>
       <dt>...</dt>
       <dd>ignored.</dd>
     </dl>
     
+    <div class="Proximity Matrix Between Words">
+      <h2>Proximity Matrix Between Words</h2>
+      
+    </div>
+
     <div class="Value">
       <h2>Value</h2>
       
-      <p>Returns a list of matrices of proximity measures in the
-unit of average sentences between words (defaults to
-scaled).</p>
+      <p>Returns a list of matrices of proximity measures in the unit of average
+sentences between words (defaults to scaled).</p>
   
       <p>Returns a weighted list of matrices.</p>
   
@@ -96,8 +95,8 @@ scaled).</p>
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Generate proximity measures to ascertain a mean distance
-measure between word uses.</p>
+      <p>Generate proximity measures to ascertain a mean distance measure between
+word uses.</p>
   
       <p>Weight a word_proximity object.</p>
   
@@ -108,29 +107,26 @@ measure between word uses.</p>
     <div class="Details">
       <h2>Details</h2>
       
-      <p>Note that row names are the first word and column names are
-the second comparison word. The values for Word A compared
-to Word B will not be the same as Word B compared to Word
-A. This is because, unlike a true distance measure,
-<code>word_proximity</code>'s matrix is asymmetrical.
-<code>word_proximity</code> computes the distance by taking each
-sentence position for Word A and comparing it to the
-nearest sentence location for Word B.</p>
+      <p>Note that row names are the first word and column names are the
+second comparison word. The values for Word A compared to Word B will not
+be the same as Word B compared to Word A. This is because, unlike a true
+distance measure, <code>word_proximity</code>'s matrix is asymmetrical.
+<code>word_proximity</code> computes the distance by taking each sentence position
+for Word A and comparing it to the nearest sentence location for Word B.</p>
   
     </div>
 
     <div class="Note">
       <h2>Note</h2>
       
-      <p>The match.terms is character sensitive.  Spacing is an
-important way to grab specific words and requires careful
-thought.  Using "read" will find the words "bread", "read"
-"reading", and "ready".  If you want to search for just the
-word "read" you'd supply a vector of c(" read ", " reads",
+      <p>The match.terms is character sensitive.  Spacing is an important way
+to grab specific words and requires careful thought.  Using "read" will find
+the words "bread", "read" "reading", and "ready".  If you want to search
+for just the word "read" you'd supply a vector of c(" read ", " reads",
 " reading", " reader").</p>
   
-      <p>A constant of .000000000001 is added to each element when
-log is used to deal with the problem of <code>log(0)</code>.</p>
+      <p>A constant of .000000000001 is added to each element when log is used
+to deal with the problem of <code>log(0)</code>.</p>
   
     </div>
     

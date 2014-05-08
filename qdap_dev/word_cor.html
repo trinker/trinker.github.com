@@ -47,36 +47,34 @@
       <dt>text.var</dt>
       <dd>The text variable (or frequency matrix).</dd>
       <dt>grouping.var</dt>
-      <dd>The grouping variables.  Default
-  <code>NULL</code> generates one word list for all text.  Also
-  takes a single grouping variable or a list of 1 or more
-  grouping variables.</dd>
+      <dd>The grouping variables.  Default <code>NULL</code> generates
+one word list for all text.  Also takes a single grouping variable or a list
+of 1 or more grouping variables.</dd>
       <dt>word</dt>
-      <dd>The word(s) vector to find associated words
-  for.</dd>
+      <dd>The word(s) vector to find associated words for.</dd>
       <dt>r</dt>
-      <dd>The correlation level find associated words for.
-  If positive this is the minimum value, if negative this
-  is the maximum value.</dd>
+      <dd>The correlation level find associated words for.  If positive this
+is the minimum value, if negative this is the maximum value.</dd>
       <dt>values</dt>
-      <dd>logical.  If <code>TRUE</code> returns the named
-  correlates (names are the words).  If <code>FALSE</code> only
-  the associated words are returned.</dd>
+      <dd>logical.  If <code>TRUE</code> returns the named correlates (names are
+the words).  If <code>FALSE</code> only the associated words are returned.</dd>
       <dt>method</dt>
-      <dd>A character string indicating which
-  correlation coefficient is to be computed
-  (<code>"pearson"</code>, <code>"kendall"</code>, or
-  <code>"spearman"</code>).</dd>
+      <dd>A character string indicating which correlation coefficient is
+to be computed (<code>"pearson"</code>, <code>"kendall"</code>, or <code>"spearman"</code>).</dd>
       <dt>...</dt>
-      <dd>Other arguments passed to
-  <code>wfm</code>.</dd>
+      <dd>Other arguments passed to <code>wfm</code>.</dd>
     </dl>
     
+    <div class="Find Correlated Words">
+      <h2>Find Correlated Words</h2>
+      
+    </div>
+
     <div class="Value">
       <h2>Value</h2>
       
-      <p>Returns a vector of associated words or correlation matrix
-if <code>r = NULL</code>.</p>
+      <p>Returns a vector of associated words or correlation matrix if
+<code>r = NULL</code>.</p>
   
     </div>
 
@@ -91,8 +89,7 @@ if <code>r = NULL</code>.</p>
       <h2>References</h2>
       
       <p>The plotting method for the list output was inspired by Ben
-Marwick; see
-<a href = 'http://stackoverflow.com/a/19925445/1000343'>http://stackoverflow.com/a/19925445/1000343</a> for more.</p>
+Marwick; see <a href = 'http://stackoverflow.com/a/19925445/1000343'>http://stackoverflow.com/a/19925445/1000343</a> for more.</p>
   
     </div>
     
@@ -112,7 +109,8 @@ Marwick; see
 <code>word_proximity</code>,
 <code><a href='http://www.inside-r.org/r-doc/tm/findAssocs'>findAssocs</a></code>,
 <code>word_associate</code>,
-<code>wfm</code>, <code><a href='http://www.inside-r.org/r-doc/stats/cor'>cor</a></code>
+<code>wfm</code>,
+<code><a href='http://www.inside-r.org/r-doc/stats/cor'>cor</a></code>
 
         
   </div>

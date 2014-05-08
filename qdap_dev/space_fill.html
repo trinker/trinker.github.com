@@ -47,58 +47,58 @@
       <dt>text.var</dt>
       <dd>The text variable.</dd>
       <dt>terms</dt>
-      <dd>A character vector of grouped word terms to
-  insert a new separating/space character.</dd>
+      <dd>A character vector of grouped word terms to insert a new
+separating/space character.</dd>
       <dt>sep</dt>
       <dd>A character string to separate the terms.</dd>
       <dt>rm.extra</dt>
-      <dd>logical.  Should trailing, leading and >
-  1 continuous white spaces be removed?</dd>
+      <dd>logical.  Should trailing, leading and > 1 continuous white
+spaces be removed?</dd>
       <dt>ignore.case</dt>
-      <dd>logical.  If <code>FALSE</code>, the pattern
-  matching is case sensitive and if <code>TRUE</code>, case is
-  ignored during matching.</dd>
+      <dd>logical.  If <code>FALSE</code>, the pattern matching is case sensitive
+and if <code>TRUE</code>, case is ignored during matching.</dd>
       <dt>fixed</dt>
-      <dd>logical. If <code>TRUE</code>, pattern is a string
-  to be matched as is. Overrides all conflicting
-  arguments.</dd>
+      <dd>logical. If <code>TRUE</code>, pattern is a string to be matched as
+is. Overrides all conflicting arguments.</dd>
       <dt>...</dt>
-      <dd>Other arguments passed to
-  <code><a href='http://www.inside-r.org/r-doc/base/grep'>gsub</a></code>.</dd>
+      <dd>Other arguments passed to <code><a href='http://www.inside-r.org/r-doc/base/grep'>gsub</a></code>.</dd>
     </dl>
     
+    <div class="Replace Spaces">
+      <h2>Replace Spaces</h2>
+      
+    </div>
+
     <div class="Value">
       <h2>Value</h2>
       
-      <p>Returns a character vector with extra, trailing and/or
-leading spaces removed.</p>
+      <p>Returns a character vector with extra, trailing and/or leading spaces
+removed.</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Replace spaces in words groups that should be grouped
-together.</p>
+      <p>Replace spaces in words groups that should be grouped together.</p>
   
     </div>
 
     <div class="Details">
       <h2>Details</h2>
       
-      <p><code>space_fill</code> is useful for keeping
-grouped words together.  Many functions in qdap take a
-<code>char.keep</code> or <code>char2space</code> argument.  This can
-be used to prepare multi word phrases (e.g., proper nouns)
-as a single unit.</p>
+      <p><code>space_fill</code> is useful for keeping grouped words
+together.  Many functions in qdap take a <code>char.keep</code> or
+<code>char2space</code> argument.  This can be used to prepare multi word phrases
+(e.g., proper nouns) as a single unit.</p>
   
     </div>
 
     <div class="Note">
       <h2>Note</h2>
       
-      <p><code>link[qdap]{strip}</code> by default does not remove the
-double tilde <code>"~~"</code> character.</p>
+      <p><code>link[qdap]{strip}</code> by default does not remove the double tilde
+<code>"~~"</code> character.</p>
   
     </div>
     

@@ -47,68 +47,65 @@
     <h2>Arguments</h2>
     <dl>
       <dt>text.var</dt>
-      <dd>A character string of text or a vector of
-  character strings.</dd>
+      <dd>A character string of text or a vector of character strings.</dd>
       <dt>stopwords</dt>
-      <dd>A character vector of words to remove
-  from the text.  qdap has a number of data sets that can
-  be used as stop words including: <code>Top200Words</code>,
-  <code>Top100Words</code>, <code>Top25Words</code>.  For the tm
-  package's traditional English stop words use
-  <code>tm::stopwords("english")</code>.</dd>
+      <dd>A character vector of words to remove from the text.  qdap
+has a number of data sets that can be used as stop words including:
+<code>Top200Words</code>, <code>Top100Words</code>, <code>Top25Words</code>.  For the tm
+package's traditional English stop words use <code>tm::stopwords("english")</code>.</dd>
       <dt>unlist</dt>
-      <dd>logical.  If <code>TRUE</code> unlists into one
-  vector.  General use intended for when separate is
-  <code>FALSE</code>.</dd>
+      <dd>logical.  If <code>TRUE</code> unlists into one vector.  General use
+intended for when separate is <code>FALSE</code>.</dd>
       <dt>separate</dt>
-      <dd>logical.  If <code>TRUE</code> separates
-  sentences into words. If <code>FALSE</code> retains sentences.</dd>
+      <dd>logical.  If <code>TRUE</code> separates sentences into words. If
+<code>FALSE</code> retains sentences.</dd>
       <dt>strip</dt>
-      <dd>logical.  IF <code>TRUE</code> strips the text of
-  all punctuation except apostrophes.</dd>
+      <dd>logical.  IF <code>TRUE</code> strips the text of all punctuation
+except apostrophes.</dd>
       <dt>unique</dt>
-      <dd>logical.  If <code>TRUE</code> keeps only unique
-  words (if unlist is <code>TRUE</code>) or sentences (if unlist
-  is <code>FALSE</code>).  General use intended for when unlist
-  is <code>TRUE</code>.</dd>
+      <dd>logical.  If <code>TRUE</code> keeps only unique words (if unlist is
+<code>TRUE</code>) or sentences (if unlist is <code>FALSE</code>).  General use intended
+for when unlist is <code>TRUE</code>.</dd>
       <dt>char.keep</dt>
-      <dd>If strip is <code>TRUE</code> this argument
-  provides a means of retaining supplied character(s).</dd>
+      <dd>If strip is <code>TRUE</code> this argument provides a means of
+retaining supplied character(s).</dd>
       <dt>names</dt>
-      <dd>logical.  If <code>TRUE</code> will name the
-  elements of the vector or list with the original
-  <code>text.var</code>.</dd>
+      <dd>logical.  If <code>TRUE</code> will name the elements of the vector or
+list with the original <code>text.var</code>.</dd>
       <dt>ignore.case</dt>
-      <dd>logical.  If <code>TRUE</code> stopwords
-  will be removed regardless of case.  Additionally, case
-  will be stripped from the text.  If <code>FALSE</code> stop
-  word removal is contingent upon case.  Additionally, case
-  is not stripped.</dd>
+      <dd>logical.  If <code>TRUE</code> stopwords will be removed
+regardless of case.  Additionally, case will be stripped from the text.  If
+<code>FALSE</code> stop word removal is contingent upon case.  Additionally, case
+is not stripped.</dd>
       <dt>apostrophe.remove</dt>
-      <dd>logical.  If <code>TRUE</code> removes
-  apostrophe's from the output.</dd>
+      <dd>logical.  If <code>TRUE</code> removes apostrophe's from
+the output.</dd>
       <dt>...</dt>
-      <dd>further arguments passed to
-  <code>strip</code> function.</dd>
+      <dd>further arguments passed to <code>strip</code> function.</dd>
     </dl>
     
+    <div class="Remove Stop Words">
+      <h2>Remove Stop Words</h2>
+      
+    </div>
+
     <div class="Value">
       <h2>Value</h2>
       
-      <p>Returns a vector of sentences, vector of words, or
-(default) a list of vectors of words with stop words
-removed.  Output depends on supplied arguments.</p>
+      <p>Returns a vector of sentences, vector of words, or (default) a list
+of vectors of words with stop words removed.  Output depends on supplied
+arguments.</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Removal of stop words in a variety of contexts .</p>
+      <p>Removal of stop words in a variety of contexts
+.</p>
   
-      <p><code>%sw%</code> - Binary operator version of
-<code>rm_stopwords</code> that defaults to
-<code>separate = FALSE</code>..</p>
+      <p><code>%sw%</code> - Binary operator version of <code>rm_stopwords</code>  that
+defaults to <code>separate = FALSE</code>..</p>
   
     </div>
     
@@ -125,7 +122,8 @@ removed.  Output depends on supplied arguments.</p>
       
     <h2>See also</h2>
     
-<code>strip</code>, <code>bag_o_words</code>,
+<code>strip</code>,
+<code>bag_o_words</code>,
 <code><a href='http://www.inside-r.org/r-doc/tm/stopwords'>stopwords</a></code>
 
         
