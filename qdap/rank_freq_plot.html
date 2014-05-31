@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>rank_freq_mplot. qdap 1.3.5</title>
+<title>rank_freq_mplot. qdap 2.0.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 1.3.5</a>
+      <a class="brand" href="#">qdap 2.0.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -48,75 +48,71 @@
       <dt>text.var</dt>
       <dd>The text variable.</dd>
       <dt>grouping.var</dt>
-      <dd>The grouping variables.  Default
-  <code>NULL</code> generates one word list for all text.  Also
-  takes a single grouping variable or a list of 1 or more
-  grouping variables.</dd>
+      <dd>The grouping variables.  Default <code>NULL</code> generates
+one word list for all text.  Also takes a single grouping variable or a list
+of 1 or more grouping variables.</dd>
       <dt>ncol</dt>
-      <dd>integer value indicating the number of
-  columns in the facet wrap.</dd>
+      <dd>integer value indicating the number of columns in the facet wrap.</dd>
       <dt>jitter</dt>
-      <dd>Amount of horizontal jitter to add to the
-  points.</dd>
+      <dd>Amount of horizontal jitter to add to the points.</dd>
       <dt>log.freq</dt>
-      <dd>logical.  If <code>TRUE</code> plots the
-  frequencies in the natural log scale.</dd>
+      <dd>logical.  If <code>TRUE</code> plots the frequencies in the natural
+log scale.</dd>
       <dt>log.rank</dt>
-      <dd>logical.  If <code>TRUE</code> plots the ranks
-  in the natural log scale.</dd>
+      <dd>logical.  If <code>TRUE</code> plots the ranks in the natural log
+scale.</dd>
       <dt>hap.col</dt>
       <dd>Color of the hapax legomenon points.</dd>
       <dt>dis.col</dt>
       <dd>Color of the dis legomenon points.</dd>
       <dt>alpha</dt>
-      <dd>Transparency level of points (ranges between
-  0 and 1).</dd>
+      <dd>Transparency level of points (ranges between 0 and 1).</dd>
       <dt>shape</dt>
-      <dd>An integer specifying the symbol used to
-  plot the points.</dd>
+      <dd>An integer specifying the symbol used to plot the points.</dd>
       <dt>title</dt>
       <dd>Optional plot title.</dd>
       <dt>digits</dt>
-      <dd>Integer; number of decimal places to
-  round.</dd>
+      <dd>Integer; number of decimal places to round.</dd>
       <dt>plot</dt>
-      <dd>logical.  If <code>TRUE</code> provides a rank
-  frequency plot.</dd>
+      <dd>logical.  If <code>TRUE</code> provides a rank frequency plot.</dd>
       <dt>words</dt>
       <dd>A vector of words.</dd>
       <dt>frequencies</dt>
-      <dd>A vector of frequencies corresponding
-  to the words argument.</dd>
+      <dd>A vector of frequencies corresponding to the words
+argument.</dd>
       <dt>title.ext</dt>
-      <dd>The title extension that extends:
-  "Rank-Frequency Plot ..."</dd>
+      <dd>The title extension that extends: "Rank-Frequency Plot ..."</dd>
       <dt>jitter.ammount</dt>
-      <dd>Amount of horizontal jitter to add
-  to the points.</dd>
+      <dd>Amount of horizontal jitter to add to the points.</dd>
       <dt>log.scale</dt>
-      <dd>logical.  If <code>TRUE</code> plots the rank
-  and frequency as a log scale.</dd>
+      <dd>logical.  If <code>TRUE</code> plots the rank and frequency as a
+log scale.</dd>
     </dl>
     
+    <div class="Rank Frequency Plot">
+      <h2>Rank Frequency Plot</h2>
+      
+    </div>
+
     <div class="Value">
       <h2>Value</h2>
       
-      <p>Returns a rank-frequency plot and a list of three
-dataframes: WORD_COUNTSThe word frequencies
-supplied to <code>rank_freq_plot</code> or created
-by <code>rank_freq_mplot</code>.
-RANK_AND_FREQUENCY_STATSA dataframe of rank and
-frequencies for the words used in the text.
-LEGOMENA_STATSA dataframe displaying the percent
-hapax legomena and percent dis legomena of the text.</p>
+      <p>Returns a rank-frequency plot and a list of three dataframes:
+WORD_COUNTSThe word frequencies supplied to
+<code>rank_freq_plot</code> or created by
+<code>rank_freq_mplot</code>.
+RANK_AND_FREQUENCY_STATSA dataframe of rank and frequencies for the
+words used in the text.
+LEGOMENA_STATSA dataframe displaying the percent hapax legomena and
+percent dis legomena of the text.</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p><code>rank_freq_mplot</code> - Plot a faceted word rank versus
-frequencies by grouping variable(s).</p>
+      <p><code>rank_freq_mplot</code> - Plot a faceted word rank versus frequencies by
+grouping variable(s).</p>
   
       <p><code>rank_freq_plot</code> - Plot word rank versus frequencies.</p>
   
@@ -125,19 +121,17 @@ frequencies by grouping variable(s).</p>
     <div class="Note">
       <h2>Note</h2>
       
-      <p><code>rank_freq_mplot</code> utilizes the ggplot2 package,
-whereas, <code>rank_freq_plot</code> employs base graphics.
-<code>rank_freq_mplot</code> is more general & flexible; in most
-cases <code>rank_freq_mplot</code> should be preferred.</p>
+      <p><code>rank_freq_mplot</code> utilizes the ggplot2 package, whereas,
+<code>rank_freq_plot</code> employs base graphics.  <code>rank_freq_mplot</code> is more
+general & flexible; in most cases <code>rank_freq_mplot</code> should be preferred.</p>
   
     </div>
 
     <div class="References">
       <h2>References</h2>
       
-      <p>Zipf, G. K. (1949). Human behavior and the principle of
-least effort. Cambridge, Massachusetts: Addison-Wesley. p.
-1.</p>
+      <p>Zipf, G. K. (1949). Human behavior and the principle of least
+effort. Cambridge, Massachusetts: Addison-Wesley. p. 1.</p>
   
     </div>
     

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>cm_df2long. qdap 1.3.5</title>
+<title>cm_df2long. qdap 2.0.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 1.3.5</a>
+      <a class="brand" href="#">qdap 2.0.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -45,58 +45,56 @@
     <h2>Arguments</h2>
     <dl>
       <dt>df.temp.obj</dt>
-      <dd>A character vector of names of
-  object(s) created by <code><a href='cm_df.temp.html'>cm_df.temp</a></code>, a list of
-  <code><a href='cm_df.temp.html'>cm_df.temp</a></code> created objects or a data frame
-  created by <code><a href='cm_df.temp.html'>cm_df.temp</a></code>.</dd>
+      <dd>A character vector of names of object(s) created by
+<code><a href='cm_df.temp.html'>cm_df.temp</a></code>, a list of <code><a href='cm_df.temp.html'>cm_df.temp</a></code> created objects
+or a data frame created by <code><a href='cm_df.temp.html'>cm_df.temp</a></code>.</dd>
       <dt>v.name</dt>
-      <dd>An optional name for the column created for
-  the list.var argument.</dd>
+      <dd>An optional name for the column created for the list.var
+argument.</dd>
       <dt>list.var</dt>
-      <dd>logical.  If <code>TRUE</code> creates a column
-  for the data frame created by each time.list.</dd>
+      <dd>logical.  If <code>TRUE</code> creates a column for the data frame
+created by each time.list.</dd>
       <dt>code.vars</dt>
-      <dd>A character vector of code variables.
-  If <code>NULL</code> uses all variables from the first column
-  after the column named word.num.</dd>
+      <dd>A character vector of code variables.  If <code>NULL</code> uses
+all variables from the first column after the column named word.num.</dd>
       <dt>no.code</dt>
-      <dd>The value to assign to no code; default is
-  <code>NA</code>.</dd>
+      <dd>The value to assign to no code; default is <code>NA</code>.</dd>
       <dt>add.start.end</dt>
-      <dd>logical.  If <code>TRUE</code> adds a
-  column for start and end times.</dd>
+      <dd>logical.  If <code>TRUE</code> adds a column for start and end
+times.</dd>
       <dt>repeat.vars</dt>
-      <dd>A character vector of repeated/stacked
-  variables.  If <code>NULL</code> uses all non code.vars
-  variables.</dd>
+      <dd>A character vector of repeated/stacked variables.  If
+<code>NULL</code> uses all non code.vars variables.</dd>
       <dt>rev.code</dt>
-      <dd>logical.  If <code>TRUE</code> reverses the
-  order of <code>code.vars</code> and <code>no.code</code> variables.</dd>
+      <dd>logical.  If <code>TRUE</code> reverses the order of
+<code>code.vars</code> and <code>no.code</code> variables.</dd>
     </dl>
     
+    <div class="Transform Codes to Start-End Durations">
+      <h2>Transform Codes to Start-End Durations</h2>
+      
+    </div>
+
     <div class="Value">
       <h2>Value</h2>
       
-      <p>Generates a data frame of start and end times for each
-code.</p>
+      <p>Generates a data frame of start and end times for each code.</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Transforms the range coding structure(s) from
-<code>cm_df.temp</code> (in list format) into a data
-frame of start and end durations in long format.</p>
+      <p>Transforms the range coding structure(s) from <code>cm_df.temp</code>
+(in list format) into a data frame of start and end durations in long format.</p>
   
     </div>
 
     <div class="References">
       <h2>References</h2>
       
-      <p>Miles, M. B. & Huberman, A. M. (1994). An expanded
-sourcebook: Qualitative data analysis. 2nd ed. Thousand
-Oaks, CA: SAGE Publications.</p>
+      <p>Miles, M. B. & Huberman, A. M. (1994). An expanded sourcebook:
+Qualitative   data analysis. 2nd ed. Thousand Oaks, CA: SAGE Publications.</p>
   
     </div>
     
@@ -113,7 +111,8 @@ Oaks, CA: SAGE Publications.</p>
       
     <h2>See also</h2>
     
-<code><a href='cm_time2long.html'>cm_time2long</a></code>, <code><a href='cm_range2long.html'>cm_range2long</a></code>,
+<code><a href='cm_time2long.html'>cm_time2long</a></code>,
+<code><a href='cm_range2long.html'>cm_range2long</a></code>,
 <code><a href='cm_df.temp.html'>cm_df.temp</a></code>
 
         

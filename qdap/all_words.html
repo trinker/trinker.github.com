@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>all_words. qdap 1.3.5</title>
+<title>all_words. qdap 2.0.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 1.3.5</a>
+      <a class="brand" href="#">qdap 2.0.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -47,54 +47,55 @@
       <dt>text.var</dt>
       <dd>The text variable.</dd>
       <dt>begins.with</dt>
-      <dd>This argument takes a word chunk.
-  Default is <code>NULL</code>. Use this if searching for a word
-  beginning with the word chunk.</dd>
+      <dd>This argument takes a word chunk.  Default is <code>NULL</code>.
+Use this if searching for a word beginning with the word chunk.</dd>
       <dt>contains</dt>
-      <dd>This argument takes a word chunk.
-  Default is <code>NULL</code>. Use this if searching for a word
-  containing the word chunk.</dd>
+      <dd>This argument takes a word chunk.  Default is <code>NULL</code>.
+Use this if searching for a word containing the word chunk.</dd>
       <dt>alphabetical</dt>
-      <dd>logical.  If <code>TRUE</code> orders rows
-  alphabetically, if <code>FALSE</code> orders the rows by
-  descending frequency.</dd>
+      <dd>logical.  If <code>TRUE</code> orders rows alphabetically, if
+<code>FALSE</code> orders the rows by descending frequency.</dd>
       <dt>apostrophe.remove</dt>
-      <dd>logical.  If <code>TRUE</code> removes
-  apostrophes from the text before examining.</dd>
+      <dd>logical.  If <code>TRUE</code> removes apostrophes from
+the text before examining.</dd>
       <dt>...</dt>
-      <dd>Other argument supplied to
-  <code>strip</code>.</dd>
+      <dd>Other argument supplied to <code>strip</code>.</dd>
     </dl>
     
+    <div class="Searches Text Column for Words">
+      <h2>Searches Text Column for Words</h2>
+      
+    </div>
+
     <div class="Value">
       <h2>Value</h2>
       
-      <p>Returns a dataframe with frequency counts of words that
-begin with or contain the provided word chunk.</p>
+      <p>Returns a dataframe with frequency counts of words that begin with or
+contain the provided word chunk.</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p>A convenience function to find words that begin with or
-contain a letter chunk and returns the frequency counts of
-the number of occurrences of each word.</p>
+      <p>A convenience function to find words that begin with or contain a letter
+chunk and returns the frequency counts of the number of occurrences of each
+word.</p>
   
     </div>
 
     <div class="Note">
       <h2>Note</h2>
       
-      <p>Cannot provide both <code>begins.with</code> and <code>contains</code>
-arguments at once.  If both begins.with and contains are
-<code>NULL</code>. <code>all_words</code> returns a
+      <p>Cannot provide both <code>begins.with</code> and <code>contains</code> arguments
+at once.  If both begins.with and contains are <code>NULL</code>.
+<code>all_words</code> returns a
 frequency count for all words.</p>
   
     </div>
     
     <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # x1 &lt;- all_words(raj$dialogue, begins.with=&quot;re&quot;)# head(x1, 10)# x2 &lt;- all_words(raj$dialogue, &quot;q&quot;)# head(x2, 10)# all_words(raj$dialogue, contains=&quot;conc&quot;)# x3 &lt;- all_words(raj$dialogue)# head(x3, 10)# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # x1 &lt;- all_words(raj$dialogue, begins.with=&quot;re&quot;)# head(x1, 10)# x2 &lt;- all_words(raj$dialogue, &quot;q&quot;)# head(x2, 10)# all_words(raj$dialogue, contains=&quot;conc&quot;)# x3 &lt;- all_words(raj$dialogue)# head(x3, 10)# x4 &lt;- all_words(raj$dialogue, contains=&quot;the)# head(x4)# x5 &lt;- all_words(raj$dialogue, contains=&quot;read&quot;)# head(x5)# # ## Filter by nchar and stopwords# Filter(head(x3), min = 3)# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
   </div>
   <div class="span4">
     <!-- <ul>

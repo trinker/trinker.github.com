@@ -2,11 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>gantt. qdap 1.3.5</title>
+<title>gantt. qdap 2.0.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="
-DigEmAll (&lt;a href = 'stackoverflow.com'&gt;stackoverflow.com&lt;/a&gt;) and Tyler Rinker
-&lt;tyler.rinker@gmail.com&gt;.
+DigEmAll (&lt;a href = 'stackoverflow.com'&gt;stackoverflow.com&lt;/a&gt;) and Tyler Rinker &lt;tyler.rinker@gmail.com&gt;.
 ">
 
 <link href="css/bootstrap.css" rel="stylesheet">
@@ -23,7 +22,7 @@ DigEmAll (&lt;a href = 'stackoverflow.com'&gt;stackoverflow.com&lt;/a&gt;) and T
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 1.3.5</a>
+      <a class="brand" href="#">qdap 2.0.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -51,51 +50,49 @@ DigEmAll (&lt;a href = 'stackoverflow.com'&gt;stackoverflow.com&lt;/a&gt;) and T
       <dt>text.var</dt>
       <dd>The text variable</dd>
       <dt>grouping.var</dt>
-      <dd>The grouping variables. Also takes a
-  single grouping variable or a list of 1 or more grouping
-  variables.</dd>
+      <dd>The grouping variables. Also takes a single grouping
+variable or a list of 1 or more grouping variables.</dd>
       <dt>units</dt>
-      <dd>The unit of measurement to analyze.  One of
-  the strings <code>"character"</code>, <code>"syllable"</code>,
-  <code>"word"</code>, or <code>"sentence"</code>.</dd>
+      <dd>The unit of measurement to analyze.  One of the strings
+<code>"character"</code>, <code>"syllable"</code>, <code>"word"</code>, or <code>"sentence"</code>.</dd>
       <dt>sums</dt>
-      <dd>logical.  If <code>TRUE</code> reports and
-  (optionally (or plots) the total units used by grouping
-  variable(s).</dd>
+      <dd>logical.  If <code>TRUE</code> reports and (optionally (or plots) the
+total units used by grouping variable(s).</dd>
       <dt>col.sep</dt>
-      <dd>The character string to use to separate
-  pasted variables in the merged grouping variable
-  header/name.</dd>
+      <dd>The character string to use to separate pasted variables in
+the merged grouping variable header/name.</dd>
       <dt>x</dt>
       <dd>n object of the class "gantt".</dd>
       <dt>fill.colors</dt>
-      <dd>The colors of the Gantt plot bars.
-  Either a single color or a length equal to the number of
-  grouping variable(s).  If <code>NULL</code>, <code>rainbow</code> is
-  used.</dd>
+      <dd>The colors of the Gantt plot bars.  Either a single color
+or a length equal to the number of grouping variable(s).  If <code>NULL</code>,
+<code>rainbow</code> is used.</dd>
       <dt>box.color</dt>
       <dd>A color to wrap the boxes with.</dd>
       <dt>title</dt>
       <dd>An optional title.</dd>
     </dl>
     
+    <div class="Gantt Durations">
+      <h2>Gantt Durations</h2>
+      
+    </div>
+
     <div class="Value">
       <h2>Value</h2>
       
-      <p>Returns a data frame of start and end times by grouping
-variable(s) or optionally returns a list of two: (1) A data
-frame of the total units used by grouping variable(s) and
-(2) a data frame of start and end times by grouping
-variable(s).</p>
+      <p>Returns a data frame of start and end times by grouping variable(s)
+or optionally returns a list of two: (1) A data frame of the total units
+used by grouping variable(s) and (2) a data frame of start and end times
+by grouping variable(s).</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p><code>gantt</code> - Generates start and end times of supplied
-text selections (i.e., text selections are determined by
-any number of grouping variables).</p>
+      <p><code>gantt</code> - Generates start and end times of supplied text selections
+(i.e., text selections are determined by any number of grouping variables).</p>
   
       <p><code>plot_gantt_base</code> - For internal use.</p>
   
@@ -104,10 +101,9 @@ any number of grouping variables).</p>
     <div class="Note">
       <h2>Note</h2>
       
-      <p>For non-repeated measures data use
-<code>gantt</code>.  For more flexible plotting
-needs use <code>gantt_wrap</code> over the generic
-plotting method.</p>
+      <p>For non-repeated measures data use <code>gantt</code>.  For
+more flexible plotting needs use <code>gantt_wrap</code> over the
+generic plotting method.</p>
   
     </div>
 
@@ -139,8 +135,7 @@ tool of management. New York, Ronald Press.</p>
     
     <h2>Author</h2>
     
-DigEmAll (<a href = 'stackoverflow.com'>stackoverflow.com</a>) and Tyler Rinker
-<tyler.rinker@gmail.com>.
+DigEmAll (<a href = 'stackoverflow.com'>stackoverflow.com</a>) and Tyler Rinker <tyler.rinker@gmail.com>.
 
     
   </div>

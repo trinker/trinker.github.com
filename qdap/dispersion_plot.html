@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>dispersion_plot. qdap 1.3.5</title>
+<title>dispersion_plot. qdap 2.0.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 1.3.5</a>
+      <a class="brand" href="#">qdap 2.0.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -49,36 +49,33 @@
       <dt>match.terms</dt>
       <dd>A vector of quoted terms.</dd>
       <dt>grouping.var</dt>
-      <dd>The grouping variables.  Default
-  <code>NULL</code> generates one word list for all text.  Also
-  takes a single grouping variable or a list of 1 or more
-  grouping variables.</dd>
+      <dd>The grouping variables.  Default <code>NULL</code> generates
+one word list for all text.  Also takes a single grouping variable or a list
+of 1 or more grouping variables.</dd>
       <dt>rm.vars</dt>
-      <dd>The repeated measures variables.  Default
-  <code>NULL</code> generates one facet for all text.  Also takes
-  a single repeated measures variable or a list of 1 or
-  more grouping variables.</dd>
+      <dd>The repeated measures variables.  Default <code>NULL</code> generates
+one facet for all text.  Also takes a single repeated measures variable or
+a list of 1 or more grouping variables.</dd>
       <dt>color</dt>
       <dd>The color of the word symbols.</dd>
       <dt>bg.color</dt>
       <dd>The background color.</dd>
       <dt>horiz.color</dt>
-      <dd>The color of the horizontal tracking
-  stripe.  Use <code>horiz.color = bg.color</code> to eliminate.</dd>
+      <dd>The color of the horizontal tracking stripe.  Use
+<code>horiz.color = bg.color</code> to eliminate.</dd>
       <dt>total.color</dt>
-      <dd>The color to use for summary `all`
-  group.  If <code>NULL</code> totals are dropped.</dd>
+      <dd>The color to use for summary `all` group.  If <code>NULL</code>
+totals are dropped.</dd>
       <dt>symbol</dt>
       <dd>The word symbol.  Default is <code>"|"</code>.</dd>
       <dt>title</dt>
       <dd>Title of the plot</dd>
       <dt>rev.factor</dt>
-      <dd>logical.  If <code>TRUE</code> reverses the
-  plot order of the factors.</dd>
+      <dd>logical.  If <code>TRUE</code> reverses the plot order of the
+factors.</dd>
       <dt>wrap</dt>
-      <dd>a character to wrap around the words (enables
-  the reader to visualize spaces).  Default is <code>"'"</code>,
-  use <code>""</code> to remove.</dd>
+      <dd>a character to wrap around the words (enables the reader to
+visualize spaces).  Default is <code>"'"</code>, use <code>""</code> to remove.</dd>
       <dt>xlab</dt>
       <dd>The x label.</dd>
       <dt>ylab</dt>
@@ -86,37 +83,35 @@
       <dt>size</dt>
       <dd>The size of the plotting symbol.</dd>
       <dt>plot</dt>
-      <dd>logical.  If <code>TRUE</code> the plot will
-  automatically plot. The user may wish to set to
-  <code>FALSE</code> for use in knitr, sweave, etc. to add
-  additional plot layers.</dd>
+      <dd>logical.  If <code>TRUE</code> the plot will automatically plot.
+The user may wish to set to <code>FALSE</code> for use in knitr, sweave, etc.
+to add additional plot layers.</dd>
       <dt>char2space</dt>
-      <dd>A vector of characters to be turned
-  into spaces.</dd>
+      <dd>A vector of characters to be turned into spaces.</dd>
       <dt>apostrophe.remove</dt>
-      <dd>logical.  If <code>TRUE</code> removes
-  apostrophes from the output.</dd>
+      <dd>logical.  If <code>TRUE</code> removes apostrophes from
+the output.</dd>
       <dt>scales</dt>
-      <dd>Should scales be fixed (<code>"fixed"</code>, the
-  default), free (<code>"free"</code>), or free in one dimension
-  (<code>"free_x"</code>, <code>"free_y"</code>)</dd>
+      <dd>Should scales be fixed (<code>"fixed"</code>, the default), free
+(<code>"free"</code>), or free in one dimension (<code>"free_x"</code>, <code>"free_y"</code>)</dd>
       <dt>space</dt>
-      <dd>If <code>"fixed"</code>, the default, all panels
-  have the same size. If <code>"free_y"</code> their height will
-  be proportional to the length of the y scale; if
-  <code>"free_x"</code> their width will be proportional to the
-  length of the x scale; or if <code>"free"</code> both height
-  and width will vary.</dd>
+      <dd>If <code>"fixed"</code>, the default, all panels have the same size.
+If <code>"free_y"</code> their height will be proportional to the length of the y
+scale; if <code>"free_x"</code> their width will be proportional to the length of
+the x scale; or if <code>"free"</code> both height and width will vary.</dd>
       <dt>...</dt>
-      <dd>Other argument supplied to
-  <code>strip</code>.</dd>
+      <dd>Other argument supplied to <code>strip</code>.</dd>
     </dl>
     
+    <div class="Lexical Dispersion Plot">
+      <h2>Lexical Dispersion Plot</h2>
+      
+    </div>
+
     <div class="Value">
       <h2>Value</h2>
       
-      <p>Plots a dispersion plot and invisibly returns the ggplot2
-object.</p>
+      <p>Plots a dispersion plot and invisibly returns the ggplot2 object.</p>
   
     </div>
 
@@ -130,11 +125,10 @@ object.</p>
     <div class="Note">
       <h2>Note</h2>
       
-      <p>The match.terms is character sensitive.  Spacing is an
-important way to grab specific words and requires careful
-thought.  Using "read" will find the words "bread", "read"
-"reading", and "ready".  If you want to search for just the
-word "read" you'd supply a vector of c(" read ", " reads",
+      <p>The match.terms is character sensitive.  Spacing is an important way
+to grab specific words and requires careful thought.  Using "read" will find
+the words "bread", "read" "reading", and "ready".  If you want to search
+for just the word "read" you'd supply a vector of c(" read ", " reads",
 " reading", " reader").</p>
   
     </div>

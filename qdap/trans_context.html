@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>trans_context. qdap 1.3.5</title>
+<title>trans_context. qdap 2.0.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 1.3.5</a>
+      <a class="brand" href="#">qdap 2.0.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -47,43 +47,41 @@
       <dt>text.var</dt>
       <dd>The text variable.</dd>
       <dt>grouping.var</dt>
-      <dd>The grouping variables.  Also takes a
-  single grouping variable or a list of 1 or more grouping
-  variables.</dd>
+      <dd>The grouping variables.  Also takes a single
+grouping variable or a list
+of 1 or more grouping variables.</dd>
       <dt>inds</dt>
-      <dd>A list of integer indices to print context
-  for.</dd>
+      <dd>A list of integer indices to print context for.</dd>
       <dt>n.before</dt>
-      <dd>The number of rows before the indexed
-  occurrence.</dd>
+      <dd>The number of rows before the indexed occurrence.</dd>
       <dt>tot</dt>
-      <dd>logical.  If <code>TRUE</code> condenses sub-units
-  (e.g., sentences) into turns of talk for that
-  <code>grouping.var</code>.</dd>
+      <dd>logical.  If <code>TRUE</code> condenses sub-units (e.g., sentences)
+into turns of talk for that <code>grouping.var</code>.</dd>
       <dt>n.after</dt>
-      <dd>The number of rows after the indexed
-  occurrence.</dd>
+      <dd>The number of rows after the indexed occurrence.</dd>
       <dt>ord.inds</dt>
-      <dd>logical.  If <code>TRUE</code> inds is ordered
-  least to greatest.</dd>
+      <dd>logical.  If <code>TRUE</code> inds is ordered least to greatest.</dd>
     </dl>
     
+    <div class="Print Context Around Indices">
+      <h2>Print Context Around Indices</h2>
+      
+    </div>
+
     <div class="Value">
       <h2>Value</h2>
       
-      <p>Returns a dataframe of the class "qdap_context" that can be
-printed (i.e., saved) in flexible outputs.  The dataframe
-can be printed as a dataframe style or pretty text output.
-The resulting file contains n rows before and after each
-index of a vector of indices.</p>
+      <p>Returns a dataframe of the class "qdap_context" that can be printed
+(i.e., saved) in flexible outputs.  The dataframe can be printed as a
+dataframe style or pretty text output.  The resulting file contains n rows
+before and after each index of a vector of indices.</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Print (or save to an external file) n text elements before
-and after indices.</p>
+      <p>Print (or save to an external file) n text elements before and after indices.</p>
   
     </div>
     
