@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>wfm. qdap 2.0.1</title>
+<title>wfm. qdap 2.1.1</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 2.0.1</a>
+      <a class="brand" href="#">qdap 2.1.1</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -46,8 +46,14 @@
 <div>wfm_combine(wf.obj, word.lists, matrix&nbsp;=&nbsp;TRUE)</div>
 <div>"weight"(x, type&nbsp;=&nbsp;"prop", ...)</div>
 <div>"weight"(x, type&nbsp;=&nbsp;"prop", ...)</div>
-<div>"Filter"(x, min&nbsp;=&nbsp;1, max&nbsp;=&nbsp;Inf, count.apostrophe&nbsp;=&nbsp;TRUE, stopwords&nbsp;=&nbsp;NULL, ...)</div>
-<div>as.wfm(matrix.object)</div></pre>
+<div>as.wfm(x, ...)</div>
+<div>"as.wfm"(x, ...)</div>
+<div>"as.wfm"(x, ...)</div>
+<div>"as.wfm"(x, ...)</div>
+<div>"as.wfm"(x, ...)</div>
+<div>"as.wfm"(x, ...)</div>
+<div>"as.wfm"(x, ...)</div>
+<div>"as.wfm"(x, col&nbsp;=&nbsp;"docs", row&nbsp;=&nbsp;"text", ...)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -66,7 +72,9 @@ of 1 or more grouping variables.</dd>
 <code>char.keep</code> is <code>NULL</code>, <code>char2space</code> will activate this
 argument.</dd>
       <dt>...</dt>
-      <dd>Other arguments supplied to <code>strip</code>.</dd>
+      <dd>Other arguments supplied to <code>strip</code>.  If
+<code>as.wfm</code> this is other arguments passed to <code>as.wfm</code> methods
+(currently ignored).</dd>
       <dt>digits</dt>
       <dd>An integer indicating the number of decimal places (round) or
 significant digits (signif) to be used. Negative values are allowed.</dd>
@@ -90,18 +98,11 @@ the max value; all values are integers and column sums may not be equal.
 <code>center = FALSE</code>; output is not integer and column sums may not be
 equal.</dd>
       <dt>x</dt>
-      <dd>A filterable object (e.g., <code>wfm</code>,
-<code><a href='http://www.inside-r.org/r-doc/base/character'>character</a></code>).</dd>
-      <dt>min</dt>
-      <dd>Minimum word length.</dd>
-      <dt>max</dt>
-      <dd>Maximum word length.</dd>
-      <dt>count.apostrophe</dt>
-      <dd>logical.  If <code>TRUE</code> apostrophes are counted as
-characters.</dd>
-      <dt>matrix.object</dt>
-      <dd>A matrix object with words for row names and integer
-values.</dd>
+      <dd>An object with words for row names and integer values.</dd>
+      <dt>col</dt>
+      <dd>The column name (generally not used).</dd>
+      <dt>row</dt>
+      <dd>The row name (generally not used).</dd>
     </dl>
     
     <div class="Word Frequency Matrix">
@@ -128,8 +129,6 @@ remaining terms (<code>else</code>).</p>
       <p><code>weight</code> - Returns a weighted matrix for use with other R
 packages. The output is not of the class "wfm".</p>
   
-      <p><code>Filter</code> - Returns a matrix of the class "wfm".</p>
-  
       <p><code>as.wfm</code> - Returns a matrix of the class "wfm".</p>
   
     </div>
@@ -153,10 +152,28 @@ weighting is sensible.</p>
       <p><code>weight.wfdf</code> - Weight a word frequency matrix for analysis where such
 weighting is sensible.</p>
   
-      <p><code>Filter</code> - Filter words from a wfm that meet max/min word length
-criteria.</p>
-  
       <p><code>as.wfm</code> - Attempts to coerce a matrix to a <code>wfm</code>.</p>
+  
+      <p><code>as.wfm.matrix</code> - <code>matrix</code> method for <code>as.wfm</code> used to
+convert matrices to a <code>wfm</code>.</p>
+  
+      <p><code>as.wfm.default</code> - Default method for <code>as.wfm</code> used to
+convert matrices to a <code>wfm</code>.</p>
+  
+      <p><code>as.wfm.TermDocumentMatrix</code> - <code>TermDocumentMatrix</code> method for
+<code>as.wfm</code> used to a <code>TermDocumentMatrix</code> to a <code>wfm</code>.</p>
+  
+      <p><code>as.wfm.DocumentTermMatrix</code> - <code>DocumentTermMatrix</code> method for
+<code>as.wfm</code> used to a <code>DocumentTermMatrix</code> to a <code>wfm</code>.</p>
+  
+      <p><code>as.wfm.data.frame</code> - data.frame method for <code>as.wfm</code> used to
+convert matrices to a <code>wfm</code>.</p>
+  
+      <p><code>as.wfm.wfdf</code> - wfdf method for <code>as.wfm</code> used to
+convert matrices to a <code>wfm</code>.</p>
+  
+      <p><code>as.wfm.Corpus</code> - Corpus method for <code>as.wfm</code> used to
+convert matrices to a <code>wfm</code>.</p>
   
     </div>
 
@@ -174,7 +191,7 @@ useful for keeping proper names as a single unit.</p>
   </div>
   <div class="span4">
     <!-- <ul>
-      <li>Filter.wfm</li><li>as.wfm</li><li>weight.wfdf</li><li>weight.wfm</li><li>wfdf</li><li>wfm</li><li>wfm_combine</li><li>wfm_expanded</li>
+      <li>as.wfm</li><li>as.wfm.Corpus</li><li>as.wfm.DocumentTermMatrix</li><li>as.wfm.TermDocumentMatrix</li><li>as.wfm.data.frame</li><li>as.wfm.default</li><li>as.wfm.matrix</li><li>as.wfm.wfdf</li><li>weight.wfdf</li><li>weight.wfm</li><li>wfdf</li><li>wfm</li><li>wfm_combine</li><li>wfm_expanded</li>
     </ul>
     <ul>
       <li>word-frequency-matrix</li>

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>exclude. qdap 2.0.1</title>
+<title>exclude. qdap 2.1.1</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 2.0.1</a>
+      <a class="brand" href="#">qdap 2.1.1</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -76,7 +76,7 @@ the <code>word.list</code>.</dd>
     </div>
     
     <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # exclude(1:10, 3, 4)# exclude(1:10, 3:4)# Top25Words# exclude(Top25Words, qcv(the, of, and))# exclude(Top25Words, &quot;the&quot;, &quot;of&quot;, &quot;an&quot;)# # #Using with term_match and termco# terms &lt;- term_match(DATA$state, qcv(th), FALSE)# exclude(terms, &quot;truth&quot;)# #all together# termco(DATA$state, DATA$person, exclude(term_match(DATA$state, qcv(th),#     FALSE), &quot;truth&quot;))# # MTCH.LST &lt;- exclude(term_match(DATA$state, qcv(th, i)), qcv(truth, stinks))# termco(DATA$state, DATA$person, MTCH.LST)# # ## Works with wfm# dat &lt;- wfm(DATA$state, DATA$person)# the.no &lt;- term_match(DATA$state, c(&quot;the&quot;, &quot;no&quot;))# exclude(dat, unlist(the.no))# # ## Works with tm&#39;s TermDocumentMatrix/DocumentTermMatrix# dat2 &lt;- dtm(DATA$state, DATA$person)# out.dtm &lt;- exclude(dat2, unlist(the.no))# tm::inspect(out.dtm)# # dat3 &lt;- tdm(DATA$state, DATA$person)# out.tdm &lt;- exclude(dat3, unlist(the.no))# tm::inspect(out.tdm)# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # exclude(1:10, 3, 4)# exclude(1:10, 3:4)# Top25Words# exclude(Top25Words, qcv(the, of, and))# exclude(Top25Words, &quot;the&quot;, &quot;of&quot;, &quot;an&quot;)# # #Using with term_match and termco# terms &lt;- term_match(DATA$state, qcv(th), FALSE)# exclude(terms, &quot;truth&quot;)# #all together# termco(DATA$state, DATA$person, exclude(term_match(DATA$state, qcv(th),#     FALSE), &quot;truth&quot;))# # MTCH.LST &lt;- exclude(term_match(DATA$state, qcv(th, i)), qcv(truth, stinks))# termco(DATA$state, DATA$person, MTCH.LST)# # ## Works with wfm# dat &lt;- wfm(DATA$state, DATA$person)# the.no &lt;- term_match(DATA$state, c(&quot;the&quot;, &quot;no&quot;))# exclude(dat, unlist(the.no))# # ## Works with tm&#39;s TermDocumentMatrix/DocumentTermMatrix# dat2 &lt;- as.dtm(DATA$state, DATA$person)# out.dtm &lt;- exclude(dat2, unlist(the.no))# tm::inspect(out.dtm)# # dat3 &lt;- as.tdm(DATA$state, DATA$person)# out.tdm &lt;- exclude(dat3, unlist(the.no))# tm::inspect(out.tdm)# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
   </div>
   <div class="span4">
     <!-- <ul>

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>Filter.all_words. qdap 2.0.1</title>
+<title>Filter.all_words. qdap 2.1.1</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 2.0.1</a>
+      <a class="brand" href="#">qdap 2.1.1</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -44,6 +44,7 @@
 <div>"Filter"(x, min&nbsp;=&nbsp;1, max&nbsp;=&nbsp;Inf, count.apostrophe&nbsp;=&nbsp;TRUE, stopwords&nbsp;=&nbsp;NULL, ignore.case&nbsp;=&nbsp;TRUE, ...)</div>
 <div>"Filter"(x, min&nbsp;=&nbsp;1, max&nbsp;=&nbsp;Inf, count.apostrophe&nbsp;=&nbsp;TRUE, stopwords&nbsp;=&nbsp;NULL, ignore.case&nbsp;=&nbsp;TRUE, ...)</div>
 <div>Filter(x, min&nbsp;=&nbsp;1, max&nbsp;=&nbsp;Inf, count.apostrophe&nbsp;=&nbsp;TRUE, stopwords&nbsp;=&nbsp;NULL, ignore.case&nbsp;=&nbsp;TRUE, ...)</div>
+<div>"Filter"(x, min&nbsp;=&nbsp;1, max&nbsp;=&nbsp;Inf, count.apostrophe&nbsp;=&nbsp;TRUE, stopwords&nbsp;=&nbsp;NULL, ...)</div>
 <div>"Filter"(x, min&nbsp;=&nbsp;1, max&nbsp;=&nbsp;Inf, count.apostrophe&nbsp;=&nbsp;TRUE, stopwords&nbsp;=&nbsp;NULL, ignore.case&nbsp;=&nbsp;TRUE, ...)</div>
 <div>"Filter"(x, min&nbsp;=&nbsp;1, max&nbsp;=&nbsp;Inf, count.apostrophe&nbsp;=&nbsp;TRUE, stopwords&nbsp;=&nbsp;NULL, ignore.case&nbsp;=&nbsp;TRUE, ...)</div>
 <div>"Filter"(x, min&nbsp;=&nbsp;1, max&nbsp;=&nbsp;Inf, count.apostrophe&nbsp;=&nbsp;TRUE, stopwords&nbsp;=&nbsp;NULL, ignore.case&nbsp;=&nbsp;TRUE, ...)</div>
@@ -84,6 +85,8 @@ regardless of case (ignored if used on a <code>wfm</code>).</dd>
   
       <p><code>Filter.DocumentTermMatrix</code> - Returns a matrix of the class "DocumentTermMatrix".</p>
   
+      <p><code>Filter</code> - Returns a matrix of the class "wfm".</p>
+  
       <p><code>Filter.character</code> - Returns a vector of the class "character".</p>
   
       <p><code>Filter.wfm</code> - Returns a matrix of the class "wfm".</p>
@@ -110,6 +113,9 @@ that meet max/min word length criteria.</p>
   
       <p><code>Filter</code> - Filter words from various objects that meet max/min word
 length criteria.</p>
+  
+      <p><code>Filter.wfm</code> - Filter words from a wfm that meet max/min word length
+criteria.</p>
   
       <p><code>Filter.character</code> - Filter words from a character vector that meet
 max/min word length criteria.</p>
@@ -158,7 +164,7 @@ grabbing rows (or elements) meeting a particular criteria.</p>
   </div>
   <div class="span4">
     <!-- <ul>
-      <li>Filter</li><li>Filter.DocumentTermMatrix</li><li>Filter.TermDocumentMatrix</li><li>Filter.all_words</li><li>Filter.character</li><li>Filter.fswl</li><li>Filter.fwl</li><li>Filter.rfswl</li>
+      <li>Filter</li><li>Filter.DocumentTermMatrix</li><li>Filter.TermDocumentMatrix</li><li>Filter.all_words</li><li>Filter.character</li><li>Filter.fswl</li><li>Filter.fwl</li><li>Filter.rfswl</li><li>Filter.wfm</li>
     </ul>
     <ul>
       
