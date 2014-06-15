@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>multigsub. qdap 2.0.0</title>
+<title>multigsub. qdap 2.1.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 2.0.0</a>
+      <a class="brand" href="#">qdap 2.1.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -42,7 +42,7 @@
     <h2>Usage</h2>
     <pre><div>multigsub(pattern, replacement&nbsp;=&nbsp;NULL, text.var, leadspace&nbsp;=&nbsp;FALSE, trailspace&nbsp;=&nbsp;FALSE, fixed&nbsp;=&nbsp;TRUE, trim&nbsp;=&nbsp;TRUE, order.pattern&nbsp;=&nbsp;fixed, ...)</div>
 <div>mgsub(pattern, replacement&nbsp;=&nbsp;NULL, text.var, leadspace&nbsp;=&nbsp;FALSE, trailspace&nbsp;=&nbsp;FALSE, fixed&nbsp;=&nbsp;TRUE, trim&nbsp;=&nbsp;TRUE, order.pattern&nbsp;=&nbsp;fixed, ...)</div>
-<div>sub_holder(pattern, text.var, ...)</div></pre>
+<div>sub_holder(pattern, text.var, alpha.type&nbsp;=&nbsp;TRUE, ...)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -72,6 +72,9 @@ replacing meta strings (e.g., <code>pattern = c("the", "then")</code> resorts to
 search for "then" first).</dd>
       <dt>...</dt>
       <dd>Additional arguments passed to <code><a href='http://www.inside-r.org/r-doc/base/grep'>gsub</a></code>.</dd>
+      <dt>alpha.type</dt>
+      <dd>logical.  If <code>TRUE</code> alpha (lower case letters) are
+used for the key.  If <code>FALSE</code> numbers are used as the key.</dd>
     </dl>
     
     <div class="Multiple gsub">
@@ -113,7 +116,7 @@ pattern of `qdapplaceholder` followed by lower case letter keys followed by
     </div>
     
     <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # multigsub(c(&quot;it&#39;s&quot;, &quot;I&#39;m&quot;), c(&quot;it is&quot;, &quot;I am&quot;), DATA$state)# mgsub(c(&quot;it&#39;s&quot;, &quot;I&#39;m&quot;), c(&quot;it is&quot;, &quot;I am&quot;), DATA$state)# mgsub(&quot;[[:punct:]]&quot;, &quot;PUNC&quot;, DATA$state, fixed = FALSE)# # ## `sub_holder` Function# (fake_dat &lt;- paste(emoticon[1:11,2], DATA$state))# (m &lt;- sub_holder(emoticon[,2], fake_dat))# m$unhold(strip(m$output))# # With Stemming# m$unhold(stemmer(strip(m$output), capitalize = FALSE))# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # ## ======================# ##    `mgsub` Function# ## ======================# # multigsub(c(&quot;it&#39;s&quot;, &quot;I&#39;m&quot;), c(&quot;it is&quot;, &quot;I am&quot;), DATA$state)# mgsub(c(&quot;it&#39;s&quot;, &quot;I&#39;m&quot;), c(&quot;it is&quot;, &quot;I am&quot;), DATA$state)# mgsub(&quot;[[:punct:]]&quot;, &quot;PUNC&quot;, DATA$state, fixed = FALSE)# # ## ======================# ## `sub_holder` Function# ## ======================# # ## `alpha.type` as TRUE# (fake_dat &lt;- paste(emoticon[1:11,2], DATA$state))# (m &lt;- sub_holder(emoticon[,2], fake_dat))# m$unhold(strip(m$output))# # With Stemming# m$unhold(stemmer(strip(m$output), capitalize = FALSE))# # ## `alpha.type` as FALSE (numeric keys)# vowels &lt;- LETTERS[c(1, 5, 9, 15, 21)]# (m2 &lt;- sub_holder(vowels, toupper(DATA$state), alpha.type = FALSE))# m2$unhold(gsub(&quot;[^0-9]&quot;, &quot;&quot;, m2$output))# mtabulate(strsplit(m2$unhold(gsub(&quot;[^0-9]&quot;, &quot;&quot;, m2$output)), &quot;&quot;))# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
   </div>
   <div class="span4">
     <!-- <ul>
