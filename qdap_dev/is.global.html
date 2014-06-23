@@ -98,6 +98,16 @@ environment.</p>
 <div class='input'>FUN &lt;- function() is.global(); FUN()
 </div>
 <div class='output'>[1] FALSE
+</div>
+<div class='input'>
+FUN2 &lt;- function(x = is.global(2)) x
+FUN2()
+</div>
+<div class='output'>[1] FALSE
+</div>
+<div class='input'>FUN3 &lt;- function() FUN2(); FUN3()
+</div>
+<div class='output'>[1] FALSE
 </div></pre>
   </div>
   <div class="span4">

@@ -41,6 +41,9 @@
   <div class="span8">
     <h2>Usage</h2>
     <pre><div>wfm(text.var&nbsp;=&nbsp;NULL, grouping.var&nbsp;=&nbsp;NULL, output&nbsp;=&nbsp;"raw", stopwords&nbsp;=&nbsp;NULL, char2space&nbsp;=&nbsp;"~~", ...)</div>
+<div>"wfm"(text.var&nbsp;=&nbsp;NULL, grouping.var&nbsp;=&nbsp;NULL, output&nbsp;=&nbsp;"raw", stopwords&nbsp;=&nbsp;NULL, char2space&nbsp;=&nbsp;"~~", ...)</div>
+<div>"wfm"(text.var&nbsp;=&nbsp;NULL, grouping.var&nbsp;=&nbsp;NULL, output&nbsp;=&nbsp;"raw", stopwords&nbsp;=&nbsp;NULL, char2space&nbsp;=&nbsp;"~~", ...)</div>
+<div>"wfm"(text.var&nbsp;=&nbsp;NULL, grouping.var&nbsp;=&nbsp;NULL, output&nbsp;=&nbsp;"raw", stopwords&nbsp;=&nbsp;NULL, char2space&nbsp;=&nbsp;"~~", ...)</div>
 <div>wfdf(text.var, grouping.var&nbsp;=&nbsp;NULL, stopwords&nbsp;=&nbsp;NULL, margins&nbsp;=&nbsp;FALSE, output&nbsp;=&nbsp;"raw", digits&nbsp;=&nbsp;2, char2space&nbsp;=&nbsp;"~~", ...)</div>
 <div>wfm_expanded(text.var, grouping.var&nbsp;=&nbsp;NULL, ...)</div>
 <div>wfm_combine(wf.obj, word.lists, matrix&nbsp;=&nbsp;TRUE)</div>
@@ -72,7 +75,7 @@ of 1 or more grouping variables.</dd>
 <code>char.keep</code> is <code>NULL</code>, <code>char2space</code> will activate this
 argument.</dd>
       <dt>...</dt>
-      <dd>Other arguments supplied to <code>strip</code>.  If
+      <dd>Other arguments supplied to <code><a href='http://www.inside-r.org/r-doc/tm/Corpus'>Corpus</a></code>.  If
 <code>as.wfm</code> this is other arguments passed to <code>as.wfm</code> methods
 (currently ignored).</dd>
       <dt>digits</dt>
@@ -138,6 +141,12 @@ packages. The output is not of the class "wfm".</p>
       
       <p><code>wfm</code> - Generate a word frequency matrix by grouping variable(s).</p>
   
+      <p><code>wfm.wfdf</code> - wfdf method for <code>wfm</code>.</p>
+  
+      <p><code>wfm.character</code> - character method for <code>wfm</code>.</p>
+  
+      <p><code>wfm.factor</code> - factor method for <code>wfm</code>.</p>
+  
       <p><code>wfdf</code> - Generate a word frequency data frame by grouping variable.</p>
   
       <p><code>wfm_expanded</code> - Expand a word frequency matrix to have multiple rows
@@ -191,7 +200,7 @@ useful for keeping proper names as a single unit.</p>
   </div>
   <div class="span4">
     <!-- <ul>
-      <li>as.wfm</li><li>as.wfm.Corpus</li><li>as.wfm.DocumentTermMatrix</li><li>as.wfm.TermDocumentMatrix</li><li>as.wfm.data.frame</li><li>as.wfm.default</li><li>as.wfm.matrix</li><li>as.wfm.wfdf</li><li>weight.wfdf</li><li>weight.wfm</li><li>wfdf</li><li>wfm</li><li>wfm_combine</li><li>wfm_expanded</li>
+      <li>as.wfm</li><li>as.wfm.Corpus</li><li>as.wfm.DocumentTermMatrix</li><li>as.wfm.TermDocumentMatrix</li><li>as.wfm.data.frame</li><li>as.wfm.default</li><li>as.wfm.matrix</li><li>as.wfm.wfdf</li><li>weight.wfdf</li><li>weight.wfm</li><li>wfdf</li><li>wfm</li><li>wfm.character</li><li>wfm.factor</li><li>wfm.wfdf</li><li>wfm_combine</li><li>wfm_expanded</li>
     </ul>
     <ul>
       <li>word-frequency-matrix</li>
