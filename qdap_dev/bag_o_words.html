@@ -41,6 +41,7 @@
   <div class="span8">
     <h2>Usage</h2>
     <pre><div>bag_o_words(text.var, apostrophe.remove&nbsp;=&nbsp;FALSE, ...)</div>
+<div>unbag(text.var, na.rm&nbsp;=&nbsp;TRUE)</div>
 <div>breaker(text.var)</div>
 <div>word_split(text.var)</div></pre>
     
@@ -53,6 +54,8 @@
 the output.</dd>
       <dt>...</dt>
       <dd>further arguments passed to strip function.</dd>
+      <dt>na.rm</dt>
+      <dd>logical.  If <code>TRUE</code> <code>NA</code>s are removed before pasting.</dd>
     </dl>
     
     <div class="Bag of Words">
@@ -65,7 +68,9 @@ the output.</dd>
       
       <p>Returns a vector of striped words.</p>
   
-      <p><code>breaker</code> - returns a vector of striped words and qdap
+      <p><code>unbag</code> - Returns a string.</p>
+  
+      <p><code>breaker</code> - Returns a vector of striped words and qdap
 recognized endmarks (i.e., <code>".", "!", "?", "*", "-"</code>).</p>
   
     </div>
@@ -74,6 +79,9 @@ recognized endmarks (i.e., <code>".", "!", "?", "*", "-"</code>).</p>
       <h2>Description</h2>
       
       <p><code>bag_o_words</code> - Reduces a text column to a bag of words.</p>
+  
+      <p><code>unbag</code> - Wrapper for <code>paste(collapse=" ")</code> to glue words back into
+strings.</p>
   
       <p><code>breaker</code> - Reduces a text column to a bag of words and qdap recognized
 end marks.</p>
@@ -84,11 +92,11 @@ words and qdap recognized end marks (i.e., <code>".", "!", "?", "*", "-"</code>)
     </div>
     
     <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # bag_o_words(&quot;I&#39;m going home!&quot;)# bag_o_words(&quot;I&#39;m going home!&quot;, apostrophe.remove = TRUE)# # bag_o_words(DATA$state)# by(DATA$state, DATA$person, bag_o_words)# lapply(DATA$state,  bag_o_words)# # breaker(DATA$state)# by(DATA$state, DATA$person, breaker)# lapply(DATA$state,  breaker)# # word_split(c(NA, DATA$state))# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: # bag_o_words(&quot;I&#39;m going home!&quot;)# bag_o_words(&quot;I&#39;m going home!&quot;, apostrophe.remove = TRUE)# unbag(bag_o_words(&quot;I&#39;m going home!&quot;))# # bag_o_words(DATA$state)# by(DATA$state, DATA$person, bag_o_words)# lapply(DATA$state,  bag_o_words)# # breaker(DATA$state)# by(DATA$state, DATA$person, breaker)# lapply(DATA$state,  breaker)# unbag(breaker(DATA$state))# # word_split(c(NA, DATA$state))# unbag(word_split(c(NA, DATA$state)))# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;</div></pre>
   </div>
   <div class="span4">
     <!-- <ul>
-      <li>bag_o_words</li><li>breaker</li><li>word_split</li>
+      <li>bag_o_words</li><li>breaker</li><li>unbag</li><li>word_split</li>
     </ul>
     <ul>
       <li>bag-of-words</li>

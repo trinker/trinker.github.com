@@ -47,16 +47,21 @@ Matrix or Document Term Matrix</h1>
 <div>as.DocumentTermMatrix(text.var, grouping.var&nbsp;=&nbsp;NULL, vowel.check&nbsp;=&nbsp;TRUE, ...)</div>
 <div>"as.tdm"(text.var, grouping.var&nbsp;=&nbsp;NULL, vowel.check&nbsp;=&nbsp;TRUE, ...)</div>
 <div>"as.tdm"(text.var, grouping.var&nbsp;=&nbsp;NULL, vowel.check&nbsp;=&nbsp;TRUE, ...)</div>
+<div>"as.tdm"(text.var, grouping.var&nbsp;=&nbsp;NULL, vowel.check&nbsp;=&nbsp;TRUE, ...)</div>
+<div>"as.dtm"(text.var, grouping.var&nbsp;=&nbsp;NULL, vowel.check&nbsp;=&nbsp;TRUE, ...)</div>
 <div>"as.dtm"(text.var, grouping.var&nbsp;=&nbsp;NULL, vowel.check&nbsp;=&nbsp;TRUE, ...)</div>
 <div>"as.dtm"(text.var, grouping.var&nbsp;=&nbsp;NULL, vowel.check&nbsp;=&nbsp;TRUE, ...)</div>
 <div>"as.tdm"(text.var, grouping.var&nbsp;=&nbsp;NULL, vowel.check&nbsp;=&nbsp;TRUE, ...)</div>
 <div>"as.dtm"(text.var, grouping.var&nbsp;=&nbsp;NULL, vowel.check&nbsp;=&nbsp;TRUE, ...)</div>
-<div>"as.data.frame"(x, row.names, optional, ..., doc&nbsp;=&nbsp;"docs", text&nbsp;=&nbsp;"text", sent.split&nbsp;=&nbsp;TRUE)</div>
+<div>"as.data.frame"(x, row.names, optional, ..., doc&nbsp;=&nbsp;"docs", text&nbsp;=&nbsp;"text", sent.split&nbsp;=&nbsp;FALSE)</div>
 <div>as.Corpus(text.var, grouping.var&nbsp;=&nbsp;NULL, demographic.vars, ...)</div>
 <div>"as.Corpus"(text.var, grouping.var&nbsp;=&nbsp;NULL, demographic.vars, ...)</div>
 <div>"as.Corpus"(text.var, grouping.var&nbsp;=&nbsp;NULL, demographic.vars, ...)</div>
 <div>apply_as_tm(wfm.obj, tmfun, ..., to.qdap&nbsp;=&nbsp;TRUE)</div>
-<div>apply_as_df(tm.corpus, qdapfun, ..., stopwords&nbsp;=&nbsp;NULL, min&nbsp;=&nbsp;1, max&nbsp;=&nbsp;Inf, count.apostrophe&nbsp;=&nbsp;TRUE, ignore.case&nbsp;=&nbsp;TRUE)</div></pre>
+<div>apply_as_df(tm.corpus, qdapfun, ..., stopwords&nbsp;=&nbsp;NULL, min&nbsp;=&nbsp;1, max&nbsp;=&nbsp;Inf, count.apostrophe&nbsp;=&nbsp;TRUE, ignore.case&nbsp;=&nbsp;TRUE)</div>
+<div>"as.Corpus"(text.var, ...)</div>
+<div>"as.Corpus"(text.var, ...)</div>
+<div>"as.Corpus"(text.var, ...)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -146,7 +151,7 @@ Matrix or Document Term Matrix</h2>
 <code><a href='http://www.inside-r.org/r-doc/tm/matrix'>TermDocumentMatrix</a></code>.</p>
   
       <p><code>as.data.frame</code> - Converts a <code><a href='http://www.inside-r.org/r-doc/tm/Corpus'>Corpus</a></code> and returns
-a qdap oriented dataframe.</p>
+a <span class = "pkg">qdap</span> oriented <code><a href='http://www.inside-r.org/r-doc/base/data.frame'>data.frame</a></code>.</p>
   
       <p><code>as.Corpus</code> - Converts a qdap oriented dataframe and returns
 a <code><a href='http://www.inside-r.org/r-doc/tm/Corpus'>Corpus</a></code>.</p>
@@ -175,11 +180,17 @@ a <code><a href='http://www.inside-r.org/r-doc/tm/Corpus'>Corpus</a></code>.</p>
       <p><code>as.DocumentTermMatrix</code> - Create document term matrices from raw text or
 <code>wfm</code> for use with other text analysis packages.</p>
   
+      <p><code>as.tdm.Corpus</code> - Corpus method for <code>as.tdm</code> used to
+convert to a <code><a href='http://www.inside-r.org/r-doc/tm/matrix'>DocumentTermMatrix</a></code>.</p>
+  
       <p><code>as.tdm.default</code> - Default method for <code>as.tdm</code> used to
 convert to a <code><a href='http://www.inside-r.org/r-doc/tm/matrix'>TermDocumentMatrix</a></code>.</p>
   
       <p><code>as.tdm.character</code> - character method for <code>as.tdm</code> used to
 convert to a <code><a href='http://www.inside-r.org/r-doc/tm/matrix'>TermDocumentMatrix</a></code>.</p>
+  
+      <p><code>as.dtm.Corpus</code> - Corpus method for <code>as.dtm</code> used to
+convert to a <code><a href='http://www.inside-r.org/r-doc/tm/matrix'>DocumentTermMatrix</a></code>.</p>
   
       <p><code>as.dtm.default</code> - Default method for <code>as.dtm</code> used to
 convert to a <code><a href='http://www.inside-r.org/r-doc/tm/matrix'>DocumentTermMatrix</a></code>.</p>
@@ -214,6 +225,15 @@ dataframe.
 package's <code><a href='http://www.inside-r.org/r-doc/base/data.frame'>data.frame</a></code> + <code>sentSplit</code> to
 a <span class = "pkg">tm</span> <code><a href='http://www.inside-r.org/r-doc/tm/Corpus'>Corpus</a></code> object.</p>
   
+      <p><code>as.Corpus.TermDocumentMatrix</code> - <code>TermDocumentMatrix</code> method for
+<code>as.Corpus</code> used to convert a <code><a href='http://www.inside-r.org/r-doc/tm/Corpus'>Corpus</a></code>.</p>
+  
+      <p><code>as.Corpus.DocumentTermMatrix</code> - <code>DocumentTermMatrix</code> method for
+<code>as.Corpus</code> used to convert a <code><a href='http://www.inside-r.org/r-doc/tm/Corpus'>Corpus</a></code>.</p>
+  
+      <p><code>as.Corpus.wfm</code> - <code>wfm</code> method for
+<code>as.Corpus</code> used to convert a <code><a href='http://www.inside-r.org/r-doc/tm/Corpus'>Corpus</a></code>.</p>
+  
     </div>
 
     <div class="Details">
@@ -239,7 +259,7 @@ the other named `text`.</p>
   </div>
   <div class="span4">
     <!-- <ul>
-      <li>apply_as_df</li><li>apply_as_tm</li><li>as.Corpus</li><li>as.Corpus.default</li><li>as.Corpus.sent_split</li><li>as.DocumentTermMatrix</li><li>as.TermDocumentMatrix</li><li>as.data.frame.Corpus</li><li>as.dtm</li><li>as.dtm.character</li><li>as.dtm.default</li><li>as.dtm.wfm</li><li>as.tdm</li><li>as.tdm.character</li><li>as.tdm.default</li><li>as.tdm.wfm</li>
+      <li>apply_as_df</li><li>apply_as_tm</li><li>as.Corpus</li><li>as.Corpus.DocumentTermMatrix</li><li>as.Corpus.TermDocumentMatrix</li><li>as.Corpus.default</li><li>as.Corpus.sent_split</li><li>as.Corpus.wfm</li><li>as.DocumentTermMatrix</li><li>as.TermDocumentMatrix</li><li>as.data.frame.Corpus</li><li>as.dtm</li><li>as.dtm.Corpus</li><li>as.dtm.character</li><li>as.dtm.default</li><li>as.dtm.wfm</li><li>as.tdm</li><li>as.tdm.Corpus</li><li>as.tdm.character</li><li>as.tdm.default</li><li>as.tdm.wfm</li>
     </ul>
     <ul>
       

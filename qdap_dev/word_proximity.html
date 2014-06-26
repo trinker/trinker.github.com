@@ -41,7 +41,6 @@
   <div class="span8">
     <h2>Usage</h2>
     <pre><div>word_proximity(text.var, terms, grouping.var&nbsp;=&nbsp;NULL, parallel&nbsp;=&nbsp;TRUE, cores&nbsp;=&nbsp;parallel::detectCores()/2)</div>
-<div>weight(x, type&nbsp;=&nbsp;"scale", ...)</div>
 <div>"weight"(x, type&nbsp;=&nbsp;"scale", ...)</div></pre>
     
     <h2>Arguments</h2>
@@ -73,8 +72,6 @@ use <code><a href='http://www.inside-r.org/r-doc/base/Log'>log</a></code>, <code
 <code>scale</code> will standardize the values.  <code>rev</code> will multiply by -1 to
 give the inverse sign.  This enables a comparison similar to correlations
 rather than distance.</dd>
-      <dt>...</dt>
-      <dd>ignored.</dd>
     </dl>
     
     <div class="Proximity Matrix Between Words">
@@ -88,19 +85,15 @@ rather than distance.</dd>
       <p>Returns a list of matrices of proximity measures in the unit of average
 sentences between words (defaults to scaled).</p>
   
-      <p>Returns a weighted list of matrices.</p>
-  
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Generate proximity measures to ascertain a mean distance measure between
-word uses.</p>
+      <p><code>word_proximity</code> - Generate proximity measures to ascertain a mean
+distance measure between word uses.</p>
   
-      <p>Weight a word_proximity object.</p>
-  
-      <p>word_proximity Method for weight</p>
+      <p><code>weight</code> - weight Method for word_proximity.</p>
   
     </div>
 
@@ -125,9 +118,6 @@ the words "bread", "read" "reading", and "ready".  If you want to search
 for just the word "read" you'd supply a vector of c(" read ", " reads",
 " reading", " reader").</p>
   
-      <p>A constant of .000000000001 is added to each element when log is used
-to deal with the problem of <code>log(0)</code>.</p>
-  
     </div>
     
     <h2 id="examples">Examples</h2>
@@ -135,7 +125,7 @@ to deal with the problem of <code>log(0)</code>.</p>
   </div>
   <div class="span4">
     <!-- <ul>
-      <li>weight</li><li>weight.word_proximity</li><li>word_proximity</li>
+      <li>weight.word_proximity</li><li>word_proximity</li>
     </ul>
     <ul>
       
