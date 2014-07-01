@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>qtheme. qdap 2.1.1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">qdap 2.1.1</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Add themes to a Network object.</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><div>qtheme(x&nbsp;=&nbsp;"generic", title, title.color, layout, legend, legend.cex, legend.text.color, legend.gradient, bg, vertex.color, vertex.size, vertex.frame.color, vertex.label.color, vertex.label.cex, edge.label.color, edge.label.cex)</div>
+<div>theme_nightheat(x&nbsp;=&nbsp;pars[["x"]], title&nbsp;=&nbsp;pars[["title"]], title.color&nbsp;=&nbsp;pars[["title.color"]], layout&nbsp;=&nbsp;pars[["layout"]], legend&nbsp;=&nbsp;pars[["legend"]], legend.cex&nbsp;=&nbsp;pars[["legend.cex"]], legend.gradient&nbsp;=&nbsp;pars[["legend.gradient"]], bg&nbsp;=&nbsp;pars[["bg"]], legend.text.color&nbsp;=&nbsp;pars[["legend.text.color"]], vertex.color&nbsp;=&nbsp;pars[["vertex.color"]], vertex.size&nbsp;=&nbsp;pars[["vertex.size"]], vertex.frame.color&nbsp;=&nbsp;pars[["vertex.frame.color"]], vertex.label.color&nbsp;=&nbsp;pars[["vertex.label.color"]], vertex.label.cex&nbsp;=&nbsp;pars[["vertex.label.cex"]], edge.label.color&nbsp;=&nbsp;pars[["edge.label.color"]], edge.label.cex&nbsp;=&nbsp;pars[["edge.label.cex"]], ...)</div>
+<div>theme_badkitchen(x&nbsp;=&nbsp;pars[["x"]], title&nbsp;=&nbsp;pars[["title"]], title.color&nbsp;=&nbsp;pars[["title.color"]], layout&nbsp;=&nbsp;pars[["layout"]], legend&nbsp;=&nbsp;pars[["legend"]], legend.cex&nbsp;=&nbsp;pars[["legend.cex"]], legend.gradient&nbsp;=&nbsp;pars[["legend.gradient"]], bg&nbsp;=&nbsp;pars[["bg"]], legend.text.color&nbsp;=&nbsp;pars[["legend.text.color"]], vertex.color&nbsp;=&nbsp;pars[["vertex.color"]], vertex.size&nbsp;=&nbsp;pars[["vertex.size"]], vertex.frame.color&nbsp;=&nbsp;pars[["vertex.frame.color"]], vertex.label.color&nbsp;=&nbsp;pars[["vertex.label.color"]], vertex.label.cex&nbsp;=&nbsp;pars[["vertex.label.cex"]], edge.label.color&nbsp;=&nbsp;pars[["edge.label.color"]], edge.label.cex&nbsp;=&nbsp;pars[["edge.label.cex"]], ...)</div>
+<div>theme_cafe(x&nbsp;=&nbsp;pars[["x"]], title&nbsp;=&nbsp;pars[["title"]], title.color&nbsp;=&nbsp;pars[["title.color"]], layout&nbsp;=&nbsp;pars[["layout"]], legend&nbsp;=&nbsp;pars[["legend"]], legend.cex&nbsp;=&nbsp;pars[["legend.cex"]], legend.gradient&nbsp;=&nbsp;pars[["legend.gradient"]], bg&nbsp;=&nbsp;pars[["bg"]], legend.text.color&nbsp;=&nbsp;pars[["legend.text.color"]], vertex.color&nbsp;=&nbsp;pars[["vertex.color"]], vertex.size&nbsp;=&nbsp;pars[["vertex.size"]], vertex.frame.color&nbsp;=&nbsp;pars[["vertex.frame.color"]], vertex.label.color&nbsp;=&nbsp;pars[["vertex.label.color"]], vertex.label.cex&nbsp;=&nbsp;pars[["vertex.label.cex"]], edge.label.color&nbsp;=&nbsp;pars[["edge.label.color"]], edge.label.cex&nbsp;=&nbsp;pars[["edge.label.cex"]], ...)</div>
+<div>theme_grayscale(x&nbsp;=&nbsp;pars[["x"]], title&nbsp;=&nbsp;pars[["title"]], title.color&nbsp;=&nbsp;pars[["title.color"]], layout&nbsp;=&nbsp;pars[["layout"]], legend&nbsp;=&nbsp;pars[["legend"]], legend.cex&nbsp;=&nbsp;pars[["legend.cex"]], legend.gradient&nbsp;=&nbsp;pars[["legend.gradient"]], bg&nbsp;=&nbsp;pars[["bg"]], legend.text.color&nbsp;=&nbsp;pars[["legend.text.color"]], vertex.color&nbsp;=&nbsp;pars[["vertex.color"]], vertex.size&nbsp;=&nbsp;pars[["vertex.size"]], vertex.frame.color&nbsp;=&nbsp;pars[["vertex.frame.color"]], vertex.label.color&nbsp;=&nbsp;pars[["vertex.label.color"]], vertex.label.cex&nbsp;=&nbsp;pars[["vertex.label.cex"]], edge.label.color&nbsp;=&nbsp;pars[["edge.label.color"]], edge.label.cex&nbsp;=&nbsp;pars[["edge.label.cex"]], ...)</div>
+<div>theme_greyscale(x&nbsp;=&nbsp;pars[["x"]], title&nbsp;=&nbsp;pars[["title"]], title.color&nbsp;=&nbsp;pars[["title.color"]], layout&nbsp;=&nbsp;pars[["layout"]], legend&nbsp;=&nbsp;pars[["legend"]], legend.cex&nbsp;=&nbsp;pars[["legend.cex"]], legend.gradient&nbsp;=&nbsp;pars[["legend.gradient"]], bg&nbsp;=&nbsp;pars[["bg"]], legend.text.color&nbsp;=&nbsp;pars[["legend.text.color"]], vertex.color&nbsp;=&nbsp;pars[["vertex.color"]], vertex.size&nbsp;=&nbsp;pars[["vertex.size"]], vertex.frame.color&nbsp;=&nbsp;pars[["vertex.frame.color"]], vertex.label.color&nbsp;=&nbsp;pars[["vertex.label.color"]], vertex.label.cex&nbsp;=&nbsp;pars[["vertex.label.cex"]], edge.label.color&nbsp;=&nbsp;pars[["edge.label.color"]], edge.label.cex&nbsp;=&nbsp;pars[["edge.label.cex"]], ...)</div>
+<div>theme_norah(x&nbsp;=&nbsp;pars[["x"]], title&nbsp;=&nbsp;pars[["title"]], title.color&nbsp;=&nbsp;pars[["title.color"]], layout&nbsp;=&nbsp;pars[["layout"]], legend&nbsp;=&nbsp;pars[["legend"]], legend.cex&nbsp;=&nbsp;pars[["legend.cex"]], legend.gradient&nbsp;=&nbsp;pars[["legend.gradient"]], bg&nbsp;=&nbsp;pars[["bg"]], legend.text.color&nbsp;=&nbsp;pars[["legend.text.color"]], vertex.color&nbsp;=&nbsp;pars[["vertex.color"]], vertex.size&nbsp;=&nbsp;pars[["vertex.size"]], vertex.frame.color&nbsp;=&nbsp;pars[["vertex.frame.color"]], vertex.label.color&nbsp;=&nbsp;pars[["vertex.label.color"]], vertex.label.cex&nbsp;=&nbsp;pars[["vertex.label.cex"]], edge.label.color&nbsp;=&nbsp;pars[["edge.label.color"]], edge.label.cex&nbsp;=&nbsp;pars[["edge.label.cex"]], ...)</div>
+<div>theme_hipster(x&nbsp;=&nbsp;pars[["x"]], title&nbsp;=&nbsp;pars[["title"]], title.color&nbsp;=&nbsp;pars[["title.color"]], layout&nbsp;=&nbsp;pars[["layout"]], legend&nbsp;=&nbsp;pars[["legend"]], legend.cex&nbsp;=&nbsp;pars[["legend.cex"]], legend.gradient&nbsp;=&nbsp;pars[["legend.gradient"]], bg&nbsp;=&nbsp;pars[["bg"]], legend.text.color&nbsp;=&nbsp;pars[["legend.text.color"]], vertex.color&nbsp;=&nbsp;pars[["vertex.color"]], vertex.size&nbsp;=&nbsp;pars[["vertex.size"]], vertex.frame.color&nbsp;=&nbsp;pars[["vertex.frame.color"]], vertex.label.color&nbsp;=&nbsp;pars[["vertex.label.color"]], vertex.label.cex&nbsp;=&nbsp;pars[["vertex.label.cex"]], edge.label.color&nbsp;=&nbsp;pars[["edge.label.color"]], edge.label.cex&nbsp;=&nbsp;pars[["edge.label.cex"]], ...)</div>
+<div>theme_duskheat(x&nbsp;=&nbsp;pars[["x"]], title&nbsp;=&nbsp;pars[["title"]], title.color&nbsp;=&nbsp;pars[["title.color"]], layout&nbsp;=&nbsp;pars[["layout"]], legend&nbsp;=&nbsp;pars[["legend"]], legend.cex&nbsp;=&nbsp;pars[["legend.cex"]], legend.gradient&nbsp;=&nbsp;pars[["legend.gradient"]], bg&nbsp;=&nbsp;pars[["bg"]], legend.text.color&nbsp;=&nbsp;pars[["legend.text.color"]], vertex.color&nbsp;=&nbsp;pars[["vertex.color"]], vertex.size&nbsp;=&nbsp;pars[["vertex.size"]], vertex.frame.color&nbsp;=&nbsp;pars[["vertex.frame.color"]], vertex.label.color&nbsp;=&nbsp;pars[["vertex.label.color"]], vertex.label.cex&nbsp;=&nbsp;pars[["vertex.label.cex"]], edge.label.color&nbsp;=&nbsp;pars[["edge.label.color"]], edge.label.cex&nbsp;=&nbsp;pars[["edge.label.cex"]], ...)</div></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>x</dt>
+      <dd>The name of the qtheme.</dd>
+      <dt>title.color</dt>
+      <dd>The color of the title.</dd>
+      <dt>layout</dt>
+      <dd><span class = "pkg">igraph</span> <code>layout</code> to use.</dd>
+      <dt>legend</dt>
+      <dd>The coordinates of the legend. See
+<code><a href='http://www.inside-r.org/packages/cran/plotrix/docs/color.legend'>color.legend</a></code> for more information.</dd>
+      <dt>legend.cex</dt>
+      <dd>character expansion factor. <code>NULL</code> and <code>NA</code> are
+equivalent to 1.0. See <code><a href='http://www.inside-r.org/packages/cran/graphics/docs/mtext'>mtext</a></code> for more information.</dd>
+      <dt>legend.text.color</dt>
+      <dd>The text legend text color.</dd>
+      <dt>legend.gradient</dt>
+      <dd>A vector of ordered colors to use for the gradient
+fills in the network edges.</dd>
+      <dt>bg</dt>
+      <dd>The color to be used for the background of the device region. See
+<code><a href='http://www.inside-r.org/packages/cran/graphics/docs/par'>par</a></code> for more information.</dd>
+      <dt>vertex.color</dt>
+      <dd>The font family to be used for vertex labels.</dd>
+      <dt>vertex.size</dt>
+      <dd>The size of the vertex.</dd>
+      <dt>vertex.frame.color</dt>
+      <dd>The color of the vertex border.</dd>
+      <dt>vertex.label.color</dt>
+      <dd>The color of the labels.</dd>
+      <dt>vertex.label.cex</dt>
+      <dd>The font size for vertex labels.</dd>
+      <dt>edge.label.color</dt>
+      <dd>The color for the edge labels.  Use <code>NA</code> to
+remove.</dd>
+      <dt>edge.label.cex</dt>
+      <dd>The font size of the edge labels.</dd>
+      <dt>title</dt>
+      <dd>The title of the plot.  <code>NULL</code> eliminates title.  <code>NA</code>
+uses title attribute of the Network object.</dd>
+      <dt>...</dt>
+      <dd>Additional arguments supplied to <code>qtheme</code>.</dd>
+    </dl>
+    
+    <div class="Add themes to a Network object.">
+      <h2>Add themes to a Network object.</h2>
+      
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p><code>qtheme</code> - This function builds generic themes to add a theme to a
+<code>Network</code> object rather than individual <code>print</code> arguments.</p>
+  
+      <p><code>theme_nightheat</code> A night heat theme.</p>
+  
+      <p><code>theme_badkitchen</code> A 70s kitchen theme.</p>
+  
+      <p><code>theme_cafe</code> A cafe theme.</p>
+  
+      <p><code>theme_grayscale</code> A grayscale theme.</p>
+  
+      <p><code>theme_norah</code> A Norah theme.</p>
+  
+      <p><code>theme_hipster</code> A hipster theme.</p>
+  
+      <p><code>theme_duskheat</code> A duskheat theme.</p>
+  
+    </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: 
+# (poldat &lt;- with(sentSplit(DATA, 4), polarity(state, person)))
+# m &lt;- Network(poldat)
+# m
+# 
+# m + theme_nightheat
+# m + theme_cafe
+# m + theme_grayscale
+# m + theme_norah
+# m + theme_hipster
+# m + theme_badkitchen
+# m + theme_duskheat
+# 
+# ## make your own themes
+# theme_irish &lt;- qtheme(x = &quot;irish&quot;, bg = &quot;grey25&quot;,
+#     vertex.label.color = &quot;grey50&quot;, legend.text.color = &quot;white&quot;,
+#     legend.gradient = c(&quot;darkgreen&quot;, &quot;white&quot;, &quot;darkorange&quot;),
+#     edge.label.color=&quot;white&quot;, vertex.size= 20)
+# 
+# m + theme_irish
+# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;
+</div></pre>
+  </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>qtheme</li><li>theme_badkitchen</li><li>theme_cafe</li><li>theme_duskheat</li><li>theme_grayscale</li><li>theme_greyscale</li><li>theme_hipster</li><li>theme_nightheat</li><li>theme_norah</li>
+    </ul>
+    <ul>
+      
+    </ul> -->
+      
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>rm_row. qdap 2.1.1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">qdap 2.1.1</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Remove Rows That Contain Markers</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><div>rm_row(dataframe, search.column, terms, contains&nbsp;=&nbsp;FALSE, ignore.case&nbsp;=&nbsp;FALSE, keep.rownames&nbsp;=&nbsp;FALSE, ...)</div>
+<div>rm_empty_row(dataframe)</div></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>dataframe</dt>
+      <dd>A dataframe object.</dd>
+      <dt>search.column</dt>
+      <dd>Column name to search for markers/terms.</dd>
+      <dt>terms</dt>
+      <dd>Terms/markers of the rows that are to be removed from the
+dataframe.  The term/marker must appear at the beginning of the string and is
+case sensitive.</dd>
+      <dt>contains</dt>
+      <dd>logical.  If <code>TRUE</code> <code>rm_row</code> searches for the terms
+anywhere within the string.  If <code>FALSE</code> <code>rm_row</code> searches only the
+beginning of the string.</dd>
+      <dt>ignore.case</dt>
+      <dd>logical.  If <code>TRUE</code> case is ignored during matching,
+if <code>FALSE</code>the pattern matching is case sensitive.</dd>
+      <dt>keep.rownames</dt>
+      <dd>logical.  If <code>TRUE</code> the original, non-sequential,
+rownames will be used.</dd>
+      <dt>...</dt>
+      <dd>Other arguments passed to <code><a href='http://www.inside-r.org/packages/cran/base/docs/grep'>grepl</a></code>.</dd>
+    </dl>
+    
+    <div class="Remove Rows That Contain Markers">
+      <h2>Remove Rows That Contain Markers</h2>
+      
+    </div>
+
+    <div class="Value">
+      <h2>Value</h2>
+      
+      <p><code>rm_row</code> - returns a dataframe with the termed/markered rows
+removed.</p>
+  
+      <p><code>rm_empty_row</code> - returns a dataframe with empty rows removed.</p>
+  
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p><code>rm_row</code> - Remove rows from a data set that contain a given marker/term.</p>
+  
+      <p><code>rm_empty_row</code> - Removes the empty rows of a data set that are common in
+reading in data (default method in <code>read.transcript</code>).</p>
+  
+    </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: 
+# #rm_row EXAMPLE:
+# rm_row(DATA, &quot;person&quot;, c(&quot;sam&quot;, &quot;greg&quot;))
+# rm_row(DATA, 1, c(&quot;sam&quot;, &quot;greg&quot;))
+# rm_row(DATA, &quot;state&quot;, c(&quot;Comp&quot;))
+# rm_row(DATA, &quot;state&quot;, c(&quot;I &quot;))
+# rm_row(DATA, &quot;state&quot;, c(&quot;you&quot;), contains = TRUE, ignore.case=TRUE)
+# 
+# #rm_empty_row EXAMPLE:
+# (dat &lt;- rbind.data.frame(DATA[, c(1, 4)], matrix(rep(&quot; &quot;, 4),
+#    ncol =2, dimnames=list(12:13, colnames(DATA)[c(1, 4)]))))
+# rm_empty_row(dat)
+# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;
+</div></pre>
+  </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>rm_empty_row</li><li>rm_row</li>
+    </ul>
+    <ul>
+      
+    </ul> -->
+      
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>Search. qdap 2.1.1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">qdap 2.1.1</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Search Columns of a Data Frame</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><div>Search(dataframe, term, column.name&nbsp;=&nbsp;NULL, max.distance&nbsp;=&nbsp;0.02, ...)</div>
+<div>boolean_search(text.var, terms, ignore.case&nbsp;=&nbsp;TRUE, values&nbsp;=&nbsp;FALSE, exclude&nbsp;=&nbsp;NULL, apostrophe.remove&nbsp;=&nbsp;FALSE, char.keep&nbsp;=&nbsp;NULL, digit.remove&nbsp;=&nbsp;FALSE)</div>
+<div>text.var %bs% terms</div></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>dataframe</dt>
+      <dd>A dataframe object to search.</dd>
+      <dt>term</dt>
+      <dd>A character string to search for.</dd>
+      <dt>column.name</dt>
+      <dd>Optional column of the data frame to search (character
+name or integer index).</dd>
+      <dt>max.distance</dt>
+      <dd>Maximum distance allowed for a match. Expressed either as
+integer, or as a fraction of the pattern length times the maximal
+transformation cost (will be replaced by the smallest integer not less than
+the corresponding fraction).</dd>
+      <dt>...</dt>
+      <dd>Other arguments passed to <code>agrep</code>.</dd>
+      <dt>text.var</dt>
+      <dd>The text variable.</dd>
+      <dt>terms</dt>
+      <dd>A character string(s) to search for.  The terms are arranged in
+a single string with AND (use <code>AND</code> or <code>&&</code> to connect terms
+together) and OR (use <code>OR</code> or <code>||</code> to allow for searches of
+either set of terms.  Spaces may be used to control what is searched for.
+For example using <code>" I "</code> on <code>c("I'm", "I want", "in")</code> will result
+in <code>FALSE TRUE FALSE</code> whereas <code>"I"</code> will match all three (if case
+is ignored).</dd>
+      <dt>ignore.case</dt>
+      <dd>logical.  If <code>TRUE</code> case is ignored.</dd>
+      <dt>values</dt>
+      <dd>logical.  Should the values be returned or the index of the
+values.</dd>
+      <dt>exclude</dt>
+      <dd>Terms to exclude from the search.  If one of these terms is
+found in the sentence it cannot be returned.</dd>
+      <dt>apostrophe.remove</dt>
+      <dd>logical.  If <code>TRUE</code> removes apostrophes from
+the text before examining.</dd>
+      <dt>char.keep</dt>
+      <dd>A character vector of symbol character (i.e., punctuation)
+that strip should keep.  The default is to strip everything except
+apostrophes. <code>termco</code> attempts to auto detect characters to
+keep based on the elements in <code>match.list</code>.</dd>
+      <dt>digit.remove</dt>
+      <dd>logical.  If <code>TRUE</code> strips digits from the text
+before counting. <code>termco</code> attempts to auto detect if digits
+should be retained based on the elements in <code>match.list</code>.</dd>
+    </dl>
+    
+    <div class="Search Columns of a Data Frame">
+      <h2>Search Columns of a Data Frame</h2>
+      
+    </div>
+
+    <div class="Value">
+      <h2>Value</h2>
+      
+      <p><code>Search</code> - Returns the rows of the data frame that match the
+search term.</p>
+  
+      <p><code>boolean_search</code> - Returns the values (or indices) of a vector of strings that match
+given terms.</p>
+  
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p><code>Search</code> - Find terms located in columns of a data frame.</p>
+  
+      <p><code>boolean_search</code> - Conducts a Boolean search for terms/strings within a
+character vector.</p>
+  
+      <p><code>%bs%</code> - Binary operator version of <code>boolean_search</code> .</p>
+  
+    </div>
+
+    <div class="Details">
+      <h2>Details</h2>
+      
+      <p>The terms string is first split by the OR separators into a list.
+Next the list of vectors is split on the AND separator to produce a list of
+vectors of search terms.  Each sentence is matched against the terms.  For a
+sentence to be counted it must fit all of the terms in an AND Boolean or one
+of the conditions in an OR Boolean.</p>
+  
+    </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: 
+# ## Dataframe search:
+# (SampDF &lt;- data.frame(&quot;islands&quot;=names(islands)[1:32],mtcars, row.names=NULL))
+# 
+# Search(SampDF, &quot;Cuba&quot;, &quot;islands&quot;)
+# Search(SampDF, &quot;New&quot;, &quot;islands&quot;)
+# Search(SampDF, &quot;Ho&quot;)
+# Search(SampDF, &quot;Ho&quot;, max.distance = 0)
+# Search(SampDF, &quot;Axel Heiberg&quot;)
+# Search(SampDF, 19) #too much tolerance in max.distance
+# Search(SampDF, 19, max.distance = 0)
+# Search(SampDF, 19, &quot;qsec&quot;, max.distance = 0)
+# 
+# ##Boolean search:
+# boolean_search(DATA$state, &quot; I ORliar&amp;&amp;stinks&quot;)
+# boolean_search(DATA$state, &quot; I &amp;&amp;.&quot;, values=TRUE)
+# boolean_search(DATA$state, &quot; I OR.&quot;, values=TRUE)
+# boolean_search(DATA$state, &quot; I &amp;&amp;.&quot;)
+# 
+# ## Exclusion:
+# boolean_search(DATA$state, &quot; I ||.&quot;, values=TRUE)
+# boolean_search(DATA$state, &quot; I ||.&quot;, exclude = c(&quot;way&quot;, &quot;truth&quot;), values=TRUE)
+# 
+# ## From stackoverflow: http://stackoverflow.com/q/19640562/1000343
+# dat &lt;- data.frame(x = c(&quot;Doggy&quot;, &quot;Hello&quot;, &quot;Hi Dog&quot;, &quot;Zebra&quot;), y = 1:4)
+# z &lt;- data.frame(z =c(&quot;Hello&quot;, &quot;Dog&quot;))
+# 
+# dat[boolean_search(dat$x, paste(z$z, collapse = &quot;OR&quot;)), ]
+# 
+# ## Binary operator version
+# dat[dat$x %bs% paste(z$z, collapse = &quot;OR&quot;), ]
+# 
+# ## Passing to `trans_context`
+# inds &lt;- boolean_search(DATA.SPLIT$state, &quot; I&amp;&amp;.|| I&amp;&amp;!&quot;, ignore.case = FALSE)
+# with(DATA.SPLIT, trans_context(state, person, inds=inds))
+# 
+# (inds2 &lt;- boolean_search(raj$dialogue, spaste(paste(negation.words,
+#     collapse = &quot; || &quot;))))
+# trans_context(raj$dialogue, raj$person, inds2)
+# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;
+</div></pre>
+  </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>Search</li><li>%bs%</li><li>boolean_search</li>
+    </ul>
+    <ul>
+      
+    </ul> -->
+      
+    <h2>See also</h2>
+    
+<code>trans_context</code>
+
+<code>termco</code>
+
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

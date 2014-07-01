@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>scrubber. qdap 2.1.1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">qdap 2.1.1</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Clean Imported Text</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><div>scrubber(text.var, num2word&nbsp;=&nbsp;FALSE, rm.quote&nbsp;=&nbsp;TRUE, fix.comma&nbsp;=&nbsp;TRUE, fix.space&nbsp;=&nbsp;TRUE, ...)</div></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>text.var</dt>
+      <dd>The text variable.</dd>
+      <dt>num2word</dt>
+      <dd>logical If <code>TRUE</code> replaces a numbers with text
+representations.</dd>
+      <dt>fix.comma</dt>
+      <dd>logical If <code>TRUE</code> removes any spaces before a comma.</dd>
+      <dt>fix.space</dt>
+      <dd>logical.  If <code>TRUE</code> extra spaces before endmarks are
+removed.</dd>
+      <dt>rm.quote</dt>
+      <dd>logical If <code>TRUE</code> removes any <code>\"</code>.</dd>
+      <dt>...</dt>
+      <dd>Other arguments passed to <code>replace_number</code>.</dd>
+    </dl>
+    
+    <div class="Clean Imported Text">
+      <h2>Clean Imported Text</h2>
+      
+    </div>
+
+    <div class="Value">
+      <h2>Value</h2>
+      
+      <p>Returns a parsed character vector.</p>
+  
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p>Use to clean text variables when importing a new data set.  Removes extra
+white spaces other textual anomalies that may cause errors.</p>
+  
+    </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: 
+# x &lt;- c(&quot;I like 456 dogs\t  , don&#39;t you?\&quot;&quot;)
+# scrubber(x)
+# scrubber(x, TRUE)
+# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;
+</div></pre>
+  </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>scrubber</li>
+    </ul>
+    <ul>
+      <li>clean</li><li>parse,</li>
+    </ul> -->
+      
+    <h2>See also</h2>
+    
+<code>strip</code>
+
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

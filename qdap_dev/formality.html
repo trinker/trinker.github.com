@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>formality. qdap 2.1.1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">qdap 2.1.1</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Formality Score</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><div>formality(text.var, grouping.var&nbsp;=&nbsp;NULL, order.by.formality&nbsp;=&nbsp;TRUE, digits&nbsp;=&nbsp;2, ...)</div></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>text.var</dt>
+      <dd>The text variable (or an object from <code>pos</code>,
+<code>pos_by</code> or <code>formality</code>.  Passing the
+later three object will greatly reduce run time.</dd>
+      <dt>grouping.var</dt>
+      <dd>The grouping variables.  Default <code>NULL</code> generates
+one word list for all text.  Also takes a single grouping variable or a list
+of 1 or more grouping variables.</dd>
+      <dt>order.by.formality</dt>
+      <dd>logical.  If <code>TRUE</code> orders the results by
+formality score.</dd>
+      <dt>digits</dt>
+      <dd>The number of digits displayed.</dd>
+      <dt>...</dt>
+      <dd>Other arguments passed to <code>pos_by</code>.</dd>
+    </dl>
+    
+    <div class="Formality Score">
+      <h2>Formality Score</h2>
+      
+    </div>
+
+    <div class="Value">
+      <h2>Value</h2>
+      
+      <p>A list containing at the following components:
+textThe text variable
+POStaggedRaw part of speech for every word of the text variable
+POSpropPart of speech proportion for every word of the text variable
+POSfreqPart of speech count for every word of the text variable
+pos.by.freqThe part of speech count for every word of the text
+variable by grouping variable(s)
+pos.by.propThe part of speech proportion for every word of the text
+variable by grouping variable(s)
+form.freq.byThe nine broad part of speech categories count for every
+word of the text variable by grouping variable(s)
+form.prop.byThe nine broad part of speech categories proportion for
+every word of the text variable by grouping variable(s)
+formalityFormality scores by grouping variable(s)
+pos.reshapedAn expanded formality scores output (grouping,
+word.count, pos & form.class) by word</p>
+  
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p>Transcript apply formality score by grouping variable(s) and optionally plot
+the breakdown of the model.</p>
+  
+    </div>
+
+    <div class="Details">
+      <h2>Details</h2>
+      
+      <p>Heylighen & Dewaele(2002)'s formality score is calculated as:
+<pre class = 'eq'>F = 50(n_f-n_c/N + 1)</pre></p>
+  
+      <p>Where:
+<pre class = 'eq'>f = {noun,adjective, preposition, article}</pre>
+<pre class = 'eq'>c = {pronoun, verb, adverb, interjection}</pre>
+<pre class = 'eq'>N = \sum(f + c + conjunctions)</pre></p>
+  
+    </div>
+
+    <div class="Warning">
+      <h2>Warning</h2>
+      
+      <p>Heylighen & Dewaele (2002) state, "At present, a sample would
+probably need to contain a few hundred words for the measure to be minimally
+reliable. For single sentences, the F-value should only be computed for
+purposes of illustration" (p. 24).</p>
+  
+    </div>
+
+    <div class="References">
+      <h2>References</h2>
+      
+      <p>Heylighen, F., & Dewaele, J.M. (2002). Variation in the
+contextuality of language: An empirical measure. Context in Context, Special
+issue of Foundations of Science, 7 (3), 293-340.</p>
+  
+    </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: 
+# with(DATA, formality(state, person))
+# (x1 &lt;- with(DATA, formality(state, list(sex, adult))))
+# plot(x1)
+# plot(x1, short.names = FALSE)
+# 
+# scores(x1)
+# counts(x1)
+# proportions(x1)
+# preprocessed(x1)
+# 
+# plot(scores(x1))
+# plot(counts(x1))
+# plot(proportions(x1), high=&quot;darkgreen&quot;)
+# plot(preprocessed(x1))
+# 
+# data(rajPOS) #A data set consisting of a pos list object
+# x2 &lt;- with(raj, formality(rajPOS, act))
+# plot(x2)
+# cumulative(x2)
+# x3 &lt;- with(raj, formality(rajPOS, person))
+# plot(x3, bar.colors=&quot;Dark2&quot;)
+# plot(x3, bar.colors=c(&quot;Dark2&quot;, &quot;Set1&quot;))
+# x4 &lt;- with(raj, formality(rajPOS, list(person, act)))
+# plot(x4, bar.colors=c(&quot;Dark2&quot;, &quot;Set1&quot;))
+# 
+# rajDEM &lt;- key_merge(raj, raj.demographics) #merge demographics with transcript.
+# x5 &lt;- with(rajDEM, formality(rajPOS, sex))
+# plot(x5, bar.colors=&quot;RdBu&quot;)
+# x6 &lt;- with(rajDEM, formality(rajPOS, list(fam.aff, sex)))
+# plot(x6, bar.colors=&quot;RdBu&quot;)
+# x7 &lt;- with(rajDEM, formality(rajPOS, list(died, fam.aff)))
+# plot(x7, bar.colors=&quot;RdBu&quot;,  point.cex=2, point.pch = 3)
+# x8 &lt;- with(rajDEM, formality(rajPOS, list(died, sex)))
+# plot(x8, bar.colors=&quot;RdBu&quot;,  point.cex=2, point.pch = &quot;|&quot;)
+# 
+# names(x8)
+# colsplit2df(x8$formality)
+# 
+# #pass an object from pos or pos_by
+# ltruncdf(with(raj, formality(x8 , list(act, person))), 6, 4)
+# 
+# #=============#
+# ## ANIMATION ##
+# #=============#
+# ## EXAMPLE 1
+# form_ani &lt;- formality(DATA.SPLIT$state, DATA.SPLIT$person)
+# forma &lt;- Animate(form_ani, contextual=&quot;white&quot;, formal=&quot;blue&quot;,
+#     current.color = &quot;yellow&quot;, current.speaker.color=&quot;grey70&quot;)
+# 
+# bgb &lt;- vertex_apply(forma, label.color=&quot;grey80&quot;, size=20, color=&quot;grey40&quot;)
+# bgb &lt;- edge_apply(bgb, label.color=&quot;yellow&quot;)
+# 
+# print(bgb, bg=&quot;black&quot;, net.legend.color =&quot;white&quot;, pause=1)
+# 
+# ## EXAMPLE 2
+# form_ani2 &lt;- formality(raj.act.1POS, mraja1spl$person)
+# forma2 &lt;- Animate(form_ani2, contextual=&quot;white&quot;, formal=&quot;blue&quot;,
+#     current.color = &quot;yellow&quot;, current.speaker.color=&quot;grey70&quot;)
+# 
+# bgb2 &lt;- vertex_apply(forma2, label.color=&quot;grey80&quot;, size=17, color=&quot;grey40&quot;)
+# bgb2 &lt;- edge_apply(bgb2, label.color=&quot;yellow&quot;)
+# print(bgb2, bg=&quot;black&quot;, pause=.75, net.legend.color = &quot;white&quot;)
+# 
+# ## EXAMPLE 3 (bar plot)
+# Animate(form_ani2, as.network=FALSE)
+# 
+# #=====================#
+# ## Complex Animation ##
+# #=====================#
+# library(animation)
+# library(grid)
+# library(gridBase)
+# library(qdap)
+# library(reports)
+# library(igraph)
+# library(plotrix)
+# 
+# form_ani2 &lt;- formality(raj.act.1POS, mraja1spl$person)
+# 
+# ## Set up the network version
+# form_net &lt;- Animate(form_ani2, contextual=&quot;white&quot;, formal=&quot;blue&quot;,
+#     current.color = &quot;yellow&quot;, current.speaker.color=&quot;grey70&quot;)
+# bgb &lt;- vertex_apply(form_net, label.color=&quot;grey80&quot;, size=17, color=&quot;grey40&quot;)
+# bgb &lt;- edge_apply(bgb, label.color=&quot;yellow&quot;)
+# 
+# 
+# ## Set up the bar version
+# form_bar &lt;- Animate(form_ani2, as.network=FALSE)
+# 
+# ## Generate a folder
+# loc &lt;- folder(animation_formality)
+# 
+# ## Set up the plotting function
+# oopt &lt;- animation::ani.options(interval = 0.1)
+# 
+# 
+# FUN &lt;- function(follow=FALSE, theseq = seq_along(bgb)) {
+# 
+#     Title &lt;- &quot;Animated Formality: Romeo and Juliet Act 1&quot;
+#     Legend &lt;- c(.2, -1, 1.5, -.95)
+#     Legend.cex &lt;- 1
+# 
+#     lapply(theseq, function(i) {
+#         if (follow) {
+#             png(file=sprintf(&quot;%s/images/Rplot%s.png&quot;, loc, i),
+#                 width=650, height=725)
+#         }
+#         ## Set up the layout
+#         layout(matrix(c(rep(1, 9), rep(2, 4)), 13, 1, byrow = TRUE))
+# 
+#         ## Plot 1
+#         par(mar=c(2, 0, 2, 0), bg=&quot;black&quot;)
+#         #par(mar=c(2, 0, 2, 0))
+#         set.seed(22)
+#         plot.igraph(bgb[[i]], edge.curved=TRUE)
+#         mtext(Title, side=3, col=&quot;white&quot;)
+#         color.legend(Legend[1], Legend[2], Legend[3], Legend[4],
+#               c(&quot;Contextual&quot;, &quot;Formal&quot;), attributes(bgb)[[&quot;legend&quot;]],
+#               cex = Legend.cex, col=&quot;white&quot;)
+# 
+#         ## Plot2
+#         plot.new()
+#         vps &lt;- baseViewports()
+# 
+#         uns &lt;- unit(c(-1.3,.5,-.75,.25), &quot;cm&quot;)
+#         p &lt;- form_bar[[i]] +
+#             theme(plot.margin = uns,
+#                 text=element_text(color=&quot;white&quot;),
+#                 legend.text=element_text(color=&quot;white&quot;),
+#                 legend.background = element_rect(fill = &quot;black&quot;),
+#                 plot.background = element_rect(fill = &quot;black&quot;,
+#                     color=&quot;black&quot;))
+#         print(p,vp = vpStack(vps$figure,vps$plot))
+#         animation::ani.pause()
+# 
+#         if (follow) {
+#             dev.off()
+#         }
+#     })
+# 
+# }
+# 
+# FUN()
+# 
+# ## Detect OS
+# type &lt;- if(.Platform$OS.type == &quot;windows&quot;) shell else system
+# 
+# saveHTML(FUN(, 1:20), autoplay = FALSE, loop = TRUE, verbose = FALSE,
+#     ani.height = 1000, ani.width=650,
+#     outdir = loc, single.opts =
+#     &quot;&#39;controls&#39;: [&#39;first&#39;, &#39;play&#39;, &#39;loop&#39;, &#39;speed&#39;], &#39;delayMin&#39;: 0&quot;)
+# 
+# FUN(TRUE)
+# 
+# #==================#
+# ## Static Network ##
+# #==================#
+# (formdat &lt;- with(sentSplit(DATA, 4), formality(state, person)))
+# m &lt;- Network(formdat)
+# m
+# print(m, bg=&quot;grey97&quot;, vertex.color=&quot;grey75&quot;)
+# 
+# print(m, title=&quot;Formality Discourse Map&quot;, title.color=&quot;white&quot;, bg=&quot;black&quot;,
+#     legend.text.color=&quot;white&quot;, vertex.label.color = &quot;grey70&quot;,
+#     edge.label.color=&quot;yellow&quot;)
+# 
+# ## or use themes:
+# dev.off()
+# m + qtheme()
+# m + theme_nightheat
+# dev.off()
+# m + theme_nightheat(title=&quot;Formality Discourse Map&quot;,
+#     vertex.label.color = &quot;grey50&quot;)
+# 
+# #===============================#
+# ## Formality Over Time Example ##
+# #===============================#
+# formpres &lt;- lapply(with( pres_debates2012, split(dialogue, time)), function(x) {
+#     formality(x)
+# })
+# formplots &lt;- lapply(seq_along(formpres), function(i) {
+#     m &lt;- plot(cumulative(formpres[[i]]))
+#     if (i != 2) m &lt;- m + ylab(&quot;&quot;)
+#     if (i != 3) m &lt;- m + xlab(NULL)
+#     m + ggtitle(paste(&quot;Debate&quot;, i))
+# })
+# 
+# library(grid)
+# library(gridExtra)
+# do.call(grid.arrange, formplots)
+# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;
+</div></pre>
+  </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>formality</li>
+    </ul>
+    <ul>
+      <li>explicit,</li><li>formality,</li><li>parts-of-speech,</li><li>pos</li>
+    </ul> -->
+      
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

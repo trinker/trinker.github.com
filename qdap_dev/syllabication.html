@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>syllable_sum. qdap 2.1.1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">qdap 2.1.1</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Syllabication</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><div>syllable_sum(text.var, parallel&nbsp;=&nbsp;FALSE)</div>
+<div>syllable_count(text, remove.bracketed&nbsp;=&nbsp;TRUE, algorithm.report&nbsp;=&nbsp;FALSE)</div>
+<div>polysyllable_sum(text.var, parallel&nbsp;=&nbsp;FALSE)</div>
+<div>combo_syllable_sum(text.var, parallel&nbsp;=&nbsp;FALSE)</div></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>text.var</dt>
+      <dd>The text variable</dd>
+      <dt>parallel</dt>
+      <dd>logical.  If <code>TRUE</code> attempts to run the function on
+multiple cores.  Note that this may not mean a speed boost if you have one
+core or if the data set is smaller as the cluster takes time to create.</dd>
+      <dt>text</dt>
+      <dd>A single character vector of text.</dd>
+      <dt>remove.bracketed</dt>
+      <dd>logical.  If <code>TRUE</code> brackets are removed from
+the analysis.</dd>
+      <dt>algorithm.report</dt>
+      <dd>logical.  If <code>TRUE</code> generates a report of words
+not found in the dictionary (i.e., syllables were calculated with an
+algorithm).</dd>
+    </dl>
+    
+    <div class="Syllabication">
+      <h2>Syllabication</h2>
+      
+    </div>
+
+    <div class="Value">
+      <h2>Value</h2>
+      
+      <p><code>syllable_sum</code> - returns a vector of syllable counts per row.</p>
+  
+      <p><code>syllable_count</code> - returns a dataframe of syllable counts and
+algorithm/dictionary uses and, optionally, a report of words not found in the dictionary.</p>
+  
+      <p><code>polysyllable_sum</code> - returns a vector of polysyllable counts per row.</p>
+  
+      <p><code>combo_syllable_sum</code> - returns a dataframe of syllable and polysyllable
+counts per row.</p>
+  
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p><code>syllable_sum</code> - Count the number of syllables per row of text.</p>
+  
+      <p><code>syllable_count</code> - Count the number of syllables in a single text string.</p>
+  
+      <p><code>polysyllable_sum</code> - Count the number of polysyllables per row of text.</p>
+  
+      <p><code>combo_syllable_sum</code> - Count the number of both syllables and
+polysyllables per row of text.</p>
+  
+    </div>
+
+    <div class="Details">
+      <h2>Details</h2>
+      
+      <p>The worker function of all the syllable functions is
+<code>syllable_count</code>, though it is not intended for direct
+use on a transcript.  This function relies on a combined dictionary lookup
+(based on the Nettalk Corpus (Sejnowski & Rosenberg, 1987)) and backup
+algorithm method.</p>
+  
+    </div>
+
+    <div class="References">
+      <h2>References</h2>
+      
+      <p>Sejnowski, T.J., and Rosenberg, C.R. (1987). "Parallel networks
+that learn to pronounce English text" in Complex Systems, 1, 145-168.</p>
+  
+    </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: 
+# syllable_count(&quot;Robots like Dason lie.&quot;)
+# syllable_count(&quot;Robots like Dason lie.&quot;, algorithm.report = TRUE)
+# 
+# syllable_sum(DATA$state)
+# x1 &lt;- syllable_sum(rajSPLIT$dialogue)
+# plot(x1)
+# cumulative(x1)
+# 
+# polysyllable_sum(DATA$state)
+# x2 &lt;- polysyllable_sum(rajSPLIT$dialogue)
+# plot(x2)
+# cumulative(x2)
+# 
+# combo_syllable_sum(DATA$state)
+# x3 &lt;- combo_syllable_sum(rajSPLIT$dialogue)
+# plot(x3)
+# cumulative(x3)
+# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;
+</div></pre>
+  </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>combo_syllable_sum</li><li>polysyllable_sum</li><li>syllable_count</li><li>syllable_sum</li>
+    </ul>
+    <ul>
+      <li>polysyllable</li><li>syllabication,</li><li>syllable,</li>
+    </ul> -->
+      
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

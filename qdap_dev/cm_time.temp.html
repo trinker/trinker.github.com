@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>cm_time.temp. qdap 2.1.1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">qdap 2.1.1</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Time Span Code Sheet</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><div>cm_time.temp(codes, grouping.var&nbsp;=&nbsp;NULL, start&nbsp;=&nbsp;":00", end&nbsp;=&nbsp;NULL, file&nbsp;=&nbsp;NULL, coding&nbsp;=&nbsp;FALSE, print&nbsp;=&nbsp;TRUE)</div></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>codes</dt>
+      <dd>List of codes.</dd>
+      <dt>grouping.var</dt>
+      <dd>The grouping variables.  Also takes a single grouping
+variable or a list of 1 or more grouping variables.</dd>
+      <dt>start</dt>
+      <dd>A character string in the form of "00:00" indicating start time
+(default is ":00").</dd>
+      <dt>end</dt>
+      <dd>A character string in the form of "00:00" indicating end time.</dd>
+      <dt>file</dt>
+      <dd>A connection, or a character string naming the file to print to
+(.txt or .doc is recommended).</dd>
+      <dt>coding</dt>
+      <dd>logical.  If <code>TRUE</code> a coding list is provided with the
+time span coding sheet.  <code>coding</code> is ignored if <code>end = NULL</code>.</dd>
+      <dt>print</dt>
+      <dd>logical.  If <code>TRUE</code> the time spans are printed to the
+console.</dd>
+    </dl>
+    
+    <div class="Time Span Code Sheet">
+      <h2>Time Span Code Sheet</h2>
+      
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p>Generates a time span coding sheet and coding format sheet.</p>
+  
+    </div>
+
+    <div class="References">
+      <h2>References</h2>
+      
+      <p>Miles, M. B. & Huberman, A. M. (1994). An expanded sourcebook:
+Qualitative   data analysis. 2nd ed. Thousand Oaks, CA: SAGE Publications.</p>
+  
+    </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: 
+# ## cm_time.temp(qcv(AA, BB, CC), &quot;:30&quot;, &quot;7:40&quot;, file = &quot;foo.txt&quot;)
+# ## library(reports); delete(&quot;foo.txt&quot;)
+# cm_time.temp(qcv(AA, BB, CC), &quot;:30&quot;, &quot;7:40&quot;)
+# 
+# x &lt;- list(
+#     transcript_time_span = qcv(terms=&quot;00:00 - 1:12:00&quot;),
+#     A = qcv(terms=&quot;2.40:3.00, 5.01, 6.52:7.00, 9.00&quot;),
+#     B = qcv(terms=&quot;2.40, 3.01:3.02, 5.01, 6.52:7.00, 9.00, 1.12.00:1.19.01&quot;),
+#     C = qcv(terms=&quot;2.40:3.00, 5.01, 6.52:7.00, 9.00, 17.01&quot;)
+# )
+# cm_time2long(x)
+# cm_time.temp(qcv(AA, BB, CC))
+# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;
+</div></pre>
+  </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>cm_time.temp</li>
+    </ul>
+    <ul>
+      <li>coding</li>
+    </ul> -->
+      
+    <h2>See also</h2>
+    
+<code>cm_range.temp</code>,
+
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>
