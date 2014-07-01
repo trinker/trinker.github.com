@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>%&amp;%. qdap 2.1.1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">qdap 2.1.1</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>qdap Chaining</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><div>qdap_df.object %&% qdap.fun</div>
+<div>lhs %>% rhs</div></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>qdap_df.object</dt>
+      <dd>A <code><a href='http://www.inside-r.org/packages/cran/base/docs/data.frame'>data.frame</a></code> of the class
+<code>"qdap_df"</code>.</dd>
+      <dt>qdap.fun</dt>
+      <dd>A <span class = "pkg">qdap</span> function with a <code>text.var</code> argument.</dd>
+      <dt>lhs</dt>
+      <dd>The value to be piped.</dd>
+      <dt>rhs</dt>
+      <dd>A function or expression.</dd>
+    </dl>
+    
+    <div class="qdap Chaining">
+      <h2>qdap Chaining</h2>
+      
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p><code>%&%</code> - Chain <code>qdap_df</code>s to <span class = "pkg">qdap</span> functions with a
+<code>text.var</code> argument.  Saves typing of an explicit <code>text.var</code>
+argument and supplying a <code><a href='http://www.inside-r.org/packages/cran/base/docs/data.frame'>data.frame</a></code>.</p>
+  
+      <p><code>%>%</code> - The <span class = "pkg">magrittr</span> "then" chain operator imported by
+<span class = "pkg">dplyr</span>.  Imported for convenience.  See
+<a href = 'http://www.rdocumentation.org/packages/magrittr/functions/magrittr'>http://www.rdocumentation.org/packages/magrittr/functions/magrittr</a>
+for details.</p>
+  
+    </div>
+
+    <div class="References">
+      <h2>References</h2>
+      
+      <p>Inspired by <span class = "pkg">dplyr</span>'s <code><a href='http://www.inside-r.org/packages/cran/dplyr/docs/chain'>%.%</a></code> and
+<span class = "pkg">magrittr</span>'s <code><a href='http://www.inside-r.org/packages/cran/dplyr/docs/chain'>%>%</a></code> functionality.</p>
+  
+    </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: 
+# dat &lt;- qdap_df(DATA, state)
+# dat %&amp;% trans_cloud(grouping.var=person)
+# dat %&amp;% trans_cloud(grouping.var=person, text.var=stemmer(DATA$state))
+# dat %&amp;% termco(grouping.var=person, match.list=list(&quot;fun&quot;, &quot;computer&quot;))
+# 
+# ## Various examples with qdap functions (sentSplit gives class &quot;qdap_df&quot;)
+# dat &lt;- sentSplit(DATA, &quot;state&quot;)
+# dat %&amp;% trans_cloud(grouping.var=person)
+# dat %&amp;% termco(person, match.list=list(&quot;fun&quot;, &quot;computer&quot;))
+# dat %&amp;% trans_venn(person)
+# dat %&amp;% polarity(person)
+# dat %&amp;% formality(person)
+# dat %&amp;% automated_readability_index(person)
+# dat %&amp;% Dissimilarity(person)
+# dat %&amp;% gradient_cloud(sex)
+# dat %&amp;% dispersion_plot(c(&quot;fun&quot;, &quot;computer&quot;))
+# dat %&amp;% discourse_map(list(sex, adult))
+# dat %&amp;% gantt_plot(person)
+# dat %&amp;% word_list(adult)
+# dat %&amp;% end_mark_by(person)
+# dat %&amp;% end_mark()
+# dat %&amp;% word_stats(person)
+# dat %&amp;% wfm(person)
+# dat %&amp;% word_cor(person, &quot;i&quot;)
+# dat %&amp;% sentCombine(person)
+# dat %&amp;% question_type(person)
+# dat %&amp;% word_network_plot()
+# dat %&amp;% character_count()
+# dat %&amp;% char_table(person)
+# dat %&amp;% phrase_net(2, .1)
+# dat %&amp;% boolean_search(&quot;it||!&quot;)
+# dat %&amp;% trans_context(person, which(end_mark(DATA.SPLIT[, &quot;state&quot;]) == &quot;?&quot;))
+# dat %&amp;% mgsub(c(&quot;it&#39;s&quot;, &quot;I&#39;m&quot;), c(&quot;it is&quot;, &quot;I am&quot;))
+# 
+# ## combine with magrittr/dplyr chaining
+# dat %&amp;% wfm(person) %&gt;% plot()
+# dat %&amp;% polarity(person) %&gt;% scores()
+# dat %&amp;% polarity(person) %&gt;% counts()
+# dat %&amp;% polarity(person) %&gt;% scores()
+# dat %&amp;% polarity(person) %&gt;% scores() %&gt;% plot()
+# dat %&amp;% polarity(person) %&gt;% scores %&gt;% plot
+# 
+# ## Change text column in `qdap_df` (Example 1)
+# dat2 &lt;- sentSplit(DATA, &quot;state&quot;, stem.col = TRUE)
+# class(dat2)
+# dat2 %&amp;% trans_cloud()
+# Text(dat2)
+# ## change the `text.var` column
+# Text(dat2) &lt;- &quot;stem.text&quot;
+# dat2 %&amp;% trans_cloud()
+# 
+# ## Change text column in `qdap_df` (Example 2)
+# (dat2$fake_dat &lt;- paste(emoticon[1:11,2], dat2$state))
+# Text(dat2) &lt;- &quot;fake_dat&quot;
+# (m &lt;- dat2 %&amp;% sub_holder(emoticon[,2]))
+# m$unhold(strip(m$output))
+# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;
+</div></pre>
+  </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>%&amp;%</li><li>%&gt;%</li>
+    </ul>
+    <ul>
+      <li>chain</li><li>chaining</li><li>pipe</li>
+    </ul> -->
+      
+    <h2>See also</h2>
+    
+<code><a href='http://www.inside-r.org/packages/cran/dplyr/docs/chain'>%>%</a></code>,
+<code>qdap_df</code>
+
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

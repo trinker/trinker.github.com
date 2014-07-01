@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>check_spelling_interactive.factor. qdap 2.1.1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">qdap 2.1.1</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Check Spelling</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><div>"check_spelling_interactive"(text.var, range&nbsp;=&nbsp;2, max.distance&nbsp;=&nbsp;0.15, assume.first.correct&nbsp;=&nbsp;TRUE, click&nbsp;=&nbsp;TRUE, dictionary&nbsp;=&nbsp;qdapDictionaries::GradyAugmented, parallel&nbsp;=&nbsp;TRUE, cores&nbsp;=&nbsp;parallel::detectCores()/2, ...)</div></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>text.var</dt>
+      <dd>A <code><a href='http://www.inside-r.org/packages/cran/base/docs/factor'>factor</a></code> object, specifically a text vector
+of factor strings.  Note that this method is provided for factors for
+convenience, ideally the user should supply a character vector rather than
+factor.</dd>
+      <dt>range</dt>
+      <dd>An integer of length 1 to use as a range for number of
+characters, beyond the number of characters of a word not found in the
+<code>dictionary</code>, to initially limit <code>dictionary</code> size and thus time to
+find a suggested replacement term.  This may be expanded if no suitable
+suggestion is returned.</dd>
+      <dt>max.distance</dt>
+      <dd>A maximum distance to use as a starting <code>dictionary</code>
+reduction as the <code>max.distance</code> passed to <code><a href='http://www.inside-r.org/packages/cran/base/docs/agrep'>agrep</a></code>.
+This may be increased if no suitable suggestion is returned.</dd>
+      <dt>assume.first.correct</dt>
+      <dd>logical.  If <code>TRUE</code> it is assumed that the
+first letter of the misspelled word is correct.  This reduces the dictionary
+size, thus speeding up computation.</dd>
+      <dt>click</dt>
+      <dd>logical.  If <code>TRUE</code> the interface is a point and click GUI.
+If <code>FALSE</code> the interace is command line driven.</dd>
+      <dt>dictionary</dt>
+      <dd>A character vector of terms to search for.  To reduce
+overhead it is expected that this dictionary is lower case, unique terms.</dd>
+      <dt>parallel</dt>
+      <dd>logical.  If <code>TRUE</code> attempts to run the function on
+multiple cores.  Note that this may not mean a speed boost if you have one
+core or if the data set is smaller as the cluster takes time to create.</dd>
+      <dt>cores</dt>
+      <dd>The number of cores to use if <code>parallel = TRUE</code>.  Default
+is half the number of available cores.</dd>
+      <dt>...</dt>
+      <dd>ignored</dd>
+    </dl>
+    
+    <div class="Check Spelling">
+      <h2>Check Spelling</h2>
+      
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p>View factor check_spelling_interactive.</p>
+  
+    </div>
+
+    <div class="Details">
+      <h2>Details</h2>
+      
+      <p>factor Method for check_spelling_interactive</p>
+  
+    </div>
+      </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>check_spelling_interactive.factor</li>
+    </ul>
+    <ul>
+      
+    </ul> -->
+      
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

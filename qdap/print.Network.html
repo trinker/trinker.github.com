@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>print.Network. qdap 2.1.1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">qdap 2.1.1</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Prints a Network Object</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><div>"print"(x, title&nbsp;=&nbsp;NA, title.color&nbsp;=&nbsp;"black", seed&nbsp;=&nbsp;sample(1:10000, 1), layout&nbsp;=&nbsp;igraph::layout.auto, legend&nbsp;=&nbsp;c(-0.5, -1.5, 0.5, -1.45), legend.cex&nbsp;=&nbsp;1, bg&nbsp;=&nbsp;NULL, legend.text.color&nbsp;=&nbsp;"black", legend.gradient&nbsp;=&nbsp;NULL, vertex.color&nbsp;=&nbsp;"grey80", vertex.size&nbsp;=&nbsp;9, vertex.frame.color&nbsp;=&nbsp;NA, vertex.label.color&nbsp;=&nbsp;"grey40", vertex.label.cex&nbsp;=&nbsp;1.1, edge.label.color&nbsp;=&nbsp;"black", edge.label.cex&nbsp;=&nbsp;0.9, ...)</div></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>x</dt>
+      <dd>The Network object.</dd>
+      <dt>title</dt>
+      <dd>The title of the plot.  <code>NULL</code> eliminates title.  <code>NA</code>
+uses title attribute of the Network object.</dd>
+      <dt>title.color</dt>
+      <dd>The color of the title.</dd>
+      <dt>layout</dt>
+      <dd><span class = "pkg">igraph</span> <code>layout</code> to use.</dd>
+      <dt>seed</dt>
+      <dd>The seed to use in plotting the graph.</dd>
+      <dt>legend</dt>
+      <dd>The coordinates of the legend. See
+<code><a href='http://www.inside-r.org/packages/cran/plotrix/docs/color.legend'>color.legend</a></code> for more information.</dd>
+      <dt>legend.cex</dt>
+      <dd>character expansion factor. <code>NULL</code> and <code>NA</code> are
+equivalent to 1.0. See <code><a href='http://www.inside-r.org/packages/cran/graphics/docs/mtext'>mtext</a></code> for more information.</dd>
+      <dt>legend.text.color</dt>
+      <dd>The legend text color.</dd>
+      <dt>legend.gradient</dt>
+      <dd>A vector of ordered colors to use for the gradient
+fills in the network edges.</dd>
+      <dt>bg</dt>
+      <dd>The color to be used for the background of the device region. See
+<code><a href='http://www.inside-r.org/packages/cran/graphics/docs/par'>par</a></code> for more information.</dd>
+      <dt>vertex.color</dt>
+      <dd>The font family to be used for vertex labels.</dd>
+      <dt>vertex.size</dt>
+      <dd>The size of the vertex.</dd>
+      <dt>vertex.frame.color</dt>
+      <dd>The color of the vertex border.</dd>
+      <dt>vertex.label.color</dt>
+      <dd>The color of the labels.</dd>
+      <dt>vertex.label.cex</dt>
+      <dd>The font size for vertex labels.</dd>
+      <dt>edge.label.color</dt>
+      <dd>The color for the edge labels.  Use <code>NA</code> to
+remove.</dd>
+      <dt>edge.label.cex</dt>
+      <dd>The font size of the edge labels.</dd>
+      <dt>...</dt>
+      <dd>Other Arguments passed to <code><a href='http://www.inside-r.org/packages/cran/igraph/docs/plot.graph'>plot.igraph</a></code>.</dd>
+    </dl>
+    
+    <div class="Prints a Network Object">
+      <h2>Prints a Network Object</h2>
+      
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p>Prints a Network object.</p>
+  
+    </div>
+
+    <div class="Note">
+      <h2>Note</h2>
+      
+      <p>The output from <code>Network</code> is an <span class = "pkg">igraph</span> object and can be
+altered and plotted directly using <span class = "pkg">igraph</span>.  The <span class = "pkg">qdap</span> <code>print</code>
+method is offered as a quick approach to styling the figure.  For mor control
+use <code><a href='http://www.inside-r.org/packages/cran/igraph/docs/iterators'>V</a></code>, <code><a href='http://www.inside-r.org/packages/cran/igraph/docs/iterators'>E</a></code>, and
+<code>plot.igrapgh</code>.</p>
+  
+    </div>
+      </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>print.Network</li>
+    </ul>
+    <ul>
+      
+    </ul> -->
+      
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

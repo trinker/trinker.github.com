@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>colcomb2class. qdap 2.1.1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">qdap 2.1.1</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Combine Columns to Class</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><div>colcomb2class(dataframe, combined.columns, class&nbsp;=&nbsp;"list", percent&nbsp;=&nbsp;TRUE, digits&nbsp;=&nbsp;2, elim.old&nbsp;=&nbsp;TRUE, zero.replace&nbsp;=&nbsp;0, override&nbsp;=&nbsp;FALSE)</div></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>dataframe</dt>
+      <dd>A dataframe or qdap class (e.g.,
+<code>termco</code>, <code>question_type</code>, <code>pos_by</code>, <code>character_table</code>).</dd>
+      <dt>combined.columns</dt>
+      <dd>A list of named vectors of the colnames/indexes
+of the numeric columns to be combined (summed).  If a vector is unnamed a
+name will be assigned.</dd>
+      <dt>class</dt>
+      <dd>The class to assign to the output.</dd>
+      <dt>percent</dt>
+      <dd>logical.  If <code>TRUE</code> output given as percent.  If
+<code>FALSE</code> the output is proportion.</dd>
+      <dt>digits</dt>
+      <dd>Integer; number of decimal places to round when printing.</dd>
+      <dt>elim.old</dt>
+      <dd>logical.  If <code>TRUE</code> eliminates the columns that are
+combined together by the named match.list. <code>TRUE</code> outputs the table
+proportionally (see <code>prop</code>).</dd>
+      <dt>zero.replace</dt>
+      <dd>Value to replace 0 values with.</dd>
+      <dt>override</dt>
+      <dd>logical.  If <code>TRUE</code> the printing options (e.g.,
+percent, digits, etc.) of the dataframe argument are overrode.</dd>
+    </dl>
+    
+    <div class="Combine Columns to Class">
+      <h2>Combine Columns to Class</h2>
+      
+    </div>
+
+    <div class="Value">
+      <h2>Value</h2>
+      
+      <p>Returns a list with raw counts, percents and combined raw
+and percents.</p>
+  
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p>Combine columns from qdap classes or a <code>data.frame</code>.</p>
+  
+    </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## `termco` example
+ml &lt;- list(
+    cat1 = c(&quot; the &quot;, &quot; a &quot;, &quot; an &quot;),
+    cat2 = c(&quot; I&#39;&quot; ),
+    &quot;good&quot;,
+    the = c(&quot;the&quot;, &quot; the &quot;, &quot; the&quot;, &quot;the&quot;)
+)
+dat1 &lt;- with(raj.act.1,  termco(dialogue, person, ml))
+colcomb2class(dat1, list(cats = c(&quot;cat1&quot;, &quot;cat2&quot;)))
+</div>
+<div class='output'>           person word.count     good        the      cats
+1         Abraham         24        0          0         0
+2        Benvolio        621  2(.32%)  44(7.09%) 34(5.48%)
+3         Capulet        736  3(.41%)  30(4.08%) 42(5.71%)
+4   First Citizen         16        0  3(18.75%) 2(12.50%)
+5   First Servant         69 1(1.45%)   5(7.25%) 8(11.59%)
+6         Gregory        149        0 16(10.74%)  9(6.04%)
+7          Juliet        206  1(.49%)   9(4.37%)  6(2.91%)
+8    Lady Capulet        286        0  21(7.34%) 20(6.99%)
+9   Lady Montague         28        0          0  2(7.14%)
+10       Mercutio        552  2(.36%)  46(8.33%) 49(8.88%)
+11       Montague        217  1(.46%)  13(5.99%) 12(5.53%)
+12          Nurse        598  2(.33%)  31(5.18%) 45(7.53%)
+13          Paris         32        0   1(3.12%)         0
+14         Prince        167        0  11(6.59%)  8(4.79%)
+15          Romeo       1164  3(.26%)  48(4.12%) 59(5.07%)
+16        Sampson        259  1(.39%)  23(8.88%) 19(7.34%)
+17 Second Capulet         17        0          0         0
+18 Second Servant         41 1(2.44%)   3(7.32%)  2(4.88%)
+19        Servant        183  1(.55%)  12(6.56%) 13(7.10%)
+20         Tybalt        160        0  10(6.25%) 12(7.50%)
+</div>
+<div class='input'>
+## `question_type` example
+dat2 &lt;- question_type(DATA.SPLIT$state, DATA.SPLIT$person)
+combs &lt;- list(
+    `wh/how` = c(&quot;what&quot;, &quot;how&quot;),
+    oth = c(&quot;shall&quot;, &quot;implied_do/does/did&quot;)
+)
+colcomb2class(dat2, combs)
+</div>
+<div class='output'>      person tot.quest  wh/how     oth
+1       greg         1       0 1(100%)
+2 researcher         1       0 1(100%)
+3      sally         2 2(100%)       0
+4    teacher         1 1(100%)       0
+5        sam         0       0       0
+</div>
+<div class='input'>
+## `pos_by` example
+dat3 &lt;- with(DATA, pos_by(state, list(adult, sex)))
+colcomb2class(dat3, qcv(DT, EX, FW))
+</div>
+<div class='output'>  adult&amp;sex wrd.cnt       IN       JJ       MD       NN      PRP    PRP$       RB       VB      VBG      VBP     VBZ     WP    WRB       1       2       3
+1       0.f      10 1(10.0%) 1(10.0%) 1(10.0%)        0 2(20.0%)       0        0 1(10.0%) 1(10.0%) 1(10.0%)       0 1(10%) 1(10%)       0       0       0
+2       0.m      33        0  2(6.1%)        0 6(18.2%) 6(18.2%) 2(6.1%) 4(12.1%)  2(6.1%)  1(3.0%)  2(6.1%) 3(9.1%)      0      0 3(9.1%) 1(3.0%) 1(3.0%)
+3       1.f       6 1(16.7%) 1(16.7%) 1(16.7%)        0 1(16.7%)       0 1(16.7%) 1(16.7%)        0        0       0      0      0       0       0       0
+4       1.m       4        0        0 1(25.0%)        0 1(25.0%)       0        0 1(25.0%)        0        0       0 1(25%)      0       0       0       0
+</div>
+<div class='input'>
+
+## data.frame example
+dat4 &lt;- data.frame(X=LETTERS[1:5], matrix(sample(0:5, 20, TRUE), ncol = 4))
+colcomb2class(dat4, list(new = c(&quot;X1&quot;, &quot;X4&quot;)))
+</div>
+<div class='output'>$raw
+  X X2 X3 new
+1 A  0  4   5
+2 B  4  4  10
+3 C  5  1   3
+4 D  4  1  10
+5 E  0  2   6
+
+$prop
+  X       X2        X3      new
+1 A  0.00000 44.444444 55.55556
+2 B 22.22222 22.222222 55.55556
+3 C 55.55556 11.111111 33.33333
+4 D 26.66667  6.666667 66.66667
+5 E  0.00000 25.000000 75.00000
+
+$rnp
+  X        X2        X3        new
+1 A         0 4(44.44%)  5(55.56%)
+2 B 4(22.22%) 4(22.22%) 10(55.56%)
+3 C 5(55.56%) 1(11.11%)  3(33.33%)
+4 D 4(26.67%)  1(6.67%) 10(66.67%)
+5 E         0 2(25.00%)  6(75.00%)
+
+$digits
+[1] 2
+
+$percent
+[1] TRUE
+
+</div></pre>
+  </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>colcomb2class</li>
+    </ul>
+    <ul>
+      
+    </ul> -->
+      
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

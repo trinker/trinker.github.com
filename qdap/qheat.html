@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>qheat. qdap 2.1.1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">qdap 2.1.1</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Quick Heatmap</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><div>qheat(mat, low&nbsp;=&nbsp;"white", high&nbsp;=&nbsp;"darkblue", values&nbsp;=&nbsp;FALSE, digits&nbsp;=&nbsp;1, text.size&nbsp;=&nbsp;3, text.color&nbsp;=&nbsp;"grey40", xaxis.col&nbsp;=&nbsp;"black", yaxis.col&nbsp;=&nbsp;"black", order.by&nbsp;=&nbsp;NULL, grid&nbsp;=&nbsp;"white", by.column&nbsp;=&nbsp;TRUE, auto.size&nbsp;=&nbsp;FALSE, mat2&nbsp;=&nbsp;NULL, plot&nbsp;=&nbsp;TRUE, facet.vars&nbsp;=&nbsp;NULL, facet.flip&nbsp;=&nbsp;FALSE, diag.na&nbsp;=&nbsp;FALSE, diag.values&nbsp;=&nbsp;"", ...)</div>
+<div>"qheat"(mat, low&nbsp;=&nbsp;"white", high&nbsp;=&nbsp;"darkblue", values&nbsp;=&nbsp;FALSE, digits&nbsp;=&nbsp;1, text.size&nbsp;=&nbsp;3, text.color&nbsp;=&nbsp;"grey40", xaxis.col&nbsp;=&nbsp;"black", yaxis.col&nbsp;=&nbsp;"black", order.by&nbsp;=&nbsp;NULL, grid&nbsp;=&nbsp;"white", by.column&nbsp;=&nbsp;TRUE, auto.size&nbsp;=&nbsp;FALSE, mat2&nbsp;=&nbsp;NULL, plot&nbsp;=&nbsp;TRUE, facet.vars&nbsp;=&nbsp;NULL, facet.flip&nbsp;=&nbsp;FALSE, diag.na&nbsp;=&nbsp;FALSE, diag.values&nbsp;=&nbsp;"", ...)</div>
+<div>"qheat"(mat, low&nbsp;=&nbsp;"white", high&nbsp;=&nbsp;"darkblue", values&nbsp;=&nbsp;FALSE, digits&nbsp;=&nbsp;1, text.size&nbsp;=&nbsp;3, text.color&nbsp;=&nbsp;"grey40", xaxis.col&nbsp;=&nbsp;"black", yaxis.col&nbsp;=&nbsp;"black", order.by&nbsp;=&nbsp;NULL, grid&nbsp;=&nbsp;"white", by.column&nbsp;=&nbsp;TRUE, auto.size&nbsp;=&nbsp;FALSE, mat2&nbsp;=&nbsp;NULL, plot&nbsp;=&nbsp;TRUE, facet.vars&nbsp;=&nbsp;NULL, facet.flip&nbsp;=&nbsp;FALSE, diag.na&nbsp;=&nbsp;FALSE, diag.values&nbsp;=&nbsp;"", ...)</div>
+<div>"qheat"(mat, low&nbsp;=&nbsp;"white", high&nbsp;=&nbsp;"darkblue", values&nbsp;=&nbsp;FALSE, digits&nbsp;=&nbsp;1, text.size&nbsp;=&nbsp;3, text.color&nbsp;=&nbsp;"grey40", xaxis.col&nbsp;=&nbsp;"black", yaxis.col&nbsp;=&nbsp;"black", order.by&nbsp;=&nbsp;NULL, grid&nbsp;=&nbsp;"white", by.column&nbsp;=&nbsp;TRUE, auto.size&nbsp;=&nbsp;FALSE, mat2&nbsp;=&nbsp;NULL, plot&nbsp;=&nbsp;TRUE, facet.vars&nbsp;=&nbsp;NULL, facet.flip&nbsp;=&nbsp;FALSE, diag.na&nbsp;=&nbsp;FALSE, diag.values&nbsp;=&nbsp;"", ...)</div>
+<div>"qheat"(mat, low&nbsp;=&nbsp;"white", high&nbsp;=&nbsp;"darkblue", values&nbsp;=&nbsp;FALSE, digits&nbsp;=&nbsp;1, text.size&nbsp;=&nbsp;3, text.color&nbsp;=&nbsp;"grey40", xaxis.col&nbsp;=&nbsp;"black", yaxis.col&nbsp;=&nbsp;"black", order.by&nbsp;=&nbsp;NULL, grid&nbsp;=&nbsp;"white", by.column&nbsp;=&nbsp;TRUE, auto.size&nbsp;=&nbsp;FALSE, mat2&nbsp;=&nbsp;NULL, plot&nbsp;=&nbsp;TRUE, facet.vars&nbsp;=&nbsp;NULL, facet.flip&nbsp;=&nbsp;FALSE, diag.na&nbsp;=&nbsp;FALSE, diag.values&nbsp;=&nbsp;"", ...)</div>
+<div>"qheat"(mat, low&nbsp;=&nbsp;"white", high&nbsp;=&nbsp;"darkblue", values&nbsp;=&nbsp;FALSE, digits&nbsp;=&nbsp;1, text.size&nbsp;=&nbsp;3, text.color&nbsp;=&nbsp;"grey40", xaxis.col&nbsp;=&nbsp;"black", yaxis.col&nbsp;=&nbsp;"black", order.by&nbsp;=&nbsp;NULL, grid&nbsp;=&nbsp;"white", by.column&nbsp;=&nbsp;TRUE, auto.size&nbsp;=&nbsp;FALSE, mat2&nbsp;=&nbsp;NULL, plot&nbsp;=&nbsp;TRUE, facet.vars&nbsp;=&nbsp;NULL, facet.flip&nbsp;=&nbsp;FALSE, diag.na&nbsp;=&nbsp;FALSE, diag.values&nbsp;=&nbsp;"", ...)</div>
+<div>"qheat"(mat, low&nbsp;=&nbsp;"white", high&nbsp;=&nbsp;"darkblue", values&nbsp;=&nbsp;FALSE, digits&nbsp;=&nbsp;1, text.size&nbsp;=&nbsp;3, text.color&nbsp;=&nbsp;"grey40", xaxis.col&nbsp;=&nbsp;"black", yaxis.col&nbsp;=&nbsp;"black", order.by&nbsp;=&nbsp;NULL, grid&nbsp;=&nbsp;"white", by.column&nbsp;=&nbsp;TRUE, auto.size&nbsp;=&nbsp;FALSE, mat2&nbsp;=&nbsp;NULL, plot&nbsp;=&nbsp;TRUE, facet.vars&nbsp;=&nbsp;NULL, facet.flip&nbsp;=&nbsp;FALSE, diag.na&nbsp;=&nbsp;FALSE, diag.values&nbsp;=&nbsp;"", ...)</div>
+<div>"qheat"(mat, low&nbsp;=&nbsp;"white", high&nbsp;=&nbsp;"darkblue", values&nbsp;=&nbsp;FALSE, digits&nbsp;=&nbsp;1, text.size&nbsp;=&nbsp;3, text.color&nbsp;=&nbsp;"grey40", xaxis.col&nbsp;=&nbsp;"black", yaxis.col&nbsp;=&nbsp;"black", order.by&nbsp;=&nbsp;NULL, grid&nbsp;=&nbsp;"white", by.column&nbsp;=&nbsp;TRUE, auto.size&nbsp;=&nbsp;FALSE, mat2&nbsp;=&nbsp;NULL, plot&nbsp;=&nbsp;TRUE, facet.vars&nbsp;=&nbsp;NULL, facet.flip&nbsp;=&nbsp;FALSE, diag.na&nbsp;=&nbsp;FALSE, diag.values&nbsp;=&nbsp;"", ...)</div></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>mat</dt>
+      <dd>A matrix or dataframe produced by many qdap functions in
+which the first column is the grouping variable and the rest of the matrix
+is numeric.  Also accepts objects directly from <code>word_stats</code>
+and <code>question_type</code>.</dd>
+      <dt>low</dt>
+      <dd>The color to be used for lower values.</dd>
+      <dt>high</dt>
+      <dd>The color to be used for higher values.</dd>
+      <dt>values</dt>
+      <dd>logical.  If <code>TRUE</code> the cell values will be included on
+the heatmap.</dd>
+      <dt>digits</dt>
+      <dd>The number of digits displayed if <code>values</code> is <code>TRUE</code>.</dd>
+      <dt>text.size</dt>
+      <dd>A integer size to plot the text if <code>values</code> is
+<code>TRUE</code>.</dd>
+      <dt>text.color</dt>
+      <dd>A character vector to plot the text if <code>values</code>
+is <code>TRUE</code>.</dd>
+      <dt>xaxis.col</dt>
+      <dd>A single character vector color choice for the high values.</dd>
+      <dt>yaxis.col</dt>
+      <dd>A single character vector color choice for the low values.</dd>
+      <dt>order.by</dt>
+      <dd>An optional character vector of a variable name to order the
+columns by.  To reverse use a negative (<code>-</code>) before the column name.</dd>
+      <dt>grid</dt>
+      <dd>The color of the grid (Use <code>NULL</code> to remove the grid).</dd>
+      <dt>by.column</dt>
+      <dd>logical.  If <code>TRUE</code> applies scaling to the column.  If
+<code>FALSE</code>  applies scaling by row (use <code>NULL</code> to turn off scaling).</dd>
+      <dt>auto.size</dt>
+      <dd>logical.  If <code>TRUE</code> the visual will be resized to
+create square cells.</dd>
+      <dt>mat2</dt>
+      <dd>A second matrix equal in dimensions to <code>mat</code> that will be
+used for cell labels if <code>values</code> is <code>TRUE</code>.</dd>
+      <dt>plot</dt>
+      <dd>logical.  If <code>TRUE</code> the plot will automatically plot.
+The user may wish to set to <code>FALSE</code> for use in knitr, sweave, etc.
+to add additional plot layers.</dd>
+      <dt>facet.vars</dt>
+      <dd>A character vector of 1 or 2 column names to facet by.</dd>
+      <dt>facet.flip</dt>
+      <dd>logical If <code>TRUE</code> the direction of the faceting
+is reversed.</dd>
+      <dt>diag.na</dt>
+      <dd>logical.  If <code>TRUE</code> and <code>mat</code> is a symmetrical
+matrix the diagonals are set to <code>NA</code>.  This is useful with correlation
+matrices because the diagonal of ones do not affect the scaling of the
+heatmap.</dd>
+      <dt>diag.values</dt>
+      <dd>The string to be used for the diagonal labels (values)
+if <code>diag.na</code> is set to <code>TRUE</code>.  Default is to not print a value.</dd>
+      <dt>...</dt>
+      <dd>Not currently used.</dd>
+    </dl>
+    
+    <div class="Quick Heatmap">
+      <h2>Quick Heatmap</h2>
+      
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p>A quick heatmap function for visualizing typical qdap dataframe/matrix
+outputs.</p>
+  
+      <p>diversity Method for qheat</p>
+  
+      <p>termco Method for qheat</p>
+  
+      <p>word_stats Method for qheat</p>
+  
+      <p>character_table Method for qheat</p>
+  
+      <p>question_type Method for qheat</p>
+  
+      <p>pos_by Method for qheat</p>
+  
+    </div>
+
+    <div class="Details">
+      <h2>Details</h2>
+      
+      <p><code>qheat</code> is useful for finding patterns and anomalies in large
+qdap generated dataframes and matrices.</p>
+  
+    </div>
+
+    <div class="Note">
+      <h2>Note</h2>
+      
+      <p><code>qheat</code> is a fast way of working with data formats
+produced by qdap.  The function isn't designed to be extended beyond
+exploratory qdap usage.</p>
+  
+    </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: 
+# dat &lt;- sentSplit(DATA, &quot;state&quot;)
+# ws.ob &lt;- with(dat, word_stats(state, list(sex, adult), tot=tot))
+# qheat(ws.ob)
+# qheat(ws.ob) + coord_flip()
+# qheat(ws.ob, order.by = &quot;sptot&quot;,
+#     xaxis.col = c(&quot;red&quot;, &quot;black&quot;, &quot;green&quot;, &quot;blue&quot;))
+# qheat(ws.ob, order.by = &quot;sptot&quot;)
+# qheat(ws.ob, order.by = &quot;-sptot&quot;)
+# qheat(ws.ob, values = TRUE)
+# qheat(ws.ob, values = TRUE, text.color = &quot;red&quot;)
+# qheat(ws.ob, &quot;yellow&quot;, &quot;red&quot;, grid = FALSE)
+# qheat(mtcars, facet.vars = &quot;cyl&quot;)
+# qheat(mtcars, facet.vars = c(&quot;gear&quot;, &quot;cyl&quot;))
+# qheat(t(mtcars), by.column=FALSE)
+# qheat(cor(mtcars), diag.na=TRUE, diag.value=&quot;&quot;, by.column=NULL, values = TRUE)
+# 
+# dat1 &lt;- data.frame(G=LETTERS[1:5], matrix(rnorm(20), ncol = 4))
+# dat2 &lt;- data.frame(matrix(LETTERS[1:25], ncol=5))
+# qheat(dat1, values=TRUE)
+# qheat(dat1, values=TRUE, mat2=dat2)
+# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;
+</div></pre>
+  </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>qheat</li><li>qheat.character_table</li><li>qheat.default</li><li>qheat.diversity</li><li>qheat.pos_by</li><li>qheat.question_type</li><li>qheat.termco</li><li>qheat.word_stats</li>
+    </ul>
+    <ul>
+      <li>heatmap</li>
+    </ul> -->
+      
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

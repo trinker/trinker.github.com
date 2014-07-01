@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>Animate.polarity. qdap 2.1.1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">qdap 2.1.1</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Animate Polarity</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><div>"Animate"(x, negative&nbsp;=&nbsp;"blue", positive&nbsp;=&nbsp;"red", neutral&nbsp;=&nbsp;"yellow", edge.constant, wc.time&nbsp;=&nbsp;TRUE, time.constant&nbsp;=&nbsp;2, title&nbsp;=&nbsp;NULL, digits&nbsp;=&nbsp;3, current.color&nbsp;=&nbsp;"black", current.speaker.color&nbsp;=&nbsp;NULL, non.speaker.color&nbsp;=&nbsp;NA, ave.color.line&nbsp;=&nbsp;"red", as.network&nbsp;=&nbsp;TRUE, ...)</div></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>x</dt>
+      <dd>A <code>polarity</code> object.</dd>
+      <dt>negative</dt>
+      <dd>The color to use for negative polarity.</dd>
+      <dt>positive</dt>
+      <dd>The color to use for positive polarity.</dd>
+      <dt>neutral</dt>
+      <dd>The color to use for neutral polarity.</dd>
+      <dt>edge.constant</dt>
+      <dd>A constant to multiple edge width by.</dd>
+      <dt>wc.time</dt>
+      <dd>logical.  If <code>TRUE</code> weights duration of frame by word
+count.</dd>
+      <dt>time.constant</dt>
+      <dd>A constant to divide the maximum word count by.  Time
+is calculated by `round(exp(WORD COUNT/(max(WORD COUNT)/time.constant)))`.
+Therefore a larger constant will make the difference between the large and
+small word counts greater.</dd>
+      <dt>title</dt>
+      <dd>The title to apply to the animated image(s).</dd>
+      <dt>digits</dt>
+      <dd>The number of digits to use in the current turn of talk
+polarity.</dd>
+      <dt>current.color</dt>
+      <dd>The color to use for the current turn of talk polarity.</dd>
+      <dt>current.speaker.color</dt>
+      <dd>The color for the current speaker.</dd>
+      <dt>non.speaker.color</dt>
+      <dd>The color for the speakers not currently speaking.</dd>
+      <dt>ave.color.line</dt>
+      <dd>The color to use for the average color line if
+<code>network = FALSE</code>.</dd>
+      <dt>as.network</dt>
+      <dd>logical.  If <code>TRUE</code> the animation is a network plot.
+If <code>FALSE</code> the animation is a hybrid dot plot.</dd>
+      <dt>...</dt>
+      <dd>Other arguments passed to <code>discourse_map</code>.</dd>
+    </dl>
+    
+    <div class="Animate Polarity">
+      <h2>Animate Polarity</h2>
+      
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p><code>Animate.polarity</code> - Animate a <code>polarity</code> object.</p>
+  
+    </div>
+
+    <div class="Details">
+      <h2>Details</h2>
+      
+      <p>polarity Method for Animate</p>
+  
+    </div>
+
+    <div class="Note">
+      <h2>Note</h2>
+      
+      <p>The width of edges is based on words counts on that edge until that
+moment divided by total number of words used until that moment.  Thicker
+edges tend to thin as time passes.  The actual duration the current edge
+stays as the <code>current.color</code> is based on word counts for that particular
+flow of dialogue divided by total dialogue (words) used.  The edge label is
+the current polarity for that turn of talk (an aggregation of the sub
+sentences of the current turn of talk).  The coloring of the current edge
+polarity is produced at th sentence level, therefor a label may indicate a
+positive current turn of talk, while the coloring may indicate a negative
+sentences.</p>
+  
+    </div>
+      </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>Animate.polarity</li>
+    </ul>
+    <ul>
+      
+    </ul> -->
+      
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>
