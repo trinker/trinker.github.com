@@ -13,15 +13,10 @@ h6 { font-family:Serif; text-align: center; font-face: times new roman ; font-si
 body, td {
    font-family:Serif;
    font-face: times new roman ;
-   text-align: justify ;
-   background: #efefef;
    font-size: 18px;
    margin: 8px;
 }
 
-body {
-    margin: 5em auto auto 7em;
-}
 
 
 code.r, code.cpp {
@@ -161,9 +156,8 @@ div, iframe {
 
 .container {
 box-shadow: 10px 10px 5px #888888;
-    width: 70%;
-    margin: 15em auto 5em;
-    margin-bottom:-9em;
+    width: 47.5%;
+    margin-bottom:90em;
     margin-top:5em;
     background: #FFF;
 }
