@@ -136,11 +136,20 @@ incomplete and marked with <code>"|"</code> to denote an incomplete/trailing
 sentence.</p>
   
     </div>
+
+    <div class="Suggestion">
+      <h2>Suggestion</h2>
+      
+      <p>It is recommended that the user runs <code>check_text</code> on the
+output of <code>sentSplit</code>'s text coloumn.</p>
+  
+    </div>
     
     <h2 id="examples">Examples</h2>
     <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: 
 # ## `sentSplit` EXAMPLE:
 # (out &lt;- sentSplit(DATA, &quot;state&quot;))
+# out %&amp;% check_text()  ## check output text
 # sentSplit(DATA, &quot;state&quot;, stem.col = TRUE)
 # sentSplit(DATA, &quot;state&quot;, text.place = &quot;left&quot;)
 # sentSplit(DATA, &quot;state&quot;, text.place = &quot;original&quot;)

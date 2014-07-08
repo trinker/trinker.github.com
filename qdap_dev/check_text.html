@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>check_text. qdap 2.1.1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">qdap 2.1.1</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Check Text For Potential Problems</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><div>check_text(text.var, file&nbsp;=&nbsp;NULL)</div></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>text.var</dt>
+      <dd>The text variable.</dd>
+      <dt>file</dt>
+      <dd>A connection, or a character string naming the file to print to.
+If <code>NULL</code> prints to the console.  Note that this is assigned as an
+attribute and passed to <code>print</code>.</dd>
+    </dl>
+    
+    <div class="Check Text For Potential Problems">
+      <h2>Check Text For Potential Problems</h2>
+      
+    </div>
+
+    <div class="Value">
+      <h2>Value</h2>
+      
+      <p>Returns a list with the following potential text faults reports:
+<ul>
+<li>non_character- Text that is non-character.
+  </li>
+<li>missing_ending_punctuation- Text with no endmark at the end of the string.
+  </li>
+<li>empty- Text that contains an empty element (i.e., <code>""</code>).
+  </li>
+<li>double_punctuation- Text that contains two <span class = "pkg">qdap</span> punctuation marks in the same string.
+  </li>
+<li>non_space_after_comma- Text that contains commas with no space after them.
+  </li>
+<li>no_alpha- Text that contains string elements with no alphabetic characters.
+  </li>
+<li>non_ascii- Text that contains non-ASCII characters.
+  </li>
+<li>missing_value- Text that contains missing values (i.e., <code>NA</code>).
+  </li>
+<li>containing_escaped- Text that contains escaped (see <code>?Quotes</code>).
+  </li>
+<li>containing_digits- Text that contains digits.
+  </li>
+<li>indicating_incomplete- Text that contains endmarks that are indicative of incomplete/trailing sentences (e.g., <code>...</code>).
+  </li>
+<li>potentially_misspelled-  Text that contains potentially misspelled words.
+</li>
+</ul></p>
+  
+      <p></p>
+  
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p>Uncleaned text may result in errors, warnings, and incorrect results in
+subsequent analysis.  <code>check_text</code> checks text for potential problems
+and suggests possible fixes.  Potential text anomalies that are detected
+include: factors, missing ending punctuation, empty cells, double punctuation,
+non-space after comma, no alphabetic characters, non-ascii, missing value,
+and potentially misspelled words.</p>
+  
+    </div>
+
+    <div class="Note">
+      <h2>Note</h2>
+      
+      <p>The output is a list but prints as a pretty formatted output with
+potential problem elements, the accompanying text, and possible suggestions
+to fix the text.</p>
+  
+    </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: 
+# x &lt;- c(&quot;i like&quot;, &quot;i want. thet them .&quot;, &quot;I am ! that|&quot;, &quot;&quot;, NA,
+#     &quot;they,were there&quot;, &quot;.&quot;, &quot;   &quot;, &quot;?&quot;, &quot;3;&quot;, &quot;I like goud eggs!&quot;,
+#     &quot;i 4like...&quot;, &quot;\\tgreat&quot;,  &quot;She said \&quot;yes\&quot;&quot;)
+# check_text(x)
+# print(check_text(x), include.text=FALSE)
+# 
+# y &lt;- c(&quot;A valid sentence.&quot;, &quot;yet another!&quot;)
+# check_text(y)
+# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;
+</div></pre>
+  </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>check_text</li>
+    </ul>
+    <ul>
+      <li>check</li><li>spelling</li><li>text</li>
+    </ul> -->
+      
+    <h2>See also</h2>
+    
+<code>check_spelling_interactive</code>
+
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>
