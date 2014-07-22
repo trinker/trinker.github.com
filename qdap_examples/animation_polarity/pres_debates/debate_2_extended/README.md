@@ -116,7 +116,7 @@ type <- if(.Platform$OS.type == "windows") shell else system
 saveHTML(FUN3(), autoplay = FALSE, loop = TRUE, verbose = FALSE,
     ani.height = 1000, ani.width=650,
     outdir = loc3, single.opts =
-    "'controls': ['first', 'play', 'loop', 'speed'], 'delayMin': 0")
+    "'controls': ['first', 'previous', 'play', 'loop', 'speed'], 'delayMin': 0")
 
 FUN3(TRUE)
 

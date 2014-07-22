@@ -6,7 +6,7 @@
 	    'width': 650,
 	    'delay': 100,
 	    'loopMode': 'loop',
- 'controls': ['first', 'play', 'loop', 'speed'], 'delayMin': 0
+ 'controls': ['first', 'previous', 'play', 'loop', 'speed'], 'delayMin': 0
 	});
     });
 })(jQuery);
