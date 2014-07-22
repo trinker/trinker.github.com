@@ -1,5 +1,6 @@
 The [Polarity Analysis Plot](http://trinker.github.io/qdap_examples/animation_polarity/pres_debates/debate_2_extended) was generated via:
 
+```
 library(animation)
 library(grid)
 library(gridBase)
