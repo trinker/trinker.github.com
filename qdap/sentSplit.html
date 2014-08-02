@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>sentSplit. qdap 2.1.1</title>
+<title>sentSplit. qdap 2.2.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="
 Dason Kurkiewicz and Tyler Rinker &lt;tyler.rinker@gmail.com&gt;.
@@ -22,7 +22,7 @@ Dason Kurkiewicz and Tyler Rinker &lt;tyler.rinker@gmail.com&gt;.
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 2.1.1</a>
+      <a class="brand" href="#">qdap 2.2.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -42,7 +42,7 @@ Dason Kurkiewicz and Tyler Rinker &lt;tyler.rinker@gmail.com&gt;.
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre><div>sentSplit(dataframe, text.var, rm.var&nbsp;=&nbsp;NULL, endmarks&nbsp;=&nbsp;c("?", ".", "!", "|"), incomplete.sub&nbsp;=&nbsp;TRUE, rm.bracket&nbsp;=&nbsp;TRUE, stem.col&nbsp;=&nbsp;FALSE, text.place&nbsp;=&nbsp;"right", ...)</div>
+    <pre><div>sentSplit(dataframe, text.var, rm.var&nbsp;=&nbsp;NULL, endmarks&nbsp;=&nbsp;c("?", ".", "!", "|"), incomplete.sub&nbsp;=&nbsp;TRUE, rm.bracket&nbsp;=&nbsp;TRUE, stem.col&nbsp;=&nbsp;FALSE, text.place&nbsp;=&nbsp;"right", verbose&nbsp;=&nbsp;is.global(2), ...)</div>
 <div>sentCombine(text.var, grouping.var&nbsp;=&nbsp;NULL, as.list&nbsp;=&nbsp;FALSE)</div>
 <div>TOT(tot)</div>
 <div>sent_detect(text.var, endmarks&nbsp;=&nbsp;c("?", ".", "!", "|"), incomplete.sub&nbsp;=&nbsp;TRUE, rm.bracket&nbsp;=&nbsp;TRUE, ...)</div></pre>
@@ -70,6 +70,9 @@ and replaces with <code>"|"</code>.</dd>
       <dd>A character string giving placement location of the text
 column. This must be one of the strings <code>"original"</code>, <code>"right"</code> or
 <code>"left"</code>.</dd>
+      <dt>verbose</dt>
+      <dd>logical.  If <code>TRUE</code> select diagnostics from
+<code>check_text</code> are reported.</dd>
       <dt>...</dt>
       <dd>Additional options passed to <code>stem2df</code>.</dd>
       <dt>grouping.var</dt>
@@ -136,11 +139,20 @@ incomplete and marked with <code>"|"</code> to denote an incomplete/trailing
 sentence.</p>
   
     </div>
+
+    <div class="Suggestion">
+      <h2>Suggestion</h2>
+      
+      <p>It is recommended that the user runs <code>check_text</code> on the
+output of <code>sentSplit</code>'s text column.</p>
+  
+    </div>
     
     <h2 id="examples">Examples</h2>
     <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: 
 # ## `sentSplit` EXAMPLE:
 # (out &lt;- sentSplit(DATA, &quot;state&quot;))
+# out %&amp;% check_text()  ## check output text
 # sentSplit(DATA, &quot;state&quot;, stem.col = TRUE)
 # sentSplit(DATA, &quot;state&quot;, text.place = &quot;left&quot;)
 # sentSplit(DATA, &quot;state&quot;, text.place = &quot;original&quot;)

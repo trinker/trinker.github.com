@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>object_pronoun_type. qdap 2.2.0</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">qdap 2.2.0</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Count Object Pronouns Per Grouping Variable</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><div>object_pronoun_type(text.var, grouping.var&nbsp;=&nbsp;NULL, object.pronoun.list&nbsp;=&nbsp;NULL, ...)</div></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>text.var</dt>
+      <dd>The text variable</dd>
+      <dt>grouping.var</dt>
+      <dd>The grouping variables.  Default <code>NULL</code> generates
+one word list for all text.  Also takes a single grouping variable or a list
+of 1 or more grouping variables.</dd>
+      <dt>object.pronoun.list</dt>
+      <dd>A named list of object pronouns.  See
+<strong>Details</strong> for more.</dd>
+      <dt>...</dt>
+      <dd>Other arguments passed to <code>termco</code></dd>
+    </dl>
+    
+    <div class="Count Object Pronouns Per Grouping Variable">
+      <h2>Count Object Pronouns Per Grouping Variable</h2>
+      
+    </div>
+
+    <div class="Value">
+      <h2>Value</h2>
+      
+      <p>Returns a list, of class "object_pronoun_type", of data frames
+regarding objectpronoun word counts:
+preprocessedList of uncollapsed dataframes (raw, prop, rnp) of the class "termco" that contain all searchable object pronouns.
+rawraw word counts by grouping variable
+propproportional word counts by grouping variable; proportional to
+each individual's object pronoun use
+rnpa character combination data frame of raw and proportional object pronoun use</p>
+  
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p>Count the number of object pronouns per grouping variables.</p>
+  
+    </div>
+
+    <div class="Details">
+      <h2>Details</h2>
+      
+      <p>The following object pronoun categories are the default searched terms:
+<ul>
+<li> me = c(" me ", " my ", " mine ")
+    </li>
+<li> us = c(" us ", " our ", " ours ")
+    </li>
+<li> you = c(" you'd ",  " you'll ", " you're ", " you've ", " you ", " your ")
+    </li>
+<li> him = c(" him ", " his ")
+    </li>
+<li> her = c(" her ", " hers ")
+    </li>
+<li> them = c(" them ")
+    </li>
+<li> their = c(" their ", "theirs ")
+    </li>
+<li> it = c(" it'd ", " it'll ", " it's ", " it ")
+</li>
+</ul></p>
+  
+      <p></p>
+  
+    </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: 
+# dat &lt;- pres_debates2012
+# dat &lt;- dat[dat$person %in% qcv(ROMNEY, OBAMA), ]
+# (out &lt;- object_pronoun_type(dat$dialogue, dat$person))
+# plot(out)
+# plot(out, 2)
+# plot(out, 3)
+# plot(out, 3, ncol=2)
+# 
+# scores(out)
+# counts(out)
+# proportions(out)
+# preprocessed(out)
+# 
+# plot(scores(out))
+# plot(counts(out))
+# plot(proportions(out))
+# ## &lt;strong&gt;End(Not run)&lt;/strong&gt;
+</div></pre>
+  </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>object_pronoun_type</li>
+    </ul>
+    <ul>
+      <li>pronouns</li>
+    </ul> -->
+      
+    <h2>See also</h2>
+    
+<code>subject_pronoun_type</code>,
+<code>pronoun_type</code>
+
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

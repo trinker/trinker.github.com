@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>rm_url. qdap 2.1.1</title>
+<title>rm_url. qdap 2.2.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 2.1.1</a>
+      <a class="brand" href="#">qdap 2.2.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -35,12 +35,12 @@
         
       </header>
       
-      <h1>Remove/Replace URLs</h1>
+      <h1>Remove/Replace/Extract URLs</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre><div>rm_url(text.var, trim&nbsp;=&nbsp;TRUE, clean&nbsp;=&nbsp;TRUE, pattern&nbsp;=&nbsp;"(http[^ ]*)|(www\\.[^ ]*)", replacement&nbsp;=&nbsp;"", ...)</div></pre>
+    <pre><div>rm_url(text.var, trim&nbsp;=&nbsp;TRUE, clean&nbsp;=&nbsp;TRUE, pattern&nbsp;=&nbsp;"(http[^ ]*)|(www\\.[^ ]*)", replacement&nbsp;=&nbsp;"", extract&nbsp;=&nbsp;FALSE, ...)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -58,12 +58,15 @@ character string for <code>fixed = TRUE</code>) to be matched in the given
 character vector.</dd>
       <dt>replacement</dt>
       <dd>Replacement for matched <code>pattern</code>.</dd>
+      <dt>extract</dt>
+      <dd>logical.  If <code>TRUE</code> the URLs are extracted into a list
+of vectors.</dd>
       <dt>...</dt>
       <dd>Other arguments passed to <code><a href='http://www.inside-r.org/packages/cran/base/docs/grep'>gsub</a></code>.</dd>
     </dl>
     
-    <div class="Remove/Replace URLs">
-      <h2>Remove/Replace URLs</h2>
+    <div class="Remove/Replace/Extract URLs">
+      <h2>Remove/Replace/Extract URLs</h2>
       
     </div>
 
@@ -77,7 +80,7 @@ character vector.</dd>
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Remove/Replace URLs from a string.</p>
+      <p>Remove/replace/extract URLs from a string.</p>
   
     </div>
     
@@ -86,6 +89,7 @@ character vector.</dd>
 # x &lt;- &quot; I like www.talkstats.com and http://stackoverflow.com&quot;
 # rm_url(x)
 # rm_url(x, replacement = &#39;&lt;a href=&quot;\\1&quot; target=&quot;_blank&quot;&gt;\\1&lt;/a&gt;&#39;)
+# rm_url(x, extract=TRUE)
 # ## &lt;strong&gt;End(Not run)&lt;/strong&gt;
 </div></pre>
   </div>

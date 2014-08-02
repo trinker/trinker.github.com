@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>check_spelling. qdap 2.1.1</title>
+<title>check_spelling. qdap 2.2.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 2.1.1</a>
+      <a class="brand" href="#">qdap 2.2.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,9 +40,9 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre><div>check_spelling(text.var, range&nbsp;=&nbsp;2, assume.first.correct&nbsp;=&nbsp;TRUE, method&nbsp;=&nbsp;"jw", dictionary&nbsp;=&nbsp;qdapDictionaries::GradyAugmented, parallel&nbsp;=&nbsp;FALSE, cores&nbsp;=&nbsp;parallel::detectCores()/2, n.suggests&nbsp;=&nbsp;8)</div>
+    <pre><div>check_spelling(text.var, range&nbsp;=&nbsp;2, assume.first.correct&nbsp;=&nbsp;TRUE, method&nbsp;=&nbsp;"jw", dictionary&nbsp;=&nbsp;qdapDictionaries::GradyAugmented, parallel&nbsp;=&nbsp;TRUE, cores&nbsp;=&nbsp;parallel::detectCores()/2, n.suggests&nbsp;=&nbsp;8)</div>
 <div>which_misspelled(x, suggest&nbsp;=&nbsp;FALSE, range&nbsp;=&nbsp;2, assume.first.correct&nbsp;=&nbsp;TRUE, dictionary&nbsp;=&nbsp;qdapDictionaries::GradyAugmented, method&nbsp;=&nbsp;"jw", nchar.dictionary&nbsp;=&nbsp;nchar(dictionary), first.char.dictionary&nbsp;=&nbsp;substring(dictionary, 1, 1), n.suggests&nbsp;=&nbsp;8)</div>
-<div>check_spelling_interactive(text.var, range&nbsp;=&nbsp;2, assume.first.correct&nbsp;=&nbsp;TRUE, click&nbsp;=&nbsp;TRUE, method&nbsp;=&nbsp;"jw", dictionary&nbsp;=&nbsp;qdapDictionaries::GradyAugmented, parallel&nbsp;=&nbsp;FALSE, cores&nbsp;=&nbsp;parallel::detectCores()/2, n.suggests&nbsp;=&nbsp;8, ...)</div>
+<div>check_spelling_interactive(text.var, range&nbsp;=&nbsp;2, assume.first.correct&nbsp;=&nbsp;TRUE, click&nbsp;=&nbsp;TRUE, method&nbsp;=&nbsp;"jw", dictionary&nbsp;=&nbsp;qdapDictionaries::GradyAugmented, parallel&nbsp;=&nbsp;TRUE, cores&nbsp;=&nbsp;parallel::detectCores()/2, n.suggests&nbsp;=&nbsp;8, ...)</div>
 <div>correct(x, ...)</div></pre>
     
     <h2>Arguments</h2>
@@ -86,16 +86,16 @@ An object from <code>check_spelling_interactive</code>.</dd>
 <code><a href='http://www.inside-r.org/packages/cran/base/docs/data.frame'>data.frame</a></code> with possible suggestions for misspelled words
 (words not found in the dictionary).</dd>
       <dt>nchar.dictionary</dt>
-      <dd>A vector that correponds in length and content to
+      <dd>A vector that corresponds in length and content to
 <code>dictionary</code> with elements that are the precalculated number of
 characters for each word in the dictionary.</dd>
       <dt>first.char.dictionary</dt>
-      <dd>A vector that corresponds in length ans content
+      <dd>A vector that corresponds in length and content
 to <code>dictionary</code> with elements that are the pre-allotted first characters
 of each word in the dictionary.</dd>
       <dt>click</dt>
       <dd>logical.  If <code>TRUE</code> the interface is a point and click GUI.
-If <code>FALSE</code> the interace is command line driven.</dd>
+If <code>FALSE</code> the interface is command line driven.</dd>
       <dt>...</dt>
       <dd>ignored</dd>
     </dl>

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>syllable_sum. qdap 2.1.1</title>
+<title>syllable_sum. qdap 2.2.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 2.1.1</a>
+      <a class="brand" href="#">qdap 2.2.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,7 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre><div>syllable_sum(text.var, parallel&nbsp;=&nbsp;FALSE)</div>
+    <pre><div>syllable_sum(text.var, parallel&nbsp;=&nbsp;FALSE, ...)</div>
 <div>syllable_count(text, remove.bracketed&nbsp;=&nbsp;TRUE, algorithm.report&nbsp;=&nbsp;FALSE)</div>
 <div>polysyllable_sum(text.var, parallel&nbsp;=&nbsp;FALSE)</div>
 <div>combo_syllable_sum(text.var, parallel&nbsp;=&nbsp;FALSE)</div></pre>
@@ -53,6 +53,8 @@
       <dd>logical.  If <code>TRUE</code> attempts to run the function on
 multiple cores.  Note that this may not mean a speed boost if you have one
 core or if the data set is smaller as the cluster takes time to create.</dd>
+      <dt>...</dt>
+      <dd>Other arguments passed to <code>syllable_count</code>.</dd>
       <dt>text</dt>
       <dd>A single character vector of text.</dd>
       <dt>remove.bracketed</dt>

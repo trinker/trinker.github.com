@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>dispersion_plot. qdap 2.1.1</title>
+<title>dispersion_plot. qdap 2.2.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 2.1.1</a>
+      <a class="brand" href="#">qdap 2.2.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -47,7 +47,10 @@
       <dt>text.var</dt>
       <dd>The text variable.</dd>
       <dt>match.terms</dt>
-      <dd>A vector of quoted terms.</dd>
+      <dd>A vector of quoted terms or a named list of quoted terms.
+If the latter terms will be combined into a single unified theme named
+according to the list names.  Note that terms within the vectors of the list
+cannot be duplicated.</dd>
       <dt>grouping.var</dt>
       <dd>The grouping variables.  Default <code>NULL</code> generates
 one word list for all text.  Also takes a single grouping variable or a list
@@ -154,7 +157,7 @@ for just the word "read" you'd supply a vector of c(" read ", " reads",
 #     bg.color = &quot;black&quot;, grouping.var = list(fam.aff, sex),
 #     color = &quot;yellow&quot;, total.color = &quot;white&quot;, horiz.color=&quot;grey20&quot;))
 # 
-# ## Use word list
+# ## Use `word_list`
 # ## Presidential debates by all
 # wrds &lt;- word_list(pres_debates2012$dialogue, stopwords = Top200Words)
 # wrds2 &lt;- spaste(wrds[[&quot;rfswl&quot;]][[&quot;all&quot;]][, &quot;WORD&quot;])
@@ -172,6 +175,33 @@ for just the word "read" you'd supply a vector of c(" read ", " reads",
 # with(dat, dispersion_plot(dialogue, wordlist, total.color = NULL,
 #     bg.color = &quot;white&quot;, grouping.var = person, rm.vars = time,
 #     color = &quot;black&quot;, horiz.color=&quot;grey80&quot;))
+# 
+# wordlist2 &lt;- c(&quot; i&#39;d &quot;, &quot; i&#39;ll &quot;, &quot; i&#39;m &quot;, &quot; i&#39;ve &quot;, &quot; i &quot;,
+#     &quot; we&#39;d &quot;, &quot; we&#39;ll &quot;, &quot; we&#39;re &quot;, &quot; we&#39;ve &quot;, &quot; we &quot;,
+#     &quot; you&#39;d &quot;,  &quot; you&#39;ll &quot;, &quot; you&#39;re &quot;, &quot; you&#39;ve &quot;, &quot; you &quot;, &quot; your &quot;,
+#     &quot; he&#39;d &quot;, &quot; he&#39;ll &quot;, &quot; he&#39;s &quot;, &quot; he &quot;)
+# 
+# with(dat, dispersion_plot(dialogue, wordlist2,
+#     bg.color = &quot;black&quot;, grouping.var = person, rm.vars = time,
+#     color = &quot;yellow&quot;, total.color = NULL, horiz.color=&quot;grey20&quot;))
+# 
+# with(dat, dispersion_plot(dialogue, wordlist2,
+#     bg.color = &quot;black&quot;, grouping.var = person, rm.vars = time,
+#     color = &quot;red&quot;, total.color = &quot;white&quot;, horiz.color=&quot;grey20&quot;))
+# 
+# ## `match.terms` as a named list
+# wordlist3 &lt;- list(
+#     I = c(&quot; i&#39;d &quot;, &quot; i&#39;ll &quot;, &quot; i&#39;m &quot;, &quot; i&#39;ve &quot;, &quot; i &quot;),
+#     we = c(&quot; we&#39;d &quot;, &quot; we&#39;ll &quot;, &quot; we&#39;re &quot;, &quot; we&#39;ve &quot;, &quot; we &quot;),
+#     you = c(&quot; you&#39;d &quot;,  &quot; you&#39;ll &quot;, &quot; you&#39;re &quot;, &quot; you&#39;ve &quot;, &quot; you &quot;, &quot; your &quot;),
+#     he = c(&quot; he&#39;d &quot;, &quot; he&#39;ll &quot;, &quot; he&#39;s &quot;, &quot; he &quot;)
+# )
+# 
+# with(dat, dispersion_plot(dialogue, wordlist3,
+#     bg.color = &quot;grey60&quot;, grouping.var = person, rm.vars = time,
+#     color = &quot;blue&quot;, total.color = &quot;grey40&quot;, horiz.color=&quot;grey20&quot;))
+# 
+# colsplit2df(scores(with(dat, termco(dialogue, list(time, person), wordlist3))))
 # 
 # ## Extras:
 # ## Reverse facets
