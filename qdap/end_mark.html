@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>end_mark. qdap 2.1.1</title>
+<title>end_mark. qdap 2.2.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 2.1.1</a>
+      <a class="brand" href="#">qdap 2.2.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -53,7 +53,7 @@
       <dd>A value to use for sentences with missing (<code>NA</code>)
 text.</dd>
       <dt>other.endmarks</dt>
-      <dd>Other 1-2 character endmarks tos earch for.</dd>
+      <dd>Other 1-2 character endmarks to search for.</dd>
       <dt>grouping.var</dt>
       <dd>The grouping variables.  Default <code>NULL</code> generates
 one word list for all text.  Also takes a single grouping variable or a list
@@ -98,7 +98,7 @@ End marks include:
       <p><code>end_mark</code> - Grab the sentence end marks for a transcript.  This can be
 useful to categorize based on sentence type.</p>
   
-      <p><code>end_mark_by</code> - Grab the sentence end marks for a transcriptby grouping
+      <p><code>end_mark_by</code> - Grab the sentence end marks for a transcript by grouping
 variable(s).</p>
   
     </div>
@@ -150,8 +150,6 @@ variable(s).</p>
 #     end_mark(x)
 # })
 # 
-# 
-# 
 # sentplots2 &lt;- lapply(seq_along(sentraj), function(i) {
 #     m &lt;- plot(cumulative(sentraj[[i]]))
 #     if (i != 2) m &lt;- m + ylab(&quot;&quot;)
@@ -160,7 +158,22 @@ variable(s).</p>
 #     m + ggtitle(paste(&quot;Act&quot;, act[i]))
 # })
 # 
-# do.call(grid.arrange, sentplots2)
+# ## ggplot2 function to extract legend
+# g_legend &lt;- function(a.gplot){
+#     tmp &lt;- ggplot_gtable(ggplot_build(a.gplot))
+#     leg &lt;- which(sapply(tmp[[&quot;grobs&quot;]], function(x) x[[&quot;name&quot;]]) == &quot;guide-box&quot;)
+#     legend &lt;- tmp[[&quot;grobs&quot;]][[leg]]
+#     legend
+# }
+# 
+# ## remove legends from plots
+# sentplots3 &lt;- lapply(sentplots2, function(x){
+#     x + theme(legend.position=&quot;none&quot;) + xlab(NULL) + ylab(NULL)
+# })
+# 
+# sentplots3[[6]] &lt;- g_legend(sentplots2[[1]])
+# 
+# do.call(grid.arrange, sentplots3)
 # ## &lt;strong&gt;End(Not run)&lt;/strong&gt;
 </div></pre>
   </div>

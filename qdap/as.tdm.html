@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>as.tdm. qdap 2.1.1</title>
+<title>as.tdm. qdap 2.2.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 2.1.1</a>
+      <a class="brand" href="#">qdap 2.2.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -91,10 +91,10 @@ Other arguments passed to <code>sentSplit</code>.  If
 be split into individual rows.</dd>
       <dt>row.names</dt>
       <dd><code>NULL</code> or a character vector giving the row names for
-the data frame. Not used in <span class = "pkg">qdap</span>; for base genric consistency.</dd>
+the data frame. Not used in <span class = "pkg">qdap</span>; for base generic consistency.</dd>
       <dt>optional</dt>
       <dd>logical. If <code>TRUE</code>, setting row names and converting
-column names is optional. Not used in <span class = "pkg">qdap</span>; for base genric consistency.</dd>
+column names is optional. Not used in <span class = "pkg">qdap</span>; for base generic consistency.</dd>
       <dt>demographic.vars</dt>
       <dd>Additional demographic information about the grouping
 variables.  This is a data.frame, list of equal length vectors, or a single
@@ -292,7 +292,7 @@ the other named `text`.</p>
 # speech &lt;- stemmer(dat$dialogue)
 # mytable1 &lt;- with(dat, as.tdm(speech, list(person, time), stopwords = Top25Words))
 # 
-# fit &lt;- ca(mytable1)
+# fit &lt;- ca(as.matrix(mytable1))
 # summary(fit)
 # plot(fit)
 # plot3d.ca(fit, labels=1)
@@ -300,7 +300,7 @@ the other named `text`.</p>
 # 
 # mytable2 &lt;- with(dat, as.tdm(speech, list(person, time), stopwords = Top200Words))
 # 
-# fit2 &lt;- ca(mytable2)
+# fit2 &lt;- ca(as.matrix(mytable2))
 # summary(fit2)
 # plot(fit2)
 # plot3d.ca(fit2, labels=1)

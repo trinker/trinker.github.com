@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>name2sex. qdap 2.1.1</title>
+<title>name2sex. qdap 2.2.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="
 Dason Kurkiewicz and Tyler Rinker &lt;tyler.rinker@gmail.com&gt;.
@@ -22,7 +22,7 @@ Dason Kurkiewicz and Tyler Rinker &lt;tyler.rinker@gmail.com&gt;.
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 2.1.1</a>
+      <a class="brand" href="#">qdap 2.2.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -42,7 +42,7 @@ Dason Kurkiewicz and Tyler Rinker &lt;tyler.rinker@gmail.com&gt;.
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre><div>name2sex(names.list, pred.sex&nbsp;=&nbsp;TRUE, fuzzy.match&nbsp;=&nbsp;pred.sex, USE.NAMES&nbsp;=&nbsp;FALSE, database&nbsp;=&nbsp;qdapDictionaries::NAMES_SEX, list.database&nbsp;=&nbsp;qdapDictionaries::NAMES_LIST)</div></pre>
+    <pre><div>name2sex(names.list, pred.sex&nbsp;=&nbsp;TRUE, fuzzy.match&nbsp;=&nbsp;pred.sex, USE.NAMES&nbsp;=&nbsp;FALSE, database&nbsp;=&nbsp;qdapDictionaries::NAMES_SEX, ...)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -62,9 +62,8 @@ not be used on larger vectors.  Defaults to <code>pred.sex</code>.</dd>
 gender vector.</dd>
       <dt>database</dt>
       <dd>A database of names (mostly for internal purposes).</dd>
-      <dt>list.database</dt>
-      <dd>A list version of the database of names broken down by
-first letter of the name (mostly for internal purposes).</dd>
+      <dt>...</dt>
+      <dd>Other arguments passed to <code>check_spelling</code>.</dd>
     </dl>
     
     <div class="Names to Gender Prediction">
@@ -143,7 +142,7 @@ first letter of the name (mostly for internal purposes).</dd>
       
     <h2>See also</h2>
     
-<code><a href='http://www.inside-r.org/packages/cran/base/docs/agrep'>agrep</a></code>
+<code><a href='http://www.inside-r.org/packages/cran/stringdist/docs/stringdist'>stringdist</a></code>
 
     
     <h2>Author</h2>

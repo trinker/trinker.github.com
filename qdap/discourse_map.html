@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>discourse_map. qdap 2.1.1</title>
+<title>discourse_map. qdap 2.2.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdap 2.1.1</a>
+      <a class="brand" href="#">qdap 2.2.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -119,7 +119,7 @@ output can be viewed:
 # 
 # plot(mygraph, edge.curved=TRUE)
 # 
-# V(mygraph)$sex &lt;- V(mygraph)$name %l% raj.demographics[, 1:2]
+# V(mygraph)$sex &lt;- V(mygraph)$name %lc% raj.demographics[, 1:2]
 # V(mygraph)$color &lt;- ifelse(V(mygraph)$sex==&quot;f&quot;, &quot;pink&quot;, &quot;lightblue&quot;)
 # 
 # plot(mygraph, edge.curved=TRUE)
@@ -130,6 +130,12 @@ output can be viewed:
 #     unique(V(mygraph)$family), cols)
 # 
 # plot(mygraph, edge.curved=TRUE)
+# 
+# ## Community detection
+# x &lt;- with(mraja1, discourse_map(dialogue, person))
+# wc &lt;- walktrap.community(visual(x))
+# colors &lt;- rainbow(max(membership(wc)))
+# plot(x, vertex.color=colors[membership(wc)])
 # 
 # ## Repeated Measures (BASIC EXAMPLE)
 # ##------------------------------
@@ -195,7 +201,7 @@ output can be viewed:
 # library(animation)
 # library(igraph)
 # 
-# loc &lt;- folder(animation_dialogue)
+# loc &lt;- reports::folder(animation_dialogue)
 # ans &lt;- Animate(test)
 # 
 # ## Set up the plotting function
@@ -229,7 +235,7 @@ output can be viewed:
 # ## More Elaborate Layout
 # test2 &lt;- with(mraja1, discourse_map(dialogue, person))
 # 
-# loc2 &lt;- folder(animation_dialogue2)
+# loc2 &lt;- reports::folder(animation_dialogue2)
 # ans2 &lt;- Animate(test2)
 # ## Set up the plotting function
 # oopt &lt;- animation::ani.options(interval = 0.1)
