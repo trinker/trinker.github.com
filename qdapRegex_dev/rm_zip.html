@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>rm_zip. qdapRegex 0.0.1</title>
+<title>rm_zip. qdapRegex 0.1.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="
 &lt;a href = 'http://stackoverflow.com/'&gt;stackoverflow's&lt;/a&gt; hwnd and Tyler Rinker &lt;tyler.rinker@gmail.com&gt;.
@@ -22,7 +22,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdapRegex 0.0.1</a>
+      <a class="brand" href="#">qdapRegex 0.1.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -42,7 +42,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre><div>rm_zip(text.var, trim&nbsp;=&nbsp;TRUE, clean&nbsp;=&nbsp;TRUE, pattern&nbsp;=&nbsp;"@rm_zip", replacement&nbsp;=&nbsp;"", extract&nbsp;=&nbsp;FALSE, dictionary&nbsp;=&nbsp;getOption("regex.library"), ...)</div></pre>
+    <pre><div>rm_zip(text.var, trim&nbsp;=&nbsp;!extract, clean&nbsp;=&nbsp;TRUE, pattern&nbsp;=&nbsp;"@rm_zip", replacement&nbsp;=&nbsp;"", extract&nbsp;=&nbsp;FALSE, dictionary&nbsp;=&nbsp;getOption("regex.library"), ...)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -111,27 +111,24 @@ if <code>pattern</code> begins with <code>"@rm_"</code>.</dd>
 
 rm_zip(x)
 </div>
-<div class='output'>[1] &quot;Mr. Bean bought 2 tickets 2-613-213-4567&quot;        
-[2] &quot;43 Butter Rd, Brossard QC K0A 3P0 - 613 213 4567&quot;
-[3] &quot;Rat Race, XX,&quot;                                   
-[4] &quot;Ignore phone numbers(613)2134567&quot;                
-[5] &quot;Grab zips with dashes or no space before&quot;        
-[6] &quot;Grab zips with spaces or no space before&quot;        
+<div class='output'>[1] &quot;Mr. Bean bought 2 tickets 2-613-213-4567&quot;         &quot;43 Butter Rd, Brossard QC K0A 3P0 - 613 213 4567&quot;
+[3] &quot;Rat Race, XX,&quot;                                    &quot;Ignore phone numbers(613)2134567&quot;                
+[5] &quot;Grab zips with dashes or no space before&quot;         &quot;Grab zips with spaces or no space before&quot;        
 [7] &quot;I like 1234567 dogs&quot;                             
 </div>
 <div class='input'>rm_zip(x, extract=TRUE)
 </div>
 <div class='output'>[[1]]
-character(0)
+[1] NA
 
 [[2]]
-character(0)
+[1] NA
 
 [[3]]
 [1] &quot;12345&quot;
 
 [[4]]
-character(0)
+[1] NA
 
 [[5]]
 [1] &quot;12345-6789&quot; &quot;12345-6789&quot;
@@ -140,7 +137,7 @@ character(0)
 [1] &quot;12345 6789&quot; &quot;12345 6789&quot;
 
 [[7]]
-character(0)
+[1] NA
 
 </div></pre>
   </div>

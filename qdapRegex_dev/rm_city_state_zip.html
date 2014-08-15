@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>rm_city_state_zip. qdapRegex 0.0.1</title>
+<title>rm_city_state_zip. qdapRegex 0.1.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdapRegex 0.0.1</a>
+      <a class="brand" href="#">qdapRegex 0.1.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,7 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre><div>rm_city_state_zip(text.var, trim&nbsp;=&nbsp;TRUE, clean&nbsp;=&nbsp;TRUE, pattern&nbsp;=&nbsp;"@rm_city_state_zip", replacement&nbsp;=&nbsp;"", extract&nbsp;=&nbsp;FALSE, dictionary&nbsp;=&nbsp;getOption("regex.library"), ...)</div></pre>
+    <pre><div>rm_city_state_zip(text.var, trim&nbsp;=&nbsp;!extract, clean&nbsp;=&nbsp;TRUE, pattern&nbsp;=&nbsp;"@rm_city_state_zip", replacement&nbsp;=&nbsp;"", extract&nbsp;=&nbsp;FALSE, dictionary&nbsp;=&nbsp;getOption("regex.library"), ...)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -102,8 +102,7 @@ rm_city_state_zip(x)
 <div class='input'>rm_city_state_zip(x, extract=TRUE)
 </div>
 <div class='output'>[[1]]
-[1] &quot;Washington Heights, NY 54321&quot;    &quot;ven,PA 12345&quot;                   
-[3] &quot;Bolly Bolly Bolly, CA12345-1234&quot;
+[1] &quot;Washington Heights, NY 54321&quot;    &quot;ven,PA 12345&quot;                    &quot;Bolly Bolly Bolly, CA12345-1234&quot;
 
 </div></pre>
   </div>

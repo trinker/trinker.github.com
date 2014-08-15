@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>rm_bracket. qdapRegex 0.0.1</title>
+<title>rm_bracket. qdapRegex 0.1.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="
 Martin Morgan and Tyler Rinker &lt;tyler.rinker@gmail.com&gt;.
@@ -22,7 +22,7 @@ Martin Morgan and Tyler Rinker &lt;tyler.rinker@gmail.com&gt;.
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdapRegex 0.0.1</a>
+      <a class="brand" href="#">qdapRegex 0.1.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -117,15 +117,13 @@ examp
 </div>
 <div class='input'>rm_bracket(examp$text, pattern = &quot;square&quot;)
 </div>
-<div class='output'>[1] &quot;I love chicken!&quot;                  &quot;Me too! (laughter) It&#39;s so good.&quot;
-[3] &quot;Yep it&#39;s awesome {reading}.&quot;      &quot;Agreed. {is so much fun}&quot;        
+<div class='output'>[1] &quot;I love chicken!&quot;                  &quot;Me too! (laughter) It&#39;s so good.&quot; &quot;Yep it&#39;s awesome {reading}.&quot;     
+[4] &quot;Agreed. {is so much fun}&quot;        
 </div>
 <div class='input'>rm_bracket(examp$text, pattern = &quot;curly&quot;)
 </div>
-<div class='output'>[1] &quot;I love chicken [unintelligible]!&quot;               
-[2] &quot;Me too! (laughter) It&#39;s so good. [interrupting]&quot;
-[3] &quot;Yep it&#39;s awesome.&quot;                              
-[4] &quot;Agreed.&quot;                                        
+<div class='output'>[1] &quot;I love chicken [unintelligible]!&quot;                &quot;Me too! (laughter) It&#39;s so good. [interrupting]&quot;
+[3] &quot;Yep it&#39;s awesome.&quot;                               &quot;Agreed.&quot;                                        
 </div>
 <div class='input'>rm_bracket(examp$text, pattern = c(&quot;square&quot;, &quot;round&quot;))
 </div>
