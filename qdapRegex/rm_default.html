@@ -2,11 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>rm_time. qdapRegex 0.1.0</title>
+<title>rm_default. qdapRegex 0.1.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="author" content="
-&lt;a href = 'http://stackoverflow.com/'&gt;stackoverflow's&lt;/a&gt; hwnd and Tyler Rinker &lt;tyler.rinker@gmail.com&gt;.
-">
+<meta name="author" content="">
 
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/bootstrap-responsive.css" rel="stylesheet">
@@ -37,12 +35,12 @@
         
       </header>
       
-      <h1>Remove/Replace/Extract Time</h1>
+      <h1>Remove/Replace/Extract Template</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre><div>rm_time(text.var, trim&nbsp;=&nbsp;!extract, clean&nbsp;=&nbsp;TRUE, pattern&nbsp;=&nbsp;"@rm_time", replacement&nbsp;=&nbsp;"", extract&nbsp;=&nbsp;FALSE, dictionary&nbsp;=&nbsp;getOption("regex.library"), ...)</div></pre>
+    <pre><div>rm_default(text.var, trim&nbsp;=&nbsp;!extract, clean&nbsp;=&nbsp;TRUE, pattern, replacement&nbsp;=&nbsp;"", extract&nbsp;=&nbsp;FALSE, dictionary&nbsp;=&nbsp;getOption("regex.library"), ...)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -57,14 +55,12 @@ character will be removed.</dd>
       <dt>pattern</dt>
       <dd>A character string containing a regular expression (or
 character string for <code>fixed = TRUE</code>) to be matched in the given
-character vector.  Default, <code>@rm_time</code> uses the
-<code>rm_time</code> regex from the regular expression dictionary from
-the <code>dictionary</code> argument.</dd>
+character vector.</dd>
       <dt>replacement</dt>
       <dd>Replacement for matched <code>pattern</code>.</dd>
       <dt>extract</dt>
-      <dd>logical.  If <code>TRUE</code> the times are extracted into a
-list of vectors.</dd>
+      <dd>logical.  If <code>TRUE</code> the strings are extracted into a list
+of vectors.</dd>
       <dt>dictionary</dt>
       <dd>A dictionary of canned regular expressions to search within
 if <code>pattern</code> begins with <code>"@rm_"</code>.</dd>
@@ -72,78 +68,55 @@ if <code>pattern</code> begins with <code>"@rm_"</code>.</dd>
       <dd>Other arguments passed to <code><a href='http://www.inside-r.org/packages/cran/base/docs/grep'>gsub</a></code>.</dd>
     </dl>
     
-    <div class="Remove/Replace/Extract Time">
-      <h2>Remove/Replace/Extract Time</h2>
+    <div class="Remove/Replace/Extract Template">
+      <h2>Remove/Replace/Extract Template</h2>
       
     </div>
 
     <div class="Value">
       <h2>Value</h2>
       
-      <p>Returns a character string with time removed.</p>
+      <p>Returns a character string with substring removed.</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Remove/replace/extract time from a string.</p>
-  
-    </div>
-
-    <div class="References">
-      <h2>References</h2>
-      
-      <p>The time regular expression was taken from:
-<a href = 'http://stackoverflow.com/a/25111133/1000343'>http://stackoverflow.com/a/25111133/1000343</a></p>
+      <p>Remove/replace/extract substring from a string.  This is the template used by
+other <span class = "pkg">qdapRegex</span> <code>rm_XXX</code> functions.</p>
   
     </div>
     
     <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>x &lt;-  c(&quot;R uses 1:5 for 1, 2, 3, 4, 5.&quot;,
-    &quot;At 3:00 we&#39;ll meet up and leave by 4:30:20&quot;,
-    &quot;We&#39;ll meet at 6:33.&quot;, &quot;He ran it in :22.34&quot;)
-
-rm_time(x)
+    <pre class="examples"><div class='input'>## Built in regex dictionary
+rm_default(&quot;I live in Buffalo, NY 14217&quot;, pattern=&quot;@rm_city_state_zip&quot;)
 </div>
-<div class='output'>[1] &quot;R uses 1:5 for 1, 2, 3, 4, 5.&quot; &quot;At we&#39;ll meet up and leave by&quot; &quot;We&#39;ll meet at .&quot;              
-[4] &quot;He ran it in&quot;                 
+<div class='output'>[1] &quot;I live in&quot;
 </div>
-<div class='input'>rm_time(x, extract=TRUE)
+<div class='input'>
+## User defined regular expression
+pat &lt;- &quot;(\\s*([A-Z][\\w-]*)+),\\s([A-Z]{2})\\s(?&lt;!\\d)\\d{5}(?:[ -]\\d{4})?\\b&quot;
+rm_default(&quot;I live in Buffalo, NY 14217&quot;, pattern=pat)
 </div>
-<div class='output'>[[1]]
-[1] NA
-
-[[2]]
-[1] &quot;3:00&quot;    &quot;4:30:20&quot;
-
-[[3]]
-[1] &quot;6:33&quot;
-
-[[4]]
-[1] &quot;:22.34&quot;
-
+<div class='output'>[1] &quot;I live in&quot;
 </div></pre>
   </div>
   <div class="span4">
     <!-- <ul>
-      <li>rm_time</li>
+      <li>rm_default</li>
     </ul>
     <ul>
-      <li>time</li>
+      <li>extract</li><li>sub</li>
     </ul> -->
       
     <h2>See also</h2>
     
+<code>rm_</code>,
 <code><a href='http://www.inside-r.org/packages/cran/base/docs/grep'>gsub</a></code>,
 <code><a href='http://www.inside-r.org/packages/cran/stringi/docs/stri_extract_regex'>stri_extract_all_regex</a></code>
 
-    
-    <h2>Author</h2>
-    
-<a href = 'http://stackoverflow.com/'>stackoverflow's</a> hwnd and Tyler Rinker <tyler.rinker@gmail.com>.
-
-    
+        
   </div>
 </div>
       

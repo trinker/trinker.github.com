@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>rm_abbreviation. qdapRegex 0.0.1</title>
+<title>rm_abbreviation. qdapRegex 0.1.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdapRegex 0.0.1</a>
+      <a class="brand" href="#">qdapRegex 0.1.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,7 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre><div>rm_abbreviation(text.var, trim&nbsp;=&nbsp;TRUE, clean&nbsp;=&nbsp;TRUE, pattern&nbsp;=&nbsp;"@rm_abbreviation", replacement&nbsp;=&nbsp;"", extract&nbsp;=&nbsp;FALSE, dictionary&nbsp;=&nbsp;getOption("regex.library"), ...)</div></pre>
+    <pre><div>rm_abbreviation(text.var, trim&nbsp;=&nbsp;!extract, clean&nbsp;=&nbsp;TRUE, pattern&nbsp;=&nbsp;"@rm_abbreviation", replacement&nbsp;=&nbsp;"", extract&nbsp;=&nbsp;FALSE, dictionary&nbsp;=&nbsp;getOption("regex.library"), ...)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -97,8 +97,10 @@ repeated 2 or more times).</p>
     &quot;Hello world.&quot;, &quot;In the U. S. A.&quot;)
 rm_abbreviation(x)
 </div>
-<div class='output'>[1] &quot;I want $2.33 at 2:30 to go to&quot;                 &quot;She will send it (as soon as you can) said I.&quot;
-[3] &quot;Hello world.&quot;                                  &quot;In the&quot;                                       
+<div class='output'>[1] &quot;I want $2.33 at 2:30 to go to&quot;                 
+[2] &quot;She will send it ( as soon as you can) said I.&quot;
+[3] &quot;Hello world.&quot;                                  
+[4] &quot;In the&quot;                                        
 </div>
 <div class='input'>rm_abbreviation(x, extract=TRUE)
 </div>
@@ -109,7 +111,7 @@ rm_abbreviation(x)
 [1] &quot;A.S.A.P.&quot; &quot;e.g.&quot;    
 
 [[3]]
-character(0)
+[1] NA
 
 [[4]]
 [1] &quot;U. S. A.&quot;
@@ -126,7 +128,8 @@ character(0)
       
     <h2>See also</h2>
     
-<code><a href='http://www.inside-r.org/packages/cran/base/docs/grep'>gsub</a></code>
+<code><a href='http://www.inside-r.org/packages/cran/base/docs/grep'>gsub</a></code>,
+<code><a href='http://www.inside-r.org/packages/cran/stringi/docs/stri_extract_regex'>stri_extract_all_regex</a></code>
 
         
   </div>
