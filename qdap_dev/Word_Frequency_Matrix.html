@@ -75,24 +75,22 @@ of 1 or more grouping variables.</dd>
       <dd>A vector of characters to be turned into spaces.  If
 <code>char.keep</code> is <code>NULL</code>, <code>char2space</code> will activate this
 argument.</dd>
-      <dt>...</dt>
-      <dd>Other arguments supplied to <code><a href='http://www.inside-r.org/packages/cran/tm/docs/Corpus'>Corpus</a></code>.  If
-<code>as.wfm</code> this is other arguments passed to <code>as.wfm</code> methods
-(currently ignored).</dd>
-      <dt>digits</dt>
-      <dd>An integer indicating the number of decimal places (round) or
-significant digits (signif) to be used. Negative values are allowed.</dd>
       <dt>margins</dt>
       <dd>logical. If <code>TRUE</code> provides grouping.var and word
 variable totals.</dd>
+      <dt>digits</dt>
+      <dd>An integer indicating the number of decimal places (round) or
+significant digits (signif) to be used. Negative values are allowed.</dd>
+      <dt>wf.obj</dt>
+      <dd>A <code>wfm</code> or <code>wfdf</code> object.</dd>
       <dt>word.lists</dt>
       <dd>A list of character vectors of words to pass to
 <code>wfm_combine</code></dd>
       <dt>matrix</dt>
       <dd>logical.  If <code>TRUE</code> returns the output as a
 <code>wfm</code> rather than a <code>wfdf</code> object.</dd>
-      <dt>wf.obj</dt>
-      <dd>A <code>wfm</code> or <code>wfdf</code> object.</dd>
+      <dt>x</dt>
+      <dd>An object with words for row names and integer values.</dd>
       <dt>type</dt>
       <dd>The type of weighting to use: c(<code>"prop"</code>, <code>"max"</code>,
 <code>"scaled"</code>).  All weight by column.  <code>"prop"</code> uses a proportion
@@ -101,12 +99,14 @@ the max value; all values are integers and column sums may not be equal.
 <code>"scaled"</code> uses <code><a href='http://www.inside-r.org/packages/cran/base/docs/scale'>scale</a></code> to scale with
 <code>center = FALSE</code>; output is not integer and column sums may not be
 equal.</dd>
-      <dt>x</dt>
-      <dd>An object with words for row names and integer values.</dd>
       <dt>col</dt>
       <dd>The column name (generally not used).</dd>
       <dt>row</dt>
       <dd>The row name (generally not used).</dd>
+      <dt>...</dt>
+      <dd>Other arguments supplied to <code><a href='http://www.inside-r.org/packages/cran/tm/docs/Corpus'>Corpus</a></code>.  If
+<code>as.wfm</code> this is other arguments passed to <code>as.wfm</code> methods
+(currently ignored).</dd>
     </dl>
     
     <div class="Word Frequency Matrix">

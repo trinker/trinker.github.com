@@ -55,14 +55,14 @@ core or if the data set is smaller as the cluster takes time to create.</dd>
       <dt>cores</dt>
       <dd>The number of cores to use if <code>parallel = TRUE</code>.  Default
 is half the number of available cores.</dd>
-      <dt>na.omit</dt>
-      <dd>logical.  If <code>TRUE</code> missing values (<code>NA</code>) will be
-omitted.</dd>
       <dt>progress.bar</dt>
       <dd>logical.  If <code>TRUE</code> attempts to provide a OS
 appropriate progress bar.  If parallel is <code>TRUE</code> this argument is
 ignored. Note that setting this argument to <code>TRUE</code> may slow down the
 function.</dd>
+      <dt>na.omit</dt>
+      <dd>logical.  If <code>TRUE</code> missing values (<code>NA</code>) will be
+omitted.</dd>
       <dt>digits</dt>
       <dd>Integer; number of decimal places to round when printing.</dd>
       <dt>percent</dt>
@@ -79,8 +79,6 @@ the error <code>java.lang.OutOfMemoryError</code> occurs.</dd>
       <dd>The grouping variables.  Default <code>NULL</code> generates
 one word list for all text.  Also takes a single grouping variable or a list
 of 1 or more grouping variables.</dd>
-      <dt>...</dt>
-      <dd>Other argument supplied to <code>pos</code>.</dd>
       <dt>type</dt>
       <dd>An optional character string giving the output of the pos tags.
 This must be one of the strings <code>"pretty"</code> (a left justified version of
@@ -88,6 +86,8 @@ the output optimized for viewing but not good for export),  <code>"matrix"</code
 (a matrix version of the output), <code>"dataframe"</code>\ <code>"df"</code> (a
 dataframe version of the output), <code>"all"</code> (a list of all three of the
 previous output types).</dd>
+      <dt>...</dt>
+      <dd>Other argument supplied to <code>pos</code>.</dd>
     </dl>
     
     <div class="Parts of Speech Tagging">
@@ -197,6 +197,88 @@ pos and pos_by.</p>
 # plot(POSby, values = TRUE, digits = 2)
 # #or more quickly - reuse the output from before
 # out2 &lt;- with(DATA, pos_by(posbydat, list(adult, sex)))
+# 
+# ## Definite/Indefinite Noun
+# ## 2 approached compared...
+# ## The later is more efficient but less accurate
+# 
+# ## ------------------------##
+# ## Part off speech tagging ##
+# ## ------------------------##
+# pos_after &lt;- function(text.var, words, pos){
+# 
+#     posses &lt;- strsplit(as.character(text.var[[&quot;POStagged&quot;]][[&quot;POStagged&quot;]]), &quot;\\s+&quot;)
+#     namespos &lt;- lapply(posses, function(x) {
+#         y &lt;- unlist(strsplit(x, &quot;/&quot;))
+#         setNames(y[c(TRUE, FALSE)], y[c(FALSE, TRUE)])
+#     })
+# 
+#     lapply(namespos, function(x, thewords = words, thepos = pos){
+#         locs &lt;- which(x %in% thewords)
+#         locs &lt;- locs[!is.na(locs)]
+# 
+#         if (identical(unclass(locs), integer(0))) return(NA_character_)
+# 
+#         nounlocs &lt;- which(names(x) %in% thepos)
+# 
+#         unname(x[unique(sapply(locs, function(x){
+#             min(nounlocs[nounlocs - x &gt; 0])
+#         }))])
+#     })
+# }
+# 
+# out2 &lt;- setNames(lapply(list(a=c(&quot;a&quot;, &quot;an&quot;), the=&quot;the&quot;), function(x) {
+#     o &lt;- pos_after(rajPOS, x, c(&quot;NN&quot;, &quot;NNS&quot;, &quot;NNP&quot;, &quot;NNPS&quot;))
+#     m &lt;- qdapTools::matrix2df(data.frame(freq=sort(table(unlist(o)), TRUE)), &quot;word&quot;)
+#     m[m$freq&gt; 3, ]
+# }), c(&quot;a&quot;, &quot;the&quot;))
+# 
+# 
+# dat2 &lt;- setNames(Reduce(function(x, y) {
+#     merge(x, y, by = &quot;word&quot;, all = TRUE)}, out2), c(&quot;Word&quot;, &quot;A&quot;, &quot;THE&quot;))
+# 
+# dat2 &lt;- reshape2::melt(dat2, id=&quot;Word&quot;, variable.name=&quot;Article&quot;, value.name=&quot;freq&quot;)
+# 
+# dat2 &lt;- dat2[order(dat2$freq, dat2$Word), ]
+# 
+# ord2 &lt;- aggregate(freq ~ Word, dat2, sum)
+# 
+# dat2$Word &lt;- factor(dat2$Word, levels=ord2[order(ord2[[2]]), 1])
+# rownames(dat2) &lt;- NULL
+# ggplot(dat2, aes(x=freq, y=Word)) +
+#     geom_point()+ facet_grid(~Article) +
+#     ggtitle(&quot;Part Of Speech Parsing Approach&quot;)
+# 
+# dev.new()
+# 
+# ## --------------------##
+# ## Regular Expressions ##
+# ## --------------------##
+# 
+# library(qdapRegex);library(ggplot2);library(reshape2)
+# 
+# out &lt;- setNames(lapply(c(&quot;@after_a&quot;, &quot;@after_the&quot;), function(x) {
+#     o &lt;- rm_default(stringi:::stri_trans_tolower(raj$dialogue),
+#         pattern = x, extract=TRUE)
+#     m &lt;- qdapTools::matrix2df(data.frame(freq=sort(table(unlist(o)), TRUE)), &quot;word&quot;)
+#     m[m$freq&gt; 3, ]
+# }), c(&quot;a&quot;, &quot;the&quot;))
+# 
+# 
+# dat &lt;- setNames(Reduce(function(x, y) {
+#     merge(x, y, by = &quot;word&quot;, all = TRUE)}, out), c(&quot;Word&quot;, &quot;A&quot;, &quot;THE&quot;))
+# 
+# dat &lt;- reshape2::melt(dat, id=&quot;Word&quot;, variable.name=&quot;Article&quot;, value.name=&quot;freq&quot;)
+# 
+# dat &lt;- dat[order(dat$freq, dat$Word), ]
+# 
+# ord &lt;- aggregate(freq ~ Word, dat, sum)
+# 
+# dat$Word &lt;- factor(dat$Word, levels=ord[order(ord[[2]]), 1])
+# rownames(dat) &lt;- NULL
+# ggplot(dat, aes(x=freq, y=Word)) +
+#     geom_point()+ facet_grid(~Article) +
+#     ggtitle(&quot;Regex Approach&quot;)
 # ## &lt;strong&gt;End(Not run)&lt;/strong&gt;
 </div></pre>
   </div>

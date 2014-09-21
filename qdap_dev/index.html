@@ -39,18 +39,56 @@
   <div class="span8">
     <h1>qdap</h1>
 
+<p><a href="https://travis-ci.org/trinker/qdap"><img src="https://travis-ci.org/trinker/qdap.png?branch=master" alt="Build Status"/></a> <a href="http://dx.doi.org/10.5281/zenodo.11124"><img src="https://zenodo.org/badge/5398/trinker/qdap.png" alt="DOI"/></a></p>
+
 <p><img src="https://dl.dropbox.com/u/61803503/qdapicon.png" alt="qdapicon"/><br/>
-<a href="https://github.com/trinker/qdap">qdap</a> (Quantitative Discourse Analysis Package) is an R package designed to assist in quantitative discourse analysis.  The package stands as a bridge between qualitative transcripts of dialogue and statistical analysis & visualization.</p>
+<a href="http://trinker.github.com/qdap_dev/">qdap</a> (Quantitative Discourse Analysis Package) is an R package designed to assist in quantitative discourse analysis.  The package stands as a bridge between qualitative transcripts of dialogue and statistical analysis &amp; visualization.</p>
 
-<h3>Java Issues</h3>
-  
-<p>If there is a discrepancy between the <a href="https://dl.dropbox.com/u/61803503/rjava_warning.txt">R and Java architectures</a> you will have to <a href="http://www.java.com/en/download/manual.jsp">download</a> the appropriate version of Java compatible with the version of R you're using.    
+<h2>Installation</h2>
 
-For more see <a href="http://www.r-statistics.com/2012/08/how-to-load-the-rjava-package-after-the-error-java_home-cannot-be-determined-from-the-registry/" target="_blank">Tal Galili's blog post</a> regarding rJava issues.
+<p>To download the development version of qdap:</p>
 
-<h3>Development Version</h3>
-    
-<p>Download the development version of qdap <a href="https://github.com/trinker/qdap/">here</a> 
+<p>Download the <a href="https://github.com/trinker/qdap/zipball/master">zip ball</a> or <a href="https://github.com/trinker/qdap/tarball/master">tar ball</a>, decompress and run <code>R CMD INSTALL</code> on it, or use the <strong>devtools</strong> package to install the development version (The user may want to install the <a href="https://github.com/trinker/reports">dev version of reports</a> first):</p>
+
+<pre><code class="r"># install.packages(&quot;devtools&quot;)
+
+library(devtools)
+install_github(&quot;qdapDictionaries&quot;, &quot;trinker&quot;)
+install_github(&quot;qdapRegex&quot;, &quot;trinker&quot;)
+install_github(&quot;qdapTools&quot;, &quot;trinker&quot;)
+install_github(&quot;qdap&quot;, &quot;trinker&quot;)
+</code></pre>
+
+<p><strong>Note</strong>: Windows users need <a href="http://www.murdoch-sutherland.com/Rtools/">Rtools</a> and <a href="http://CRAN.R-project.org/package=devtools">devtools</a> to install this way.</p>
+
+<p><strong>Note</strong>: Mac users might be required to install the appropriate version <a href="https://developer.apple.com/xcode/">XTools</a> from the <a href="https://developer.apple.com/">Apple Developer site</a> in order to install the development version.  You may need to <a href="https://developer.apple.com/programs/register/">register as an Apple developer</a>.  An older version of XTools may also be required.</p>
+
+<h2>Help</h2>
+
+<ul>
+<li><a href="http://trinker.github.com/qdap/">Web Page</a> </li>
+<li>Vignettes:<br/>
+
+<ul>
+<li><a href="http://trinker.github.io/qdap/vignettes/qdap_vignette.html">HTML Vignette: Introduction to qdap</a><br/></li>
+<li><a href="http://trinker.github.io/qdap/vignettes/tm_package_compatibility.pdf">PDF Vignette: qdap-tm Package Compatibility</a><br/></li>
+<li><a href="http://trinker.github.io/qdap_dev/vignettes/cleaning_and_debugging.pdf">PDF Vignette: Cleaning Text &amp; Debugging</a><br/></li>
+</ul></li>
+<li><a href="https://dl.dropbox.com/u/61803503/qdap.pdf">Package PDF Help Manual</a></li>
+</ul>
+
+<h2>Contact</h2>
+
+<p>You are welcome to:</p>
+
+<ul>
+<li>submit suggestions and bug-reports at: <a href="https://github.com/trinker/qdap/issues">https://github.com/trinker/qdap/issues</a></li>
+<li>send a pull request on: <a href="https://github.com/trinker/qdap/">https://github.com/trinker/qdap/</a></li>
+<li>compose a friendly e-mail to: <a href="mailto:tyler.rinker@gmail.com">tyler.rinker@gmail.com</a></li>
+</ul>
+
+<p><em><b>Note:</b> If you are reporting a bug make sure you have first read the <a href="http://trinker.github.io/qdap_dev/vignettes/cleaning_and_debugging.pdf">Cleaning Text &amp; Debugging vignette</a></em></p>
+
 
     <h2>Help topics</h2>
 
@@ -77,7 +115,7 @@ For more see <a href="http://www.r-statistics.com/2012/08/how-to-load-the-rjava-
         <code><a href="dir_map.html">dir_map</a></code><br />Map Transcript Files from a Directory to a Script</li>
             
       <li>
-        <code><a href="multicsv.html">mcsv_r</a></code> <code><a href="multicsv.html">mcsv_w</a></code><br />Read/Write Multiple csv Files at a Time</li>
+        <code><a href="multicsv.html">mcsv_r</a></code>(mcsv_w)<br />Read/Write Multiple csv Files at a Time</li>
             
       <li>
         <code><a href="read.transcript.html">read.transcript</a></code><br />Read Transcripts Into R</li>
@@ -90,31 +128,16 @@ For more see <a href="http://www.r-statistics.com/2012/08/how-to-load-the-rjava-
     <ul class="index">
         
       <li>
-        <code><a href="bracketX.html">bracketX</a></code><br />Bracket Parsing</li>
-      <li>
-        <code><a href="bracketX.html">bracketXtract</a></code><br />Bracket Parsing</li>
+        <code><a href="bracketX.html">bracketX</a></code>(bracketXtract, genX, genXtract)<br />Bracket Parsing</li>
             
       <li>
-        <code><a href="bracketX.html">genX</a></code><br />Bracket Parsing</li>
-            
-      <li>
-        <code><a href="bracketX.html">genXtract</a></code><br />Bracket Parsing</li>
-            
-            
-      <li>
-        <code><a href="beg2char.html">beg2char</a></code><br />Grab Begin/End of String to Character</li>
-      <li>
-        <code><a href="beg2char.html">char2end</a></code><br />Grab Begin/End of String to Character</li>
-            
+        <code><a href="beg2char.html">beg2char</a></code>(char2end)<br />Grab Begin/End of String to Character</li>
             
       <li>
         <code><a href="capitalizer.html">capitalizer</a></code><br />Capitalize Select Words</li>
             
       <li>
-        <code><a href="check_spelling.html">check_spelling</a></code> <code><a href="check_spelling.html">which_misspelled</a></code> <code><a href="check_spelling.html">check_spelling_interactive</a></code><br />Check Spelling</li>
-      <li>
-        <code><a href="check_spelling.html">correct</a></code><br />Check Spelling</li>
-            
+        <code><a href="check_spelling.html">check_spelling</a></code>(check_spelling_interactive, correct, which_misspelled)<br />Check Spelling</li>
             
       <li>
         <code><a href="check_text.html">check_text</a></code><br />Check Text For Potential Problems</li>
@@ -126,16 +149,10 @@ For more see <a href="http://www.r-statistics.com/2012/08/how-to-load-the-rjava-
         <code><a href="comma_spacer.html">comma_spacer</a></code><br />Ensure Space After Comma</li>
             
       <li>
-        <code><a href="incomplete_replace.html">incomplete_replace</a></code><br />Denote Incomplete End Marks With "|"</li>
-      <li>
-        <code><a href="incomplete_replace.html">incomp</a></code><br />Denote Incomplete End Marks With "|"</li>
-            
+        <code><a href="incomplete_replace.html">incomplete_replace</a></code>(incomp)<br />Denote Incomplete End Marks With "|"</li>
             
       <li>
-        <code><a href="multigsub.html">multigsub</a></code> <code><a href="multigsub.html">mgsub</a></code><br />Multiple gsub</li>
-      <li>
-        <code><a href="multigsub.html">sub_holder</a></code><br />Multiple gsub</li>
-            
+        <code><a href="multigsub.html">multigsub</a></code>(mgsub, sub_holder)<br />Multiple gsub</li>
             
       <li>
         <code><a href="name2sex.html">name2sex</a></code><br />Names to Gender Prediction</li>
@@ -162,25 +179,10 @@ For more see <a href="http://www.r-statistics.com/2012/08/how-to-load-the-rjava-
         <code><a href="replace_symbol.html">replace_symbol</a></code><br />Replace Symbols With Word Equivalents</li>
             
       <li>
-        <code><a href="rm_email.html">rm_email</a></code><br />Remove/Replace/Extract Email Addresses</li>
+        <code><a href="rm_row.html">rm_row</a></code>(rm_empty_row)<br />Remove Rows That Contain Markers</li>
             
       <li>
-        <code><a href="rm_hash.html">rm_hash</a></code><br />Remove/Replace/Extract Hash Tags</li>
-            
-      <li>
-        <code><a href="rm_row.html">rm_row</a></code><br />Remove Rows That Contain Markers</li>
-      <li>
-        <code><a href="rm_row.html">rm_empty_row</a></code><br />Remove Rows That Contain Markers</li>
-            
-            
-      <li>
-        <code><a href="rm_stopwords.html">rm_stopwords</a></code> <code><a href="rm_stopwords.html">rm_stop</a></code> <code><a href="rm_stopwords.html">%sw%</a></code><br />Remove Stop Words</li>
-            
-      <li>
-        <code><a href="rm_tag.html">rm_tag</a></code><br />Remove/Replace/Extract Person Tags</li>
-            
-      <li>
-        <code><a href="rm_url.html">rm_url</a></code><br />Remove/Replace/Extract URLs</li>
+        <code><a href="rm_stopwords.html">rm_stopwords</a></code>(%sw%, rm_stop)<br />Remove Stop Words</li>
             
       <li>
         <code><a href="scrubber.html">scrubber</a></code><br />Clean Imported Text</li>
@@ -192,7 +194,7 @@ For more see <a href="http://www.r-statistics.com/2012/08/how-to-load-the-rjava-
         <code><a href="spaste.html">spaste</a></code><br />Add Leading/Trailing Spaces</li>
             
       <li>
-        <code><a href="stemmer.html">stemmer</a></code> <code><a href="stemmer.html">stem_words</a></code> <code><a href="stemmer.html">stem2df</a></code><br />Stem Text</li>
+        <code><a href="stemmer.html">stemmer</a></code>(stem2df, stem_words)<br />Stem Text</li>
             
       <li>
         <code><a href="Trim.html">Trim</a></code><br />Remove Leading/Trailing White Space</li>
@@ -205,25 +207,13 @@ For more see <a href="http://www.r-statistics.com/2012/08/how-to-load-the-rjava-
     <ul class="index">
         
       <li>
-        <code><a href="data_viewing.html">htruncdf</a></code><br />Dataframe Viewing</li>
-      <li>
-        <code><a href="data_viewing.html">ltruncdf</a></code><br />Dataframe Viewing</li>
+        <code><a href="data_viewing.html">htruncdf</a></code>(ltruncdf, lview, qview, truncdf)<br />Dataframe Viewing</li>
             
       <li>
-        <code><a href="data_viewing.html">lview</a></code><br />Dataframe Viewing</li>
+        <code><a href="justification.html">left_just</a></code>(right_just)<br />Text Justification</li>
             
       <li>
-        <code><a href="data_viewing.html">qview</a></code><br />Dataframe Viewing</li>
-            
-      <li>
-        <code><a href="data_viewing.html">truncdf</a></code><br />Dataframe Viewing</li>
-            
-            
-      <li>
-        <code><a href="justification.html">left_just</a></code> <code><a href="justification.html">right_just</a></code><br />Text Justification</li>
-            
-      <li>
-        <code><a href="Search.html">Search</a></code> <code><a href="Search.html">boolean_search</a></code> <code><a href="Search.html">%bs%</a></code><br />Search Columns of a Data Frame</li>
+        <code><a href="Search.html">Search</a></code>(%bs%, boolean_search)<br />Search Columns of a Data Frame</li>
             
       <li>
         <code><a href="strWrap.html">strWrap</a></code><br />Wrap Character Strings to Format Paragraphs</li>
@@ -236,19 +226,10 @@ For more see <a href="http://www.r-statistics.com/2012/08/how-to-load-the-rjava-
     <ul class="index">
         
       <li>
-        <code><a href="qdap_df.html">qdap_df</a></code><br />Create qdap Specific Data Structure</li>
-      <li>
-        <code><a href="qdap_df.html">Text</a></code><br />Create qdap Specific Data Structure</li>
+        <code><a href="qdap_df.html">qdap_df</a></code>(Text, Text&lt;-)<br />Create qdap Specific Data Structure</li>
             
       <li>
-        <code><a href="qdap_df.html">Text&lt;-</a></code><br />Create qdap Specific Data Structure</li>
-            
-            
-      <li>
-        <code><a href="chain.html">%&amp;%</a></code><br />qdap Chaining</li>
-      <li>
-        <code><a href="chain.html">%&gt;%</a></code><br />qdap Chaining</li>
-            
+        <code><a href="chain.html">%&amp;%</a></code>(%&gt;%)<br />qdap Chaining</li>
     
     </ul>
     <h3>Generic qdap Methods</h3>
@@ -280,22 +261,19 @@ For more see <a href="http://www.r-statistics.com/2012/08/how-to-load-the-rjava-
     <ul class="index">
         
       <li>
-        <code><a href="adjacency_matrix.html">adjacency_matrix</a></code> <code><a href="adjacency_matrix.html">adjmat</a></code><br />Takes a Matrix and Generates an Adjacency Matrix</li>
+        <code><a href="adjacency_matrix.html">adjacency_matrix</a></code>(adjmat)<br />Takes a Matrix and Generates an Adjacency Matrix</li>
             
       <li>
         <code><a href="colSplit.html">colSplit</a></code><br />Separate a Column Pasted by paste2</li>
             
       <li>
-        <code><a href="colsplit2df.html">colsplit2df</a></code> <code><a href="colsplit2df.html">lcolsplit2df</a></code><br />Wrapper for colSplit that Returns Dataframe(s)</li>
+        <code><a href="colsplit2df.html">colsplit2df</a></code>(lcolsplit2df)<br />Wrapper for colSplit that Returns Dataframe(s)</li>
             
       <li>
         <code><a href="colcomb2class.html">colcomb2class</a></code><br />Combine Columns to Class</li>
             
       <li>
-        <code><a href="gantt.html">gantt</a></code><br />Gantt Durations</li>
-      <li>
-        <code><a href="gantt.html">plot_gantt_base</a></code><br />Gantt Durations</li>
-            
+        <code><a href="gantt.html">gantt</a></code>(plot_gantt_base)<br />Gantt Durations</li>
             
       <li>
         <code><a href="gantt_rep.html">gantt_rep</a></code><br />Generate Unit Spans for Repeated Measures</li>
@@ -304,7 +282,7 @@ For more see <a href="http://www.r-statistics.com/2012/08/how-to-load-the-rjava-
         <code><a href="key_merge.html">key_merge</a></code><br />Merge Demographic Information with Person/Text Transcript</li>
             
       <li>
-        <code><a href="paste2.html">paste2</a></code> <code><a href="paste2.html">colpaste2df</a></code><br />Paste an Unspecified Number Of Text Columns</li>
+        <code><a href="paste2.html">paste2</a></code>(colpaste2df)<br />Paste an Unspecified Number Of Text Columns</li>
             
       <li>
         <code><a href="prop.html">prop</a></code><br />Convert Raw Numeric Matrix or Data Frame to Proportions</li>
@@ -313,13 +291,7 @@ For more see <a href="http://www.r-statistics.com/2012/08/how-to-load-the-rjava-
         <code><a href="qcombine.html">qcombine</a></code><br />Combine Columns</li>
             
       <li>
-        <code><a href="sentSplit.html">sentSplit</a></code> <code><a href="sentSplit.html">sent_detect</a></code><br />Sentence Splitting</li>
-      <li>
-        <code><a href="sentSplit.html">TOT</a></code><br />Sentence Splitting</li>
-            
-      <li>
-        <code><a href="sentSplit.html">sentCombine</a></code><br />Sentence Splitting</li>
-            
+        <code><a href="sentSplit.html">sentSplit</a></code>(TOT, sentCombine, sent_detect)<br />Sentence Splitting</li>
             
       <li>
         <code><a href="speakerSplit.html">speakerSplit</a></code><br />Break and Stretch if Multiple Persons per Cell</li>
@@ -338,13 +310,16 @@ For more see <a href="http://www.r-statistics.com/2012/08/how-to-load-the-rjava-
         <code><a href="all_words.html">all_words</a></code><br />Searches Text Column for Words</li>
             
       <li>
-        <code><a href="bag_o_words.html">bag_o_words</a></code> <code><a href="bag_o_words.html">unbag</a></code> <code><a href="bag_o_words.html">breaker</a></code> <code><a href="bag_o_words.html">word_split</a></code><br />Bag of Words</li>
+        <code><a href="bag_o_words.html">bag_o_words</a></code>(breaker, unbag, word_split)<br />Bag of Words</li>
+            
+      <li>
+        <code><a href="chunker.html">chunker</a></code><br />Break Text Into Ordered Word Chunks</li>
             
       <li>
         <code><a href="common.html">common</a></code><br />Find Common Words Between Groups</li>
             
       <li>
-        <code><a href="exclude.html">exclude</a></code> <code><a href="exclude.html">exclude.DocumentTermMatrix</a></code> <code><a href="exclude.html">%ex%</a></code> <code><a href="exclude.html">exclude.TermDocumentMatrix</a></code> <code><a href="exclude.html">exclude.default</a></code> <code><a href="exclude.html">exclude.list</a></code> <code><a href="exclude.html">exclude.wfm</a></code><br />Exclude Elements From a Vector</li>
+        <code><a href="exclude.html">exclude</a></code>(%ex%, exclude.DocumentTermMatrix, exclude.TermDocumentMatrix, exclude.default, exclude.list, exclude.wfm)<br />Exclude Elements From a Vector</li>
             
       <li>
         <code><a href="freq_terms.html">freq_terms</a></code><br />Find Frequent Terms</li>
@@ -356,7 +331,7 @@ For more see <a href="http://www.r-statistics.com/2012/08/how-to-load-the-rjava-
         <code><a href="strip.html">strip</a></code><br />Strip Text</li>
             
       <li>
-        <code><a href="synonyms.html">synonyms</a></code> <code><a href="synonyms.html">syn</a></code> <code><a href="synonyms.html">synonyms_frame</a></code> <code><a href="synonyms.html">syn_frame</a></code><br />Search For Synonyms</li>
+        <code><a href="synonyms.html">synonyms</a></code>(syn, syn_frame, synonyms_frame)<br />Search For Synonyms</li>
             
       <li>
         <code><a href="word_associate.html">word_associate</a></code><br />Find Associated Words</li>
@@ -433,67 +408,7 @@ For more see <a href="http://www.r-statistics.com/2012/08/how-to-load-the-rjava-
     <ul class="index">
         
       <li>
-        <code><a href="as.tdm.html">as.tdm</a></code><br />tm Package Compatibility Tools: Apply to or Convert to/from Term Document
-      <li>
-        <code><a href="as.tdm.html">apply_as_df</a></code><br />tm Package Compatibility Tools: Apply to or Convert to/from Term Document
-            
-      <li>
-        <code><a href="as.tdm.html">apply_as_tm</a></code><br />tm Package Compatibility Tools: Apply to or Convert to/from Term Document
-            
-      <li>
-        <code><a href="as.tdm.html">as.Corpus</a></code><br />tm Package Compatibility Tools: Apply to or Convert to/from Term Document
-            
-      <li>
-        <code><a href="as.tdm.html">as.Corpus.DocumentTermMatrix</a></code><br />tm Package Compatibility Tools: Apply to or Convert to/from Term Document
-            
-      <li>
-        <code><a href="as.tdm.html">as.Corpus.TermDocumentMatrix</a></code><br />tm Package Compatibility Tools: Apply to or Convert to/from Term Document
-            
-      <li>
-        <code><a href="as.tdm.html">as.Corpus.default</a></code><br />tm Package Compatibility Tools: Apply to or Convert to/from Term Document
-            
-      <li>
-        <code><a href="as.tdm.html">as.Corpus.sent_split</a></code><br />tm Package Compatibility Tools: Apply to or Convert to/from Term Document
-            
-      <li>
-        <code><a href="as.tdm.html">as.Corpus.wfm</a></code><br />tm Package Compatibility Tools: Apply to or Convert to/from Term Document
-            
-      <li>
-        <code><a href="as.tdm.html">as.DocumentTermMatrix</a></code><br />tm Package Compatibility Tools: Apply to or Convert to/from Term Document
-            
-      <li>
-        <code><a href="as.tdm.html">as.TermDocumentMatrix</a></code><br />tm Package Compatibility Tools: Apply to or Convert to/from Term Document
-            
-      <li>
-        <code><a href="as.tdm.html">as.data.frame.Corpus</a></code><br />tm Package Compatibility Tools: Apply to or Convert to/from Term Document
-            
-      <li>
-        <code><a href="as.tdm.html">as.dtm</a></code><br />tm Package Compatibility Tools: Apply to or Convert to/from Term Document
-            
-      <li>
-        <code><a href="as.tdm.html">as.dtm.Corpus</a></code><br />tm Package Compatibility Tools: Apply to or Convert to/from Term Document
-            
-      <li>
-        <code><a href="as.tdm.html">as.dtm.character</a></code><br />tm Package Compatibility Tools: Apply to or Convert to/from Term Document
-            
-      <li>
-        <code><a href="as.tdm.html">as.dtm.default</a></code><br />tm Package Compatibility Tools: Apply to or Convert to/from Term Document
-            
-      <li>
-        <code><a href="as.tdm.html">as.dtm.wfm</a></code><br />tm Package Compatibility Tools: Apply to or Convert to/from Term Document
-            
-      <li>
-        <code><a href="as.tdm.html">as.tdm.Corpus</a></code><br />tm Package Compatibility Tools: Apply to or Convert to/from Term Document
-            
-      <li>
-        <code><a href="as.tdm.html">as.tdm.character</a></code><br />tm Package Compatibility Tools: Apply to or Convert to/from Term Document
-            
-      <li>
-        <code><a href="as.tdm.html">as.tdm.default</a></code><br />tm Package Compatibility Tools: Apply to or Convert to/from Term Document
-            
-      <li>
-        <code><a href="as.tdm.html">as.tdm.wfm</a></code><br />tm Package Compatibility Tools: Apply to or Convert to/from Term Document
-            
+        <code><a href="as.tdm.html">as.tdm</a></code>(apply_as_df, apply_as_tm, as.Corpus, as.Corpus.DocumentTermMatrix, as.Corpus.TermDocumentMatrix, as.Corpus.default, as.Corpus.sent_split, as.Corpus.wfm, as.DocumentTermMatrix, as.TermDocumentMatrix, as.data.frame.Corpus, as.dtm, as.dtm.Corpus, as.dtm.character, as.dtm.default, as.dtm.wfm, as.tdm.Corpus, as.tdm.character, as.tdm.default, as.tdm.wfm)<br />tm Package Compatibility Tools: Apply to or Convert to/from Term Document
 </li>
     
     </ul>
@@ -519,13 +434,7 @@ For more see <a href="http://www.r-statistics.com/2012/08/how-to-load-the-rjava-
         <code><a href="outlier_labeler.html">outlier_labeler</a></code><br />Locate Outliers in Numeric String</li>
             
       <li>
-        <code><a href="pos.html">pos</a></code><br />Parts of Speech Tagging</li>
-      <li>
-        <code><a href="pos.html">pos_by</a></code><br />Parts of Speech Tagging</li>
-            
-      <li>
-        <code><a href="pos.html">pos_tags</a></code><br />Parts of Speech Tagging</li>
-            
+        <code><a href="pos.html">pos</a></code>(pos_by, pos_tags)<br />Parts of Speech Tagging</li>
             
       <li>
         <code><a href="pronoun_type.html">pronoun_type</a></code><br />Count Object/Subject Pronouns Per Grouping Variable</li>
@@ -537,40 +446,19 @@ For more see <a href="http://www.r-statistics.com/2012/08/how-to-load-the-rjava-
         <code><a href="subject_pronoun_type.html">subject_pronoun_type</a></code><br />Count Subject Pronouns Per Grouping Variable</li>
             
       <li>
-        <code><a href="syllabication.html">syllable_sum</a></code><br />Syllabication</li>
-      <li>
-        <code><a href="syllabication.html">combo_syllable_sum</a></code><br />Syllabication</li>
+        <code><a href="syllabication.html">syllable_sum</a></code>(combo_syllable_sum, polysyllable_sum, syllable_count)<br />Syllabication</li>
             
       <li>
-        <code><a href="syllabication.html">polysyllable_sum</a></code><br />Syllabication</li>
-            
-      <li>
-        <code><a href="syllabication.html">syllable_count</a></code><br />Syllabication</li>
-            
-            
-      <li>
-        <code><a href="termco.html">termco</a></code> <code><a href="termco.html">termco_d</a></code><br />Search For and Count Terms</li>
-      <li>
-        <code><a href="termco.html">term_match</a></code><br />Search For and Count Terms</li>
-            
-      <li>
-        <code><a href="termco.html">termco2mat</a></code><br />Search For and Count Terms</li>
-            
+        <code><a href="termco.html">termco</a></code>(term_match, termco2mat, termco_d)<br />Search For and Count Terms</li>
             
       <li>
         <code><a href="termco_c.html">termco_c</a></code><br />Combine Columns from a termco Object</li>
             
       <li>
-        <code><a href="Word_Frequency_Matrix.html">wfm</a></code> <code><a href="Word_Frequency_Matrix.html">wfdf</a></code> <code><a href="Word_Frequency_Matrix.html">as.wfm</a></code> <code><a href="Word_Frequency_Matrix.html">weight.wfdf</a></code> <code><a href="Word_Frequency_Matrix.html">weight.wfm</a></code> <code><a href="Word_Frequency_Matrix.html">wfm_combine</a></code> <code><a href="Word_Frequency_Matrix.html">wfm_expanded</a></code> <code><a href="Word_Frequency_Matrix.html">wfm.wfdf</a></code> <code><a href="Word_Frequency_Matrix.html">wfm.character</a></code> <code><a href="Word_Frequency_Matrix.html">wfm.factor</a></code> <code><a href="Word_Frequency_Matrix.html">as.wfm.Corpus</a></code> <code><a href="Word_Frequency_Matrix.html">as.wfm.DocumentTermMatrix</a></code> <code><a href="Word_Frequency_Matrix.html">as.wfm.TermDocumentMatrix</a></code> <code><a href="Word_Frequency_Matrix.html">as.wfm.data.frame</a></code> <code><a href="Word_Frequency_Matrix.html">as.wfm.default</a></code> <code><a href="Word_Frequency_Matrix.html">as.wfm.matrix</a></code> <code><a href="Word_Frequency_Matrix.html">as.wfm.wfdf</a></code> <code><a href="Word_Frequency_Matrix.html">wfm.Corpus</a></code><br />Word Frequency Matrix</li>
+        <code><a href="Word_Frequency_Matrix.html">wfm</a></code>(as.wfm, as.wfm.Corpus, as.wfm.DocumentTermMatrix, as.wfm.TermDocumentMatrix, as.wfm.data.frame, as.wfm.default, as.wfm.matrix, as.wfm.wfdf, weight.wfdf, weight.wfm, wfdf, wfm.Corpus, wfm.character, wfm.factor, wfm.wfdf, wfm_combine, wfm_expanded)<br />Word Frequency Matrix</li>
             
       <li>
-        <code><a href="word_count.html">word_count</a></code> <code><a href="word_count.html">wc</a></code><br />Word Counts</li>
-      <li>
-        <code><a href="word_count.html">character_count</a></code><br />Word Counts</li>
-            
-      <li>
-        <code><a href="word_count.html">character_table</a></code> <code><a href="word_count.html">char_table</a></code><br />Word Counts</li>
-            
+        <code><a href="word_count.html">word_count</a></code>(char_table, character_count, character_table, wc)<br />Word Counts</li>
             
       <li>
         <code><a href="word_stats.html">word_stats</a></code><br />Descriptive Word Statistics</li>
@@ -583,7 +471,7 @@ For more see <a href="http://www.r-statistics.com/2012/08/how-to-load-the-rjava-
     <ul class="index">
         
       <li>
-        <code><a href="Readability.html">automated_readability_index</a></code> <code><a href="Readability.html">coleman_liau</a></code> <code><a href="Readability.html">flesch_kincaid</a></code> <code><a href="Readability.html">fry</a></code> <code><a href="Readability.html">linsear_write</a></code> <code><a href="Readability.html">SMOG</a></code><br />Readability Measures</li>
+        <code><a href="Readability.html">automated_readability_index</a></code>(SMOG, coleman_liau, flesch_kincaid, fry, linsear_write)<br />Readability Measures</li>
             
       <li>
         <code><a href="Dissimilarity.html">Dissimilarity</a></code><br />Dissimilarity Statistics</li>
@@ -604,7 +492,7 @@ For more see <a href="http://www.r-statistics.com/2012/08/how-to-load-the-rjava-
         <code><a href="word_cor.html">word_cor</a></code><br />Find Correlated Words</li>
             
       <li>
-        <code><a href="word_proximity.html">word_proximity</a></code> <code><a href="word_proximity.html">weight.word_proximity</a></code><br />Proximity Matrix Between Words</li>
+        <code><a href="word_proximity.html">word_proximity</a></code>(weight.word_proximity)<br />Proximity Matrix Between Words</li>
     
     </ul>
     <h3>qdap Tools</h3>
@@ -639,7 +527,7 @@ For more see <a href="http://www.r-statistics.com/2012/08/how-to-load-the-rjava-
         <code><a href="end_inc.html">end_inc</a></code><br />Test for Incomplete Sentences</li>
             
       <li>
-        <code><a href="end_mark.html">end_mark</a></code> <code><a href="end_mark.html">end_mark_by</a></code><br />Sentence End Marks</li>
+        <code><a href="end_mark.html">end_mark</a></code>(end_mark_by)<br />Sentence End Marks</li>
             
       <li>
         <code><a href="imperative.html">imperative</a></code><br />Intuitively Remark Sentences as Imperative</li>
@@ -721,34 +609,10 @@ For more see <a href="http://www.r-statistics.com/2012/08/how-to-load-the-rjava-
         <code><a href="plot.word_stats.html">plot.word_stats</a></code><br />Plots a word_stats object</li>
             
       <li>
-        <code><a href="qheat.html">qheat</a></code><br />Quick Heatmap</li>
-      <li>
-        <code><a href="qheat.html">qheat.character_table</a></code><br />Quick Heatmap</li>
+        <code><a href="qheat.html">qheat</a></code>(qheat.character_table, qheat.default, qheat.diversity, qheat.pos_by, qheat.question_type, qheat.termco, qheat.word_stats)<br />Quick Heatmap</li>
             
       <li>
-        <code><a href="qheat.html">qheat.default</a></code><br />Quick Heatmap</li>
-            
-      <li>
-        <code><a href="qheat.html">qheat.diversity</a></code><br />Quick Heatmap</li>
-            
-      <li>
-        <code><a href="qheat.html">qheat.pos_by</a></code><br />Quick Heatmap</li>
-            
-      <li>
-        <code><a href="qheat.html">qheat.question_type</a></code><br />Quick Heatmap</li>
-            
-      <li>
-        <code><a href="qheat.html">qheat.termco</a></code><br />Quick Heatmap</li>
-            
-      <li>
-        <code><a href="qheat.html">qheat.word_stats</a></code><br />Quick Heatmap</li>
-            
-            
-      <li>
-        <code><a href="rank_freq_plot.html">rank_freq_mplot</a></code><br />Rank Frequency Plot</li>
-      <li>
-        <code><a href="rank_freq_plot.html">rank_freq_plot</a></code><br />Rank Frequency Plot</li>
-            
+        <code><a href="rank_freq_plot.html">rank_freq_mplot</a></code>(rank_freq_plot)<br />Rank Frequency Plot</li>
             
       <li>
         <code><a href="tot_plot.html">tot_plot</a></code><br />Visualize Word Length by Turn of Talk</li>
@@ -782,31 +646,7 @@ For more see <a href="http://www.r-statistics.com/2012/08/how-to-load-the-rjava-
         <code><a href="Network.polarity.html">Network.polarity</a></code><br />Network Polarity</li>
             
       <li>
-        <code><a href="qtheme.html">qtheme</a></code><br />Add themes to a Network object.</li>
-      <li>
-        <code><a href="qtheme.html">theme_badkitchen</a></code><br />Add themes to a Network object.</li>
-            
-      <li>
-        <code><a href="qtheme.html">theme_cafe</a></code><br />Add themes to a Network object.</li>
-            
-      <li>
-        <code><a href="qtheme.html">theme_duskheat</a></code><br />Add themes to a Network object.</li>
-            
-      <li>
-        <code><a href="qtheme.html">theme_grayscale</a></code><br />Add themes to a Network object.</li>
-            
-      <li>
-        <code><a href="qtheme.html">theme_greyscale</a></code><br />Add themes to a Network object.</li>
-            
-      <li>
-        <code><a href="qtheme.html">theme_hipster</a></code><br />Add themes to a Network object.</li>
-            
-      <li>
-        <code><a href="qtheme.html">theme_nightheat</a></code><br />Add themes to a Network object.</li>
-            
-      <li>
-        <code><a href="qtheme.html">theme_norah</a></code><br />Add themes to a Network object.</li>
-            
+        <code><a href="qtheme.html">qtheme</a></code>(theme_badkitchen, theme_cafe, theme_duskheat, theme_grayscale, theme_greyscale, theme_hipster, theme_nightheat, theme_norah)<br />Add themes to a Network object.</li>
     
     </ul>
     <h3>Cumulative Plots</h3>
@@ -816,34 +656,7 @@ For more see <a href="http://www.r-statistics.com/2012/08/how-to-load-the-rjava-
     <ul class="index">
         
       <li>
-        <code><a href="cumulative.html">cumulative</a></code><br />Cumulative Scores</li>
-      <li>
-        <code><a href="cumulative.html">cumulative.animated_formality</a></code><br />Cumulative Scores</li>
-            
-      <li>
-        <code><a href="cumulative.html">cumulative.animated_polarity</a></code><br />Cumulative Scores</li>
-            
-      <li>
-        <code><a href="cumulative.html">cumulative.combo_syllable_sum</a></code><br />Cumulative Scores</li>
-            
-      <li>
-        <code><a href="cumulative.html">cumulative.end_mark</a></code><br />Cumulative Scores</li>
-            
-      <li>
-        <code><a href="cumulative.html">cumulative.formality</a></code><br />Cumulative Scores</li>
-            
-      <li>
-        <code><a href="cumulative.html">cumulative.polarity</a></code><br />Cumulative Scores</li>
-            
-      <li>
-        <code><a href="cumulative.html">cumulative.pos</a></code><br />Cumulative Scores</li>
-            
-      <li>
-        <code><a href="cumulative.html">cumulative.pos_by</a></code><br />Cumulative Scores</li>
-            
-      <li>
-        <code><a href="cumulative.html">cumulative.syllable_freq</a></code><br />Cumulative Scores</li>
-            
+        <code><a href="cumulative.html">cumulative</a></code>(cumulative.animated_formality, cumulative.animated_polarity, cumulative.combo_syllable_sum, cumulative.end_mark, cumulative.formality, cumulative.polarity, cumulative.pos, cumulative.pos_by, cumulative.syllable_freq)<br />Cumulative Scores</li>
     
     </ul>
     <h3>Animation</h3>
@@ -871,7 +684,7 @@ For more see <a href="http://www.r-statistics.com/2012/08/how-to-load-the-rjava-
         <code><a href="Animate.polarity.html">Animate.polarity</a></code><br />Animate Polarity</li>
             
       <li>
-        <code><a href="igraph_params.html">vertex_apply</a></code> <code><a href="igraph_params.html">edge_apply</a></code><br />Apply Parameter to List of Igraph Vertices/Edges</li>
+        <code><a href="igraph_params.html">vertex_apply</a></code>(edge_apply)<br />Apply Parameter to List of Igraph Vertices/Edges</li>
     
     </ul>
     <h3>Print Functions</h3>
@@ -1013,6 +826,540 @@ For more see <a href="http://www.r-statistics.com/2012/08/how-to-load-the-rjava-
         <code><a href="sample.time.span.html">sample.time.span</a></code><br />Minimal Time Span Data Set</li>
     
     </ul>
+    <h3>Other</h3>
+    
+    
+    <ul class="index">
+        
+      <li>
+        <code><a href="addNetwork.html">+.Network</a></code><br />Add themes to a Network object.</li>
+            
+      <li>
+        <code><a href="check_spelling_interactive.character.html">check_spelling_interactive.character</a></code><br />Check Spelling</li>
+            
+      <li>
+        <code><a href="check_spelling_interactive.check_spelling.html">check_spelling_interactive.check_spelling</a></code><br />Check Spelling</li>
+            
+      <li>
+        <code><a href="check_spelling_interactive.factor.html">check_spelling_interactive.factor</a></code><br />Check Spelling</li>
+            
+      <li>
+        <code><a href="cm_combine.dummy.html">cm_combine.dummy</a></code><br />Find Co-occurrence Between Dummy Codes</li>
+            
+      <li>
+        <code><a href="cm_df.fill.html">cm_df.fill</a></code><br />Range Coding</li>
+            
+      <li>
+        <code><a href="common.list.html">common.list</a></code><br />list Method for common</li>
+            
+      <li>
+        <code><a href="counts.automated_readability_index.html">counts.automated_readability_index</a></code><br />Readability Measures</li>
+            
+      <li>
+        <code><a href="counts.character_table.html">counts.character_table</a></code><br />Term Counts</li>
+            
+      <li>
+        <code><a href="counts.coleman_liau.html">counts.coleman_liau</a></code><br />Readability Measures</li>
+            
+      <li>
+        <code><a href="counts.end_mark_by.html">counts.end_mark_by</a></code><br />Question Counts</li>
+            
+      <li>
+        <code><a href="counts.flesch_kincaid.html">counts.flesch_kincaid</a></code><br />Readability Measures</li>
+            
+      <li>
+        <code><a href="counts.formality.html">counts.formality</a></code><br />Formality</li>
+            
+      <li>
+        <code><a href="counts.fry.html">counts.fry</a></code><br />Readability Measures</li>
+            
+      <li>
+        <code><a href="counts.linsear_write.html">counts.linsear_write</a></code><br />Readability Measures</li>
+            
+      <li>
+        <code><a href="counts.object_pronoun_type.html">counts.object_pronoun_type</a></code><br />Question Counts</li>
+            
+      <li>
+        <code><a href="counts.polarity.html">counts.polarity</a></code><br />Polarity</li>
+            
+      <li>
+        <code><a href="counts.pos.html">counts.pos</a></code><br />Parts of Speech</li>
+            
+      <li>
+        <code><a href="counts.pos_by.html">counts.pos_by</a></code><br />Parts of Speech</li>
+            
+      <li>
+        <code><a href="counts.pronoun_type.html">counts.pronoun_type</a></code><br />Question Counts</li>
+            
+      <li>
+        <code><a href="counts.question_type.html">counts.question_type</a></code><br />Question Counts</li>
+            
+      <li>
+        <code><a href="counts.SMOG.html">counts.SMOG</a></code><br />Readability Measures</li>
+            
+      <li>
+        <code><a href="counts.subject_pronoun_type.html">counts.subject_pronoun_type</a></code><br />Question Counts</li>
+            
+      <li>
+        <code><a href="counts.termco.html">counts.termco</a></code><br />Term Counts</li>
+            
+      <li>
+        <code><a href="counts.word_stats.html">counts.word_stats</a></code><br />Word Stats</li>
+            
+      <li>
+        <code><a href="deprecated.html">df2tm_corpus</a></code>(dtm, polarity_frame, tdm, tm2qdap, tm_corpus2df, tm_corpus2wfm)<br />Deprecated qdap Functions</li>
+            
+      <li>
+        <code><a href="env.syl.html">env.syl</a></code><br />Syllable Lookup Environment</li>
+            
+      <li>
+        <code><a href="Filter.html">Filter.all_words</a></code>(Filter, Filter.DocumentTermMatrix, Filter.TermDocumentMatrix, Filter.character, Filter.fswl, Filter.fwl, Filter.rfswl, Filter.wfm)<br />Filter</li>
+            
+      <li>
+        <code><a href="hamlet.html">hamlet</a></code><br />Hamlet (Complete & Split by Sentence)</li>
+            
+      <li>
+        <code><a href="is.global.html">is.global</a></code><br />Test If Environment is Global</li>
+            
+      <li>
+        <code><a href="plot.animated_discourse_map.html">plot.animated_discourse_map</a></code><br />Plots an animated_discourse_map  Object</li>
+            
+      <li>
+        <code><a href="plot.animated_formality.html">plot.animated_formality</a></code><br />Plots a animated_formality  Object</li>
+            
+      <li>
+        <code><a href="plot.animated_polarity.html">plot.animated_polarity</a></code><br />Plots a animated_polarity  Object</li>
+            
+      <li>
+        <code><a href="plot.automated_readability_index.html">plot.automated_readability_index</a></code><br />Plots a automated_readability_index Object</li>
+            
+      <li>
+        <code><a href="plot.cm_distance.html">plot.cm_distance</a></code><br />Plots a cm_distance object</li>
+            
+      <li>
+        <code><a href="plot.coleman_liau.html">plot.coleman_liau</a></code><br />Plots a coleman_liau Object</li>
+            
+      <li>
+        <code><a href="plot.combo_syllable_sum.html">plot.combo_syllable_sum</a></code><br />Plots a combo_syllable_sum Object</li>
+            
+      <li>
+        <code><a href="plot.cumulative_animated_formality.html">plot.cumulative_animated_formality</a></code><br />Plots a cumulative_animated_formality Object</li>
+            
+      <li>
+        <code><a href="plot.cumulative_animated_polarity.html">plot.cumulative_animated_polarity</a></code><br />Plots a cumulative_animated_polarity Object</li>
+            
+      <li>
+        <code><a href="plot.cumulative_combo_syllable_sum.html">plot.cumulative_combo_syllable_sum</a></code><br />Plots a cumulative_combo_syllable_sum Object</li>
+            
+      <li>
+        <code><a href="plot.cumulative_end_mark.html">plot.cumulative_end_mark</a></code><br />Plots a cumulative_end_mark Object</li>
+            
+      <li>
+        <code><a href="plot.cumulative_formality.html">plot.cumulative_formality</a></code><br />Plots a cumulative_formality Object</li>
+            
+      <li>
+        <code><a href="plot.cumulative_polarity.html">plot.cumulative_polarity</a></code><br />Plots a cumulative_polarity Object</li>
+            
+      <li>
+        <code><a href="plot.cumulative_syllable_freq.html">plot.cumulative_syllable_freq</a></code><br />Plots a cumulative_syllable_freq Object</li>
+            
+      <li>
+        <code><a href="plot.discourse_map.html">plot.discourse_map</a></code><br />Plots a discourse_map Object</li>
+            
+      <li>
+        <code><a href="plot.end_mark.html">plot.end_mark</a></code><br />Plots an end_mark Object</li>
+            
+      <li>
+        <code><a href="plot.end_mark_by.html">plot.end_mark_by</a></code><br />Plots a end_mark_by Object</li>
+            
+      <li>
+        <code><a href="plot.end_mark_by_count.html">plot.end_mark_by_count</a></code><br />Plots a end_mark_by_count Object</li>
+            
+      <li>
+        <code><a href="plot.end_mark_by_preprocessed.html">plot.end_mark_by_preprocessed</a></code><br />Plots a end_mark_by_preprocessed Object</li>
+            
+      <li>
+        <code><a href="plot.end_mark_by_proportion.html">plot.end_mark_by_proportion</a></code><br />Plots a end_mark_by_proportion Object</li>
+            
+      <li>
+        <code><a href="plot.end_mark_by_score.html">plot.end_mark_by_score</a></code><br />Plots a end_mark_by_score Object</li>
+            
+      <li>
+        <code><a href="plot.flesch_kincaid.html">plot.flesch_kincaid</a></code><br />Plots a flesch_kincaid Object</li>
+            
+      <li>
+        <code><a href="plot.formality_scores.html">plot.formality_scores</a></code><br />Plots a formality_scores Object</li>
+            
+      <li>
+        <code><a href="plot.freq_terms.html">plot.freq_terms</a></code><br />Plots a freq_terms Object</li>
+            
+      <li>
+        <code><a href="plot.linsear_write.html">plot.linsear_write</a></code><br />Plots a linsear_write Object</li>
+            
+      <li>
+        <code><a href="plot.linsear_write_count.html">plot.linsear_write_count</a></code><br />Plots a linsear_write_count Object</li>
+            
+      <li>
+        <code><a href="plot.linsear_write_scores.html">plot.linsear_write_scores</a></code><br />Plots a linsear_write_scores Object</li>
+            
+      <li>
+        <code><a href="plot.Network.html">plot.Network</a></code><br />Plots a Network  Object</li>
+            
+      <li>
+        <code><a href="plot.object_pronoun_type.html">plot.object_pronoun_type</a></code><br />Plots an object_pronoun_type Object</li>
+            
+      <li>
+        <code><a href="plot.polarity_count.html">plot.polarity_count</a></code><br />Plots a polarity_count Object</li>
+            
+      <li>
+        <code><a href="plot.polarity_score.html">plot.polarity_score</a></code><br />Plots a polarity_score Object</li>
+            
+      <li>
+        <code><a href="plot.pos.html">plot.pos</a></code><br />Plots a pos Object</li>
+            
+      <li>
+        <code><a href="plot.pos_preprocessed.html">plot.pos_preprocessed</a></code><br />Plots a pos_preprocessed Object</li>
+            
+      <li>
+        <code><a href="plot.pronoun_type.html">plot.pronoun_type</a></code><br />Plots an pronoun_type Object</li>
+            
+      <li>
+        <code><a href="plot.question_type_preprocessed.html">plot.question_type_preprocessed</a></code><br />Plots a question_type_preprocessed Object</li>
+            
+      <li>
+        <code><a href="plot.readability_count.html">plot.readability_count</a></code><br />Plots a readability_count Object</li>
+            
+      <li>
+        <code><a href="plot.readability_score.html">plot.readability_score</a></code><br />Plots a readability_score Object</li>
+            
+      <li>
+        <code><a href="plot.SMOG.html">plot.SMOG</a></code><br />Plots a SMOG Object</li>
+            
+      <li>
+        <code><a href="plot.subject_pronoun_type.html">plot.subject_pronoun_type</a></code><br />Plots an subject_pronoun_type Object</li>
+            
+      <li>
+        <code><a href="plot.syllable_freq.html">plot.syllable_freq</a></code><br />Plots a syllable_freq Object</li>
+            
+      <li>
+        <code><a href="plot.table_count.html">plot.table_count</a></code><br />Plots a table_count Object</li>
+            
+      <li>
+        <code><a href="plot.table_proportion.html">plot.table_proportion</a></code><br />Plots a table_proportion Object</li>
+            
+      <li>
+        <code><a href="plot.table_score.html">plot.table_score</a></code><br />Plots a table_score Object</li>
+            
+      <li>
+        <code><a href="plot.weighted_wfm.html">plot.weighted_wfm</a></code><br />Plots a weighted_wfm object</li>
+            
+      <li>
+        <code><a href="plot.word_cor.html">plot.word_cor</a></code><br />Plots a word_cor object</li>
+            
+      <li>
+        <code><a href="plot.word_proximity.html">plot.word_proximity</a></code><br />Plots a word_proximity object</li>
+            
+      <li>
+        <code><a href="plot.word_stats_counts.html">plot.word_stats_counts</a></code><br />Plots a word_stats_counts Object</li>
+            
+      <li>
+        <code><a href="preprocessed.check_spelling_interactive.html">preprocessed.check_spelling_interactive</a></code><br />Check Spelling</li>
+            
+      <li>
+        <code><a href="preprocessed.end_mark_by.html">preprocessed.end_mark_by</a></code><br />Question Counts</li>
+            
+      <li>
+        <code><a href="preprocessed.formality.html">preprocessed.formality</a></code><br />Formality</li>
+            
+      <li>
+        <code><a href="preprocessed.object_pronoun_type.html">preprocessed.object_pronoun_type</a></code><br />Question Counts</li>
+            
+      <li>
+        <code><a href="preprocessed.pos.html">preprocessed.pos</a></code><br />Parts of Speech</li>
+            
+      <li>
+        <code><a href="preprocessed.pos_by.html">preprocessed.pos_by</a></code><br />Parts of Speech</li>
+            
+      <li>
+        <code><a href="preprocessed.pronoun_type.html">preprocessed.pronoun_type</a></code><br />Question Counts</li>
+            
+      <li>
+        <code><a href="preprocessed.question_type.html">preprocessed.question_type</a></code><br />Question Counts</li>
+            
+      <li>
+        <code><a href="preprocessed.subject_pronoun_type.html">preprocessed.subject_pronoun_type</a></code><br />Question Counts</li>
+            
+      <li>
+        <code><a href="print.animated_discourse_map.html">print.animated_discourse_map</a></code><br />Prints an animated_discourse_map  Object</li>
+            
+      <li>
+        <code><a href="print.animated_formality.html">print.animated_formality</a></code><br />Prints a animated_formality  Object</li>
+            
+      <li>
+        <code><a href="print.animated_polarity.html">print.animated_polarity</a></code><br />Prints a animated_polarity  Object</li>
+            
+      <li>
+        <code><a href="print.automated_readability_index.html">print.automated_readability_index</a></code><br />Prints an automated_readability_index Object</li>
+            
+      <li>
+        <code><a href="print.check_spelling.html">print.check_spelling</a></code><br />Prints a check_spelling Object</li>
+            
+      <li>
+        <code><a href="print.check_spelling_interactive.html">print.check_spelling_interactive</a></code><br />Prints a check_spelling_interactive Object</li>
+            
+      <li>
+        <code><a href="print.check_text.html">print.check_text</a></code><br />Prints a check_text Object</li>
+            
+      <li>
+        <code><a href="print.coleman_liau.html">print.coleman_liau</a></code><br />Prints an coleman_liau Object</li>
+            
+      <li>
+        <code><a href="print.combo_syllable_sum.html">print.combo_syllable_sum</a></code><br />Prints an combo_syllable_sum object</li>
+            
+      <li>
+        <code><a href="print.cumulative_animated_formality.html">print.cumulative_animated_formality</a></code><br />Prints a cumulative_animated_formality Object</li>
+            
+      <li>
+        <code><a href="print.cumulative_animated_polarity.html">print.cumulative_animated_polarity</a></code><br />Prints a cumulative_animated_polarity Object</li>
+            
+      <li>
+        <code><a href="print.cumulative_combo_syllable_sum.html">print.cumulative_combo_syllable_sum</a></code><br />Prints a cumulative_combo_syllable_sum Object</li>
+            
+      <li>
+        <code><a href="print.cumulative_end_mark.html">print.cumulative_end_mark</a></code><br />Prints a cumulative_end_mark Object</li>
+            
+      <li>
+        <code><a href="print.cumulative_formality.html">print.cumulative_formality</a></code><br />Prints a cumulative_formality Object</li>
+            
+      <li>
+        <code><a href="print.cumulative_polarity.html">print.cumulative_polarity</a></code><br />Prints a cumulative_polarity Object</li>
+            
+      <li>
+        <code><a href="print.cumulative_syllable_freq.html">print.cumulative_syllable_freq</a></code><br />Prints a cumulative_syllable_freqObject</li>
+            
+      <li>
+        <code><a href="print.discourse_map.html">print.discourse_map</a></code><br />Prints a discourse_map Object</li>
+            
+      <li>
+        <code><a href="print.end_mark.html">print.end_mark</a></code><br />Prints an end_mark object</li>
+            
+      <li>
+        <code><a href="print.end_mark_by.html">print.end_mark_by</a></code><br />Prints an end_mark_by object</li>
+            
+      <li>
+        <code><a href="print.end_mark_by_preprocessed.html">print.end_mark_by_preprocessed</a></code><br />Prints a end_mark_by_preprocessed object</li>
+            
+      <li>
+        <code><a href="print.flesch_kincaid.html">print.flesch_kincaid</a></code><br />Prints an flesch_kincaid Object</li>
+            
+      <li>
+        <code><a href="print.formality_scores.html">print.formality_scores</a></code><br />Prints a formality_scores object</li>
+            
+      <li>
+        <code><a href="print.fry.html">print.fry</a></code><br />Prints an fry Object</li>
+            
+      <li>
+        <code><a href="print.linsear_write.html">print.linsear_write</a></code><br />Prints an linsear_write Object</li>
+            
+      <li>
+        <code><a href="print.linsear_write_count.html">print.linsear_write_count</a></code><br />Prints a linsear_write_count Object</li>
+            
+      <li>
+        <code><a href="print.linsear_write_scores.html">print.linsear_write_scores</a></code><br />Prints a linsear_write_scores Object</li>
+            
+      <li>
+        <code><a href="print.Network.html">print.Network</a></code><br />Prints a Network Object</li>
+            
+      <li>
+        <code><a href="print.object_pronoun_type.html">print.object_pronoun_type</a></code><br />Prints a object_pronoun_type object</li>
+            
+      <li>
+        <code><a href="print.phrase_net.html">print.phrase_net</a></code><br />Prints a phrase_net Object</li>
+            
+      <li>
+        <code><a href="print.polarity_count.html">print.polarity_count</a></code><br />Prints a polarity_count Object</li>
+            
+      <li>
+        <code><a href="print.polarity_score.html">print.polarity_score</a></code><br />Prints a polarity_score Object</li>
+            
+      <li>
+        <code><a href="print.polysyllable_sum.html">print.polysyllable_sum</a></code><br />Prints an polysyllable_sum object</li>
+            
+      <li>
+        <code><a href="print.pos_preprocessed.html">print.pos_preprocessed</a></code><br />Prints a pos_preprocessed object</li>
+            
+      <li>
+        <code><a href="print.pronoun_type.html">print.pronoun_type</a></code><br />Prints a pronoun_type object</li>
+            
+      <li>
+        <code><a href="print.qdapProj.html">print.qdapProj</a></code><br />Prints a qdapProj Object</li>
+            
+      <li>
+        <code><a href="print.question_type_preprocessed.html">print.question_type_preprocessed</a></code><br />Prints a question_type_preprocessed object</li>
+            
+      <li>
+        <code><a href="print.readability_count.html">print.readability_count</a></code><br />Prints a readability_count Object</li>
+            
+      <li>
+        <code><a href="print.readability_score.html">print.readability_score</a></code><br />Prints a readability_score Object</li>
+            
+      <li>
+        <code><a href="print.SMOG.html">print.SMOG</a></code><br />Prints an SMOG Object</li>
+            
+      <li>
+        <code><a href="print.sub_holder.html">print.sub_holder</a></code><br />Prints a sub_holder object</li>
+            
+      <li>
+        <code><a href="print.subject_pronoun_type.html">print.subject_pronoun_type</a></code><br />Prints a subject_pronoun_type object</li>
+            
+      <li>
+        <code><a href="print.syllable_sum.html">print.syllable_sum</a></code><br />Prints an syllable_sum object</li>
+            
+      <li>
+        <code><a href="print.table_count.html">print.table_count</a></code><br />Prints a table_count object</li>
+            
+      <li>
+        <code><a href="print.table_proportion.html">print.table_proportion</a></code><br />Prints a table_proportion object</li>
+            
+      <li>
+        <code><a href="print.table_score.html">print.table_score</a></code><br />Prints a table_score object</li>
+            
+      <li>
+        <code><a href="print.trunc.html">print.trunc</a></code><br />Prints a trunc object</li>
+            
+      <li>
+        <code><a href="print.wfm_summary.html">print.wfm_summary</a></code><br />Prints a wfm_summary Object</li>
+            
+      <li>
+        <code><a href="print.which_misspelled.html">print.which_misspelled</a></code><br />Prints a which_misspelled Object</li>
+            
+      <li>
+        <code><a href="print.word_cor.html">print.word_cor</a></code><br />Prints a word_cor object</li>
+            
+      <li>
+        <code><a href="print.word_proximity.html">print.word_proximity</a></code><br />Prints a word_proximity object</li>
+            
+      <li>
+        <code><a href="print.word_stats_counts.html">print.word_stats_counts</a></code><br />Prints a word_stats_counts object</li>
+            
+      <li>
+        <code><a href="proportions.character_table.html">proportions.character_table</a></code><br />Term Counts</li>
+            
+      <li>
+        <code><a href="proportions.end_mark_by.html">proportions.end_mark_by</a></code><br />Question Counts</li>
+            
+      <li>
+        <code><a href="proportions.formality.html">proportions.formality</a></code><br />Formality</li>
+            
+      <li>
+        <code><a href="proportions.object_pronoun_type.html">proportions.object_pronoun_type</a></code><br />Question Counts</li>
+            
+      <li>
+        <code><a href="proportions.pos.html">proportions.pos</a></code><br />Parts of Speech</li>
+            
+      <li>
+        <code><a href="proportions.pos_by.html">proportions.pos_by</a></code><br />Parts of Speech</li>
+            
+      <li>
+        <code><a href="proportions.pronoun_type.html">proportions.pronoun_type</a></code><br />Question Counts</li>
+            
+      <li>
+        <code><a href="proportions.question_type.html">proportions.question_type</a></code><br />Question Counts</li>
+            
+      <li>
+        <code><a href="proportions.subject_pronoun_type.html">proportions.subject_pronoun_type</a></code><br />Question Counts</li>
+            
+      <li>
+        <code><a href="proportions.termco.html">proportions.termco</a></code><br />Term Counts</li>
+            
+      <li>
+        <code><a href="qdap.html">qdap</a></code>(package-qdap, qdap-package)<br />qdap: Quantitative Discourse Analysis Package</li>
+            
+      <li>
+        <code><a href="raj.act.1POS.html">raj.act.1POS</a></code><br />Romeo and Juliet: Act 1 Parts of Speech by Person</li>
+            
+      <li>
+        <code><a href="random_data.html">random_sent</a></code>(random_data)<br />Generate Random Dialogue Data</li>
+            
+      <li>
+        <code><a href="scores.automated_readability_index.html">scores.automated_readability_index</a></code><br />Readability Measures</li>
+            
+      <li>
+        <code><a href="scores.character_table.html">scores.character_table</a></code><br />Term Counts</li>
+            
+      <li>
+        <code><a href="scores.coleman_liau.html">scores.coleman_liau</a></code><br />Readability Measures</li>
+            
+      <li>
+        <code><a href="scores.end_mark_by.html">scores.end_mark_by</a></code><br />Question Counts</li>
+            
+      <li>
+        <code><a href="scores.flesch_kincaid.html">scores.flesch_kincaid</a></code><br />Readability Measures</li>
+            
+      <li>
+        <code><a href="scores.formality.html">scores.formality</a></code><br />Formality</li>
+            
+      <li>
+        <code><a href="scores.fry.html">scores.fry</a></code><br />Readability Measures</li>
+            
+      <li>
+        <code><a href="scores.linsear_write.html">scores.linsear_write</a></code><br />Readability Measures</li>
+            
+      <li>
+        <code><a href="scores.object_pronoun_type.html">scores.object_pronoun_type</a></code><br />Question Counts</li>
+            
+      <li>
+        <code><a href="scores.polarity.html">scores.polarity</a></code><br />Polarity</li>
+            
+      <li>
+        <code><a href="scores.pos_by.html">scores.pos_by</a></code><br />Parts of Speech</li>
+            
+      <li>
+        <code><a href="scores.pronoun_type.html">scores.pronoun_type</a></code><br />Question Counts</li>
+            
+      <li>
+        <code><a href="scores.question_type.html">scores.question_type</a></code><br />Question Counts</li>
+            
+      <li>
+        <code><a href="scores.SMOG.html">scores.SMOG</a></code><br />Readability Measures</li>
+            
+      <li>
+        <code><a href="scores.subject_pronoun_type.html">scores.subject_pronoun_type</a></code><br />Question Counts</li>
+            
+      <li>
+        <code><a href="scores.termco.html">scores.termco</a></code><br />Term Counts</li>
+            
+      <li>
+        <code><a href="scores.word_stats.html">scores.word_stats</a></code><br />Word Stats</li>
+            
+      <li>
+        <code><a href="power.html">sentiment_frame</a></code><br />Power Score (Sentiment Analysis)</li>
+            
+      <li>
+        <code><a href="summary.wfdf.html">summary.wfdf</a></code><br />Summarize a wfdf object</li>
+            
+      <li>
+        <code><a href="summary.wfm.html">summary.wfm</a></code><br />Summarize a wfm object</li>
+            
+      <li>
+        <code><a href="t.DocumentTermMatrix.html">t.DocumentTermMatrix</a></code><br />Transposes a DocumentTermMatrix object</li>
+            
+      <li>
+        <code><a href="t.TermDocumentMatrix.html">t.TermDocumentMatrix</a></code><br />Transposes a TermDocumentMatrix object</li>
+            
+      <li>
+        <code><a href="Title.html">Title</a></code>(Title&lt;-)<br />Add Title to Select qdap Plots</li>
+            
+      <li>
+        <code><a href="unique_by.html">unique_by</a></code><br />Find Unique Words by Grouping Variable</li>
+            
+      <li>
+        <code><a href="visual.discourse_map.html">visual.discourse_map</a></code><br />Discourse Map</li>
+            
+      <li>
+        <code><a href="weight.html">weight</a></code><br />Weight a qdap Object</li>
+    
+    </ul>
   </div>
   
   <div class="span3 offset1">
@@ -1025,7 +1372,7 @@ For more see <a href="http://www.r-statistics.com/2012/08/how-to-load-the-rjava-
         
     <h2>Dependencies</h2>
     <ul>
-      <li><strong>Depends</strong>: ggplot2, qdapDictionaries, qdapTools, RColorBrewer</li>
+      <li><strong>Depends</strong>: ggplot2, qdapDictionaries, qdapRegex, qdapTools, RColorBrewer</li>
       <li><strong>Imports</strong>: chron, dplyr, gdata, grid, gridExtra, igraph, NLP, openNLP, parallel, plotrix, RCurl, reports, reshape2, scales, stringdist, tm, tools, venneuler, wordcloud, xlsx, XML</li>
       <li><strong>Suggests</strong>: koRpus, knitr, lda, proxy, stringi, SnowballC, testthat</li>
       <li><strong>Extends</strong>: </li>

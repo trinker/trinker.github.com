@@ -82,8 +82,6 @@ before counting. <code>termco</code> attempts to auto detect if digits
 should be retained based on the elements in <code>match.list</code>.</dd>
       <dt>zero.replace</dt>
       <dd>Value to replace 0 values with.</dd>
-      <dt>...</dt>
-      <dd>Other argument supplied to <code>strip</code>.</dd>
       <dt>match.string</dt>
       <dd>A vector of terms to search for.  When using inside of
 <code>term_match</code> the term(s) must be words or partial words but do not have
@@ -112,6 +110,8 @@ quotes if it's character.</dd>
       <dt>trim.terms</dt>
       <dd>logical.  If <code>TRUE</code> trims the column header/names to
 ensure there is not a problem with spacing when using in other R functions.</dd>
+      <dt>...</dt>
+      <dd>Other argument supplied to <code>strip</code>.</dd>
     </dl>
     
     <div class="Search For and Count Terms">
@@ -272,6 +272,55 @@ symbols or digits.  Using symbols, digits or small segments of full words
 # z &lt;- counts(termco(df$y, qdapTools::id(df), l))[, -2]
 # 
 # counts2list(z[, -1], z[, 1])
+# 
+# ## politness
+# politness &lt;- c(&quot;please&quot;, &quot;excuse me&quot;, &quot;thank you&quot;, &quot;you welcome&quot;,
+#     &quot;you&#39;re welcome&quot;, &quot;i&#39;m sorry&quot;, &quot;forgive me&quot;, &quot;pardon me&quot;)
+# 
+# with(pres_debates2012, termco(dialogue, person, politness))
+# with(hamlet, termco(dialogue, person, politness))
+# 
+# ## Term Use Percentage per N Words
+# dat &lt;- with(raj, chunker(dialogue, person, n.words = 100, rm.unequal = TRUE))
+# dat2 &lt;- list2df(dat, &quot;Dialogue&quot;, &quot;Person&quot;)
+# dat2[[&quot;Duration&quot;]] &lt;- unlist(lapply(dat, id, pad=FALSE))
+# dat2 &lt;- qdap_df(dat2, &quot;Dialogue&quot;)
+# 
+# Top5 &lt;- sapply(split(raj$dialogue, raj$person), wc, FALSE) %&gt;%
+#     sort(decreasing=TRUE) %&gt;%
+#     list2df(&quot;wordcount&quot;, &quot;person&quot;) %&gt;%
+#     `[`(1:5, 2)
+# 
+# propdat &lt;- dat2 %&amp;%
+#     termco(list(Person, Duration), as.list(Top25Words[1:5]), percent = FALSE) %&gt;%
+#     proportions %&gt;%
+#     colsplit2df %&gt;%
+#     reshape2::melt(id=c(&quot;Person&quot;, &quot;Duration&quot;, &quot;word.count&quot;), variable=&quot;Word&quot;) %&gt;%
+#     dplyr::filter(Person %in% Top5)
+# 
+# head(propdat)
+# 
+# ggplot(propdat, aes(y=value, x=Duration, group=Person, color=Person)) +
+#     geom_line(size=1.25) +
+#     facet_grid(Word~., scales=&quot;free_y&quot;) +
+#     ylab(&quot;Percent of Word Use&quot;)  +
+#     xlab(&quot;Per 100 Words&quot;) +
+#     scale_y_continuous(labels = percent)
+# 
+# ggplot(propdat, aes(y=value, x=Duration, group=Word, color=Word)) +
+#     geom_line(size=1.25) +
+#     facet_grid(Person~.) +
+#     ylab(&quot;Percent of Word Use&quot;)  +
+#     xlab(&quot;Per 100 Words&quot;) +
+#     scale_y_continuous(labels = percent)
+# 
+# ggplot(propdat, aes(y=value, x=Duration, group=Word)) +
+#     geom_line() +
+#     facet_grid(Word~Person, scales=&quot;free_y&quot;) +
+#     ylab(&quot;Percent of Word Use&quot;)  +
+#     xlab(&quot;Per 100 Words&quot;) +
+#     scale_y_continuous(labels = percent) +
+#     ggthemes::theme_few()
 # ## &lt;strong&gt;End(Not run)&lt;/strong&gt;
 </div></pre>
   </div>
