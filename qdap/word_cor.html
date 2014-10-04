@@ -132,13 +132,13 @@ Marwick; see <a href = 'http://stackoverflow.com/a/19925445/1000343'>http://stac
 # ## Throws multiple warning because small data set
 # library(qdapTools)
 # lapply(DATA3, function(x) {
-#     word_cor(x[, &quot;state&quot;], id(x), qcv(computer, i, no, good), r = NULL)
+#     word_cor(x[, &quot;state&quot;], qdapTools::id(x), qcv(computer, i, no, good), r = NULL)
 # })
 # 
 # ## Find words correlated per turn of talk by person
 # ## Throws multiple warning because small data set
 # lapply(DATA3, function(x) {
-#     word_cor(x[, &quot;state&quot;], id(x), qcv(computer, i, no, good))
+#     word_cor(x[, &quot;state&quot;], qdapTools::id(x), qcv(computer, i, no, good))
 # })
 # 
 # 
@@ -160,7 +160,7 @@ Marwick; see <a href = 'http://stackoverflow.com/a/19925445/1000343'>http://stac
 #     negative = qcv(no, dumb, distrust, not, stinks),
 #     literacy = qcv(computer, talking, telling)
 # )
-# y &lt;- wfdf(DATA$state, id(DATA, prefix = TRUE))
+# y &lt;- wfdf(DATA$state, qdapTools::id(DATA, prefix = TRUE))
 # z &lt;- wfm_combine(y, worlis)
 # 
 # out &lt;- word_cor(t(z), word = c(names(worlis), &quot;else.words&quot;), r = NULL)

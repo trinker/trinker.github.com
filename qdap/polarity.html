@@ -53,6 +53,11 @@ of 1 or more grouping variables.</dd>
       <dt>polarity.frame</dt>
       <dd>A dataframe or hash key of positive/negative words and
 weights.</dd>
+      <dt>constrain</dt>
+      <dd>logical.  If <code>TRUE</code> polarity values are constrained to
+be between -1 and 1 using the following transformation:
+
+<pre class = 'eq'>((1 - (1/(1 + exp(polarity)))) * 2) - 1</pre></dd>
       <dt>negators</dt>
       <dd>A character vector of terms reversing the intent of a
 positive or negative word.</dd>
@@ -82,11 +87,6 @@ the polarized word.</dd>
 incomplete sentence end mark (<code>|</code>) will be removed from the analysis.</dd>
       <dt>digits</dt>
       <dd>Integer; number of decimal places to round when printing.</dd>
-      <dt>constrain</dt>
-      <dd>logical.  If <code>TRUE</code> polarity values are constrained to
-be between -1 and 1 using the following transformation:
-
-<pre class = 'eq'>((1 - (1/(1 + exp(polarity)))) * 2) - 1</pre></dd>
       <dt>...</dt>
       <dd>Other arguments supplied to <code>strip</code>.</dd>
     </dl>
@@ -206,6 +206,8 @@ connotation (<strong>deixis</strong>).</p>
 reviews. National Conference on Artificial Intelligence.</p>
   
       <p><a href = 'http://www.slideshare.net/jeffreybreen/r-by-example-mining-twitter-for'>http://www.slideshare.net/jeffreybreen/r-by-example-mining-twitter-for</a></p>
+  
+      <p><a href = 'http://hedonometer.org/papers.html'>http://hedonometer.org/papers.html</a> Links to papers on hedonometrics</p>
   
     </div>
     
@@ -596,6 +598,8 @@ reviews. National Conference on Artificial Intelligence.</p>
 # 
 # #===============================#
 # ## CUMULATIVE POLARITY EXAMPLE ##
+# #===============================#
+# #        Hedonometrics          #
 # #===============================#
 # poldat4 &lt;- with(rajSPLIT, polarity(dialogue, act, constrain = TRUE))
 # 

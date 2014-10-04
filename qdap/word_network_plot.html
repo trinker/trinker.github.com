@@ -59,10 +59,6 @@ to <code>label.colors</code> (+1 length in cloud colors for non-matched terms).<
       <dt>label.cex</dt>
       <dd>The magnification to be used for network plot labels
 relative to the current setting of cex.  Default is .8.</dd>
-      <dt>log.labels</dt>
-      <dd>logical.  If <code>TRUE</code> uses a proportional log label for
-more readable labels.  The formula is: <code>log(SUMS)/max(log(SUMS)))</code>.
-<code>label.size</code> adds more control over the label sizes.</dd>
       <dt>label.size</dt>
       <dd>An optional sizing constant to add to labels if log.labels
 is <code>TRUE</code>.</dd>
@@ -95,6 +91,10 @@ means left or bottom alignment.</dd>
       <dt>title.cex</dt>
       <dd>Character expansion factor for the title. <code>NULL</code> and
 <code>NA</code> are equivalent to 1.0.</dd>
+      <dt>log.labels</dt>
+      <dd>logical.  If <code>TRUE</code> uses a proportional log label for
+more readable labels.  The formula is: <code>log(SUMS)/max(log(SUMS)))</code>.
+<code>label.size</code> adds more control over the label sizes.</dd>
       <dt>title.color</dt>
       <dd>A character vector of length one corresponding to the
 color of the title.</dd>

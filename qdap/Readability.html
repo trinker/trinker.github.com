@@ -58,8 +58,6 @@ or more grouping variables.</dd>
       <dt>rm.incomplete</dt>
       <dd>logical.  If <code>TRUE</code> removes incomplete sentences
 from the analysis.</dd>
-      <dt>...</dt>
-      <dd>Other arguments passed to <code>end_inc</code>.</dd>
       <dt>output</dt>
       <dd>A character vector character string indicating output type.
 One of "valid" (default and congruent with McLaughlin's intent) or "all".</dd>
@@ -74,6 +72,8 @@ Fry's original depiction, though this may make visualizing more difficult.</dd>
       <dt>plot</dt>
       <dd>logical.  If <code>TRUE</code> a graph is plotted corresponding to Fry's
 graphic representation.</dd>
+      <dt>...</dt>
+      <dd>Other arguments passed to <code>end_inc</code>.</dd>
     </dl>
     
     <div class="Readability Measures">
@@ -127,12 +127,27 @@ data the results may not be accurate.</p>
   
     </div>
 
+    <div class="Fry">
+      <h2>Fry</h2>
+      
+      <p>The <code>fry</code> function is based on Fry's formula that randomly
+samples 3 100 word length passages.  If a group(s) in does not contain 300+
+words they will not be included in the output.</p>
+  
+    </div>
+
     <div class="References">
       <h2>References</h2>
       
       <p>Coleman, M., & Liau, T. L. (1975). A computer readability formula
 designed for machine scoring. Journal of Applied Psychology, Vol. 60,
 pp. 283-284.</p>
+  
+      <p>Fry, E. B. (1968). A readability formula that saves time. Journal of Reading,
+11(7), 513-516, 575?578.</p>
+  
+      <p>Fry, E. B. (1969). The readability graph validated at primary levels. The Reading
+Teacher, 22(6), 534-538.</p>
   
       <p>Flesch R. (1948). A new readability yardstick. Journal of Applied Psychology.
 Vol. 32(3), pp. 221-233. doi: 10.1037/h0057532.</p>
@@ -143,7 +158,7 @@ Vol. 32(3), pp. 221-233. doi: 10.1037/h0057532.</p>
       <p>McLaughlin, G. H. (1969). SMOG Grading: A New Readability Formula.
 Journal of Reading, Vol. 12(8), pp. 639-646.</p>
   
-      <p>Senter, R. J., & Smith, E. A.. (1967) Automated readability index.
+      <p>Smith, E. A. & Senter, R. J. (1967) Automated readability index.
 Technical Report AMRLTR-66-220, University of Cincinnati, Cincinnati, Ohio.</p>
   
     </div>

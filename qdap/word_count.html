@@ -50,10 +50,6 @@
     <dl>
       <dt>text.var</dt>
       <dd>The text variable</dd>
-      <dt>grouping.var</dt>
-      <dd>The grouping variables.  Default <code>NULL</code> generates
-one word list for all text.  Also takes a single grouping variable or a list
-of 1 or more grouping variables.</dd>
       <dt>byrow</dt>
       <dd>logical.  If <code>TRUE</code> counts by row, if <code>FALSE</code> counts
 all words.</dd>
@@ -70,18 +66,22 @@ the counts.</dd>
 in the character count.</dd>
       <dt>count.space</dt>
       <dd>logical.  If <code>TRUE</code> spaces are counted as characters.</dd>
-      <dt>prop.by.row</dt>
-      <dd>logical.  If <code>TRUE</code> applies proportional to the row.
-If <code>FALSE</code> applies by column.</dd>
-      <dt>...</dt>
-      <dd>Other arguments passed to <code>prop</code>.</dd>
+      <dt>grouping.var</dt>
+      <dd>The grouping variables.  Default <code>NULL</code> generates
+one word list for all text.  Also takes a single grouping variable or a list
+of 1 or more grouping variables.</dd>
       <dt>percent</dt>
       <dd>logical.  If <code>TRUE</code> output given as percent.  If
 <code>FALSE</code> the output is proportion.</dd>
+      <dt>prop.by.row</dt>
+      <dd>logical.  If <code>TRUE</code> applies proportional to the row.
+If <code>FALSE</code> applies by column.</dd>
       <dt>zero.replace</dt>
       <dd>Value to replace 0 values with.</dd>
       <dt>digits</dt>
       <dd>Integer; number of decimal places to round when printing.</dd>
+      <dt>...</dt>
+      <dd>Other arguments passed to <code>prop</code>.</dd>
     </dl>
     
     <div class="Word Counts">
@@ -134,6 +134,11 @@ variable(s).</p>
 # word_count(DATA$state, names = TRUE)
 # word_count(DATA$state, byrow=FALSE, names = TRUE)
 # sum(word_count(DATA$state))
+# 
+# sapply(split(raj$dialogue, raj$person), wc, FALSE) %&gt;%
+#     sort(decreasing=TRUE) %&gt;%
+#     list2df(&quot;wordcount&quot;, &quot;person&quot;) %&gt;%
+#     `[`(, 2:1)
 # 
 # ## PLOT WORD COUNTS
 # raj2 &lt;- raj

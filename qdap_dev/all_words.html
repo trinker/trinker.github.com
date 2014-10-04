@@ -40,7 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre><div>all_words(text.var, begins.with&nbsp;=&nbsp;NULL, contains&nbsp;=&nbsp;NULL, alphabetical&nbsp;=&nbsp;TRUE, apostrophe.remove&nbsp;=&nbsp;FALSE, ...)</div></pre>
+    <pre><div>all_words(text.var, begins.with&nbsp;=&nbsp;NULL, contains&nbsp;=&nbsp;NULL, alphabetical&nbsp;=&nbsp;TRUE, apostrophe.remove&nbsp;=&nbsp;FALSE, char.keep&nbsp;=&nbsp;char2space, char2space&nbsp;=&nbsp;"~~", ...)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -58,6 +58,13 @@ Use this if searching for a word containing the word chunk.</dd>
       <dt>apostrophe.remove</dt>
       <dd>logical.  If <code>TRUE</code> removes apostrophes from
 the text before examining.</dd>
+      <dt>char.keep</dt>
+      <dd>A character vector of symbol character (i.e., punctuation)
+that strip should keep.  The default is to strip everything except
+apostrophes.  This enables the use of special characters to be turned into
+spaces or for characters to be retained.</dd>
+      <dt>char2space</dt>
+      <dd>A vector of characters to be turned into spaces.</dd>
       <dt>...</dt>
       <dd>Other argument supplied to <code>strip</code>.</dd>
     </dl>
@@ -110,6 +117,9 @@ frequency count for all words.</p>
 # 
 # ## Filter by nchar and stopwords
 # Filter(head(x3), min = 3)
+# 
+# ## Keep spaces
+# all_words(space_fill(DATA$state, c(&quot;are you&quot;, &quot;can be&quot;)))
 # ## &lt;strong&gt;End(Not run)&lt;/strong&gt;
 </div></pre>
   </div>

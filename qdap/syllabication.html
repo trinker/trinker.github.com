@@ -41,7 +41,7 @@
   <div class="span8">
     <h2>Usage</h2>
     <pre><div>syllable_sum(text.var, parallel&nbsp;=&nbsp;FALSE, ...)</div>
-<div>syllable_count(text, remove.bracketed&nbsp;=&nbsp;TRUE, algorithm.report&nbsp;=&nbsp;FALSE)</div>
+<div>syllable_count(text, remove.bracketed&nbsp;=&nbsp;TRUE, algorithm.report&nbsp;=&nbsp;FALSE, env&nbsp;=&nbsp;qdap::env.syl)</div>
 <div>polysyllable_sum(text.var, parallel&nbsp;=&nbsp;FALSE)</div>
 <div>combo_syllable_sum(text.var, parallel&nbsp;=&nbsp;FALSE)</div></pre>
     
@@ -53,8 +53,6 @@
       <dd>logical.  If <code>TRUE</code> attempts to run the function on
 multiple cores.  Note that this may not mean a speed boost if you have one
 core or if the data set is smaller as the cluster takes time to create.</dd>
-      <dt>...</dt>
-      <dd>Other arguments passed to <code>syllable_count</code>.</dd>
       <dt>text</dt>
       <dd>A single character vector of text.</dd>
       <dt>remove.bracketed</dt>
@@ -64,6 +62,11 @@ the analysis.</dd>
       <dd>logical.  If <code>TRUE</code> generates a report of words
 not found in the dictionary (i.e., syllables were calculated with an
 algorithm).</dd>
+      <dt>env</dt>
+      <dd>A lookup environment to lookup the number of syllables in found
+words.</dd>
+      <dt>...</dt>
+      <dd>Other arguments passed to <code>syllable_count</code>.</dd>
     </dl>
     
     <div class="Syllabication">

@@ -71,17 +71,16 @@ Matrix or Document Term Matrix</h1>
       <dd>The grouping variables.  Default <code>NULL</code> generates
 one word list for all text.  Also takes a single grouping variable or a list
 of 1 or more grouping variables.</dd>
-      <dt>...</dt>
-      <dd>If <code>as.tdm</code> or <code>as.dtm</code> - Other arguments passed to
-<code>wfm</code>.  If <code>apply_as_tm</code> - Other arguments passed to functions used
-on the tm package's <code>"TermDocumentMatrix"</code>.  If <code>as.data.frame</code> -
-Other arguments passed to <code>sentSplit</code>.  If
-<code>as.Corpus</code> - Other arguments passed to the tm package's
-<code><a href='http://www.inside-r.org/packages/cran/tm/docs/Corpus'>Corpus</a></code>.</dd>
       <dt>vowel.check</dt>
       <dd>logical.  Should terms without vowels be remove?</dd>
       <dt>x</dt>
       <dd>A <code><a href='http://www.inside-r.org/packages/cran/tm/docs/Corpus'>Corpus</a></code> object.</dd>
+      <dt>row.names</dt>
+      <dd><code>NULL</code> or a character vector giving the row names for
+the data frame. Not used in <span class = "pkg">qdap</span>; for base generic consistency.</dd>
+      <dt>optional</dt>
+      <dd>logical. If <code>TRUE</code>, setting row names and converting
+column names is optional. Not used in <span class = "pkg">qdap</span>; for base generic consistency.</dd>
       <dt>doc</dt>
       <dd>Name for <code><a href='http://www.inside-r.org/packages/cran/tm/docs/Corpus'>Corpus</a></code> documents.</dd>
       <dt>text</dt>
@@ -89,12 +88,6 @@ Other arguments passed to <code>sentSplit</code>.  If
       <dt>sent.split</dt>
       <dd>logical.  If <code>TRUE</code> the text variable sentences will
 be split into individual rows.</dd>
-      <dt>row.names</dt>
-      <dd><code>NULL</code> or a character vector giving the row names for
-the data frame. Not used in <span class = "pkg">qdap</span>; for base generic consistency.</dd>
-      <dt>optional</dt>
-      <dd>logical. If <code>TRUE</code>, setting row names and converting
-column names is optional. Not used in <span class = "pkg">qdap</span>; for base generic consistency.</dd>
       <dt>demographic.vars</dt>
       <dd>Additional demographic information about the grouping
 variables.  This is a data.frame, list of equal length vectors, or a single
@@ -128,6 +121,19 @@ characters.</dd>
       <dt>ignore.case</dt>
       <dd>logical.  If <code>TRUE</code> stop words will be removed
 regardless of case.</dd>
+      <dt>...</dt>
+      <dd>Function dependant:
+<ul>
+<li> <b>as.tdm</b> or <b>as.dtm</b> - Other arguments passed to <code>wfm</code>
+  </li>
+<li> <b>apply_as_tm</b> - Other arguments passed to functions used on a <span class = "pkg">tm</span> <code>TermDocumentMatrix</code>
+  </li>
+<li> <b>as.data.frame</b> - Other arguments passed to <code>sentSplit</code>
+  </li>
+<li> <b>as.Corpus</b> - Other arguments passed to <span class = "pkg">tm</span>'s <code><a href='http://www.inside-r.org/packages/cran/tm/docs/Corpus'>Corpus</a></code>
+</li>
+</ul>
+</dd>
     </dl>
     
     <div class="tm Package Compatibility Tools: Apply to or Convert to/from Term Document

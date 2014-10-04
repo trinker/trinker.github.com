@@ -62,11 +62,6 @@ the global environment in addition to the individual dataframes.</dd>
       <dd>where to do the removal. By default, uses the current environment.</dd>
       <dt>envir</dt>
       <dd>the environment to use.</dd>
-      <dt>...</dt>
-      <dd>data.frame object(s) to write to a file or a list of data.frame
-objects.  If the objects in a list are unnamed V + digit will be assigned.
-Lists of dataframes (e.g., the output from <code>termco</code> or
-<code>polarity</code>) can be passed as well.</dd>
       <dt>dir</dt>
       <dd>optional directory names.  If <code>NULL</code> a directory will be
 created in the working directory with the data and time stamp as the folder
@@ -78,6 +73,11 @@ name.</dd>
       <dt>dataframes</dt>
       <dd>An optional character vector of dataframes in lieu of ...
 argument.</dd>
+      <dt>...</dt>
+      <dd>data.frame object(s) to write to a file or a list of data.frame
+objects.  If the objects in a list are unnamed V + digit will be assigned.
+Lists of dataframes (e.g., the output from <code>termco</code> or
+<code>polarity</code>) can be passed as well.</dd>
     </dl>
     
     <div class="Read/Write Multiple csv Files at a Time">
