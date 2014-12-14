@@ -1,4 +1,4 @@
-The [Lexical Content Classification Rate](http://trinker.github.io/qdap_examples/animation_lexical_classification) was generated via:
+The [Animated Lexical Classification (Network + Text + Bar Plots): Romeo and Juliet Act 1](http://trinker.github.io/qdap_examples/animation_lexical_classification)  was generated via:
 
 ```
 library(animation)
