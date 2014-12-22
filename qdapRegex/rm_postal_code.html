@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>rm_city_state. qdapRegex 0.2.0</title>
+<title>rm_postal_code. qdapRegex 0.2.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -35,12 +35,12 @@
         
       </header>
       
-      <h1>Remove/Replace/Extract City & State</h1>
+      <h1>Remove/Replace/Extract Postal Codes</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre><div>rm_city_state(text.var, trim&nbsp;=&nbsp;!extract, clean&nbsp;=&nbsp;TRUE, pattern&nbsp;=&nbsp;"@rm_city_state", replacement&nbsp;=&nbsp;"", extract&nbsp;=&nbsp;FALSE, dictionary&nbsp;=&nbsp;getOption("regex.library"), ...)</div></pre>
+    <pre><div>rm_postal_code(text.var, trim&nbsp;=&nbsp;!extract, clean&nbsp;=&nbsp;TRUE, pattern&nbsp;=&nbsp;"@rm_postal_code", replacement&nbsp;=&nbsp;"", extract&nbsp;=&nbsp;FALSE, dictionary&nbsp;=&nbsp;getOption("regex.library"), ...)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -55,8 +55,8 @@ character will be removed.</dd>
       <dt>pattern</dt>
       <dd>A character string containing a regular expression (or
 character string for <code>fixed = TRUE</code>) to be matched in the given
-character vector.  Default, <code>@rm_city_state</code> uses the
-<code>rm_city_state</code> regex from the regular expression dictionary from
+character vector.  Default, <code>@rm_postal_code</code> uses the
+<code>rm_postal_code</code> regex from the regular expression dictionary from
 the <code>dictionary</code> argument.</dd>
       <dt>replacement</dt>
       <dd>Replacement for matched <code>pattern</code>.</dd>
@@ -70,48 +70,50 @@ if <code>pattern</code> begins with <code>"@rm_"</code>.</dd>
       <dd>Other arguments passed to <code><a href='http://www.inside-r.org/packages/cran/base/docs/grep'>gsub</a></code>.</dd>
     </dl>
     
-    <div class="Remove/Replace/Extract City &amp; State">
-      <h2>Remove/Replace/Extract City &amp; State</h2>
+    <div class="Remove/Replace/Extract Postal Codes">
+      <h2>Remove/Replace/Extract Postal Codes</h2>
       
     </div>
 
     <div class="Value">
       <h2>Value</h2>
       
-      <p>Returns a character string with city & state removed.</p>
+      <p>Returns a character string with postal codes removed.</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Remove/replace/extract city (single lower case word or multiple consecutive
-capitalized words before a comma and state) & state (2 consecutive capital
-letters) from a string.</p>
+      <p>Remove/replace/extract postal codes.</p>
   
     </div>
     
     <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>x &lt;- paste0(&quot;I went to Washington Heights, NY for food! &quot;,
-   &quot;It&#39;s in West ven,PA, near Bolly Bolly Bolly, CA!&quot;,
-   &quot;I like Movies, PG13&quot;)
-rm_city_state(x)
+    <pre class="examples"><div class='input'>x &lt;- c(&quot;Anchorage, AK&quot;, &quot;New York City, NY&quot;, &quot;Some Place, Another Place, LA&quot;)
+rm_postal_code(x)
 </div>
-<div class='output'>[1] &quot;I went to for food! It&#39;s in West , near !I like Movies, PG13&quot;
+<div class='output'>[1] &quot;Anchorage,&quot;                 &quot;New York City,&quot;             &quot;Some Place, Another Place,&quot;
 </div>
-<div class='input'>rm_city_state(x, extract=TRUE)
+<div class='input'>rm_postal_code(x, extract=TRUE)
 </div>
 <div class='output'>[[1]]
-[1] &quot;Washington Heights, NY&quot; &quot;ven,PA&quot;                 &quot;Bolly Bolly Bolly, CA&quot; 
+[1] &quot;AK&quot;
+
+[[2]]
+[1] &quot;NY&quot;
+
+[[3]]
+[1] &quot;LA&quot;
 
 </div></pre>
   </div>
   <div class="span4">
     <!-- <ul>
-      <li>rm_city_state</li>
+      <li>rm_postal_code</li>
     </ul>
     <ul>
-      <li>date</li>
+      <li>postal,</li><li>postalcodes,</li><li>state</li>
     </ul> -->
       
     <h2>See also</h2>
