@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>dm_revision. discmark 0.0.2</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">discmark 0.0.2</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Extract Revision Discourse Markers in Context</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><div>dm_revision(text.var, grouping.var&nbsp;=&nbsp;NULL, n.before&nbsp;=&nbsp;1, tot&nbsp;=&nbsp;FALSE, n.after&nbsp;=&nbsp;n.before, ord.inds&nbsp;=&nbsp;TRUE, markup&nbsp;=&nbsp;c("<<", ">>"), name&nbsp;=&nbsp;"revision", ...)</div></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>text.var</dt>
+      <dd>The text variable.</dd>
+      <dt>grouping.var</dt>
+      <dd>The grouping variables.  Also takes a single
+grouping variable or a list of 1 or more grouping variables.</dd>
+      <dt>n.before</dt>
+      <dd>The number of rows before the indexed occurrence.</dd>
+      <dt>tot</dt>
+      <dd>logical.  If <code>TRUE</code> condenses sub-units (e.g., sentences)
+into turns of talk for that <code>grouping.var</code>.</dd>
+      <dt>n.after</dt>
+      <dd>The number of rows after the indexed occurrence.</dd>
+      <dt>ord.inds</dt>
+      <dd>logical.  If <code>TRUE</code> inds is ordered least to greatest.</dd>
+      <dt>markup</dt>
+      <dd>A character vector of length two indicating the left (element
+1) and right (element 2) boundary markers to use to highlight the revision
+discourse markers.  Use <code>c("", "")</code> to not mark the revision discourse
+markers.</dd>
+      <dt>name</dt>
+      <dd>A string indicating the name to search for within the internal
+data sets, typically the function's name.  Generally, for internal use.</dd>
+      <dt>inds</dt>
+      <dd>A list of integer indices to print context for.</dd>
+      <dt>...</dt>
+      <dd>Other arguments passed to <code><a href='http://www.inside-r.org/packages/cran/qdap/docs/termco'>termco</a></code>.</dd>
+    </dl>
+    
+    <div class="Extract Revision Discourse Markers in Context">
+      <h2>Extract Revision Discourse Markers in Context</h2>
+      
+    </div>
+
+    <div class="Extract Revision Discourse Markers in Context">
+      <h2>Extract Revision Discourse Markers in Context</h2>
+      
+    </div>
+
+    <div class="Value">
+      <h2>Value</h2>
+      
+      <p><code>dm_revision</code> - Returns returns a list of 2:
+countsA <code><a href='http://www.inside-r.org/packages/cran/qdap/docs/termco'>termco</a></code> object of revision discourse marker counts.
+revisionA <code><a href='http://www.inside-r.org/packages/cran/qdap/docs/trans_context'>trans_context</a></code> object of revision discourse markers in context.</p>
+  
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p><code>dm_revision</code> - Extract revision discourse markers in context.</p>
+  
+    </div>
+
+    <div class="References">
+      <h2>References</h2>
+      
+      <p>Halliday, M. A. K. & Hasan, R. (1976). <em>Cohesion in English</em>.
+English Language Series. London: Longman.</p>
+  
+      <p>Alemany, L. A. (2005). Representing discourse for automatic text summarization via shallow NLP techniques (Unpublished doctoral dissertation). Universitat de Barcelona, Barcelona.</p>
+  
+      <p>Schiffrin, D. (1987). Discourse markers. London: Cambridge University Press.</p>
+  
+      <p><a href = 'http://russell.famaf.unc.edu.ar/~laura/shallowdisc4summ/discmar'>http://russell.famaf.unc.edu.ar/~laura/shallowdisc4summ/discmar</a></p>
+  
+    </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>with(pres_debates2012[1:200, ], dm_revision(dialogue, person))
+</div>
+<div class='output'>$counts
+  LEHRER word.count revision
+1  OBAMA        943  8(.85%)
+2 ROMNEY       1349  8(.59%)
+3 LEHRER        316  2(.63%)
+
+$revision
+</div>
+<strong class='message'>===================================
+Event 1: [lines 19-21]
+
+    ROMNEY: The other thing we have to do to save Medicare?
+
+ ** ROMNEY: We have to have the benefits high for those that are low
+            income, but for higher income people, we&#39;re going to have
+            to lower some of the benefits.
+
+    ROMNEY: We have to make sure this program is there for the long
+            term. 
+
+===================================
+Event 2: [lines 22-24]
+
+    ROMNEY: That&#39;s the plan that I&#39;ve put forward.
+
+ ** ROMNEY: And, by the way the idea came not even from Paul Ryan or
+            or Senator Wyden, who&#39;s the co author of the bill with
+            with Paul Ryan in the Senate, but also it came from Bill
+            Bill Clinton&#39;s chief of staff.
+
+    ROMNEY: This is an idea that&#39;s been around a long time, which is
+            saying, hey, let&#39;s see if we can&#39;t get competition into
+            the Medicare world so that people can get the choice of
+            different plans at lower cost, better quality. 
+
+===================================
+Event 3: [lines 38-40]
+
+    LEHRER: Talk about that in a minute.
+
+ ** OBAMA:  but but but overall.
+
+    LEHRER: OK. 
+
+===================================
+Event 4: [lines 109-111]
+
+    OBAMA:  You had credit agencies that were stamping these as Aone
+            great investments when they weren&#39;t.
+
+ ** OBAMA:  But you also had banks making money hand over fist,
+            churning out products that the bankers themselves didn&#39;t
+            even understand, in order to make big profits, but
+            knowing that it made the entire system vulnerable.
+
+    OBAMA:  So what did we do? 
+
+===================================
+Event 5: [lines 122-124]
+
+    OBAMA:  But that&#39;s not what I believe.
+
+ ** ROMNEY: Sorry, but that&#39;s just not that&#39;s just not the facts.
+
+    ROMNEY: Look, we have to have regulation on Wall Street. 
+
+===================================
+Event 6: [lines 134-136]
+
+    ROMNEY: It&#39;s one of the reasons for the great financial calamity
+            we had.
+
+ ** ROMNEY: And so Dodd Frank correctly says we need to have
+            qualified mortgages, and if you give a mortgage that&#39;s
+            not qualified, there are big penalties, except they
+            didn&#39;t ever go on and define what a qualified mortgage
+            was.
+
+    ROMNEY: It&#39;s been two years. 
+
+===================================
+Event 7: [lines 178-180]
+
+    OBAMA:  And it wasn&#39;t just that small businesses were seeing
+            costs skyrocket and they couldn&#39;t get affordable coverage
+            even if they wanted to provide it to their employees.
+
+ ** OBAMA:  It wasn&#39;t just that this was the biggest driver of our
+            federal deficit, our overall health care costs, but it
+            was families who were worried about going bankrupt if
+            they got sick, millions of families, all across the
+            country.
+
+    OBAMA:  If they had a pre existing condition, they might not be
+            able to get coverage at all. 
+</strong>
+<div class='output'>
+</div></pre>
+  </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>dm_revision</li>
+    </ul>
+    <ul>
+      <li>revision</li>
+    </ul> -->
+      
+    <h2>See also</h2>
+    
+<code><a href='http://www.inside-r.org/packages/cran/qdap/docs/termco'>termco</a></code>,
+<code><a href='http://www.inside-r.org/packages/cran/qdap/docs/trans_context'>trans_context</a></code>
+
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>
