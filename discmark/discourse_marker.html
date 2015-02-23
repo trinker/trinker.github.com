@@ -2,11 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<<<<<<< HEAD
 <title>discourse_marker. discmark 0.0.3</title>
-=======
-<title>discourse_marker. discmark 0.0.2</title>
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -24,11 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-<<<<<<< HEAD
       <a class="brand" href="#">discmark 0.0.3</a>
-=======
-      <a class="brand" href="#">discmark 0.0.2</a>
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -48,11 +40,7 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-<<<<<<< HEAD
     <pre><div>discourse_marker(text.var, grouping.var, n.before&nbsp;=&nbsp;1, tot&nbsp;=&nbsp;FALSE, n.after&nbsp;=&nbsp;n.before, ord.inds&nbsp;=&nbsp;TRUE, markup&nbsp;=&nbsp;c("<<", ">>"), name&nbsp;=&nbsp;NULL, ...)</div></pre>
-=======
-    <pre><div>discourse_marker(text.var, grouping.var&nbsp;=&nbsp;NULL, n.before&nbsp;=&nbsp;1, tot&nbsp;=&nbsp;FALSE, n.after&nbsp;=&nbsp;n.before, ord.inds&nbsp;=&nbsp;TRUE, markup&nbsp;=&nbsp;c("<<", ">>"), name&nbsp;=&nbsp;NULL, ...)</div></pre>
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
     
     <h2>Arguments</h2>
     <dl>
@@ -100,11 +88,7 @@ data sets, typically the function's name.  Generally, for internal use.</dd>
       <p>Returns returns a list of 2-3:
 countsA <code><a href='http://www.inside-r.org/packages/cran/qdap/docs/termco'>termco</a></code> object of discourse marker counts.
 Context 1A <code><a href='http://www.inside-r.org/packages/cran/qdap/docs/trans_context'>trans_context</a></code> object of the discourse markers in context.  Note the name of this object is supplied by <code>names</code> element one.
-<<<<<<< HEAD
 Context 2...nAn optional (not returned if <code>regex</code> is of length one) <code><a href='http://www.inside-r.org/packages/cran/qdap/docs/trans_context'>trans_context</a></code> object of the discourse markers in context.  Note the name of this (these) object(s) is supplied by <code>names</code> element 2...n.</p>
-=======
-Context 2An optional (not returned if <code>regex</code> is of length one) <code><a href='http://www.inside-r.org/packages/cran/qdap/docs/trans_context'>trans_context</a></code> object of the discourse markers in context.  Note the name of this object is supplied by <code>names</code> element two.</p>
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
   
     </div>
 
@@ -129,7 +113,6 @@ London: Cambridge University Press.</p>
 out1 &lt;- with(pres_debates2012[1:200, ], discourse_marker(dialogue, person,
     names = c(&quot;I&quot;),
     regex = &quot;\\bI(&#39;[a-z]+)*\\b&quot;,
-<<<<<<< HEAD
     terms = list(I = c(&quot; I &quot;, &quot; I&#39;&quot;))
 ))
 
@@ -143,21 +126,6 @@ out1[[1]]
 <div class='input'>out1[[2]]
 </div>
 <div class='output'>===================================
-=======
-    terms = list(I = c(&quot; I &quot;, &quot; I&#39;&quot;)),
-    markup.regex = &quot;\\b(I(&#39;[a-z]+)*)\\b&quot;
-))
-out1[[1]]
-</div>
-<div class='output'>  grouping.var word.count         I
-1        OBAMA        943 12(1.27%)
-2       ROMNEY       1349 31(2.30%)
-3       LEHRER        316  4(1.27%)
-</div>
-<div class='input'>out1[[2]]
-</div>
-<strong class='message'>===================================
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 Event 1: [lines 2-4]
 
     LEHRER: But what do you support the voucher system, Governor?
@@ -167,11 +135,7 @@ Event 1: [lines 2-4]
 
     ROMNEY: And the president supports taking dollar seven hundred
             sixteen billion out of that program. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 2: [lines 6-8]
 
@@ -183,11 +147,7 @@ Event 2: [lines 6-8]
             current Medicare program or a private plan.
 
     ROMNEY: Their choice. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 3: [lines 13-15]
 
@@ -200,7 +160,6 @@ Event 3: [lines 13-15]
  ** ROMNEY: &lt;&lt;I&gt;&gt; know my own view is &lt;&lt;I&#39;d&gt;&gt; rather have a private
             plan.
 
-<<<<<<< HEAD
     ROMNEY: I&#39;d just assume not have the government telling me what
             kind of health care I get. 
  
@@ -208,21 +167,10 @@ Event 3: [lines 13-15]
 Event 4: [lines 14-16]
 
     ROMNEY: I know my own view is I&#39;d rather have a private plan.
-=======
-    ROMNEY: &lt;&lt;I&#39;d&gt;&gt; just assume not have the government telling me
-            what kind of health care &lt;&lt;I&gt;&gt; get. 
-
-===================================
-Event 4: [lines 14-16]
-
-    ROMNEY: &lt;&lt;I&gt;&gt; know my own view is &lt;&lt;I&#39;d&gt;&gt; rather have a private
-            plan.
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
  ** ROMNEY: &lt;&lt;I&#39;d&gt;&gt; just assume not have the government telling me
             what kind of health care &lt;&lt;I&gt;&gt; get.
 
-<<<<<<< HEAD
     ROMNEY: I&#39;d rather be able to have an insurance company. 
  
 ===================================
@@ -240,35 +188,12 @@ Event 5: [lines 15-17]
 Event 6: [lines 16-18]
 
     ROMNEY: I&#39;d rather be able to have an insurance company.
-=======
-    ROMNEY: &lt;&lt;I&#39;d&gt;&gt; rather be able to have an insurance company. 
-
-===================================
-Event 5: [lines 15-17]
-
-    ROMNEY: &lt;&lt;I&#39;d&gt;&gt; just assume not have the government telling me
-            what kind of health care &lt;&lt;I&gt;&gt; get.
-
- ** ROMNEY: &lt;&lt;I&#39;d&gt;&gt; rather be able to have an insurance company.
-
-    ROMNEY: If &lt;&lt;I&gt;&gt; don&#39;t like them, &lt;&lt;I&gt;&gt; can get rid of them and
-            find a different insurance company. 
-
-===================================
-Event 6: [lines 16-18]
-
-    ROMNEY: &lt;&lt;I&#39;d&gt;&gt; rather be able to have an insurance company.
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
  ** ROMNEY: If &lt;&lt;I&gt;&gt; don&#39;t like them, &lt;&lt;I&gt;&gt; can get rid of them and
             find a different insurance company.
 
     ROMNEY: But people make their own choice. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 7: [lines 21-23]
 
@@ -281,11 +206,7 @@ Event 7: [lines 21-23]
             or Senator Wyden, who&#39;s the co author of the bill with
             with Paul Ryan in the Senate, but also it came from Bill
             Bill Clinton&#39;s chief of staff. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 8: [lines 24-26]
 
@@ -296,7 +217,6 @@ Event 8: [lines 24-26]
 
  ** ROMNEY: &lt;&lt;I&gt;&gt; believe in competition.
 
-<<<<<<< HEAD
     OBAMA:  Jim, if I if I can just respond very quickly, first of
             all, every study has shown that Medicare has lower
             administrative costs than private insurance does, which
@@ -306,17 +226,6 @@ Event 8: [lines 24-26]
 Event 9: [lines 25-27]
 
     ROMNEY: I believe in competition.
-=======
-    OBAMA:  Jim, if &lt;&lt;I&gt;&gt; if &lt;&lt;I&gt;&gt; can just respond very quickly,
-            first of all, every study has shown that Medicare has
-            lower administrative costs than private insurance does,
-            which is why seniors are generally pretty happy with it. 
-
-===================================
-Event 9: [lines 25-27]
-
-    ROMNEY: &lt;&lt;I&gt;&gt; believe in competition.
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
  ** OBAMA:  Jim, if &lt;&lt;I&gt;&gt; if &lt;&lt;I&gt;&gt; can just respond very quickly,
             first of all, every study has shown that Medicare has
@@ -324,11 +233,7 @@ Event 9: [lines 25-27]
             which is why seniors are generally pretty happy with it.
 
     OBAMA:  And private insurers have to make a profit. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 10: [lines 35-37]
 
@@ -339,11 +244,7 @@ Event 10: [lines 35-37]
 
     OBAMA:  We do have to lower the cost of health care, not just in
             Medicare and Medicaid| 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 11: [lines 44-46]
 
@@ -351,7 +252,6 @@ Event 11: [lines 44-46]
 
  ** LEHRER: Yeah, we&#39;re going to yeah, &lt;&lt;I&gt;&gt; want to get to it.
 
-<<<<<<< HEAD
     OBAMA:  I&#39;m sorry. 
  
 ===================================
@@ -367,32 +267,11 @@ Event 12: [lines 45-47]
 Event 13: [lines 46-48]
 
     OBAMA:  I&#39;m sorry.
-=======
-    OBAMA:  &lt;&lt;I&#39;m&gt;&gt; sorry. 
-
-===================================
-Event 12: [lines 45-47]
-
-    LEHRER: Yeah, we&#39;re going to yeah, &lt;&lt;I&gt;&gt; want to get to it.
-
- ** OBAMA:  &lt;&lt;I&#39;m&gt;&gt; sorry.
-
-    LEHRER: But all &lt;&lt;I&gt;&gt; want to do is go very quickly| 
-
-===================================
-Event 13: [lines 46-48]
-
-    OBAMA:  &lt;&lt;I&#39;m&gt;&gt; sorry.
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
  ** LEHRER: But all &lt;&lt;I&gt;&gt; want to do is go very quickly|
 
     ROMNEY: Let&#39;s get back to Medicare. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 14: [lines 70-72]
 
@@ -402,7 +281,6 @@ Event 14: [lines 70-72]
  ** ROMNEY: As a businessperson, &lt;&lt;I&gt;&gt; had to have &lt;&lt;I&gt;&gt; need to know
             the regulations.
 
-<<<<<<< HEAD
     ROMNEY: I needed them there. 
  
 ===================================
@@ -410,25 +288,12 @@ Event 15: [lines 71-73]
 
     ROMNEY: As a businessperson, I had to have I need to know the
             regulations.
-=======
-    ROMNEY: &lt;&lt;I&gt;&gt; needed them there. 
-
-===================================
-Event 15: [lines 71-73]
-
-    ROMNEY: As a businessperson, &lt;&lt;I&gt;&gt; had to have &lt;&lt;I&gt;&gt; need to know
-            the regulations.
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
  ** ROMNEY: &lt;&lt;I&gt;&gt; needed them there.
 
     ROMNEY: You couldn&#39;t have people opening up banks in their in
             their garage and making loans. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 16: [lines 73-75]
 
@@ -439,11 +304,7 @@ Event 16: [lines 73-75]
             have an economy work.
 
     ROMNEY: Every free economy has good regulation. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 17: [lines 84-86]
 
@@ -456,11 +317,7 @@ Event 17: [lines 84-86]
     ROMNEY: One is it designates a number of banks as too big to
             fail, and they&#39;re effectively guaranteed by the federal
             government. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 18: [lines 86-88]
 
@@ -472,11 +329,7 @@ Event 18: [lines 86-88]
             banks &lt;&lt;I&#39;ve&gt;&gt; ever seen.
 
     ROMNEY: This is an enormous boon for them. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 19: [lines 93-95]
 
@@ -485,11 +338,7 @@ Event 19: [lines 93-95]
  ** ROMNEY: Well, &lt;&lt;I&gt;&gt; would repeal and replace it.
 
     ROMNEY: We&#39;re not going to get rid of all regulation. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 20: [lines 103-105]
 
@@ -501,11 +350,7 @@ Event 20: [lines 103-105]
     OBAMA:  The reason we have been in such a enormous economic
             crisis was prompted by reckless behavior across the
             board. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 21: [lines 117-119]
 
@@ -518,11 +363,7 @@ Event 21: [lines 117-119]
 
     OBAMA:  But in the past, Governor Romney has said he just want to
             repeal Dodd Frank, roll it back. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 22: [lines 121-123]
 
@@ -532,11 +373,7 @@ Event 22: [lines 121-123]
  ** OBAMA:  But that&#39;s not what &lt;&lt;I&gt;&gt; believe.
 
     ROMNEY: Sorry, but that&#39;s just not that&#39;s just not the facts. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 23: [lines 124-126]
 
@@ -544,7 +381,6 @@ Event 23: [lines 124-126]
 
  ** ROMNEY: That&#39;s why &lt;&lt;I&#39;d&gt;&gt; have regulation.
 
-<<<<<<< HEAD
     ROMNEY: But I wouldn&#39;t designate five banks as too big to fail
             and give them a blank check. 
  
@@ -552,25 +388,12 @@ Event 23: [lines 124-126]
 Event 24: [lines 125-127]
 
     ROMNEY: That&#39;s why I&#39;d have regulation.
-=======
-    ROMNEY: But &lt;&lt;I&gt;&gt; wouldn&#39;t designate five banks as too big to
-            fail and give them a blank check. 
-
-===================================
-Event 24: [lines 125-127]
-
-    ROMNEY: That&#39;s why &lt;&lt;I&#39;d&gt;&gt; have regulation.
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
  ** ROMNEY: But &lt;&lt;I&gt;&gt; wouldn&#39;t designate five banks as too big to
             fail and give them a blank check.
 
     ROMNEY: That&#39;s one of the unintended consequences of Dodd Frank. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 25: [lines 142-144]
 
@@ -581,11 +404,7 @@ Event 25: [lines 142-144]
             to bring back housing and get good jobs.
 
     LEHRER: All right. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 26: [lines 144-146]
 
@@ -594,7 +413,6 @@ Event 26: [lines 144-146]
  ** LEHRER: &lt;&lt;I&gt;&gt; think we have another clear difference between the
             two of you.
 
-<<<<<<< HEAD
     LEHRER: Now, let&#39;s move to health care where I know there is a
             clear difference, and that has to do with the Affordable
             Care Act, Obamacare. 
@@ -604,17 +422,6 @@ Event 27: [lines 145-147]
 
     LEHRER: I think we have another clear difference between the two
             of you.
-=======
-    LEHRER: Now, let&#39;s move to health care where &lt;&lt;I&gt;&gt; know there is
-            a clear difference, and that has to do with the
-            Affordable Care Act, Obamacare. 
-
-===================================
-Event 27: [lines 145-147]
-
-    LEHRER: &lt;&lt;I&gt;&gt; think we have another clear difference between the
-            two of you.
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
  ** LEHRER: Now, let&#39;s move to health care where &lt;&lt;I&gt;&gt; know there is
             a clear difference, and that has to do with the
@@ -622,11 +429,7 @@ Event 27: [lines 145-147]
 
     LEHRER: And it&#39;s a two minute new new segment, and that means two
             minutes each. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 28: [lines 151-153]
 
@@ -635,11 +438,7 @@ Event 28: [lines 151-153]
  ** ROMNEY: &lt;&lt;I&gt;&gt; sure do.
 
     ROMNEY: Well, in part, it comes, again, from my experience. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 29: [lines 153-155]
 
@@ -647,7 +446,6 @@ Event 29: [lines 153-155]
 
  ** ROMNEY: You know, &lt;&lt;I&gt;&gt; was in New Hampshire.
 
-<<<<<<< HEAD
     ROMNEY: A woman came to me and she said, look, I can&#39;t afford
             insurance for myself or my son. 
  
@@ -655,20 +453,10 @@ Event 29: [lines 153-155]
 Event 30: [lines 154-156]
 
     ROMNEY: You know, I was in New Hampshire.
-=======
-    ROMNEY: A woman came to me and she said, look, &lt;&lt;I&gt;&gt; can&#39;t afford
-            insurance for myself or my son. 
-
-===================================
-Event 30: [lines 154-156]
-
-    ROMNEY: You know, &lt;&lt;I&gt;&gt; was in New Hampshire.
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
  ** ROMNEY: A woman came to me and she said, look, &lt;&lt;I&gt;&gt; can&#39;t afford
             insurance for myself or my son.
 
-<<<<<<< HEAD
     ROMNEY: I met a couple in Appleton, Wisconsin, and they said,
             we&#39;re thinking of dropping our insurance, we can&#39;t afford
             it. 
@@ -677,23 +465,12 @@ Event 30: [lines 154-156]
 Event 31: [lines 155-157]
 
     ROMNEY: A woman came to me and she said, look, I can&#39;t afford
-=======
-    ROMNEY: &lt;&lt;I&gt;&gt; met a couple in Appleton, Wisconsin, and they said,
-            we&#39;re thinking of dropping our insurance, we can&#39;t afford
-            it. 
-
-===================================
-Event 31: [lines 155-157]
-
-    ROMNEY: A woman came to me and she said, look, &lt;&lt;I&gt;&gt; can&#39;t afford
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
             insurance for myself or my son.
 
  ** ROMNEY: &lt;&lt;I&gt;&gt; met a couple in Appleton, Wisconsin, and they said,
             we&#39;re thinking of dropping our insurance, we can&#39;t afford
             it.
 
-<<<<<<< HEAD
     ROMNEY: And the number of small businesses I&#39;ve gone to that are
             saying they&#39;re dropping insurance because they can&#39;t
             afford it, the cost of health care is just prohibitive. 
@@ -702,16 +479,6 @@ Event 31: [lines 155-157]
 Event 32: [lines 156-158]
 
     ROMNEY: I met a couple in Appleton, Wisconsin, and they said,
-=======
-    ROMNEY: And the number of small businesses &lt;&lt;I&#39;ve&gt;&gt; gone to that
-            are saying they&#39;re dropping insurance because they can&#39;t
-            afford it, the cost of health care is just prohibitive. 
-
-===================================
-Event 32: [lines 156-158]
-
-    ROMNEY: &lt;&lt;I&gt;&gt; met a couple in Appleton, Wisconsin, and they said,
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
             we&#39;re thinking of dropping our insurance, we can&#39;t afford
             it.
 
@@ -720,11 +487,7 @@ Event 32: [lines 156-158]
             afford it, the cost of health care is just prohibitive.
 
     ROMNEY: And and we&#39;ve got to deal with cost. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 33: [lines 164-166]
 
@@ -734,11 +497,7 @@ Event 33: [lines 164-166]
 
     ROMNEY: Second reason, it cuts dollar seven hundred sixteen
             billion from Medicare to pay for it. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 34: [lines 166-168]
 
@@ -751,11 +510,7 @@ Event 34: [lines 166-168]
     ROMNEY: Number three, it puts in place an unelected board that&#39;s
             going to tell people ultimately what kind of treatments
             they can have. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 35: [lines 168-170]
 
@@ -768,11 +523,7 @@ Event 35: [lines 168-170]
     ROMNEY: Fourth, there was a survey done of small businesses
             across the country, said, what&#39;s been the effect of
             Obamacare on your hiring plans? 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 36: [lines 171-173]
 
@@ -787,11 +538,7 @@ Event 36: [lines 171-173]
             jobs for the American people.
 
     ROMNEY: It has killed jobs. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 37: [lines 176-178]
 
@@ -804,11 +551,7 @@ Event 37: [lines 176-178]
     OBAMA:  And it wasn&#39;t just that small businesses were seeing
             costs skyrocket and they couldn&#39;t get affordable coverage
             even if they wanted to provide it to their employees. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 38: [lines 192-194]
 
@@ -821,11 +564,7 @@ Event 38: [lines 192-194]
  ** OBAMA:  Now, the last point &lt;&lt;I&#39;d&gt;&gt; make before|
 
     LEHRER: Two minutes two minutes is up, sir. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 39: [lines 194-196]
 
@@ -839,30 +578,21 @@ Event 39: [lines 194-196]
             and as a consequence people are covered there.
 
     OBAMA:  It hasn&#39;t destroyed jobs. 
-<<<<<<< HEAD
 </div>
 <div class='input'>plot(out1)
 </div>
 <p><img src='discourse_marker-6.png' alt='' width='400' height='400' /></p>
-=======
-</strong>
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 <div class='input'>
 ## Marker with two types (both: &quot;I&quot; &amp; &quot;you&quot;)
 out2 &lt;- with(pres_debates2012[1:200, ], discourse_marker(dialogue, person,
     names = c(&quot;I&quot;, &quot;you&quot;),
     regex =  list(
         I = &quot;I(&#39;[a-z]+)*\\b&quot;,
-<<<<<<< HEAD
         you = &quot;(\\b[Yy]ou(&#39;[a-z]+)*\\b)&quot;
-=======
-        you = &quot;[Yy]ou(&#39;[a-z]+)*\\b&quot;
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
     ),
     terms = list(
         I = c(&quot; I &quot;, &quot; I&#39;&quot;),
         you = c(&quot; you &quot;, &quot; you&#39;&quot;)
-<<<<<<< HEAD
     )
 ))
 out2[[1]]
@@ -878,35 +608,13 @@ out2[[1]]
 Event 1: [lines 2-4]
 
     LEHRER: But what do you support the voucher system, Governor?
-=======
-    ),
-    markup.regex = &quot;\\b(((I)|([Yy]ou))(&#39;[a-z]+)*)\\b&quot;
-))
-out2[[1]]
-</div>
-<div class='output'>  grouping.var word.count         I       you
-1        OBAMA        943 12(1.27%) 28(2.97%)
-2       ROMNEY       1349 31(2.30%) 15(1.11%)
-3       LEHRER        316  4(1.27%) 11(3.48%)
-</div>
-<div class='input'>out2[[2]]
-</div>
-<strong class='message'>===================================
-Event 1: [lines 2-4]
-
-    LEHRER: But what do &lt;&lt;you&gt;&gt; support the voucher system, Governor?
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
  ** ROMNEY: What &lt;&lt;I&gt;&gt; support is no change for current retirees and
             near retirees to Medicare.
 
     ROMNEY: And the president supports taking dollar seven hundred
             sixteen billion out of that program. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 2: [lines 6-8]
 
@@ -918,11 +626,7 @@ Event 2: [lines 6-8]
             current Medicare program or a private plan.
 
     ROMNEY: Their choice. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 3: [lines 13-15]
 
@@ -935,7 +639,6 @@ Event 3: [lines 13-15]
  ** ROMNEY: &lt;&lt;I&gt;&gt; know my own view is &lt;&lt;I&#39;d&gt;&gt; rather have a private
             plan.
 
-<<<<<<< HEAD
     ROMNEY: I&#39;d just assume not have the government telling me what
             kind of health care I get. 
  
@@ -943,21 +646,10 @@ Event 3: [lines 13-15]
 Event 4: [lines 14-16]
 
     ROMNEY: I know my own view is I&#39;d rather have a private plan.
-=======
-    ROMNEY: &lt;&lt;I&#39;d&gt;&gt; just assume not have the government telling me
-            what kind of health care &lt;&lt;I&gt;&gt; get. 
-
-===================================
-Event 4: [lines 14-16]
-
-    ROMNEY: &lt;&lt;I&gt;&gt; know my own view is &lt;&lt;I&#39;d&gt;&gt; rather have a private
-            plan.
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
  ** ROMNEY: &lt;&lt;I&#39;d&gt;&gt; just assume not have the government telling me
             what kind of health care &lt;&lt;I&gt;&gt; get.
 
-<<<<<<< HEAD
     ROMNEY: I&#39;d rather be able to have an insurance company. 
  
 ===================================
@@ -975,35 +667,12 @@ Event 5: [lines 15-17]
 Event 6: [lines 16-18]
 
     ROMNEY: I&#39;d rather be able to have an insurance company.
-=======
-    ROMNEY: &lt;&lt;I&#39;d&gt;&gt; rather be able to have an insurance company. 
-
-===================================
-Event 5: [lines 15-17]
-
-    ROMNEY: &lt;&lt;I&#39;d&gt;&gt; just assume not have the government telling me
-            what kind of health care &lt;&lt;I&gt;&gt; get.
-
- ** ROMNEY: &lt;&lt;I&#39;d&gt;&gt; rather be able to have an insurance company.
-
-    ROMNEY: If &lt;&lt;I&gt;&gt; don&#39;t like them, &lt;&lt;I&gt;&gt; can get rid of them and
-            find a different insurance company. 
-
-===================================
-Event 6: [lines 16-18]
-
-    ROMNEY: &lt;&lt;I&#39;d&gt;&gt; rather be able to have an insurance company.
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
  ** ROMNEY: If &lt;&lt;I&gt;&gt; don&#39;t like them, &lt;&lt;I&gt;&gt; can get rid of them and
             find a different insurance company.
 
     ROMNEY: But people make their own choice. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 7: [lines 21-23]
 
@@ -1016,11 +685,7 @@ Event 7: [lines 21-23]
             or Senator Wyden, who&#39;s the co author of the bill with
             with Paul Ryan in the Senate, but also it came from Bill
             Bill Clinton&#39;s chief of staff. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 8: [lines 24-26]
 
@@ -1031,7 +696,6 @@ Event 8: [lines 24-26]
 
  ** ROMNEY: &lt;&lt;I&gt;&gt; believe in competition.
 
-<<<<<<< HEAD
     OBAMA:  Jim, if I if I can just respond very quickly, first of
             all, every study has shown that Medicare has lower
             administrative costs than private insurance does, which
@@ -1041,17 +705,6 @@ Event 8: [lines 24-26]
 Event 9: [lines 25-27]
 
     ROMNEY: I believe in competition.
-=======
-    OBAMA:  Jim, if &lt;&lt;I&gt;&gt; if &lt;&lt;I&gt;&gt; can just respond very quickly,
-            first of all, every study has shown that Medicare has
-            lower administrative costs than private insurance does,
-            which is why seniors are generally pretty happy with it. 
-
-===================================
-Event 9: [lines 25-27]
-
-    ROMNEY: &lt;&lt;I&gt;&gt; believe in competition.
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
  ** OBAMA:  Jim, if &lt;&lt;I&gt;&gt; if &lt;&lt;I&gt;&gt; can just respond very quickly,
             first of all, every study has shown that Medicare has
@@ -1059,11 +712,7 @@ Event 9: [lines 25-27]
             which is why seniors are generally pretty happy with it.
 
     OBAMA:  And private insurers have to make a profit. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 10: [lines 35-37]
 
@@ -1074,11 +723,7 @@ Event 10: [lines 35-37]
 
     OBAMA:  We do have to lower the cost of health care, not just in
             Medicare and Medicaid| 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 11: [lines 44-46]
 
@@ -1086,7 +731,6 @@ Event 11: [lines 44-46]
 
  ** LEHRER: Yeah, we&#39;re going to yeah, &lt;&lt;I&gt;&gt; want to get to it.
 
-<<<<<<< HEAD
     OBAMA:  I&#39;m sorry. 
  
 ===================================
@@ -1102,47 +746,20 @@ Event 12: [lines 45-47]
 Event 13: [lines 46-48]
 
     OBAMA:  I&#39;m sorry.
-=======
-    OBAMA:  &lt;&lt;I&#39;m&gt;&gt; sorry. 
-
-===================================
-Event 12: [lines 45-47]
-
-    LEHRER: Yeah, we&#39;re going to yeah, &lt;&lt;I&gt;&gt; want to get to it.
-
- ** OBAMA:  &lt;&lt;I&#39;m&gt;&gt; sorry.
-
-    LEHRER: But all &lt;&lt;I&gt;&gt; want to do is go very quickly| 
-
-===================================
-Event 13: [lines 46-48]
-
-    OBAMA:  &lt;&lt;I&#39;m&gt;&gt; sorry.
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
  ** LEHRER: But all &lt;&lt;I&gt;&gt; want to do is go very quickly|
 
     ROMNEY: Let&#39;s get back to Medicare. 
-<<<<<<< HEAD
  
 ===================================
 Event 14: [lines 70-72]
 
     ROMNEY: You can&#39;t have a free market work if you don&#39;t have
             regulation.
-=======
-
-===================================
-Event 14: [lines 70-72]
-
-    ROMNEY: &lt;&lt;You&gt;&gt; can&#39;t have a free market work if &lt;&lt;you&gt;&gt; don&#39;t
-            have regulation.
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
  ** ROMNEY: As a businessperson, &lt;&lt;I&gt;&gt; had to have &lt;&lt;I&gt;&gt; need to know
             the regulations.
 
-<<<<<<< HEAD
     ROMNEY: I needed them there. 
  
 ===================================
@@ -1167,32 +784,6 @@ Event 16: [lines 73-75]
 
     ROMNEY: Every free economy has good regulation. 
  
-=======
-    ROMNEY: &lt;&lt;I&gt;&gt; needed them there. 
-
-===================================
-Event 15: [lines 71-73]
-
-    ROMNEY: As a businessperson, &lt;&lt;I&gt;&gt; had to have &lt;&lt;I&gt;&gt; need to know
-            the regulations.
-
- ** ROMNEY: &lt;&lt;I&gt;&gt; needed them there.
-
-    ROMNEY: &lt;&lt;You&gt;&gt; couldn&#39;t have people opening up banks in their in
-            their garage and making loans. 
-
-===================================
-Event 16: [lines 73-75]
-
-    ROMNEY: &lt;&lt;You&gt;&gt; couldn&#39;t have people opening up banks in their in
-            their garage and making loans.
-
- ** ROMNEY: &lt;&lt;I&gt;&gt; mean, &lt;&lt;you&gt;&gt; have to have regulations so that
-            &lt;&lt;you&gt;&gt; can have an economy work.
-
-    ROMNEY: Every free economy has good regulation. 
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 17: [lines 84-86]
 
@@ -1205,11 +796,7 @@ Event 17: [lines 84-86]
     ROMNEY: One is it designates a number of banks as too big to
             fail, and they&#39;re effectively guaranteed by the federal
             government. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 18: [lines 86-88]
 
@@ -1221,28 +808,16 @@ Event 18: [lines 86-88]
             banks &lt;&lt;I&#39;ve&gt;&gt; ever seen.
 
     ROMNEY: This is an enormous boon for them. 
-<<<<<<< HEAD
  
 ===================================
 Event 19: [lines 93-95]
 
     LEHRER: Do you want to repeal Dodd Frank?
-=======
-
-===================================
-Event 19: [lines 93-95]
-
-    LEHRER: Do &lt;&lt;you&gt;&gt; want to repeal Dodd Frank?
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
  ** ROMNEY: Well, &lt;&lt;I&gt;&gt; would repeal and replace it.
 
     ROMNEY: We&#39;re not going to get rid of all regulation. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 20: [lines 103-105]
 
@@ -1254,51 +829,30 @@ Event 20: [lines 103-105]
     OBAMA:  The reason we have been in such a enormous economic
             crisis was prompted by reckless behavior across the
             board. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 21: [lines 117-119]
 
     OBAMA:  Now, Governor Romney has said he wants to repeal Dodd
             Frank.
 
-<<<<<<< HEAD
  ** OBAMA:  And, you know, &lt;&lt;I&gt;&gt; appreciate and it appears we&#39;ve got
             some agreement that a marketplace to work has to have
-=======
- ** OBAMA:  And, &lt;&lt;you&gt;&gt; know, &lt;&lt;I&gt;&gt; appreciate and it appears we&#39;ve
-            got some agreement that a marketplace to work has to have
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
             some regulation.
 
     OBAMA:  But in the past, Governor Romney has said he just want to
             repeal Dodd Frank, roll it back. 
-<<<<<<< HEAD
  
 ===================================
 Event 22: [lines 121-123]
 
     OBAMA:  Because if you do, then Governor Romney is your
-=======
-
-===================================
-Event 22: [lines 121-123]
-
-    OBAMA:  Because if &lt;&lt;you&gt;&gt; do, then Governor Romney is your
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
             candidate.
 
  ** OBAMA:  But that&#39;s not what &lt;&lt;I&gt;&gt; believe.
 
     ROMNEY: Sorry, but that&#39;s just not that&#39;s just not the facts. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 23: [lines 124-126]
 
@@ -1306,7 +860,6 @@ Event 23: [lines 124-126]
 
  ** ROMNEY: That&#39;s why &lt;&lt;I&#39;d&gt;&gt; have regulation.
 
-<<<<<<< HEAD
     ROMNEY: But I wouldn&#39;t designate five banks as too big to fail
             and give them a blank check. 
  
@@ -1314,25 +867,12 @@ Event 23: [lines 124-126]
 Event 24: [lines 125-127]
 
     ROMNEY: That&#39;s why I&#39;d have regulation.
-=======
-    ROMNEY: But &lt;&lt;I&gt;&gt; wouldn&#39;t designate five banks as too big to
-            fail and give them a blank check. 
-
-===================================
-Event 24: [lines 125-127]
-
-    ROMNEY: That&#39;s why &lt;&lt;I&#39;d&gt;&gt; have regulation.
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
  ** ROMNEY: But &lt;&lt;I&gt;&gt; wouldn&#39;t designate five banks as too big to
             fail and give them a blank check.
 
     ROMNEY: That&#39;s one of the unintended consequences of Dodd Frank. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 25: [lines 142-144]
 
@@ -1343,18 +883,13 @@ Event 25: [lines 142-144]
             to bring back housing and get good jobs.
 
     LEHRER: All right. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 26: [lines 144-146]
 
     LEHRER: All right.
 
  ** LEHRER: &lt;&lt;I&gt;&gt; think we have another clear difference between the
-<<<<<<< HEAD
             two of you.
 
     LEHRER: Now, let&#39;s move to health care where I know there is a
@@ -1366,19 +901,6 @@ Event 27: [lines 145-147]
 
     LEHRER: I think we have another clear difference between the two
             of you.
-=======
-            two of &lt;&lt;you&gt;&gt;.
-
-    LEHRER: Now, let&#39;s move to health care where &lt;&lt;I&gt;&gt; know there is
-            a clear difference, and that has to do with the
-            Affordable Care Act, Obamacare. 
-
-===================================
-Event 27: [lines 145-147]
-
-    LEHRER: &lt;&lt;I&gt;&gt; think we have another clear difference between the
-            two of &lt;&lt;you&gt;&gt;.
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
  ** LEHRER: Now, let&#39;s move to health care where &lt;&lt;I&gt;&gt; know there is
             a clear difference, and that has to do with the
@@ -1386,11 +908,7 @@ Event 27: [lines 145-147]
 
     LEHRER: And it&#39;s a two minute new new segment, and that means two
             minutes each. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 28: [lines 151-153]
 
@@ -1399,17 +917,12 @@ Event 28: [lines 151-153]
  ** ROMNEY: &lt;&lt;I&gt;&gt; sure do.
 
     ROMNEY: Well, in part, it comes, again, from my experience. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 29: [lines 153-155]
 
     ROMNEY: Well, in part, it comes, again, from my experience.
 
-<<<<<<< HEAD
  ** ROMNEY: You know, &lt;&lt;I&gt;&gt; was in New Hampshire.
 
     ROMNEY: A woman came to me and she said, look, I can&#39;t afford
@@ -1419,22 +932,10 @@ Event 29: [lines 153-155]
 Event 30: [lines 154-156]
 
     ROMNEY: You know, I was in New Hampshire.
-=======
- ** ROMNEY: &lt;&lt;You&gt;&gt; know, &lt;&lt;I&gt;&gt; was in New Hampshire.
-
-    ROMNEY: A woman came to me and she said, look, &lt;&lt;I&gt;&gt; can&#39;t afford
-            insurance for myself or my son. 
-
-===================================
-Event 30: [lines 154-156]
-
-    ROMNEY: &lt;&lt;You&gt;&gt; know, &lt;&lt;I&gt;&gt; was in New Hampshire.
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
  ** ROMNEY: A woman came to me and she said, look, &lt;&lt;I&gt;&gt; can&#39;t afford
             insurance for myself or my son.
 
-<<<<<<< HEAD
     ROMNEY: I met a couple in Appleton, Wisconsin, and they said,
             we&#39;re thinking of dropping our insurance, we can&#39;t afford
             it. 
@@ -1443,23 +944,12 @@ Event 30: [lines 154-156]
 Event 31: [lines 155-157]
 
     ROMNEY: A woman came to me and she said, look, I can&#39;t afford
-=======
-    ROMNEY: &lt;&lt;I&gt;&gt; met a couple in Appleton, Wisconsin, and they said,
-            we&#39;re thinking of dropping our insurance, we can&#39;t afford
-            it. 
-
-===================================
-Event 31: [lines 155-157]
-
-    ROMNEY: A woman came to me and she said, look, &lt;&lt;I&gt;&gt; can&#39;t afford
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
             insurance for myself or my son.
 
  ** ROMNEY: &lt;&lt;I&gt;&gt; met a couple in Appleton, Wisconsin, and they said,
             we&#39;re thinking of dropping our insurance, we can&#39;t afford
             it.
 
-<<<<<<< HEAD
     ROMNEY: And the number of small businesses I&#39;ve gone to that are
             saying they&#39;re dropping insurance because they can&#39;t
             afford it, the cost of health care is just prohibitive. 
@@ -1468,16 +958,6 @@ Event 31: [lines 155-157]
 Event 32: [lines 156-158]
 
     ROMNEY: I met a couple in Appleton, Wisconsin, and they said,
-=======
-    ROMNEY: And the number of small businesses &lt;&lt;I&#39;ve&gt;&gt; gone to that
-            are saying they&#39;re dropping insurance because they can&#39;t
-            afford it, the cost of health care is just prohibitive. 
-
-===================================
-Event 32: [lines 156-158]
-
-    ROMNEY: &lt;&lt;I&gt;&gt; met a couple in Appleton, Wisconsin, and they said,
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
             we&#39;re thinking of dropping our insurance, we can&#39;t afford
             it.
 
@@ -1486,11 +966,7 @@ Event 32: [lines 156-158]
             afford it, the cost of health care is just prohibitive.
 
     ROMNEY: And and we&#39;ve got to deal with cost. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 33: [lines 164-166]
 
@@ -1500,11 +976,7 @@ Event 33: [lines 164-166]
 
     ROMNEY: Second reason, it cuts dollar seven hundred sixteen
             billion from Medicare to pay for it. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 34: [lines 166-168]
 
@@ -1517,11 +989,7 @@ Event 34: [lines 166-168]
     ROMNEY: Number three, it puts in place an unelected board that&#39;s
             going to tell people ultimately what kind of treatments
             they can have. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 35: [lines 168-170]
 
@@ -1534,11 +1002,7 @@ Event 35: [lines 168-170]
     ROMNEY: Fourth, there was a survey done of small businesses
             across the country, said, what&#39;s been the effect of
             Obamacare on your hiring plans? 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 36: [lines 171-173]
 
@@ -1553,11 +1017,7 @@ Event 36: [lines 171-173]
             jobs for the American people.
 
     ROMNEY: It has killed jobs. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 37: [lines 176-178]
 
@@ -1570,7 +1030,6 @@ Event 37: [lines 176-178]
     OBAMA:  And it wasn&#39;t just that small businesses were seeing
             costs skyrocket and they couldn&#39;t get affordable coverage
             even if they wanted to provide it to their employees. 
-<<<<<<< HEAD
  
 ===================================
 Event 38: [lines 192-194]
@@ -1579,36 +1038,18 @@ Event 38: [lines 192-194]
             essentially setting up a group plan that allows you to
             benefit from group rates that are typically eighteen
             percent lower than if you&#39;re out there trying to get
-=======
-
-===================================
-Event 38: [lines 192-194]
-
-    OBAMA:  Number two, if &lt;&lt;you&gt;&gt; don&#39;t have health insurance, we&#39;re
-            essentially setting up a group plan that allows &lt;&lt;you&gt;&gt;
-            to benefit from group rates that are typically eighteen
-            percent lower than if &lt;&lt;you&#39;re&gt;&gt; out there trying to get
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
             insurance on the individual market.
 
  ** OBAMA:  Now, the last point &lt;&lt;I&#39;d&gt;&gt; make before|
 
     LEHRER: Two minutes two minutes is up, sir. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 39: [lines 194-196]
 
     LEHRER: Two minutes two minutes is up, sir.
 
-<<<<<<< HEAD
  ** OBAMA:  No, &lt;&lt;I&gt;&gt; think &lt;&lt;I&gt;&gt; had five seconds before you
-=======
- ** OBAMA:  No, &lt;&lt;I&gt;&gt; think &lt;&lt;I&gt;&gt; had five seconds before &lt;&lt;you&gt;&gt;
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
             interrupted me, was the irony is that we&#39;ve seen this
             model work really well in Massachusetts, because Governor
             Romney did a good thing, working with Democrats in the
@@ -1616,17 +1057,10 @@ Event 39: [lines 194-196]
             and as a consequence people are covered there.
 
     OBAMA:  It hasn&#39;t destroyed jobs. 
-<<<<<<< HEAD
 </div>
 <div class='input'>out2[[3]]
 </div>
 <div class='output'>===================================
-=======
-</strong>
-<div class='input'>out2[[3]]
-</div>
-<strong class='message'>===================================
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 Event 1: [lines 1-3]
 
     LEHRER: We&#39;ll talk about specifically about health care in a
@@ -1634,15 +1068,9 @@ Event 1: [lines 1-3]
 
  ** LEHRER: But what do &lt;&lt;you&gt;&gt; support the voucher system, Governor?
 
-<<<<<<< HEAD
     ROMNEY: What I support is no change for current retirees and near
             retirees to Medicare. 
  
-=======
-    ROMNEY: What &lt;&lt;I&gt;&gt; support is no change for current retirees and
-            near retirees to Medicare. 
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 2: [lines 29-31]
 
@@ -1651,7 +1079,6 @@ Event 2: [lines 29-31]
  ** OBAMA:  And so &lt;&lt;you&#39;ve&gt;&gt; got higher administrative costs, plus
             profit on top of that.
 
-<<<<<<< HEAD
     OBAMA:  And if you are going to save any money through what
             Governor Romney&#39;s proposing, what has to happen is, is
             that the money has to come from somewhere. 
@@ -1660,23 +1087,12 @@ Event 2: [lines 29-31]
 Event 3: [lines 30-32]
 
     OBAMA:  And so you&#39;ve got higher administrative costs, plus
-=======
-    OBAMA:  And if &lt;&lt;you&gt;&gt; are going to save any money through what
-            Governor Romney&#39;s proposing, what has to happen is, is
-            that the money has to come from somewhere. 
-
-===================================
-Event 3: [lines 30-32]
-
-    OBAMA:  And so &lt;&lt;you&#39;ve&gt;&gt; got higher administrative costs, plus
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
             profit on top of that.
 
  ** OBAMA:  And if &lt;&lt;you&gt;&gt; are going to save any money through what
             Governor Romney&#39;s proposing, what has to happen is, is
             that the money has to come from somewhere.
 
-<<<<<<< HEAD
     OBAMA:  And when you move to a voucher system, you are putting
             seniors at the mercy of those insurance companies. 
  
@@ -1684,16 +1100,6 @@ Event 3: [lines 30-32]
 Event 4: [lines 31-33]
 
     OBAMA:  And if you are going to save any money through what
-=======
-    OBAMA:  And when &lt;&lt;you&gt;&gt; move to a voucher system, &lt;&lt;you&gt;&gt; are
-            putting seniors at the mercy of those insurance
-            companies. 
-
-===================================
-Event 4: [lines 31-33]
-
-    OBAMA:  And if &lt;&lt;you&gt;&gt; are going to save any money through what
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
             Governor Romney&#39;s proposing, what has to happen is, is
             that the money has to come from somewhere.
 
@@ -1703,11 +1109,7 @@ Event 4: [lines 31-33]
 
     OBAMA:  And over time, if traditional Medicare has decayed or
             fallen apart, then they&#39;re stuck. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 5: [lines 56-58]
 
@@ -1717,11 +1119,7 @@ Event 5: [lines 56-58]
             a choice a clear choice between the two|
 
     ROMNEY: Absolutely. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 6: [lines 58-60]
 
@@ -1730,11 +1128,7 @@ Event 6: [lines 58-60]
  ** LEHRER: of &lt;&lt;you&gt;&gt; on Medicare?
 
     ROMNEY: Absolutely. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 7: [lines 65-67]
 
@@ -1744,11 +1138,7 @@ Event 7: [lines 65-67]
  ** LEHRER: Beginning with &lt;&lt;you&gt;&gt;.
 
     LEHRER: This is not a new two minute segment to start. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 8: [lines 69-71]
 
@@ -1757,7 +1147,6 @@ Event 8: [lines 69-71]
  ** ROMNEY: &lt;&lt;You&gt;&gt; can&#39;t have a free market work if &lt;&lt;you&gt;&gt; don&#39;t
             have regulation.
 
-<<<<<<< HEAD
     ROMNEY: As a businessperson, I had to have I need to know the
             regulations. 
  
@@ -1765,20 +1154,10 @@ Event 8: [lines 69-71]
 Event 9: [lines 72-74]
 
     ROMNEY: I needed them there.
-=======
-    ROMNEY: As a businessperson, &lt;&lt;I&gt;&gt; had to have &lt;&lt;I&gt;&gt; need to know
-            the regulations. 
-
-===================================
-Event 9: [lines 72-74]
-
-    ROMNEY: &lt;&lt;I&gt;&gt; needed them there.
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
  ** ROMNEY: &lt;&lt;You&gt;&gt; couldn&#39;t have people opening up banks in their in
             their garage and making loans.
 
-<<<<<<< HEAD
     ROMNEY: I mean, you have to have regulations so that you can have
             an economy work. 
  
@@ -1793,22 +1172,6 @@ Event 10: [lines 73-75]
 
     ROMNEY: Every free economy has good regulation. 
  
-=======
-    ROMNEY: &lt;&lt;I&gt;&gt; mean, &lt;&lt;you&gt;&gt; have to have regulations so that
-            &lt;&lt;you&gt;&gt; can have an economy work. 
-
-===================================
-Event 10: [lines 73-75]
-
-    ROMNEY: &lt;&lt;You&gt;&gt; couldn&#39;t have people opening up banks in their in
-            their garage and making loans.
-
- ** ROMNEY: &lt;&lt;I&gt;&gt; mean, &lt;&lt;you&gt;&gt; have to have regulations so that
-            &lt;&lt;you&gt;&gt; can have an economy work.
-
-    ROMNEY: Every free economy has good regulation. 
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 11: [lines 76-78]
 
@@ -1817,11 +1180,7 @@ Event 11: [lines 76-78]
  ** LEHRER: Is it excessive now, do &lt;&lt;you&gt;&gt; think?
 
     ROMNEY: In some places, yes. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 12: [lines 81-83]
 
@@ -1832,33 +1191,20 @@ Event 12: [lines 81-83]
             regulation become excessive, and it&#39;s hurt it&#39;s hurt the
             economy.
 
-<<<<<<< HEAD
     ROMNEY: Let me give you an example. 
  
-=======
-    ROMNEY: Let me give &lt;&lt;you&gt;&gt; an example. 
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 13: [lines 82-84]
 
     ROMNEY: And what&#39;s happened with some of the legislation that&#39;s
-<<<<<<< HEAD
             been passed during the president&#39;s term, you&#39;ve seen
-=======
-            been passed during the president&#39;s term, &lt;&lt;you&#39;ve&gt;&gt; seen
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
             regulation become excessive, and it&#39;s hurt it&#39;s hurt the
             economy.
 
  ** ROMNEY: Let me give &lt;&lt;you&gt;&gt; an example.
 
     ROMNEY: Dodd Frank was passed. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 14: [lines 92-94]
 
@@ -1866,13 +1212,8 @@ Event 14: [lines 92-94]
 
  ** LEHRER: Do &lt;&lt;you&gt;&gt; want to repeal Dodd Frank?
 
-<<<<<<< HEAD
     ROMNEY: Well, I would repeal and replace it. 
  
-=======
-    ROMNEY: Well, &lt;&lt;I&gt;&gt; would repeal and replace it. 
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 15: [lines 95-97]
 
@@ -1882,11 +1223,7 @@ Event 15: [lines 95-97]
 
     ROMNEY: And there are some parts of Dodd Frank that make all the
             sense in the world. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 16: [lines 97-99]
 
@@ -1897,11 +1234,7 @@ Event 16: [lines 97-99]
             limits for|
 
     LEHRER: Well, here&#39;s a specific| 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 17: [lines 106-108]
 
@@ -1911,7 +1244,6 @@ Event 17: [lines 106-108]
             mortgages that really shouldn&#39;t have been given, because
             the folks didn&#39;t qualify.
 
-<<<<<<< HEAD
     OBAMA:  You had people who were borrowing money to buy a house
             that they couldn&#39;t afford. 
  
@@ -1919,22 +1251,12 @@ Event 17: [lines 106-108]
 Event 18: [lines 107-109]
 
     OBAMA:  You had loan officers were that were giving loans and
-=======
-    OBAMA:  &lt;&lt;You&gt;&gt; had people who were borrowing money to buy a
-            house that they couldn&#39;t afford. 
-
-===================================
-Event 18: [lines 107-109]
-
-    OBAMA:  &lt;&lt;You&gt;&gt; had loan officers were that were giving loans and
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
             mortgages that really shouldn&#39;t have been given, because
             the folks didn&#39;t qualify.
 
  ** OBAMA:  &lt;&lt;You&gt;&gt; had people who were borrowing money to buy a
             house that they couldn&#39;t afford.
 
-<<<<<<< HEAD
     OBAMA:  You had credit agencies that were stamping these as Aone
             great investments when they weren&#39;t. 
  
@@ -1943,21 +1265,10 @@ Event 19: [lines 108-110]
 
     OBAMA:  You had people who were borrowing money to buy a house
             that they couldn&#39;t afford.
-=======
-    OBAMA:  &lt;&lt;You&gt;&gt; had credit agencies that were stamping these as
-            Aone great investments when they weren&#39;t. 
-
-===================================
-Event 19: [lines 108-110]
-
-    OBAMA:  &lt;&lt;You&gt;&gt; had people who were borrowing money to buy a
-            house that they couldn&#39;t afford.
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
  ** OBAMA:  &lt;&lt;You&gt;&gt; had credit agencies that were stamping these as
             Aone great investments when they weren&#39;t.
 
-<<<<<<< HEAD
     OBAMA:  But you also had banks making money hand over fist,
             churning out products that the bankers themselves didn&#39;t
             even understand, in order to make big profits, but
@@ -1968,18 +1279,6 @@ Event 20: [lines 109-111]
 
     OBAMA:  You had credit agencies that were stamping these as Aone
             great investments when they weren&#39;t.
-=======
-    OBAMA:  But &lt;&lt;you&gt;&gt; also had banks making money hand over fist,
-            churning out products that the bankers themselves didn&#39;t
-            even understand, in order to make big profits, but
-            knowing that it made the entire system vulnerable. 
-
-===================================
-Event 20: [lines 109-111]
-
-    OBAMA:  &lt;&lt;You&gt;&gt; had credit agencies that were stamping these as
-            Aone great investments when they weren&#39;t.
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
  ** OBAMA:  But &lt;&lt;you&gt;&gt; also had banks making money hand over fist,
             churning out products that the bankers themselves didn&#39;t
@@ -1987,11 +1286,7 @@ Event 20: [lines 109-111]
             knowing that it made the entire system vulnerable.
 
     OBAMA:  So what did we do? 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 21: [lines 112-114]
 
@@ -2001,7 +1296,6 @@ Event 21: [lines 112-114]
  ** OBAMA:  We said &lt;&lt;you&#39;ve&gt;&gt; got banks, &lt;&lt;you&#39;ve&gt;&gt; got to raise
             your capital requirements.
 
-<<<<<<< HEAD
     OBAMA:  You can&#39;t engage in some of this risky behavior that is
             putting Main Street at risk. 
  
@@ -2010,21 +1304,10 @@ Event 22: [lines 113-115]
 
     OBAMA:  We said you&#39;ve got banks, you&#39;ve got to raise your
             capital requirements.
-=======
-    OBAMA:  &lt;&lt;You&gt;&gt; can&#39;t engage in some of this risky behavior that
-            is putting Main Street at risk. 
-
-===================================
-Event 22: [lines 113-115]
-
-    OBAMA:  We said &lt;&lt;you&#39;ve&gt;&gt; got banks, &lt;&lt;you&#39;ve&gt;&gt; got to raise
-            your capital requirements.
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
  ** OBAMA:  &lt;&lt;You&gt;&gt; can&#39;t engage in some of this risky behavior that
             is putting Main Street at risk.
 
-<<<<<<< HEAD
     OBAMA:  We&#39;ve going to make sure that you&#39;ve got to have a living
             will so so we can know how you&#39;re going to wind things
             down if you make a bad bet so we don&#39;t have other
@@ -2035,18 +1318,6 @@ Event 23: [lines 114-116]
 
     OBAMA:  You can&#39;t engage in some of this risky behavior that is
             putting Main Street at risk.
-=======
-    OBAMA:  We&#39;ve going to make sure that &lt;&lt;you&#39;ve&gt;&gt; got to have a
-            living will so so we can know how &lt;&lt;you&#39;re&gt;&gt; going to
-            wind things down if &lt;&lt;you&gt;&gt; make a bad bet so we don&#39;t
-            have other taxpayer bailouts. 
-
-===================================
-Event 23: [lines 114-116]
-
-    OBAMA:  &lt;&lt;You&gt;&gt; can&#39;t engage in some of this risky behavior that
-            is putting Main Street at risk.
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
  ** OBAMA:  We&#39;ve going to make sure that &lt;&lt;you&#39;ve&gt;&gt; got to have a
             living will so so we can know how &lt;&lt;you&#39;re&gt;&gt; going to
@@ -2056,33 +1327,20 @@ Event 23: [lines 114-116]
     OBAMA:  In the meantime, by the way, we also made sure that all
             the help that we provided those banks was paid back every
             single dime, with interest. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 24: [lines 117-119]
 
     OBAMA:  Now, Governor Romney has said he wants to repeal Dodd
             Frank.
 
-<<<<<<< HEAD
  ** OBAMA:  And, &lt;&lt;you&gt;&gt; know, I appreciate and it appears we&#39;ve got
             some agreement that a marketplace to work has to have
-=======
- ** OBAMA:  And, &lt;&lt;you&gt;&gt; know, &lt;&lt;I&gt;&gt; appreciate and it appears we&#39;ve
-            got some agreement that a marketplace to work has to have
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
             some regulation.
 
     OBAMA:  But in the past, Governor Romney has said he just want to
             repeal Dodd Frank, roll it back. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 25: [lines 120-122]
 
@@ -2093,13 +1351,8 @@ Event 25: [lines 120-122]
  ** OBAMA:  Because if &lt;&lt;you&gt;&gt; do, then Governor Romney is your
             candidate.
 
-<<<<<<< HEAD
     OBAMA:  But that&#39;s not what I believe. 
  
-=======
-    OBAMA:  But that&#39;s not what &lt;&lt;I&gt;&gt; believe. 
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 26: [lines 131-133]
 
@@ -2109,11 +1362,7 @@ Event 26: [lines 131-133]
             weren&#39;t qualified.
 
     ROMNEY: That&#39;s exactly right. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 27: [lines 134-136]
 
@@ -2127,11 +1376,7 @@ Event 27: [lines 134-136]
             mortgage was.
 
     ROMNEY: It&#39;s been two years. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 28: [lines 139-141]
 
@@ -2143,17 +1388,12 @@ Event 28: [lines 139-141]
 
     ROMNEY: It&#39;s not that Dodd Frank always was wrong with too much
             regulation. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 29: [lines 144-146]
 
     LEHRER: All right.
 
-<<<<<<< HEAD
  ** LEHRER: I think we have another clear difference between the two
             of &lt;&lt;you&gt;&gt;.
 
@@ -2161,15 +1401,6 @@ Event 29: [lines 144-146]
             clear difference, and that has to do with the Affordable
             Care Act, Obamacare. 
  
-=======
- ** LEHRER: &lt;&lt;I&gt;&gt; think we have another clear difference between the
-            two of &lt;&lt;you&gt;&gt;.
-
-    LEHRER: Now, let&#39;s move to health care where &lt;&lt;I&gt;&gt; know there is
-            a clear difference, and that has to do with the
-            Affordable Care Act, Obamacare. 
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 30: [lines 147-149]
 
@@ -2178,7 +1409,6 @@ Event 30: [lines 147-149]
 
  ** LEHRER: And &lt;&lt;you&gt;&gt; go first, Governor Romney.
 
-<<<<<<< HEAD
     LEHRER: You want it repealed. 
  
 ===================================
@@ -2194,50 +1424,21 @@ Event 31: [lines 148-150]
 Event 32: [lines 149-151]
 
     LEHRER: You want it repealed.
-=======
-    LEHRER: &lt;&lt;You&gt;&gt; want it repealed. 
-
-===================================
-Event 31: [lines 148-150]
-
-    LEHRER: And &lt;&lt;you&gt;&gt; go first, Governor Romney.
-
- ** LEHRER: &lt;&lt;You&gt;&gt; want it repealed.
-
-    LEHRER: &lt;&lt;You&gt;&gt; want the Affordable Care Act repealed. 
-
-===================================
-Event 32: [lines 149-151]
-
-    LEHRER: &lt;&lt;You&gt;&gt; want it repealed.
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
  ** LEHRER: &lt;&lt;You&gt;&gt; want the Affordable Care Act repealed.
 
     LEHRER: Why? 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 33: [lines 153-155]
 
     ROMNEY: Well, in part, it comes, again, from my experience.
 
-<<<<<<< HEAD
  ** ROMNEY: &lt;&lt;You&gt;&gt; know, I was in New Hampshire.
 
     ROMNEY: A woman came to me and she said, look, I can&#39;t afford
             insurance for myself or my son. 
  
-=======
- ** ROMNEY: &lt;&lt;You&gt;&gt; know, &lt;&lt;I&gt;&gt; was in New Hampshire.
-
-    ROMNEY: A woman came to me and she said, look, &lt;&lt;I&gt;&gt; can&#39;t afford
-            insurance for myself or my son. 
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 34: [lines 158-160]
 
@@ -2249,11 +1450,7 @@ Event 34: [lines 158-160]
             than traditional insurance.
 
     ROMNEY: So it&#39;s adding to cost. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 35: [lines 183-185]
 
@@ -2263,7 +1460,6 @@ Event 35: [lines 183-185]
 
  ** OBAMA:  And let me tell &lt;&lt;you&gt;&gt; exactly what Obamacare did.
 
-<<<<<<< HEAD
     OBAMA:  Number one, if you&#39;ve got health insurance, it doesn&#39;t
             mean a government takeover. 
  
@@ -2271,20 +1467,10 @@ Event 35: [lines 183-185]
 Event 36: [lines 184-186]
 
     OBAMA:  And let me tell you exactly what Obamacare did.
-=======
-    OBAMA:  Number one, if &lt;&lt;you&#39;ve&gt;&gt; got health insurance, it
-            doesn&#39;t mean a government takeover. 
-
-===================================
-Event 36: [lines 184-186]
-
-    OBAMA:  And let me tell &lt;&lt;you&gt;&gt; exactly what Obamacare did.
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
  ** OBAMA:  Number one, if &lt;&lt;you&#39;ve&gt;&gt; got health insurance, it
             doesn&#39;t mean a government takeover.
 
-<<<<<<< HEAD
     OBAMA:  You keep your own insurance. 
  
 ===================================
@@ -2311,44 +1497,12 @@ Event 38: [lines 186-188]
 Event 39: [lines 187-189]
 
     OBAMA:  You keep your own doctor.
-=======
-    OBAMA:  &lt;&lt;You&gt;&gt; keep your own insurance. 
-
-===================================
-Event 37: [lines 185-187]
-
-    OBAMA:  Number one, if &lt;&lt;you&#39;ve&gt;&gt; got health insurance, it
-            doesn&#39;t mean a government takeover.
-
- ** OBAMA:  &lt;&lt;You&gt;&gt; keep your own insurance.
-
-    OBAMA:  &lt;&lt;You&gt;&gt; keep your own doctor. 
-
-===================================
-Event 38: [lines 186-188]
-
-    OBAMA:  &lt;&lt;You&gt;&gt; keep your own insurance.
-
- ** OBAMA:  &lt;&lt;You&gt;&gt; keep your own doctor.
-
-    OBAMA:  But it does say insurance companies can&#39;t jerk &lt;&lt;you&gt;&gt;
-            around. 
-
-===================================
-Event 39: [lines 187-189]
-
-    OBAMA:  &lt;&lt;You&gt;&gt; keep your own doctor.
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
  ** OBAMA:  But it does say insurance companies can&#39;t jerk &lt;&lt;you&gt;&gt;
             around.
 
     OBAMA:  They can&#39;t impose arbitrary lifetime limits. 
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 40: [lines 189-191]
 
@@ -2358,7 +1512,6 @@ Event 40: [lines 189-191]
             your insurance plan until &lt;&lt;you&#39;re&gt;&gt; twenty six years
             old.
 
-<<<<<<< HEAD
     OBAMA:  And it also says that you&#39;re going to have to get rebates
             if insurance companies are spending more on
             administrative costs and profits than they are on actual
@@ -2369,26 +1522,12 @@ Event 41: [lines 190-192]
 
     OBAMA:  They have to let you keep your kid on their insurance
             your insurance plan until you&#39;re twenty six years old.
-=======
-    OBAMA:  And it also says that &lt;&lt;you&#39;re&gt;&gt; going to have to get
-            rebates if insurance companies are spending more on
-            administrative costs and profits than they are on actual
-            care. 
-
-===================================
-Event 41: [lines 190-192]
-
-    OBAMA:  They have to let &lt;&lt;you&gt;&gt; keep your kid on their insurance
-            your insurance plan until &lt;&lt;you&#39;re&gt;&gt; twenty six years
-            old.
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
  ** OBAMA:  And it also says that &lt;&lt;you&#39;re&gt;&gt; going to have to get
             rebates if insurance companies are spending more on
             administrative costs and profits than they are on actual
             care.
 
-<<<<<<< HEAD
     OBAMA:  Number two, if you don&#39;t have health insurance, we&#39;re
             essentially setting up a group plan that allows you to
             benefit from group rates that are typically eighteen
@@ -2400,19 +1539,6 @@ Event 42: [lines 191-193]
 
     OBAMA:  And it also says that you&#39;re going to have to get rebates
             if insurance companies are spending more on
-=======
-    OBAMA:  Number two, if &lt;&lt;you&gt;&gt; don&#39;t have health insurance, we&#39;re
-            essentially setting up a group plan that allows &lt;&lt;you&gt;&gt;
-            to benefit from group rates that are typically eighteen
-            percent lower than if &lt;&lt;you&#39;re&gt;&gt; out there trying to get
-            insurance on the individual market. 
-
-===================================
-Event 42: [lines 191-193]
-
-    OBAMA:  And it also says that &lt;&lt;you&#39;re&gt;&gt; going to have to get
-            rebates if insurance companies are spending more on
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
             administrative costs and profits than they are on actual
             care.
 
@@ -2422,19 +1548,13 @@ Event 42: [lines 191-193]
             percent lower than if &lt;&lt;you&#39;re&gt;&gt; out there trying to get
             insurance on the individual market.
 
-<<<<<<< HEAD
     OBAMA:  Now, the last point I&#39;d make before| 
  
-=======
-    OBAMA:  Now, the last point &lt;&lt;I&#39;d&gt;&gt; make before| 
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 43: [lines 194-196]
 
     LEHRER: Two minutes two minutes is up, sir.
 
-<<<<<<< HEAD
  ** OBAMA:  No, I think I had five seconds before &lt;&lt;you&gt;&gt; interrupted
             me, was the irony is that we&#39;ve seen this model work
             really well in Massachusetts, because Governor Romney did
@@ -2444,17 +1564,6 @@ Event 43: [lines 194-196]
 
     OBAMA:  It hasn&#39;t destroyed jobs. 
  
-=======
- ** OBAMA:  No, &lt;&lt;I&gt;&gt; think &lt;&lt;I&gt;&gt; had five seconds before &lt;&lt;you&gt;&gt;
-            interrupted me, was the irony is that we&#39;ve seen this
-            model work really well in Massachusetts, because Governor
-            Romney did a good thing, working with Democrats in the
-            state to set up what is essentially the identical model
-            and as a consequence people are covered there.
-
-    OBAMA:  It hasn&#39;t destroyed jobs. 
-
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 44: [lines 199-200]
 
@@ -2462,15 +1571,11 @@ Event 44: [lines 199-200]
 
  ** LEHRER: Governor, tell tell the president directly why &lt;&lt;you&gt;&gt;
             think what he just said is wrong about Obamacare? 
-<<<<<<< HEAD
 </div>
 <div class='input'>
 ## Save externally use .doc or .txt
 ## print(out2[[2]], file=&quot;you_I.doc&quot;)
 </div></pre>
-=======
-</strong></pre>
->>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
   </div>
   <div class="span4">
     <!-- <ul>
