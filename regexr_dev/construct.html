@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>construct. regexr 1.0.0</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">regexr 1.0.0</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Construct Human Readable Regular Expressions</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><div>construct(...)</div></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>...</dt>
+      <dd>A series of comma separated character strings (sub-expressions)
+that may optionally be named, commented (see <code>?`%:)%`</code>, and indented.</dd>
+    </dl>
+    
+    <div class="Construct Human Readable Regular Expressions">
+      <h2>Construct Human Readable Regular Expressions</h2>
+      
+    </div>
+
+    <div class="Value">
+      <h2>Value</h2>
+      
+      <p>Returns a character vector of the class <code>regexr</code>. The attributes
+of the returned object retain the original name and comment properties.</p>
+  
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+      
+      <p>This function is used to construct human readable regular expressions from
+sub-expressions.  The user may provide additional meta information about each
+sub-expression. This meta information is an optional name and comment for the
+sub-expressions.  This allows one to write regular expressions in a fashion
+similar to writing code, that is the regular expression is written top to
+bottom, the syntax is broken up into manageable chunks, the sub-expressions
+can be indented to give structural insight such as nested groups.  Finally,
+sub-expressions can be commented to provide linguistic grounding for more
+complex sub-expressions.</p>
+  
+    </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>## Minimal Example
+minimal &lt;- construct(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;)
+minimal
+</div>
+<div class='output'>[1] &quot;abc&quot;
+</div>
+<div class='input'>unglue(minimal)
+</div>
+<div class='output'>[[1]]
+[1] &quot;a&quot;
+
+[[2]]
+[1] &quot;b&quot;
+
+[[3]]
+[1] &quot;c&quot;
+
+</div>
+<div class='input'>comments(minimal)
+</div>
+<div class='output'>[[1]]
+NULL
+
+[[2]]
+NULL
+
+[[3]]
+NULL
+
+</div>
+<div class='input'>subs(minimal)
+</div>
+<div class='output'>[[1]]
+[1] &quot;a&quot;
+
+[[2]]
+[1] &quot;b&quot;
+
+[[3]]
+[1] &quot;c&quot;
+
+</div>
+<div class='input'>test(minimal)
+</div>
+<div class='output'>$regex
+[1] TRUE
+
+$subexpressions
+[1] TRUE TRUE TRUE
+
+</div>
+<div class='input'>summary(minimal)
+</div>
+<div class='output'>
+ abc 
+ === 
+</div>
+<strong class='message'>SUB-EXPR 1: a</strong>
+<strong class='message'>NAME      : </strong>
+<strong class='message'>COMMENT   : 
+</strong>
+<strong class='message'>SUB-EXPR 2: b</strong>
+<strong class='message'>NAME      : </strong>
+<strong class='message'>COMMENT   : 
+</strong>
+<strong class='message'>SUB-EXPR 3: c</strong>
+<strong class='message'>NAME      : </strong>
+<strong class='message'>COMMENT   : 
+</strong>
+<div class='input'>
+## Example 1
+m &lt;- construct(
+    space =   &quot;\\s+&quot;              %:)%  &quot;I see&quot;,
+    simp =    &quot;(?&lt;=(foo))&quot;,
+    or =      &quot;(;|:)\\s*&quot;         %:)%  &quot;comment on what this does&quot;,
+    is_then = &quot;[ia]s th[ae]n&quot;
+)
+
+m
+</div>
+<div class='output'>[1] &quot;\\s+(?&lt;=(foo))(;|:)\\s*[ia]s th[ae]n&quot;
+</div>
+<div class='input'>unglue(m)
+</div>
+<div class='output'>$space
+[1] &quot;\\s+&quot;
+
+$simp
+[1] &quot;(?&lt;=(foo))&quot;
+
+$or
+[1] &quot;(;|:)\\s*&quot;
+
+$is_then
+[1] &quot;[ia]s th[ae]n&quot;
+
+</div>
+<div class='input'>summary(m)
+</div>
+<div class='output'>
+ \s+(?&lt;=(foo))(;|:)\s*[ia]s th[ae]n 
+ ================================== 
+</div>
+<strong class='message'>SUB-EXPR 1: \s+</strong>
+<strong class='message'>NAME      : space</strong>
+<strong class='message'>COMMENT   : &quot;I see&quot;
+</strong>
+<strong class='message'>SUB-EXPR 2: (?&lt;=(foo))</strong>
+<strong class='message'>NAME      : simp</strong>
+<strong class='message'>COMMENT   : 
+</strong>
+<strong class='message'>SUB-EXPR 3: (;|:)\s*</strong>
+<strong class='message'>NAME      : or</strong>
+<strong class='message'>COMMENT   : &quot;comment on what this does&quot;
+</strong>
+<strong class='message'>SUB-EXPR 4: [ia]s th[ae]n</strong>
+<strong class='message'>NAME      : is_then</strong>
+<strong class='message'>COMMENT   : 
+</strong>
+<div class='input'>subs(m)
+</div>
+<div class='output'>$space
+[1] &quot;\\s+&quot;
+
+$simp
+[1] &quot;(?&lt;=(foo))&quot;
+
+$or
+[1] &quot;(;|:)\\s*&quot;
+
+$is_then
+[1] &quot;[ia]s th[ae]n&quot;
+
+</div>
+<div class='input'>comments(m)
+</div>
+<div class='output'>$space
+[1] &quot;I see&quot;
+
+$simp
+NULL
+
+$or
+[1] &quot;comment on what this does&quot;
+
+$is_then
+NULL
+
+</div>
+<div class='input'>subs(m)[4] &lt;- &quot;(FO{2})|(BAR)&quot;
+summary(m)
+</div>
+<div class='output'>
+ \s+(?&lt;=(foo))(;|:)\s*(FO{2})|(BAR) 
+ ================================== 
+</div>
+<strong class='message'>SUB-EXPR 1: \s+</strong>
+<strong class='message'>NAME      : space</strong>
+<strong class='message'>COMMENT   : &quot;I see&quot;
+</strong>
+<strong class='message'>SUB-EXPR 2: (?&lt;=(foo))</strong>
+<strong class='message'>NAME      : simp</strong>
+<strong class='message'>COMMENT   : 
+</strong>
+<strong class='message'>SUB-EXPR 3: (;|:)\s*</strong>
+<strong class='message'>NAME      : or</strong>
+<strong class='message'>COMMENT   : &quot;comment on what this does&quot;
+</strong>
+<strong class='message'>SUB-EXPR 4: (FO{2})|(BAR)</strong>
+<strong class='message'>NAME      : is_then</strong>
+<strong class='message'>COMMENT   : 
+</strong>
+<div class='input'>test(m)
+</div>
+<div class='output'>$regex
+[1] TRUE
+
+$subexpressions
+  space    simp      or is_then 
+   TRUE    TRUE    TRUE    TRUE 
+
+</div>
+<div class='input'>
+subs(m)[5:7] &lt;- c(&quot;(&quot;, &quot;([A-Z]|(\\d{5})&quot;, &quot;)&quot;)
+test(m)
+</div>
+<strong class='warning'>Warning message:
+The concatenated regex is not valid
+
+\s+(?&lt;=(foo))(;|:)\s*(FO{2})|(BAR)(([A-Z]|(\d{5}))
+</strong>
+<strong class='warning'>Warning message:
+The following regex sub-expressions are not valid in isolation:
+
+(1) (
+(2) ([A-Z]|(\d{5})
+(3) )</strong>
+<div class='output'>$regex
+[1] FALSE
+
+$subexpressions
+  space    simp      or is_then                         
+   TRUE    TRUE    TRUE    TRUE   FALSE   FALSE   FALSE 
+
+</div>
+<div class='input'>
+
+library(qdapRegex)
+explain(m)
+</div>
+<div class='output'>NODE                     EXPLANATION
+--------------------------------------------------------------------------------
+  \\s+                      whitespace (\n, \r, \t, \f, and &quot; &quot;) (1 or
+                           more times (matching the most amount
+                           possible))
+--------------------------------------------------------------------------------
+  (?&lt;=                     look behind to see if there is:
+--------------------------------------------------------------------------------
+    (                        group and capture to \\1:
+--------------------------------------------------------------------------------
+      foo                      &#39;foo&#39;
+--------------------------------------------------------------------------------
+    )                        end of \\1
+--------------------------------------------------------------------------------
+  )                        end of look-behind
+--------------------------------------------------------------------------------
+  (                        group and capture to \\2:
+--------------------------------------------------------------------------------
+    ;                        &#39;;&#39;
+--------------------------------------------------------------------------------
+   |                        OR
+--------------------------------------------------------------------------------
+    :                        &#39;:&#39;
+--------------------------------------------------------------------------------
+  )                        end of \\2
+--------------------------------------------------------------------------------
+  \\s*                      whitespace (\n, \r, \t, \f, and &quot; &quot;) (0 or
+                           more times (matching the most amount
+                           possible))
+--------------------------------------------------------------------------------
+  (                        group and capture to \\3:
+--------------------------------------------------------------------------------
+    F                        &#39;F&#39;
+--------------------------------------------------------------------------------
+    O{2}                     &#39;O&#39; (2 times)
+--------------------------------------------------------------------------------
+  )                        end of \\3
+--------------------------------------------------------------------------------
+ |                        OR
+--------------------------------------------------------------------------------
+  (                        group and capture to \\4:
+--------------------------------------------------------------------------------
+    BAR                      &#39;BAR&#39;
+--------------------------------------------------------------------------------
+  )                        end of \\4
+--------------------------------------------------------------------------------
+  (                        group and capture to \\5:
+--------------------------------------------------------------------------------
+    (                        group and capture to \\6:
+--------------------------------------------------------------------------------
+      [A-Z]                    any character of: &#39;A&#39; to &#39;Z&#39;
+--------------------------------------------------------------------------------
+     |                        OR
+--------------------------------------------------------------------------------
+      (                        group and capture to \\7:
+--------------------------------------------------------------------------------
+        \\d{5}                    digits (0-9) (5 times)
+--------------------------------------------------------------------------------
+      )                        end of \\7
+--------------------------------------------------------------------------------
+    )                        end of \\6
+--------------------------------------------------------------------------------
+  )                        end of \\5
+
+</div>
+<div class='input'>
+## Example 2 (Twitter Handle 2 ways)
+## Bigger Sub-expressions
+twitter &lt;- construct(
+  no_at_wrd = &quot;(?&lt;![@\\w])&quot;            %:)%  &quot;Ensure doesn&#39;t start with @ or a word&quot;,
+  at =        &quot;(@)&quot;                    %:)%  &quot;Capture starting with @ symbol&quot;,
+  handle =    &quot;(([a-z0-9_]{1,15})\\b)&quot;  %:)%  &quot;Any 15 letters, numbers, or underscores&quot;
+)
+
+## Smaller Sub-expressions
+twitter &lt;- construct(
+  no_at_wrd = &quot;(?&lt;![@\\w])&quot;          %:)%  &quot;Ensure doesn&#39;t start with @ or a word&quot;,
+  at =        &quot;(@)&quot;                  %:)%  &quot;Capture starting with @ symbol&quot;,
+
+  s_gr1 =     &quot;(&quot;                     %:)%  &quot;GROUP 1 START&quot;,
+      handle =    &quot;([a-z0-9_]{1,15})&quot;       %:)%  &quot;Any 15 letters, numbers, or underscores&quot;,
+      boundary =  &quot;\\b&quot;,
+  e_gr1 =     &quot;)&quot;                      %:)%&quot;GROUP 1 END&quot;
+)
+
+twitter
+</div>
+<div class='output'>[1] &quot;(?&lt;![@\\w])(@)(([a-z0-9_]{1,15})\\b)&quot;
+</div>
+<div class='input'>unglue(twitter)
+</div>
+<div class='output'>$no_at_wrd
+[1] &quot;(?&lt;![@\\w])&quot;
+
+$at
+[1] &quot;(@)&quot;
+
+$s_gr1
+[1] &quot;(&quot;
+
+$handle
+[1] &quot;([a-z0-9_]{1,15})&quot;
+
+$boundary
+[1] &quot;\\b&quot;
+
+$e_gr1
+[1] &quot;)&quot;
+
+</div>
+<div class='input'>comments(twitter)
+</div>
+<div class='output'>$no_at_wrd
+[1] &quot;Ensure doesn&#39;t start with @ or a word&quot;
+
+$at
+[1] &quot;Capture starting with @ symbol&quot;
+
+$s_gr1
+[1] &quot;GROUP 1 START&quot;
+
+$handle
+[1] &quot;Any 15 letters, numbers, or underscores&quot;
+
+$boundary
+NULL
+
+$e_gr1
+[1] &quot;GROUP 1 END&quot;
+
+</div>
+<div class='input'>subs(twitter)
+</div>
+<div class='output'>$no_at_wrd
+[1] &quot;(?&lt;![@\\w])&quot;
+
+$at
+[1] &quot;(@)&quot;
+
+$s_gr1
+[1] &quot;(&quot;
+
+$handle
+[1] &quot;([a-z0-9_]{1,15})&quot;
+
+$boundary
+[1] &quot;\\b&quot;
+
+$e_gr1
+[1] &quot;)&quot;
+
+</div>
+<div class='input'>summary(twitter)
+</div>
+<div class='output'>
+ (?&lt;![@\w])(@)(([a-z0-9_]{1,15})\b) 
+ ================================== 
+</div>
+<strong class='message'>SUB-EXPR 1: (?&lt;![@\w])</strong>
+<strong class='message'>NAME      : no_at_wrd</strong>
+<strong class='message'>COMMENT   : &quot;Ensure doesn&#39;t start with @ or a word&quot;
+</strong>
+<strong class='message'>SUB-EXPR 2: (@)</strong>
+<strong class='message'>NAME      : at</strong>
+<strong class='message'>COMMENT   : &quot;Capture starting with @ symbol&quot;
+</strong>
+<strong class='message'>SUB-EXPR 3: (</strong>
+<strong class='message'>NAME      : s_gr1</strong>
+<strong class='message'>COMMENT   : &quot;GROUP 1 START&quot;
+</strong>
+<strong class='message'>SUB-EXPR 4: ([a-z0-9_]{1,15})</strong>
+<strong class='message'>NAME      : handle</strong>
+<strong class='message'>COMMENT   : &quot;Any 15 letters, numbers, or underscores&quot;
+</strong>
+<strong class='message'>SUB-EXPR 5: \b</strong>
+<strong class='message'>NAME      : boundary</strong>
+<strong class='message'>COMMENT   : 
+</strong>
+<strong class='message'>SUB-EXPR 6: )</strong>
+<strong class='message'>NAME      : e_gr1</strong>
+<strong class='message'>COMMENT   : &quot;GROUP 1 END&quot;
+</strong>
+<div class='input'>test(twitter)
+</div>
+<strong class='warning'>Warning message:
+The following regex sub-expressions are not valid in isolation:
+
+(1) (
+(2) )</strong>
+<div class='output'>$regex
+[1] TRUE
+
+$subexpressions
+no_at_wrd        at     s_gr1    handle  boundary     e_gr1 
+     TRUE      TRUE     FALSE      TRUE      TRUE     FALSE 
+
+</div>
+<div class='input'>explain(twitter)
+</div>
+<div class='output'>NODE                     EXPLANATION
+--------------------------------------------------------------------------------
+  (?&lt;!                     look behind to see if there is not:
+--------------------------------------------------------------------------------
+    [@\\w]                    any character of: &#39;@&#39;, word characters
+                             (a-z, A-Z, 0-9, _)
+--------------------------------------------------------------------------------
+  )                        end of look-behind
+--------------------------------------------------------------------------------
+  (                        group and capture to \\1:
+--------------------------------------------------------------------------------
+    @                        &#39;@&#39;
+--------------------------------------------------------------------------------
+  )                        end of \\1
+--------------------------------------------------------------------------------
+  (                        group and capture to \\2:
+--------------------------------------------------------------------------------
+    (                        group and capture to \\3:
+--------------------------------------------------------------------------------
+      [a-z0-9_]{1,15}          any character of: &#39;a&#39; to &#39;z&#39;, &#39;0&#39; to
+                               &#39;9&#39;, &#39;_&#39; (between 1 and 15 times
+                               (matching the most amount possible))
+--------------------------------------------------------------------------------
+    )                        end of \\3
+--------------------------------------------------------------------------------
+    \\b                       the boundary between a word char (\\w)
+                             and something that is not a word char
+--------------------------------------------------------------------------------
+  )                        end of \\2
+
+</div>
+<div class='input'>
+x &lt;- c(&quot;@hadley I like #rstats for #ggplot2 work.&quot;,
+    &quot;Difference between #magrittr and #pipeR, both implement pipeline operators for #rstats:
+        http://renkun.me/r/2014/07/26/difference-between-magrittr-and-pipeR.html @timelyportfolio&quot;,
+    &quot;Slides from great talk: @ramnath_vaidya: Interactive slides from Interactive Visualization
+        presentation #user2014. http://ramnathv.github.io/user2014-rcharts/#1&quot;,
+    &quot;tyler.rinker@gamil.com is my email&quot;,
+    &quot;A non valid Twitter is @abcdefghijklmnopqrstuvwxyz&quot;
+)
+
+library(qdapRegex)
+rm_default(x, pattern = twitter, extract = TRUE)
+</div>
+<div class='output'>[[1]]
+[1] &quot;@hadley&quot;
+
+[[2]]
+[1] &quot;@timelyportfolio&quot;
+
+[[3]]
+[1] &quot;@ramnath_vaidya&quot;
+
+[[4]]
+[1] NA
+
+[[5]]
+[1] NA
+
+</div>
+<div class='input'>
+## Example 3 (Modular Sub-expression Chunks)
+combined &lt;- construct(
+    twitter = twitter               %:)%&quot;Twitter regex created previously&quot;,
+    or =      &quot;|&quot;                   %:)%&quot;Join handle regex &amp; hash tag regex&quot;,
+    hash =    grab(&quot;@rm_hash&quot;)     %:)%&quot;Twitter hash tag regex&quot;
+)
+
+combined
+</div>
+<div class='output'>[1] &quot;(?&lt;![@\\w])(@)(([a-z0-9_]{1,15})\\b)|(?&lt;!/)((#)(\\w+))&quot;
+</div>
+<div class='input'>unglue(combined)
+</div>
+<div class='output'>$twitter
+[1] &quot;(?&lt;![@\\w])(@)(([a-z0-9_]{1,15})\\b)&quot;
+attr(,&quot;subs&quot;)
+attr(,&quot;subs&quot;)$no_at_wrd
+[1] &quot;(?&lt;![@\\w])&quot;
+
+attr(,&quot;subs&quot;)$at
+[1] &quot;(@)&quot;
+
+attr(,&quot;subs&quot;)$s_gr1
+[1] &quot;(&quot;
+
+attr(,&quot;subs&quot;)$handle
+[1] &quot;([a-z0-9_]{1,15})&quot;
+
+attr(,&quot;subs&quot;)$boundary
+[1] &quot;\\b&quot;
+
+attr(,&quot;subs&quot;)$e_gr1
+[1] &quot;)&quot;
+
+attr(,&quot;comments&quot;)
+attr(,&quot;comments&quot;)$no_at_wrd
+[1] &quot;Ensure doesn&#39;t start with @ or a word&quot;
+
+attr(,&quot;comments&quot;)$at
+[1] &quot;Capture starting with @ symbol&quot;
+
+attr(,&quot;comments&quot;)$s_gr1
+[1] &quot;GROUP 1 START&quot;
+
+attr(,&quot;comments&quot;)$handle
+[1] &quot;Any 15 letters, numbers, or underscores&quot;
+
+attr(,&quot;comments&quot;)$boundary
+NULL
+
+attr(,&quot;comments&quot;)$e_gr1
+[1] &quot;GROUP 1 END&quot;
+
+
+$or
+[1] &quot;|&quot;
+
+$hash
+[1] &quot;(?&lt;!/)((#)(\\w+))&quot;
+
+</div>
+<div class='input'>comments(combined)
+</div>
+<div class='output'>$twitter
+[1] &quot;Twitter regex created previously&quot;
+
+$or
+[1] &quot;Join handle regex &amp; hash tag regex&quot;
+
+$hash
+[1] &quot;Twitter hash tag regex&quot;
+
+</div>
+<div class='input'>subs(combined)
+</div>
+<div class='output'>$twitter
+[1] &quot;(?&lt;![@\\w])(@)(([a-z0-9_]{1,15})\\b)&quot;
+attr(,&quot;subs&quot;)
+attr(,&quot;subs&quot;)$no_at_wrd
+[1] &quot;(?&lt;![@\\w])&quot;
+
+attr(,&quot;subs&quot;)$at
+[1] &quot;(@)&quot;
+
+attr(,&quot;subs&quot;)$s_gr1
+[1] &quot;(&quot;
+
+attr(,&quot;subs&quot;)$handle
+[1] &quot;([a-z0-9_]{1,15})&quot;
+
+attr(,&quot;subs&quot;)$boundary
+[1] &quot;\\b&quot;
+
+attr(,&quot;subs&quot;)$e_gr1
+[1] &quot;)&quot;
+
+attr(,&quot;comments&quot;)
+attr(,&quot;comments&quot;)$no_at_wrd
+[1] &quot;Ensure doesn&#39;t start with @ or a word&quot;
+
+attr(,&quot;comments&quot;)$at
+[1] &quot;Capture starting with @ symbol&quot;
+
+attr(,&quot;comments&quot;)$s_gr1
+[1] &quot;GROUP 1 START&quot;
+
+attr(,&quot;comments&quot;)$handle
+[1] &quot;Any 15 letters, numbers, or underscores&quot;
+
+attr(,&quot;comments&quot;)$boundary
+NULL
+
+attr(,&quot;comments&quot;)$e_gr1
+[1] &quot;GROUP 1 END&quot;
+
+
+$or
+[1] &quot;|&quot;
+
+$hash
+[1] &quot;(?&lt;!/)((#)(\\w+))&quot;
+
+</div>
+<div class='input'>summary(combined)
+</div>
+<div class='output'>
+ (?&lt;![@\w])(@)(([a-z0-9_]{1,15})\b)|(?&lt;!/)((#)(\w+)) 
+ =================================================== 
+</div>
+<strong class='message'>SUB-EXPR 1: (?&lt;![@\w])(@)(([a-z0-9_]{1,15})\b)</strong>
+<strong class='message'>NAME      : twitter</strong>
+<strong class='message'>COMMENT   : &quot;Twitter regex created previously&quot;
+</strong>
+<strong class='message'>SUB-EXPR 2: |</strong>
+<strong class='message'>NAME      : or</strong>
+<strong class='message'>COMMENT   : &quot;Join handle regex &amp; hash tag regex&quot;
+</strong>
+<strong class='message'>SUB-EXPR 3: (?&lt;!/)((#)(\w+))</strong>
+<strong class='message'>NAME      : hash</strong>
+<strong class='message'>COMMENT   : &quot;Twitter hash tag regex&quot;
+</strong>
+<div class='input'>test(combined)
+</div>
+<div class='output'>$regex
+[1] TRUE
+
+$subexpressions
+twitter      or    hash 
+   TRUE    TRUE    TRUE 
+
+</div>
+<div class='input'>explain(combined)
+</div>
+<div class='output'>NODE                     EXPLANATION
+--------------------------------------------------------------------------------
+  (?&lt;!                     look behind to see if there is not:
+--------------------------------------------------------------------------------
+    [@\\w]                    any character of: &#39;@&#39;, word characters
+                             (a-z, A-Z, 0-9, _)
+--------------------------------------------------------------------------------
+  )                        end of look-behind
+--------------------------------------------------------------------------------
+  (                        group and capture to \\1:
+--------------------------------------------------------------------------------
+    @                        &#39;@&#39;
+--------------------------------------------------------------------------------
+  )                        end of \\1
+--------------------------------------------------------------------------------
+  (                        group and capture to \\2:
+--------------------------------------------------------------------------------
+    (                        group and capture to \\3:
+--------------------------------------------------------------------------------
+      [a-z0-9_]{1,15}          any character of: &#39;a&#39; to &#39;z&#39;, &#39;0&#39; to
+                               &#39;9&#39;, &#39;_&#39; (between 1 and 15 times
+                               (matching the most amount possible))
+--------------------------------------------------------------------------------
+    )                        end of \\3
+--------------------------------------------------------------------------------
+    \\b                       the boundary between a word char (\\w)
+                             and something that is not a word char
+--------------------------------------------------------------------------------
+  )                        end of \\2
+--------------------------------------------------------------------------------
+ |                        OR
+--------------------------------------------------------------------------------
+  (?&lt;!                     look behind to see if there is not:
+--------------------------------------------------------------------------------
+    /                        &#39;/&#39;
+--------------------------------------------------------------------------------
+  )                        end of look-behind
+--------------------------------------------------------------------------------
+  (                        group and capture to \\4:
+--------------------------------------------------------------------------------
+    (                        group and capture to \\5:
+--------------------------------------------------------------------------------
+    )                        end of \\5
+--------------------------------------------------------------------------------
+  )                        end of \\4
+
+</div>
+<div class='input'>
+## Different Structure (no names): Example from Martin Fowler:
+## *Note: Fowler argues for improved choices in regex representation
+## and names that make the regex functionality more evident, commenting
+## only where needed. See:
+## browseURL(&quot;http://martinfowler.com/bliki/ComposedRegex.html&quot;)
+
+pattern &lt;- construct(
+    &#39;@&quot;^score&#39;,
+    &#39;\\s+&#39;,
+    &#39;(\\d+)&#39;          %:)% &#39;points&#39;,
+    &#39;\\s+&#39;,
+    &#39;for&#39;,
+    &#39;\\s+&#39;,
+    &#39;(\\d+)&#39;          %:)% &#39;number of nights&#39;,
+    &#39;\\s+&#39;,
+    &#39;night&#39;           ,
+    &#39;s?&#39;              %:)% &#39;optional plural&#39;,
+    &#39;\\s+&#39;,
+    &#39;at&#39;,
+    &#39;\\s+&#39;,
+    &#39;(.*)&#39;            %:)% &#39;hotel name&#39;,
+    &#39;&quot;;&#39;
+)
+
+summary(pattern)
+</div>
+<div class='output'>
+ @&quot;^score\s+(\d+)\s+for\s+(\d+)\s+nights?\s+at\s+(.*)&quot;; 
+ ====================================================== 
+</div>
+<strong class='message'>SUB-EXPR 1: @&quot;^score</strong>
+<strong class='message'>NAME      : </strong>
+<strong class='message'>COMMENT   : 
+</strong>
+<strong class='message'>SUB-EXPR 2: \s+</strong>
+<strong class='message'>NAME      : </strong>
+<strong class='message'>COMMENT   : 
+</strong>
+<strong class='message'>SUB-EXPR 3: (\d+)</strong>
+<strong class='message'>NAME      : </strong>
+<strong class='message'>COMMENT   : &quot;points&quot;
+</strong>
+<strong class='message'>SUB-EXPR 4: \s+</strong>
+<strong class='message'>NAME      : </strong>
+<strong class='message'>COMMENT   : 
+</strong>
+<strong class='message'>SUB-EXPR 5: for</strong>
+<strong class='message'>NAME      : </strong>
+<strong class='message'>COMMENT   : 
+</strong>
+<strong class='message'>SUB-EXPR 6: \s+</strong>
+<strong class='message'>NAME      : </strong>
+<strong class='message'>COMMENT   : 
+</strong>
+<strong class='message'>SUB-EXPR 7: (\d+)</strong>
+<strong class='message'>NAME      : </strong>
+<strong class='message'>COMMENT   : &quot;number of nights&quot;
+</strong>
+<strong class='message'>SUB-EXPR 8: \s+</strong>
+<strong class='message'>NAME      : </strong>
+<strong class='message'>COMMENT   : 
+</strong>
+<strong class='message'>SUB-EXPR 9: night</strong>
+<strong class='message'>NAME      : </strong>
+<strong class='message'>COMMENT   : 
+</strong>
+<strong class='message'>SUB-EXPR 10: s?</strong>
+<strong class='message'>NAME       : </strong>
+<strong class='message'>COMMENT    : &quot;optional plural&quot;
+</strong>
+<strong class='message'>SUB-EXPR 11: \s+</strong>
+<strong class='message'>NAME       : </strong>
+<strong class='message'>COMMENT    : 
+</strong>
+<strong class='message'>SUB-EXPR 12: at</strong>
+<strong class='message'>NAME       : </strong>
+<strong class='message'>COMMENT    : 
+</strong>
+<strong class='message'>SUB-EXPR 13: \s+</strong>
+<strong class='message'>NAME       : </strong>
+<strong class='message'>COMMENT    : 
+</strong>
+<strong class='message'>SUB-EXPR 14: (.*)</strong>
+<strong class='message'>NAME       : </strong>
+<strong class='message'>COMMENT    : &quot;hotel name&quot;
+</strong>
+<strong class='message'>SUB-EXPR 15: &quot;;</strong>
+<strong class='message'>NAME       : </strong>
+<strong class='message'>COMMENT    : 
+</strong></pre>
+  </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>construct</li>
+    </ul>
+    <ul>
+      <li>regex</li>
+    </ul> -->
+      
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

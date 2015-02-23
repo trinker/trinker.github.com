@@ -2,7 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+<<<<<<< HEAD
 <title>dm_typology. discmark 0.0.3</title>
+=======
+<title>dm_typology. discmark 0.0.2</title>
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +24,11 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
+<<<<<<< HEAD
       <a class="brand" href="#">discmark 0.0.3</a>
+=======
+      <a class="brand" href="#">discmark 0.0.2</a>
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,7 +48,11 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
+<<<<<<< HEAD
     <pre><div>dm_typology(text.var, grouping.var, n.before&nbsp;=&nbsp;1, tot&nbsp;=&nbsp;FALSE, n.after&nbsp;=&nbsp;n.before, ord.inds&nbsp;=&nbsp;TRUE, markup&nbsp;=&nbsp;c("<<", ">>"), name&nbsp;=&nbsp;"typology", ...)</div></pre>
+=======
+    <pre><div>dm_typology(text.var, grouping.var&nbsp;=&nbsp;NULL, n.before&nbsp;=&nbsp;1, tot&nbsp;=&nbsp;FALSE, n.after&nbsp;=&nbsp;n.before, ord.inds&nbsp;=&nbsp;TRUE, markup&nbsp;=&nbsp;c("<<", ">>"), name&nbsp;=&nbsp;"typology", ...)</div></pre>
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
     
     <h2>Arguments</h2>
     <dl>
@@ -113,20 +125,33 @@ English Language Series. London: Longman.</p>
     </div>
     
     <h2 id="examples">Examples</h2>
+<<<<<<< HEAD
     <pre class="examples"><div class='input'>out &lt;- with(pres_debates2012[1:200, ], dm_typology(dialogue, person))
 out[1]
 </div>
 <div class='output'>$counts
   person word.count positive negative
+=======
+    <pre class="examples"><div class='input'>with(pres_debates2012[1:200, ], dm_typology(dialogue, person))
+</div>
+<div class='output'>$counts
+  LEHRER word.count positive negative
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 1  OBAMA        943  1(.11%)        0
 2 ROMNEY       1349  3(.22%)        0
 3 LEHRER        316  3(.95%)  1(.32%)
 
+<<<<<<< HEAD
 </div>
 <div class='input'>out[2]
 </div>
 <div class='output'>$positive
 ===================================
+=======
+$positive
+</div>
+<strong class='message'>===================================
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 Event 1: [lines 41-43]
 
     OBAMA:  And so|
@@ -134,7 +159,11 @@ Event 1: [lines 41-43]
  ** ROMNEY: That&#39;s &lt;&lt;that&#39;s a&gt;&gt; big topic.
 
     ROMNEY: Can we can we stay on Medicare? 
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 2: [lines 98-100]
 
@@ -144,7 +173,11 @@ Event 2: [lines 98-100]
  ** LEHRER: Well, &lt;&lt;here&#39;s a&gt;&gt; specific|
 
     ROMNEY: But let&#39;s let&#39;s mention let me mention the other one. 
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 3: [lines 103-105]
 
@@ -156,7 +189,11 @@ Event 3: [lines 103-105]
     OBAMA:  The reason we have been in such a enormous economic
             crisis was prompted by reckless behavior across the
             board. 
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 ===================================
 Event 4: [lines 145-147]
 
@@ -167,6 +204,7 @@ Event 4: [lines 145-147]
             a&gt;&gt; clear difference, and that has to do with the
             Affordable Care Act, Obamacare.
 
+<<<<<<< HEAD
     LEHRER: And it&#39;s a two minute new new segment, and that means two
             minutes each. 
  
@@ -176,17 +214,36 @@ Event 5: [lines 146-148]
     LEHRER: Now, let&#39;s move to health care where I know there is a
             clear difference, and that has to do with the Affordable
             Care Act, Obamacare.
+=======
+    LEHRER: And &lt;&lt;it&#39;s a&gt;&gt; two minute new new segment, and that means
+            two minutes each. 
+
+===================================
+Event 5: [lines 146-148]
+
+    LEHRER: Now, let&#39;s move to health care where I know there &lt;&lt;is
+            a&gt;&gt; clear difference, and that has to do with the
+            Affordable Care Act, Obamacare.
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
  ** LEHRER: And &lt;&lt;it&#39;s a&gt;&gt; two minute new new segment, and that means
             two minutes each.
 
     LEHRER: And you go first, Governor Romney. 
+<<<<<<< HEAD
 
 </div>
 <div class='input'>out[3]
 </div>
 <div class='output'>$negative
 ===================================
+=======
+</strong>
+<div class='output'>
+$negative
+</div>
+<strong class='message'>===================================
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 Event 1: [lines 66-68]
 
     LEHRER: Beginning with you.
@@ -195,6 +252,7 @@ Event 1: [lines 66-68]
 
     LEHRER: And we&#39;ll go for a few minutes, and then we&#39;re going to
             go to health care, OK? 
+<<<<<<< HEAD
 
 </div>
 <div class='input'>plot(out)
@@ -203,6 +261,10 @@ Event 1: [lines 66-68]
 <div class='input'>
 ## Save externally use .doc or .txt
 ## print(out[[2]], file=&quot;neg_typology.doc&quot;)
+=======
+</strong>
+<div class='output'>
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 </div></pre>
   </div>
   <div class="span4">

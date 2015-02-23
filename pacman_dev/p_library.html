@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>p_library. pacman 0.2.0</title>
+<title>p_library. pacman 0.3.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">pacman 0.2.0</a>
+      <a class="brand" href="#">pacman 0.3.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -55,6 +55,11 @@ packages library.</dd>
       
     </div>
 
+    <div class="Display Library Packages">
+      <h2>Display Library Packages</h2>
+      
+    </div>
+
     <div class="Description">
       <h2>Description</h2>
       
@@ -67,97 +72,83 @@ packages are stored).</p>
     <h2 id="examples">Examples</h2>
     <pre class="examples"><div class='input'>p_lib()
 </div>
-<div class='output'>  [1] &quot;acc.roxygen2&quot;      &quot;acepack&quot;           &quot;acs&quot;               &quot;assertthat&quot;       
-  [5] &quot;base&quot;              &quot;BH&quot;                &quot;bibtex&quot;            &quot;bitops&quot;           
-  [9] &quot;boot&quot;              &quot;BreakoutDetection&quot; &quot;brew&quot;              &quot;caTools&quot;          
- [13] &quot;choroplethr&quot;       &quot;choroplethrMaps&quot;   &quot;chron&quot;             &quot;circlize&quot;         
- [17] &quot;class&quot;             &quot;cluster&quot;           &quot;codetools&quot;         &quot;colorspace&quot;       
- [21] &quot;compiler&quot;          &quot;curl&quot;              &quot;data.table&quot;        &quot;datasets&quot;         
- [25] &quot;DBI&quot;               &quot;devtools&quot;          &quot;dichromat&quot;         &quot;digest&quot;           
- [29] &quot;directlabels&quot;      &quot;dplyr&quot;             &quot;embodied&quot;          &quot;evaluate&quot;         
- [33] &quot;fftw&quot;              &quot;fields&quot;            &quot;foreign&quot;           &quot;formatR&quot;          
- [37] &quot;Formula&quot;           &quot;gdata&quot;             &quot;gender&quot;            &quot;geosphere&quot;        
- [41] &quot;ggplot2&quot;           &quot;ggthemes&quot;          &quot;GlobalOptions&quot;     &quot;gmp&quot;              
- [45] &quot;googleVis&quot;         &quot;gplots&quot;            &quot;graphics&quot;          &quot;grDevices&quot;        
- [49] &quot;grid&quot;              &quot;gridExtra&quot;         &quot;gtable&quot;            &quot;gtools&quot;           
- [53] &quot;gtrend&quot;            &quot;GTrendsR&quot;          &quot;highlight&quot;         &quot;highr&quot;            
- [57] &quot;Hmisc&quot;             &quot;htmltools&quot;         &quot;httr&quot;              &quot;igraph&quot;           
- [61] &quot;jsonlite&quot;          &quot;kappaSize&quot;         &quot;KernSmooth&quot;        &quot;knitcitations&quot;    
- [65] &quot;knitr&quot;             &quot;koRpus&quot;            &quot;labeling&quot;          &quot;Lahman&quot;           
- [69] &quot;lattice&quot;           &quot;latticeExtra&quot;      &quot;lazyeval&quot;          &quot;lda&quot;              
- [73] &quot;lubridate&quot;         &quot;magrittr&quot;          &quot;manipulate&quot;        &quot;maps&quot;             
- [77] &quot;maptools&quot;          &quot;markdown&quot;          &quot;MASS&quot;              &quot;Matrix&quot;           
- [81] &quot;memoise&quot;           &quot;methods&quot;           &quot;mgcv&quot;              &quot;mime&quot;             
- [85] &quot;modeltools&quot;        &quot;munsell&quot;           &quot;nlme&quot;              &quot;NLP&quot;              
- [89] &quot;nnet&quot;              &quot;nycflights13&quot;      &quot;openNLP&quot;           &quot;openNLPdata&quot;      
- [93] &quot;pacman&quot;            &quot;pander&quot;            &quot;parallel&quot;          &quot;plotflow&quot;         
- [97] &quot;plotly&quot;            &quot;plotrix&quot;           &quot;plyr&quot;              &quot;png&quot;              
-[101] &quot;proto&quot;             &quot;proxy&quot;             &quot;qdap&quot;              &quot;qdapDictionaries&quot; 
-[105] &quot;qdapRegex&quot;         &quot;qdapTools&quot;         &quot;quadprog&quot;          &quot;quantmod&quot;         
-[109] &quot;R6&quot;                &quot;RColorBrewer&quot;      &quot;Rcpp&quot;              &quot;RCurl&quot;            
-[113] &quot;RefManageR&quot;        &quot;reports&quot;           &quot;reshape2&quot;          &quot;rgeos&quot;            
-[117] &quot;rJava&quot;             &quot;rjson&quot;             &quot;RJSONIO&quot;           &quot;rmarkdown&quot;        
-[121] &quot;Rmpfr&quot;             &quot;ROAuth&quot;            &quot;roxygen2&quot;          &quot;rpart&quot;            
-[125] &quot;rstudio&quot;           &quot;rstudioapi&quot;        &quot;rvest&quot;             &quot;rworldmap&quot;        
-[129] &quot;scales&quot;            &quot;seewave&quot;           &quot;selectr&quot;           &quot;shortcut&quot;         
-[133] &quot;signal&quot;            &quot;slam&quot;              &quot;slidify&quot;           &quot;slidifyLibraries&quot; 
-[137] &quot;SnowballC&quot;         &quot;source.gist&quot;       &quot;sp&quot;                &quot;spam&quot;             
-[141] &quot;spatial&quot;           &quot;splines&quot;           &quot;staticdocs&quot;        &quot;stats&quot;            
-[145] &quot;stats4&quot;            &quot;stringdist&quot;        &quot;stringi&quot;           &quot;stringr&quot;          
-[149] &quot;survival&quot;          &quot;tcltk&quot;             &quot;testthat&quot;          &quot;tidyr&quot;            
-[153] &quot;tm&quot;                &quot;tools&quot;             &quot;topicmodels&quot;       &quot;translations&quot;     
-[157] &quot;TTR&quot;               &quot;tuneR&quot;             &quot;twitteR&quot;           &quot;utils&quot;            
-[161] &quot;venneuler&quot;         &quot;WDI&quot;               &quot;whisker&quot;           &quot;wordcloud&quot;        
-[165] &quot;XLConnect&quot;         &quot;XLConnectJars&quot;     &quot;xlsx&quot;              &quot;xlsxjars&quot;         
-[169] &quot;XML&quot;               &quot;xtable&quot;            &quot;xts&quot;               &quot;yaml&quot;             
-[173] &quot;zoo&quot;              
+<div class='output'>  [1] &quot;acc.roxygen2&quot;       &quot;acepack&quot;            &quot;ascii&quot;              &quot;assertthat&quot;         &quot;base&quot;              
+  [6] &quot;BH&quot;                 &quot;bibtex&quot;             &quot;BiSEp&quot;              &quot;bitops&quot;             &quot;boot&quot;              
+ [11] &quot;BradleyTerry2&quot;      &quot;BreakoutDetection&quot;  &quot;brew&quot;               &quot;brglm&quot;              &quot;car&quot;               
+ [16] &quot;caret&quot;              &quot;caTools&quot;            &quot;chron&quot;              &quot;class&quot;              &quot;cluster&quot;           
+ [21] &quot;codetools&quot;          &quot;colorspace&quot;         &quot;compiler&quot;           &quot;data.table&quot;         &quot;datasets&quot;          
+ [26] &quot;DBI&quot;                &quot;devtools&quot;           &quot;dichromat&quot;          &quot;digest&quot;             &quot;directlabels&quot;      
+ [31] &quot;downloader&quot;         &quot;dplyr&quot;              &quot;evaluate&quot;           &quot;foreach&quot;            &quot;foreign&quot;           
+ [36] &quot;formatR&quot;            &quot;Formula&quot;            &quot;gdata&quot;              &quot;gender&quot;             &quot;geosphere&quot;         
+ [41] &quot;ggmap&quot;              &quot;ggplot2&quot;            &quot;gmailR&quot;             &quot;googleVis&quot;          &quot;gplots&quot;            
+ [46] &quot;graphics&quot;           &quot;grDevices&quot;          &quot;grid&quot;               &quot;gridExtra&quot;          &quot;gtable&quot;            
+ [51] &quot;gtools&quot;             &quot;gtrend&quot;             &quot;hexbin&quot;             &quot;highlight&quot;          &quot;highr&quot;             
+ [56] &quot;Hmisc&quot;              &quot;htmltools&quot;          &quot;httr&quot;               &quot;igraph&quot;             &quot;iterators&quot;         
+ [61] &quot;jsonlite&quot;           &quot;KernSmooth&quot;         &quot;knitcitations&quot;      &quot;knitr&quot;              &quot;koRpus&quot;            
+ [66] &quot;labeling&quot;           &quot;lattice&quot;            &quot;latticeExtra&quot;       &quot;lazyeval&quot;           &quot;lda&quot;               
+ [71] &quot;lme4&quot;               &quot;lubridate&quot;          &quot;magrittr&quot;           &quot;manipulate&quot;         &quot;mapproj&quot;           
+ [76] &quot;maps&quot;               &quot;maptools&quot;           &quot;markdown&quot;           &quot;MASS&quot;               &quot;Matrix&quot;            
+ [81] &quot;matrixStats&quot;        &quot;mclust&quot;             &quot;memoise&quot;            &quot;methods&quot;            &quot;mgcv&quot;              
+ [86] &quot;microbenchmark&quot;     &quot;mime&quot;               &quot;minqa&quot;              &quot;munsell&quot;            &quot;nlme&quot;              
+ [91] &quot;nloptr&quot;             &quot;NLP&quot;                &quot;nnet&quot;               &quot;openNLP&quot;            &quot;openNLPdata&quot;       
+ [96] &quot;pacman&quot;             &quot;pacmanDependencies&quot; &quot;pander&quot;             &quot;parallel&quot;           &quot;plotflow&quot;          
+[101] &quot;plotluck&quot;           &quot;plotrix&quot;            &quot;plyr&quot;               &quot;png&quot;                &quot;profileModel&quot;      
+[106] &quot;ProjectTemplate&quot;    &quot;proto&quot;              &quot;proxy&quot;              &quot;psych&quot;              &quot;qdap&quot;              
+[111] &quot;qdapDictionaries&quot;   &quot;qdapRegex&quot;          &quot;qdapTools&quot;          &quot;quadprog&quot;           &quot;quantmod&quot;          
+[116] &quot;quantreg&quot;           &quot;R.methodsS3&quot;        &quot;R6&quot;                 &quot;RColorBrewer&quot;       &quot;Rcpp&quot;              
+[121] &quot;RcppEigen&quot;          &quot;RCurl&quot;              &quot;RefManageR&quot;         &quot;regexr&quot;             &quot;regextools&quot;        
+[126] &quot;regexusa&quot;           &quot;reports&quot;            &quot;reshape2&quot;           &quot;rgeos&quot;              &quot;RgoogleMaps&quot;       
+[131] &quot;rJava&quot;              &quot;rjson&quot;              &quot;RJSONIO&quot;            &quot;rJython&quot;            &quot;rmarkdown&quot;         
+[136] &quot;ROAuth&quot;             &quot;roxygen2&quot;           &quot;rpart&quot;              &quot;rstudio&quot;            &quot;rstudioapi&quot;        
+[141] &quot;RWordPress&quot;         &quot;scales&quot;             &quot;shortcut&quot;           &quot;sjPlot&quot;             &quot;slam&quot;              
+[146] &quot;slidify&quot;            &quot;slidifyLibraries&quot;   &quot;SnowballC&quot;          &quot;SOdemoing&quot;          &quot;sp&quot;                
+[151] &quot;SparseM&quot;            &quot;spatial&quot;            &quot;splines&quot;            &quot;splitstackshape&quot;    &quot;staticdocs&quot;        
+[156] &quot;stats&quot;              &quot;stats4&quot;             &quot;stringdist&quot;         &quot;stringi&quot;            &quot;stringr&quot;           
+[161] &quot;survival&quot;           &quot;taRifx&quot;             &quot;tcltk&quot;              &quot;testthat&quot;           &quot;tidyr&quot;             
+[166] &quot;tm&quot;                 &quot;tools&quot;              &quot;translations&quot;       &quot;TTR&quot;                &quot;twitteR&quot;           
+[171] &quot;utils&quot;              &quot;venneuler&quot;          &quot;whisker&quot;            &quot;WikipediR&quot;          &quot;wordcloud&quot;         
+[176] &quot;XLConnect&quot;          &quot;XLConnectJars&quot;      &quot;xlsx&quot;               &quot;xlsxjars&quot;           &quot;XML&quot;               
+[181] &quot;XMLRPC&quot;             &quot;xtable&quot;             &quot;xts&quot;                &quot;yaml&quot;               &quot;zoo&quot;               
 </div>
 <div class='input'>p_library()
 </div>
-<div class='output'>  [1] &quot;acc.roxygen2&quot;      &quot;acepack&quot;           &quot;acs&quot;               &quot;assertthat&quot;       
-  [5] &quot;base&quot;              &quot;BH&quot;                &quot;bibtex&quot;            &quot;bitops&quot;           
-  [9] &quot;boot&quot;              &quot;BreakoutDetection&quot; &quot;brew&quot;              &quot;caTools&quot;          
- [13] &quot;choroplethr&quot;       &quot;choroplethrMaps&quot;   &quot;chron&quot;             &quot;circlize&quot;         
- [17] &quot;class&quot;             &quot;cluster&quot;           &quot;codetools&quot;         &quot;colorspace&quot;       
- [21] &quot;compiler&quot;          &quot;curl&quot;              &quot;data.table&quot;        &quot;datasets&quot;         
- [25] &quot;DBI&quot;               &quot;devtools&quot;          &quot;dichromat&quot;         &quot;digest&quot;           
- [29] &quot;directlabels&quot;      &quot;dplyr&quot;             &quot;embodied&quot;          &quot;evaluate&quot;         
- [33] &quot;fftw&quot;              &quot;fields&quot;            &quot;foreign&quot;           &quot;formatR&quot;          
- [37] &quot;Formula&quot;           &quot;gdata&quot;             &quot;gender&quot;            &quot;geosphere&quot;        
- [41] &quot;ggplot2&quot;           &quot;ggthemes&quot;          &quot;GlobalOptions&quot;     &quot;gmp&quot;              
- [45] &quot;googleVis&quot;         &quot;gplots&quot;            &quot;graphics&quot;          &quot;grDevices&quot;        
- [49] &quot;grid&quot;              &quot;gridExtra&quot;         &quot;gtable&quot;            &quot;gtools&quot;           
- [53] &quot;gtrend&quot;            &quot;GTrendsR&quot;          &quot;highlight&quot;         &quot;highr&quot;            
- [57] &quot;Hmisc&quot;             &quot;htmltools&quot;         &quot;httr&quot;              &quot;igraph&quot;           
- [61] &quot;jsonlite&quot;          &quot;kappaSize&quot;         &quot;KernSmooth&quot;        &quot;knitcitations&quot;    
- [65] &quot;knitr&quot;             &quot;koRpus&quot;            &quot;labeling&quot;          &quot;Lahman&quot;           
- [69] &quot;lattice&quot;           &quot;latticeExtra&quot;      &quot;lazyeval&quot;          &quot;lda&quot;              
- [73] &quot;lubridate&quot;         &quot;magrittr&quot;          &quot;manipulate&quot;        &quot;maps&quot;             
- [77] &quot;maptools&quot;          &quot;markdown&quot;          &quot;MASS&quot;              &quot;Matrix&quot;           
- [81] &quot;memoise&quot;           &quot;methods&quot;           &quot;mgcv&quot;              &quot;mime&quot;             
- [85] &quot;modeltools&quot;        &quot;munsell&quot;           &quot;nlme&quot;              &quot;NLP&quot;              
- [89] &quot;nnet&quot;              &quot;nycflights13&quot;      &quot;openNLP&quot;           &quot;openNLPdata&quot;      
- [93] &quot;pacman&quot;            &quot;pander&quot;            &quot;parallel&quot;          &quot;plotflow&quot;         
- [97] &quot;plotly&quot;            &quot;plotrix&quot;           &quot;plyr&quot;              &quot;png&quot;              
-[101] &quot;proto&quot;             &quot;proxy&quot;             &quot;qdap&quot;              &quot;qdapDictionaries&quot; 
-[105] &quot;qdapRegex&quot;         &quot;qdapTools&quot;         &quot;quadprog&quot;          &quot;quantmod&quot;         
-[109] &quot;R6&quot;                &quot;RColorBrewer&quot;      &quot;Rcpp&quot;              &quot;RCurl&quot;            
-[113] &quot;RefManageR&quot;        &quot;reports&quot;           &quot;reshape2&quot;          &quot;rgeos&quot;            
-[117] &quot;rJava&quot;             &quot;rjson&quot;             &quot;RJSONIO&quot;           &quot;rmarkdown&quot;        
-[121] &quot;Rmpfr&quot;             &quot;ROAuth&quot;            &quot;roxygen2&quot;          &quot;rpart&quot;            
-[125] &quot;rstudio&quot;           &quot;rstudioapi&quot;        &quot;rvest&quot;             &quot;rworldmap&quot;        
-[129] &quot;scales&quot;            &quot;seewave&quot;           &quot;selectr&quot;           &quot;shortcut&quot;         
-[133] &quot;signal&quot;            &quot;slam&quot;              &quot;slidify&quot;           &quot;slidifyLibraries&quot; 
-[137] &quot;SnowballC&quot;         &quot;source.gist&quot;       &quot;sp&quot;                &quot;spam&quot;             
-[141] &quot;spatial&quot;           &quot;splines&quot;           &quot;staticdocs&quot;        &quot;stats&quot;            
-[145] &quot;stats4&quot;            &quot;stringdist&quot;        &quot;stringi&quot;           &quot;stringr&quot;          
-[149] &quot;survival&quot;          &quot;tcltk&quot;             &quot;testthat&quot;          &quot;tidyr&quot;            
-[153] &quot;tm&quot;                &quot;tools&quot;             &quot;topicmodels&quot;       &quot;translations&quot;     
-[157] &quot;TTR&quot;               &quot;tuneR&quot;             &quot;twitteR&quot;           &quot;utils&quot;            
-[161] &quot;venneuler&quot;         &quot;WDI&quot;               &quot;whisker&quot;           &quot;wordcloud&quot;        
-[165] &quot;XLConnect&quot;         &quot;XLConnectJars&quot;     &quot;xlsx&quot;              &quot;xlsxjars&quot;         
-[169] &quot;XML&quot;               &quot;xtable&quot;            &quot;xts&quot;               &quot;yaml&quot;             
-[173] &quot;zoo&quot;              
+<div class='output'>  [1] &quot;acc.roxygen2&quot;       &quot;acepack&quot;            &quot;ascii&quot;              &quot;assertthat&quot;         &quot;base&quot;              
+  [6] &quot;BH&quot;                 &quot;bibtex&quot;             &quot;BiSEp&quot;              &quot;bitops&quot;             &quot;boot&quot;              
+ [11] &quot;BradleyTerry2&quot;      &quot;BreakoutDetection&quot;  &quot;brew&quot;               &quot;brglm&quot;              &quot;car&quot;               
+ [16] &quot;caret&quot;              &quot;caTools&quot;            &quot;chron&quot;              &quot;class&quot;              &quot;cluster&quot;           
+ [21] &quot;codetools&quot;          &quot;colorspace&quot;         &quot;compiler&quot;           &quot;data.table&quot;         &quot;datasets&quot;          
+ [26] &quot;DBI&quot;                &quot;devtools&quot;           &quot;dichromat&quot;          &quot;digest&quot;             &quot;directlabels&quot;      
+ [31] &quot;downloader&quot;         &quot;dplyr&quot;              &quot;evaluate&quot;           &quot;foreach&quot;            &quot;foreign&quot;           
+ [36] &quot;formatR&quot;            &quot;Formula&quot;            &quot;gdata&quot;              &quot;gender&quot;             &quot;geosphere&quot;         
+ [41] &quot;ggmap&quot;              &quot;ggplot2&quot;            &quot;gmailR&quot;             &quot;googleVis&quot;          &quot;gplots&quot;            
+ [46] &quot;graphics&quot;           &quot;grDevices&quot;          &quot;grid&quot;               &quot;gridExtra&quot;          &quot;gtable&quot;            
+ [51] &quot;gtools&quot;             &quot;gtrend&quot;             &quot;hexbin&quot;             &quot;highlight&quot;          &quot;highr&quot;             
+ [56] &quot;Hmisc&quot;              &quot;htmltools&quot;          &quot;httr&quot;               &quot;igraph&quot;             &quot;iterators&quot;         
+ [61] &quot;jsonlite&quot;           &quot;KernSmooth&quot;         &quot;knitcitations&quot;      &quot;knitr&quot;              &quot;koRpus&quot;            
+ [66] &quot;labeling&quot;           &quot;lattice&quot;            &quot;latticeExtra&quot;       &quot;lazyeval&quot;           &quot;lda&quot;               
+ [71] &quot;lme4&quot;               &quot;lubridate&quot;          &quot;magrittr&quot;           &quot;manipulate&quot;         &quot;mapproj&quot;           
+ [76] &quot;maps&quot;               &quot;maptools&quot;           &quot;markdown&quot;           &quot;MASS&quot;               &quot;Matrix&quot;            
+ [81] &quot;matrixStats&quot;        &quot;mclust&quot;             &quot;memoise&quot;            &quot;methods&quot;            &quot;mgcv&quot;              
+ [86] &quot;microbenchmark&quot;     &quot;mime&quot;               &quot;minqa&quot;              &quot;munsell&quot;            &quot;nlme&quot;              
+ [91] &quot;nloptr&quot;             &quot;NLP&quot;                &quot;nnet&quot;               &quot;openNLP&quot;            &quot;openNLPdata&quot;       
+ [96] &quot;pacman&quot;             &quot;pacmanDependencies&quot; &quot;pander&quot;             &quot;parallel&quot;           &quot;plotflow&quot;          
+[101] &quot;plotluck&quot;           &quot;plotrix&quot;            &quot;plyr&quot;               &quot;png&quot;                &quot;profileModel&quot;      
+[106] &quot;ProjectTemplate&quot;    &quot;proto&quot;              &quot;proxy&quot;              &quot;psych&quot;              &quot;qdap&quot;              
+[111] &quot;qdapDictionaries&quot;   &quot;qdapRegex&quot;          &quot;qdapTools&quot;          &quot;quadprog&quot;           &quot;quantmod&quot;          
+[116] &quot;quantreg&quot;           &quot;R.methodsS3&quot;        &quot;R6&quot;                 &quot;RColorBrewer&quot;       &quot;Rcpp&quot;              
+[121] &quot;RcppEigen&quot;          &quot;RCurl&quot;              &quot;RefManageR&quot;         &quot;regexr&quot;             &quot;regextools&quot;        
+[126] &quot;regexusa&quot;           &quot;reports&quot;            &quot;reshape2&quot;           &quot;rgeos&quot;              &quot;RgoogleMaps&quot;       
+[131] &quot;rJava&quot;              &quot;rjson&quot;              &quot;RJSONIO&quot;            &quot;rJython&quot;            &quot;rmarkdown&quot;         
+[136] &quot;ROAuth&quot;             &quot;roxygen2&quot;           &quot;rpart&quot;              &quot;rstudio&quot;            &quot;rstudioapi&quot;        
+[141] &quot;RWordPress&quot;         &quot;scales&quot;             &quot;shortcut&quot;           &quot;sjPlot&quot;             &quot;slam&quot;              
+[146] &quot;slidify&quot;            &quot;slidifyLibraries&quot;   &quot;SnowballC&quot;          &quot;SOdemoing&quot;          &quot;sp&quot;                
+[151] &quot;SparseM&quot;            &quot;spatial&quot;            &quot;splines&quot;            &quot;splitstackshape&quot;    &quot;staticdocs&quot;        
+[156] &quot;stats&quot;              &quot;stats4&quot;             &quot;stringdist&quot;         &quot;stringi&quot;            &quot;stringr&quot;           
+[161] &quot;survival&quot;           &quot;taRifx&quot;             &quot;tcltk&quot;              &quot;testthat&quot;           &quot;tidyr&quot;             
+[166] &quot;tm&quot;                 &quot;tools&quot;              &quot;translations&quot;       &quot;TTR&quot;                &quot;twitteR&quot;           
+[171] &quot;utils&quot;              &quot;venneuler&quot;          &quot;whisker&quot;            &quot;WikipediR&quot;          &quot;wordcloud&quot;         
+[176] &quot;XLConnect&quot;          &quot;XLConnectJars&quot;      &quot;xlsx&quot;               &quot;xlsxjars&quot;           &quot;XML&quot;               
+[181] &quot;XMLRPC&quot;             &quot;xtable&quot;             &quot;xts&quot;                &quot;yaml&quot;               &quot;zoo&quot;               
 </div>
 <div class='input'>## &lt;strong&gt;Not run&lt;/strong&gt;: p_lib(TRUE)
 </div></pre>

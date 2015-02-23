@@ -2,7 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+<<<<<<< HEAD
 <title>dm_causality. discmark 0.0.3</title>
+=======
+<title>dm_causality. discmark 0.0.2</title>
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +24,11 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
+<<<<<<< HEAD
       <a class="brand" href="#">discmark 0.0.3</a>
+=======
+      <a class="brand" href="#">discmark 0.0.2</a>
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -40,8 +48,13 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
+<<<<<<< HEAD
     <pre><div>dm_causality(text.var, grouping.var, n.before&nbsp;=&nbsp;1, tot&nbsp;=&nbsp;FALSE, n.after&nbsp;=&nbsp;n.before, ord.inds&nbsp;=&nbsp;TRUE, markup&nbsp;=&nbsp;c("<<", ">>"), name&nbsp;=&nbsp;"causality", ...)</div>
 <div>dm_causality_sub(text.var, grouping.var, n.before&nbsp;=&nbsp;1, tot&nbsp;=&nbsp;FALSE, n.after&nbsp;=&nbsp;n.before, ord.inds&nbsp;=&nbsp;TRUE, markup&nbsp;=&nbsp;c("<<", ">>"), name&nbsp;=&nbsp;"causality_sub", ...)</div></pre>
+=======
+    <pre><div>dm_causality(text.var, grouping.var&nbsp;=&nbsp;NULL, n.before&nbsp;=&nbsp;1, tot&nbsp;=&nbsp;FALSE, n.after&nbsp;=&nbsp;n.before, ord.inds&nbsp;=&nbsp;TRUE, markup&nbsp;=&nbsp;c("<<", ">>"), name&nbsp;=&nbsp;"causality", ...)</div>
+<div>dm_causality_sub(text.var, grouping.var&nbsp;=&nbsp;NULL, n.before&nbsp;=&nbsp;1, tot&nbsp;=&nbsp;FALSE, n.after&nbsp;=&nbsp;n.before, ord.inds&nbsp;=&nbsp;TRUE, markup&nbsp;=&nbsp;c("<<", ">>"), name&nbsp;=&nbsp;"causality_sub", ...)</div></pre>
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
     
     <h2>Arguments</h2>
     <dl>
@@ -125,12 +138,17 @@ English Language Series. London: Longman.</p>
     <pre class="examples"><div class='input'>with(pres_debates2012[1:200, ], dm_causality(dialogue, person))
 </div>
 <div class='output'>$counts
+<<<<<<< HEAD
   person word.count causality
+=======
+  LEHRER word.count causality
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 1  OBAMA        943 18(1.91%)
 2 ROMNEY       1349 17(1.26%)
 3 LEHRER        316   1(.32%)
 
 $causality
+<<<<<<< HEAD
 ===================================
 Event 1: [lines 5-7]
 
@@ -156,6 +174,11 @@ Event 2: [lines 9-11]
  
 ===================================
 Event 3: [lines 23-25]
+=======
+</div>
+<strong class='message'>===================================
+Event 1: [lines 23-25]
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
     ROMNEY: And, by the way the idea came not even from Paul Ryan or
             or Senator Wyden, who&#39;s the co author of the bill with
@@ -168,9 +191,15 @@ Event 3: [lines 23-25]
             of different plans at lower cost, better quality.
 
     ROMNEY: I believe in competition. 
+<<<<<<< HEAD
  
 ===================================
 Event 4: [lines 29-31]
+=======
+
+===================================
+Event 2: [lines 29-31]
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
     OBAMA:  That&#39;s what they do.
 
@@ -180,9 +209,15 @@ Event 4: [lines 29-31]
     OBAMA:  And if you are going to save any money through what
             Governor Romney&#39;s proposing, what has to happen is, is
             that the money has to come from somewhere. 
+<<<<<<< HEAD
  
 ===================================
 Event 5: [lines 34-36]
+=======
+
+===================================
+Event 3: [lines 34-36]
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
     OBAMA:  And this is the reason why AARP has said that your plan
             would weaken Medicare substantially.
@@ -191,15 +226,22 @@ Event 5: [lines 34-36]
             that we took.
 
     OBAMA:  One last point I want to make. 
+<<<<<<< HEAD
  
 ===================================
 Event 6: [lines 40-42]
+=======
+
+===================================
+Event 4: [lines 40-42]
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
     LEHRER: OK.
 
  ** OBAMA:  And &lt;&lt;so&gt;&gt;|
 
     ROMNEY: That&#39;s that&#39;s a big topic. 
+<<<<<<< HEAD
  
 ===================================
 Event 7: [lines 62-64]
@@ -214,6 +256,11 @@ Event 7: [lines 62-64]
  
 ===================================
 Event 8: [lines 73-75]
+=======
+
+===================================
+Event 5: [lines 73-75]
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
     ROMNEY: You couldn&#39;t have people opening up banks in their in
             their garage and making loans.
@@ -222,6 +269,7 @@ Event 8: [lines 73-75]
             have an economy work.
 
     ROMNEY: Every free economy has good regulation. 
+<<<<<<< HEAD
  
 ===================================
 Event 9: [lines 89-91]
@@ -235,6 +283,11 @@ Event 9: [lines 89-91]
  
 ===================================
 Event 10: [lines 106-108]
+=======
+
+===================================
+Event 6: [lines 106-108]
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
     OBAMA:  Now, it wasn&#39;t just on Wall Street.
 
@@ -244,9 +297,15 @@ Event 10: [lines 106-108]
 
     OBAMA:  You had people who were borrowing money to buy a house
             that they couldn&#39;t afford. 
+<<<<<<< HEAD
  
 ===================================
 Event 11: [lines 109-111]
+=======
+
+===================================
+Event 7: [lines 109-111]
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
     OBAMA:  You had credit agencies that were stamping these as Aone
             great investments when they weren&#39;t.
@@ -257,6 +316,7 @@ Event 11: [lines 109-111]
             knowing that it made the entire system vulnerable.
 
     OBAMA:  So what did we do? 
+<<<<<<< HEAD
  
 ===================================
 Event 12: [lines 110-112]
@@ -273,6 +333,11 @@ Event 12: [lines 110-112]
  
 ===================================
 Event 13: [lines 114-116]
+=======
+
+===================================
+Event 8: [lines 114-116]
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
     OBAMA:  You can&#39;t engage in some of this risky behavior that is
             putting Main Street at risk.
@@ -285,9 +350,15 @@ Event 13: [lines 114-116]
     OBAMA:  In the meantime, by the way, we also made sure that all
             the help that we provided those banks was paid back every
             single dime, with interest. 
+<<<<<<< HEAD
  
 ===================================
 Event 14: [lines 119-121]
+=======
+
+===================================
+Event 9: [lines 119-121]
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
     OBAMA:  But in the past, Governor Romney has said he just want to
             repeal Dodd Frank, roll it back.
@@ -298,6 +369,7 @@ Event 14: [lines 119-121]
 
     OBAMA:  Because if you do, then Governor Romney is your
             candidate. 
+<<<<<<< HEAD
  
 ===================================
 Event 15: [lines 120-122]
@@ -323,6 +395,11 @@ Event 16: [lines 124-126]
  
 ===================================
 Event 17: [lines 128-130]
+=======
+
+===================================
+Event 10: [lines 128-130]
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
     ROMNEY: It wasn&#39;t thought through properly.
 
@@ -330,9 +407,15 @@ Event 17: [lines 128-130]
             killing regional and small banks.
 
     ROMNEY: They&#39;re getting hurt. 
+<<<<<<< HEAD
  
 ===================================
 Event 18: [lines 134-136]
+=======
+
+===================================
+Event 11: [lines 134-136]
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
     ROMNEY: It&#39;s one of the reasons for the great financial calamity
             we had.
@@ -344,6 +427,7 @@ Event 18: [lines 134-136]
             was.
 
     ROMNEY: It&#39;s been two years. 
+<<<<<<< HEAD
  
 ===================================
 Event 19: [lines 137-139]
@@ -356,6 +440,11 @@ Event 19: [lines 137-139]
  
 ===================================
 Event 20: [lines 139-141]
+=======
+
+===================================
+Event 12: [lines 139-141]
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
     ROMNEY: Try and get a mortgage these days.
 
@@ -365,9 +454,15 @@ Event 20: [lines 139-141]
 
     ROMNEY: It&#39;s not that Dodd Frank always was wrong with too much
             regulation. 
+<<<<<<< HEAD
  
 ===================================
 Event 21: [lines 142-144]
+=======
+
+===================================
+Event 13: [lines 142-144]
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
     ROMNEY: Sometimes they didn&#39;t come out with a clear regulation.
 
@@ -376,9 +471,15 @@ Event 21: [lines 142-144]
             bring back housing and get good jobs.
 
     LEHRER: All right. 
+<<<<<<< HEAD
  
 ===================================
 Event 22: [lines 156-158]
+=======
+
+===================================
+Event 14: [lines 156-158]
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
     ROMNEY: I met a couple in Appleton, Wisconsin, and they said,
             we&#39;re thinking of dropping our insurance, we can&#39;t afford
@@ -389,6 +490,7 @@ Event 22: [lines 156-158]
             afford it, the cost of health care is just prohibitive.
 
     ROMNEY: And and we&#39;ve got to deal with cost. 
+<<<<<<< HEAD
  
 ===================================
 Event 23: [lines 159-161]
@@ -426,6 +528,11 @@ Event 25: [lines 164-166]
  
 ===================================
 Event 26: [lines 181-183]
+=======
+
+===================================
+Event 15: [lines 181-183]
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
     OBAMA:  If they did have coverage, insurance companies might
             impose an arbitrary limit.
@@ -436,6 +543,7 @@ Event 26: [lines 181-183]
             insurance companies say that they&#39;ve hit the limit.
 
     OBAMA:  So we did work on this, alongside working on jobs,
+<<<<<<< HEAD
             because this is part of making sure that middle class
             families are secure in this country. 
  
@@ -448,13 +556,33 @@ Event 27: [lines 182-184]
             companies say that they&#39;ve hit the limit.
 
  ** OBAMA:  &lt;&lt;So&gt;&gt; we did work on this, alongside working on jobs,
+=======
+            &lt;&lt;because&gt;&gt; this is part of making sure that middle class
+            families are secure in this country. 
+
+===================================
+Event 16: [lines 182-184]
+
+    OBAMA:  And &lt;&lt;so&gt;&gt; &lt;&lt;as a consequence&gt;&gt;, they&#39;re paying their
+            premiums, somebody gets really sick, lo and behold, they
+            don&#39;t have enough money to pay the bills, &lt;&lt;because&gt;&gt; the
+            insurance companies say that they&#39;ve hit the limit.
+
+ ** OBAMA:  So we did work on this, alongside working on jobs,
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
             &lt;&lt;because&gt;&gt; this is part of making sure that middle class
             families are secure in this country.
 
     OBAMA:  And let me tell you exactly what Obamacare did. 
+<<<<<<< HEAD
  
 ===================================
 Event 28: [lines 194-196]
+=======
+
+===================================
+Event 17: [lines 194-196]
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
     LEHRER: Two minutes two minutes is up, sir.
 
@@ -466,9 +594,15 @@ Event 28: [lines 194-196]
             consequence&gt;&gt; people are covered there.
 
     OBAMA:  It hasn&#39;t destroyed jobs. 
+<<<<<<< HEAD
  
 ===================================
 Event 29: [lines 196-198]
+=======
+
+===================================
+Event 18: [lines 196-198]
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
     OBAMA:  It hasn&#39;t destroyed jobs.
 
@@ -478,6 +612,7 @@ Event 29: [lines 196-198]
             cold.
 
     LEHRER: Your five seconds went away a long time ago. 
+<<<<<<< HEAD
 
 </div>
 <div class='input'>
@@ -486,10 +621,20 @@ out[1]
 </div>
 <div class='output'>$counts
   person word.count continuation elaboration
+=======
+</strong>
+<div class='output'>
+</div>
+<div class='input'>with(pres_debates2012[1:200, ], dm_causality_sub(dialogue, person))
+</div>
+<div class='output'>$counts
+  LEHRER word.count continuation elaboration
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 1  OBAMA        943    13(1.38%)     5(.53%)
 2 ROMNEY       1349     13(.96%)     4(.30%)
 3 LEHRER        316      1(.32%)           0
 
+<<<<<<< HEAD
 </div>
 <div class='input'>out[2]
 </div>
@@ -519,6 +664,12 @@ Event 2: [lines 9-11]
  
 ===================================
 Event 3: [lines 23-25]
+=======
+$continuation
+</div>
+<strong class='message'>===================================
+Event 1: [lines 23-25]
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
     ROMNEY: And, by the way the idea came not even from Paul Ryan or
             or Senator Wyden, who&#39;s the co author of the bill with
@@ -531,9 +682,15 @@ Event 3: [lines 23-25]
             of different plans at lower cost, better quality.
 
     ROMNEY: I believe in competition. 
+<<<<<<< HEAD
  
 ===================================
 Event 4: [lines 29-31]
+=======
+
+===================================
+Event 2: [lines 29-31]
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
     OBAMA:  That&#39;s what they do.
 
@@ -543,9 +700,15 @@ Event 4: [lines 29-31]
     OBAMA:  And if you are going to save any money through what
             Governor Romney&#39;s proposing, what has to happen is, is
             that the money has to come from somewhere. 
+<<<<<<< HEAD
  
 ===================================
 Event 5: [lines 34-36]
+=======
+
+===================================
+Event 3: [lines 34-36]
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
     OBAMA:  And this is the reason why AARP has said that your plan
             would weaken Medicare substantially.
@@ -554,15 +717,22 @@ Event 5: [lines 34-36]
             that we took.
 
     OBAMA:  One last point I want to make. 
+<<<<<<< HEAD
  
 ===================================
 Event 6: [lines 40-42]
+=======
+
+===================================
+Event 4: [lines 40-42]
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
     LEHRER: OK.
 
  ** OBAMA:  And &lt;&lt;so&gt;&gt;|
 
     ROMNEY: That&#39;s that&#39;s a big topic. 
+<<<<<<< HEAD
  
 ===================================
 Event 7: [lines 62-64]
@@ -577,6 +747,11 @@ Event 7: [lines 62-64]
  
 ===================================
 Event 8: [lines 73-75]
+=======
+
+===================================
+Event 5: [lines 73-75]
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
     ROMNEY: You couldn&#39;t have people opening up banks in their in
             their garage and making loans.
@@ -585,6 +760,7 @@ Event 8: [lines 73-75]
             have an economy work.
 
     ROMNEY: Every free economy has good regulation. 
+<<<<<<< HEAD
  
 ===================================
 Event 9: [lines 89-91]
@@ -598,6 +774,11 @@ Event 9: [lines 89-91]
  
 ===================================
 Event 10: [lines 109-111]
+=======
+
+===================================
+Event 6: [lines 109-111]
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
     OBAMA:  You had credit agencies that were stamping these as Aone
             great investments when they weren&#39;t.
@@ -608,6 +789,7 @@ Event 10: [lines 109-111]
             knowing that it made the entire system vulnerable.
 
     OBAMA:  So what did we do? 
+<<<<<<< HEAD
  
 ===================================
 Event 11: [lines 110-112]
@@ -624,6 +806,11 @@ Event 11: [lines 110-112]
  
 ===================================
 Event 12: [lines 114-116]
+=======
+
+===================================
+Event 7: [lines 114-116]
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
     OBAMA:  You can&#39;t engage in some of this risky behavior that is
             putting Main Street at risk.
@@ -636,9 +823,15 @@ Event 12: [lines 114-116]
     OBAMA:  In the meantime, by the way, we also made sure that all
             the help that we provided those banks was paid back every
             single dime, with interest. 
+<<<<<<< HEAD
  
 ===================================
 Event 13: [lines 119-121]
+=======
+
+===================================
+Event 8: [lines 119-121]
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
     OBAMA:  But in the past, Governor Romney has said he just want to
             repeal Dodd Frank, roll it back.
@@ -649,6 +842,7 @@ Event 13: [lines 119-121]
 
     OBAMA:  Because if you do, then Governor Romney is your
             candidate. 
+<<<<<<< HEAD
  
 ===================================
 Event 14: [lines 124-126]
@@ -662,6 +856,11 @@ Event 14: [lines 124-126]
  
 ===================================
 Event 15: [lines 134-136]
+=======
+
+===================================
+Event 9: [lines 134-136]
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
     ROMNEY: It&#39;s one of the reasons for the great financial calamity
             we had.
@@ -673,6 +872,7 @@ Event 15: [lines 134-136]
             was.
 
     ROMNEY: It&#39;s been two years. 
+<<<<<<< HEAD
  
 ===================================
 Event 16: [lines 137-139]
@@ -719,12 +919,18 @@ Event 19: [lines 164-166]
  
 ===================================
 Event 20: [lines 181-183]
+=======
+
+===================================
+Event 10: [lines 181-183]
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
     OBAMA:  If they did have coverage, insurance companies might
             impose an arbitrary limit.
 
  ** OBAMA:  And &lt;&lt;so&gt;&gt; &lt;&lt;as a consequence&gt;&gt;, they&#39;re paying their
             premiums, somebody gets really sick, lo and behold, they
+<<<<<<< HEAD
             don&#39;t have enough money to pay the bills, because the
             insurance companies say that they&#39;ve hit the limit.
 
@@ -748,11 +954,23 @@ Event 21: [lines 182-184]
  
 ===================================
 Event 22: [lines 194-196]
+=======
+            don&#39;t have enough money to pay the bills, &lt;&lt;because&gt;&gt; the
+            insurance companies say that they&#39;ve hit the limit.
+
+    OBAMA:  So we did work on this, alongside working on jobs,
+            &lt;&lt;because&gt;&gt; this is part of making sure that middle class
+            families are secure in this country. 
+
+===================================
+Event 11: [lines 194-196]
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
     LEHRER: Two minutes two minutes is up, sir.
 
  ** OBAMA:  No, I think I had five seconds before you interrupted me,
             was the irony is that we&#39;ve seen this model work really
+<<<<<<< HEAD
             well in Massachusetts, because Governor Romney did a good
             thing, working with Democrats in the state to set up what
             is essentially the identical model and &lt;&lt;as a
@@ -762,6 +980,17 @@ Event 22: [lines 194-196]
  
 ===================================
 Event 23: [lines 196-198]
+=======
+            well in Massachusetts, &lt;&lt;because&gt;&gt; Governor Romney did a
+            good thing, working with Democrats in the state to set up
+            what is essentially the identical model and &lt;&lt;as a
+            consequence&gt;&gt; people are covered there.
+
+    OBAMA:  It hasn&#39;t destroyed jobs. 
+
+===================================
+Event 12: [lines 196-198]
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
     OBAMA:  It hasn&#39;t destroyed jobs.
 
@@ -771,12 +1000,20 @@ Event 23: [lines 196-198]
             cold.
 
     LEHRER: Your five seconds went away a long time ago. 
+<<<<<<< HEAD
 
 </div>
 <div class='input'>out[3]
 </div>
 <div class='output'>$elaboration
 ===================================
+=======
+</strong>
+<div class='output'>
+$elaboration
+</div>
+<strong class='message'>===================================
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 Event 1: [lines 106-108]
 
     OBAMA:  Now, it wasn&#39;t just on Wall Street.
@@ -787,6 +1024,7 @@ Event 1: [lines 106-108]
 
     OBAMA:  You had people who were borrowing money to buy a house
             that they couldn&#39;t afford. 
+<<<<<<< HEAD
  
 ===================================
 Event 2: [lines 120-122]
@@ -802,6 +1040,11 @@ Event 2: [lines 120-122]
  
 ===================================
 Event 3: [lines 128-130]
+=======
+
+===================================
+Event 2: [lines 128-130]
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
     ROMNEY: It wasn&#39;t thought through properly.
 
@@ -809,9 +1052,15 @@ Event 3: [lines 128-130]
             killing regional and small banks.
 
     ROMNEY: They&#39;re getting hurt. 
+<<<<<<< HEAD
  
 ===================================
 Event 4: [lines 139-141]
+=======
+
+===================================
+Event 3: [lines 139-141]
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
     ROMNEY: Try and get a mortgage these days.
 
@@ -821,9 +1070,15 @@ Event 4: [lines 139-141]
 
     ROMNEY: It&#39;s not that Dodd Frank always was wrong with too much
             regulation. 
+<<<<<<< HEAD
  
 ===================================
 Event 5: [lines 142-144]
+=======
+
+===================================
+Event 4: [lines 142-144]
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
     ROMNEY: Sometimes they didn&#39;t come out with a clear regulation.
 
@@ -832,9 +1087,15 @@ Event 5: [lines 142-144]
             bring back housing and get good jobs.
 
     LEHRER: All right. 
+<<<<<<< HEAD
  
 ===================================
 Event 6: [lines 156-158]
+=======
+
+===================================
+Event 5: [lines 156-158]
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
     ROMNEY: I met a couple in Appleton, Wisconsin, and they said,
             we&#39;re thinking of dropping our insurance, we can&#39;t afford
@@ -845,13 +1106,20 @@ Event 6: [lines 156-158]
             afford it, the cost of health care is just prohibitive.
 
     ROMNEY: And and we&#39;ve got to deal with cost. 
+<<<<<<< HEAD
  
 ===================================
 Event 7: [lines 181-183]
+=======
+
+===================================
+Event 6: [lines 181-183]
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
     OBAMA:  If they did have coverage, insurance companies might
             impose an arbitrary limit.
 
+<<<<<<< HEAD
  ** OBAMA:  And so as a consequence, they&#39;re paying their premiums,
             somebody gets really sick, lo and behold, they don&#39;t have
             enough money to pay the bills, &lt;&lt;because&gt;&gt; the insurance
@@ -868,15 +1136,39 @@ Event 8: [lines 182-184]
             somebody gets really sick, lo and behold, they don&#39;t have
             enough money to pay the bills, because the insurance
             companies say that they&#39;ve hit the limit.
+=======
+ ** OBAMA:  And &lt;&lt;so&gt;&gt; &lt;&lt;as a consequence&gt;&gt;, they&#39;re paying their
+            premiums, somebody gets really sick, lo and behold, they
+            don&#39;t have enough money to pay the bills, &lt;&lt;because&gt;&gt; the
+            insurance companies say that they&#39;ve hit the limit.
+
+    OBAMA:  So we did work on this, alongside working on jobs,
+            &lt;&lt;because&gt;&gt; this is part of making sure that middle class
+            families are secure in this country. 
+
+===================================
+Event 7: [lines 182-184]
+
+    OBAMA:  And &lt;&lt;so&gt;&gt; &lt;&lt;as a consequence&gt;&gt;, they&#39;re paying their
+            premiums, somebody gets really sick, lo and behold, they
+            don&#39;t have enough money to pay the bills, &lt;&lt;because&gt;&gt; the
+            insurance companies say that they&#39;ve hit the limit.
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
  ** OBAMA:  So we did work on this, alongside working on jobs,
             &lt;&lt;because&gt;&gt; this is part of making sure that middle class
             families are secure in this country.
 
     OBAMA:  And let me tell you exactly what Obamacare did. 
+<<<<<<< HEAD
  
 ===================================
 Event 9: [lines 194-196]
+=======
+
+===================================
+Event 8: [lines 194-196]
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 
     LEHRER: Two minutes two minutes is up, sir.
 
@@ -884,6 +1176,7 @@ Event 9: [lines 194-196]
             was the irony is that we&#39;ve seen this model work really
             well in Massachusetts, &lt;&lt;because&gt;&gt; Governor Romney did a
             good thing, working with Democrats in the state to set up
+<<<<<<< HEAD
             what is essentially the identical model and as a
             consequence people are covered there.
 
@@ -896,6 +1189,14 @@ Event 9: [lines 194-196]
 <div class='input'>
 ## Save externally use .doc or .txt
 ## print(out[[2]], file=&quot;elaboration_causality.doc&quot;)
+=======
+            what is essentially the identical model and &lt;&lt;as a
+            consequence&gt;&gt; people are covered there.
+
+    OBAMA:  It hasn&#39;t destroyed jobs. 
+</strong>
+<div class='output'>
+>>>>>>> 8b7e7c3a7e449903d35aeafd98cff3530e7eb67d
 </div></pre>
   </div>
   <div class="span4">
