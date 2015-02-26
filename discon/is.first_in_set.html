@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>plot.discourse_connector. discon 0.2.0</title>
+<title>is.first_in_set. discon 0.2.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -35,50 +35,65 @@
         
       </header>
       
-      <h1>Plots a discourse_connector Object</h1>
+      <h1>Check if Element Is First in a Set</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre><div>"plot"(x, grouping.var&nbsp;=&nbsp;NULL, unlist.terms&nbsp;=&nbsp;TRUE, plot&nbsp;=&nbsp;TRUE, ...)</div></pre>
+    <pre><div>is.first_in_set(x)</div>
+<div>is.last_in_set(x)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
       <dt>x</dt>
-      <dd>The discourse_connector object.</dd>
-      <dt>grouping.var</dt>
-      <dd>The grouping variables.  Take from <code>x</code> unless
-supplied by the user.</dd>
-      <dt>unlist.terms</dt>
-      <dd>logical.  If <code>TRUE</code> the terms will be separated rather than grouped as a single (sub)marker.</dd>
-      <dt>plot</dt>
-      <dd>logical.  If <code>TRUE</code> the plot will automatically plot. The
-user may wish to set to <code>FALSE</code> for use in <span class = "pkg">knitr</span>, <span class = "pkg">sweave</span>,
-etc. to add additional plot layers.</dd>
-      <dt>...</dt>
-      <dd>Other arguments passed to <code><a href='http://www.inside-r.org/packages/cran/qdap/docs/dispersion_plot'>dispersion_plot</a></code>.</dd>
+      <dd>A vector of elements.</dd>
     </dl>
     
-    <div class="Plots a discourse_connector Object">
-      <h2>Plots a discourse_connector Object</h2>
+    <div class="Check if Element Is First in a Set">
+      <h2>Check if Element Is First in a Set</h2>
       
     </div>
 
-    <div class="Plots a discourse_connector Object">
-      <h2>Plots a discourse_connector Object</h2>
+    <div class="Check if Element Is First in a Set">
+      <h2>Check if Element Is First in a Set</h2>
       
+    </div>
+
+    <div class="Value">
+      <h2>Value</h2>
+      
+      <p>Returns a logical vector equal in length to x.</p>
+  
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Plots a discourse_connector object.</p>
+      <p><code>is.first_in_set</code> - Logical check of each element in a vector to
+determine if an element is first in set.</p>
+  
+      <p><code>is.last_in_set</code> - The (semantical) "inverse" to <code>is.first_in_set</code>.</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>set.seed(3)
+(x &lt;- sample(1:3, 9, TRUE))
+</div>
+<div class='output'>[1] 1 3 2 1 2 2 1 1 2
+</div>
+<div class='input'>is.first_in_set(x)
+</div>
+<div class='output'>[1]  TRUE  TRUE  TRUE  TRUE  TRUE FALSE  TRUE FALSE  TRUE
+</div>
+<div class='input'>is.last_in_set(x)
+</div>
+<div class='output'>[1]  TRUE  TRUE  TRUE  TRUE FALSE  TRUE FALSE  TRUE  TRUE
+</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
-      <li>plot.discourse_connector</li>
+      <li>is.first_in_set</li><li>is.last_in_set</li>
     </ul>
     <ul>
       
