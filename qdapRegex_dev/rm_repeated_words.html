@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>rm_endmark. qdapRegex 0.2.1</title>
+<title>rm_repeated_words. qdapRegex 0.2.1</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -35,12 +35,12 @@
         
       </header>
       
-      <h1>Remove/Replace/Extract Endmarks</h1>
+      <h1>Remove/Replace/Extract Repeating Words</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre><div>rm_endmark(text.var, trim&nbsp;=&nbsp;!extract, clean&nbsp;=&nbsp;TRUE, pattern&nbsp;=&nbsp;"@rm_endmark", replacement&nbsp;=&nbsp;"", extract&nbsp;=&nbsp;FALSE, dictionary&nbsp;=&nbsp;getOption("regex.library"), ...)</div></pre>
+    <pre><div>rm_repeated_words(text.var, trim&nbsp;=&nbsp;!extract, clean&nbsp;=&nbsp;TRUE, pattern&nbsp;=&nbsp;"@rm_repeated_words", replacement&nbsp;=&nbsp;"", extract&nbsp;=&nbsp;FALSE, dictionary&nbsp;=&nbsp;getOption("regex.library"), ...)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -55,13 +55,13 @@ character will be removed.</dd>
       <dt>pattern</dt>
       <dd>A character string containing a regular expression (or
 character string for <code>fixed = TRUE</code>) to be matched in the given
-character vector.  Default, <code>@rm_endmark</code> uses the
-<code>rm_dollar</code> regex from the regular expression dictionary from
+character vector.  Default, <code>@rm_repeated_words</code> uses the
+<code>rm_repeated_words</code> regex from the regular expression dictionary from
 the <code>dictionary</code> argument.</dd>
       <dt>replacement</dt>
       <dd>Replacement for matched <code>pattern</code>.</dd>
       <dt>extract</dt>
-      <dd>logical.  If <code>TRUE</code> the endmark strings are extracted into a
+      <dd>logical.  If <code>TRUE</code> the repeated words are extracted into a
 list of vectors.</dd>
       <dt>dictionary</dt>
       <dd>A dictionary of canned regular expressions to search within
@@ -70,131 +70,77 @@ if <code>pattern</code> begins with <code>"@rm_"</code>.</dd>
       <dd>Other arguments passed to <code><a href='http://www.inside-r.org/packages/cran/base/docs/grep'>gsub</a></code>.</dd>
     </dl>
     
-    <div class="Remove/Replace/Extract Endmarks">
-      <h2>Remove/Replace/Extract Endmarks</h2>
+    <div class="Remove/Replace/Extract Repeating Words">
+      <h2>Remove/Replace/Extract Repeating Words</h2>
       
     </div>
 
-    <div class="Remove/Replace/Extract Endmarks">
-      <h2>Remove/Replace/Extract Endmarks</h2>
+    <div class="Remove/Replace/Extract Repeating Words">
+      <h2>Remove/Replace/Extract Repeating Words</h2>
       
     </div>
 
     <div class="Value">
       <h2>Value</h2>
       
-      <p>Returns a character string with endmarks removed.</p>
+      <p>Returns a character string with percentages removed.</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Remove/replace/extract endmarks from a string.</p>
-  
-    </div>
-
-    <div class="Details">
-      <h2>Details</h2>
-      
-      <p>The default regular expression used by <code>rm_endmark</code> finds
-endmark punctuation used in the <span class = "pkg">qdap</span> package; this includes ! . ? * AND
-|.  This behavior can be altered (to ; AND : or to use just ! . AND ?) by
-using a secondary regular expression from the
-<code>regex_usa</code> data (or other dictionary) via
-(<code>pattern = "@rm_endmark2"</code> or <code>pattern = "@rm_endmark3"</code>). See
-<b>Examples</b> for example usage.</p>
+      <p>Remove/replace/extract repeating words from a string.</p>
   
     </div>
     
     <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>x &lt;- c(&quot;I like the dog.&quot;, &quot;I want it *|&quot;, &quot;I;&quot;,
-    &quot;Who is| that?&quot;, &quot;Hello world&quot;, &quot;You...&quot;)
+    <pre class="examples"><div class='input'>x &lt;- c(
+    &quot;this is a big is a Big deal&quot;,
+    &quot;I want want to see&quot;,
+    &quot;I want, want to see&quot;,
+    &quot;I want...want to see see see how&quot;,
+    &quot;I like it. It is cool&quot;,
+    &quot;this is a big is a Big deal for those of, those of you who are.&quot;
+)
 
-rm_endmark(x)
+rm_repeated_words(x)
 </div>
-<div class='output'>[1] &quot;I like the dog&quot; &quot;I want it&quot;      &quot;I;&quot;             &quot;Who is| that&quot;   &quot;Hello world&quot;    &quot;You&quot;           
+<div class='output'>[1] &quot;this is a big is a Big deal&quot;                                    
+[2] &quot;I to see&quot;                                                       
+[3] &quot;I want, want to see&quot;                                            
+[4] &quot;I want...want to see how&quot;                                       
+[5] &quot;I like it. It is cool&quot;                                          
+[6] &quot;this is a big is a Big deal for those of, those of you who are.&quot;
 </div>
-<div class='input'>rm_endmark(x, extract=TRUE)
+<div class='input'>rm_repeated_words(x, extract=TRUE)
 </div>
 <div class='output'>[[1]]
-[1] &quot;.&quot;
+[1] NA
 
 [[2]]
-[1] &quot;*|&quot;
+[1] &quot;want want&quot;
 
 [[3]]
 [1] NA
 
 [[4]]
-[1] &quot;?&quot;
+[1] &quot;see see&quot;
 
 [[5]]
 [1] NA
 
 [[6]]
-[1] &quot;...&quot;
-
-</div>
-<div class='input'>
-rm_endmark(x, pattern=&quot;@rm_endmark2&quot;)
-</div>
-<div class='output'>[1] &quot;I like the dog&quot; &quot;I want it *|&quot;   &quot;I;&quot;             &quot;Who is| that&quot;   &quot;Hello world&quot;    &quot;You&quot;           
-</div>
-<div class='input'>rm_endmark(x, extract=TRUE, pattern=&quot;@rm_endmark2&quot;)
-</div>
-<div class='output'>[[1]]
-[1] &quot;.&quot;
-
-[[2]]
 [1] NA
-
-[[3]]
-[1] NA
-
-[[4]]
-[1] &quot;?&quot;
-
-[[5]]
-[1] NA
-
-[[6]]
-[1] &quot;...&quot;
-
-</div>
-<div class='input'>
-rm_endmark(x, pattern=&quot;@rm_endmark3&quot;)
-</div>
-<div class='output'>[1] &quot;I like the dog&quot; &quot;I want it&quot;      &quot;I&quot;              &quot;Who is| that&quot;   &quot;Hello world&quot;    &quot;You&quot;           
-</div>
-<div class='input'>rm_endmark(x, extract=TRUE, pattern=&quot;@rm_endmark3&quot;)
-</div>
-<div class='output'>[[1]]
-[1] &quot;.&quot;
-
-[[2]]
-[1] &quot;*|&quot;
-
-[[3]]
-[1] &quot;;&quot;
-
-[[4]]
-[1] &quot;?&quot;
-
-[[5]]
-[1] NA
-
-[[6]]
-[1] &quot;...&quot;
 
 </div></pre>
   </div>
   <div class="span4">
     <!-- <ul>
-      <li>rm_endmark</li>
+      <li>rm_repeated_words</li>
     </ul>
     <ul>
-      <li>percent</li>
+      <li>repeat</li><li>words</li>
     </ul> -->
       
     <h2>See also</h2>
@@ -214,13 +160,12 @@ Other rm_.functions: <code><a href='rm_abbreviation.html'>rm_abbreviation</a></c
   <code><a href='rm_city_state.html'>rm_city_state</a></code>; <code><a href='rm_date.html'>rm_date</a></code>;
   <code><a href='rm_default.html'>rm_default</a></code>; <code><a href='rm_dollar.html'>rm_dollar</a></code>;
   <code><a href='rm_email.html'>rm_email</a></code>; <code><a href='rm_emoticon.html'>rm_emoticon</a></code>;
-  <code><a href='rm_hash.html'>rm_hash</a></code>; <code><a href='rm_nchar_words.html'>rm_nchar_words</a></code>;
-  <code><a href='rm_non_ascii.html'>rm_non_ascii</a></code>; <code><a href='rm_number.html'>rm_number</a></code>;
-  <code><a href='rm_percent.html'>rm_percent</a></code>; <code><a href='rm_phone.html'>rm_phone</a></code>;
-  <code><a href='rm_postal_code.html'>rm_postal_code</a></code>;
+  <code><a href='rm_endmark.html'>rm_endmark</a></code>; <code><a href='rm_hash.html'>rm_hash</a></code>;
+  <code><a href='rm_nchar_words.html'>rm_nchar_words</a></code>; <code><a href='rm_non_ascii.html'>rm_non_ascii</a></code>;
+  <code><a href='rm_number.html'>rm_number</a></code>; <code><a href='rm_percent.html'>rm_percent</a></code>;
+  <code><a href='rm_phone.html'>rm_phone</a></code>; <code><a href='rm_postal_code.html'>rm_postal_code</a></code>;
   <code><a href='rm_repeated_characters.html'>rm_repeated_characters</a></code>;
-  <code><a href='rm_repeated_phrases.html'>rm_repeated_phrases</a></code>;
-  <code><a href='rm_repeated_words.html'>rm_repeated_words</a></code>; <code><a href='rm_tag.html'>rm_tag</a></code>;
+  <code><a href='rm_repeated_phrases.html'>rm_repeated_phrases</a></code>; <code><a href='rm_tag.html'>rm_tag</a></code>;
   <code><a href='rm_time.html'>rm_time</a></code>; <code><a href='rm_title_name.html'>rm_title_name</a></code>;
   <code><a href='rm_url.html'>rm_twitter_url</a></code>, <code><a href='rm_url.html'>rm_url</a></code>;
   <code><a href='rm_white.html'>rm_white</a></code>, <code><a href='rm_white.html'>rm_white_bracket</a></code>,
