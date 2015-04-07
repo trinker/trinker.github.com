@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>rm_abbreviation. qdapRegex 0.3.0</title>
+<title>rm_abbreviation. qdapRegex 0.3.2</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -20,7 +20,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdapRegex 0.3.0</a>
+      <a class="brand" href="#">qdapRegex 0.3.2</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -67,21 +67,29 @@ list of vectors.</dd>
       <dd>A dictionary of canned regular expressions to search within
 if <code>pattern</code> begins with <code>"@rm_"</code>.</dd>
       <dt>...</dt>
-      <dd>Other arguments passed to <code><a href='http://www.inside-r.org/r-doc/base/grep'>gsub</a></code>.</dd>
+      <dd>Other arguments passed to <code><a href='http://www.inside-r.org/packages/cran/base/docs/grep'>gsub</a></code>.</dd>
     </dl>
     
+    <div class="Remove/Replace/Extract Abbreviations">
+      <h2>Remove/Replace/Extract Abbreviations</h2>
+      
+    </div>
+
+    <div class="Remove/Replace/Extract Abbreviations">
+      <h2>Remove/Replace/Extract Abbreviations</h2>
+      
+    </div>
+
     <div class="Value">
       <h2>Value</h2>
-
-      <p><dl>
-Returns a character string with abbreviations removed.
-</dl></p>
+      
+      <p>Returns a character string with abbreviations removed.</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
-
+      
       <p>Remove/replace/extract abbreviations from a string containing lower case or
 capital letters followed by a period and then an optional space (this must be
 repeated 2 or more times).</p>
@@ -94,8 +102,8 @@ repeated 2 or more times).</p>
     &quot;Hello world.&quot;, &quot;In the U. S. A.&quot;)
 rm_abbreviation(x)
 </div>
-<div class='output'>[1] &quot;I want $2.33 at 2:30 to go to&quot;                  &quot;She will send it ( as soon as you can) said I.&quot;
-[3] &quot;Hello world.&quot;                                   &quot;In the&quot;                                        
+<div class='output'>[1] &quot;I want $2.33 at 2:30 to go to&quot;                  &quot;She will send it ( as soon as you can) said I.&quot; &quot;Hello world.&quot;                                  
+[4] &quot;In the&quot;                                        
 </div>
 <div class='input'>rm_abbreviation(x, extract=TRUE)
 </div>
@@ -123,7 +131,7 @@ rm_abbreviation(x)
       
     <h2>See also</h2>
     
-<code><a href='http://www.inside-r.org/r-doc/base/grep'>gsub</a></code>,
+<code><a href='http://www.inside-r.org/packages/cran/base/docs/grep'>gsub</a></code>,
 <code><a href='http://www.inside-r.org/packages/cran/stringi/docs/stri_extract'>stri_extract_all_regex</a></code>
 
 Other rm_.functions: <code><a href='rm_bracket.html'>rm_angle</a></code>,
