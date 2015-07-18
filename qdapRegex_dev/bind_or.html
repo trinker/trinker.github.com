@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>bind_or. qdapRegex 0.4.1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">qdapRegex 0.4.1</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Boundary Wrap (Bind) and `or` Concatenate Elements</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><div>bind_or(..., group.all&nbsp;=&nbsp;TRUE, left&nbsp;=&nbsp;"\\b", right&nbsp;=&nbsp;left)</div></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>group.all</dt>
+      <dd>logical.  If <code>TRUE</code> the resulting `or` concatenated
+elements will be wrapped with grouping parenthesis.</dd>
+      <dt>left</dt>
+      <dd>A single length character vector to use as the left bound.</dd>
+      <dt>right</dt>
+      <dd>A single length character vector to use as the right bound.</dd>
+      <dt>...</dt>
+      <dd>Regular expressions to paste together or a named expression
+from the default regular expression dictionary prefixed with single at
+(<code>@</code>) (e.g., <code>"@rm_hash"</code>) or a regular expression from
+<code>regex_supplement</code> dictionary prefixed with an at
+(<code>@</code>) (e.g., <code>"@time_12_hours"</code>).</dd>
+    </dl>
+    
+    <div class="Description">
+      <h2>Description</h2>
+
+      <p>A wrapper for <code>bind</code> and <code>pastex</code> that wraps each sub-expression
+element with left/right boundaries (<code>\b</code> by default) and then
+concatenate/joins bound strings with a regex `or` ("|").  Equivalent to
+<code>pastex(bind(...), sep = "|")</code>.</p>
+  
+    </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>bind_or(LETTERS)
+</div>
+<div class='output'>[1] &quot;(\\bA\\b|\\bB\\b|\\bC\\b|\\bD\\b|\\bE\\b|\\bF\\b|\\bG\\b|\\bH\\b|\\bI\\b|\\bJ\\b|\\bK\\b|\\bL\\b|\\bM\\b|\\bN\\b|\\bO\\b|\\bP\\b|\\bQ\\b|\\bR\\b|\\bS\\b|\\bT\\b|\\bU\\b|\\bV\\b|\\bW\\b|\\bX\\b|\\bY\\b|\\bZ\\b)&quot;
+</div>
+<div class='input'>bind_or(&quot;them&quot;, &quot;those&quot;, &quot;that&quot;, &quot;these&quot;)
+</div>
+<div class='output'>[1] &quot;(\\bthem\\b|\\bthose\\b|\\bthat\\b|\\bthese\\b)&quot;
+</div>
+<div class='input'>bind_or(&quot;them&quot;, &quot;those&quot;, &quot;that&quot;, &quot;these&quot;, group.all = FALSE)
+</div>
+<div class='output'>[1] &quot;\\bthem\\b|\\bthose\\b|\\bthat\\b|\\bthese\\b&quot;
+</div></pre>
+  </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>bind_or</li>
+    </ul>
+    <ul>
+      
+    </ul> -->
+      
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>
