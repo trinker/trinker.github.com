@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>rm_caps. qdapRegex 0.3.3</title>
+<title>rm_non_words. qdapRegex 0.4.0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -14,13 +14,25 @@
 <!--[if lt IE 9]>
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
   </head>
 
   <body>
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">qdapRegex 0.3.3</a>
+      <a class="brand" href="#">qdapRegex 0.4.0</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -35,12 +47,12 @@
         
       </header>
       
-      <h1>Remove/Replace/Extract All Caps</h1>
+      <h1>Remove/Replace/Extract Non-Words</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre><div>rm_caps(text.var, trim&nbsp;=&nbsp;!extract, clean&nbsp;=&nbsp;TRUE, pattern&nbsp;=&nbsp;"@rm_caps", replacement&nbsp;=&nbsp;"", extract&nbsp;=&nbsp;FALSE, dictionary&nbsp;=&nbsp;getOption("regex.library"), ...)</div></pre>
+    <pre><div>rm_non_words(text.var, trim&nbsp;=&nbsp;!extract, clean&nbsp;=&nbsp;TRUE, pattern&nbsp;=&nbsp;"@rm_non_words", replacement&nbsp;=&nbsp;" ", extract&nbsp;=&nbsp;FALSE, dictionary&nbsp;=&nbsp;getOption("regex.library"), ...)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
@@ -55,84 +67,140 @@ character will be removed.</dd>
       <dt>pattern</dt>
       <dd>A character string containing a regular expression (or
 character string for <code>fixed = TRUE</code>) to be matched in the given
-character vector.  Default, <code>@rm_caps</code> uses the
-<code>rm_caps</code> regex from the regular expression dictionary from
+character vector.  Default, <code>@rm_non_words</code> uses the
+<code>rm_non_words</code> regex from the regular expression dictionary from
 the <code>dictionary</code> argument.</dd>
       <dt>replacement</dt>
-      <dd>Replacement for matched <code>pattern</code>.</dd>
+      <dd>Replacement for matched <code>pattern</code> (<b><em>Note:</em></b> default is
+" ", whereas most <span class = "pkg">qdapRegex</span> functions replace with "").</dd>
       <dt>extract</dt>
-      <dd>logical.  If <code>TRUE</code> the all caps strings are extracted
-into a list of vectors.</dd>
+      <dd>logical.  If <code>TRUE</code> the non-words are extracted into a
+list of vectors.</dd>
       <dt>dictionary</dt>
       <dd>A dictionary of canned regular expressions to search within
 if <code>pattern</code> begins with <code>"@rm_"</code>.</dd>
       <dt>...</dt>
-      <dd>Other arguments passed to <code><a href='http://www.inside-r.org/packages/cran/base/docs/grep'>gsub</a></code>.</dd>
+      <dd>Other arguments passed to <code><a href='http://www.inside-r.org/r-doc/base/grep'>gsub</a></code>.</dd>
     </dl>
     
-    <div class="Remove/Replace/Extract All Caps">
-      <h2>Remove/Replace/Extract All Caps</h2>
-      
-    </div>
-
-    <div class="Remove/Replace/Extract All Caps">
-      <h2>Remove/Replace/Extract All Caps</h2>
-      
-    </div>
-
     <div class="Value">
       <h2>Value</h2>
-      
-      <p>Returns a character string with "all caps" removed.</p>
+
+      <p><dl>
+Returns a character string with non-words removed.
+</dl></p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
-      
-      <p>Remove/replace/extract 'all caps' words containing 2 or more consecutive
-upper case letters from a string.</p>
+
+      <p><code>rm_non_words</code> - Remove/replace/extract non-words (Anything that's not a
+letter or apostrophe; also removes multiple white spaces) from a string.</p>
+  
+    </div>
+
+    <div class="Note">
+      <h2>Note</h2>
+
+      <p>Setting the argument <code>extract = TRUE</code> is not very useful.  Use the
+following setup instead (see <b>Examples</b> for a demonstration).</p>
+  
+      <p><code>rm_default(x, pattern = "[^A-Za-z' ]", extract=TRUE)</code></p>
   
     </div>
     
     <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>x &lt;- c(&quot;UGGG! When I use caps I am YELLING!&quot;)
-rm_caps(x)
+    <pre class="examples"><div class='input'>x &lt;- c(
+    &quot;I like 56 dogs!&quot;,
+    &quot;It&#39;s seventy-two feet from the px290.&quot;,
+    NA,
+    &quot;What&quot;,
+    &quot;that1is2a3way4to5go6.&quot;,
+    &quot;What do you*% want?  For real%; I think you&#39;ll see.&quot;,
+    &quot;Oh some &lt;html&gt;code&lt;/html&gt; to remove&quot;
+)
+
+rm_non_words(x)
 </div>
-<div class='output'>[1] &quot;! When I use caps I am !&quot;
+<div class='output'>[1] &quot;I like dogs&quot;                                  &quot;It&#39;s seventy two feet from the px&quot;           
+[3] NA                                             &quot;What&quot;                                        
+[5] &quot;that is a way to go&quot;                          &quot;What do you want For real I think you&#39;ll see&quot;
+[7] &quot;Oh some html code html to remove&quot;            
 </div>
-<div class='input'>rm_caps(x, replacement=&quot;\\L\\1&quot;)
-</div>
-<div class='output'>[1] &quot;uggg! When I use caps I am yelling!&quot;
-</div>
-<div class='input'>rm_caps(x, extract=TRUE)
+<div class='input'>rm_non_words(x, extract=TRUE)
 </div>
 <div class='output'>[[1]]
-[1] &quot;UGGG&quot;    &quot;YELLING&quot;
+[1] &quot; &quot;    &quot; 56 &quot; &quot;!&quot;   
+
+[[2]]
+[1] &quot; &quot;    &quot;-&quot;    &quot; &quot;    &quot; &quot;    &quot; &quot;    &quot; &quot;    &quot;290.&quot;
+
+[[3]]
+[1] NA
+
+[[4]]
+[1] NA
+
+[[5]]
+[1] &quot;1&quot;  &quot;2&quot;  &quot;3&quot;  &quot;4&quot;  &quot;5&quot;  &quot;6.&quot;
+
+[[6]]
+ [1] &quot; &quot;   &quot; &quot;   &quot;*% &quot; &quot;?  &quot; &quot; &quot;   &quot;%; &quot; &quot; &quot;   &quot; &quot;   &quot; &quot;   &quot;.&quot;  
+
+[[7]]
+[1] &quot; &quot;  &quot; &lt;&quot; &quot;&gt;&quot;  &quot;&lt;/&quot; &quot;&gt; &quot; &quot; &quot; 
+
+</div>
+<div class='input'>
+## For extraction purposes the following setup is more useful:
+rm_default(x, pattern = &quot;[^A-Za-z&#39; ]&quot;, extract=TRUE)
+</div>
+<div class='output'>[[1]]
+[1] &quot;5&quot; &quot;6&quot; &quot;!&quot;
+
+[[2]]
+[1] &quot;-&quot; &quot;2&quot; &quot;9&quot; &quot;0&quot; &quot;.&quot;
+
+[[3]]
+[1] NA
+
+[[4]]
+[1] NA
+
+[[5]]
+[1] &quot;1&quot; &quot;2&quot; &quot;3&quot; &quot;4&quot; &quot;5&quot; &quot;6&quot; &quot;.&quot;
+
+[[6]]
+[1] &quot;*&quot; &quot;%&quot; &quot;?&quot; &quot;%&quot; &quot;;&quot; &quot;.&quot;
+
+[[7]]
+[1] &quot;&lt;&quot; &quot;&gt;&quot; &quot;&lt;&quot; &quot;/&quot; &quot;&gt;&quot;
 
 </div></pre>
   </div>
   <div class="span4">
     <!-- <ul>
-      <li>rm_caps</li>
+      <li>rm_non_words</li>
     </ul>
     <ul>
-      <li>capital</li><li>caps</li>
+      <li>non-words</li>
     </ul> -->
       
     <h2>See also</h2>
     
-<code><a href='http://www.inside-r.org/packages/cran/base/docs/grep'>gsub</a></code>,
+<code><a href='http://www.inside-r.org/r-doc/base/grep'>gsub</a></code>,
 <code><a href='http://www.inside-r.org/packages/cran/stringi/docs/stri_extract'>stri_extract_all_regex</a></code>
 
 Other rm_.functions: <code><a href='rm_number.html'>as_numeric</a></code>,
-  <code><a href='rm_number.html'>rm_number</a></code>; <code><a href='rm_abbreviation.html'>rm_abbreviation</a></code>;
-  <code><a href='rm_bracket.html'>rm_angle</a></code>, <code><a href='rm_bracket.html'>rm_bracket</a></code>,
+  <code><a href='rm_number.html'>as_numeric2</a></code>, <code><a href='rm_number.html'>rm_number</a></code>;
+  <code><a href='rm_abbreviation.html'>rm_abbreviation</a></code>; <code><a href='rm_bracket.html'>rm_angle</a></code>,
+  <code><a href='rm_bracket.html'>rm_bracket</a></code>,
   <code><a href='rm_bracket.html'>rm_bracket_multiple</a></code>,
   <code><a href='rm_bracket.html'>rm_curly</a></code>, <code><a href='rm_bracket.html'>rm_round</a></code>,
   <code><a href='rm_bracket.html'>rm_square</a></code>; <code><a href='rm_between.html'>rm_between</a></code>,
   <code><a href='rm_between.html'>rm_between_multiple</a></code>;
-  <code><a href='rm_caps_phrase.html'>rm_caps_phrase</a></code>;
+  <code><a href='rm_caps_phrase.html'>rm_caps_phrase</a></code>; <code><a href='rm_caps.html'>rm_caps</a></code>;
   <code><a href='rm_citation_tex.html'>rm_citation_tex</a></code>; <code><a href='rm_citation.html'>rm_citation</a></code>;
   <code><a href='rm_city_state_zip.html'>rm_city_state_zip</a></code>;
   <code><a href='rm_city_state.html'>rm_city_state</a></code>; <code><a href='rm_date.html'>rm_date</a></code>;
