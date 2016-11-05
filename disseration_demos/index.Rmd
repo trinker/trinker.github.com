@@ -1,0 +1,42 @@
+---
+title: "Dissertation Demonstrations"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document:
+    toc: true 
+---
+
+
+```{r setup, echo=FALSE}
+pacman::p_load(knitr, rgl)
+knit_hooks$set(webgl = hook_webgl)
+knitr::opts_chunk$set(echo=FALSE, messages=FALSE, warnings=FALSE)
+# options(digits = 4)
+```
+
+# RANDU Exposed
+
+## RANDU Output
+
+```{r testgl1, webgl=TRUE}
+seed <- as.double(1)
+RANDU <- function() {
+    seed <<- ((2^16 + 3) * seed) %% (2^31)
+    seed/(2^31)
+}
+
+set.seed(10)
+dat <- t(sapply(1:2000, function(i){
+    U <- c(RANDU(), RANDU(), RANDU(), RANDU(), RANDU())
+    round(U[1:3], 6)
+}))
+
+
+plot3d(dat, col="black", size=3)
+```
+
+## R Random Uniform Output
+```{r testgl2, webgl=TRUE}
+dat2 <- matrix(runif(6000, 0, 1), ncol=3)
+plot3d(dat2, col="black", size=3)
+```
