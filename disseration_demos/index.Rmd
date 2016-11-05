@@ -14,6 +14,17 @@ knitr::opts_chunk$set(echo=FALSE, messages=FALSE, warnings=FALSE)
 # options(digits = 4)
 ```
 
+```{r captions, echo=FALSE}
+pacman::p_load_current_gh("adletaw/captioner")
+
+tb <- captioner(prefix = "Table")
+fg <- captioner(prefix = "Figure")
+
+fg1 <- fg(name = "randu1", caption = "An interactive 3-D scatterplot of RANDU generated data.  While the data was intended to be random, rotating the plot will eventually reveal non-random structures in the data.  Try rotating this scatterplot to reveal the non-random structures.")
+
+fg2 <- fg(name = "randu2", caption = "An interactive 3-D scatterplot of R's `runif` generated data.  Unlike the RANDU generated data, rotating the plot will not reveal non-random structures in the data.")
+```
+
 # RANDU Exposed
 
 ## RANDU Output
@@ -34,9 +45,13 @@ dat <- t(sapply(1:2000, function(i){
 
 plot3d(dat, col="black", size=3)
 ```
+`r fg1`
 
 ## R Random Uniform Output
+
 ```{r testgl2, webgl=TRUE}
 dat2 <- matrix(runif(6000, 0, 1), ncol=3)
 plot3d(dat2, col="black", size=3)
 ```
+
+`r fg2`
