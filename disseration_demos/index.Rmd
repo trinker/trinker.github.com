@@ -3,6 +3,7 @@ title: "Dissertation Demonstrations"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
   html_document:
+    theme: "readable"
     toc: true 
 ---
 
@@ -43,7 +44,7 @@ dat <- t(sapply(1:2000, function(i){
 }))
 
 
-plot3d(dat, col="black", size=3)
+plot3d(dat, col="black", size=3, xlab='x', ylab='y', zlab='z')
 ```
 `r fg1`
 
@@ -51,7 +52,7 @@ plot3d(dat, col="black", size=3)
 
 ```{r testgl2, webgl=TRUE}
 dat2 <- matrix(runif(6000, 0, 1), ncol=3)
-plot3d(dat2, col="black", size=3)
+plot3d(dat2, col="black", size=3, xlab='x', ylab='y', zlab='z')
 ```
 
 `r fg2`
