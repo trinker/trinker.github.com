@@ -16,7 +16,8 @@ knitr::opts_chunk$set(echo=FALSE, messages=FALSE, warnings=FALSE)
 ```
 
 ```{r captions, echo=FALSE}
-pacman::p_load_current_gh("adletaw/captioner")
+pacman::p_load_current_gh("adletaw/captioner", 'trinker/testing', 'ramnathv/rCharts')
+pacman::p_load(tidyverse, base64enc)
 
 tb <- captioner(prefix = "Table")
 fg <- captioner(prefix = "Figure")
@@ -24,6 +25,8 @@ fg <- captioner(prefix = "Figure")
 fg1 <- fg(name = "randu1", caption = "An interactive 3-D scatterplot of [RANDU](https://en.wikipedia.org/wiki/RANDU) generated data.  While the data was intended to be random, rotating the plot will eventually reveal non-random structures in the data.  Try rotating this scatterplot to reveal the non-random structures.")
 
 fg2 <- fg(name = "randu2", caption = "An interactive 3-D scatterplot of R's `runif` generated data.  Unlike the RANDU generated data, rotating the plot will not reveal non-random structures in the data.")
+
+filtbar <- fg(name = "filtbar1", caption = "This interactive bar plot shows the word counts for the 7th grade classroom observations.  The plot enables filtering out people (e.g., filter teachers to better compare within students).  The plot also supports switching the plot type between dodged and stacked positionings.  Double click a person to select just observation for them.")
 ```
 
 # RANDU Exposed
@@ -56,3 +59,37 @@ plot3d(dat2, col="black", size=3, xlab='x', ylab='y', zlab='z')
 ```
 
 `r fg2`
+
+
+
+# Mouse-Over Heatmap
+
+
+# Filtering Bar Plot
+
+```{r, results = 'asis'}
+barfildat <- rinker_observations %>%
+    filter(Observation %in% c(4, 5, 1, 2)) %>% #head()
+    mutate(Observation = paste0("Obs: ", Observation, "  ", Subject)) %>%
+    select(Observation, Person, Word_Count) %>%
+    filter(Person != "Students") %>%
+    na.omit() %>% tbl_df() %>% #print(n=Inf)
+    group_by(Observation, Person) %>%
+    summarize(Words = sum(Word_Count)) # %>%print(n=Inf)
+
+n1 <- nPlot(Words ~ Observation, group = "Person", data = barfildat, 
+  type = 'multiBarChart')
+n1$save("p2.html", standalone = TRUE)
+```
+
+<iframe src="p2.html" align="center" width="900" height="600" frameBorder="0"></iframe>
+`r filtbar`
+
+
+
+
+
+
+
+
+
