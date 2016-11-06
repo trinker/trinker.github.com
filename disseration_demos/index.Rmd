@@ -17,7 +17,7 @@ knitr::opts_chunk$set(echo=FALSE, messages=FALSE, warnings=FALSE)
 
 ```{r captions, echo=FALSE}
 pacman::p_load_current_gh("adletaw/captioner", 'trinker/testing', 'ramnathv/rCharts')
-pacman::p_load(tidyverse, base64enc)
+pacman::p_load(tidyverse, base64enc, d3heatmap, stringi, qdapTools, viridis)
 
 tb <- captioner(prefix = "Table")
 fg <- captioner(prefix = "Figure")
@@ -27,6 +27,8 @@ fg1 <- fg(name = "randu1", caption = "An interactive 3-D scatterplot of [RANDU](
 fg2 <- fg(name = "randu2", caption = "An interactive 3-D scatterplot of R's `runif` generated data.  Unlike the RANDU generated data, rotating the plot will not reveal non-random structures in the data.")
 
 filtbar <- fg(name = "filtbar1", caption = "This interactive bar plot shows the word counts for the 7th grade classroom observations.  The plot enables filtering out people (e.g., filter teachers to better compare within students).  The plot also supports switching the plot type between dodged and stacked positionings.  Double click a person to select just observation for them.")
+
+heat <- fg(name = "heat1", caption = "This interactive heatmap shows average sentiment and readability scores for the two teachers across the 10 interview questions.  The color has been scaled by column with higher values in darker blue and lower values in yellow.  Rows (Person + Question) have been reordered according to hierarchical clustering.  The heat map provides value details activated by hovering the cursor over a cell.  Additionally brushed zooming is enabled to focus one specific portions of the heat map.")
 ```
 
 # RANDU Exposed
@@ -64,6 +66,24 @@ plot3d(dat2, col="black", size=3, xlab='x', ylab='y', zlab='z')
 
 # Mouse-Over Heatmap
 
+
+```{r}
+mean2 <- function(x) mean(x, na.rm = TRUE)
+mat <- sentiread %>%
+    ungroup() %>%
+    mutate(rows = paste(gsub("^[^ ]+ ", "", Person), stringi::stri_pad_left(Question_Number, 2, pad="0"), sep = ": ")) %>%
+    select(rows, Word_Count, Sentiment_turk:Trust_turk, Flesch_Kincaid:Automated_Readability_Index) %>%
+    select(-None_turk) %>%
+    rename(ARI = Automated_Readability_Index) %>%
+    group_by(rows) %>%
+    summarize_all(mean2) %>%
+    as.data.frame() %>%
+    setNames(gsub("_turk", "", names(.))) %>%
+    qdapTools::df2matrix() 
+d3heatmap(mat, scale = "column", colors = colorRampPalette(c("yellow", "blue"))(n = 100), cexRow = .7, Colv = FALSE)
+```
+
+`r heat`
 
 # Filtering Bar Plot
 
