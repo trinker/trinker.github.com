@@ -19,7 +19,7 @@ knitr::opts_chunk$set(echo=FALSE, messages=FALSE, warnings=FALSE)
 
 
 ```{r captions, echo=FALSE}
-pacman::p_load_current_gh("adletaw/captioner", 'trinker/testing', 'ramnathv/rCharts', 'trinker/plotflow', 'trinker/textshape')
+pacman::p_load_current_gh("adletaw/captioner", 'trinker/testing', 'ramnathv/rCharts', 'trinker/plotflow', 'trinker/textshape', 'jcizel/scatterMatrixD3')
 pacman::p_load(tidyverse, base64enc, d3heatmap, stringi, qdapTools, viridis)
 
 sankeydat <- readr::read_rds('sankey.rds')
@@ -44,7 +44,9 @@ heat <- fg(name = "heat1", caption = "This interactive heatmap shows average sen
 
 gantt <- fg(name = "gantt1", caption = "This interactive Gantt plot shows the durations of participant talk across Observation 1, a 7th grade ELA class taught by Ms. Baginski.  The hover interaction enables instant access querying to the underlying text in each of the segment geoms.")
 
-sankey <- fg(name = "sankey1", caption = "This interactive Sankey diagram has an advantage over the often overcrowded static version in that a mouse over of the nodes or edges highlights the attached edges, allowing for \"untangling\" the over-plotting.  Additionally, edge and node counts are available as a tool-tip on demand without cluttering the plot region.")
+sankey <- fg(name = "sankey1", caption = "This interactive Sankey diagram has an advantage over the often overcrowded static version in that a mouse over of the nodes or edges highlights the attached edges, allowing for \"untangling\" the over-plotting.  This Sankey shows the flow of discourse between participants with the edge thickness representing number of words.  Additionally, edge and node counts are available as a tool-tip on demand without cluttering the plot region.")
+
+scatty <- fg(name = "scatty1", caption = "This interactive scatterplot matrix prvoides linked brushing with highlighting for average sentiment and readability scores for the two teachers across the 10 interview questions.  In addition, the user may filter and select rows and variables that are of inerest via a check box interface or color on the categorical person variable.")
 ```
 
 
@@ -85,6 +87,19 @@ cat("
   margin-top: 10px;
   width: 380px;
   height: 380px;
+}
+
+iframe {
+  -moz-transform: scale(0.75, 0.75); 
+  -webkit-transform: scale(0.75, 0.75); 
+  -o-transform: scale(0.75, 0.75);
+  -ms-transform: scale(0.75, 0.75);
+  transform: scale(0.75, 0.75); 
+  -moz-transform-origin: top left;
+  -webkit-transform-origin: top left;
+  -o-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
 }
 
 </style>
@@ -180,7 +195,7 @@ n1 <- nPlot(Words ~ Observation, group = "Person", data = barfildat,
 n1$save("p2.html", standalone = TRUE)
 ```
 
-<iframe src="p2.html" align="center" width="900" height="450" frameBorder="0"></iframe>
+<iframe src="p2.html" align="center" width="1200" height="450" frameBorder="0"></iframe>
 `r filtbar`
 
 # Mouse Over Gantt Plot
@@ -212,7 +227,7 @@ g <- rinker_observations %>%
 # ggiraph(code = print(g), width = 1, hover_css = "cursor:pointer;fill:red;stroke:red;", width_svg = 8, height_svg = 3)
 ```
 
-<iframe src="ganttss.html" align="center" width="1200" height="450" frameBorder="0"></iframe>
+<iframe src="ganttss.html" align="center" width="1200" height="475" frameBorder="0"></iframe>
 `r gantt`
 
 
@@ -267,6 +282,30 @@ suppressMessages(sankeyNetwork(Links = sankeydat[[5]][[2]], Nodes = sankeydat[[5
 `r sankey`
 </div>
 
+</br></br>
+
+# Linked Brushing Scatterplot Matrix with Filtering & Selecting
+
+<div>
+```{r, fig.width = 7}
+scatdat <- mat %>%
+    qdapTools::matrix2df('Observation') %>%
+    mutate(
+        Person = gsub(': .+$', '', Observation), 
+        Observation = paste0("Obs. ", gsub('^[^:]+: ', '', Observation))
+    )
+
+scatdat[-c(1, 17)] <- lapply(scatdat[-c(1, 17)], round, 3)
+scatterMatrix(
+   data = scatdat, 6, 6
+)
+```
+</div>
+
+</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
 
 
 
+`r scatty`
+
+</br></br>
