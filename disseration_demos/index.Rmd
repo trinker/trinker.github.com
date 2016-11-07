@@ -143,8 +143,8 @@ mat <- sentiread %>%
     qdapTools::df2matrix() 
 d3heatmap(mat, scale = "column", colors = colorRampPalette(c("yellow", "blue"))(n = 100), cexRow = .7, Colv = FALSE)
 ```
-
 `r heat`
+
 
 ### Questions:
 
@@ -180,7 +180,7 @@ n1 <- nPlot(Words ~ Observation, group = "Person", data = barfildat,
 n1$save("p2.html", standalone = TRUE)
 ```
 
-<iframe src="p2.html" align="center" width="900" height="600" frameBorder="0"></iframe>
+<iframe src="p2.html" align="center" width="900" height="450" frameBorder="0"></iframe>
 `r filtbar`
 
 # Mouse Over Gantt Plot
@@ -209,8 +209,10 @@ g <- rinker_observations %>%
         xlab("Duration (Words)") +
         scale_color_manual(values = c('red', 'grey60', 'blue'))
 
-ggiraph(code = print(g), width = 1, hover_css = "cursor:pointer;fill:red;stroke:red;", width_svg = 8, height_svg = 3)
+# ggiraph(code = print(g), width = 1, hover_css = "cursor:pointer;fill:red;stroke:red;", width_svg = 8, height_svg = 3)
 ```
+
+<iframe src="ganttss.html" align="center" width="1200" height="450" frameBorder="0"></iframe>
 `r gantt`
 
 
@@ -264,5 +266,7 @@ suppressMessages(sankeyNetwork(Links = sankeydat[[5]][[2]], Nodes = sankeydat[[5
   </div>
 `r sankey`
 </div>
+
+
 
 
