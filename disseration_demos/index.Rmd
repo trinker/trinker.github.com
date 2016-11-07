@@ -42,7 +42,7 @@ filtbar <- fg(name = "filtbar1", caption = "This interactive bar plot shows the 
 
 heat <- fg(name = "heat1", caption = "This interactive heatmap shows average sentiment and readability scores for the two teachers across the 10 interview questions.  The color has been scaled by column with higher values in darker blue and lower values in yellow.  Rows (Person + Question) have been reordered according to hierarchical clustering.  The heat map provides value details activated by hovering the cursor over a cell.  Additionally brushed zooming is enabled to focus one specific portions of the heat map.")
 
-sankey <- fg(name = "sankey1", caption = "This interactive sankey diagram has an advantage over the often overcrowded static version in that a mouse over of the nodes or edges highlights the attched edges, allowing for \"untangling\" the overplotting.  Additionally, edge and node counts are available as a tool-tip on demand without cluttering the plot region.")
+sankey <- fg(name = "sankey1", caption = "This interactive Sankey diagram has an advantage over the often overcrowded static version in that a mouse over of the nodes or edges highlights the attached edges, allowing for \"untangling\" the over-plotting.  Additionally, edge and node counts are available as a tool-tip on demand without cluttering the plot region.")
 ```
 
 
