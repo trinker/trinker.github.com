@@ -9,15 +9,27 @@ output:
 
 
 ```{r setup, echo=FALSE}
-pacman::p_load(knitr, rgl, shiny)
+pacman::p_load(knitr, rgl, shiny, networkD3)
 knit_hooks$set(webgl = hook_webgl)
 knitr::opts_chunk$set(echo=FALSE, messages=FALSE, warnings=FALSE)
 # options(digits = 4)
 ```
 
+
+
+
 ```{r captions, echo=FALSE}
-pacman::p_load_current_gh("adletaw/captioner", 'trinker/testing', 'ramnathv/rCharts')
+pacman::p_load_current_gh("adletaw/captioner", 'trinker/testing', 'ramnathv/rCharts', 'trinker/plotflow')
 pacman::p_load(tidyverse, base64enc, d3heatmap, stringi, qdapTools, viridis)
+
+sankeydat <- readr::read_rds('sankey.rds')
+
+# colkey <- data_frame(
+# person = sort(unique(gsub("\\.$", "", unname(unlist(lapply(lapply(sankeydat[c(1, 2, 4, 5)], `[[`, 1), `[[`, 1)))))),
+#     color = plotflow::ggcolors(8)[c(1:4, 4, 5:8)]
+# )
+
+
 
 tb <- captioner(prefix = "Table")
 fg <- captioner(prefix = "Figure")
@@ -29,7 +41,54 @@ fg2 <- fg(name = "randu2", caption = "An interactive 3-D scatterplot of R's `run
 filtbar <- fg(name = "filtbar1", caption = "This interactive bar plot shows the word counts for the 7th grade classroom observations.  The plot enables filtering out people (e.g., filter teachers to better compare within students).  The plot also supports switching the plot type between dodged and stacked positionings.  Double click a person to select just observation for them.")
 
 heat <- fg(name = "heat1", caption = "This interactive heatmap shows average sentiment and readability scores for the two teachers across the 10 interview questions.  The color has been scaled by column with higher values in darker blue and lower values in yellow.  Rows (Person + Question) have been reordered according to hierarchical clustering.  The heat map provides value details activated by hovering the cursor over a cell.  Additionally brushed zooming is enabled to focus one specific portions of the heat map.")
+
+sankey <- fg(name = "sankey1", caption = "This interactive sankey diagram has an advantage over the often overcrowded static version in that a mouse over of the nodes or edges highlights the attched edges, allowing for \"untangling\" the overplotting.  Additionally, edge and node counts are available as a tool-tip on demand without cluttering the plot region.")
 ```
+
+
+```{r results="asis"}
+cat("
+<style>
+
+.grid {
+  width: 800px;
+  height: 800px;
+}
+
+.one-one {
+  display: inline-block;
+  float: left;
+  width: 380px;
+  height: 380px;
+}
+
+.one-two {
+  display: inline-block;
+  float: right;
+  width: 380px;
+  height: 380px;
+}
+
+.two-one {
+  display: inline-block;
+  float: left;
+  margin-top: 10px;
+  width: 380px;
+  height: 380px;
+}
+
+.two-two {
+  display: inline-block;
+  float: right;
+  margin-top: 10px;
+  width: 380px;
+  height: 380px;
+}
+
+</style>
+")
+```
+
 
 # RANDU Exposed
 
@@ -123,9 +182,56 @@ n1$save("p2.html", standalone = TRUE)
 `r filtbar`
 
 
+# Mouse-Over Sankey
+    
+<div class="grid">
+  <div class="one-one">
+<b>Obs. 1: ELA</b> 
+```{r, fig.width=4, fig.height=3}
+suppressMessages(sankeyNetwork(Links = sankeydat[[1]][[2]], Nodes = sankeydat[[1]][[1]], Source = 'source',
+    Target = 'target', Value = 'value', NodeID = 'name',
+    fontSize = 12, nodeWidth = 30))
+
+```    
+  </div>
+
+  <div class="one-two">
+<b>Obs. 2: Math</b> 
+```{r, fig.width=4, fig.height=3}
+# cols <- data_frame(name = gsub("\\.$", '', sankeydat[[2]][[1]][[1]])) %>%
+#     left_join(colkey, by = c('name' = 'person')) %>%
+#     `[[`(1)
+# 
 
 
+suppressMessages(sankeyNetwork(Links = sankeydat[[2]][[2]], Nodes = sankeydat[[2]][[1]], Source = 'source',
+    Target = 'target', Value = 'value', NodeID = 'name',
+    fontSize = 12, nodeWidth = 30))
 
+```    
+  </div>
+
+  <div class="two-one">
+<b>Obs. 4: ELA</b>   
+```{r, fig.width=4, fig.height=3}
+suppressMessages(sankeyNetwork(Links = sankeydat[[4]][[2]], Nodes = sankeydat[[4]][[1]], Source = 'source',
+    Target = 'target', Value = 'value', NodeID = 'name',
+    fontSize = 12, nodeWidth = 30))
+
+```    
+  </div>
+
+  <div class="two-two">
+<b>Obs. 5: Math</b> 
+```{r, fig.width=4, fig.height=3}
+suppressMessages(sankeyNetwork(Links = sankeydat[[5]][[2]], Nodes = sankeydat[[5]][[1]], Source = 'source',
+    Target = 'target', Value = 'value', NodeID = 'name',
+    fontSize = 12, nodeWidth = 30))
+
+```  
+  </div>
+`r sankey`
+</div>
 
 
 
