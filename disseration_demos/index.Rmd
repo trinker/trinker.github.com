@@ -9,7 +9,7 @@ output:
 
 
 ```{r setup, echo=FALSE}
-pacman::p_load(knitr, rgl)
+pacman::p_load(knitr, rgl, shiny)
 knit_hooks$set(webgl = hook_webgl)
 knitr::opts_chunk$set(echo=FALSE, messages=FALSE, warnings=FALSE)
 # options(digits = 4)
@@ -85,6 +85,23 @@ d3heatmap(mat, scale = "column", colors = colorRampPalette(c("yellow", "blue"))(
 
 `r heat`
 
+### Questions:
+
+```{r, results='asis', comment=NA, warn=FALSE}
+sentiread %>%
+    ungroup() %>%
+    select(Question_Number, Question) %>%
+    distinct() %>%
+    mutate(Question = gsub("[^ -~]", "'", Question)) %>%
+    # mutate(Question = unlist(lapply(Question, function(x) paste(strwrap(x, 50), collapse = "</br>") ))) %>%
+    select(Question) %>%
+    unlist() %>%
+    # lapply(strwrap, 80) %>%
+    # lapply(function(x) lapply(x, tags$br)) %>%
+    lapply(tags$li) %>%
+    tags$ol()
+```
+    
 # Filtering Bar Plot
 
 ```{r, results = 'asis'}
