@@ -9,7 +9,7 @@ output:
 
 
 ```{r setup, echo=FALSE}
-pacman::p_load(knitr, rgl, shiny, networkD3, ggiraph, stringi, gdtools)
+pacman::p_load(knitr, rgl, shiny, networkD3,stringi, gdtools, shiny)
 knit_hooks$set(webgl = hook_webgl)
 knitr::opts_chunk$set(echo=FALSE, messages=FALSE, warnings=FALSE)
 # options(digits = 4)
@@ -20,7 +20,9 @@ knitr::opts_chunk$set(echo=FALSE, messages=FALSE, warnings=FALSE)
 
 ```{r captions, echo=FALSE}
 pacman::p_load_current_gh("adletaw/captioner", 'trinker/testing', 'ramnathv/rCharts', 'trinker/plotflow', 'trinker/textshape', 'jcizel/scatterMatrixD3')
-pacman::p_load(tidyverse, base64enc, d3heatmap, stringi, qdapTools, viridis)
+pacman::p_load(tidyverse, base64enc, d3heatmap, stringi, qdapTools, viridis, ggplot2)
+
+pacman::p_load_current_gh('davidgohel/ggiraph')
 
 sankeydat <- readr::read_rds('sankey.rds')
 
@@ -38,9 +40,10 @@ fg1 <- fg(name = "randu1", caption = "An interactive 3-D scatterplot of [RANDU](
 
 fg2 <- fg(name = "randu2", caption = "An interactive 3-D scatterplot of R's `runif` generated data.  Unlike the RANDU generated data, rotating the plot will not reveal non-random structures in the data.")
 
+heat <- fg(name = "heat1", caption = "This interactive heatmap shows average sentiment and readability scores for the two teachers across the 10 interview questions.  The color has been scaled by column with higher values in darker blue and lower values in yellow.  Rows (Person + Question) have been reordered according to hierarchical clustering.  The heat map provides value details activated by hovering the cursor over a cell.  Additionally brushed zooming is enabled to focus one specific portions of the heat map.")
+
 filtbar <- fg(name = "filtbar1", caption = "This interactive bar plot shows the word counts for the 7th grade classroom observations.  The plot enables filtering out people (e.g., filter teachers to better compare within students).  The plot also supports switching the plot type between dodged and stacked positionings.  Double click a person to select just observation for them.")
 
-heat <- fg(name = "heat1", caption = "This interactive heatmap shows average sentiment and readability scores for the two teachers across the 10 interview questions.  The color has been scaled by column with higher values in darker blue and lower values in yellow.  Rows (Person + Question) have been reordered according to hierarchical clustering.  The heat map provides value details activated by hovering the cursor over a cell.  Additionally brushed zooming is enabled to focus one specific portions of the heat map.")
 
 gantt <- fg(name = "gantt1", caption = "This interactive Gantt plot shows the durations of participant talk across Observation 1, a 7th grade ELA class taught by Ms. Baginski.  The hover interaction enables instant access querying to the underlying text in each of the segment geoms.")
 
@@ -158,6 +161,7 @@ mat <- sentiread %>%
     qdapTools::df2matrix() 
 d3heatmap(mat, scale = "column", colors = colorRampPalette(c("yellow", "blue"))(n = 100), cexRow = .7, Colv = FALSE)
 ```
+<p></p>
 `r heat`
 
 
@@ -201,33 +205,33 @@ n1$save("p2.html", standalone = TRUE)
 # Mouse Over Gantt Plot
 
 ```{r, fig.width =8, fig.height = 3}
-g <- rinker_observations %>% 
-    ungroup() %>%
-    filter(Observation == 1 ) %>%
-    filter(Person != 'Students' & !is.na(Word_Count) & !is.na(Dialogue)) %>% # nrow()
-    mutate(Endmark = stringi::stri_extract_first_regex(Dialogue, "[?.!]$") %>% unlist()) %>%
-    select(Person, Endmark, Word_Count, Dialogue) %>%
-    tbl_df() %>%
-    na.omit() %>%
-    mutate(
-        start = starts(Word_Count),
-        end = ends(Word_Count),
-        start = ifelse(Word_Count < 25, start -15, start),
-        end = ifelse(Word_Count < 25, end + 15, end),
-        Dialogue = gsub("'", "`", Dialogue),
-        Endmark = ifelse(is.na(Endmark), "NULL", Endmark)
-    ) %>% #View()
-    ggplot(aes(x = start,  y = Person, xend = end, yend = Person, color = Endmark) ) + 
-        theme_minimal() + 
-        geom_segment_interactive(aes(tooltip = Dialogue), size = 7) +
-        ylab(NULL) +
-        xlab("Duration (Words)") +
-        scale_color_manual(values = c('red', 'grey60', 'blue'))
+# g <- rinker_observations %>%
+#     ungroup() %>%
+#     filter(Observation == 1 ) %>%
+#     filter(Person != 'Students' & !is.na(Word_Count) & !is.na(Dialogue)) %>% # nrow()
+#     mutate(Endmark = stringi::stri_extract_first_regex(Dialogue, "[?.!]$") %>% unlist()) %>%
+#     select(Person, Endmark, Word_Count, Dialogue) %>%
+#     tbl_df() %>%
+#     na.omit() %>%
+#     mutate(
+#         start = starts(Word_Count),
+#         end = ends(Word_Count),
+#         start = ifelse(Word_Count < 25, start -15, start),
+#         end = ifelse(Word_Count < 25, end + 15, end),
+#         Dialogue = gsub("'", "`", Dialogue),
+#         Endmark = ifelse(is.na(Endmark), "NULL", Endmark)
+#     ) %>% #View()
+#     ggplot(aes(x = start,  y = Person, xend = end, yend = Person, color = Endmark) ) +
+#         theme_minimal() +
+#         ggiraph::geom_segment_interactive(aes(tooltip = Dialogue), size = 7) +
+#         ylab(NULL) +
+#         xlab("Duration (Words)") +
+#         scale_color_manual(values = c('red', 'grey60', 'blue'))
 
 # ggiraph(code = print(g), width = 1, hover_css = "cursor:pointer;fill:red;stroke:red;", width_svg = 8, height_svg = 3)
 ```
 
-<iframe src="ganttss.html" align="center" width="1200" height="475" frameBorder="0"></iframe>
+<iframe src="ganttss.html" align="center" width="1300" height="575" frameBorder="0"></iframe>
 `r gantt`
 
 
@@ -304,7 +308,7 @@ scatterMatrix(
 
 </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
 
-
+<p></p>
 
 `r scatty`
 
