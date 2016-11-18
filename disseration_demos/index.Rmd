@@ -6,7 +6,7 @@ output:
     theme: "readable"
     toc: true 
 ---
-
+<br>
 
 ```{r setup, echo=FALSE}
 pacman::p_load(knitr, rgl, shiny, networkD3,stringi, gdtools, shiny)
@@ -288,7 +288,7 @@ suppressMessages(sankeyNetwork(Links = sankeydat[[5]][[2]], Nodes = sankeydat[[5
 
 </br></br>
 
-# Linked Brushing Scatterplot Matrix with Filtering & Selecting
+# Linked Brushing Scatterplot Matrix
 
 <div>
 ```{r, fig.width = 7}
