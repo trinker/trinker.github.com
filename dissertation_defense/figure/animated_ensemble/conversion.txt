@@ -1,0 +1,3 @@
+convert Rplot4b.pd ensemble.png
+for /r %v in (*.png) do convert -flatten "%v" "%v"
+
